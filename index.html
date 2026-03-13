@@ -410,9 +410,68 @@
     }
     .footer-note-inner ul { padding-left: 16px; }
     .footer-note-inner ul li { margin-bottom: 4px; }
+
+    /* ── NAV ── */
+    nav {
+      background: #ffffff;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-links { display: flex; gap: 0; align-items: center; }
+    .nav-links a {
+      color: #555555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 18px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: #111111; }
+    .nav-links a.active { color: #111111; border-bottom: 2px solid #f43130; }
+    .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
+    .nav-cta {
+      background: #f43130;
+      color: white !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: #d41f1e; }
   </style>
 </head>
 <body>
+
+<!-- NAV -->
+<nav>
+  <a href="homepage.html" class="nav-logo">
+    <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" />
+  </a>
+  <div class="nav-links">
+    <a href="homepage.html">Platform</a>
+    <a href="homepage.html">Solutions</a>
+    <a href="#" class="active">Pricing</a>
+    <a href="homepage.html">Resources</a>
+    <a href="homepage.html">Why Kaptea</a>
+  </div>
+  <div class="nav-cta-wrap">
+    <a href="#" class="nav-cta">Book a Demo</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
