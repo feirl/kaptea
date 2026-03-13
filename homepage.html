@@ -30,22 +30,205 @@
       height: 64px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 200;
     }
-    .nav-logo { color: white; font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
+    .nav-logo { color: white; font-size: 20px; font-weight: 800; letter-spacing: -0.02em; text-decoration: none; }
     .nav-logo span { color: #f43130; }
-    .nav-links { display: flex; gap: 32px; align-items: center; }
-    .nav-links a { color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 500; }
-    .nav-links a:hover { color: white; }
+    .nav-links { display: flex; gap: 0; align-items: stretch; height: 64px; }
+    .nav-item { position: relative; display: flex; align-items: center; }
+    .nav-item > a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 18px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      transition: color 0.15s;
+    }
+    .nav-item > a:hover, .nav-item.active > a { color: white; }
+    .nav-item.active > a { border-bottom: 2px solid #f43130; }
+    .nav-chevron { font-size: 10px; opacity: 0.6; transition: transform 0.2s; }
+    .nav-item.active .nav-chevron { transform: rotate(180deg); }
+    .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
     .nav-cta {
       background: #f43130;
       color: white !important;
       padding: 8px 20px;
       border-radius: 6px;
-      font-weight: 600 !important;
-      font-size: 14px !important;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
     }
-    .nav-cta:hover { background: #d41f1e !important; }
+    .nav-cta:hover { background: #d41f1e; }
+
+    /* ── MEGA MENU ── */
+    .mega {
+      display: none;
+      position: absolute;
+      top: 64px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0f1522;
+      border-top: 2px solid #f43130;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      z-index: 300;
+      min-width: 900px;
+      padding: 36px 40px;
+      animation: fadeDown 0.18s ease;
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    .nav-item.active .mega { display: block; }
+
+    /* Platform mega: two-panel layout */
+    .mega-platform { min-width: 1100px; }
+    .mega-cols { display: grid; gap: 0; }
+    .mega-platform .mega-cols { grid-template-columns: 280px 1fr; }
+    .mega-solutions .mega-cols { grid-template-columns: 1fr 1fr; }
+
+    /* Left panel — Pronto */
+    .mega-left {
+      border-right: 1px solid rgba(255,255,255,0.08);
+      padding-right: 32px;
+    }
+    .mega-panel-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f43130;
+      margin-bottom: 20px;
+    }
+    .mega-section { margin-bottom: 20px; }
+    .mega-section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+      letter-spacing: 0.01em;
+    }
+    .mega-links { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+    .mega-links li a {
+      font-size: 12.5px;
+      color: #64748b;
+      text-decoration: none;
+      display: block;
+      padding: 2px 0 2px 10px;
+      border-left: 2px solid transparent;
+      transition: all 0.12s;
+      line-height: 1.5;
+    }
+    .mega-links li a:hover { color: #cbd5e1; border-left-color: #f43130; padding-left: 14px; }
+
+    /* Right panel grid */
+    .mega-right { padding-left: 32px; }
+    .mega-right-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px 32px;
+    }
+    .mega-col-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #475569;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .mega-right .mega-links li a {
+      font-size: 12px;
+      color: #64748b;
+    }
+    .mega-right .mega-links li a:hover { color: #cbd5e1; border-left-color: #f43130; }
+
+    /* Carrier infrastructure block */
+    .mega-carriers {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      grid-column: 1 / -1;
+    }
+    .mega-carrier-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .carrier-card {
+      flex: 1;
+      min-width: 200px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+    .carrier-name { font-size: 13px; font-weight: 700; color: white; margin-bottom: 4px; }
+    .carrier-desc { font-size: 11.5px; color: #64748b; line-height: 1.5; }
+    .carrier-more { font-size: 12px; color: #475569; display: flex; align-items: center; gap: 6px; padding-top: 4px; }
+
+    /* Pronto CTA */
+    .mega-pronto-cta {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .mega-pronto-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f43130;
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 6px;
+    }
+    .mega-pronto-cta a:hover { background: #d41f1e; }
+
+    /* Solutions mega */
+    .mega-solutions { min-width: 960px; }
+    .mega-solutions .mega-left { padding-right: 32px; }
+    .mega-solutions .mega-right { padding-left: 32px; }
+    .mega-use-case { margin-bottom: 18px; }
+    .use-case-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .use-case-title a { color: white; text-decoration: none; }
+    .use-case-title a:hover { color: #f43130; }
+    .use-case-num {
+      font-size: 10px;
+      font-weight: 700;
+      color: #f43130;
+      background: rgba(244,49,48,0.12);
+      padding: 1px 7px;
+      border-radius: 99px;
+    }
+    .mega-industry-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 24px;
+    }
+    .industry-block { }
+    .industry-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
 
     /* ── HERO ── */
     .hero {
@@ -576,17 +759,322 @@
      Solutions per the nav architecture we've built.
 ───────────────────────────────────────────────── -->
 <nav>
-  <div class="nav-logo">kap<span>tea</span></div>
+  <a href="#" class="nav-logo">kap<span>tea</span></a>
+
   <div class="nav-links">
-    <a href="#">Platform ▾</a>
-    <a href="#">Solutions ▾</a>
-    <a href="#">Pricing</a>
-    <a href="#">Resources ▾</a>
-    <a href="#">Why Kaptea</a>
+
+    <!-- PLATFORM -->
+    <div class="nav-item" id="nav-platform">
+      <a href="#">Platform <span class="nav-chevron">▾</span></a>
+      <div class="mega mega-platform">
+        <div class="mega-cols">
+
+          <!-- LEFT: Pronto -->
+          <div class="mega-left">
+            <div class="mega-panel-label">Pronto Platform</div>
+
+            <div class="mega-section">
+              <div class="mega-section-title">Omni-Channel Communications</div>
+              <ul class="mega-links">
+                <li><a href="#">SMS, WhatsApp, Voice, Email, RCS</a></li>
+                <li><a href="#">Two-way messaging</a></li>
+                <li><a href="#">Inbound &amp; outbound orchestration</a></li>
+              </ul>
+            </div>
+
+            <div class="mega-section">
+              <div class="mega-section-title">Control &amp; Governance</div>
+              <ul class="mega-links">
+                <li><a href="#">Role-based access</a></li>
+                <li><a href="#">Division segmentation</a></li>
+                <li><a href="#">Compliance enforcement</a></li>
+                <li><a href="#">Template controls</a></li>
+                <li><a href="#">Audit logs</a></li>
+              </ul>
+            </div>
+
+            <div class="mega-section">
+              <div class="mega-section-title">Delivery &amp; Resilience</div>
+              <ul class="mega-links">
+                <li><a href="#">Cross-channel failover</a></li>
+                <li><a href="#">Delivery diagnostics</a></li>
+                <li><a href="#">Event streaming</a></li>
+                <li><a href="#">Error handling visibility</a></li>
+                <li><a href="#">Load-aware routing</a></li>
+              </ul>
+            </div>
+
+            <div class="mega-section">
+              <div class="mega-section-title">Integration &amp; API Framework</div>
+              <ul class="mega-links">
+                <li><a href="#">Two-way CRM sync</a></li>
+                <li><a href="#">Event-driven architecture</a></li>
+                <li><a href="#">Open APIs</a></li>
+                <li><a href="#">Webhook support</a></li>
+              </ul>
+            </div>
+
+            <div class="mega-section">
+              <div class="mega-section-title">Deployment &amp; Infrastructure</div>
+              <ul class="mega-links">
+                <li><a href="#">Dedicated instance in days</a></li>
+                <li><a href="#">Rapid instance deployment</a></li>
+                <li><a href="#">No heavy engineering team required</a></li>
+                <li><a href="#">Twilio token integration</a></li>
+                <li><a href="#">Cloud-managed infrastructure</a></li>
+                <li><a href="#">EU or US data residency</a></li>
+              </ul>
+            </div>
+
+            <div class="mega-pronto-cta">
+              <a href="#">See Pronto in Action →</a>
+            </div>
+          </div>
+
+          <!-- RIGHT: Capabilities grid -->
+          <div class="mega-right">
+            <div class="mega-right-grid">
+
+              <div>
+                <div class="mega-col-title">Channels</div>
+                <ul class="mega-links">
+                  <li><a href="#">SMS &amp; RCS</a></li>
+                  <li><a href="#">WhatsApp</a></li>
+                  <li><a href="#">Voice &amp; IVR</a></li>
+                  <li><a href="#">Email</a></li>
+                  <li><a href="#">Secure Video</a></li>
+                  <li><a href="#">Twilio Flex</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="mega-col-title">Resilience &amp; Orchestration</div>
+                <ul class="mega-links">
+                  <li><a href="#">Cross-Channel Failover</a></li>
+                  <li><a href="#">Surge &amp; Load Management</a></li>
+                  <li><a href="#">Queue Orchestration</a></li>
+                  <li><a href="#">Delivery Diagnostics</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="mega-col-title">Governance &amp; Compliance</div>
+                <ul class="mega-links">
+                  <li><a href="#">Access &amp; Identity</a></li>
+                  <li><a href="#">Template Governance</a></li>
+                  <li><a href="#">Compliance &amp; Audit</a></li>
+                  <li><a href="#">Division &amp; Segmentation</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="mega-col-title">Integrations</div>
+                <ul class="mega-links">
+                  <li><a href="#">CRM Integrations</a></li>
+                  <li><a href="#">API &amp; Webhooks</a></li>
+                  <li><a href="#">Event-Driven Architecture</a></li>
+                  <li><a href="#">Identity &amp; SSO</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="mega-col-title">Deployment &amp; Infrastructure</div>
+                <ul class="mega-links">
+                  <li><a href="#">Dedicated Instance</a></li>
+                  <li><a href="#">EU &amp; US Data Residency</a></li>
+                  <li><a href="#">AWS &amp; Azure Cloud Hosting</a></li>
+                  <li><a href="#">Rapid Instance Deployment</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-carriers">
+                <div class="mega-col-title">Carrier Infrastructure</div>
+                <div class="mega-carrier-row">
+                  <div class="carrier-card">
+                    <div class="carrier-name">Twilio</div>
+                    <div class="carrier-desc">The world's leading cloud communications platform — messaging, voice, video, Flex and Verify — fully operationalised through Pronto.</div>
+                  </div>
+                  <div class="carrier-card">
+                    <div class="carrier-name">Telnyx</div>
+                    <div class="carrier-desc">Built on a private global network — elastic SIP trunking, messaging and voice with cost-optimised routing and built-in redundancy.</div>
+                  </div>
+                  <div class="carrier-more">+ more carriers &amp; integrations →</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SOLUTIONS -->
+    <div class="nav-item" id="nav-solutions">
+      <a href="#">Solutions <span class="nav-chevron">▾</span></a>
+      <div class="mega mega-solutions">
+        <div class="mega-cols">
+
+          <!-- LEFT: Use Cases -->
+          <div class="mega-left">
+            <div class="mega-panel-label">Use Cases</div>
+
+            <div class="mega-use-case">
+              <div class="use-case-title"><span class="use-case-num">01</span><a href="#">Emergency &amp; Surge Communications</a></div>
+              <ul class="mega-links">
+                <li><a href="#">Storm-grade IVR orchestration</a></li>
+                <li><a href="#">Surge-proof inbound routing</a></li>
+                <li><a href="#">High-volume outbound alert scaling</a></li>
+                <li><a href="#">Load shedding &amp; queue prioritisation</a></li>
+                <li><a href="#">Cross-channel failover under load</a></li>
+                <li><a href="#">AWS &amp; Azure resilience architecture</a></li>
+              </ul>
+            </div>
+
+            <div class="mega-use-case">
+              <div class="use-case-title"><span class="use-case-num">02</span><a href="#">Distributed Messaging Governance</a></div>
+              <ul class="mega-links">
+                <li><a href="#">Role-based access &amp; SSO</a></li>
+                <li><a href="#">Division-level guardrails &amp; enforcement</a></li>
+                <li><a href="#">Brand-safe template management</a></li>
+                <li><a href="#">CRM-triggered transactional messaging</a></li>
+                <li><a href="#">Audit logging &amp; compliance oversight</a></li>
+                <li><a href="#">Cost-aware routing</a></li>
+              </ul>
+            </div>
+
+            <div class="mega-use-case">
+              <div class="use-case-title"><span class="use-case-num">03</span><a href="#">IVR &amp; Voice Orchestration</a></div>
+              <ul class="mega-links">
+                <li><a href="#">API-first IVR architecture</a></li>
+                <li><a href="#">CRM-integrated intelligent routing</a></li>
+                <li><a href="#">Queue orchestration &amp; callback management</a></li>
+                <li><a href="#">Complex rule &amp; workflow logic</a></li>
+                <li><a href="#">Load shedding &amp; surge handling</a></li>
+                <li><a href="#">Regulatory-safe migration from legacy IVR</a></li>
+              </ul>
+            </div>
+
+            <div class="mega-use-case">
+              <div class="use-case-title"><span class="use-case-num">04</span><a href="#">Enterprise Transactional Messaging</a></div>
+              <ul class="mega-links">
+                <li><a href="#">Event-driven message orchestration</a></li>
+                <li><a href="#">Cross-channel failover &amp; retry logic</a></li>
+                <li><a href="#">Delivery verification &amp; diagnostics</a></li>
+                <li><a href="#">CRM-triggered automation</a></li>
+                <li><a href="#">Centralised governance &amp; oversight</a></li>
+                <li><a href="#">Brand-safe template control</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- RIGHT: Industries -->
+          <div class="mega-right">
+            <div class="mega-panel-label">Industries</div>
+            <div class="mega-industry-grid">
+
+              <div class="industry-block">
+                <div class="industry-title">Financial Services</div>
+                <ul class="mega-links">
+                  <li><a href="#">Fraud &amp; transaction alerts</a></li>
+                  <li><a href="#">Secure authentication messaging</a></li>
+                  <li><a href="#">Regulatory &amp; compliance communications</a></li>
+                  <li><a href="#">Multi-channel customer notifications</a></li>
+                  <li><a href="#">Contact centre orchestration</a></li>
+                </ul>
+              </div>
+
+              <div class="industry-block">
+                <div class="industry-title">Utilities &amp; Energy</div>
+                <ul class="mega-links">
+                  <li><a href="#">Storm &amp; outage alerts</a></li>
+                  <li><a href="#">Surge IVR orchestration</a></li>
+                  <li><a href="#">Load shedding communications</a></li>
+                  <li><a href="#">Cross-channel failover</a></li>
+                  <li><a href="#">Public safety messaging at scale</a></li>
+                </ul>
+              </div>
+
+              <div class="industry-block">
+                <div class="industry-title">Healthcare</div>
+                <ul class="mega-links">
+                  <li><a href="#">Appointment &amp; patient messaging</a></li>
+                  <li><a href="#">Secure two-way communications</a></li>
+                  <li><a href="#">Emergency public health alerts</a></li>
+                  <li><a href="#">Compliance-driven communication workflows</a></li>
+                  <li><a href="#">Care pathway notifications</a></li>
+                </ul>
+              </div>
+
+              <div class="industry-block">
+                <div class="industry-title">Retail &amp; Ecommerce</div>
+                <ul class="mega-links">
+                  <li><a href="#">Order &amp; delivery updates</a></li>
+                  <li><a href="#">Peak event surge messaging</a></li>
+                  <li><a href="#">Distributed store &amp; depot communications</a></li>
+                  <li><a href="#">CRM-triggered transactional messaging</a></li>
+                  <li><a href="#">Post-purchase engagement</a></li>
+                </ul>
+              </div>
+
+              <div class="industry-block">
+                <div class="industry-title">Public Sector</div>
+                <ul class="mega-links">
+                  <li><a href="#">Citizen notifications</a></li>
+                  <li><a href="#">Emergency &amp; public safety alerts</a></li>
+                  <li><a href="#">Regulated audit-ready messaging</a></li>
+                  <li><a href="#">Multi-channel government communications</a></li>
+                  <li><a href="#">Surge communications for critical events</a></li>
+                </ul>
+              </div>
+
+              <div class="industry-block">
+                <div class="industry-title">Distributed &amp; Field Operations</div>
+                <ul class="mega-links">
+                  <li><a href="#">Franchise &amp; depot messaging governance</a></li>
+                  <li><a href="#">Division-level access control</a></li>
+                  <li><a href="#">Brand-safe template enforcement</a></li>
+                  <li><a href="#">Centralised oversight with local flexibility</a></li>
+                  <li><a href="#">CRM-triggered field communications</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item"><a href="#">Pricing</a></div>
+    <div class="nav-item"><a href="#">Resources <span class="nav-chevron">▾</span></a></div>
+    <div class="nav-item"><a href="#">Why Kaptea</a></div>
+
+  </div>
+
+  <div class="nav-cta-wrap">
     <a href="#" class="nav-cta">Book a Demo</a>
   </div>
 </nav>
-<div class="design-note"><strong>Design Note — Nav</strong> Sticky on scroll. Platform and Solutions trigger mega-menu dropdowns (architecture already defined). On mobile: hamburger menu collapses all links. "Book a Demo" always visible on mobile as a fixed bottom bar.</div>
+
+<script>
+  document.querySelectorAll('.nav-item').forEach(function(item) {
+    item.addEventListener('mouseenter', function() {
+      document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+      if (item.querySelector('.mega')) item.classList.add('active');
+    });
+    item.addEventListener('mouseleave', function() {
+      item.classList.remove('active');
+    });
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+    }
+  });
+</script>
+
+<div class="design-note"><strong>Design Note — Nav &amp; Mega Menus</strong> Sticky dark nav (#0f1522). Platform and Solutions open mega-menus on hover — 2px red top border, dark background, fade-down animation. Platform: left panel = Pronto product sections; right panel = 5 capability columns + Carrier Infrastructure cards. Solutions: left = 4 Use Cases with numbered headers + sub-links; right = 6 Industries in a 2-column grid. "Book a Demo" CTA always visible right. On mobile: hamburger menu; Book a Demo pinned as fixed bottom bar.</div>
 
 
 <!-- ─────────────────────────────────────────────
