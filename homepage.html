@@ -225,18 +225,20 @@
     }
     .mega-pronto-cta a:hover { background: #d41f1e; }
 
+    /* Resources nav-item needs relative positioning for dropdown */
+    #nav-resources { position: relative; }
+
     /* Resources mega — compact single-column */
     .mega-resources {
       min-width: 280px;
       max-width: 300px;
-      left: auto;
-      right: 0;
-      transform: none;
+      left: 50%;
+      transform: translateX(-50%);
       padding: 24px 28px;
     }
     @keyframes fadeDownResources {
-      from { opacity: 0; transform: translateY(-8px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
     }
     .mega-resources { animation: fadeDownResources 0.18s ease; }
     .mega-resources .mega-section { margin-bottom: 16px; }
@@ -846,7 +848,7 @@
             <div class="mega-panel-label"><a href="#" class="pronto-logo-link"><img src="Pronto-360-Logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="#">Omni-Channel Communications</a></div>
+              <div class="mega-section-title"><a href="template-feature.html">Omni-Channel Communications</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">SMS, WhatsApp, Voice, Email, RCS</li>
                 <li class="mega-detail">Two-way messaging</li>
@@ -1042,7 +1044,7 @@
             <div class="mega-industry-grid">
 
               <div class="industry-block">
-                <div class="industry-title"><a href="#">Financial Services</a></div>
+                <div class="industry-title"><a href="template-solution.html">Financial Services</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Fraud &amp; transaction alerts</li>
                   <li class="mega-detail">Secure authentication messaging</li>
@@ -1197,7 +1199,7 @@
 
   <div class="hero-ctas">
     <a href="demo.html" class="btn-primary">Book a Demo</a>
-    <a href="#" class="btn-ghost">Learn more</a>
+    <a href="template-feature.html" class="btn-ghost">Learn more</a>
   </div>
 
   <div class="hero-cert-strip">
@@ -1615,7 +1617,7 @@
   <p>Join regulated organisations across utilities, financial services, public sector and retail running mission-critical communications on Kaptea.</p>
   <div class="closing-ctas">
     <a href="demo.html" class="btn-primary">Book a Demo</a>
-    <a href="#" class="btn-secondary">Explore the Platform</a>
+    <a href="template-feature.html" class="btn-secondary">Explore the Platform</a>
   </div>
 </section>
 <div class="design-note"><strong>Design Note — Closing CTA</strong> Mirror the hero visually — same dark background, same H1 style, same two-CTA pattern — to create a sense of bookending the page. The headline deliberately echoes the hero H1 ("confidence") to reinforce the core message. Consider a subtle background texture or gradient that's different from the hero so it doesn't feel like a copy-paste. Primary CTA should be the only thing the eye is drawn to.</div>
