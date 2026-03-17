@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaptea — Omni-Channel Communications</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111827; }
+
+    /* ── NAV ── */
+    nav {
+      background: #ffffff;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-links { display: flex; gap: 0; align-items: center; }
+    .nav-links a {
+      color: #555555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 18px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: #111111; }
+    .nav-links a.active { color: #111111; border-bottom: 2px solid #f43130; }
+    .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
+    .nav-cta {
+      background: #f43130;
+      color: white !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: #d41f1e; }
+
+    /* ── DESIGN NOTES ── */
+    .design-note {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 10px 16px;
+      font-size: 12px;
+      color: #92400e;
+      font-style: italic;
+      letter-spacing: 0.01em;
+      max-width: 1080px;
+      margin: 12px auto;
+    }
+    .design-note strong { color: #b45309; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
+
+    /* ── CONTENT NOTE (for Alan) ── */
+    .content-note {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 10px 16px;
+      font-size: 12px;
+      color: #1e40af;
+      font-style: italic;
+      max-width: 1080px;
+      margin: 12px auto;
+    }
+    .content-note strong { color: #1d4ed8; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
+
+    /* ── HERO ── */
+    .hero {
+      background: #faf8f5;
+      color: #111111;
+      text-align: left;
+      padding: 80px 40px 72px;
+    }
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-breadcrumb {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #f43130;
+      margin-bottom: 16px;
+    }
+    .hero-breadcrumb a { color: #f43130; text-decoration: none; }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .hero-breadcrumb span { color: #9ca3af; }
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: #111111;
+    }
+    .hero h1 span { color: #f43130; }
+    .hero .hero-sub {
+      font-size: 18px;
+      color: #555555;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: #f43130;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: #d41f1e; }
+    .btn-ghost {
+      color: #374151;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid #d1d5db;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-ghost:hover { border-color: #111111; color: #111111; }
+    .hero-visual {
+      background: #f0eeeb;
+      border-radius: 12px;
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      font-size: 14px;
+      border: 1px solid #e5e2de;
+    }
+
+    /* ── PAIN STRIP ── */
+    .pain-strip {
+      background: #ffffff;
+      padding: 64px 40px;
+      border-top: 1px solid #eeebe6;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .pain-strip-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .pain-strip-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f43130;
+      margin-bottom: 12px;
+    }
+    .pain-strip h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 40px;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .pain-card {
+      padding: 24px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #faf8f5;
+    }
+    .pain-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(244,49,48,0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+    .pain-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 8px;
+    }
+    .pain-card p {
+      font-size: 14px;
+      color: #555555;
+      line-height: 1.6;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how-section {
+      padding: 80px 40px;
+    }
+    .how-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .how-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f43130;
+      margin-bottom: 12px;
+    }
+    .how-inner > h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 56px;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+    .how-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 72px;
+    }
+    .how-block:last-child { margin-bottom: 0; }
+    .how-block.reverse { direction: rtl; }
+    .how-block.reverse > * { direction: ltr; }
+    .how-text h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .how-text p {
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .how-text ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .how-text ul li {
+      font-size: 14px;
+      color: #374151;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .how-text ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #f43130;
+      font-weight: 700;
+    }
+    .how-visual {
+      background: #f0eeeb;
+      border-radius: 12px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      font-size: 13px;
+      border: 1px solid #e5e2de;
+    }
+
+    /* ── METRICS STRIP ── */
+    .metrics-strip {
+      background: #111111;
+      padding: 56px 40px;
+    }
+    .metrics-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .metric-item h3 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #f43130;
+      margin-bottom: 6px;
+    }
+    .metric-item p {
+      font-size: 13px;
+      color: #9ca3af;
+      line-height: 1.5;
+    }
+
+    /* ── PROOF BLOCK ── */
+    .proof-section {
+      padding: 80px 40px;
+      background: #faf8f5;
+      border-top: 1px solid #eeebe6;
+    }
+    .proof-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .proof-quote {
+      font-size: 20px;
+      font-weight: 500;
+      color: #111111;
+      line-height: 1.5;
+      font-style: italic;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 24px;
+      border-left: 3px solid #f43130;
+    }
+    .proof-attribution {
+      font-size: 14px;
+      color: #555555;
+    }
+    .proof-attribution strong { color: #111111; font-weight: 600; }
+    .proof-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .proof-metric-card {
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+    }
+    .proof-metric-card h4 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #f43130;
+      margin-bottom: 4px;
+    }
+    .proof-metric-card p {
+      font-size: 13px;
+      color: #555555;
+      line-height: 1.5;
+    }
+
+    /* ── RELATED ── */
+    .related-section {
+      padding: 72px 40px;
+      border-top: 1px solid #eeebe6;
+    }
+    .related-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .related-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f43130;
+      margin-bottom: 12px;
+    }
+    .related-inner > h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 36px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .related-card {
+      padding: 28px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #faf8f5;
+      text-decoration: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .related-card:hover {
+      border-color: #f43130;
+      box-shadow: 0 4px 16px rgba(244,49,48,0.08);
+    }
+    .related-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 8px;
+    }
+    .related-card p {
+      font-size: 13px;
+      color: #555555;
+      line-height: 1.6;
+    }
+    .related-card .related-arrow {
+      font-size: 13px;
+      color: #f43130;
+      font-weight: 600;
+      margin-top: 12px;
+      display: block;
+    }
+
+    /* ── CTA CLOSE ── */
+    .cta-close {
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 72px 40px;
+    }
+    .cta-close h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-close p {
+      font-size: 17px;
+      color: #9ca3af;
+      margin-bottom: 32px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .cta-close .btn-primary { font-size: 16px; padding: 14px 32px; }
+
+    .reassurance {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      margin-top: 28px;
+    }
+    .reassurance span {
+      font-size: 12px;
+      color: #6b7280;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .reassurance span::before {
+      content: '✓';
+      color: #f43130;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="homepage.html" class="nav-logo">
+    <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" />
+  </a>
+  <div class="nav-links">
+    <a href="homepage.html" class="active">Platform</a>
+    <a href="homepage.html">Solutions</a>
+    <a href="index.html">Pricing</a>
+    <a href="homepage.html">Resources</a>
+    <a href="#">Why Kaptea</a>
+  </div>
+  <div class="nav-cta-wrap">
+    <a href="demo.html" class="nav-cta">Book a Demo</a>
+  </div>
+</nav>
+
+<div class="design-note"><strong>Template A — Product / Feature Page</strong> This is the reusable template for all Pronto feature pages and Platform capability pages. This worked example uses "Omni-Channel Communications" — the same structure applies to Control &amp; Governance, Delivery &amp; Resilience, Integration &amp; API Framework, Deployment &amp; Infrastructure, and individual channel pages (SMS &amp; RCS, WhatsApp, Voice &amp; IVR, Email, etc.).</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 1 — HERO
+     Two-column: value prop left, visual right.
+     Breadcrumb ties the page into nav hierarchy.
+═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-breadcrumb">
+        <a href="#">Platform</a> <span>→</span> <a href="#">Pronto</a> <span>→</span> Omni-Channel Communications
+      </div>
+      <h1>Every channel. <span>One platform.</span><br>Zero dropped messages.</h1>
+      <p class="hero-sub">Orchestrate SMS, WhatsApp, Voice, Email, and RCS from a single interface — with built-in failover, two-way messaging, and full delivery visibility across every conversation.</p>
+      <div class="hero-ctas">
+        <a href="demo.html" class="btn-primary">Book a Demo</a>
+        <a href="#" class="btn-ghost">Explore the Platform</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      [Screenshot: Pronto unified inbox showing<br>multiple channels in a single conversation view]
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 2 — PAIN STRIP
+     Three problems this feature solves.
+     Short, specific, icon-led.
+═══════════════════════════════════════════ -->
+<section class="pain-strip">
+  <div class="pain-strip-inner">
+    <div class="pain-strip-label">The problem</div>
+    <h2>Enterprises don't have a channel problem. They have an orchestration problem.</h2>
+    <div class="pain-grid">
+
+      <div class="pain-card">
+        <div class="pain-icon">📡</div>
+        <h3>Channels managed in silos</h3>
+        <p>SMS through one vendor, email through another, WhatsApp via a third. No unified view, no consistent governance, no cross-channel failover when one path goes down.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">🔇</div>
+        <h3>Messages disappear without trace</h3>
+        <p>When a critical message fails, nobody knows until a customer complains. Delivery diagnostics are buried across multiple dashboards with no single source of truth.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">🏗️</div>
+        <h3>Integration takes months, not days</h3>
+        <p>Connecting channels to your CRM, governance layer, and analytics requires custom engineering. Every new channel means another integration project.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3 — HOW IT WORKS
+     2–3 alternating blocks. This is where
+     product specificity lives.
+═══════════════════════════════════════════ -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="how-label">How it works</div>
+    <h2>One orchestration layer across every channel your customers use.</h2>
+
+    <!-- Block 1: Unified Channels -->
+    <div class="how-block">
+      <div class="how-text">
+        <h3>Five channels, one interface</h3>
+        <p>Pronto connects SMS, WhatsApp, Voice, Email, and RCS through a single unified inbox. Agents see the full conversation history across channels — no switching between tools, no lost context.</p>
+        <ul>
+          <li>Send bulk campaigns or 1-to-1 conversations across any channel</li>
+          <li>Two-way messaging with AI-assisted reply suggestions</li>
+          <li>WhatsApp template management with approval workflows</li>
+          <li>Click-to-call voice with call recording and queue management</li>
+          <li>HTML email campaigns with SendGrid delivery and open/click tracking</li>
+        </ul>
+      </div>
+      <div class="how-visual">[Screenshot: unified inbox with SMS + WhatsApp<br>conversation for same contact]</div>
+    </div>
+
+    <!-- Block 2: Failover & Delivery -->
+    <div class="how-block reverse">
+      <div class="how-text">
+        <h3>Cross-channel failover that never drops a message</h3>
+        <p>When SMS delivery fails, Pronto automatically routes through an alternative channel. Every message gets delivery confirmation, and every failure gets a diagnostic trail — so you know exactly what happened and why.</p>
+        <ul>
+          <li>Automatic failover: SMS → WhatsApp → Email cascade</li>
+          <li>Real-time delivery diagnostics per message</li>
+          <li>Event streaming to Slack, Kafka, PagerDuty for instant alerts</li>
+          <li>Load-aware routing during high-volume surge events</li>
+        </ul>
+      </div>
+      <div class="how-visual">[Screenshot: delivery diagnostics dashboard<br>showing failover cascade in action]</div>
+    </div>
+
+    <!-- Block 3: Campaign Orchestration -->
+    <div class="how-block">
+      <div class="how-text">
+        <h3>Campaign orchestration built for scale</h3>
+        <p>Design, schedule, and send multi-channel campaigns through a step-by-step wizard. Pronto batches large sends to maintain deliverability, tracks status in real-time, and gives you per-contact delivery visibility.</p>
+        <ul>
+          <li>Campaign creation wizard with channel, audience, and content selection</li>
+          <li>Scheduled or immediate delivery with batch processing</li>
+          <li>Link shortening with click tracking for SMS</li>
+          <li>A/B testing across email, SMS, WhatsApp, and RCS templates</li>
+          <li>AI-powered analytics with anomaly detection and benchmarks</li>
+        </ul>
+      </div>
+      <div class="how-visual">[Screenshot: campaign creation wizard<br>showing multi-channel selection]</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4 — METRICS STRIP
+     Hard numbers. Mix of Twilio infrastructure
+     stats (passed through) and Kaptea specifics.
+═══════════════════════════════════════════ -->
+<section class="metrics-strip">
+  <div class="metrics-inner">
+
+    <div class="metric-item">
+      <h3>180+</h3>
+      <p>Countries reached via<br>Twilio carrier network</p>
+    </div>
+
+    <div class="metric-item">
+      <h3>5</h3>
+      <p>Channels unified in<br>one platform</p>
+    </div>
+
+    <div class="metric-item">
+      <h3>Days</h3>
+      <p>Typical deployment time —<br>not weeks or months</p>
+    </div>
+
+    <div class="metric-item">
+      <h3>16</h3>
+      <p>Pre-built integrations including<br>Salesforce, Dynamics, HubSpot</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="content-note"><strong>Content needed from Alan</strong> The metrics strip should include at least one customer-derived metric (e.g. "99.x% delivery rate", "X messages delivered for [customer]", "X% reduction in dropped messages"). Ask Alan for 2-3 specific outcomes from existing deployments — even approximate figures work. These should replace the more generic "5 channels" and "16 integrations" metrics which are features, not outcomes.</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5 — PROOF BLOCK
+     One customer story with quote + metrics.
+═══════════════════════════════════════════ -->
+<section class="proof-section">
+  <div class="proof-inner">
+    <div>
+      <div class="pain-strip-label">Customer proof</div>
+      <blockquote class="proof-quote">
+        "[Customer quote about how Pronto's omni-channel capability solved a specific problem — ideally referencing failover, speed of deployment, or visibility they didn't have before.]"
+      </blockquote>
+      <div class="proof-attribution">
+        <strong>[Name, Title]</strong><br>
+        [Company] — [Industry]
+      </div>
+    </div>
+    <div class="proof-metrics">
+      <div class="proof-metric-card">
+        <h4>[X]M</h4>
+        <p>Messages delivered annually via Pronto</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>[X] days</h4>
+        <p>From contract to live deployment</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>[X]%</h4>
+        <p>Delivery success rate</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>[X]</h4>
+        <p>Channels managed in single interface</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="content-note"><strong>Content needed from Alan</strong> Best candidates for this feature page: Barratt Homes (10M SMS/year, Dynamics integration), Caledonia Sleeper (multi-channel via Pronto), or eFlow (1.5M emails). Need: a 1-2 sentence quote, the contact's name/title, and any measurable outcome (delivery rate, time saved, deployment speed). If no quote is available yet, even a paraphrased endorsement we can verify with them works.</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 6 — RELATED CAPABILITIES
+     Links to adjacent feature pages.
+     Keeps visitors exploring the platform.
+═══════════════════════════════════════════ -->
+<section class="related-section">
+  <div class="related-inner">
+    <div class="related-label">Explore the platform</div>
+    <h2>Related capabilities</h2>
+    <div class="related-grid">
+
+      <a href="#" class="related-card">
+        <h3>Control &amp; Governance</h3>
+        <p>Role-based access, division segmentation, template approval workflows, and full audit trails — built for regulated enterprises.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="#" class="related-card">
+        <h3>Delivery &amp; Resilience</h3>
+        <p>Cross-channel failover, surge load management, delivery diagnostics, and event streaming to your monitoring tools.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="#" class="related-card">
+        <h3>Integration &amp; API Framework</h3>
+        <p>16 pre-built connectors, bidirectional CRM sync, event-driven architecture, and open APIs for custom workflows.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 7 — CTA CLOSE
+     Demo-focused with reassurance strip.
+═══════════════════════════════════════════ -->
+<section class="cta-close">
+  <h2>See omni-channel orchestration in action</h2>
+  <p>Book a 30-minute demo tailored to your channels, your volumes, and your compliance requirements.</p>
+  <a href="demo.html" class="btn-primary">Book a Demo</a>
+  <div class="reassurance">
+    <span>No commitment required</span>
+    <span>Tailored to your use case</span>
+    <span>Talk to the team who built it</span>
+  </div>
+</section>
+
+
+<div class="design-note"><strong>Design Note — Footer</strong> Same footer as homepage. Four-column layout: Platform / Solutions / Resources / Company. Certification marks, social links, legal. Not replicated here for brevity.</div>
+
+<div class="design-note"><strong>Template reuse guide</strong> To create another feature page from this template:<br>
+1. Update the breadcrumb, h1, hero-sub, and hero visual<br>
+2. Rewrite the 3 pain cards for the specific feature's problems<br>
+3. Replace the 3 how-it-works blocks with that feature's capabilities (pull from product specs)<br>
+4. Update the metrics strip with relevant data points<br>
+5. Swap the customer proof for one relevant to that feature<br>
+6. Update the 3 related capability cards to link to adjacent features<br>
+7. Update the closing CTA copy to reference the feature
+</div>
+
+</body>
+</html>

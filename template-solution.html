@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaptea — Financial Services</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111827; }
+
+    /* ── NAV ── */
+    nav {
+      background: #ffffff;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-links { display: flex; gap: 0; align-items: center; }
+    .nav-links a {
+      color: #555555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 18px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: #111111; }
+    .nav-links a.active { color: #111111; border-bottom: 2px solid #f43130; }
+    .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
+    .nav-cta {
+      background: #f43130;
+      color: white !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: #d41f1e; }
+
+    /* ── DESIGN / CONTENT NOTES ── */
+    .design-note {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 10px 16px;
+      font-size: 12px;
+      color: #92400e;
+      font-style: italic;
+      max-width: 1080px;
+      margin: 12px auto;
+    }
+    .design-note strong { color: #b45309; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
+    .content-note {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 10px 16px;
+      font-size: 12px;
+      color: #1e40af;
+      font-style: italic;
+      max-width: 1080px;
+      margin: 12px auto;
+    }
+    .content-note strong { color: #1d4ed8; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
+
+    /* ── HERO (problem-led, not feature-led) ── */
+    .hero {
+      background: #111111;
+      color: #ffffff;
+      padding: 80px 40px 72px;
+    }
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-breadcrumb {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #f43130;
+      margin-bottom: 16px;
+    }
+    .hero-breadcrumb a { color: #f43130; text-decoration: none; }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .hero-breadcrumb span { color: #6b7280; }
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    .hero h1 span { color: #f43130; }
+    .hero .hero-sub {
+      font-size: 17px;
+      color: #9ca3af;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: #f43130;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: #d41f1e; }
+    .btn-ghost-light {
+      color: #ffffff;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid #4b5563;
+      display: inline-flex;
+      align-items: center;
+    }
+    .btn-ghost-light:hover { border-color: #ffffff; }
+    .hero-visual {
+      background: #1f2937;
+      border-radius: 12px;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+      font-size: 13px;
+      border: 1px solid #374151;
+    }
+
+    /* ── CHALLENGE SECTION ── */
+    .challenge {
+      padding: 72px 40px;
+      background: #ffffff;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .challenge-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f43130;
+      margin-bottom: 12px;
+    }
+    .challenge h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 40px;
+      max-width: 640px;
+      line-height: 1.3;
+    }
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .challenge-card {
+      padding: 28px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      display: flex;
+      gap: 16px;
+    }
+    .challenge-num {
+      font-size: 32px;
+      font-weight: 700;
+      color: rgba(244,49,48,0.15);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .challenge-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 6px;
+    }
+    .challenge-card p {
+      font-size: 14px;
+      color: #555555;
+      line-height: 1.6;
+    }
+
+    /* ── SOLUTION BLOCKS ── */
+    .solutions {
+      padding: 80px 40px;
+      background: #faf8f5;
+    }
+    .solutions-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .solutions h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 48px;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+    .solution-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid #e5e2de;
+    }
+    .solution-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .solution-block.reverse { direction: rtl; }
+    .solution-block.reverse > * { direction: ltr; }
+    .solution-pain {
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .solution-pain-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #dc2626;
+      margin-bottom: 8px;
+    }
+    .solution-pain p {
+      font-size: 14px;
+      color: #555555;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .solution-answer h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 10px;
+    }
+    .solution-answer p {
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .solution-answer .feature-link {
+      font-size: 13px;
+      color: #f43130;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .solution-answer .feature-link:hover { text-decoration: underline; }
+    .solution-answer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .solution-answer ul li {
+      font-size: 14px;
+      color: #374151;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .solution-answer ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #f43130;
+      font-weight: 700;
+    }
+
+    /* ── NUMBERS STRIP ── */
+    .numbers-strip {
+      background: #111111;
+      padding: 56px 40px;
+    }
+    .numbers-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .number-item h3 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #f43130;
+      margin-bottom: 6px;
+    }
+    .number-item p {
+      font-size: 13px;
+      color: #9ca3af;
+      line-height: 1.5;
+    }
+
+    /* ── FEATURED CUSTOMER ── */
+    .featured-customer {
+      padding: 72px 40px;
+      background: #ffffff;
+    }
+    .featured-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .featured-quote {
+      font-size: 20px;
+      font-weight: 500;
+      color: #111111;
+      line-height: 1.5;
+      font-style: italic;
+      margin-bottom: 20px;
+      padding-left: 24px;
+      border-left: 3px solid #f43130;
+    }
+    .featured-attribution {
+      font-size: 14px;
+      color: #555555;
+    }
+    .featured-attribution strong { color: #111111; }
+    .featured-logo {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 12px;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      font-size: 13px;
+    }
+
+    /* ── COMPLIANCE & TRUST ── */
+    .trust-section {
+      padding: 64px 40px;
+      background: #faf8f5;
+      border-top: 1px solid #eeebe6;
+    }
+    .trust-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .trust-inner h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 12px;
+    }
+    .trust-inner > p {
+      font-size: 15px;
+      color: #555555;
+      margin-bottom: 36px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .trust-card {
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .trust-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 6px;
+    }
+    .trust-card p {
+      font-size: 12px;
+      color: #555555;
+      line-height: 1.5;
+    }
+
+    /* ── RELATED SOLUTIONS ── */
+    .related-section {
+      padding: 72px 40px;
+      border-top: 1px solid #eeebe6;
+    }
+    .related-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .related-inner > h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 36px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .related-card {
+      padding: 28px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #faf8f5;
+      text-decoration: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .related-card:hover {
+      border-color: #f43130;
+      box-shadow: 0 4px 16px rgba(244,49,48,0.08);
+    }
+    .related-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 8px;
+    }
+    .related-card p {
+      font-size: 13px;
+      color: #555555;
+      line-height: 1.6;
+    }
+    .related-card .related-arrow {
+      font-size: 13px;
+      color: #f43130;
+      font-weight: 600;
+      margin-top: 12px;
+      display: block;
+    }
+
+    /* ── CTA CLOSE ── */
+    .cta-close {
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 72px 40px;
+    }
+    .cta-close h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-close p {
+      font-size: 17px;
+      color: #9ca3af;
+      margin-bottom: 32px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .cta-close .btn-primary { font-size: 16px; padding: 14px 32px; }
+    .reassurance {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      margin-top: 28px;
+    }
+    .reassurance span {
+      font-size: 12px;
+      color: #6b7280;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .reassurance span::before {
+      content: '✓';
+      color: #f43130;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="homepage.html" class="nav-logo">
+    <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" />
+  </a>
+  <div class="nav-links">
+    <a href="homepage.html">Platform</a>
+    <a href="homepage.html" class="active">Solutions</a>
+    <a href="index.html">Pricing</a>
+    <a href="homepage.html">Resources</a>
+    <a href="#">Why Kaptea</a>
+  </div>
+  <div class="nav-cta-wrap">
+    <a href="demo.html" class="nav-cta">Book a Demo</a>
+  </div>
+</nav>
+
+<div class="design-note"><strong>Template B — Solution / Industry Page</strong> This is the reusable template for all industry pages (Financial Services, Utilities &amp; Energy, Healthcare, Retail &amp; Ecommerce, Public Sector, Distributed Operations) and use case pages (Emergency &amp; Surge, Regulatory Compliance, CRM-Triggered Messaging, Distributed Governance). This worked example uses Financial Services. The key structural difference from Template A: this page leads with the <em>industry problem</em>, not the product feature.</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 1 — HERO (dark, problem-led)
+     Dark hero distinguishes solution pages from
+     feature pages visually. Headline frames the
+     industry pain, not the product.
+═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-breadcrumb">
+        <a href="#">Solutions</a> <span>→</span> <a href="#">Industries</a> <span>→</span> Financial Services
+      </div>
+      <h1>When a message fails in financial services, <span>trust fails with it.</span></h1>
+      <p class="hero-sub">Fraud alerts, authentication codes, regulatory notices — your customers expect them instantly. Every dropped message is a compliance risk, a support call, and an erosion of the trust you've spent years building.</p>
+      <div class="hero-ctas">
+        <a href="demo.html" class="btn-primary">Book a Demo</a>
+        <a href="#" class="btn-ghost-light">See How It Works</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      [Visual: stylised dashboard showing fraud alert<br>delivery across SMS + WhatsApp with failover indicator]
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 2 — THE CHALLENGE
+     Industry-specific pains. 4 cards, 2x2 grid.
+     These should feel like the buyer's own words.
+═══════════════════════════════════════════ -->
+<section class="challenge">
+  <div class="challenge-inner">
+    <div class="section-label">The challenge</div>
+    <h2>Financial services communications are high-stakes, high-regulation, and high-volume — all at once.</h2>
+
+    <div class="challenge-grid">
+
+      <div class="challenge-card">
+        <div class="challenge-num">01</div>
+        <div>
+          <h3>Fraud alerts that arrive too late</h3>
+          <p>Seconds matter in fraud prevention. When an SMS fails or queues behind a batch campaign, the window to protect the customer closes — and liability opens.</p>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-num">02</div>
+        <div>
+          <h3>Authentication blocked by carrier filtering</h3>
+          <p>2FA and OTP messages are increasingly filtered by carriers as spam. Failed verification means failed transactions, abandoned onboarding, and support queues that cost real money.</p>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-num">03</div>
+        <div>
+          <h3>Regulatory notices without proof of delivery</h3>
+          <p>FCA, PRA, and GDPR mandate that certain communications are delivered and evidenced. Without per-message audit trails, compliance is a hope rather than a guarantee.</p>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-num">04</div>
+        <div>
+          <h3>Multiple divisions, zero coordination</h3>
+          <p>Retail banking, wealth management, and insurance each run their own messaging tools. Customers get duplicated, brand standards are inconsistent, and nobody has the full picture.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3 — HOW KAPTEA SOLVES IT
+     Three solution blocks, each mapping a pain
+     to a Pronto capability with a link-through.
+═══════════════════════════════════════════ -->
+<section class="solutions">
+  <div class="solutions-inner">
+    <div class="section-label">How Kaptea solves it</div>
+    <h2>Purpose-built for the messaging challenges financial services actually face.</h2>
+
+    <!-- Solution 1 -->
+    <div class="solution-block">
+      <div class="solution-pain">
+        <div class="solution-pain-label">The pain</div>
+        <p>"Our fraud alerts go through the same queue as marketing. When we send a batch campaign, authentication messages get delayed — and customers lose money."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Priority routing with cross-channel failover</h3>
+        <p>Pronto separates transactional and marketing queues with independent routing priorities. When SMS delivery fails, the platform automatically cascades to WhatsApp or email — so the fraud alert always arrives.</p>
+        <ul>
+          <li>Priority queue separation for transactional vs. campaign messages</li>
+          <li>Automatic SMS → WhatsApp → Email failover cascade</li>
+          <li>Real-time delivery diagnostics per message</li>
+          <li>Event streaming to PagerDuty or Slack for failed critical messages</li>
+        </ul>
+        <a href="template-feature.html" class="feature-link">Explore Omni-Channel Communications →</a>
+      </div>
+    </div>
+
+    <!-- Solution 2 -->
+    <div class="solution-block reverse">
+      <div class="solution-pain">
+        <div class="solution-pain-label">The pain</div>
+        <p>"We can't prove to the regulator that a notice was delivered. Our SMS provider gives us batch reports, not per-message evidence."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Per-message audit trail with compliance evidence</h3>
+        <p>Every message sent through Pronto has a complete audit trail — from template approval through delivery confirmation to recipient engagement. Request logs track every API mutation, and template governance ensures only approved content goes out.</p>
+        <ul>
+          <li>Full request logging of all POST/PUT/PATCH operations</li>
+          <li>Template change request workflow with approval, rejection, and comment history</li>
+          <li>Template audit log exportable as CSV for regulatory evidence</li>
+          <li>Division-scoped access control for multi-entity governance</li>
+        </ul>
+        <a href="#" class="feature-link">Explore Control &amp; Governance →</a>
+      </div>
+    </div>
+
+    <!-- Solution 3 -->
+    <div class="solution-block">
+      <div class="solution-pain">
+        <div class="solution-pain-label">The pain</div>
+        <p>"Each division bought their own tools. We've got four SMS vendors, three email platforms, and no way to enforce brand standards or see total spend."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Multi-division governance from one platform</h3>
+        <p>Pronto's division segmentation gives each business unit its own templates, contacts, and analytics — while central teams maintain brand governance, template approval workflows, and a single view across all messaging activity.</p>
+        <ul>
+          <li>Division-scoped templates, contacts, and analytics</li>
+          <li>SSO with automatic division mapping from Azure AD / Okta claims</li>
+          <li>Central template governance with ambassador approval workflows</li>
+          <li>Whitelabel branding per instance for subsidiary brands</li>
+          <li>Unified analytics with AI-powered anomaly detection across all divisions</li>
+        </ul>
+        <a href="#" class="feature-link">Explore Deployment &amp; Infrastructure →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4 — NUMBERS STRIP
+     Industry-specific metrics where possible.
+     Mix of Twilio pass-through and Kaptea data.
+═══════════════════════════════════════════ -->
+<section class="numbers-strip">
+  <div class="numbers-inner">
+
+    <div class="number-item">
+      <h3>180+</h3>
+      <p>Countries reached —<br>built on Twilio's carrier network</p>
+    </div>
+
+    <div class="number-item">
+      <h3>3–7</h3>
+      <p>Days to deploy a dedicated<br>instance for your division</p>
+    </div>
+
+    <div class="number-item">
+      <h3>CREST</h3>
+      <p>Certified penetration testing<br>for regulated environments</p>
+    </div>
+
+    <div class="number-item">
+      <h3>[X]%</h3>
+      <p>Delivery rate across<br>transactional messaging</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="content-note"><strong>Content needed from Alan</strong> The fourth metric is a placeholder — need a real delivery rate or a customer-specific outcome (e.g. "99.x% OTP delivery for [financial services client]"). If we don't have FS-specific data, a general platform delivery rate works. Also check: can we reference the Twilio 94% OTP deliverability stat and say Pronto improves on it with failover?</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5 — FEATURED CUSTOMER
+     Single customer story relevant to this industry.
+═══════════════════════════════════════════ -->
+<section class="featured-customer">
+  <div class="featured-inner">
+    <div>
+      <div class="section-label">Customer story</div>
+      <blockquote class="featured-quote">
+        "[Quote from a financial services customer about how Pronto solved their messaging challenge — referencing compliance, delivery reliability, or multi-division coordination.]"
+      </blockquote>
+      <div class="featured-attribution">
+        <strong>[Name, Title]</strong><br>
+        [Company] — Financial Services
+      </div>
+    </div>
+    <div class="featured-logo">
+      [Customer logo + key metric callout,<br>e.g. "10M+ messages annually"]
+    </div>
+  </div>
+</section>
+
+<div class="content-note"><strong>Content needed from Alan</strong> The strongest FS-adjacent candidates from existing customers: Barratt Homes (10M SMS/year through Dynamics — not FS but shows scale + CRM integration), or potentially a Twilio FS client that Kaptea supported. Need: quote, attribution, and 1-2 measurable outcomes. If no FS customer exists yet, consider using Barratt Homes as a "regulated enterprise" proof point and noting "Financial services pilot available" language.</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 6 — COMPLIANCE & TRUST
+     Certifications relevant to this industry.
+═══════════════════════════════════════════ -->
+<section class="trust-section">
+  <div class="trust-inner">
+    <h2>Built for regulated environments</h2>
+    <p>Kaptea's security and compliance posture is designed for industries where trust isn't optional.</p>
+
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        <h3>ISO 27001:2022</h3>
+        <p>Certified information security management across all operations</p>
+      </div>
+
+      <div class="trust-card">
+        <h3>CREST Certified</h3>
+        <p>Independent penetration testing to the highest UK standard</p>
+      </div>
+
+      <div class="trust-card">
+        <h3>Cyber Essentials</h3>
+        <p>UK government-backed cyber security certification</p>
+      </div>
+
+      <div class="trust-card">
+        <h3>Data Residency</h3>
+        <p>EU or US data residency with private cloud infrastructure in Dublin, London, Amsterdam</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 7 — RELATED SOLUTIONS
+     Other industries or use cases with similar
+     pain points.
+═══════════════════════════════════════════ -->
+<section class="related-section">
+  <div class="related-inner">
+    <div class="section-label">Related solutions</div>
+    <h2>Other industries we serve</h2>
+    <div class="related-grid">
+
+      <a href="#" class="related-card">
+        <h3>Utilities &amp; Energy</h3>
+        <p>Storm alerts, surge IVR orchestration, and cross-channel failover for millions of customers during critical events.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="#" class="related-card">
+        <h3>Healthcare</h3>
+        <p>Appointment messaging, secure two-way communications, and compliance-driven workflows for patient engagement.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="#" class="related-card">
+        <h3>Public Sector</h3>
+        <p>Citizen notifications, emergency alerts, and regulated audit-ready messaging at national scale.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 8 — CTA CLOSE
+═══════════════════════════════════════════ -->
+<section class="cta-close">
+  <h2>Protect your customers' trust at every touchpoint</h2>
+  <p>See how Pronto delivers critical financial services messaging with failover, compliance evidence, and multi-division governance.</p>
+  <a href="demo.html" class="btn-primary">Book a Demo</a>
+  <div class="reassurance">
+    <span>No commitment required</span>
+    <span>Tailored to financial services</span>
+    <span>60-day pilot available</span>
+  </div>
+</section>
+
+
+<div class="design-note"><strong>Template reuse guide</strong> To create another solution/industry page from this template:<br>
+1. Update the breadcrumb and hero — lead with the industry's specific messaging pain, not a generic statement<br>
+2. Rewrite the 4 challenge cards with pains specific to that industry (use buyer language, not feature language)<br>
+3. Replace the 3 solution blocks — each should map an industry pain to a specific Pronto capability and link to the feature page<br>
+4. Update the numbers strip — include industry-specific metrics where possible<br>
+5. Swap the customer proof for one in that industry (or the closest match)<br>
+6. Adjust the compliance cards if different certifications matter more in that industry<br>
+7. Update related solutions to show adjacent industries<br>
+8. Update the closing CTA copy to reference the industry specifically
+</div>
+
+<div class="design-note"><strong>Use case pages vs industry pages</strong> The same template works for use case pages (Emergency &amp; Surge, Regulatory Compliance, etc.) — the only structural change is the breadcrumb reads "Solutions → Use Cases → [Name]" and the related section shows other use cases instead of industries. The hero framing shifts from "your industry has this problem" to "this scenario creates this problem."</div>
+
+</body>
+</html>
