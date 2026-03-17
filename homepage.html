@@ -225,6 +225,42 @@
     }
     .mega-pronto-cta a:hover { background: #d41f1e; }
 
+    /* Resources mega — compact single-column */
+    .mega-resources {
+      min-width: 280px;
+      max-width: 300px;
+      left: auto;
+      right: 0;
+      transform: none;
+      padding: 24px 28px;
+    }
+    @keyframes fadeDownResources {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .mega-resources { animation: fadeDownResources 0.18s ease; }
+    .mega-resources .mega-section { margin-bottom: 16px; }
+    .mega-resources .mega-section:last-child { margin-bottom: 0; }
+    .mega-resources .mega-section-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #f43130;
+      margin-bottom: 6px;
+    }
+    .mega-resources .mega-links li a {
+      font-size: 13px;
+      color: #374151;
+      padding: 3px 0;
+      border-left: none;
+    }
+    .mega-resources .mega-links li a:hover {
+      color: #f43130;
+      border-left: none;
+      padding-left: 0;
+    }
+
     /* Solutions mega */
     .mega-solutions { min-width: 960px; }
     .mega-solutions .mega-left { padding-right: 32px; }
@@ -1078,8 +1114,39 @@
       </div>
     </div>
 
-    <div class="nav-item"><a href="#">Pricing</a></div>
-    <div class="nav-item"><a href="#">Resources <span class="nav-chevron">▾</span></a></div>
+    <div class="nav-item"><a href="index.html">Pricing</a></div>
+    <div class="nav-item" id="nav-resources">
+      <a href="#">Resources <span class="nav-chevron">▾</span></a>
+      <div class="mega mega-resources">
+
+        <div class="mega-section">
+          <div class="mega-section-title">Learn</div>
+          <ul class="mega-links">
+            <li><a href="#">Blog &amp; Insights</a></li>
+            <li><a href="#">Guides &amp; Whitepapers</a></li>
+            <li><a href="#">Webinars &amp; Events</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-section">
+          <div class="mega-section-title">Proof</div>
+          <ul class="mega-links">
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Customer Stories</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-section">
+          <div class="mega-section-title">Developer</div>
+          <ul class="mega-links">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Integration Guides</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
     <div class="nav-item"><a href="#">Why Kaptea</a></div>
 
   </div>
