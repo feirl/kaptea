@@ -54,6 +54,7 @@
       white-space: nowrap;
     }
     .nav-cta:hover { background: #d41f1e; }
+    .hamburger { display: none; }
 
     /* ── MEGA MENU ── */
     .mega {
@@ -799,6 +800,110 @@
       .case-study-block { grid-template-columns: 1fr; }
       .steps-grid::before { display: none; }
     }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      nav { padding: 0 24px; }
+      .hero { padding: 64px 24px; }
+      .hero h1 { font-size: 36px; }
+      .section, .section-alt, .section-dark { padding: 56px 24px; }
+      .problem-grid, .capabilities-grid { grid-template-columns: 1fr 1fr; }
+      .diff-grid { grid-template-columns: 1fr 1fr; }
+      .integration-grid { grid-template-columns: repeat(3, 1fr); }
+      .steps-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .case-study-block { grid-template-columns: 1fr; gap: 40px; }
+      .cs-stats { grid-template-columns: repeat(3, 1fr); }
+      .arch-layers { flex-direction: column; gap: 16px; }
+      .arch-arrow { transform: rotate(90deg); }
+    }
+
+    @media (max-width: 768px) {
+      /* Nav: hamburger toggle */
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #0f1522;
+        flex-direction: column;
+        padding: 24px;
+        gap: 0;
+        z-index: 300;
+        overflow-y: auto;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a, .nav-item > a {
+        color: rgba(255,255,255,0.8);
+        height: auto;
+        padding: 14px 0;
+        font-size: 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      .nav-links a:hover, .nav-item > a:hover { color: #ffffff; }
+      .nav-links a.active { border-bottom-color: #f43130; color: #ffffff; }
+      /* Hide mega-menus on mobile */
+      .mega, .mega-resources { display: none !important; }
+      .nav-item { position: relative; }
+      .nav-item > a .nav-chevron { display: none; }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 301;
+      }
+      .hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #111111;
+        transition: all 0.3s;
+      }
+      .nav-cta-wrap { padding-left: 8px; }
+      .nav-cta { padding: 6px 14px; font-size: 13px; }
+
+      /* Hero */
+      .hero { padding: 48px 20px; }
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 15px; }
+      .hero-badges { flex-wrap: wrap; gap: 8px; }
+      .trust-badge { font-size: 10px; padding: 4px 10px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas .btn-primary, .hero-ctas .btn-ghost { text-align: center; justify-content: center; }
+
+      /* Logo bar */
+      .logo-row { flex-wrap: wrap; gap: 16px; justify-content: center; }
+      .logo-bar { padding: 32px 20px; }
+
+      /* Sections */
+      .section, .section-alt, .section-dark { padding: 48px 20px; }
+      .section-title { font-size: 24px; }
+      .section-sub { font-size: 14px; }
+
+      /* Grids → single column */
+      .problem-grid, .capabilities-grid, .diff-grid, .steps-grid, .integration-grid { grid-template-columns: 1fr; }
+      .cs-stats { grid-template-columns: 1fr; }
+
+      /* Compliance */
+      .compliance-items { flex-direction: column; gap: 12px; }
+
+      /* Pricing teaser */
+      .pricing-teaser { padding: 48px 20px; }
+      .pricing-teaser h2 { font-size: 24px; }
+
+      /* Closing CTA */
+      .closing-cta { padding: 48px 20px; }
+      .closing-cta h2 { font-size: 24px; }
+      .closing-ctas { flex-direction: column; align-items: stretch; }
+      .closing-ctas .btn-primary, .closing-ctas .btn-secondary { text-align: center; justify-content: center; }
+
+      /* Steps CTA */
+      .steps-cta { flex-direction: column; align-items: stretch; }
+      .steps-cta a { text-align: center; justify-content: center; margin-left: 0 !important; }
+    }
   </style>
 </head>
 <body>
@@ -1134,6 +1239,10 @@
     </div>
     <div class="nav-item"><a href="why-kaptea.html">Why Kaptea</a></div>
 
+  </div>
+
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open'); document.querySelector('nav').classList.toggle('open');">
+    <span></span><span></span><span></span>
   </div>
 
   <div class="nav-cta-wrap">

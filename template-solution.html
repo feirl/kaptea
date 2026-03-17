@@ -49,6 +49,7 @@
       white-space: nowrap;
     }
     .nav-cta:hover { background: #d41f1e; }
+    .hamburger { display: none; }
 
     /* ── DESIGN / CONTENT NOTES ── */
     .design-note {
@@ -505,6 +506,93 @@
       color: #f43130;
       font-weight: 700;
     }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      nav { padding: 0 24px; }
+      .hero { padding: 56px 24px 48px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .challenge-section { padding: 56px 24px; }
+      .challenge-grid { grid-template-columns: 1fr 1fr; }
+      .solutions-section { padding: 56px 24px; }
+      .solution-block { gap: 32px; }
+      .numbers-inner { grid-template-columns: repeat(2, 1fr); }
+      .featured-section { padding: 56px 24px; }
+      .featured-inner { grid-template-columns: 1fr; gap: 40px; }
+      .trust-section { padding: 56px 24px; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .related-section { padding: 56px 24px; }
+    }
+
+    @media (max-width: 768px) {
+      /* Nav: hamburger */
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 64px; left: 0; right: 0; bottom: 0;
+        background: #0f1522;
+        flex-direction: column;
+        padding: 24px; gap: 0; z-index: 300;
+        overflow-y: auto;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a {
+        color: rgba(255,255,255,0.8);
+        height: auto; padding: 14px 0; font-size: 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      .nav-links a:hover { color: #fff; }
+      .nav-links a.active { border-bottom-color: #f43130; color: #fff; }
+      .hamburger {
+        display: flex; flex-direction: column; gap: 5px;
+        cursor: pointer; padding: 8px; z-index: 301;
+      }
+      .hamburger span { display: block; width: 22px; height: 2px; background: #111; }
+      .nav-cta-wrap { padding-left: 8px; }
+      .nav-cta { padding: 6px 14px; font-size: 13px; }
+
+      /* Hero */
+      .hero { padding: 40px 20px 36px; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 28px; }
+      .hero .hero-sub { font-size: 15px; }
+      .hero-visual { height: 200px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas a { text-align: center; justify-content: center; }
+
+      /* Challenges */
+      .challenge { padding: 40px 20px; }
+      .challenge-grid { grid-template-columns: 1fr; }
+
+      /* Solutions */
+      .solutions { padding: 48px 20px; }
+      .solution-block, .solution-block.reverse { grid-template-columns: 1fr; gap: 24px; direction: ltr; }
+      .solution-block.reverse > * { direction: ltr; }
+      .solution-visual { height: 200px; }
+
+      /* Numbers */
+      .numbers-strip { padding: 40px 20px; }
+      .numbers-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .number-item h3 { font-size: 28px; }
+
+      /* Featured */
+      .featured-customer { padding: 48px 20px; }
+      .featured-inner { grid-template-columns: 1fr; }
+
+      /* Trust */
+      .trust-section { padding: 48px 20px; }
+      .trust-grid { grid-template-columns: 1fr; }
+
+      /* Related */
+      .related-section { padding: 48px 20px; }
+      .related-grid { grid-template-columns: 1fr; }
+
+      /* CTA close */
+      .cta-close { padding: 48px 20px; }
+      .cta-close h2 { font-size: 24px; }
+      .cta-close .cta-buttons { flex-direction: column; align-items: stretch; }
+      .cta-close .cta-buttons a { text-align: center; justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -520,6 +608,9 @@
     <a href="index.html">Pricing</a>
     <a href="homepage.html">Resources</a>
     <a href="why-kaptea.html">Why Kaptea</a>
+  </div>
+  <div class="hamburger" onclick="this.parentElement.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
   </div>
   <div class="nav-cta-wrap">
     <a href="demo.html" class="nav-cta">Book a Demo</a>

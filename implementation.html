@@ -117,6 +117,56 @@
     .reassurance { display: flex; gap: 32px; justify-content: center; margin-top: 28px; }
     .reassurance span { font-size: 12px; color: #6b7280; display: flex; align-items: center; gap: 6px; }
     .reassurance span::before { content: '✓'; color: #f43130; font-weight: 700; }
+
+    /* ── HAMBURGER ── */
+    .hamburger { display: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      nav { padding: 0 24px; }
+      .hero { padding: 56px 24px 48px; }
+      .section, .section-alt { padding: 56px 24px; }
+      .managed-grid { grid-template-columns: 1fr 1fr; }
+      .ops-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
+        background: #0f1522; flex-direction: column; padding: 24px; gap: 0; z-index: 300; overflow-y: auto;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { color: rgba(255,255,255,0.8); height: auto; padding: 14px 0; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .nav-links a:hover { color: #fff; }
+      .nav-links a.active { border-bottom-color: #f43130; color: #fff; }
+      .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 301; }
+      .hamburger span { display: block; width: 22px; height: 2px; background: #111; }
+      .nav-cta-wrap { padding-left: 8px; }
+      .nav-cta { padding: 6px 14px; font-size: 13px; }
+
+      .hero { padding: 40px 20px 36px; }
+      .hero h1 { font-size: 28px; }
+      .hero .hero-sub { font-size: 15px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas a { text-align: center; justify-content: center; }
+
+      .section, .section-alt { padding: 48px 20px; }
+      .section-title { font-size: 24px; }
+      .phase-block { grid-template-columns: 1fr; gap: 16px; }
+      .phase-marker { flex-direction: row; align-items: center; gap: 12px; }
+      .managed-grid { grid-template-columns: 1fr; }
+      .ops-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .ops-item h3 { font-size: 28px; }
+      .team-grid { grid-template-columns: 1fr; }
+
+      .sla-table { font-size: 13px; overflow-x: auto; display: block; }
+
+      .cta-close { padding: 48px 20px; }
+      .cta-close h2 { font-size: 24px; }
+      .cta-close .cta-buttons { flex-direction: column; align-items: stretch; }
+      .cta-close .cta-buttons a { text-align: center; justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -131,6 +181,9 @@
     <a href="index.html">Pricing</a>
     <a href="homepage.html" class="active">Resources</a>
     <a href="why-kaptea.html">Why Kaptea</a>
+  </div>
+  <div class="hamburger" onclick="this.parentElement.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
   </div>
   <div class="nav-cta-wrap">
     <a href="demo.html" class="nav-cta">Book a Demo</a>
