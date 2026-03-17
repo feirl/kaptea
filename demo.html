@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaptea — Book a Free Demo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #faf8f5;
+      color: #111827;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: #ffffff;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-links { display: flex; gap: 0; align-items: center; }
+    .nav-links a {
+      color: #555555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 18px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: #111111; }
+    .nav-links a.active { color: #111111; border-bottom: 2px solid #f43130; }
+    .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
+    .nav-cta {
+      background: #f43130;
+      color: white !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: #d41f1e; }
+
+    /* ── MAIN LAYOUT ── */
+    .demo-wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .demo-wrapper { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ── LEFT: VALUE PROPOSITION ── */
+    .demo-value { padding-top: 8px; }
+
+    .demo-label {
+      display: inline-block;
+      background: rgba(244,49,48,0.08);
+      color: #f43130;
+      border: 1px solid rgba(244,49,48,0.2);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+    }
+
+    .demo-value h1 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #111111;
+      margin-bottom: 16px;
+    }
+    .demo-value h1 span { color: #f43130; }
+
+    .demo-value .subhead {
+      font-size: 17px;
+      color: #555555;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+
+    /* What you'll see */
+    .demo-expects {
+      margin-bottom: 36px;
+    }
+    .demo-expects h3 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #9ca3af;
+      margin-bottom: 16px;
+    }
+    .expect-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .expect-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.5;
+    }
+    .expect-list li .icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      color: #f43130;
+    }
+
+    /* Proof points */
+    .proof-strip {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #555555;
+    }
+    .proof-item strong {
+      color: #f43130;
+      font-size: 18px;
+    }
+    .proof-item .icon-sm {
+      width: 16px;
+      height: 16px;
+      color: #f43130;
+      flex-shrink: 0;
+    }
+
+    /* Trust badges */
+    .trust-badges {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      padding-top: 24px;
+      border-top: 1px solid #eeebe6;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #6b7280;
+      font-weight: 500;
+    }
+    .trust-badge .badge-icon {
+      width: 18px;
+      height: 18px;
+      color: #f43130;
+      flex-shrink: 0;
+    }
+
+    /* ── RIGHT: CALENDLY EMBED ── */
+    .demo-booking {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+    .booking-header {
+      padding: 24px 28px 16px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .booking-header h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 4px;
+    }
+    .booking-header p {
+      font-size: 14px;
+      color: #6b7280;
+    }
+    .calendly-container {
+      min-height: 580px;
+      padding: 0;
+    }
+    .calendly-container iframe {
+      width: 100%;
+      height: 580px;
+      border: none;
+    }
+    /* Fallback if no Calendly */
+    .calendly-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 580px;
+      padding: 40px;
+      text-align: center;
+    }
+    .calendly-placeholder .cal-icon {
+      width: 48px;
+      height: 48px;
+      color: #d1d5db;
+      margin-bottom: 16px;
+    }
+    .calendly-placeholder p {
+      font-size: 15px;
+      color: #6b7280;
+      margin-bottom: 20px;
+      max-width: 300px;
+      line-height: 1.5;
+    }
+    .calendly-placeholder a {
+      display: inline-block;
+      background: #f43130;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .calendly-placeholder a:hover { background: #d41f1e; }
+
+    /* ── BOTTOM: NO OBLIGATION STRIP ── */
+    .reassurance {
+      max-width: 1120px;
+      margin: 0 auto 64px;
+      padding: 0 24px;
+    }
+    .reassurance-inner {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .reassurance-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #374151;
+      font-weight: 500;
+    }
+    .reassurance-item .r-icon {
+      width: 20px;
+      height: 20px;
+      color: #16a34a;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="homepage.html" class="nav-logo">
+    <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" />
+  </a>
+  <div class="nav-links">
+    <a href="homepage.html">Platform</a>
+    <a href="homepage.html">Solutions</a>
+    <a href="index.html">Pricing</a>
+    <a href="homepage.html">Resources</a>
+    <a href="homepage.html">Why Kaptea</a>
+  </div>
+  <div class="nav-cta-wrap">
+    <a href="demo.html" class="nav-cta">Book a Demo</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="demo-wrapper">
+
+  <!-- LEFT: VALUE PROPOSITION -->
+  <div class="demo-value">
+    <div class="demo-label">Free &bull; No obligation &bull; 30 minutes</div>
+
+    <h1>See how enterprises <span>protect</span> their critical communications</h1>
+
+    <p class="subhead">Book a tailored walkthrough of the Pronto platform and learn how Kaptea gives regulated and high-scale organisations the governance, resilience, and operational control their communications need.</p>
+
+    <!-- What you'll see -->
+    <div class="demo-expects">
+      <h3>In your demo, you'll see</h3>
+      <ul class="expect-list">
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>A live walkthrough of Pronto — omnichannel messaging, failover, and governance in one platform</span>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>How Kaptea sits on top of Twilio to give you operational control without engineering overhead</span>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Compliance, audit trails, and division-level governance — built in, not bolted on</span>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Transparent pricing tailored to your communications architecture — no surprises</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Proof points -->
+    <div class="proof-strip">
+      <div class="proof-item">
+        <strong>30+</strong> enterprise customers
+      </div>
+      <div class="proof-item">
+        <strong>99.5%</strong> delivery rate
+      </div>
+      <div class="proof-item">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Deployed in days, not months
+      </div>
+    </div>
+
+    <!-- Trust badges -->
+    <div class="trust-badges">
+      <div class="trust-badge">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        ISO 27001
+      </div>
+      <div class="trust-badge">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        CREST Certified
+      </div>
+      <div class="trust-badge">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Cyber Essentials
+      </div>
+      <div class="trust-badge">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Twilio Gold Partner
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: CALENDLY EMBED -->
+  <div class="demo-booking">
+    <div class="booking-header">
+      <h2>Select a Date &amp; Time</h2>
+      <p>30-minute call with the Kaptea team</p>
+    </div>
+    <div class="calendly-container">
+      <!-- Replace the URL below with your actual Calendly link -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/kaptea/demo" style="min-width:100%;height:580px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+      <!-- Fallback: shown if Calendly doesn't load (e.g. on GitHub Pages without the real URL) -->
+      <noscript>
+        <div class="calendly-placeholder">
+          <svg class="cal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <p>Schedule your free 30-minute demo directly with the Kaptea team.</p>
+          <a href="https://calendly.com/kaptea/demo">Open Scheduling Page</a>
+        </div>
+      </noscript>
+    </div>
+  </div>
+
+</div>
+
+<!-- REASSURANCE STRIP -->
+<div class="reassurance">
+  <div class="reassurance-inner">
+    <div class="reassurance-item">
+      <svg class="r-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      No commitment required
+    </div>
+    <div class="reassurance-item">
+      <svg class="r-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Tailored to your use case
+    </div>
+    <div class="reassurance-item">
+      <svg class="r-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Talk directly to the team who built it
+    </div>
+    <div class="reassurance-item">
+      <svg class="r-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      60-day pilot available
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
