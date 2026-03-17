@@ -489,7 +489,7 @@
       <span class="price-currency">$</span><span class="price-amount" id="lite-price">1,500</span>
     </div>
     <div class="price-period" id="lite-period">per month, billed monthly</div>
-    <div class="price-volume" id="lite-volume">Up to 500,000 messages</div>
+    <div class="price-volume" id="lite-volume">Up to 500,000 messages / month</div>
     <div class="price-overage" style="margin-bottom:24px;">&nbsp;</div>
 
     <a href="#" class="plan-cta cta-secondary">Start with Lite</a>
@@ -563,7 +563,7 @@
       <span class="price-currency">$</span><span class="price-amount" id="premium-price">2,500</span>
     </div>
     <div class="price-period" id="premium-period">per instance / month, billed monthly</div>
-    <div class="price-volume" id="premium-volume">Up to 1,000,000 messages</div>
+    <div class="price-volume" id="premium-volume">Up to 1,000,000 messages / month</div>
     <div class="price-overage" style="margin-bottom:24px;">&nbsp;</div>
 
     <a href="#" class="plan-cta cta-primary">Start with Premium</a>
@@ -813,6 +813,10 @@
     const premiumSuffix = annual ? 'per instance / month, billed annually' : 'per instance / month, billed monthly';
     document.getElementById('lite-period').textContent    = liteSuffix;
     document.getElementById('premium-period').textContent = premiumSuffix;
+
+    // Switch volume labels between monthly and annual pooled
+    document.getElementById('lite-volume').textContent    = annual ? 'Up to 6,000,000 messages / year' : 'Up to 500,000 messages / month';
+    document.getElementById('premium-volume').textContent = annual ? 'Up to 12,000,000 messages / year' : 'Up to 1,000,000 messages / month';
 
     // Toggle label styling
     const mLabel = document.getElementById('monthly-label');
