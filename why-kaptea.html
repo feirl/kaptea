@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaptea — Why Kaptea</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111827; }
+
+    /* ── NAV ── */
+    nav { background: #ffffff; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 200; border-bottom: 1px solid #eeebe6; }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-links { display: flex; gap: 0; align-items: center; }
+    .nav-links a { color: #555555; text-decoration: none; font-size: 14px; font-weight: 500; padding: 0 18px; height: 64px; display: flex; align-items: center; white-space: nowrap; transition: color 0.15s; }
+    .nav-links a:hover { color: #111111; }
+    .nav-links a.active { color: #111111; border-bottom: 2px solid #f43130; }
+    .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
+    .nav-cta { background: #f43130; color: white !important; padding: 8px 20px; border-radius: 6px; font-weight: 600; font-size: 14px; text-decoration: none; white-space: nowrap; }
+    .nav-cta:hover { background: #d41f1e; }
+
+    /* ── NOTES ── */
+    .design-note { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 10px 16px; font-size: 12px; color: #92400e; font-style: italic; max-width: 1080px; margin: 12px auto; }
+    .design-note strong { color: #b45309; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
+    .content-note { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 10px 16px; font-size: 12px; color: #1e40af; font-style: italic; max-width: 1080px; margin: 12px auto; }
+    .content-note strong { color: #1d4ed8; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
+
+    /* ── HERO ── */
+    .hero { background: #111111; color: #ffffff; padding: 88px 40px 80px; text-align: center; }
+    .hero-inner { max-width: 720px; margin: 0 auto; }
+    .hero h1 { font-size: 44px; font-weight: 700; line-height: 1.15; margin-bottom: 20px; }
+    .hero h1 em { color: #f43130; font-style: normal; }
+    .hero .hero-sub { font-size: 18px; color: #9ca3af; line-height: 1.6; margin-bottom: 36px; }
+    .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: #f43130; color: white; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-primary:hover { background: #d41f1e; }
+    .btn-ghost-light { color: #ffffff; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid #4b5563; display: inline-flex; align-items: center; }
+    .btn-ghost-light:hover { border-color: #ffffff; }
+    .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #f43130; margin-bottom: 12px; }
+
+    /* ── THE PROBLEM ── */
+    .problem { padding: 80px 40px; }
+    .problem-inner { max-width: 1080px; margin: 0 auto; }
+    .problem h2 { font-size: 28px; font-weight: 700; color: #111111; margin-bottom: 16px; max-width: 640px; line-height: 1.3; }
+    .problem > .problem-inner > p { font-size: 16px; color: #555555; line-height: 1.7; margin-bottom: 40px; max-width: 640px; }
+    .problem-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .problem-card { padding: 28px; border: 1px solid #eeebe6; border-radius: 8px; }
+    .problem-card h3 { font-size: 16px; font-weight: 700; color: #111111; margin-bottom: 8px; }
+    .problem-card p { font-size: 14px; color: #555555; line-height: 1.6; }
+    .problem-card .vs { margin-top: 12px; padding-top: 12px; border-top: 1px solid #eeebe6; font-size: 13px; color: #f43130; font-weight: 600; }
+
+    /* ── FOUR DIFFERENTIATORS ── */
+    .diffs { padding: 72px 40px; background: #111111; color: white; }
+    .diffs-inner { max-width: 1080px; margin: 0 auto; }
+    .diffs h2 { font-size: 28px; font-weight: 700; margin-bottom: 48px; }
+    .diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .diff-card { padding: 28px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; }
+    .diff-card h3 { font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
+    .diff-card p { font-size: 14px; color: #9ca3af; line-height: 1.6; }
+
+    /* ── VENDOR CONSOLIDATION ── */
+    .consolidation { padding: 80px 40px; }
+    .consolidation-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .consolidation h2 { font-size: 28px; font-weight: 700; color: #111111; margin-bottom: 12px; line-height: 1.3; }
+    .consolidation > .consolidation-inner > div > p { font-size: 15px; color: #555555; line-height: 1.7; margin-bottom: 20px; }
+    .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .ba-card { padding: 20px; border-radius: 8px; }
+    .ba-card.before { background: #fef2f2; border: 1px solid #fecaca; }
+    .ba-card.after { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .ba-card h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+    .ba-card.before h4 { color: #dc2626; }
+    .ba-card.after h4 { color: #16a34a; }
+    .ba-card ul { list-style: none; font-size: 13px; line-height: 1.8; }
+    .ba-card.before ul li { color: #991b1b; }
+    .ba-card.after ul li { color: #166534; }
+
+    /* ── TCO SECTION ── */
+    .tco { padding: 72px 40px; background: #faf8f5; border-top: 1px solid #eeebe6; }
+    .tco-inner { max-width: 1080px; margin: 0 auto; }
+    .tco h2 { font-size: 28px; font-weight: 700; color: #111111; margin-bottom: 12px; }
+    .tco > .tco-inner > p { font-size: 15px; color: #555555; margin-bottom: 36px; max-width: 600px; line-height: 1.6; }
+    .tco-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .tco-card { padding: 28px; background: #ffffff; border: 1px solid #eeebe6; border-radius: 8px; text-align: center; }
+    .tco-card h3 { font-size: 14px; font-weight: 700; color: #dc2626; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
+    .tco-card p { font-size: 14px; color: #555555; line-height: 1.6; }
+    .tco-card .tco-replace { margin-top: 12px; font-size: 13px; color: #16a34a; font-weight: 600; }
+
+    /* ── LOGOS ── */
+    .logos { padding: 64px 40px; text-align: center; border-top: 1px solid #eeebe6; }
+    .logos-inner { max-width: 1080px; margin: 0 auto; }
+    .logos h2 { font-size: 24px; font-weight: 700; color: #111111; margin-bottom: 12px; }
+    .logos > .logos-inner > p { font-size: 15px; color: #555555; margin-bottom: 36px; }
+    .logo-grid { display: flex; gap: 48px; justify-content: center; align-items: center; flex-wrap: wrap; }
+    .logo-item { font-size: 15px; font-weight: 600; color: #9ca3af; padding: 16px 24px; border: 1px solid #eeebe6; border-radius: 8px; }
+
+    /* ── LEADERSHIP ── */
+    .leadership { padding: 72px 40px; background: #faf8f5; }
+    .leadership-inner { max-width: 1080px; margin: 0 auto; }
+    .leadership h2 { font-size: 28px; font-weight: 700; color: #111111; margin-bottom: 12px; }
+    .leadership > .leadership-inner > p { font-size: 15px; color: #555555; margin-bottom: 36px; max-width: 600px; line-height: 1.6; }
+    .leader-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .leader-card { padding: 24px; background: #ffffff; border: 1px solid #eeebe6; border-radius: 8px; }
+    .leader-card h3 { font-size: 16px; font-weight: 700; color: #111111; margin-bottom: 2px; }
+    .leader-card .leader-role { font-size: 13px; color: #f43130; font-weight: 600; margin-bottom: 10px; }
+    .leader-card p { font-size: 13px; color: #555555; line-height: 1.6; }
+
+    /* ── CERTS ── */
+    .certs { padding: 64px 40px; text-align: center; }
+    .certs-inner { max-width: 1080px; margin: 0 auto; }
+    .certs h2 { font-size: 24px; font-weight: 700; color: #111111; margin-bottom: 36px; }
+    .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .cert-card { padding: 24px; background: #faf8f5; border: 1px solid #eeebe6; border-radius: 8px; text-align: center; }
+    .cert-card h3 { font-size: 14px; font-weight: 700; color: #111111; margin-bottom: 4px; }
+    .cert-card p { font-size: 12px; color: #555555; line-height: 1.5; }
+
+    /* ── CTA CLOSE ── */
+    .cta-close { background: #111111; color: white; text-align: center; padding: 72px 40px; }
+    .cta-close h2 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+    .cta-close p { font-size: 17px; color: #9ca3af; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .cta-close .btn-primary { font-size: 16px; padding: 14px 32px; }
+    .reassurance { display: flex; gap: 32px; justify-content: center; margin-top: 28px; }
+    .reassurance span { font-size: 12px; color: #6b7280; display: flex; align-items: center; gap: 6px; }
+    .reassurance span::before { content: '✓'; color: #f43130; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="homepage.html" class="nav-logo">
+    <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" />
+  </a>
+  <div class="nav-links">
+    <a href="homepage.html">Platform</a>
+    <a href="homepage.html">Solutions</a>
+    <a href="index.html">Pricing</a>
+    <a href="homepage.html">Resources</a>
+    <a href="why-kaptea.html" class="active">Why Kaptea</a>
+  </div>
+  <div class="nav-cta-wrap">
+    <a href="demo.html" class="nav-cta">Book a Demo</a>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>You already have Twilio.<br><em>Now make it enterprise-ready.</em></h1>
+    <p class="hero-sub">Twilio gives you the building blocks. Kaptea gives you the platform your operations, compliance, and leadership teams actually need — without hiring an engineering team to build it yourself.</p>
+    <div class="hero-ctas">
+      <a href="demo.html" class="btn-primary">Book a Demo</a>
+      <a href="template-feature.html" class="btn-ghost-light">Explore the Platform</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- THE PROBLEM TODAY -->
+<section class="problem">
+  <div class="problem-inner">
+    <div class="section-label">The problem</div>
+    <h2>Twilio is powerful. But power without control creates risk.</h2>
+    <p>Most enterprises use Twilio for one or two channels, managed by engineering, with no governance layer, no failover, and no operational visibility. The result is fragmented messaging, compliance gaps, and a growing list of carrier issues nobody owns.</p>
+
+    <div class="problem-grid">
+
+      <div class="problem-card">
+        <h3>Multiple vendors, no single view</h3>
+        <p>SMS through Twilio, email through SendGrid or Mailgun, WhatsApp via a third party. Each has its own dashboard, its own reporting, and its own failure modes.</p>
+        <div class="vs">Kaptea: one platform, all channels, one audit trail</div>
+      </div>
+
+      <div class="problem-card">
+        <h3>Engineering builds it, then owns it forever</h3>
+        <p>Custom integrations between Twilio and your CRM require ongoing maintenance. When the developer who built it leaves, so does the knowledge.</p>
+        <div class="vs">Kaptea: pre-built connectors, managed by us, no code debt</div>
+      </div>
+
+      <div class="problem-card">
+        <h3>No governance for non-technical teams</h3>
+        <p>Marketing wants to send campaigns, operations need alerts, compliance needs audit trails — but nobody has a tool that serves all three without engineering involvement.</p>
+        <div class="vs">Kaptea: self-service UI with role-based access and template controls</div>
+      </div>
+
+      <div class="problem-card">
+        <h3>Compliance is a hope, not a guarantee</h3>
+        <p>No per-message audit trail, no template approval workflows, no evidence of delivery for the regulator. Your compliance team can't prove what was sent, when, or to whom.</p>
+        <div class="vs">Kaptea: full audit trail, template governance, exportable compliance evidence</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOUR DIFFERENTIATORS -->
+<section class="diffs">
+  <div class="diffs-inner">
+    <div class="section-label" style="color: #f43130;">What makes us different</div>
+    <h2>Four things that separate Kaptea from everything else in the market.</h2>
+
+    <div class="diff-grid">
+
+      <div class="diff-card">
+        <h3>Dedicated instance in days, not months</h3>
+        <p>No shared infrastructure. Your own instance, your data, your governance rules. Provisioned and configured within days of contract — not a quarter-long implementation project. No heavy engineering team required on your side.</p>
+      </div>
+
+      <div class="diff-card">
+        <h3>The full Twilio stack, operationalised</h3>
+        <p>The only platform that brings Twilio Messaging, Voice, Flex, Verify, and Video under a single governed interface. Every Twilio product your enterprise uses — unified, governed, and visible. Bring your own Twilio account; we make it enterprise-ready.</p>
+      </div>
+
+      <div class="diff-card">
+        <h3>Built on carrier-grade infrastructure</h3>
+        <p>Twilio's network reaches 180+ countries with carrier-grade reliability. Kaptea adds cross-channel failover, load-aware routing, and real-time delivery diagnostics on top — so your messages don't just send, they arrive. Backed by Twilio Gold Partner expertise.</p>
+      </div>
+
+      <div class="diff-card">
+        <h3>Designed for regulated industries</h3>
+        <p>ISO 27001:2022, CREST-certified penetration testing, Cyber Essentials, GDPR DPA, EU and US data residency. Not bolt-on compliance — it's how the platform was designed from day one, by a team that's delivered for HSE, An Post, and Barratt Homes.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- VENDOR CONSOLIDATION -->
+<section class="consolidation">
+  <div class="consolidation-inner">
+    <div>
+      <div class="section-label">Simplify your stack</div>
+      <h2>Replace fragmentation with a single platform</h2>
+      <p>The question your CEO is asking: "Does this complicate our vendor landscape?" The answer is the opposite. Kaptea consolidates your messaging stack — fewer vendors, fewer contracts, fewer points of failure, one team to call.</p>
+    </div>
+    <div class="before-after">
+      <div class="ba-card before">
+        <h4>Before Kaptea</h4>
+        <ul>
+          <li>3–4 messaging vendors</li>
+          <li>Custom Twilio integrations</li>
+          <li>Separate CRM connectors per channel</li>
+          <li>No cross-channel failover</li>
+          <li>Engineering owns everything</li>
+          <li>No audit trail across channels</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <h4>With Kaptea</h4>
+        <ul>
+          <li>One platform, all channels</li>
+          <li>Your Twilio account, operationalised</li>
+          <li>Pre-built CRM connectors</li>
+          <li>Automatic cross-channel failover</li>
+          <li>Self-service for operations teams</li>
+          <li>Full per-message audit trail</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TCO -->
+<section class="tco">
+  <div class="tco-inner">
+    <div class="section-label">Total cost of ownership</div>
+    <h2>What you stop paying for when you switch to Kaptea</h2>
+    <p>The platform fee is visible. The cost you're already carrying — custom integrations, Twilio support overhead, engineering maintenance — often isn't.</p>
+
+    <div class="tco-grid">
+
+      <div class="tco-card">
+        <h3>Engineering time</h3>
+        <p>Custom Twilio integrations require ongoing maintenance, Twilio API version upgrades, and debugging when carrier behaviour changes. That's engineering time you're already paying for.</p>
+        <div class="tco-replace">Replaced by: managed platform updates</div>
+      </div>
+
+      <div class="tco-card">
+        <h3>Multiple vendor contracts</h3>
+        <p>Separate contracts for SMS, email, WhatsApp. Separate billing, separate support, separate compliance assessments. Each vendor adds procurement overhead.</p>
+        <div class="tco-replace">Replaced by: one platform, one contract</div>
+      </div>
+
+      <div class="tco-card">
+        <h3>Incident response cost</h3>
+        <p>When a carrier issue hits, who diagnoses it? Who raises the Twilio ticket? Who coordinates across channels? Today, that's your team. With Kaptea, it's ours.</p>
+        <div class="tco-replace">Replaced by: managed Twilio support</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- WHO USES KAPTEA -->
+<section class="logos">
+  <div class="logos-inner">
+    <h2>Trusted by regulated and high-scale enterprises</h2>
+    <p>From public sector healthcare to multi-brand retail, these organisations trust Kaptea with their critical communications.</p>
+
+    <div class="logo-grid">
+      <div class="logo-item">HSE</div>
+      <div class="logo-item">An Post</div>
+      <div class="logo-item">Dialectica</div>
+      <div class="logo-item">Quandoo</div>
+      <div class="logo-item">Barratt Homes</div>
+      <div class="logo-item">Caledonia Sleeper</div>
+      <div class="logo-item">eFlow</div>
+      <div class="logo-item">RTE</div>
+    </div>
+  </div>
+</section>
+
+<div class="content-note"><strong>Content needed from Alan</strong> 1) Can we use all these logos publicly on the website? Need explicit approval per customer. 2) Can we get 1-2 testimonial quotes for this page? Ideal: a senior stakeholder from HSE, Barratt Homes, or Dialectica. 3) The leadership team previously worked at Cisco, Ryanair, Bank of America, HP, Bank of Ireland — can we reference these by name on the website?</div>
+
+
+<!-- LEADERSHIP -->
+<section class="leadership">
+  <div class="leadership-inner">
+    <div class="section-label">Our team</div>
+    <h2>Built by people who've done this at scale</h2>
+    <p>Kaptea's leadership team has delivered communications infrastructure for some of the world's largest organisations — and built Pronto to solve the problems they saw first-hand.</p>
+
+    <div class="leader-grid">
+
+      <div class="leader-card">
+        <h3>Alan McNab</h3>
+        <div class="leader-role">CEO &amp; Co-Founder</div>
+        <p>Former HP, Cisco, NCR, Arista Networks. Expertise in cloud architecture, high-availability systems, and customer service transformation. BSEE from Santa Clara University, MBA from Trinity College Dublin.</p>
+      </div>
+
+      <div class="leader-card">
+        <h3>Robert Norton</h3>
+        <div class="leader-role">CTO &amp; Co-Founder</div>
+        <p>18+ years driving digital transformation at Ryanair, Bank of Ireland, HSE, and 123.ie. Led the design and delivery of secure, scalable platforms serving millions of users.</p>
+      </div>
+
+      <div class="leader-card">
+        <h3>Danielle O'Meara</h3>
+        <div class="leader-role">Head of Customer Success</div>
+        <p>Former Twilio, Wix, CustomerMinds. Supported enterprises including Bank of Ireland, Bord Gais, Irish Water, Klarna, and Philip Morris International with cloud communications and CPaaS.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CERTIFICATIONS -->
+<section class="certs">
+  <div class="certs-inner">
+    <h2>Enterprise-ready compliance posture</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card">
+        <h3>ISO 27001:2022</h3>
+        <p>Certified information security management</p>
+      </div>
+      <div class="cert-card">
+        <h3>CREST Certified</h3>
+        <p>Independent penetration testing</p>
+      </div>
+      <div class="cert-card">
+        <h3>Cyber Essentials</h3>
+        <p>UK government cyber security standard</p>
+      </div>
+      <div class="cert-card">
+        <h3>Twilio Gold Partner</h3>
+        <p>5x certified developers, 100+ client implementations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-close">
+  <h2>See why enterprises choose Kaptea</h2>
+  <p>30 minutes. A live walkthrough tailored to your channels, your CRM, and your compliance requirements.</p>
+  <a href="demo.html" class="btn-primary">Book a Demo</a>
+  <div class="reassurance">
+    <span>No commitment required</span>
+    <span>Talk to founders, not salespeople</span>
+    <span>60-day pilot available</span>
+  </div>
+</section>
+
+</body>
+</html>
