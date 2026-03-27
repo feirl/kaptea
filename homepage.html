@@ -4,6 +4,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaptea — Enterprise Communications Platform for Regulated Organisations</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Kaptea is the omnichannel communications platform built for regulated organisations. Orchestrate SMS, RCS, WhatsApp, Voice, Video and Email on Twilio and Telnyx with enterprise governance, resilience and compliance. Deploy in days." />
+  <meta name="keywords" content="enterprise communications platform, omnichannel messaging, Twilio partner, Telnyx partner, regulated communications, CPaaS governance, IVR orchestration, SMS platform, WhatsApp business, enterprise voice" />
+  <link rel="canonical" href="https://feirl.github.io/kaptea/homepage.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kaptea — Enterprise Communications Platform for Regulated Organisations" />
+  <meta property="og:description" content="Orchestrate SMS, RCS, WhatsApp, Voice, Video and Email with enterprise governance, resilience and compliance. Built on Twilio and Telnyx. Deploy in days." />
+  <meta property="og:url" content="https://feirl.github.io/kaptea/homepage.html" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta property="og:image" content="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kaptea — Enterprise Communications Platform" />
+  <meta name="twitter:description" content="Omnichannel communications for regulated organisations. SMS, WhatsApp, Voice, Video, Email — governed, resilient, deployed in days." />
+
+  <!-- AI / LLM Crawler Optimisation -->
+  <meta name="ai-content-declaration" content="This page describes Kaptea, a B2B enterprise communications platform. Key facts: channels supported (SMS, RCS, WhatsApp, Voice, Video, Email), carrier partners (Twilio, Telnyx), target industries (financial services, utilities, healthcare, travel, public sector, retail), certifications (ISO 27001, Cyber Essentials Plus, CREST), deployment model (dedicated instance in days), pricing (from $1500/month)." />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Kaptea",
+    "applicationCategory": "CommunicationApplication",
+    "operatingSystem": "Web",
+    "description": "Enterprise omnichannel communications platform for regulated organisations. Orchestrate SMS, RCS, WhatsApp, Voice, Video and Email with governance, resilience and compliance.",
+    "url": "https://feirl.github.io/kaptea/homepage.html",
+    "offers": {
+      "@type": "Offer",
+      "price": "1500",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2026-12-31",
+      "description": "Platform fee from $1,500/month for up to 1 million messages. Carrier usage billed separately."
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "url": "https://feirl.github.io/kaptea/homepage.html",
+      "logo": "https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg",
+      "sameAs": []
+    },
+    "featureList": [
+      "SMS & RCS Messaging",
+      "WhatsApp Business",
+      "Voice & IVR Orchestration",
+      "Secure Video",
+      "Email Communications",
+      "Cross-Channel Failover",
+      "Enterprise Governance",
+      "Role-Based Access Control",
+      "CRM Integration (Salesforce, Dynamics, HubSpot)",
+      "Dedicated Instance Architecture",
+      "ISO 27001 Certified",
+      "Cyber Essentials Plus Certified",
+      "CREST Accredited",
+      "EU & US Data Residency"
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema for rich snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What channels does Kaptea support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kaptea supports SMS, RCS, WhatsApp, Voice & IVR, Secure Video, and Email — all managed through a single governed platform called Pronto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can Kaptea be deployed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kaptea deploys dedicated instances in days, not months. No heavy engineering lift required — connect your Twilio or Telnyx account and configure through a single interface."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What security certifications does Kaptea hold?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kaptea holds ISO 27001 certification, Cyber Essentials Plus, CREST accreditation, and offers GDPR Data Processor Agreements with EU and US data residency options."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111111; }
@@ -314,14 +419,17 @@
       border-radius: 99px;
       padding: 8px 20px;
       font-size: 13px;
-      color: #111111;
+      color: #666666;
       font-weight: 600;
       letter-spacing: 0.01em;
       box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      transition: box-shadow 0.15s ease, transform 0.15s ease;
+      transition: box-shadow 0.15s ease, transform 0.15s ease, color 0.15s ease;
+      text-decoration: none;
+      cursor: pointer;
     }
-    .channel-pill:hover { box-shadow: 0 3px 8px rgba(0,0,0,0.08); transform: translateY(-1px); }
-    .channel-pill svg { color: #f43130; opacity: 0.85; }
+    .channel-pill:hover { box-shadow: 0 3px 8px rgba(0,0,0,0.08); transform: translateY(-1px); color: #111111; }
+    .channel-pill:hover svg { color: #f43130; opacity: 0.85; }
+    .channel-pill svg { color: #888888; opacity: 0.6; }
 
     /* Certification strip below logo bar */
     .cert-strip {
@@ -347,8 +455,13 @@
       color: #888888;
       font-weight: 500;
       letter-spacing: 0.01em;
+      text-decoration: none;
+      transition: color 0.15s ease;
+      cursor: pointer;
     }
-    .cert-item svg { color: #999999; }
+    .cert-item:hover { color: #555555; }
+    .cert-item:hover svg { color: #f43130; }
+    .cert-item svg { color: #999999; transition: color 0.15s ease; }
     .cert-divider { width: 1px; height: 16px; background: #e0dbd5; }
     .hero h1 {
       font-size: 52px;
@@ -531,18 +644,23 @@
     }
     .arch-layer-title { font-size: 16px; font-weight: 800; }
     .arch-layer-sub { font-size: 12px; margin-top: 4px; }
-    .layer-carrier { background: #f0f9ff; border: 1px solid #bae6fd; }
-    .layer-carrier .arch-layer-label { color: #0369a1; }
+    .arch-layer-icon { margin-bottom: 8px; }
+    .arch-layer-icon svg { opacity: 0.7; }
+    .layer-carrier { background: #faf8f5; border: 1px solid #e0dbd5; }
+    .layer-carrier .arch-layer-label { color: #999999; }
     .layer-carrier .arch-layer-title { color: #111111; }
-    .layer-carrier .arch-layer-sub { color: #6b7280; }
-    .layer-kaptea { background: #f43130; border: 2px solid #d41f1e; margin: 0 -2px; z-index: 1; }
+    .layer-carrier .arch-layer-sub { color: #888888; }
+    .layer-carrier .arch-layer-icon svg { color: #999999; }
+    .layer-kaptea { background: #f43130; border: 2px solid #d41f1e; margin: 0 -2px; z-index: 1; padding: 24px 32px; }
     .layer-kaptea .arch-layer-label { color: rgba(255,255,255,0.85); }
-    .layer-kaptea .arch-layer-title { color: #ffffff; }
+    .layer-kaptea .arch-layer-title { color: #ffffff; font-size: 18px; }
     .layer-kaptea .arch-layer-sub { color: rgba(255,255,255,0.75); }
-    .layer-org { background: #f0fdf4; border: 1px solid #bbf7d0; }
-    .layer-org .arch-layer-label { color: #15803d; }
+    .layer-kaptea .arch-layer-icon svg { color: rgba(255,255,255,0.85); }
+    .layer-org { background: #faf8f5; border: 1px solid #e0dbd5; }
+    .layer-org .arch-layer-label { color: #999999; }
     .layer-org .arch-layer-title { color: #111111; }
-    .layer-org .arch-layer-sub { color: #6b7280; }
+    .layer-org .arch-layer-sub { color: #888888; }
+    .layer-org .arch-layer-icon svg { color: #999999; }
     .arch-arrow {
       font-size: 24px;
       color: #d1d5db;
@@ -1032,7 +1150,10 @@
 </head>
 <body>
 
-<nav>
+<!-- Skip navigation for accessibility -->
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#f43130;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
   <a href="#" class="nav-logo"><img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" /></a>
 
   <div class="nav-links">
@@ -1385,15 +1506,16 @@
   });
 </script>
 
-<section class="hero">
+<main id="main-content">
+<section class="hero" role="banner">
 
-  <div class="hero-channels">
-    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> SMS</div>
-    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> RCS</div>
-    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> WhatsApp</div>
-    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Voice</div>
-    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg> Video</div>
-    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email</div>
+  <div class="hero-channels" role="list" aria-label="Supported communication channels">
+    <a href="#" class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> SMS</a>
+    <a href="#" class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> RCS</a>
+    <a href="#" class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> WhatsApp</a>
+    <a href="#" class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Voice</a>
+    <a href="#" class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg> Video</a>
+    <a href="#" class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email</a>
   </div>
 
   <h1>Design &amp; orchestrate essential<br>communications with <em>confidence.</em></h1>
@@ -1421,32 +1543,32 @@
   </div>
 </div>
 
-<div class="cert-strip">
+<div class="cert-strip" role="complementary" aria-label="Security certifications and partnerships">
   <div class="cert-strip-inner">
-    <div class="cert-item">
+    <a href="#" class="cert-item">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       ISO 27001
-    </div>
+    </a>
     <div class="cert-divider"></div>
-    <div class="cert-item">
+    <a href="#" class="cert-item">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
       Cyber Essentials Plus
-    </div>
+    </a>
     <div class="cert-divider"></div>
-    <div class="cert-item">
+    <a href="#" class="cert-item">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       CREST Accredited
-    </div>
+    </a>
     <div class="cert-divider"></div>
-    <div class="cert-item">
+    <a href="#" class="cert-item">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
       Twilio Gold &amp; AI Partner
-    </div>
+    </a>
     <div class="cert-divider"></div>
-    <div class="cert-item">
+    <a href="#" class="cert-item">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
       Telnyx Partner
-    </div>
+    </a>
   </div>
 </div>
 
@@ -1492,18 +1614,21 @@
     <div class="arch-diagram">
       <div class="arch-layers">
         <div class="arch-layer layer-carrier">
+          <div class="arch-layer-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
           <div class="arch-layer-label">Carrier Layer</div>
           <div class="arch-layer-title">Twilio, Telnyx &amp; more</div>
           <div class="arch-layer-sub">SMS · RCS · WhatsApp · Voice · Video · Email</div>
         </div>
         <div class="arch-arrow">→</div>
         <div class="arch-layer layer-kaptea">
+          <div class="arch-layer-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
           <div class="arch-layer-label">Kaptea Platform</div>
           <div class="arch-layer-title">Pronto</div>
           <div class="arch-layer-sub">Orchestration · Governance · Resilience · Analytics</div>
         </div>
         <div class="arch-arrow">→</div>
         <div class="arch-layer layer-org">
+          <div class="arch-layer-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg></div>
           <div class="arch-layer-label">Your Organisation</div>
           <div class="arch-layer-title">Teams &amp; Systems</div>
           <div class="arch-layer-sub">CRMs · ERPs · Identity · Channels</div>
@@ -1794,8 +1919,9 @@
     <a href="pronto.html" class="btn-secondary">Explore the Platform</a>
   </div>
 </section>
+</main>
 
-<footer>
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
 
