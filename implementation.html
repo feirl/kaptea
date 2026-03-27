@@ -3,10 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <meta name="description" content="From contract to go-live in days. Dedicated instance deployment, managed Twilio support, 24/7 monitoring and enterprise onboarding with no heavy engineering lift." />
+  <meta name="keywords" content="implementation, enterprise deployment, managed support, Twilio management, communications onboarding" />
+  <link rel="canonical" href="https://feirl.github.io/kaptea/implementation.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Implementation & Support — Kaptea" />
+  <meta property="og:description" content="From contract to go-live in days. Dedicated instance deployment, managed Twilio support, 24/7 monitoring and enterprise onboarding with no heavy engineering lift." />
+  <meta property="og:url" content="https://feirl.github.io/kaptea/implementation.html" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Implementation & Support — Kaptea" />
+  <meta name="twitter:description" content="From contract to go-live in days. Dedicated instance deployment, managed Twilio support, 24/7 monitoring and enterprise onboarding with no heavy engineering lift." />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Implementation & Support",
+    "description": "From contract to go-live in days. Dedicated instance deployment, managed Twilio support, 24/7 monitoring and enterprise onboarding with no heavy engineering lift.",
+    "url": "https://feirl.github.io/kaptea/implementation.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "url": "https://feirl.github.io/kaptea/homepage.html"
+    }
+  }
+  </script>
+
   <title>Kaptea — Implementation &amp; Support</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111827; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111111; }
 
     /* ── NAV ── */
     nav { background: #ffffff; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 200; border-bottom: 1px solid #eeebe6; }
@@ -20,9 +60,7 @@
     .nav-cta:hover { background: #d41f1e; }
 
     /* ── NOTES ── */
-    .design-note { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 10px 16px; font-size: 12px; color: #92400e; font-style: italic; max-width: 1080px; margin: 12px auto; }
-    .design-note strong { color: #b45309; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
-    .content-note { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 10px 16px; font-size: 12px; color: #1e40af; font-style: italic; max-width: 1080px; margin: 12px auto; }
+.content-note { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 10px 16px; font-size: 12px; color: #1e40af; font-style: italic; max-width: 1080px; margin: 12px auto; }
     .content-note strong { color: #1d4ed8; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
 
     /* ── HERO ── */
@@ -242,11 +280,23 @@
       .footer-brand { grid-column: 1 / -1; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
+  
+    /* ── HOVER STATES (polish pass) ── */
+    a { transition: color 0.15s ease; }
+    .btn-primary { transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    .btn-primary:hover { box-shadow: 0 4px 12px rgba(244,49,48,0.3); transform: translateY(-1px); }
+    .btn-ghost { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    .btn-ghost:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
+    .btn-secondary { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    .btn-secondary:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
   </style>
 </head>
 <body>
 
-<nav>
+<!-- Skip navigation for accessibility -->
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#f43130;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
   <a href="homepage.html" class="nav-logo">
     <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" />
   </a>
@@ -267,6 +317,7 @@
 
 
 <!-- HERO -->
+<main id="main-content">
 <section class="hero">
   <div class="hero-inner">
     <div>
@@ -566,7 +617,9 @@
 
 
 <!-- ── FOOTER ── -->
-<footer>
+</main>
+
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
 

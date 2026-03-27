@@ -3,6 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Transparent, outcome-based pricing from <meta name="viewport" content="width=device-width, initial-scale=1.0" />,500/month. Platform fees separate from carrier costs. No hidden bundling, no shared infrastructure markup." />
+  <meta name="keywords" content="Kaptea pricing, enterprise communications pricing, CPaaS pricing, Twilio platform pricing" />
+  <link rel="canonical" href="https://feirl.github.io/kaptea/index.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pricing — Kaptea Enterprise Communications Platform" />
+  <meta property="og:description" content="Transparent, outcome-based pricing from <meta name="viewport" content="width=device-width, initial-scale=1.0" />,500/month. Platform fees separate from carrier costs. No hidden bundling, no shared infrastructure markup." />
+  <meta property="og:url" content="https://feirl.github.io/kaptea/index.html" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Pricing — Kaptea Enterprise Communications Platform" />
+  <meta name="twitter:description" content="Transparent, outcome-based pricing from <meta name="viewport" content="width=device-width, initial-scale=1.0" />,500/month. Platform fees separate from carrier costs. No hidden bundling, no shared infrastructure markup." />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Pricing",
+    "description": "Transparent, outcome-based pricing from <meta name="viewport" content="width=device-width, initial-scale=1.0" />,500/month. Platform fees separate from carrier costs. No hidden bundling, no shared infrastructure markup.",
+    "url": "https://feirl.github.io/kaptea/index.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "url": "https://feirl.github.io/kaptea/homepage.html"
+    }
+  }
+  </script>
+
   <title>Kaptea — Pricing</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -10,7 +50,7 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #faf8f5;
-      color: #111827;
+      color: #111111;
     }
 
     /* ── HERO ── */
@@ -182,7 +222,7 @@
     .price-amount {
       font-size: 42px;
       font-weight: 800;
-      color: #0f172a;
+      color: #111111;
       line-height: 1;
     }
     .price-amount.enterprise-price {
@@ -240,7 +280,7 @@
     }
     .cta-secondary:hover { background: #fff3f3; }
     .cta-enterprise {
-      background: #0f172a;
+      background: #111111;
       color: white;
     }
     .cta-enterprise:hover { background: #1e293b; }
@@ -318,7 +358,7 @@
     .compare-section h2 {
       font-size: 22px;
       font-weight: 700;
-      color: #0f172a;
+      color: #111111;
       margin-bottom: 24px;
     }
     .compare-table {
@@ -378,7 +418,7 @@
     .footer-note-inner h3 {
       font-size: 14px;
       font-weight: 700;
-      color: #0f172a;
+      color: #111111;
       margin-bottom: 8px;
     }
     .footer-note-inner p, .footer-note-inner li {
@@ -527,12 +567,23 @@
       .footer-brand { grid-column: 1 / -1; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
+  
+    /* ── HOVER STATES (polish pass) ── */
+    a { transition: color 0.15s ease; }
+    .btn-primary { transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    .btn-primary:hover { box-shadow: 0 4px 12px rgba(244,49,48,0.3); transform: translateY(-1px); }
+    .btn-ghost { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    .btn-ghost:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
+    .btn-secondary { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    .btn-secondary:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
+<!-- Skip navigation for accessibility -->
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#f43130;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
   <a href="homepage.html" class="nav-logo">
     <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" />
   </a>
@@ -552,6 +603,7 @@
 </nav>
 
 <!-- HERO -->
+<main id="main-content">
 <section class="hero">
   <div class="hero-label">Transparent outcome-based pricing</div>
   <h1>Communications <span>confidence</span>,<br>priced transparently.</h1>
@@ -567,7 +619,7 @@
 
   <!-- Billing toggle -->
   <div class="billing-toggle">
-    <span id="monthly-label" style="color:#0f172a; font-weight:700;">Monthly</span>
+    <span id="monthly-label" style="color:#111111; font-weight:700;">Monthly</span>
     <label class="toggle-switch">
       <input type="checkbox" id="billing-toggle" onchange="updatePricing()" />
       <span class="toggle-slider"></span>
@@ -921,15 +973,17 @@
     // Toggle label styling
     const mLabel = document.getElementById('monthly-label');
     const aLabel = document.getElementById('annual-label');
-    mLabel.style.color      = annual ? '#6b7280' : '#0f172a';
+    mLabel.style.color      = annual ? '#6b7280' : '#111111';
     mLabel.style.fontWeight = annual ? '500' : '700';
-    aLabel.style.color      = annual ? '#0f172a' : '#6b7280';
+    aLabel.style.color      = annual ? '#111111' : '#6b7280';
     aLabel.style.fontWeight = annual ? '700' : '500';
   }
 </script>
 
 <!-- ── FOOTER ── -->
-<footer>
+</main>
+
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
 

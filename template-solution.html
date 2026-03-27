@@ -3,10 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Enterprise communications platform for financial services. Fraud alerts, secure authentication, regulatory compliance messaging and multi-channel customer notifications." />
+  <meta name="keywords" content="financial services communications, fraud alerts, secure messaging, regulatory compliance, banking communications" />
+  <link rel="canonical" href="https://feirl.github.io/kaptea/template-solution.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Financial Services Communications — Kaptea" />
+  <meta property="og:description" content="Enterprise communications platform for financial services. Fraud alerts, secure authentication, regulatory compliance messaging and multi-channel customer notifications." />
+  <meta property="og:url" content="https://feirl.github.io/kaptea/template-solution.html" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Financial Services Communications — Kaptea" />
+  <meta name="twitter:description" content="Enterprise communications platform for financial services. Fraud alerts, secure authentication, regulatory compliance messaging and multi-channel customer notifications." />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Financial Services Solutions",
+    "description": "Enterprise communications platform for financial services. Fraud alerts, secure authentication, regulatory compliance messaging and multi-channel customer notifications.",
+    "url": "https://feirl.github.io/kaptea/template-solution.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "url": "https://feirl.github.io/kaptea/homepage.html"
+    }
+  }
+  </script>
+
   <title>Kaptea — Financial Services</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111827; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111111; }
 
     /* ── NAV ── */
     nav {
@@ -52,18 +92,7 @@
     .hamburger { display: none; }
 
     /* ── DESIGN / CONTENT NOTES ── */
-    .design-note {
-      background: #fffbeb;
-      border-left: 4px solid #f59e0b;
-      padding: 10px 16px;
-      font-size: 12px;
-      color: #92400e;
-      font-style: italic;
-      max-width: 1080px;
-      margin: 12px auto;
-    }
-    .design-note strong { color: #b45309; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
-    .content-note {
+.content-note {
       background: #eff6ff;
       border-left: 4px solid #3b82f6;
       padding: 10px 16px;
@@ -668,12 +697,23 @@
       .footer-brand { grid-column: 1 / -1; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
+  
+    /* ── HOVER STATES (polish pass) ── */
+    a { transition: color 0.15s ease; }
+    .btn-primary { transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    .btn-primary:hover { box-shadow: 0 4px 12px rgba(244,49,48,0.3); transform: translateY(-1px); }
+    .btn-ghost { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    .btn-ghost:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
+    .btn-secondary { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+    .btn-secondary:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
+<!-- Skip navigation for accessibility -->
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#f43130;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
   <a href="homepage.html" class="nav-logo">
     <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" />
   </a>
@@ -692,9 +732,7 @@
   </div>
 </nav>
 
-<div class="design-note"><strong>Template B — Solution / Industry Page</strong> This is the reusable template for all industry pages (Financial Services, Utilities &amp; Energy, Healthcare, Retail &amp; Ecommerce, Public Sector, Distributed Operations) and use case pages (Emergency &amp; Surge, Regulatory Compliance, CRM-Triggered Messaging, Distributed Governance). This worked example uses Financial Services. The key structural difference from Template A: this page leads with the <em>industry problem</em>, not the product feature.</div>
-
-
+<main id="main-content">
 <!-- ═══════════════════════════════════════════
      SECTION 1 — HERO (dark, problem-led)
      Dark hero distinguishes solution pages from
@@ -1005,22 +1043,10 @@
 </section>
 
 
-<div class="design-note"><strong>Template reuse guide</strong> To create another solution/industry page from this template:<br>
-1. Update the breadcrumb and hero — lead with the industry's specific messaging pain, not a generic statement<br>
-2. Rewrite the 4 challenge cards with pains specific to that industry (use buyer language, not feature language)<br>
-3. Replace the 3 solution blocks — each should map an industry pain to a specific Pronto capability and link to the feature page<br>
-4. Update the numbers strip — include industry-specific metrics where possible<br>
-5. Swap the customer proof for one in that industry (or the closest match)<br>
-6. Adjust the compliance cards if different certifications matter more in that industry<br>
-7. Update related solutions to show adjacent industries<br>
-8. Update the closing CTA copy to reference the industry specifically
-</div>
-
-<div class="design-note"><strong>Use case pages vs industry pages</strong> The same template works for use case pages (Emergency &amp; Surge, Regulatory Compliance, etc.) — the only structural change is the breadcrumb reads "Solutions → Use Cases → [Name]" and the related section shows other use cases instead of industries. The hero framing shifts from "your industry has this problem" to "this scenario creates this problem."</div>
-
-
 <!-- ── FOOTER ── -->
-<footer>
+</main>
+
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
 
