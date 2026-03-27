@@ -298,26 +298,55 @@
       text-align: center;
       padding: 96px 24px 80px;
     }
-    .hero-badges {
+    .hero-channels {
       display: flex;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       margin-bottom: 32px;
       flex-wrap: wrap;
     }
-    .trust-badge {
+    .channel-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #ffffff;
-      border: 1px solid #e0dbd5;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
       border-radius: 99px;
-      padding: 5px 14px;
-      font-size: 12px;
-      color: #555555;
-      font-weight: 500;
+      padding: 6px 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+      letter-spacing: 0.01em;
     }
-    .trust-badge .dot { width: 6px; height: 6px; background: #f43130; border-radius: 50%; }
+    .channel-pill svg { opacity: 0.7; }
+
+    /* Certification strip below logo bar */
+    .cert-strip {
+      background: #ffffff;
+      border-top: 1px solid #eeebe6;
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .cert-strip-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .cert-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #888888;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+    .cert-item svg { color: #999999; }
+    .cert-divider { width: 1px; height: 16px; background: #e0dbd5; }
     .hero h1 {
       font-size: 52px;
       font-weight: 800;
@@ -786,13 +815,72 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #f5f2ee;
-      padding: 32px 40px;
-      text-align: center;
+      background: #151515;
+      padding: 64px 40px 32px;
+      color: rgba(255,255,255,0.6);
       font-size: 13px;
-      color: #777777;
-      border-top: 1px solid #eeebe6;
+      line-height: 1.6;
     }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+    .footer-brand p { margin: 12px 0 0; font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 260px; }
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.9);
+      margin: 0 0 16px;
+    }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.15s;
+    }
+    .footer-col a:hover { color: rgba(255,255,255,0.9); }
+    .footer-certs {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .footer-cert {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      font-weight: 500;
+    }
+    .footer-cert svg { color: rgba(255,255,255,0.3); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+    }
+    .footer-bottom a {
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+    }
+    .footer-bottom a:hover { color: rgba(255,255,255,0.7); }
+    .footer-legal { display: flex; gap: 20px; }
 
     @media (max-width: 900px) {
       .hero h1 { font-size: 36px; }
@@ -869,14 +957,22 @@
       .hero { padding: 48px 20px; }
       .hero h1 { font-size: 28px; }
       .hero p { font-size: 15px; }
-      .hero-badges { flex-wrap: wrap; gap: 8px; }
-      .trust-badge { font-size: 10px; padding: 4px 10px; }
+      .hero-channels { gap: 6px; }
+      .channel-pill { font-size: 11px; padding: 4px 10px; }
+      .cert-strip-inner { gap: 16px; }
+      .cert-item { font-size: 11px; }
+      .cert-divider { display: none; }
       .hero-ctas { flex-direction: column; align-items: stretch; }
       .hero-ctas .btn-primary, .hero-ctas .btn-ghost { text-align: center; justify-content: center; }
 
       /* Logo bar */
       .logo-row { flex-wrap: wrap; gap: 16px; justify-content: center; }
       .logo-bar { padding: 32px 20px; }
+
+      /* Footer */
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; text-align: center; }
 
       /* Sections */
       .section, .section-alt, .section-dark { padding: 48px 20px; }
@@ -1159,13 +1255,13 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="#">Retail &amp; Ecommerce</a></div>
+                <div class="industry-title"><a href="#">Travel &amp; Transportation</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Order &amp; delivery updates</li>
-                  <li class="mega-detail">Peak event surge messaging</li>
-                  <li class="mega-detail">Distributed store &amp; depot communications</li>
-                  <li class="mega-detail">CRM-triggered transactional messaging</li>
-                  <li class="mega-detail">Post-purchase engagement</li>
+                  <li class="mega-detail">Passenger &amp; operational notifications</li>
+                  <li class="mega-detail">Real-time disruption alerts</li>
+                  <li class="mega-detail">High-volume delivery communications</li>
+                  <li class="mega-detail">Cross-channel customer engagement</li>
+                  <li class="mega-detail">Logistics &amp; dispatch messaging</li>
                 </ul>
               </div>
 
@@ -1181,13 +1277,13 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="#">Distributed &amp; Field Operations</a></div>
+                <div class="industry-title"><a href="#">Retail &amp; Ecommerce</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Franchise &amp; depot messaging governance</li>
-                  <li class="mega-detail">Division-level access control</li>
-                  <li class="mega-detail">Brand-safe template enforcement</li>
-                  <li class="mega-detail">Centralised oversight with local flexibility</li>
-                  <li class="mega-detail">CRM-triggered field communications</li>
+                  <li class="mega-detail">Order &amp; delivery updates</li>
+                  <li class="mega-detail">Peak event surge messaging</li>
+                  <li class="mega-detail">Distributed store &amp; depot communications</li>
+                  <li class="mega-detail">CRM-triggered transactional messaging</li>
+                  <li class="mega-detail">Post-purchase engagement</li>
                 </ul>
               </div>
 
@@ -1278,15 +1374,18 @@
 ───────────────────────────────────────────────── -->
 <section class="hero">
 
-  <div class="hero-badges">
-    <div class="trust-badge"><div class="dot"></div> ISO 27001 Certified</div>
-    <div class="trust-badge"><div class="dot"></div> Cyber Essentials Certified</div>
-    <div class="trust-badge"><div class="dot"></div> Twilio Gold &amp; AI Partner</div>
+  <div class="hero-channels">
+    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> SMS</div>
+    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> RCS</div>
+    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> WhatsApp</div>
+    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Voice</div>
+    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg> Video</div>
+    <div class="channel-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email</div>
   </div>
 
-  <h1>Design &amp; orchestrate essential<br>communications with <em>confidence.</em></h1>
+  <h1>Design &amp; orchestrate mission-critical<br>communications with <em>confidence.</em></h1>
 
-  <p>Rapidly deploy the only omnichannel communications platform designed for regulated and high-scale organisations, built on carrier-grade infrastructure.</p>
+  <p>The omnichannel communications platform designed for regulated organisations, built on carrier-grade infrastructure. Deploy in days, not months.</p>
 
   <div class="hero-ctas">
     <a href="demo.html" class="btn-primary">Book a Demo</a>
@@ -1303,7 +1402,7 @@
      treatment to keep it clean and neutral.
 ───────────────────────────────────────────────── -->
 <div class="logo-bar">
-  <div class="logo-bar-label">Trusted by regulated and high-scale enterprises across utilities, healthcare, financial services, and retail</div>
+  <div class="logo-bar-label">Trusted by regulated organisations across utilities, healthcare, financial services, and travel &amp; transportation</div>
   <div class="logo-row">
     <div class="logo-placeholder">NIE Networks</div>
     <div class="logo-placeholder">HSE</div>
@@ -1313,6 +1412,35 @@
     <div class="logo-placeholder">Quandoo</div>
     <div class="logo-placeholder">Howdens</div>
     <div class="logo-placeholder">Kingfisher</div>
+  </div>
+</div>
+
+<div class="cert-strip">
+  <div class="cert-strip-inner">
+    <div class="cert-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      ISO 27001
+    </div>
+    <div class="cert-divider"></div>
+    <div class="cert-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      Cyber Essentials Plus
+    </div>
+    <div class="cert-divider"></div>
+    <div class="cert-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      CREST Accredited
+    </div>
+    <div class="cert-divider"></div>
+    <div class="cert-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      Twilio Gold &amp; AI Partner
+    </div>
+    <div class="cert-divider"></div>
+    <div class="cert-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      Telnyx Partner
+    </div>
   </div>
 </div>
 
@@ -1352,7 +1480,7 @@
     </div>
 
     <div class="problem-bridge">
-      <span>Kaptea solves for all three.</span> One platform. Deployed in days. Built for regulated, high-scale organisations.
+      <span>Kaptea solves for all three.</span> One platform. Deployed in days. Built for regulated, mission-critical organisations.
     </div>
   </div>
 </section>
@@ -1693,6 +1821,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
         Dedicated Instance Architecture
       </div>
+      <div class="compliance-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        CREST Accredited
+      </div>
     </div>
   </div>
 </div>
@@ -1718,7 +1850,7 @@
 ───────────────────────────────────────────────── -->
 <section class="closing-cta">
   <h2>Ready to orchestrate essential<br>communications with <em>confidence?</em></h2>
-  <p>Join regulated organisations across utilities, financial services, public sector and retail running mission-critical communications on Kaptea.</p>
+  <p>Join regulated organisations across utilities, financial services, healthcare, and travel &amp; transportation running mission-critical communications on Kaptea.</p>
   <div class="closing-ctas">
     <a href="demo.html" class="btn-primary">Book a Demo</a>
     <a href="pronto.html" class="btn-secondary">Explore the Platform</a>
@@ -1727,10 +1859,85 @@
 
 
 <!-- ─────────────────────────────────────────────
-     FOOTER (minimal placeholder)
+     FOOTER
 ───────────────────────────────────────────────── -->
 <footer>
-  © 2026 Kaptea. All rights reserved. &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Terms &nbsp;·&nbsp; ISO 27001 Certified &nbsp;·&nbsp; Built on Twilio
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="28" style="filter: brightness(0) invert(1); opacity: 0.8;" />
+        <p>The omnichannel communications platform designed for regulated and mission-critical organisations. Built on Twilio and Telnyx.</p>
+        <div class="footer-certs">
+          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> ISO 27001</div>
+          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Cyber Essentials Plus</div>
+          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> CREST</div>
+          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Twilio Gold Partner</div>
+          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Telnyx Partner</div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="pronto.html">Pronto 360</a></li>
+          <li><a href="#">SMS &amp; RCS</a></li>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">Voice &amp; IVR</a></li>
+          <li><a href="#">Email</a></li>
+          <li><a href="#">Secure Video</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#">Financial Services</a></li>
+          <li><a href="#">Utilities &amp; Energy</a></li>
+          <li><a href="#">Healthcare</a></li>
+          <li><a href="#">Travel &amp; Transportation</a></li>
+          <li><a href="#">Public Sector</a></li>
+          <li><a href="#">Retail &amp; Ecommerce</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Blog &amp; Insights</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">API Reference</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
+          <li><a href="#">Guides</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="why-kaptea.html">Why Kaptea</a></li>
+          <li><a href="demo.html">Book a Demo</a></li>
+          <li><a href="index.html">Pricing</a></li>
+          <li><a href="#">Security &amp; Compliance</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Kaptea. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">GDPR</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 </body>
