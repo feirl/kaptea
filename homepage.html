@@ -947,17 +947,20 @@
     .closing-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .btn-secondary {
       background: transparent;
-      color: #ffffff;
+      color: #111111;
       padding: 14px 32px;
       border-radius: 8px;
       font-size: 15px;
       font-weight: 600;
       text-decoration: none;
       display: inline-block;
-      border: 1.5px solid rgba(255,255,255,0.25);
-      transition: border-color 0.15s ease, background 0.15s ease;
+      border: 1.5px solid #cccccc;
+      transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
     }
-    .btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+    .btn-secondary:hover { border-color: #888888; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
+    /* Override for dark backgrounds */
+    .closing-cta .btn-secondary { color: #ffffff; border-color: rgba(255,255,255,0.25); }
+    .closing-cta .btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); box-shadow: none; }
 
     /* ── FOOTER ── */
     footer {
