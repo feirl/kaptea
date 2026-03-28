@@ -27,6 +27,9 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
+  <!-- AI / LLM Crawler Optimisation -->
+  <meta name="ai-content-declaration" content="This page allows visitors to book a demo of Kaptea's Pronto 360 platform. Key facts: 30-minute personalised demo, see your specific use case demonstrated, no commitment required, speak directly with a solutions engineer." />
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -52,6 +55,10 @@
       background: #faf8f5;
       color: #111111;
     }
+    /* ── ACCESSIBILITY ── */
+    a:focus-visible, button:focus-visible { outline: 2px solid #f43130; outline-offset: 2px; }
+    :focus:not(:focus-visible) { outline: none; }
+
 
     /* ── NAV ── */
     nav {
@@ -351,7 +358,7 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #151515;
+      background: #111111;
       padding: 64px 40px 32px;
       color: rgba(255,255,255,0.6);
       font-size: 13px;

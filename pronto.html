@@ -27,7 +27,645 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
+  <title>Pronto 360 — Enterprise Communications Platform | Kaptea</title>
+
+  <!-- AI / LLM Crawler Optimisation -->
+  <meta name="ai-content-declaration" content="This page describes Pronto 360, Kaptea's unified enterprise communications platform. Key facts: five channels (SMS, RCS, WhatsApp, Voice & IVR, Email, Secure Video), six core capabilities (Omni-Channel, Governance, Resilience, Integration, Deployment, AI), 16 pre-built integrations (Salesforce, Dynamics, HubSpot, SAP, Zoho, Twilio Flex, Teams, Slack), carrier partners (Twilio, Telnyx), dedicated single-tenant instances, deployment in days not months." />
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Pronto 360",
+    "applicationCategory": "CommunicationApplication",
+    "operatingSystem": "Web",
+    "description": "Pronto 360 is Kaptea's unified enterprise communications platform. Manage SMS, RCS, WhatsApp, Voice, Video and Email through a single governed interface with enterprise resilience and compliance.",
+    "url": "https://feirl.github.io/kaptea/pronto.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "url": "https://feirl.github.io/kaptea/homepage.html"
+    },
+    "featureList": [
+      "SMS & RCS Messaging",
+      "WhatsApp Business",
+      "Voice & IVR Orchestration",
+      "Secure Video",
+      "Email Communications",
+      "Cross-Channel Failover",
+      "Enterprise Governance",
+      "16 Pre-Built Integrations",
+      "Dedicated Instance Architecture"
+    ]
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111111; }
+
+    /* ── ACCESSIBILITY ── */
+    a:focus-visible, button:focus-visible { outline: 2px solid #f43130; outline-offset: 2px; }
+    :focus:not(:focus-visible) { outline: none; }
+
+    /* ── NAV ── */
+    nav {
+      background: #ffffff;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      overflow: visible;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-links { display: flex; gap: 0; align-items: stretch; height: 64px; }
+    .nav-links a {
+      color: #555555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 18px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: #111111; }
+    .nav-links a.active { color: #111111; border-bottom: 2px solid #f43130; }
+    .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
+    .nav-cta {
+      background: #f43130;
+      color: white !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: #d41f1e; }
+    .hamburger { display: none; }
+
+    /* ── HERO ── */
+    .hero {
+      background: #faf8f5;
+      color: #111111;
+      text-align: center;
+      padding: 80px 24px 72px;
+    }
+    .hero-inner { max-width: 800px; margin: 0 auto; }
+    .hero-breadcrumb {
+      font-size: 13px;
+      color: #888888;
+      margin-bottom: 24px;
+    }
+    .hero-breadcrumb a { color: #888888; text-decoration: none; }
+    .hero-breadcrumb a:hover { color: #f43130; }
+    .hero-breadcrumb span { margin: 0 6px; }
+    .hero-logo { height: 40px; margin-bottom: 24px; }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 em { color: #f43130; font-style: normal; }
+    .hero-sub {
+      font-size: 18px;
+      color: #555555;
+      max-width: 620px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+    .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      background: #f43130;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+    }
+    .btn-primary:hover { background: #d41f1e; box-shadow: 0 4px 12px rgba(244,49,48,0.3); transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent;
+      color: #111111;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      border: 1.5px solid #cccccc;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+    }
+    .btn-ghost:hover { border-color: #888888; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: #111111;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      border: 1.5px solid #cccccc;
+      transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+    }
+    .btn-secondary:hover { border-color: #888888; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
+
+    /* ── VALUE STRIP ── */
+    .value-strip {
+      background: #ffffff;
+      border-top: 1px solid #eeebe6;
+      border-bottom: 1px solid #eeebe6;
+      padding: 48px 40px;
+    }
+    .value-strip-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+    .value-item { text-align: center; }
+    .value-icon {
+      width: 48px;
+      height: 48px;
+      background: #fff3f3;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      color: #f43130;
+    }
+    .value-item h3 { font-size: 16px; font-weight: 700; color: #111111; margin-bottom: 8px; }
+    .value-item p { font-size: 14px; color: #555555; line-height: 1.6; }
+
+    /* ── SECTION WRAPPERS ── */
+    .section { padding: 88px 40px; }
+    .section-alt { background: #faf8f5; }
+    .section-dark { background: #111111; color: #ffffff; }
+    .inner { max-width: 1160px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f43130;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #111111;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: #6b7280;
+      max-width: 600px;
+      line-height: 1.65;
+      margin-bottom: 56px;
+    }
+
+    /* ── CHANNEL GRID ── */
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .channel-card {
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 12px;
+      padding: 28px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .channel-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+    }
+    .channel-icon {
+      width: 44px;
+      height: 44px;
+      background: #fff3f3;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: #f43130;
+    }
+    .channel-card h4 { font-size: 16px; font-weight: 700; color: #111111; margin-bottom: 6px; }
+    .channel-card p { font-size: 14px; color: #555555; line-height: 1.55; }
+
+    /* ── CAPABILITY GRID ── */
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .cap-card {
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 14px;
+      padding: 32px;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .cap-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: #f43130;
+    }
+    .cap-card:hover {
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+      transform: translateY(-3px);
+    }
+    .cap-icon {
+      width: 44px;
+      height: 44px;
+      background: #fff3f3;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: #f43130;
+    }
+    .cap-card h3 { font-size: 18px; font-weight: 700; color: #111111; margin-bottom: 10px; line-height: 1.3; }
+    .cap-card p { font-size: 14px; color: #555555; line-height: 1.65; margin-bottom: 16px; }
+    .cap-features { list-style: none; padding: 0; margin: 0 0 16px; }
+    .cap-features li {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.6;
+      padding: 3px 0 3px 16px;
+      position: relative;
+    }
+    .cap-features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #f43130;
+      opacity: 0.5;
+    }
+    .cap-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: #f43130;
+    }
+
+    /* ── METRICS STRIP ── */
+    .metrics-strip {
+      background: #111111;
+      padding: 56px 40px;
+    }
+    .metrics-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .metric-item h3 { font-size: 36px; font-weight: 800; color: #f43130; margin-bottom: 8px; }
+    .metric-item p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+    /* ── HOW IT WORKS ── */
+    .how-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+    .how-block.reverse { direction: rtl; }
+    .how-block.reverse > * { direction: ltr; }
+    .how-text h3 { font-size: 22px; font-weight: 800; color: #111111; margin-bottom: 16px; line-height: 1.2; }
+    .how-text p { font-size: 15px; color: #555555; line-height: 1.7; margin-bottom: 16px; }
+    .how-text ul { list-style: none; padding: 0; margin: 0; }
+    .how-text li {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.6;
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+    .how-text li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #f43130;
+      opacity: 0.4;
+    }
+    .how-visual {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 12px;
+      padding: 48px 32px;
+      text-align: center;
+      font-size: 14px;
+      color: #888888;
+      font-style: italic;
+      min-height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── INTEGRATION GRID ── */
+    .int-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .int-card {
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .int-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      transform: translateY(-1px);
+    }
+    .int-card h4 { font-size: 14px; font-weight: 700; color: #111111; margin-bottom: 4px; }
+    .int-card p { font-size: 12px; color: #888888; }
+
+    /* ── CUSTOMER PROOF ── */
+    .proof-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 16px;
+      padding: 48px;
+    }
+    .proof-quote {
+      font-size: 20px;
+      font-weight: 600;
+      color: #111111;
+      line-height: 1.5;
+      font-style: italic;
+      border-left: 3px solid #f43130;
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    .proof-attr { font-size: 14px; color: #555555; line-height: 1.6; }
+    .proof-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .proof-stat {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .proof-stat h3 { font-size: 32px; font-weight: 800; color: #f43130; margin-bottom: 4px; }
+    .proof-stat p { font-size: 13px; color: #555555; line-height: 1.5; }
+
+    /* ── CARRIER STRIP (DARK) ── */
+    .carrier-strip {
+      padding: 48px 40px;
+    }
+    .carrier-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .carrier-inner p {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 24px;
+    }
+    .carrier-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+    .carrier-badge { text-align: center; }
+    .carrier-name { font-size: 18px; font-weight: 800; color: #ffffff; margin-bottom: 6px; }
+    .carrier-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; max-width: 260px; }
+
+    /* ── CTA CLOSE ── */
+    .cta-close {
+      background: #111111;
+      padding: 100px 40px;
+      text-align: center;
+    }
+    .cta-close h2 {
+      font-size: 42px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 20px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .cta-close p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.6);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+    }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    /* Override btn-secondary for dark background */
+    .cta-close .btn-secondary { color: #ffffff; border-color: rgba(255,255,255,0.25); }
+    .cta-close .btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); box-shadow: none; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111111;
+      padding: 64px 40px 32px;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .footer-inner { max-width: 1080px; margin: 0 auto; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+    .footer-brand p { margin: 12px 0 0; font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 260px; }
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.9);
+      margin: 0 0 16px;
+    }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.15s;
+    }
+    .footer-col a:hover { color: rgba(255,255,255,0.9); }
+    .footer-certs { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 16px; }
+    .footer-cert {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      font-weight: 500;
+    }
+    .footer-cert svg { color: rgba(255,255,255,0.3); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+    }
+    .footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-bottom a:hover { color: rgba(255,255,255,0.7); }
+    .footer-legal { display: flex; gap: 20px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      nav { padding: 0 24px; }
+      .hero { padding: 56px 24px; }
+      .hero h1 { font-size: 36px; }
+      .section, .section-alt { padding: 56px 24px; }
+      .value-strip-inner { grid-template-columns: 1fr 1fr; }
+      .channel-grid { grid-template-columns: 1fr 1fr; }
+      .cap-grid { grid-template-columns: 1fr 1fr; }
+      .metrics-inner { grid-template-columns: repeat(3, 1fr); }
+      .how-block, .how-block.reverse { grid-template-columns: 1fr; direction: ltr; }
+      .int-grid { grid-template-columns: repeat(3, 1fr); }
+      .proof-block { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      /* Nav: hamburger */
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0; right: 0; bottom: 0;
+        background: #0f1522;
+        flex-direction: column;
+        padding: 24px;
+        gap: 0;
+        z-index: 300;
+        overflow-y: auto;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a {
+        color: rgba(255,255,255,0.8);
+        height: auto;
+        padding: 14px 0;
+        font-size: 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      .nav-links a:hover { color: #ffffff; }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 301;
+      }
+      .hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #111111;
+        transition: all 0.3s;
+      }
+      .nav-cta-wrap { padding-left: 8px; }
+      .nav-cta { padding: 6px 14px; font-size: 13px; }
+
+      /* Hero */
+      .hero { padding: 48px 20px; }
+      .hero h1 { font-size: 28px; }
+      .hero-sub { font-size: 15px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas .btn-primary, .hero-ctas .btn-ghost { text-align: center; }
+
+      /* Grids → single column */
+      .value-strip { padding: 32px 20px; }
+      .value-strip-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .section, .section-alt { padding: 48px 20px; }
+      .section-title { font-size: 24px; }
+      .section-sub { font-size: 14px; }
+      .channel-grid, .cap-grid, .int-grid { grid-template-columns: 1fr; }
+      .metrics-strip { padding: 40px 20px; }
+      .metrics-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .how-block, .how-block.reverse { grid-template-columns: 1fr; gap: 24px; direction: ltr; }
+      .proof-block { grid-template-columns: 1fr; padding: 32px; }
+      .proof-stats { grid-template-columns: 1fr; }
+      .carrier-logos { flex-direction: column; }
+      .cta-close { padding: 48px 20px; }
+      .cta-close h2 { font-size: 24px; }
+      .cta-buttons { flex-direction: column; align-items: stretch; }
+      .cta-buttons .btn-primary, .cta-buttons .btn-secondary { text-align: center; }
+
+      /* Footer */
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Skip navigation for accessibility -->
 <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#f43130;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
 
 <nav role="navigation" aria-label="Main navigation">
   <a href="homepage.html" class="nav-logo">
@@ -277,9 +915,6 @@
     </div>
   </div>
 </section>
-<div class="content-note"><strong>Content Note for Alan</strong> The Omni-Channel card already links to its full page (template-feature.html). The other five capability pages need content builds. Each card here should eventually link to its dedicated sub-page. Also confirm whether "AI & Intelligence" warrants its own page or should be woven into the other capability pages.</div>
-
-
 <!-- ─────────────────────────────────────────────
      METRICS STRIP — Key infrastructure credibility numbers
 ───────────────────────────────────────────────── -->
@@ -458,9 +1093,6 @@
     </div>
   </div>
 </section>
-<div class="content-note"><strong>Content Note for Alan</strong> Please confirm: (1) NIE Networks quote — is this attributable? (2) The 25M SMS and 1,000+ agents stats come from HSE and Dialectica respectively — can we aggregate these as "across enterprise customers"? (3) Can we add a second customer proof block or rotating testimonial here?</div>
-
-
 <!-- ─────────────────────────────────────────────
      CARRIER INFRASTRUCTURE — Twilio + Telnyx
 ───────────────────────────────────────────────── -->
