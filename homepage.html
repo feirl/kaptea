@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaptea — Enterprise Communications Platform for Regulated Organisations</title>
 
@@ -17,7 +20,7 @@
   <meta property="og:description" content="Orchestrate SMS, RCS, WhatsApp, Voice, Video and Email with enterprise governance, resilience and compliance. Built on Twilio and Telnyx. Deploy in days." />
   <meta property="og:url" content="https://feirl.github.io/kaptea/homepage.html" />
   <meta property="og:site_name" content="Kaptea" />
-  <meta property="og:image" content="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" />
+  <meta property="og:image" content="kaptea-logo.svg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -53,7 +56,7 @@
       "@type": "Organization",
       "name": "Kaptea",
       "url": "https://feirl.github.io/kaptea/homepage.html",
-      "logo": "https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg",
+      "logo": "kaptea-logo.svg",
       "sameAs": []
     },
     "featureList": [
@@ -111,9 +114,9 @@
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111111; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #131521; }
     /* ── ACCESSIBILITY ── */
-    a:focus-visible, button:focus-visible { outline: 2px solid #f43130; outline-offset: 2px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #dc2727; outline-offset: 2px; }
     :focus:not(:focus-visible) { outline: none; }
 
 
@@ -147,13 +150,13 @@
       white-space: nowrap;
       transition: color 0.15s;
     }
-    .nav-item > a:hover, .nav-item.active > a { color: #111111; }
-    .nav-item.active > a { border-bottom: 2px solid #f43130; }
+    .nav-item > a:hover, .nav-item.active > a { color: #131521; }
+    .nav-item.active > a { border-bottom: 2px solid #dc2727; }
     .nav-chevron { font-size: 10px; opacity: 0.6; transition: transform 0.2s; }
     .nav-item.active .nav-chevron { transform: rotate(180deg); }
     .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
     .nav-cta {
-      background: #f43130;
+      background: #dc2727;
       color: white !important;
       padding: 8px 20px;
       border-radius: 6px;
@@ -162,7 +165,7 @@
       text-decoration: none;
       white-space: nowrap;
     }
-    .nav-cta:hover { background: #d41f1e; }
+    .nav-cta:hover { background: #c02222; }
     .hamburger { display: none; }
 
     /* ── MEGA MENU ── */
@@ -173,7 +176,7 @@
       left: 50%;
       transform: translateX(-50%);
       background: #ffffff;
-      border-top: 2px solid #f43130;
+      border-top: 2px solid #dc2727;
       border-bottom: 1px solid #eeebe6;
       box-shadow: 0 20px 60px rgba(0,0,0,0.12);
       z-index: 300;
@@ -203,7 +206,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: #f43130;
+      color: #dc2727;
       margin-bottom: 14px;
     }
     .pronto-logo-link { display: inline-block; }
@@ -212,7 +215,7 @@
     .mega-section-title {
       font-size: 12px;
       font-weight: 700;
-      color: #111111;
+      color: #131521;
       margin-bottom: 4px;
       letter-spacing: 0.01em;
     }
@@ -227,7 +230,7 @@
       transition: all 0.12s;
       line-height: 1.5;
     }
-    .mega-links li a:hover { color: #111111; border-left-color: #f43130; padding-left: 14px; }
+    .mega-links li a:hover { color: #131521; border-left-color: #dc2727; padding-left: 14px; }
 
     /* Non-linked descriptive sub-items — tighter spacing */
     .mega-links li.mega-detail {
@@ -246,19 +249,19 @@
 
     /* Linked section titles in left panel */
     .mega-section-title a {
-      color: #111111;
+      color: #131521;
       text-decoration: none;
       transition: color 0.12s;
     }
-    .mega-section-title a:hover { color: #f43130; }
+    .mega-section-title a:hover { color: #dc2727; }
 
     /* Linked industry titles */
     .industry-title a {
-      color: #111111;
+      color: #131521;
       text-decoration: none;
       transition: color 0.12s;
     }
-    .industry-title a:hover { color: #f43130; }
+    .industry-title a:hover { color: #dc2727; }
 
     /* Right panel grid */
     .mega-right { padding-left: 32px; }
@@ -281,7 +284,7 @@
       font-size: 12px;
       color: #64748b;
     }
-    .mega-right .mega-links li a:hover { color: #111111; border-left-color: #f43130; }
+    .mega-right .mega-links li a:hover { color: #131521; border-left-color: #dc2727; }
 
     /* Carrier infrastructure block */
     .mega-carriers {
@@ -299,7 +302,7 @@
       border-radius: 8px;
       padding: 12px 16px;
     }
-    .carrier-name { font-size: 13px; font-weight: 700; color: #111111; margin-bottom: 4px; }
+    .carrier-name { font-size: 13px; font-weight: 700; color: #131521; margin-bottom: 4px; }
     .carrier-desc { font-size: 11.5px; color: #64748b; line-height: 1.5; }
     .carrier-more { font-size: 12px; color: #475569; display: flex; align-items: center; gap: 6px; padding-top: 4px; }
 
@@ -313,7 +316,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #f43130;
+      background: #dc2727;
       color: white;
       text-decoration: none;
       font-size: 13px;
@@ -321,7 +324,7 @@
       padding: 9px 18px;
       border-radius: 6px;
     }
-    .mega-pronto-cta a:hover { background: #d41f1e; }
+    .mega-pronto-cta a:hover { background: #c02222; }
 
     /* Resources nav-item needs relative positioning for dropdown */
     #nav-resources { position: relative; }
@@ -346,7 +349,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #f43130;
+      color: #dc2727;
       margin-bottom: 6px;
     }
     .mega-resources .mega-links li a {
@@ -356,7 +359,7 @@
       border-left: none;
     }
     .mega-resources .mega-links li a:hover {
-      color: #f43130;
+      color: #dc2727;
       border-left: none;
       padding-left: 0;
     }
@@ -369,18 +372,18 @@
     .use-case-title {
       font-size: 12px;
       font-weight: 700;
-      color: #111111;
+      color: #131521;
       margin-bottom: 4px;
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .use-case-title a { color: #111111; text-decoration: none; }
-    .use-case-title a:hover { color: #f43130; }
+    .use-case-title a { color: #131521; text-decoration: none; }
+    .use-case-title a:hover { color: #dc2727; }
     .use-case-num {
       font-size: 10px;
       font-weight: 700;
-      color: #f43130;
+      color: #dc2727;
       background: rgba(244,49,48,0.12);
       padding: 1px 7px;
       border-radius: 99px;
@@ -394,7 +397,7 @@
     .industry-title {
       font-size: 12px;
       font-weight: 700;
-      color: #111111;
+      color: #131521;
       margin-bottom: 4px;
       padding-bottom: 4px;
       border-bottom: 1px solid #eeebe6;
@@ -403,7 +406,7 @@
     /* ── HERO ── */
     .hero {
       background: #faf8f5;
-      color: #111111;
+      color: #131521;
       text-align: center;
       padding: 96px 24px 80px;
     }
@@ -431,8 +434,8 @@
       text-decoration: none;
       cursor: pointer;
     }
-    .channel-pill:hover { box-shadow: 0 3px 8px rgba(0,0,0,0.08); transform: translateY(-1px); color: #111111; }
-    .channel-pill:hover svg { color: #f43130; opacity: 0.85; }
+    .channel-pill:hover { box-shadow: 0 3px 8px rgba(0,0,0,0.08); transform: translateY(-1px); color: #131521; }
+    .channel-pill:hover svg { color: #dc2727; opacity: 0.85; }
     .channel-pill svg { color: #888888; opacity: 0.6; }
 
     /* Certification strip below logo bar */
@@ -464,18 +467,18 @@
       cursor: pointer;
     }
     .cert-item:hover { color: #555555; }
-    .cert-item:hover svg { color: #f43130; }
+    .cert-item:hover svg { color: #dc2727; }
     .cert-item svg { color: #999999; transition: color 0.15s ease; }
     .cert-divider { width: 1px; height: 16px; background: #e0dbd5; }
     .hero h1 {
       font-size: 52px;
-      font-weight: 800;
+      font-family: 'Manrope', sans-serif; font-weight: 800;
       line-height: 1.1;
       max-width: 760px;
       margin: 0 auto 24px;
       letter-spacing: -0.02em;
     }
-    .hero h1 em { color: #f43130; font-style: normal; }
+    .hero h1 em { color: #dc2727; font-style: normal; }
     .hero p {
       font-size: 19px;
       color: #555555;
@@ -485,7 +488,7 @@
     }
     .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .btn-primary {
-      background: #f43130;
+      background: #dc2727;
       color: white;
       padding: 14px 32px;
       border-radius: 8px;
@@ -495,10 +498,10 @@
       display: inline-block;
       transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
     }
-    .btn-primary:hover { background: #d41f1e; box-shadow: 0 4px 12px rgba(244,49,48,0.3); transform: translateY(-1px); }
+    .btn-primary:hover { background: #c02222; box-shadow: 0 4px 12px rgba(244,49,48,0.3); transform: translateY(-1px); }
     .btn-ghost {
       background: transparent;
-      color: #111111;
+      color: #131521;
       padding: 14px 32px;
       border-radius: 8px;
       font-size: 15px;
@@ -545,26 +548,26 @@
     /* ── SECTION WRAPPERS ── */
     .section { padding: 88px 40px; }
     .section-alt { background: #faf8f5; }
-    .section-dark { background: #faf8f5; color: #111111; }
+    .section-dark { background: #faf8f5; color: #131521; }
     .inner { max-width: 1160px; margin: 0 auto; }
     .section-label {
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: #f43130;
+      color: #dc2727;
       margin-bottom: 12px;
     }
-    .section-label-light { color: #f43130; }
+    .section-label-light { color: #dc2727; }
     .section-title {
       font-size: 36px;
-      font-weight: 800;
+      font-family: 'Manrope', sans-serif; font-weight: 800;
       line-height: 1.15;
-      color: #111111;
+      color: #131521;
       margin-bottom: 16px;
       letter-spacing: -0.02em;
     }
-    .section-title-light { color: #111111; }
+    .section-title-light { color: #131521; }
     .section-sub {
       font-size: 17px;
       color: #6b7280;
@@ -601,22 +604,22 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 16px;
-      color: #f43130;
+      color: #dc2727;
       font-size: 20px;
     }
-    .problem-card h3 { font-size: 17px; font-weight: 700; color: #111111; margin-bottom: 8px; line-height: 1.3; }
+    .problem-card h3 { font-size: 17px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; line-height: 1.3; }
     .problem-card p { font-size: 14px; color: #6b7280; line-height: 1.65; }
     .problem-bridge {
       text-align: center;
       font-size: 18px;
       font-weight: 700;
-      color: #111111;
+      color: #131521;
       padding: 24px;
       background: #fff3f3;
       border-radius: 10px;
       border: 1px solid #fdb5b4;
     }
-    .problem-bridge span { color: #f43130; }
+    .problem-bridge span { color: #dc2727; }
 
     /* ── PLATFORM OVERVIEW ── */
     .arch-diagram {
@@ -652,17 +655,17 @@
     .arch-layer-icon svg { opacity: 0.7; }
     .layer-carrier { background: #faf8f5; border: 1px solid #e0dbd5; }
     .layer-carrier .arch-layer-label { color: #999999; }
-    .layer-carrier .arch-layer-title { color: #111111; }
+    .layer-carrier .arch-layer-title { color: #131521; }
     .layer-carrier .arch-layer-sub { color: #888888; }
     .layer-carrier .arch-layer-icon svg { color: #999999; }
-    .layer-kaptea { background: #f43130; border: 2px solid #d41f1e; margin: 0 -2px; z-index: 1; padding: 24px 32px; }
+    .layer-kaptea { background: #dc2727; border: 2px solid #c02222; margin: 0 -2px; z-index: 1; padding: 24px 32px; }
     .layer-kaptea .arch-layer-label { color: rgba(255,255,255,0.85); }
     .layer-kaptea .arch-layer-title { color: #ffffff; font-size: 18px; }
     .layer-kaptea .arch-layer-sub { color: rgba(255,255,255,0.75); }
     .layer-kaptea .arch-layer-icon svg { color: rgba(255,255,255,0.85); }
     .layer-org { background: #faf8f5; border: 1px solid #e0dbd5; }
     .layer-org .arch-layer-label { color: #999999; }
-    .layer-org .arch-layer-title { color: #111111; }
+    .layer-org .arch-layer-title { color: #131521; }
     .layer-org .arch-layer-sub { color: #888888; }
     .layer-org .arch-layer-icon svg { color: #999999; }
     .arch-arrow {
@@ -701,21 +704,21 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: #f43130;
+      background: #dc2727;
     }
     .cap-number {
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: #f43130;
+      color: #dc2727;
       margin-bottom: 12px;
     }
-    .capability-card h3 { font-size: 20px; font-weight: 800; color: #111111; margin-bottom: 10px; line-height: 1.2; letter-spacing: -0.01em; }
+    .capability-card h3 { font-size: 20px; font-family: 'Manrope', sans-serif; font-weight: 800; color: #131521; margin-bottom: 10px; line-height: 1.2; letter-spacing: -0.01em; }
     .capability-card .stat {
       font-size: 13px;
       font-weight: 600;
-      color: #f43130;
+      color: #dc2727;
       background: #fff3f3;
       display: inline-block;
       padding: 3px 10px;
@@ -723,7 +726,7 @@
       margin-bottom: 14px;
     }
     .capability-card p { font-size: 14px; color: #6b7280; line-height: 1.65; margin-bottom: 20px; }
-    .capability-card a { font-size: 14px; font-weight: 600; color: #f43130; text-decoration: none; }
+    .capability-card a { font-size: 14px; font-weight: 600; color: #dc2727; text-decoration: none; }
     .capability-card a:hover { text-decoration: underline; }
 
     /* ── DIFFERENTIATORS ── */
@@ -752,9 +755,9 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 16px;
-      color: #f43130;
+      color: #dc2727;
     }
-    .diff-card h3 { font-size: 16px; font-weight: 700; color: #111111; margin-bottom: 8px; line-height: 1.3; }
+    .diff-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; line-height: 1.3; }
     .diff-card p { font-size: 13px; color: #555555; line-height: 1.65; }
 
     /* ── HOW IT WORKS ── */
@@ -779,7 +782,7 @@
     .step-number {
       width: 56px;
       height: 56px;
-      background: #f43130;
+      background: #dc2727;
       color: white;
       border-radius: 50%;
       font-size: 20px;
@@ -789,7 +792,7 @@
       justify-content: center;
       margin: 0 auto 20px;
     }
-    .step h3 { font-size: 18px; font-weight: 700; color: #111111; margin-bottom: 10px; }
+    .step h3 { font-size: 18px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 10px; }
     .step p { font-size: 14px; color: #6b7280; line-height: 1.65; }
     .steps-cta { text-align: center; }
 
@@ -804,8 +807,8 @@
       gap: 56px;
       align-items: center;
     }
-    .cs-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #f43130; margin-bottom: 16px; }
-    .case-study-block h2 { font-size: 28px; font-weight: 800; color: #111111; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.01em; }
+    .cs-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #dc2727; margin-bottom: 16px; }
+    .case-study-block h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 800; color: #131521; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.01em; }
     .case-study-block .challenge { font-size: 14px; color: #555555; line-height: 1.65; margin-bottom: 20px; }
     .cs-outcome {
       background: rgba(244,49,48,0.1);
@@ -817,17 +820,17 @@
       line-height: 1.6;
       margin-bottom: 24px;
     }
-    .cs-outcome strong { color: #f43130; }
+    .cs-outcome strong { color: #dc2727; }
     .cs-quote {
       font-size: 15px;
-      color: #111111;
+      color: #131521;
       font-style: italic;
       line-height: 1.65;
-      border-left: 3px solid #f43130;
+      border-left: 3px solid #dc2727;
       padding-left: 16px;
       margin-bottom: 24px;
     }
-    .cs-link { font-size: 14px; font-weight: 600; color: #f43130; text-decoration: none; }
+    .cs-link { font-size: 14px; font-weight: 600; color: #dc2727; text-decoration: none; }
     .cs-link:hover { text-decoration: underline; }
     .cs-stats {
       display: flex;
@@ -840,7 +843,7 @@
       border-radius: 10px;
       padding: 20px 24px;
     }
-    .cs-stat-number { font-size: 36px; font-weight: 800; color: #f43130; line-height: 1; margin-bottom: 4px; }
+    .cs-stat-number { font-size: 36px; font-weight: 800; color: #dc2727; line-height: 1; margin-bottom: 4px; }
     .cs-stat-label { font-size: 13px; color: #555555; line-height: 1.5; }
 
     /* ── INTEGRATIONS ── */
@@ -875,7 +878,7 @@
     .int-name { font-size: 13px; font-weight: 600; color: #374151; }
     .int-type { font-size: 11px; color: #9ca3af; }
     .integration-note { text-align: center; font-size: 14px; color: #9ca3af; margin-top: 8px; }
-    .integration-note a { color: #f43130; text-decoration: none; font-weight: 600; }
+    .integration-note a { color: #dc2727; text-decoration: none; font-weight: 600; }
 
     /* ── COMPLIANCE BAR ── */
     .compliance-bar {
@@ -887,7 +890,7 @@
       margin: 0 auto;
       text-align: center;
     }
-    .compliance-inner h3 { font-size: 20px; font-weight: 700; color: #111111; margin-bottom: 8px; }
+    .compliance-inner h3 { font-size: 20px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
     .compliance-inner p { font-size: 14px; color: #555555; margin-bottom: 32px; }
     .compliance-items {
       display: flex;
@@ -907,7 +910,7 @@
       color: #333333;
       font-weight: 500;
     }
-    .compliance-item svg { color: #f43130; flex-shrink: 0; }
+    .compliance-item svg { color: #dc2727; flex-shrink: 0; }
 
     /* ── PRICING TEASER ── */
     .pricing-teaser {
@@ -917,12 +920,12 @@
       padding: 64px 40px;
       text-align: center;
     }
-    .pricing-teaser h2 { font-size: 30px; font-weight: 800; color: #111111; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .pricing-teaser h2 { font-size: 30px; font-family: 'Manrope', sans-serif; font-weight: 800; color: #131521; margin-bottom: 12px; letter-spacing: -0.02em; }
     .pricing-teaser p { font-size: 17px; color: #6b7280; margin-bottom: 28px; line-height: 1.6; }
     .pricing-teaser a {
       display: inline-block;
-      border: 1.5px solid #f43130;
-      color: #f43130;
+      border: 1.5px solid #dc2727;
+      color: #dc2727;
       padding: 12px 28px;
       border-radius: 8px;
       font-size: 15px;
@@ -933,25 +936,25 @@
 
     /* ── CLOSING CTA ── */
     .closing-cta {
-      background: #111111;
+      background: #131521;
       padding: 100px 40px;
       text-align: center;
     }
     .closing-cta h2 {
       font-size: 42px;
-      font-weight: 800;
+      font-family: 'Manrope', sans-serif; font-weight: 800;
       color: #ffffff;
       max-width: 680px;
       margin: 0 auto 20px;
       line-height: 1.15;
       letter-spacing: -0.02em;
     }
-    .closing-cta h2 em { color: #f43130; font-style: normal; }
+    .closing-cta h2 em { color: #dc2727; font-style: normal; }
     .closing-cta p { font-size: 17px; color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto 40px; line-height: 1.65; }
     .closing-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .btn-secondary {
       background: transparent;
-      color: #111111;
+      color: #131521;
       padding: 14px 32px;
       border-radius: 8px;
       font-size: 15px;
@@ -968,7 +971,7 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #111111;
+      background: #131521;
       padding: 64px 40px 32px;
       color: rgba(255,255,255,0.6);
       font-size: 13px;
@@ -1083,7 +1086,7 @@
         border-bottom: 1px solid rgba(255,255,255,0.1);
       }
       .nav-links a:hover, .nav-item > a:hover { color: #ffffff; }
-      .nav-links a.active { border-bottom-color: #f43130; color: #ffffff; }
+      .nav-links a.active { border-bottom-color: #dc2727; color: #ffffff; }
       /* Hide mega-menus on mobile */
       .mega, .mega-resources { display: none !important; }
       .nav-item { position: relative; }
@@ -1100,7 +1103,7 @@
         display: block;
         width: 22px;
         height: 2px;
-        background: #111111;
+        background: #131521;
         transition: all 0.3s;
       }
       .nav-cta-wrap { padding-left: 8px; }
@@ -1158,10 +1161,10 @@
 <body>
 
 <!-- Skip navigation for accessibility -->
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#f43130;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#dc2727;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
 
 <nav role="navigation" aria-label="Main navigation">
-  <a href="#" class="nav-logo"><img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" /></a>
+  <a href="#" class="nav-logo"><img src="kaptea-logo.svg" alt="Kaptea" height="32" style="display:block;" /></a>
 
   <div class="nav-links">
 
@@ -1686,7 +1689,7 @@
   <div class="inner">
     <div class="section-label section-label-light">Why Kaptea</div>
     <div class="section-title section-title-light" style="margin-bottom:8px;">Built differently.<br>For a reason.</div>
-    <div class="section-sub section-sub-light" style="margin-bottom:48px;">Four things that separate Kaptea from every other communications platform in the market. <a href="why-kaptea.html" style="color:#f43130; text-decoration:none; font-weight:600;">Learn more →</a></div>
+    <div class="section-sub section-sub-light" style="margin-bottom:48px;">Four things that separate Kaptea from every other communications platform in the market. <a href="why-kaptea.html" style="color:#dc2727; text-decoration:none; font-weight:600;">Learn more →</a></div>
 
     <div class="diff-grid">
 
@@ -1933,7 +1936,7 @@
     <div class="footer-grid">
 
       <div class="footer-brand">
-        <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="28" style="filter: brightness(0) invert(1); opacity: 0.8;" />
+        <img src="kaptea-logo-white.svg" alt="Kaptea" height="28" style="opacity: 0.8;" />
         <p>The omnichannel communications platform designed for regulated and mission-critical organisations. Built on Twilio and Telnyx.</p>
         <div class="footer-certs">
           <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> ISO 27001</div>

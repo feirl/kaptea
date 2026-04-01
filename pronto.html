@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta -->
@@ -63,10 +66,10 @@
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111111; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #131521; }
 
     /* ── ACCESSIBILITY ── */
-    a:focus-visible, button:focus-visible { outline: 2px solid #f43130; outline-offset: 2px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #dc2727; outline-offset: 2px; }
     :focus:not(:focus-visible) { outline: none; }
 
     /* ── NAV ── */
@@ -96,11 +99,11 @@
       align-items: center;
       transition: color 0.15s;
     }
-    .nav-links a:hover { color: #111111; }
-    .nav-links a.active { color: #111111; border-bottom: 2px solid #f43130; }
+    .nav-links a:hover { color: #131521; }
+    .nav-links a.active { color: #131521; border-bottom: 2px solid #dc2727; }
     .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
     .nav-cta {
-      background: #f43130;
+      background: #dc2727;
       color: white !important;
       padding: 8px 20px;
       border-radius: 6px;
@@ -109,13 +112,13 @@
       text-decoration: none;
       white-space: nowrap;
     }
-    .nav-cta:hover { background: #d41f1e; }
+    .nav-cta:hover { background: #c02222; }
     .hamburger { display: none; }
 
     /* ── HERO ── */
     .hero {
       background: #faf8f5;
-      color: #111111;
+      color: #131521;
       text-align: center;
       padding: 80px 24px 72px;
     }
@@ -126,17 +129,17 @@
       margin-bottom: 24px;
     }
     .hero-breadcrumb a { color: #888888; text-decoration: none; }
-    .hero-breadcrumb a:hover { color: #f43130; }
+    .hero-breadcrumb a:hover { color: #dc2727; }
     .hero-breadcrumb span { margin: 0 6px; }
     .hero-logo { height: 40px; margin-bottom: 24px; }
     .hero h1 {
       font-size: 48px;
-      font-weight: 800;
+      font-family: 'Manrope', sans-serif; font-weight: 800;
       line-height: 1.1;
       margin-bottom: 20px;
       letter-spacing: -0.02em;
     }
-    .hero h1 em { color: #f43130; font-style: normal; }
+    .hero h1 em { color: #dc2727; font-style: normal; }
     .hero-sub {
       font-size: 18px;
       color: #555555;
@@ -148,7 +151,7 @@
 
     /* ── BUTTONS ── */
     .btn-primary {
-      background: #f43130;
+      background: #dc2727;
       color: white;
       padding: 14px 32px;
       border-radius: 8px;
@@ -158,10 +161,10 @@
       display: inline-block;
       transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
     }
-    .btn-primary:hover { background: #d41f1e; box-shadow: 0 4px 12px rgba(244,49,48,0.3); transform: translateY(-1px); }
+    .btn-primary:hover { background: #c02222; box-shadow: 0 4px 12px rgba(244,49,48,0.3); transform: translateY(-1px); }
     .btn-ghost {
       background: transparent;
-      color: #111111;
+      color: #131521;
       padding: 14px 32px;
       border-radius: 8px;
       font-size: 15px;
@@ -174,7 +177,7 @@
     .btn-ghost:hover { border-color: #888888; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
     .btn-secondary {
       background: transparent;
-      color: #111111;
+      color: #131521;
       padding: 14px 32px;
       border-radius: 8px;
       font-size: 15px;
@@ -210,29 +213,29 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 16px;
-      color: #f43130;
+      color: #dc2727;
     }
-    .value-item h3 { font-size: 16px; font-weight: 700; color: #111111; margin-bottom: 8px; }
+    .value-item h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
     .value-item p { font-size: 14px; color: #555555; line-height: 1.6; }
 
     /* ── SECTION WRAPPERS ── */
     .section { padding: 88px 40px; }
     .section-alt { background: #faf8f5; }
-    .section-dark { background: #111111; color: #ffffff; }
+    .section-dark { background: #131521; color: #ffffff; }
     .inner { max-width: 1160px; margin: 0 auto; }
     .section-label {
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: #f43130;
+      color: #dc2727;
       margin-bottom: 12px;
     }
     .section-title {
       font-size: 36px;
-      font-weight: 800;
+      font-family: 'Manrope', sans-serif; font-weight: 800;
       line-height: 1.15;
-      color: #111111;
+      color: #131521;
       margin-bottom: 16px;
       letter-spacing: -0.02em;
     }
@@ -272,9 +275,9 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 16px;
-      color: #f43130;
+      color: #dc2727;
     }
-    .channel-card h4 { font-size: 16px; font-weight: 700; color: #111111; margin-bottom: 6px; }
+    .channel-card h4 { font-size: 16px; font-weight: 700; color: #131521; margin-bottom: 6px; }
     .channel-card p { font-size: 14px; color: #555555; line-height: 1.55; }
 
     /* ── CAPABILITY GRID ── */
@@ -299,7 +302,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: #f43130;
+      background: #dc2727;
     }
     .cap-card:hover {
       box-shadow: 0 12px 32px rgba(0,0,0,0.08);
@@ -314,9 +317,9 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 16px;
-      color: #f43130;
+      color: #dc2727;
     }
-    .cap-card h3 { font-size: 18px; font-weight: 700; color: #111111; margin-bottom: 10px; line-height: 1.3; }
+    .cap-card h3 { font-size: 18px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 10px; line-height: 1.3; }
     .cap-card p { font-size: 14px; color: #555555; line-height: 1.65; margin-bottom: 16px; }
     .cap-features { list-style: none; padding: 0; margin: 0 0 16px; }
     .cap-features li {
@@ -334,18 +337,18 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #f43130;
+      background: #dc2727;
       opacity: 0.5;
     }
     .cap-link {
       font-size: 14px;
       font-weight: 600;
-      color: #f43130;
+      color: #dc2727;
     }
 
     /* ── METRICS STRIP ── */
     .metrics-strip {
-      background: #111111;
+      background: #131521;
       padding: 56px 40px;
     }
     .metrics-inner {
@@ -356,7 +359,7 @@
       gap: 32px;
       text-align: center;
     }
-    .metric-item h3 { font-size: 36px; font-weight: 800; color: #f43130; margin-bottom: 8px; }
+    .metric-item h3 { font-size: 36px; font-family: 'Manrope', sans-serif; font-weight: 800; color: #dc2727; margin-bottom: 8px; }
     .metric-item p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
 
     /* ── HOW IT WORKS ── */
@@ -369,7 +372,7 @@
     }
     .how-block.reverse { direction: rtl; }
     .how-block.reverse > * { direction: ltr; }
-    .how-text h3 { font-size: 22px; font-weight: 800; color: #111111; margin-bottom: 16px; line-height: 1.2; }
+    .how-text h3 { font-size: 22px; font-family: 'Manrope', sans-serif; font-weight: 800; color: #131521; margin-bottom: 16px; line-height: 1.2; }
     .how-text p { font-size: 15px; color: #555555; line-height: 1.7; margin-bottom: 16px; }
     .how-text ul { list-style: none; padding: 0; margin: 0; }
     .how-text li {
@@ -387,7 +390,7 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #f43130;
+      background: #dc2727;
       opacity: 0.4;
     }
     .how-visual {
@@ -423,7 +426,7 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.05);
       transform: translateY(-1px);
     }
-    .int-card h4 { font-size: 14px; font-weight: 700; color: #111111; margin-bottom: 4px; }
+    .int-card h4 { font-size: 14px; font-weight: 700; color: #131521; margin-bottom: 4px; }
     .int-card p { font-size: 12px; color: #888888; }
 
     /* ── CUSTOMER PROOF ── */
@@ -440,10 +443,10 @@
     .proof-quote {
       font-size: 20px;
       font-weight: 600;
-      color: #111111;
+      color: #131521;
       line-height: 1.5;
       font-style: italic;
-      border-left: 3px solid #f43130;
+      border-left: 3px solid #dc2727;
       padding-left: 20px;
       margin-bottom: 16px;
     }
@@ -459,7 +462,7 @@
       border-radius: 10px;
       padding: 20px;
     }
-    .proof-stat h3 { font-size: 32px; font-weight: 800; color: #f43130; margin-bottom: 4px; }
+    .proof-stat h3 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 800; color: #dc2727; margin-bottom: 4px; }
     .proof-stat p { font-size: 13px; color: #555555; line-height: 1.5; }
 
     /* ── CARRIER STRIP (DARK) ── */
@@ -491,13 +494,13 @@
 
     /* ── CTA CLOSE ── */
     .cta-close {
-      background: #111111;
+      background: #131521;
       padding: 100px 40px;
       text-align: center;
     }
     .cta-close h2 {
       font-size: 42px;
-      font-weight: 800;
+      font-family: 'Manrope', sans-serif; font-weight: 800;
       color: #ffffff;
       margin-bottom: 20px;
       line-height: 1.15;
@@ -517,7 +520,7 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #111111;
+      background: #131521;
       padding: 64px 40px 32px;
       color: rgba(255,255,255,0.6);
       font-size: 13px;
@@ -623,7 +626,7 @@
         display: block;
         width: 22px;
         height: 2px;
-        background: #111111;
+        background: #131521;
         transition: all 0.3s;
       }
       .nav-cta-wrap { padding-left: 8px; }
@@ -664,13 +667,12 @@
 <body>
 
 <!-- Skip navigation for accessibility -->
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#f43130;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#dc2727;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
 
 
 <nav role="navigation" aria-label="Main navigation">
   <a href="homepage.html" class="nav-logo">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#f43130"/><path d="M7 8h10M7 12h7M7 16h10" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-    <span style="margin-left:10px;font-weight:700;font-size:18px;color:#111111;">Kaptea</span>
+    <img src="kaptea-logo.svg" alt="Kaptea" height="32" style="display:block;" />
   </a>
   <div class="nav-links">
     <a href="homepage.html" class="active">Platform</a>
@@ -1070,7 +1072,7 @@
       <div>
         <p class="proof-quote">"Kaptea gave us the confidence that our communications infrastructure would hold when our customers needed us most."</p>
         <p class="proof-attr"><strong>NIE Networks</strong> — Utilities &amp; Energy<br>Storm-proof IVR orchestration for a national grid operator</p>
-        <a href="#" style="display:inline-flex; align-items:center; gap:4px; font-size:14px; font-weight:600; color:#f43130; text-decoration:none; margin-top:16px;">Read the case study →</a>
+        <a href="#" style="display:inline-flex; align-items:center; gap:4px; font-size:14px; font-weight:600; color:#dc2727; text-decoration:none; margin-top:16px;">Read the case study →</a>
       </div>
       <div class="proof-stats">
         <div class="proof-stat">
@@ -1139,7 +1141,7 @@
     <div class="footer-grid">
 
       <div class="footer-brand">
-        <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="28" style="filter: brightness(0) invert(1); opacity: 0.8;" />
+        <img src="kaptea-logo-white.svg" alt="Kaptea" height="28" style="opacity: 0.8;" />
         <p>The omnichannel communications platform designed for regulated and mission-critical organisations. Built on Twilio and Telnyx.</p>
         <div class="footer-certs">
           <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> ISO 27001</div>

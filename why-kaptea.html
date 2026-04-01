@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaptea — Why Kaptea</title>
 
@@ -32,9 +35,9 @@
   <meta name="ai-content-declaration" content="This page explains why organisations choose Kaptea. Key facts: dedicated instances (not multi-tenant), enterprise governance and compliance, carrier-grade resilience with cross-channel failover, ISO 27001 certified, Cyber Essentials Plus, CREST accredited, Twilio Gold Partner, Telnyx Partner." />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111111; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #131521; }
     /* ── ACCESSIBILITY ── */
-    a:focus-visible, button:focus-visible { outline: 2px solid #f43130; outline-offset: 2px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #dc2727; outline-offset: 2px; }
     :focus:not(:focus-visible) { outline: none; }
 
 
@@ -43,11 +46,11 @@
     .nav-logo { text-decoration: none; display: flex; align-items: center; }
     .nav-links { display: flex; gap: 0; align-items: center; }
     .nav-links a { color: #555555; text-decoration: none; font-size: 14px; font-weight: 500; padding: 0 18px; height: 64px; display: flex; align-items: center; white-space: nowrap; transition: color 0.15s; }
-    .nav-links a:hover { color: #111111; }
-    .nav-links a.active { color: #111111; border-bottom: 2px solid #f43130; }
+    .nav-links a:hover { color: #131521; }
+    .nav-links a.active { color: #131521; border-bottom: 2px solid #dc2727; }
     .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
-    .nav-cta { background: #f43130; color: white !important; padding: 8px 20px; border-radius: 6px; font-weight: 600; font-size: 14px; text-decoration: none; white-space: nowrap; }
-    .nav-cta:hover { background: #d41f1e; }
+    .nav-cta { background: #dc2727; color: white !important; padding: 8px 20px; border-radius: 6px; font-weight: 600; font-size: 14px; text-decoration: none; white-space: nowrap; }
+    .nav-cta:hover { background: #c02222; }
 
     /* ── NOTES ── */
 
@@ -55,42 +58,42 @@
     .content-note strong { color: #1d4ed8; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
 
     /* ── HERO ── */
-    .hero { background: #111111; color: #ffffff; padding: 88px 40px 80px; text-align: center; }
+    .hero { background: #131521; color: #ffffff; padding: 88px 40px 80px; text-align: center; }
     .hero-inner { max-width: 720px; margin: 0 auto; }
-    .hero h1 { font-size: 44px; font-weight: 700; line-height: 1.15; margin-bottom: 20px; }
-    .hero h1 em { color: #f43130; font-style: normal; }
+    .hero h1 { font-size: 44px; font-family: 'Manrope', sans-serif; font-weight: 700; line-height: 1.15; margin-bottom: 20px; }
+    .hero h1 em { color: #dc2727; font-style: normal; }
     .hero .hero-sub { font-size: 18px; color: #9ca3af; line-height: 1.6; margin-bottom: 36px; }
     .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { background: #f43130; color: white; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
-    .btn-primary:hover { background: #d41f1e; }
+    .btn-primary { background: #dc2727; color: white; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-primary:hover { background: #c02222; }
     .btn-ghost-light { color: #ffffff; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid #4b5563; display: inline-flex; align-items: center; }
     .btn-ghost-light:hover { border-color: #ffffff; }
-    .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #f43130; margin-bottom: 12px; }
+    .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #dc2727; margin-bottom: 12px; }
 
     /* ── THE PROBLEM ── */
     .problem { padding: 80px 40px; }
     .problem-inner { max-width: 1080px; margin: 0 auto; }
-    .problem h2 { font-size: 28px; font-weight: 700; color: #111111; margin-bottom: 16px; max-width: 640px; line-height: 1.3; }
+    .problem h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 16px; max-width: 640px; line-height: 1.3; }
     .problem > .problem-inner > p { font-size: 16px; color: #555555; line-height: 1.7; margin-bottom: 40px; max-width: 640px; }
     .problem-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .problem-card { padding: 28px; border: 1px solid #eeebe6; border-radius: 8px; }
-    .problem-card h3 { font-size: 16px; font-weight: 700; color: #111111; margin-bottom: 8px; }
+    .problem-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
     .problem-card p { font-size: 14px; color: #555555; line-height: 1.6; }
-    .problem-card .vs { margin-top: 12px; padding-top: 12px; border-top: 1px solid #eeebe6; font-size: 13px; color: #f43130; font-weight: 600; }
+    .problem-card .vs { margin-top: 12px; padding-top: 12px; border-top: 1px solid #eeebe6; font-size: 13px; color: #dc2727; font-weight: 600; }
 
     /* ── FOUR DIFFERENTIATORS ── */
-    .diffs { padding: 72px 40px; background: #111111; color: white; }
+    .diffs { padding: 72px 40px; background: #131521; color: white; }
     .diffs-inner { max-width: 1080px; margin: 0 auto; }
-    .diffs h2 { font-size: 28px; font-weight: 700; margin-bottom: 48px; }
+    .diffs h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; margin-bottom: 48px; }
     .diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .diff-card { padding: 28px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; }
-    .diff-card h3 { font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
+    .diff-card h3 { font-size: 18px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
     .diff-card p { font-size: 14px; color: #9ca3af; line-height: 1.6; }
 
     /* ── VENDOR CONSOLIDATION ── */
     .consolidation { padding: 80px 40px; }
     .consolidation-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .consolidation h2 { font-size: 28px; font-weight: 700; color: #111111; margin-bottom: 12px; line-height: 1.3; }
+    .consolidation h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 12px; line-height: 1.3; }
     .consolidation > .consolidation-inner > div > p { font-size: 15px; color: #555555; line-height: 1.7; margin-bottom: 20px; }
     .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .ba-card { padding: 20px; border-radius: 8px; }
@@ -106,18 +109,18 @@
     /* ── TCO SECTION ── */
     .tco { padding: 72px 40px; background: #faf8f5; border-top: 1px solid #eeebe6; }
     .tco-inner { max-width: 1080px; margin: 0 auto; }
-    .tco h2 { font-size: 28px; font-weight: 700; color: #111111; margin-bottom: 12px; }
+    .tco h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 12px; }
     .tco > .tco-inner > p { font-size: 15px; color: #555555; margin-bottom: 36px; max-width: 600px; line-height: 1.6; }
     .tco-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .tco-card { padding: 28px; background: #ffffff; border: 1px solid #eeebe6; border-radius: 8px; text-align: center; }
-    .tco-card h3 { font-size: 14px; font-weight: 700; color: #dc2626; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
+    .tco-card h3 { font-size: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #dc2626; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
     .tco-card p { font-size: 14px; color: #555555; line-height: 1.6; }
     .tco-card .tco-replace { margin-top: 12px; font-size: 13px; color: #16a34a; font-weight: 600; }
 
     /* ── LOGOS ── */
     .logos { padding: 64px 40px; text-align: center; border-top: 1px solid #eeebe6; }
     .logos-inner { max-width: 1080px; margin: 0 auto; }
-    .logos h2 { font-size: 24px; font-weight: 700; color: #111111; margin-bottom: 12px; }
+    .logos h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 12px; }
     .logos > .logos-inner > p { font-size: 15px; color: #555555; margin-bottom: 36px; }
     .logo-grid { display: flex; gap: 48px; justify-content: center; align-items: center; flex-wrap: wrap; }
     .logo-item { font-size: 15px; font-weight: 600; color: #9ca3af; padding: 16px 24px; border: 1px solid #eeebe6; border-radius: 8px; }
@@ -125,31 +128,31 @@
     /* ── LEADERSHIP ── */
     .leadership { padding: 72px 40px; background: #faf8f5; }
     .leadership-inner { max-width: 1080px; margin: 0 auto; }
-    .leadership h2 { font-size: 28px; font-weight: 700; color: #111111; margin-bottom: 12px; }
+    .leadership h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 12px; }
     .leadership > .leadership-inner > p { font-size: 15px; color: #555555; margin-bottom: 36px; max-width: 600px; line-height: 1.6; }
     .leader-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .leader-card { padding: 24px; background: #ffffff; border: 1px solid #eeebe6; border-radius: 8px; }
-    .leader-card h3 { font-size: 16px; font-weight: 700; color: #111111; margin-bottom: 2px; }
-    .leader-card .leader-role { font-size: 13px; color: #f43130; font-weight: 600; margin-bottom: 10px; }
+    .leader-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 2px; }
+    .leader-card .leader-role { font-size: 13px; color: #dc2727; font-weight: 600; margin-bottom: 10px; }
     .leader-card p { font-size: 13px; color: #555555; line-height: 1.6; }
 
     /* ── CERTS ── */
     .certs { padding: 64px 40px; text-align: center; }
     .certs-inner { max-width: 1080px; margin: 0 auto; }
-    .certs h2 { font-size: 24px; font-weight: 700; color: #111111; margin-bottom: 36px; }
+    .certs h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 36px; }
     .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
     .cert-card { padding: 24px; background: #faf8f5; border: 1px solid #eeebe6; border-radius: 8px; text-align: center; }
-    .cert-card h3 { font-size: 14px; font-weight: 700; color: #111111; margin-bottom: 4px; }
+    .cert-card h3 { font-size: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 4px; }
     .cert-card p { font-size: 12px; color: #555555; line-height: 1.5; }
 
     /* ── CTA CLOSE ── */
-    .cta-close { background: #111111; color: white; text-align: center; padding: 72px 40px; }
-    .cta-close h2 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+    .cta-close { background: #131521; color: white; text-align: center; padding: 72px 40px; }
+    .cta-close h2 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700; margin-bottom: 12px; }
     .cta-close p { font-size: 17px; color: #9ca3af; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6; }
     .cta-close .btn-primary { font-size: 16px; padding: 14px 32px; }
     .reassurance { display: flex; gap: 32px; justify-content: center; margin-top: 28px; }
     .reassurance span { font-size: 12px; color: #6b7280; display: flex; align-items: center; gap: 6px; }
-    .reassurance span::before { content: '✓'; color: #f43130; font-weight: 700; }
+    .reassurance span::before { content: '✓'; color: #dc2727; font-weight: 700; }
 
     /* ── HAMBURGER ── */
     .hamburger { display: none; }
@@ -175,7 +178,7 @@
       .nav-links.open { display: flex; }
       .nav-links a { color: rgba(255,255,255,0.8); height: auto; padding: 14px 0; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }
       .nav-links a:hover { color: #fff; }
-      .nav-links a.active { border-bottom-color: #f43130; color: #fff; }
+      .nav-links a.active { border-bottom-color: #dc2727; color: #fff; }
       .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 301; }
       .hamburger span { display: block; width: 22px; height: 2px; background: #111; }
       .nav-cta-wrap { padding-left: 8px; }
@@ -207,7 +210,7 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #111111;
+      background: #131521;
       padding: 64px 40px 32px;
       color: rgba(255,255,255,0.6);
       font-size: 13px;
@@ -292,12 +295,12 @@
 <body>
 
 <!-- Skip navigation for accessibility -->
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#f43130;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#dc2727;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
 
 
 <nav role="navigation" aria-label="Main navigation">
   <a href="homepage.html" class="nav-logo">
-    <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" />
+    <img src="kaptea-logo.svg" alt="Kaptea" height="32" style="display:block;" />
   </a>
   <div class="nav-links">
     <a href="homepage.html">Platform</a>
@@ -370,7 +373,7 @@
 <!-- FOUR DIFFERENTIATORS -->
 <section class="diffs">
   <div class="diffs-inner">
-    <div class="section-label" style="color: #f43130;">What makes us different</div>
+    <div class="section-label" style="color: #dc2727;">What makes us different</div>
     <h2>Four things that separate Kaptea from everything else in the market.</h2>
 
     <div class="diff-grid">
@@ -570,7 +573,7 @@
     <div class="footer-grid">
 
       <div class="footer-brand">
-        <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="28" style="filter: brightness(0) invert(1); opacity: 0.8;" />
+        <img src="kaptea-logo-white.svg" alt="Kaptea" height="28" style="opacity: 0.8;" />
         <p>The omnichannel communications platform designed for regulated and mission-critical organisations. Built on Twilio and Telnyx.</p>
         <div class="footer-certs">
           <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> ISO 27001</div>

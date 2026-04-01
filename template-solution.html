@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta -->
@@ -49,9 +52,9 @@
   <title>Kaptea — Financial Services</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111111; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #131521; }
     /* ── ACCESSIBILITY ── */
-    a:focus-visible, button:focus-visible { outline: 2px solid #f43130; outline-offset: 2px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #dc2727; outline-offset: 2px; }
     :focus:not(:focus-visible) { outline: none; }
 
 
@@ -82,11 +85,11 @@
       white-space: nowrap;
       transition: color 0.15s;
     }
-    .nav-links a:hover { color: #111111; }
-    .nav-links a.active { color: #111111; border-bottom: 2px solid #f43130; }
+    .nav-links a:hover { color: #131521; }
+    .nav-links a.active { color: #131521; border-bottom: 2px solid #dc2727; }
     .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
     .nav-cta {
-      background: #f43130;
+      background: #dc2727;
       color: white !important;
       padding: 8px 20px;
       border-radius: 6px;
@@ -95,7 +98,7 @@
       text-decoration: none;
       white-space: nowrap;
     }
-    .nav-cta:hover { background: #d41f1e; }
+    .nav-cta:hover { background: #c02222; }
     .hamburger { display: none; }
 
     /* ── DESIGN / CONTENT NOTES ── */
@@ -113,7 +116,7 @@
 
     /* ── HERO (problem-led, not feature-led) ── */
     .hero {
-      background: #111111;
+      background: #131521;
       color: #ffffff;
       padding: 80px 40px 72px;
     }
@@ -130,20 +133,20 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #f43130;
+      color: #dc2727;
       margin-bottom: 16px;
     }
-    .hero-breadcrumb a { color: #f43130; text-decoration: none; }
+    .hero-breadcrumb a { color: #dc2727; text-decoration: none; }
     .hero-breadcrumb a:hover { text-decoration: underline; }
     .hero-breadcrumb span { color: #6b7280; }
     .hero h1 {
       font-size: 40px;
-      font-weight: 700;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
       line-height: 1.2;
       margin-bottom: 16px;
       color: #ffffff;
     }
-    .hero h1 span { color: #f43130; }
+    .hero h1 span { color: #dc2727; }
     .hero .hero-sub {
       font-size: 17px;
       color: #9ca3af;
@@ -153,7 +156,7 @@
     }
     .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn-primary {
-      background: #f43130;
+      background: #dc2727;
       color: white;
       padding: 12px 28px;
       border-radius: 6px;
@@ -164,7 +167,7 @@
       align-items: center;
       gap: 8px;
     }
-    .btn-primary:hover { background: #d41f1e; }
+    .btn-primary:hover { background: #c02222; }
     .btn-ghost-light {
       color: #ffffff;
       padding: 12px 28px;
@@ -204,13 +207,13 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: #f43130;
+      color: #dc2727;
       margin-bottom: 12px;
     }
     .challenge h2 {
       font-size: 28px;
-      font-weight: 700;
-      color: #111111;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: #131521;
       margin-bottom: 40px;
       max-width: 640px;
       line-height: 1.3;
@@ -236,8 +239,8 @@
     }
     .challenge-card h3 {
       font-size: 15px;
-      font-weight: 700;
-      color: #111111;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: #131521;
       margin-bottom: 6px;
     }
     .challenge-card p {
@@ -257,8 +260,8 @@
     }
     .solutions h2 {
       font-size: 28px;
-      font-weight: 700;
-      color: #111111;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: #131521;
       margin-bottom: 48px;
       max-width: 560px;
       line-height: 1.3;
@@ -297,8 +300,8 @@
     }
     .solution-answer h3 {
       font-size: 20px;
-      font-weight: 700;
-      color: #111111;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: #131521;
       margin-bottom: 10px;
     }
     .solution-answer p {
@@ -309,7 +312,7 @@
     }
     .solution-answer .feature-link {
       font-size: 13px;
-      color: #f43130;
+      color: #dc2727;
       font-weight: 600;
       text-decoration: none;
     }
@@ -332,13 +335,13 @@
       content: '✓';
       position: absolute;
       left: 0;
-      color: #f43130;
+      color: #dc2727;
       font-weight: 700;
     }
 
     /* ── NUMBERS STRIP ── */
     .numbers-strip {
-      background: #111111;
+      background: #131521;
       padding: 56px 40px;
     }
     .numbers-inner {
@@ -351,8 +354,8 @@
     }
     .number-item h3 {
       font-size: 36px;
-      font-weight: 700;
-      color: #f43130;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: #dc2727;
       margin-bottom: 6px;
     }
     .number-item p {
@@ -377,18 +380,18 @@
     .featured-quote {
       font-size: 20px;
       font-weight: 500;
-      color: #111111;
+      color: #131521;
       line-height: 1.5;
       font-style: italic;
       margin-bottom: 20px;
       padding-left: 24px;
-      border-left: 3px solid #f43130;
+      border-left: 3px solid #dc2727;
     }
     .featured-attribution {
       font-size: 14px;
       color: #555555;
     }
-    .featured-attribution strong { color: #111111; }
+    .featured-attribution strong { color: #131521; }
     .featured-logo {
       background: #faf8f5;
       border: 1px solid #eeebe6;
@@ -414,8 +417,8 @@
     }
     .trust-inner h2 {
       font-size: 24px;
-      font-weight: 700;
-      color: #111111;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: #131521;
       margin-bottom: 12px;
     }
     .trust-inner > p {
@@ -441,8 +444,8 @@
     }
     .trust-card h3 {
       font-size: 14px;
-      font-weight: 700;
-      color: #111111;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: #131521;
       margin-bottom: 6px;
     }
     .trust-card p {
@@ -462,8 +465,8 @@
     }
     .related-inner > h2 {
       font-size: 24px;
-      font-weight: 700;
-      color: #111111;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: #131521;
       margin-bottom: 36px;
     }
     .related-grid {
@@ -480,13 +483,13 @@
       transition: border-color 0.15s, box-shadow 0.15s;
     }
     .related-card:hover {
-      border-color: #f43130;
+      border-color: #dc2727;
       box-shadow: 0 4px 16px rgba(244,49,48,0.08);
     }
     .related-card h3 {
       font-size: 16px;
-      font-weight: 700;
-      color: #111111;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: #131521;
       margin-bottom: 8px;
     }
     .related-card p {
@@ -496,7 +499,7 @@
     }
     .related-card .related-arrow {
       font-size: 13px;
-      color: #f43130;
+      color: #dc2727;
       font-weight: 600;
       margin-top: 12px;
       display: block;
@@ -504,14 +507,14 @@
 
     /* ── CTA CLOSE ── */
     .cta-close {
-      background: #111111;
+      background: #131521;
       color: white;
       text-align: center;
       padding: 72px 40px;
     }
     .cta-close h2 {
       font-size: 32px;
-      font-weight: 700;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
       margin-bottom: 12px;
     }
     .cta-close p {
@@ -539,7 +542,7 @@
     }
     .reassurance span::before {
       content: '✓';
-      color: #f43130;
+      color: #dc2727;
       font-weight: 700;
     }
 
@@ -578,7 +581,7 @@
         border-bottom: 1px solid rgba(255,255,255,0.1);
       }
       .nav-links a:hover { color: #fff; }
-      .nav-links a.active { border-bottom-color: #f43130; color: #fff; }
+      .nav-links a.active { border-bottom-color: #dc2727; color: #fff; }
       .hamburger {
         display: flex; flex-direction: column; gap: 5px;
         cursor: pointer; padding: 8px; z-index: 301;
@@ -633,7 +636,7 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #111111;
+      background: #131521;
       padding: 64px 40px 32px;
       color: rgba(255,255,255,0.6);
       font-size: 13px;
@@ -718,11 +721,11 @@
 <body>
 
 <!-- Skip navigation for accessibility -->
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#f43130;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#dc2727;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
 
 <nav role="navigation" aria-label="Main navigation">
   <a href="homepage.html" class="nav-logo">
-    <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="32" style="display:block;" />
+    <img src="kaptea-logo.svg" alt="Kaptea" height="32" style="display:block;" />
   </a>
   <div class="nav-links">
     <a href="homepage.html">Platform</a>
@@ -1058,7 +1061,7 @@
     <div class="footer-grid">
 
       <div class="footer-brand">
-        <img src="https://cdn.prod.website-files.com/687fb9e3880a25b8ff4ca36c/6880f1d51a3168f4cdd38226_Kaptea-Logo.svg" alt="Kaptea" height="28" style="filter: brightness(0) invert(1); opacity: 0.8;" />
+        <img src="kaptea-logo-white.svg" alt="Kaptea" height="28" style="opacity: 0.8;" />
         <p>The omnichannel communications platform designed for regulated and mission-critical organisations. Built on Twilio and Telnyx.</p>
         <div class="footer-certs">
           <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> ISO 27001</div>
