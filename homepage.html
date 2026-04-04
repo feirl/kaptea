@@ -405,10 +405,17 @@
 
     /* ── HERO ── */
     .hero {
-      background: #faf8f5;
+      background:
+        radial-gradient(ellipse 1100px 550px at 50% 10%, rgba(220,39,39,0.06) 0%, transparent 65%),
+        radial-gradient(ellipse 800px 600px at 0% 120%, rgba(19,21,33,0.08) 0%, transparent 55%),
+        radial-gradient(ellipse 800px 600px at 100% 120%, rgba(19,21,33,0.08) 0%, transparent 55%),
+        #faf8f5;
       color: #131521;
       text-align: center;
-      padding: 96px 24px 80px;
+      padding: 96px 24px 120px;
+      position: relative;
+      z-index: 1;
+      overflow: visible;
     }
     .hero-channels {
       display: flex;
@@ -1048,7 +1055,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       nav { padding: 0 24px; }
-      .hero { padding: 64px 24px; }
+      .hero { padding: 64px 24px 100px; }
       .hero h1 { font-size: 36px; }
       .section, .section-alt, .section-dark { padding: 56px 24px; }
       .problem-grid, .capabilities-grid { grid-template-columns: 1fr 1fr; }
@@ -1110,7 +1117,7 @@
       .nav-cta { padding: 6px 14px; font-size: 13px; }
 
       /* Hero */
-      .hero { padding: 48px 20px; }
+      .hero { padding: 48px 20px 64px; overflow: hidden; }
       .hero h1 { font-size: 28px; }
       .hero p { font-size: 15px; }
       .hero-channels { gap: 6px; }
@@ -1157,7 +1164,7 @@
       .steps-cta a { text-align: center; justify-content: center; margin-left: 0 !important; }
 
       /* Platform Preview — mobile */
-      .platform-preview { padding: 60px 20px 0; }
+      .platform-preview { padding: 40px 20px 0; margin-top: 0 !important; }
       .browser-content img { max-height: 320px; }
       .browser-actions { display: none; }
       .platform-certs { gap: 8px 0; padding: 28px 12px 48px; }
@@ -1168,14 +1175,18 @@
   <style>
     /* ── Platform Preview ───────────────────────────────────────────── */
     .platform-preview {
-      background: linear-gradient(180deg, #faf8f5 0%, #f0ede8 18%, #1a1d2e 52%, #0d0f1a 100%);
-      padding: 80px 40px 0;
+      background: linear-gradient(180deg, #faf8f5 0%, #f0ede8 20%, #1a1d2e 54%, #0d0f1a 100%);
+      padding: 0 40px 0;
+      margin-top: -80px;
+      position: relative;
+      z-index: 2;
       text-align: center;
       overflow: hidden;
     }
     .platform-preview-inner {
       max-width: 1080px;
       margin: 0 auto;
+      padding-top: 24px;
     }
     .platform-eyebrow { display: none; }
     .browser-frame {
