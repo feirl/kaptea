@@ -576,6 +576,324 @@
     .footer-bottom a:hover { color: rgba(255,255,255,0.7); }
     .footer-legal { display: flex; gap: 20px; }
 
+    /* ── HERO TRUST STRIP ── */
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .hero-trust span {
+      font-size: 12px;
+      font-weight: 600;
+      color: #888888;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-trust span::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #dc2727;
+      opacity: 0.5;
+    }
+
+    /* ── PAIN → GAIN ── */
+    .pg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: #eeebe6;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .pg-col { background: #ffffff; padding: 32px; }
+    .pg-col-dark { background: #131521; }
+    .pg-header {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .pg-col-dark .pg-header { border-color: rgba(255,255,255,0.1); }
+    .pg-header-pain { color: #888888; }
+    .pg-header-gain { color: #dc2727; }
+    .pg-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .pg-item:last-child { margin-bottom: 0; }
+    .pg-icon-pain {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      color: #aaaaaa;
+      margin-top: 1px;
+    }
+    .pg-icon-gain {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      color: #dc2727;
+      margin-top: 1px;
+    }
+    .pg-label-pain { font-size: 14px; font-weight: 600; color: #555555; margin-bottom: 4px; }
+    .pg-desc-pain { font-size: 13px; color: #888888; line-height: 1.55; }
+    .pg-label-gain { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+    .pg-desc-gain { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.55; }
+
+    /* ── ARCHITECTURE DIAGRAM ── */
+    .arch-diagram {
+      background: #0d0f1a;
+      border-radius: 16px;
+      padding: 32px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .arch-layer {
+      padding: 16px 20px;
+      border-radius: 10px;
+    }
+    .arch-layer-top {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .arch-layer-middle {
+      background: rgba(220,39,39,0.12);
+      border: 1px solid rgba(220,39,39,0.3);
+      padding: 20px;
+    }
+    .arch-layer-bottom {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .arch-layer-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+    .arch-layer-top .arch-layer-label { color: rgba(255,255,255,0.4); }
+    .arch-layer-middle .arch-layer-label { color: #dc2727; }
+    .arch-layer-bottom .arch-layer-label { color: rgba(255,255,255,0.4); }
+    .arch-nodes {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .arch-node {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .arch-layer-top .arch-node { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); }
+    .arch-layer-middle .arch-node { background: rgba(220,39,39,0.2); color: rgba(255,255,255,0.85); }
+    .arch-layer-bottom .arch-node { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); }
+    .arch-arrow {
+      text-align: center;
+      font-size: 18px;
+      color: rgba(255,255,255,0.2);
+      padding: 6px 0;
+    }
+    .arch-middle-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 8px;
+    }
+
+    /* ── FAILOVER DIAGRAM ── */
+    .failover-diagram {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 16px;
+      padding: 28px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+    .failover-chain {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .failover-node {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .failover-badge {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1.5px solid #eeebe6;
+      color: #131521;
+      background: #ffffff;
+    }
+    .failover-badge.active { background: #dc2727; color: #ffffff; border-color: #dc2727; }
+    .failover-badge.fail { background: #faf8f5; color: #aaaaaa; border-color: #e0dcd7; text-decoration: line-through; }
+    .failover-arrow-right { color: #aaaaaa; font-size: 16px; }
+    .failover-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #888888;
+      margin-bottom: 12px;
+    }
+    .failover-outcome {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(220,39,39,0.06);
+      border-left: 3px solid #dc2727;
+      border-radius: 0 6px 6px 0;
+      font-size: 13px;
+      color: #555555;
+      line-height: 1.55;
+    }
+
+    /* ── INDUSTRY VERTICALS ── */
+    .vertical-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .vertical-card {
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 14px;
+      padding: 32px;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .vertical-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+    }
+    .vertical-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #dc2727;
+      background: #fff3f3;
+      border-radius: 4px;
+      padding: 4px 8px;
+      margin-bottom: 16px;
+    }
+    .vertical-card h3 {
+      font-size: 19px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .vertical-card p { font-size: 14px; color: #555555; line-height: 1.65; margin-bottom: 20px; }
+    .vertical-use-cases { list-style: none; padding: 0; margin: 0 0 20px; }
+    .vertical-use-cases li {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.55;
+      padding: 3px 0 3px 16px;
+      position: relative;
+    }
+    .vertical-use-cases li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 11px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #dc2727;
+      opacity: 0.45;
+    }
+    .vertical-client {
+      font-size: 12px;
+      font-weight: 600;
+      color: #888888;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .vertical-client::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 1px;
+      background: #cccccc;
+    }
+
+    /* ── DEPLOYMENT TIMELINE ── */
+    .deploy-timeline {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      margin-top: 48px;
+    }
+    .deploy-step {
+      flex: 1;
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 12px;
+      padding: 24px;
+      position: relative;
+    }
+    .deploy-step.live {
+      background: #131521;
+      border-color: #131521;
+    }
+    .deploy-connector {
+      display: flex;
+      align-items: center;
+      padding: 0 4px;
+      flex-shrink: 0;
+      width: 32px;
+    }
+    .deploy-connector::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #eeebe6;
+    }
+    .deploy-day {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #dc2727;
+      margin-bottom: 8px;
+    }
+    .deploy-title {
+      font-size: 16px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 8px;
+    }
+    .deploy-step.live .deploy-title { color: #ffffff; }
+    .deploy-desc { font-size: 13px; color: #555555; line-height: 1.6; }
+    .deploy-step.live .deploy-desc { color: rgba(255,255,255,0.55); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       nav { padding: 0 24px; }
@@ -646,6 +964,10 @@
       .section-title { font-size: 24px; }
       .section-sub { font-size: 14px; }
       .channel-grid, .cap-grid, .int-grid { grid-template-columns: 1fr; }
+      .pg-grid { grid-template-columns: 1fr; }
+      .vertical-grid { grid-template-columns: 1fr; }
+      .deploy-timeline { flex-direction: column; gap: 12px; }
+      .deploy-connector { display: none; }
       .metrics-strip { padding: 40px 20px; }
       .metrics-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
       .how-block, .how-block.reverse { grid-template-columns: 1fr; gap: 24px; direction: ltr; }
@@ -696,11 +1018,18 @@
       <a href="homepage.html">Kaptea</a> <span>→</span> Platform
     </div>
     <img src="Pronto-360-Logo.svg" alt="Pronto 360" class="hero-logo">
-    <h1>Enterprise comms.<br><em>Never drop a message again.</em></h1>
-    <p class="hero-sub">Five channels. One platform. Mission-critical deliverability, cross-channel failover, enterprise governance, and 16 pre-built integrations — deployed on a dedicated instance in days, not months.</p>
+    <h1>When it can't wait,<br><em>Pronto delivers.</em></h1>
+    <p class="hero-sub">The enterprise communications platform built for regulated industries. Carrier-grade infrastructure, compliance built in, full operational control — without waiting on engineering.</p>
     <div class="hero-ctas">
       <a href="demo.html" class="btn-primary">Book a Demo</a>
       <a href="template-feature.html" class="btn-ghost">Explore Capabilities →</a>
+    </div>
+    <div class="hero-trust">
+      <span>ISO 27001</span>
+      <span>CREST Certified</span>
+      <span>Cyber Essentials Plus</span>
+      <span>Twilio Gold Partner</span>
+      <span>EU Data Residency</span>
     </div>
   </div>
 </section>
@@ -728,10 +1057,10 @@
 
     <div class="value-item">
       <div class="value-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
       </div>
-      <h3>Dedicated instance</h3>
-      <p>Single-tenant, isolated infrastructure. Your data, your environment, your compliance requirements.</p>
+      <h3>BYO carrier infrastructure</h3>
+      <p>Bring your own Twilio or Telnyx account. Pronto adds the orchestration, governance, and ops layer on top.</p>
     </div>
 
     <div class="value-item">
@@ -742,6 +1071,112 @@
       <p>Connect your Twilio token, configure your channels, go live. No six-month build-outs.</p>
     </div>
 
+  </div>
+</section>
+<!-- ─────────────────────────────────────────────
+     PAIN → GAIN — Before / After transformation
+───────────────────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="inner">
+    <div class="section-label">The transformation</div>
+    <h2 class="section-title">From fragmented operations to governed control.</h2>
+    <p class="section-sub">Most regulated organisations are stitching together carrier APIs, CRM exports, and manual ops processes with no safety net. Pronto replaces that entire stack.</p>
+
+    <div class="pg-grid">
+
+      <!-- LEFT: Pain -->
+      <div class="pg-col">
+        <div class="pg-header pg-header-pain">Before Pronto</div>
+
+        <div class="pg-item">
+          <svg class="pg-icon-pain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <div>
+            <div class="pg-label-pain">Messages dropped with no warning</div>
+            <div class="pg-desc-pain">No failover. Silent failures. You find out when customers complain.</div>
+          </div>
+        </div>
+
+        <div class="pg-item">
+          <svg class="pg-icon-pain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <div>
+            <div class="pg-label-pain">Siloed channels, broken conversations</div>
+            <div class="pg-desc-pain">WhatsApp here, SMS there, email elsewhere. Agents lose context across every handoff.</div>
+          </div>
+        </div>
+
+        <div class="pg-item">
+          <svg class="pg-icon-pain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <div>
+            <div class="pg-label-pain">Every template change needs an IT ticket</div>
+            <div class="pg-desc-pain">Ops teams wait weeks for engineers to update a sender name or message copy.</div>
+          </div>
+        </div>
+
+        <div class="pg-item">
+          <svg class="pg-icon-pain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <div>
+            <div class="pg-label-pain">No audit trail for compliance teams</div>
+            <div class="pg-desc-pain">Regulators ask who sent what, when. You have no reliable answer.</div>
+          </div>
+        </div>
+
+        <div class="pg-item">
+          <svg class="pg-icon-pain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <div>
+            <div class="pg-label-pain">Locked in. Annual contracts. No flexibility.</div>
+            <div class="pg-desc-pain">Bundled pricing hides usage costs. Changes take months. Exit costs are punishing.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Gain -->
+      <div class="pg-col pg-col-dark">
+        <div class="pg-header pg-header-gain">With Pronto</div>
+
+        <div class="pg-item">
+          <svg class="pg-icon-gain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <div>
+            <div class="pg-label-gain">Cross-channel failover, automatic and silent</div>
+            <div class="pg-desc-gain">SMS fails? Pronto cascades to WhatsApp then Email. Every message confirmed or escalated.</div>
+          </div>
+        </div>
+
+        <div class="pg-item">
+          <svg class="pg-icon-gain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <div>
+            <div class="pg-label-gain">One unified inbox, full conversation history</div>
+            <div class="pg-desc-gain">All channels in one interface. Agents see every interaction regardless of where it started.</div>
+          </div>
+        </div>
+
+        <div class="pg-item">
+          <svg class="pg-icon-gain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <div>
+            <div class="pg-label-gain">Ops teams own templates, no IT required</div>
+            <div class="pg-desc-gain">Create, edit and approve templates through the UI. Governance controls without engineering dependency.</div>
+          </div>
+        </div>
+
+        <div class="pg-item">
+          <svg class="pg-icon-gain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <div>
+            <div class="pg-label-gain">Complete audit trail on every message</div>
+            <div class="pg-desc-gain">Every send, every change, every user action — logged and exportable. Compliance-ready from day one.</div>
+          </div>
+        </div>
+
+        <div class="pg-item">
+          <svg class="pg-icon-gain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <div>
+            <div class="pg-label-gain">Monthly billing. 60-day notice. Transparent costs.</div>
+            <div class="pg-desc-gain">Platform fee separate from carrier usage. No lock-in. Scale up or down as your needs change.</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 </section>
 <!-- ─────────────────────────────────────────────
@@ -964,7 +1399,40 @@
           <li>Full conversation history visible regardless of channel</li>
         </ul>
       </div>
-      <div class="how-visual">[ Screenshot: Pronto unified inbox / campaign wizard ]</div>
+      <div class="arch-diagram">
+        <div class="arch-layer arch-layer-top">
+          <div class="arch-layer-label">Your existing systems</div>
+          <div class="arch-nodes">
+            <span class="arch-node">Salesforce / Dynamics / SAP</span>
+            <span class="arch-node">Twilio or Telnyx</span>
+            <span class="arch-node">Business events &amp; APIs</span>
+          </div>
+        </div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer arch-layer-middle">
+          <div class="arch-layer-label">Pronto orchestration layer</div>
+          <div class="arch-middle-title">Your ops team, in control</div>
+          <div class="arch-nodes">
+            <span class="arch-node">Template governance</span>
+            <span class="arch-node">TrustRouter routing</span>
+            <span class="arch-node">Division scoping</span>
+            <span class="arch-node">Audit &amp; compliance</span>
+            <span class="arch-node">AI copilot</span>
+            <span class="arch-node">Analytics</span>
+          </div>
+        </div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer arch-layer-bottom">
+          <div class="arch-layer-label">Customer channels</div>
+          <div class="arch-nodes">
+            <span class="arch-node">SMS</span>
+            <span class="arch-node">WhatsApp</span>
+            <span class="arch-node">Voice / IVR</span>
+            <span class="arch-node">Email</span>
+            <span class="arch-node">RCS</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="how-block reverse">
@@ -978,9 +1446,102 @@
           <li>Surge-proof routing handles storm-scale traffic spikes</li>
         </ul>
       </div>
-      <div class="how-visual">[ Diagram: Failover cascade flow ]</div>
+      <div class="failover-diagram">
+        <div class="failover-label">Failover cascade — automatic, silent, instant</div>
+        <div class="failover-chain">
+          <div class="failover-node">
+            <div class="failover-badge fail">SMS</div>
+          </div>
+          <div class="failover-arrow-right">→</div>
+          <div class="failover-node">
+            <div class="failover-badge active">WhatsApp</div>
+          </div>
+          <div class="failover-arrow-right">→</div>
+          <div class="failover-node">
+            <div class="failover-badge">Email</div>
+          </div>
+        </div>
+        <div class="failover-outcome">
+          When an SMS fails to deliver, Pronto automatically escalates to WhatsApp, then Email — without any manual intervention. Every step is logged. Every outcome is confirmed or escalated to your monitoring stack.
+        </div>
+        <div style="margin-top:16px; display:flex; gap:16px; flex-wrap:wrap;">
+          <div style="font-size:12px; font-weight:600; color:#555; background:#f5f2ee; border-radius:6px; padding:6px 12px;">Real-time delivery confirmation per message</div>
+          <div style="font-size:12px; font-weight:600; color:#555; background:#f5f2ee; border-radius:6px; padding:6px 12px;">Event streaming to PagerDuty, Datadog, Slack</div>
+          <div style="font-size:12px; font-weight:600; color:#555; background:#f5f2ee; border-radius:6px; padding:6px 12px;">Surge-proof routing for storm-scale events</div>
+        </div>
+      </div>
     </div>
 
+  </div>
+</section>
+<!-- ─────────────────────────────────────────────
+     INDUSTRY VERTICALS — 4 priority sectors
+───────────────────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="inner">
+    <div class="section-label">Built for your industry</div>
+    <h2 class="section-title">Four verticals. One platform that understands the stakes.</h2>
+    <p class="section-sub">Pronto is designed for organisations where communications are not a nice-to-have — they're operationally critical. These are the industries where a dropped message has real consequences.</p>
+
+    <div class="vertical-grid">
+
+      <!-- Utilities & Energy -->
+      <div class="vertical-card">
+        <div class="vertical-tag">Utilities &amp; Energy</div>
+        <h3>Storm-proof outage communications</h3>
+        <p>When the grid goes down, your comms can't. Pronto handles 750× surge events with cross-channel failover across SMS, Voice IVR, and WhatsApp — without dropping a single escalation to field crews or customers.</p>
+        <ul class="vertical-use-cases">
+          <li>Outage notifications to affected customers in real time</li>
+          <li>Field crew dispatch and status updates via SMS</li>
+          <li>IVR queuing for inbound calls during peak storm events</li>
+          <li>Automated restoration confirmations across all channels</li>
+        </ul>
+        <div class="vertical-client">NIE Networks — National grid operator</div>
+      </div>
+
+      <!-- Healthcare -->
+      <div class="vertical-card">
+        <div class="vertical-tag">Healthcare</div>
+        <h3>Patient communications that can't fail</h3>
+        <p>Appointment reminders, test results, and urgent patient notifications require compliance-grade delivery with full audit trails. Pronto handles high-volume healthcare messaging with GDPR compliance built in from day one.</p>
+        <ul class="vertical-use-cases">
+          <li>Appointment reminders with opt-in and opt-out management</li>
+          <li>Test result notifications via secure, governed channels</li>
+          <li>Mass emergency communications at national scale</li>
+          <li>Division-scoped access for regional health boards</li>
+        </ul>
+        <div class="vertical-client">Irish Health Service — COVID-19 national programme</div>
+      </div>
+
+      <!-- Travel & Transport -->
+      <div class="vertical-card">
+        <div class="vertical-tag">Travel &amp; Transport</div>
+        <h3>Real-time passenger and customer communications</h3>
+        <p>Tolling, ticketing, and logistics organisations depend on millisecond-accurate customer messaging. Pronto orchestrates transactional communications at scale — from eFlow toll notifications to postal tracking alerts.</p>
+        <ul class="vertical-use-cases">
+          <li>Toll and ticketing notifications with personalised data</li>
+          <li>Delivery tracking alerts via SMS and WhatsApp</li>
+          <li>Journey disruption communications across passenger services</li>
+          <li>Two-way agent inbox for customer queries and escalations</li>
+        </ul>
+        <div class="vertical-client">eFlow Toll Roads &bull; An Post</div>
+      </div>
+
+      <!-- Financial Services -->
+      <div class="vertical-card">
+        <div class="vertical-tag">Financial Services</div>
+        <h3>Compliance-grade financial communications</h3>
+        <p>Financial services organisations face the strictest communications compliance requirements. Pronto provides the audit trail, role-based controls, and governance workflows that procurement and InfoSec teams demand.</p>
+        <ul class="vertical-use-cases">
+          <li>Transaction alerts and fraud notifications via SMS and WhatsApp</li>
+          <li>Template governance with approval workflows and change audit</li>
+          <li>ISO 27001-certified infrastructure with GDPR Data Processor Agreement</li>
+          <li>SSO integration with enterprise identity providers (Okta, Azure AD)</li>
+        </ul>
+        <div class="vertical-client">ISO 27001 &bull; CREST certified &bull; Cyber Essentials Plus</div>
+      </div>
+
+    </div>
   </div>
 </section>
 <!-- ─────────────────────────────────────────────
@@ -1066,32 +1627,73 @@
 <section class="section section-alt">
   <div class="inner">
     <div class="section-label">Customer proof</div>
-    <div class="section-title">Trusted by enterprises that can't afford to drop a message.</div>
+    <h2 class="section-title">Trusted by enterprises that can't afford to drop a message.</h2>
 
     <div class="proof-block">
       <div>
-        <p class="proof-quote">"Kaptea gave us the confidence that our communications infrastructure would hold when our customers needed us most."</p>
-        <p class="proof-attr"><strong>NIE Networks</strong> — Utilities &amp; Energy<br>Storm-proof IVR orchestration for a national grid operator</p>
+        <p class="proof-quote">"This is not a messaging project. It's an enterprise communications infrastructure decision."</p>
+        <p class="proof-attr"><strong>NIE Networks</strong> — Utilities &amp; Energy<br>Storm-proof IVR and SMS orchestration for a national electricity grid operator. Deployed and live in under 90 days.</p>
         <a href="#" style="display:inline-flex; align-items:center; gap:4px; font-size:14px; font-weight:600; color:#dc2727; text-decoration:none; margin-top:16px;">Read the case study →</a>
       </div>
       <div class="proof-stats">
         <div class="proof-stat">
           <h3>750×</h3>
-          <p>Surge in inbound call volume — handled without dropped escalations</p>
+          <p>Surge in inbound call volume handled without dropped escalations during storm events</p>
         </div>
         <div class="proof-stat">
           <h3>&lt;90</h3>
-          <p>Days from contract to full live deployment</p>
+          <p>Days from contract to full live deployment across voice, SMS, and IVR</p>
         </div>
         <div class="proof-stat">
           <h3>25M+</h3>
-          <p>SMS messages managed annually across enterprise customers</p>
+          <p>Messages managed annually across Pronto enterprise customer deployments</p>
         </div>
         <div class="proof-stat">
-          <h3>1,000+</h3>
-          <p>Active agents across customer deployments</p>
+          <h3>1-2</h3>
+          <p>Days to go live for standard deployments. Connect your Twilio token and configure.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+<!-- ─────────────────────────────────────────────
+     DEPLOYMENT TIMELINE — Live in days, not months
+───────────────────────────────────────────────── -->
+<section class="section">
+  <div class="inner">
+    <div class="section-label">Deployment</div>
+    <h2 class="section-title">Live in days, not months.</h2>
+    <p class="section-sub">Pronto is designed to avoid messy, complex build-outs. You bring your Twilio or Telnyx account. We handle everything else.</p>
+
+    <div class="deploy-timeline">
+
+      <div class="deploy-step">
+        <div class="deploy-day">Day 1</div>
+        <div class="deploy-title">Connect</div>
+        <div class="deploy-desc">Connect your existing Twilio or Telnyx token. No new carrier contracts. No infrastructure migration.</div>
+      </div>
+      <div class="deploy-connector"></div>
+
+      <div class="deploy-step">
+        <div class="deploy-day">Day 2</div>
+        <div class="deploy-title">Configure</div>
+        <div class="deploy-desc">Set up channels, user roles, division structure, and governance rules through the UI. No engineering required.</div>
+      </div>
+      <div class="deploy-connector"></div>
+
+      <div class="deploy-step">
+        <div class="deploy-day">Days 3–7</div>
+        <div class="deploy-title">Test &amp; Validate</div>
+        <div class="deploy-desc">Import contacts, build and approve templates, run test campaigns. Your ops team learns the platform in hours.</div>
+      </div>
+      <div class="deploy-connector"></div>
+
+      <div class="deploy-step live">
+        <div class="deploy-day">Day 7+</div>
+        <div class="deploy-title">Live</div>
+        <div class="deploy-desc">Your ops team is running customer communications — without raising a single IT ticket.</div>
+      </div>
+
     </div>
   </div>
 </section>
