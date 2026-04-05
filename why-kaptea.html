@@ -58,8 +58,8 @@
 
     /* ── NOTES ── */
 
-.content-note { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 10px 16px; font-size: 12px; color: #1e40af; font-style: italic; max-width: 1080px; margin: 12px auto; }
-    .content-note strong { color: #1d4ed8; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
+.content-note { background: rgba(220,39,39,0.04); border-left: 4px solid rgba(220,39,39,0.3); padding: 10px 16px; font-size: 12px; color: #6b7280; font-style: italic; max-width: 1080px; margin: 12px auto; }
+    .content-note strong { color: #dc2727; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
 
     /* ── HERO ── */
     .hero { background: #131521; color: #ffffff; padding: 88px 40px 80px; text-align: center; }
@@ -103,13 +103,13 @@
     .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .ba-card { padding: 20px; border-radius: 8px; }
     .ba-card.before { background: #fef2f2; border: 1px solid #fecaca; }
-    .ba-card.after { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .ba-card.after { background: rgba(220,39,39,0.04); border: 1px solid rgba(220,39,39,0.18); }
     .ba-card h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
     .ba-card.before h4 { color: #dc2626; }
-    .ba-card.after h4 { color: #16a34a; }
+    .ba-card.after h4 { color: #dc2727; }
     .ba-card ul { list-style: none; font-size: 13px; line-height: 1.8; }
     .ba-card.before ul li { color: #991b1b; }
-    .ba-card.after ul li { color: #166534; }
+    .ba-card.after ul li { color: #374151; }
 
     /* ── TCO SECTION ── */
     .tco { padding: 72px 40px; background: #faf8f5; border-top: 1px solid #eeebe6; }
@@ -120,7 +120,7 @@
     .tco-card { padding: 28px; background: #ffffff; border: 1px solid #eeebe6; border-radius: 8px; text-align: center; }
     .tco-card h3 { font-size: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #dc2626; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
     .tco-card p { font-size: 14px; color: #555555; line-height: 1.6; }
-    .tco-card .tco-replace { margin-top: 12px; font-size: 13px; color: #16a34a; font-weight: 600; }
+    .tco-card .tco-replace { margin-top: 12px; font-size: 13px; color: #dc2727; font-weight: 600; }
 
     /* ── LOGOS ── */
     .logos { padding: 64px 40px; text-align: center; border-top: 1px solid #eeebe6; }
@@ -179,7 +179,7 @@
     @media (max-width: 768px) {
       .nav-links {
         display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
-        background: #0f1522; flex-direction: column; padding: 24px; gap: 0; z-index: 300; overflow-y: auto;
+        background: #131521; flex-direction: column; padding: 24px; gap: 0; z-index: 300; overflow-y: auto;
       }
       .nav-links.open { display: flex; }
       .nav-links a { color: rgba(255,255,255,0.8); height: auto; padding: 14px 0; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }

@@ -88,16 +88,16 @@
 
 /* ── CONTENT NOTE (for Alan) ── */
     .content-note {
-      background: #eff6ff;
-      border-left: 4px solid #3b82f6;
+      background: rgba(220,39,39,0.04);
+      border-left: 4px solid rgba(220,39,39,0.3);
       padding: 10px 16px;
       font-size: 12px;
-      color: #1e40af;
+      color: #6b7280;
       font-style: italic;
       max-width: 1080px;
       margin: 12px auto;
     }
-    .content-note strong { color: #1d4ed8; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
+    .content-note strong { color: #dc2727; font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
 
     /* ── HERO ── */
     .hero {
@@ -220,13 +220,13 @@
     .pain-icon {
       width: 40px;
       height: 40px;
-      background: rgba(244,49,48,0.1);
+      background: rgba(220,39,39,0.08);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 16px;
-      font-size: 18px;
+      color: #dc2727;
     }
     .pain-card h3 {
       font-size: 15px;
@@ -520,7 +520,7 @@
         display: none;
         position: fixed;
         top: 64px; left: 0; right: 0; bottom: 0;
-        background: #0f1522;
+        background: #131521;
         flex-direction: column;
         padding: 24px;
         gap: 0;
@@ -716,7 +716,11 @@
       </div>
     </div>
     <div class="hero-visual">
-      [Screenshot: Pronto unified inbox showing<br>multiple channels in a single conversation view]
+      <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;">
+        <!-- Placeholder: Pronto unified inbox showing multiple channels in a single conversation view -->
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        <span style="font-size:12px;color:rgba(255,255,255,0.3);letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Screenshot to be supplied</span>
+      </div>
     </div>
   </div>
 </section>
@@ -734,19 +738,19 @@
     <div class="pain-grid">
 
       <div class="pain-card">
-        <div class="pain-icon">📡</div>
+        <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg></div>
         <h3>Channels managed in silos</h3>
         <p>SMS through one vendor, email through another, WhatsApp via a third. No unified view, no consistent governance, no cross-channel failover when one path goes down.</p>
       </div>
 
       <div class="pain-card">
-        <div class="pain-icon">🔇</div>
+        <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></div>
         <h3>Messages disappear without trace</h3>
         <p>When a critical message fails, nobody knows until a customer complains. Delivery diagnostics are buried across multiple dashboards with no single source of truth.</p>
       </div>
 
       <div class="pain-card">
-        <div class="pain-icon">🏗️</div>
+        <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="6" height="4"/><rect x="16" y="3" width="6" height="4"/><rect x="9" y="17" width="6" height="4"/><path d="M5 7v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"/><line x1="12" y1="13" x2="12" y2="17"/></svg></div>
         <h3>Integration takes months, not days</h3>
         <p>Connecting channels to your CRM, governance layer, and analytics requires custom engineering. Every new channel means another integration project.</p>
       </div>
@@ -779,7 +783,7 @@
           <li>HTML email campaigns with SendGrid delivery and open/click tracking</li>
         </ul>
       </div>
-      <div class="how-visual">[Screenshot: unified inbox with SMS + WhatsApp<br>conversation for same contact]</div>
+      <div class="how-visual" style="background:#f3f4f6;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:200px;padding:24px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span style="font-size:11px;color:#9ca3af;letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Screenshot to be supplied</span></div>
     </div>
 
     <!-- Block 2: Failover & Delivery -->
@@ -794,7 +798,7 @@
           <li>Load-aware routing during high-volume surge events</li>
         </ul>
       </div>
-      <div class="how-visual">[Screenshot: delivery diagnostics dashboard<br>showing failover cascade in action]</div>
+      <div class="how-visual" style="background:#f3f4f6;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:200px;padding:24px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span style="font-size:11px;color:#9ca3af;letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Screenshot to be supplied</span></div>
     </div>
 
     <!-- Block 3: Inbound Orchestration -->
@@ -810,7 +814,7 @@
           <li>Suppression list management with opt-out reason tracking</li>
         </ul>
       </div>
-      <div class="how-visual">[Screenshot: agent dashboard showing<br>inbound conversation queue with routing indicators]</div>
+      <div class="how-visual" style="background:#f3f4f6;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:200px;padding:24px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span style="font-size:11px;color:#9ca3af;letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Screenshot to be supplied</span></div>
     </div>
 
     <!-- Block 4: Campaign Orchestration (outbound) -->
@@ -826,7 +830,7 @@
           <li>AI-powered analytics with anomaly detection and benchmarks</li>
         </ul>
       </div>
-      <div class="how-visual">[Screenshot: campaign creation wizard<br>showing multi-channel selection]</div>
+      <div class="how-visual" style="background:#f3f4f6;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:200px;padding:24px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span style="font-size:11px;color:#9ca3af;letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Screenshot to be supplied</span></div>
     </div>
 
   </div>
