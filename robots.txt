@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://feirl.github.io/kaptea/sitemap.xml
