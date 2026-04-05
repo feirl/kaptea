@@ -299,7 +299,81 @@
     .btn-ghost:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
     .btn-secondary { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
     .btn-secondary:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
+
+    /* ── SECTION HEADER ── */
+    .section-header { text-align: center; margin-bottom: 40px; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 80px 40px; }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-top: 1px solid #e5e7eb; }
+    .faq-item:last-child { border-bottom: 1px solid #e5e7eb; }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 22px 0; text-align: left;
+      font-size: 17px; font-weight: 600; color: #131521;
+      font-family: 'Manrope', sans-serif; transition: color 0.15s;
+    }
+    .faq-q:hover { color: #dc2727; }
+    .faq-q[aria-expanded="true"] { color: #dc2727; }
+    .faq-icon {
+      flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+      border: 1.5px solid currentColor; display: flex; align-items: center;
+      justify-content: center; transition: transform 0.25s;
+    }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-icon::before { content: '+'; font-size: 16px; line-height: 1; }
+    .faq-a { padding: 0 0 22px; font-size: 16px; color: #6b7280; line-height: 1.7; }
+    @media (max-width: 767px) {
+      .faq-section { padding: 48px 20px; }
+      .faq-q { font-size: 15px; padding: 18px 0; }
+      .faq-a { font-size: 15px; }
+      .section-header { margin-bottom: 24px; }
+    }
   </style>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does implementation actually take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most Kaptea deployments go from contract signature to live traffic in under a week. We configure a dedicated instance to your exact requirements — channels, carrier credentials, compliance rules, and integrations — without requiring heavy internal engineering resource."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do we need to provide to get started?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your Twilio or Telnyx account credentials, a list of the channels you need active, your compliance requirements (opt-in flows, consent management rules, data residency), and your CRM or ticketing system details if you need native integration. That's it. We handle the rest."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do we need internal engineering resource to implement Kaptea?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The entire implementation is handled by Kaptea's onboarding team. For standard deployments, there is no code to write and no infrastructure to provision on your side. If you have custom integration requirements, we provide an open API and webhook layer your team can connect to on your own timeline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What support is included after go-live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every Kaptea customer receives a dedicated success pod covering platform support, carrier operations, and compliance assistance. We manage Twilio tickets, carrier incidents, and infrastructure monitoring on your behalf. SLA-backed response times are included in every plan."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -613,6 +687,52 @@
 </section>
 
 
+<!-- FAQ -->
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div class="section-header">
+    <div class="section-label" style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#dc2727;margin-bottom:8px;">Common questions</div>
+    <h2 style="font-size:36px;font-family:'Manrope',sans-serif;font-weight:800;color:#131521;line-height:1.15;letter-spacing:-0.02em;" id="faq-heading">Questions about implementation</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="impl-faq-a-1">
+        How long does implementation actually take?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="impl-faq-a-1" hidden>
+        Most Kaptea deployments go from contract signature to live traffic in under a week. We configure a dedicated instance to your exact requirements — channels, carrier credentials, compliance rules, and integrations — without requiring heavy internal engineering resource.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="impl-faq-a-2">
+        What do we need to provide to get started?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="impl-faq-a-2" hidden>
+        Your Twilio or Telnyx account credentials, a list of the channels you need active, your compliance requirements (opt-in flows, consent management rules, data residency), and your CRM or ticketing system details if you need native integration. That's it. We handle the rest.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="impl-faq-a-3">
+        Do we need internal engineering resource to implement Kaptea?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="impl-faq-a-3" hidden>
+        No. The entire implementation is handled by Kaptea's onboarding team. For standard deployments, there is no code to write and no infrastructure to provision on your side. If you have custom integration requirements, we provide an open API and webhook layer your team can connect to on your own timeline.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="impl-faq-a-4">
+        What support is included after go-live?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="impl-faq-a-4" hidden>
+        Every Kaptea customer receives a dedicated success pod covering platform support, carrier operations, and compliance assistance. We manage Twilio tickets, carrier incidents, and infrastructure monitoring on your behalf. SLA-backed response times are included in every plan.
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-close">
   <h2>See the implementation process first-hand</h2>
@@ -708,5 +828,19 @@
   </div>
 </footer>
 
+<script>
+  function initFAQ() {
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        var answer = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!answer) return;
+        btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        answer.hidden = expanded;
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initFAQ);
+</script>
 </body>
 </html>

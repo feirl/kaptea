@@ -290,7 +290,81 @@
     .btn-ghost:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
     .btn-secondary { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
     .btn-secondary:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
+
+    /* ── SECTION HEADER ── */
+    .section-header { text-align: center; margin-bottom: 40px; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 80px 40px; }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-top: 1px solid #e5e7eb; }
+    .faq-item:last-child { border-bottom: 1px solid #e5e7eb; }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 22px 0; text-align: left;
+      font-size: 17px; font-weight: 600; color: #131521;
+      font-family: 'Manrope', sans-serif; transition: color 0.15s;
+    }
+    .faq-q:hover { color: #dc2727; }
+    .faq-q[aria-expanded="true"] { color: #dc2727; }
+    .faq-icon {
+      flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+      border: 1.5px solid currentColor; display: flex; align-items: center;
+      justify-content: center; transition: transform 0.25s;
+    }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-icon::before { content: '+'; font-size: 16px; line-height: 1; }
+    .faq-a { padding: 0 0 22px; font-size: 16px; color: #6b7280; line-height: 1.7; }
+    @media (max-width: 767px) {
+      .faq-section { padding: 48px 20px; }
+      .faq-q { font-size: 15px; padding: 18px 0; }
+      .faq-a { font-size: 15px; }
+      .section-header { margin-bottom: 24px; }
+    }
   </style>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why not use Twilio or Telnyx directly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Twilio and Telnyx are carrier infrastructure providers — excellent at moving messages, not at governing them. Kaptea adds the orchestration, compliance, and operational control layer that regulated organisations require: multi-carrier failover, GDPR consent management, role-based approval workflows, and audit trails. We're also a Twilio Gold Partner, so you get the best of both."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes Kaptea different from other CPaaS platforms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most CPaaS platforms are built for developers sending messages. Kaptea is built for regulated organisations governing communications. Every deployment is a dedicated instance — no shared tenancy. Compliance is built in, not bolted on. And we operationalise your entire Twilio or Telnyx stack so your team doesn't need deep carrier expertise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Kaptea require us to change our existing carrier setup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Kaptea sits as a governance and orchestration layer above your existing carrier relationships. Bring your own Twilio or Telnyx account, or we help you establish one. Your carrier rates, numbers, and relationships stay yours. We add the control plane on top."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Kaptea's instance model different from shared-tenancy platforms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On shared-tenancy platforms, your messages move through pooled infrastructure alongside other organisations' traffic. On Kaptea, you receive a dedicated instance: your own environment, your own carrier configuration, your own data residency. That isolation is what makes compliance reporting clean and what eliminates the noisy-neighbour delivery risks that plague shared systems."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -552,6 +626,52 @@
 </section>
 
 
+<!-- FAQ -->
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div class="section-header">
+    <div class="section-label" style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#dc2727;margin-bottom:8px;">Common questions</div>
+    <h2 style="font-size:36px;font-family:'Manrope',sans-serif;font-weight:800;color:#131521;line-height:1.15;letter-spacing:-0.02em;" id="faq-heading">Why organisations choose Kaptea</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="wk-faq-a-1">
+        Why not use Twilio or Telnyx directly?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="wk-faq-a-1" hidden>
+        Twilio and Telnyx are carrier infrastructure providers — excellent at moving messages, not at governing them. Kaptea adds the orchestration, compliance, and operational control layer that regulated organisations require: multi-carrier failover, GDPR consent management, role-based approval workflows, and audit trails. We're also a Twilio Gold Partner, so you get the best of both.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="wk-faq-a-2">
+        What makes Kaptea different from other CPaaS platforms?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="wk-faq-a-2" hidden>
+        Most CPaaS platforms are built for developers sending messages. Kaptea is built for regulated organisations governing communications. Every deployment is a dedicated instance — no shared tenancy. Compliance is built in, not bolted on. And we operationalise your entire Twilio or Telnyx stack so your team doesn't need deep carrier expertise.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="wk-faq-a-3">
+        Does Kaptea require us to change our existing carrier setup?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="wk-faq-a-3" hidden>
+        No. Kaptea sits as a governance and orchestration layer above your existing carrier relationships. Bring your own Twilio or Telnyx account, or we help you establish one. Your carrier rates, numbers, and relationships stay yours. We add the control plane on top.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="wk-faq-a-4">
+        How is Kaptea's instance model different from shared-tenancy platforms?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="wk-faq-a-4" hidden>
+        On shared-tenancy platforms, your messages move through pooled infrastructure alongside other organisations' traffic. On Kaptea, you receive a dedicated instance: your own environment, your own carrier configuration, your own data residency. That isolation is what makes compliance reporting clean and what eliminates the noisy-neighbour delivery risks that plague shared systems.
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-close">
   <h2>See why enterprises choose Kaptea</h2>
@@ -647,5 +767,19 @@
   </div>
 </footer>
 
+<script>
+  function initFAQ() {
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        var answer = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!answer) return;
+        btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        answer.hidden = expanded;
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initFAQ);
+</script>
 </body>
 </html>

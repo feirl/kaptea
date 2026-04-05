@@ -1098,7 +1098,81 @@
       .footer-brand { grid-column: 1 / -1; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
+
+    /* ── SECTION HEADER ── */
+    .section-header { text-align: center; margin-bottom: 40px; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 80px 40px; }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-top: 1px solid #e5e7eb; }
+    .faq-item:last-child { border-bottom: 1px solid #e5e7eb; }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 22px 0; text-align: left;
+      font-size: 17px; font-weight: 600; color: #131521;
+      font-family: 'Manrope', sans-serif; transition: color 0.15s;
+    }
+    .faq-q:hover { color: #dc2727; }
+    .faq-q[aria-expanded="true"] { color: #dc2727; }
+    .faq-icon {
+      flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+      border: 1.5px solid currentColor; display: flex; align-items: center;
+      justify-content: center; transition: transform 0.25s;
+    }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-icon::before { content: '+'; font-size: 16px; line-height: 1; }
+    .faq-a { padding: 0 0 22px; font-size: 16px; color: #6b7280; line-height: 1.7; }
+    @media (max-width: 767px) {
+      .faq-section { padding: 48px 20px; }
+      .faq-q { font-size: 15px; padding: 18px 0; }
+      .faq-a { font-size: 15px; }
+      .section-header { margin-bottom: 24px; }
+    }
   </style>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What exactly is Pronto 360?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pronto 360 is Kaptea's unified enterprise communications platform — a single governed interface for managing SMS, RCS, WhatsApp, Voice, Video, and Email. It sits above your carrier infrastructure and gives operational teams full control over campaigns, failover, compliance, and analytics without engineering involvement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Pronto handle campaigns across multiple channels simultaneously?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Pronto's campaign engine lets you build and execute multi-channel workflows from a single interface. A single campaign can send an SMS, follow up with a WhatsApp message if unread, escalate to a voice call if critical — all with delivery tracking and opt-out management handled automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Pronto manage carrier failover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pronto monitors carrier health in real-time and automatically routes traffic to a secondary carrier when primary delivery rates fall below threshold. Failover is sub-second and transparent to your recipients. You can configure failover rules per channel, per geography, or per message type."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What compliance and audit capabilities does Pronto include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every message sent through Pronto generates a tamper-evident audit entry: sender identity, recipient consent status, delivery timestamp, and channel. Compliance dashboards show opt-in/opt-out rates, consent expiry, and DPA coverage by jurisdiction. Audit exports are available in formats accepted by ICO, FCA, and sector-specific regulators."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -1863,9 +1937,53 @@
     </div>
   </div>
 </section>
-<!-- ─────────────────────────────────────────────
-     CTA CLOSE
-───────────────────────────────────────────────── -->
+<!-- FAQ -->
+<section class="faq-section" aria-labelledby="pronto-faq-heading">
+  <div class="section-header">
+    <div class="section-label" style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#dc2727;margin-bottom:8px;">Common questions</div>
+    <h2 style="font-size:36px;font-family:'Manrope',sans-serif;font-weight:800;color:#131521;line-height:1.15;letter-spacing:-0.02em;" id="pronto-faq-heading">Questions about Pronto 360</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="pronto-faq-a-1">
+        What exactly is Pronto 360?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="pronto-faq-a-1" hidden>
+        Pronto 360 is Kaptea's unified enterprise communications platform — a single governed interface for managing SMS, RCS, WhatsApp, Voice, Video, and Email. It sits above your carrier infrastructure and gives operational teams full control over campaigns, failover, compliance, and analytics without engineering involvement.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="pronto-faq-a-2">
+        Can Pronto handle campaigns across multiple channels simultaneously?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="pronto-faq-a-2" hidden>
+        Yes. Pronto's campaign engine lets you build and execute multi-channel workflows from a single interface. A single campaign can send an SMS, follow up with a WhatsApp message if unread, escalate to a voice call if critical — all with delivery tracking and opt-out management handled automatically.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="pronto-faq-a-3">
+        How does Pronto manage carrier failover?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="pronto-faq-a-3" hidden>
+        Pronto monitors carrier health in real-time and automatically routes traffic to a secondary carrier when primary delivery rates fall below threshold. Failover is sub-second and transparent to your recipients. You can configure failover rules per channel, per geography, or per message type.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="pronto-faq-a-4">
+        What compliance and audit capabilities does Pronto include?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="pronto-faq-a-4" hidden>
+        Every message sent through Pronto generates a tamper-evident audit entry: sender identity, recipient consent status, delivery timestamp, and channel. Compliance dashboards show opt-in/opt-out rates, consent expiry, and DPA coverage by jurisdiction. Audit exports are available in formats accepted by ICO, FCA, and sector-specific regulators.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA CLOSE -->
 <section class="cta-close">
   <h2>See Pronto in action.</h2>
   <p>Book a 30-minute demo and we'll show you how Pronto 360 handles your specific use case — your channels, your integrations, your compliance requirements.</p>
@@ -1874,10 +1992,6 @@
     <a href="index.html" class="btn-secondary" style="border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.8); background: transparent;">View Pricing</a>
   </div>
 </section>
-
-
-<!-- ── FOOTER ── -->
-
 
 
 <!-- ── FOOTER ── -->
@@ -1962,5 +2076,19 @@
   </div>
 </footer>
 
+<script>
+  function initFAQ() {
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        var answer = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!answer) return;
+        btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        answer.hidden = expanded;
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initFAQ);
+</script>
 </body>
 </html>
