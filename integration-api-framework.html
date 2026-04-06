@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integration &amp; API Framework - Pronto by Kaptea</title>
+  <meta name="description" content="Connect your CRM, trigger messages from any event, and extend Pronto through open APIs and webhooks. No custom integration work required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Pronto Integration and API Framework",
+    "description": "Two-way CRM sync, event-driven message triggers, open REST APIs, and webhook support - all without custom integration work.",
+    "applicationCategory": "BusinessApplication",
+    "offers": { "@type": "Offer", "price": "0" }
+  }
+  </script>
+  <style>
+
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #131521; background: #ffffff; line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ── SKIP LINK ── */
+    .skip-link { position: absolute; top: -40px; left: 16px; background: #dc2727; color: #fff; padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: 600; z-index: 9999; transition: top .2s; }
+    .skip-link:focus { top: 8px; }
+
+    /* ── NAV ── */
+    nav {
+      background: #ffffff;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      overflow: visible;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-links { display: flex; gap: 0; align-items: stretch; height: 64px; }
+    .nav-item { position: static; display: flex; align-items: center; }
+    .nav-item > a {
+      color: #555555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 18px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      transition: color 0.15s;
+    }
+    .nav-item > a:hover, .nav-item.active > a { color: #131521; }
+    .nav-item.active > a { border-bottom: 2px solid #dc2727; }
+    .nav-chevron { font-size: 10px; opacity: 0.6; transition: transform 0.2s; }
+    .nav-item.active .nav-chevron { transform: rotate(180deg); }
+    .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
+    .nav-cta {
+      background: #dc2727;
+      color: white !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: #c02222; }
+    .hamburger { display: none; }
+
+    /* ── MEGA MENU ── */
+    .mega {
+      display: none;
+      position: absolute;
+      top: 64px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffffff;
+      border-top: 2px solid #dc2727;
+      border-bottom: 1px solid #eeebe6;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      z-index: 300;
+      min-width: 900px;
+      padding: 28px 40px;
+      animation: fadeDown 0.18s ease;
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    .nav-item.active .mega { display: block; }
+
+    /* Platform mega: two-panel layout */
+    .mega-platform { min-width: 1100px; }
+    .mega-cols { display: grid; gap: 0; }
+    .mega-platform .mega-cols { grid-template-columns: 280px 1fr; }
+    .mega-solutions .mega-cols { grid-template-columns: 1fr 1fr; }
+
+    /* Left panel, Pronto */
+    .mega-left {
+      border-right: 1px solid #eeebe6;
+      padding-right: 32px;
+    }
+    .mega-panel-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #dc2727;
+      margin-bottom: 14px;
+    }
+    .pronto-logo-link { display: inline-block; }
+    .pronto-logo-img { height: 28px; width: auto; display: block; }
+    .mega-section { margin-bottom: 16px; }
+    .mega-section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 4px;
+      letter-spacing: 0.01em;
+    }
+    .mega-links { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+    .mega-links li a {
+      font-size: 12px;
+      color: #64748b;
+      text-decoration: none;
+      display: block;
+      padding: 2px 0 2px 10px;
+      border-left: 2px solid transparent;
+      transition: all 0.12s;
+      line-height: 1.5;
+    }
+    .mega-links li a:hover { color: #131521; border-left-color: #dc2727; padding-left: 14px; }
+    .mega-links li.mega-detail {
+      font-size: 12px;
+      color: #9ca3af;
+      padding: 1px 0 1px 10px;
+      border-left: 2px solid transparent;
+      line-height: 1.4;
+    }
+    .mega-right .mega-links li.mega-detail {
+      font-size: 12px;
+      color: #9ca3af;
+      padding: 1px 0 1px 10px;
+      line-height: 1.4;
+    }
+    .mega-section-title a {
+      color: #131521;
+      text-decoration: none;
+      transition: color 0.12s;
+    }
+    .mega-section-title a:hover { color: #dc2727; }
+    .industry-title a {
+      color: #131521;
+      text-decoration: none;
+      transition: color 0.12s;
+    }
+    .industry-title a:hover { color: #dc2727; }
+    .mega-right { padding-left: 32px; }
+    .mega-right-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px 32px;
+    }
+    .mega-col-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #475569;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .mega-right .mega-links li a {
+      font-size: 12px;
+      color: #64748b;
+    }
+    .mega-right .mega-links li a:hover { color: #131521; border-left-color: #dc2727; }
+    .mega-carriers {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #eeebe6;
+      grid-column: 1 / -1;
+    }
+    .mega-carrier-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .carrier-card {
+      flex: 1;
+      min-width: 200px;
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+    .carrier-name { font-size: 13px; font-weight: 700; color: #131521; margin-bottom: 4px; }
+    .carrier-desc { font-size: 11.5px; color: #64748b; line-height: 1.5; }
+    .carrier-more { font-size: 12px; color: #475569; display: flex; align-items: center; gap: 6px; padding-top: 4px; }
+    #nav-resources { position: relative; }
+    .mega-resources {
+      min-width: 280px;
+      max-width: 300px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 24px 28px;
+    }
+    .mega-resources { animation: fadeDown 0.18s ease; }
+    .mega-resources .mega-section { margin-bottom: 16px; }
+    .mega-resources .mega-section:last-child { margin-bottom: 0; }
+    .mega-resources .mega-section-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #dc2727;
+      margin-bottom: 6px;
+    }
+    .mega-resources .mega-links li a {
+      font-size: 13px;
+      color: #374151;
+      padding: 3px 0;
+      border-left: none;
+    }
+    .mega-resources .mega-links li a:hover {
+      color: #dc2727;
+      border-left: none;
+      padding-left: 0;
+    }
+    .mega-solutions { min-width: 960px; }
+    .mega-solutions .mega-left { padding-right: 32px; }
+    .mega-solutions .mega-right { padding-left: 32px; }
+    .mega-use-case { margin-bottom: 14px; }
+    .use-case-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .use-case-title a { color: #131521; text-decoration: none; }
+    .use-case-title a:hover { color: #dc2727; }
+    .use-case-num {
+      font-size: 10px;
+      font-weight: 700;
+      color: #dc2727;
+      background: rgba(244,49,48,0.12);
+      padding: 1px 7px;
+      border-radius: 99px;
+    }
+    .mega-industry-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 24px;
+    }
+    .industry-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 4px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #eeebe6;
+    }
+
+    
+    /* ── HERO ── */
+    .hero {
+      background: #faf8f5;
+      color: #131521;
+      text-align: left;
+      padding: 80px 40px 72px;
+    }
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-breadcrumb {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-breadcrumb a { color: #dc2727; text-decoration: none; }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .hero-breadcrumb .bc-sep { color: #d1d5db; }
+    .hero-breadcrumb .bc-current { color: #131521; }
+    .hero h1 {
+      font-size: 44px;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #131521;
+    }
+    .hero h1 span { color: #dc2727; }
+    .hero .hero-sub {
+      font-size: 17px;
+      color: #555555;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+    .hero-channels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .channel-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      border: 1px solid #e0dbd5;
+      border-radius: 99px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #374151;
+    }
+    .channel-pill svg { color: #dc2727; flex-shrink: 0; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: #dc2727;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+    }
+    .btn-primary:hover { background: #c02222; box-shadow: 0 4px 12px rgba(220,39,39,0.3); transform: translateY(-1px); }
+    .btn-ghost {
+      color: #374151;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid #d1d5db;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+    .btn-ghost:hover { border-color: #131521; color: #131521; }
+    .hero-visual {
+      background: #f0eeeb;
+      border-radius: 12px;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e5e2de;
+      overflow: hidden;
+    }
+
+    
+
+    /* ── PAIN STRIP ── */
+    .pain { background: #f5f4f1; padding: 72px 24px; }
+    .pain-inner { max-width: 1080px; margin: 0 auto; }
+    .pain h2 { font-family: 'Manrope', sans-serif; font-size: clamp(22px,3vw,30px); font-weight: 700; color: #131521; margin-bottom: 40px; text-align: center; }
+    .pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .pain-card { background: #ffffff; border: 1px solid #e0ddd8; border-radius: 12px; padding: 28px 24px; }
+    .pain-card .pain-icon { width: 40px; height: 40px; background: #fef2f2; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .pain-card h3 { font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 700; color: #131521; margin-bottom: 8px; }
+    .pain-card p { font-size: 14px; color: #555555; line-height: 1.6; }
+
+    /* ── HOW IT WORKS ── */
+    .how { padding: 80px 24px; }
+    .how:nth-of-type(odd) { background: #ffffff; }
+    .how:nth-of-type(even) { background: #faf8f5; }
+    .how-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .how-inner.reverse { direction: rtl; }
+    .how-inner.reverse > * { direction: ltr; }
+    .how-tag { display: inline-block; font-size: 11px; font-weight: 600; color: #dc2727; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .how-text h2 { font-family: 'Manrope', sans-serif; font-size: clamp(22px,3vw,32px); font-weight: 700; color: #131521; margin-bottom: 16px; line-height: 1.3; }
+    .how-text p { font-size: 15px; color: #555555; line-height: 1.7; margin-bottom: 16px; }
+    .how-text ul { margin-top: 12px; }
+    .how-text ul li { font-size: 14px; color: #555555; padding: 6px 0 6px 20px; position: relative; border-bottom: 1px solid #f0ede8; }
+    .how-text ul li:last-child { border-bottom: none; }
+    .how-text ul li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; background: #dc2727; border-radius: 50%; }
+
+    /* ── VISUAL PLACEHOLDERS ── */
+    .how-visual { background: #f5f4f1; border-radius: 16px; padding: 32px; min-height: 320px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 16px; }
+
+    /* ── WEBHOOK BLOCK ── */
+    .webhook-flow { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+    .wh-item { background: #ffffff; border: 1.5px solid #e0ddd8; border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; }
+    .wh-icon { width: 32px; height: 32px; background: #fef2f2; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .wh-text { flex: 1; }
+    .wh-title { font-size: 13px; font-weight: 600; color: #131521; font-family: 'Manrope', sans-serif; }
+    .wh-sub { font-size: 11px; color: #888888; }
+    .wh-badge { background: #f0fdf4; color: #16a34a; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 20px; border: 1px solid #86efac; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ── INTEGRATION GRID ── */
+    .int-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .int-card {
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .int-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      transform: translateY(-1px);
+    }
+    .int-card h4 { font-size: 14px; font-weight: 700; color: #131521; margin-bottom: 4px; }
+    .int-card p { font-size: 12px; color: #888888; }
+
+    
+
+    /* ── METRICS STRIP ── */
+    .metrics { background: #131521; padding: 56px 24px; }
+    .metrics-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; text-align: center; }
+    .metric-value { font-family: 'Manrope', sans-serif; font-size: clamp(32px,5vw,52px); font-weight: 700; color: #dc2727; line-height: 1; }
+    .metric-label { font-size: 13px; color: #a0a0a0; margin-top: 6px; }
+
+    /* ── PROOF SECTION ── */
+    .proof { background: #faf8f5; padding: 80px 24px; }
+    .proof-inner { max-width: 1080px; margin: 0 auto; }
+    .proof h2 { font-family: 'Manrope', sans-serif; font-size: clamp(22px,3vw,30px); font-weight: 700; color: #131521; text-align: center; margin-bottom: 48px; }
+    .proof-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .proof-card { background: #ffffff; border: 1px solid #e0ddd8; border-radius: 12px; padding: 28px 24px; }
+    .proof-card blockquote { font-size: 15px; color: #333333; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .proof-card cite { font-size: 13px; font-weight: 600; color: #131521; font-style: normal; }
+    .proof-card cite span { display: block; font-weight: 400; color: #888888; margin-top: 2px; }
+
+    /* ── FAQ ── */
+    .faq { padding: 80px 24px; background: #ffffff; }
+    .faq-inner { max-width: 720px; margin: 0 auto; }
+    .faq h2 { font-family: 'Manrope', sans-serif; font-size: clamp(22px,3vw,30px); font-weight: 700; text-align: center; margin-bottom: 48px; color: #131521; }
+    .faq-item { border-bottom: 1px solid #e0ddd8; padding: 20px 0; }
+    .faq-q { font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 700; color: #131521; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-q::after { content: '+'; font-size: 20px; color: #dc2727; font-weight: 400; flex-shrink: 0; margin-left: 16px; }
+    .faq-a { font-size: 14px; color: #555555; line-height: 1.7; margin-top: 12px; display: none; }
+    .faq-item.open .faq-q::after { content: '-'; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── RELATED PAGES ── */
+    .related { background: #faf8f5; padding: 80px 24px; }
+    .related-inner { max-width: 1080px; margin: 0 auto; }
+    .related h2 { font-family: 'Manrope', sans-serif; font-size: 22px; font-weight: 700; color: #131521; margin-bottom: 32px; text-align: center; }
+    .related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .related-card { background: #ffffff; border: 1px solid #e0ddd8; border-radius: 12px; padding: 24px; transition: border-color .2s, box-shadow .2s; }
+    .related-card:hover { border-color: #dc2727; box-shadow: 0 4px 20px rgba(220,39,39,.08); }
+    .related-card h3 { font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 700; color: #131521; margin-bottom: 8px; }
+    .related-card p { font-size: 13px; color: #666666; line-height: 1.6; margin-bottom: 16px; }
+    .related-card .link-arrow { font-size: 13px; font-weight: 600; color: #dc2727; }
+
+    /* ── CTA CLOSE ── */
+    .cta-close { background: #dc2727; padding: 80px 24px; text-align: center; }
+    .cta-close h2 { font-family: 'Manrope', sans-serif; font-size: clamp(26px,4vw,40px); font-weight: 700; color: #ffffff; margin-bottom: 16px; line-height: 1.2; }
+    .cta-close p { font-size: 17px; color: rgba(255,255,255,.85); margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .btn-white { display: inline-block; background: #ffffff; color: #dc2727; padding: 16px 36px; border-radius: 8px; font-size: 16px; font-weight: 700; font-family: 'Manrope', sans-serif; transition: transform .15s, box-shadow .15s; }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .pain-grid { grid-template-columns: 1fr; }
+      .how-inner { grid-template-columns: 1fr; gap: 32px; }
+      .how-inner.reverse { direction: ltr; }
+      .metrics-inner { grid-template-columns: repeat(2,1fr); }
+      .proof-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .int-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 600px) {
+      .nav-inner { padding: 0 16px; }
+      .metrics-inner { grid-template-columns: repeat(2,1fr); gap: 24px; }
+      .int-grid { grid-template-columns: repeat(2,1fr); }
+      .mega-menu { display: none !important; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
+  <a href="homepage.html" class="nav-logo"><img src="kaptea-logo.svg" alt="Kaptea" height="32" style="display:block;" /></a>
+
+  <div class="nav-links">
+
+    <!-- PLATFORM -->
+    <div class="nav-item active" id="nav-platform">
+      <a href="#">Platform <span class="nav-chevron">▾</span></a>
+      <div class="mega mega-platform">
+        <div class="mega-cols">
+
+          <!-- LEFT: Pronto -->
+          <div class="mega-left">
+            <div class="mega-panel-label"><a href="pronto.html" class="pronto-logo-link"><img src="Pronto-360-Logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
+
+            <div class="mega-section">
+              <div class="mega-section-title"><a href="omni-channel-communications.html">Omni-Channel Communications</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">SMS, WhatsApp, Voice, Email, RCS</li>
+                <li class="mega-detail">Two-way messaging</li>
+                <li class="mega-detail">Inbound &amp; outbound orchestration</li>
+              </ul>
+            </div>
+
+            <div class="mega-section">
+              <div class="mega-section-title"><a href="control-governance.html">Control &amp; Governance</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Role-based access</li>
+                <li class="mega-detail">Division segmentation</li>
+                <li class="mega-detail">Compliance enforcement</li>
+                <li class="mega-detail">Template controls</li>
+                <li class="mega-detail">Audit logs</li>
+              </ul>
+            </div>
+
+            <div class="mega-section">
+              <div class="mega-section-title"><a href="delivery-resilience.html">Delivery &amp; Resilience</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Cross-channel failover</li>
+                <li class="mega-detail">Delivery diagnostics</li>
+                <li class="mega-detail">Event streaming</li>
+                <li class="mega-detail">Error handling visibility</li>
+                <li class="mega-detail">Load-aware routing</li>
+              </ul>
+            </div>
+
+            <div class="mega-section">
+              <div class="mega-section-title"><a href="integration-api-framework.html">Integration &amp; API Framework</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Two-way CRM sync</li>
+                <li class="mega-detail">Event-driven architecture</li>
+                <li class="mega-detail">Open APIs</li>
+                <li class="mega-detail">Webhook support</li>
+              </ul>
+            </div>
+
+            <div class="mega-section">
+              <div class="mega-section-title"><a href="#">Deployment &amp; Infrastructure</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Dedicated instance in days</li>
+                <li class="mega-detail">No heavy engineering team required</li>
+                <li class="mega-detail">Twilio token integration</li>
+                <li class="mega-detail">Cloud-managed infrastructure</li>
+                <li class="mega-detail">EU or US data residency</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Capabilities grid -->
+          <div class="mega-right">
+            <div class="mega-right-grid">
+
+              <div>
+                <div class="mega-col-title">Channels</div>
+                <ul class="mega-links">
+                  <li><a href="#">SMS &amp; RCS</a></li>
+                  <li><a href="#">WhatsApp</a></li>
+                  <li><a href="#">Voice &amp; IVR</a></li>
+                  <li><a href="#">Email</a></li>
+                  <li><a href="#">Secure Video</a></li>
+                  <li><a href="#">Twilio Flex</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="mega-col-title">Resilience &amp; Orchestration</div>
+                <ul class="mega-links">
+                  <li><a href="#">Cross-Channel Failover</a></li>
+                  <li><a href="#">Surge &amp; Load Management</a></li>
+                  <li><a href="#">Queue Orchestration</a></li>
+                  <li><a href="#">Delivery Diagnostics</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="mega-col-title">Governance &amp; Compliance</div>
+                <ul class="mega-links">
+                  <li><a href="#">Access &amp; Identity</a></li>
+                  <li><a href="#">Template Governance</a></li>
+                  <li><a href="#">Compliance &amp; Audit</a></li>
+                  <li><a href="#">Division &amp; Segmentation</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="mega-col-title">Integrations</div>
+                <ul class="mega-links">
+                  <li><a href="#">CRM Integrations</a></li>
+                  <li><a href="#">API &amp; Webhooks</a></li>
+                  <li><a href="#">Event-Driven Architecture</a></li>
+                  <li><a href="#">Identity &amp; SSO</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="mega-col-title">Deployment &amp; Infrastructure</div>
+                <ul class="mega-links">
+                  <li><a href="#">Dedicated Instance</a></li>
+                  <li><a href="#">EU &amp; US Data Residency</a></li>
+                  <li><a href="#">AWS &amp; Azure Cloud Hosting</a></li>
+                  <li><a href="#">Rapid Instance Deployment</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-carriers">
+                <div class="mega-col-title">Carrier Infrastructure</div>
+                <div class="mega-carrier-row">
+                  <div class="carrier-card">
+                    <div class="carrier-name">Twilio</div>
+                    <div class="carrier-desc">The world's leading cloud communications platforms: SMS, RCS, WhatsApp, Voice, Video and Email, fully operationalised through Pronto.</div>
+                  </div>
+                  <div class="carrier-card">
+                    <div class="carrier-name">Telnyx</div>
+                    <div class="carrier-desc">Built on a private global network with elastic SIP trunking, messaging and voice with cost-optimised routing and built-in redundancy.</div>
+                  </div>
+                  <div class="carrier-more">+ more carriers &amp; integrations →</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SOLUTIONS -->
+    <div class="nav-item" id="nav-solutions">
+      <a href="#">Solutions <span class="nav-chevron">▾</span></a>
+      <div class="mega mega-solutions">
+        <div class="mega-cols">
+
+          <!-- LEFT: Use Cases -->
+          <div class="mega-left">
+            <div class="mega-panel-label">Use Cases</div>
+
+            <div class="mega-use-case">
+              <div class="use-case-title"><span class="use-case-num">01</span><a href="#">Emergency &amp; Surge Communications</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Storm-grade IVR orchestration</li>
+                <li class="mega-detail">Surge-proof inbound routing</li>
+                <li class="mega-detail">High-volume outbound alert scaling</li>
+                <li class="mega-detail">Load shedding &amp; queue prioritisation</li>
+                <li class="mega-detail">Cross-channel failover under load</li>
+                <li class="mega-detail">AWS &amp; Azure resilience architecture</li>
+              </ul>
+            </div>
+
+            <div class="mega-use-case">
+              <div class="use-case-title"><span class="use-case-num">02</span><a href="#">Distributed Messaging Governance</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Role-based access &amp; SSO</li>
+                <li class="mega-detail">Division-level guardrails &amp; enforcement</li>
+                <li class="mega-detail">Brand-safe template management</li>
+                <li class="mega-detail">CRM-triggered transactional messaging</li>
+                <li class="mega-detail">Audit logging &amp; compliance oversight</li>
+                <li class="mega-detail">Cost-aware routing</li>
+              </ul>
+            </div>
+
+            <div class="mega-use-case">
+              <div class="use-case-title"><span class="use-case-num">03</span><a href="#">IVR &amp; Voice Orchestration</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">API-first IVR architecture</li>
+                <li class="mega-detail">CRM-integrated intelligent routing</li>
+                <li class="mega-detail">Queue orchestration &amp; callback management</li>
+                <li class="mega-detail">Complex rule &amp; workflow logic</li>
+                <li class="mega-detail">Load shedding &amp; surge handling</li>
+                <li class="mega-detail">Regulatory-safe migration from legacy IVR</li>
+              </ul>
+            </div>
+
+            <div class="mega-use-case">
+              <div class="use-case-title"><span class="use-case-num">04</span><a href="#">Enterprise Transactional Messaging</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Event-driven message orchestration</li>
+                <li class="mega-detail">Cross-channel failover &amp; retry logic</li>
+                <li class="mega-detail">Delivery verification &amp; diagnostics</li>
+                <li class="mega-detail">CRM-triggered automation</li>
+                <li class="mega-detail">Centralised governance &amp; oversight</li>
+                <li class="mega-detail">Brand-safe template control</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- RIGHT: Industries -->
+          <div class="mega-right">
+            <div class="mega-panel-label">Industries</div>
+            <div class="mega-industry-grid">
+
+              <div class="industry-block">
+                <div class="industry-title"><a href="template-solution.html">Financial Services</a></div>
+                <ul class="mega-links">
+                  <li class="mega-detail">Fraud &amp; transaction alerts</li>
+                  <li class="mega-detail">Secure authentication messaging</li>
+                  <li class="mega-detail">Regulatory &amp; compliance communications</li>
+                  <li class="mega-detail">Multi-channel customer notifications</li>
+                  <li class="mega-detail">Contact centre orchestration</li>
+                </ul>
+              </div>
+
+              <div class="industry-block">
+                <div class="industry-title"><a href="#">Utilities &amp; Energy</a></div>
+                <ul class="mega-links">
+                  <li class="mega-detail">Storm &amp; outage alerts</li>
+                  <li class="mega-detail">Surge IVR orchestration</li>
+                  <li class="mega-detail">Load shedding communications</li>
+                  <li class="mega-detail">Cross-channel failover</li>
+                  <li class="mega-detail">Public safety messaging at scale</li>
+                </ul>
+              </div>
+
+              <div class="industry-block">
+                <div class="industry-title"><a href="#">Healthcare</a></div>
+                <ul class="mega-links">
+                  <li class="mega-detail">Appointment &amp; patient messaging</li>
+                  <li class="mega-detail">Secure two-way communications</li>
+                  <li class="mega-detail">Emergency public health alerts</li>
+                  <li class="mega-detail">Compliance-driven communication workflows</li>
+                  <li class="mega-detail">Care pathway notifications</li>
+                </ul>
+              </div>
+
+              <div class="industry-block">
+                <div class="industry-title"><a href="#">Travel &amp; Transportation</a></div>
+                <ul class="mega-links">
+                  <li class="mega-detail">Passenger &amp; operational notifications</li>
+                  <li class="mega-detail">Real-time disruption alerts</li>
+                  <li class="mega-detail">High-volume delivery communications</li>
+                  <li class="mega-detail">Cross-channel customer engagement</li>
+                  <li class="mega-detail">Logistics &amp; dispatch messaging</li>
+                </ul>
+              </div>
+
+              <div class="industry-block">
+                <div class="industry-title"><a href="#">Public Sector</a></div>
+                <ul class="mega-links">
+                  <li class="mega-detail">Citizen notifications</li>
+                  <li class="mega-detail">Emergency &amp; public safety alerts</li>
+                  <li class="mega-detail">Regulated audit-ready messaging</li>
+                  <li class="mega-detail">Multi-channel government communications</li>
+                  <li class="mega-detail">Surge communications for critical events</li>
+                </ul>
+              </div>
+
+              <div class="industry-block">
+                <div class="industry-title"><a href="#">Retail &amp; Ecommerce</a></div>
+                <ul class="mega-links">
+                  <li class="mega-detail">Order &amp; delivery updates</li>
+                  <li class="mega-detail">Peak event surge messaging</li>
+                  <li class="mega-detail">Distributed store &amp; depot communications</li>
+                  <li class="mega-detail">CRM-triggered transactional messaging</li>
+                  <li class="mega-detail">Post-purchase engagement</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item"><a href="index.html">Pricing</a></div>
+    <div class="nav-item" id="nav-resources">
+      <a href="#">Resources <span class="nav-chevron">▾</span></a>
+      <div class="mega mega-resources">
+
+        <div class="mega-section">
+          <div class="mega-section-title">Learn</div>
+          <ul class="mega-links">
+            <li><a href="#">Blog &amp; Insights</a></li>
+            <li><a href="#">Guides &amp; Whitepapers</a></li>
+            <li><a href="#">Webinars &amp; Events</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-section">
+          <div class="mega-section-title">Proof</div>
+          <ul class="mega-links">
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Customer Stories</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-section">
+          <div class="mega-section-title">Developer</div>
+          <ul class="mega-links">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Integration Guides</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-section" style="border-top:1px solid #e2e8f0; padding-top:12px; margin-top:8px;">
+          <ul class="mega-links">
+            <li><a href="implementation.html">Implementation &amp; Support</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div class="nav-item"><a href="why-kaptea.html">Why Kaptea</a></div>
+
+  </div>
+
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open'); document.querySelector('nav').classList.toggle('open');">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="nav-cta-wrap">
+    <a href="demo.html" class="nav-cta">Book a Demo</a>
+  </div>
+</nav>
+
+  <main id="main">
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-label="Integration and API Framework hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+            <a href="homepage.html">Platform</a>
+            <span class="bc-sep" aria-hidden="true">&#x203A;</span>
+            <span class="bc-current">Integration &amp; API Framework</span>
+          </nav>
+          <h1 class="hero-h1">
+            Connect your stack.<br>
+            <span>Sync every contact.</span><br>
+            Build nothing custom.
+          </h1>
+          <p class="hero-sub">Pronto plugs directly into your CRM, triggers messages from any event, and exposes clean APIs and webhooks - so your engineering team never has to build a custom integration again.</p>
+          <div class="hero-pills">
+            <span class="channel-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke="#dc2727" stroke-width="2"/><path d="M16 3H8v4h8V3z" stroke="#dc2727" stroke-width="2"/></svg>
+              Two-Way CRM Sync
+            </span>
+            <span class="channel-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#dc2727" stroke-width="2"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="#dc2727" stroke-width="2" stroke-linecap="round"/></svg>
+              Event-Driven Architecture
+            </span>
+            <span class="channel-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M8 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-3M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2M8 6h8" stroke="#dc2727" stroke-width="2" stroke-linecap="round"/></svg>
+              Open REST API
+            </span>
+            <span class="channel-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3" stroke="#dc2727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Webhook Support
+            </span>
+            <span class="channel-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#dc2727" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="#dc2727" stroke-width="2" stroke-linecap="round"/></svg>
+              OAuth 2.0
+            </span>
+          </div>
+          <div class="hero-actions">
+            <a href="#" class="btn-primary">Book a demo</a>
+            <a href="homepage.html#platform" class="btn-ghost">Explore the platform</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div style="width:100%;">
+            <div style="margin-bottom:12px;">
+              <div style="background:#ffffff;border:1.5px solid #e0ddd8;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
+                <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px;">Connector Framework</div>
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                  <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid #fca5a5;">Salesforce</span>
+                  <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid #fca5a5;">Dynamics 365</span>
+                  <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid #fca5a5;">HubSpot</span>
+                  <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid #fca5a5;">Zoho CRM</span>
+                  <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid #fca5a5;">SAP</span>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:8px 0;">
+                <div style="font-size:12px;color:#131521;font-weight:600;background:#fff;border:1.5px solid #dc2727;border-radius:6px;padding:6px 14px;">CRM record updated</div>
+                <span style="color:#dc2727;font-size:20px;font-weight:700;">&#8644;</span>
+                <div style="font-size:12px;color:#fff;font-weight:600;background:#dc2727;border-radius:6px;padding:6px 14px;">Pronto contact synced</div>
+              </div>
+              <div style="background:#ffffff;border:1.5px solid #e0ddd8;border-radius:10px;padding:14px 16px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                  <span style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.8px;">IntegrationCursorState</span>
+                  <span style="background:#f0fdf4;color:#16a34a;font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;border:1px solid #86efac;">LIVE</span>
+                </div>
+                <div style="font-family:'Courier New',monospace;font-size:11px;color:#555;line-height:1.8;background:#f5f4f1;padding:10px;border-radius:6px;">
+                  <div><span style="color:#2563eb;">lastSyncedAt</span>: <span style="color:#16a34a;">"2026-04-06T10:42:00Z"</span></div>
+                  <div><span style="color:#2563eb;">recordsCursor</span>: <span style="color:#9333ea;">"0n00000ABC123"</span></div>
+                  <div><span style="color:#2563eb;">pendingWrites</span>: <span style="color:#dc2727;">0</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAIN STRIP ── -->
+    <section class="pain" aria-label="Common integration problems">
+      <div class="pain-inner">
+        <h2>When your stack doesn't talk, your team pays for it</h2>
+        <div class="pain-grid">
+          <div class="pain-card">
+            <div class="pain-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm0-11v5m0-9v2" stroke="#dc2727" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Every sync is a dev ticket</h3>
+            <p>Contact updates in Salesforce don't reach Pronto automatically. Someone files a ticket, waits for a sprint, and hopes nothing breaks in the meantime.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4m0 4h.01" stroke="#dc2727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Closed deals, missed messages</h3>
+            <p>A Salesforce opportunity closed - but Pronto didn't know. The welcome sequence never fired. The customer onboarded cold, with no confirmation and no next steps.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#dc2727" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>The custom integration broke - again</h3>
+            <p>Your team built something custom six months ago. A platform update changed the API spec and now it's broken, undocumented, and nobody knows who owns it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS BLOCK 1: Two-Way CRM Sync ── -->
+    <section class="how" aria-label="Two-way CRM sync">
+      <div class="how-inner">
+        <div class="how-text">
+          <span class="how-tag">Two-Way CRM Sync</span>
+          <h2>Your CRM and Pronto, always in agreement</h2>
+          <p>The Pronto Connector Framework maintains a persistent, bidirectional sync with your CRM. Contact records, opt-out status, custom fields, and audience segments flow both ways - automatically, in real time.</p>
+          <p>OAuth 2.0 handles authentication. An internal cursor state tracks every incremental change, so even high-volume CRMs stay fully synchronised without batch imports or manual exports.</p>
+          <ul>
+            <li>Salesforce, Dynamics 365, HubSpot, Zoho CRM, SAP, Hivebrite</li>
+            <li>Contact create, update, and opt-out events synced in both directions</li>
+            <li>Custom field mapping per CRM - no schema restrictions</li>
+            <li>OAuth 2.0 authentication with automatic token refresh</li>
+            <li>Incremental sync via cursor state - no full re-imports</li>
+          </ul>
+        </div>
+        <div class="how-visual">
+          <div style="width:100%;">
+            <div style="background:#ffffff;border:1.5px solid #e0ddd8;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
+              <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px;">Connected CRMs</div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid #fca5a5;">Salesforce</span>
+                <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid #fca5a5;">Dynamics 365</span>
+                <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid #fca5a5;">HubSpot</span>
+                <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid #fca5a5;">Zoho CRM</span>
+                <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid #fca5a5;">SAP</span>
+                <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid #fca5a5;">Hivebrite</span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:center;gap:16px;padding:14px 0;">
+              <div style="text-align:center;">
+                <div style="font-size:12px;font-weight:700;color:#131521;font-family:'Manrope',sans-serif;">CRM</div>
+                <div style="font-size:10px;color:#888;">Source of record</div>
+              </div>
+              <div style="flex:1;height:2px;background:linear-gradient(90deg,#dc2727 0%,#dc2727 45%,#e0ddd8 45%,#e0ddd8 55%,#dc2727 55%,#dc2727 100%);position:relative;">
+                <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#faf8f5;padding:0 6px;font-size:16px;color:#dc2727;">&#8644;</span>
+              </div>
+              <div style="text-align:center;">
+                <div style="font-size:12px;font-weight:700;color:#dc2727;font-family:'Manrope',sans-serif;">Pronto</div>
+                <div style="font-size:10px;color:#888;">Always in sync</div>
+              </div>
+            </div>
+            <div style="background:#131521;border-radius:10px;padding:14px 16px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <span style="font-size:11px;color:#9ca3af;font-family:'Courier New',monospace;">IntegrationCursorState</span>
+                <span style="background:#166534;color:#86efac;font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;">LIVE</span>
+              </div>
+              <div style="font-family:'Courier New',monospace;font-size:11px;line-height:1.8;">
+                <div><span style="color:#7dd3fc;">lastSyncedAt</span>: <span style="color:#86efac;">"2026-04-06T10:42:00Z"</span></div>
+                <div><span style="color:#7dd3fc;">recordsCursor</span>: <span style="color:#fde68a;">"0n00000ABC123"</span></div>
+                <div><span style="color:#7dd3fc;">pendingWrites</span>: <span style="color:#c084fc;">0</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS BLOCK 2: Event-Driven Architecture ── -->
+    <section class="how" aria-label="Event-driven message triggers">
+      <div class="how-inner reverse">
+        <div class="how-text">
+          <span class="how-tag">Event-Driven Architecture</span>
+          <h2>Any event. Any channel. One API call.</h2>
+          <p>Send a single <code style="font-family:'Courier New',monospace;background:#f5f4f1;padding:2px 6px;border-radius:4px;font-size:13px;">POST /api/event/send-template</code> and Pronto handles the rest. Specify the contact, the template, and the channel - Pronto resolves opt-in status, applies division rules, queues delivery via BullMQ, and reports back per channel.</p>
+          <p>The payload is fully flexible: map any field from your event schema to any template variable. No rigid schemas, no field-name restrictions.</p>
+          <ul>
+            <li>Multi-channel in one call: email, SMS, WhatsApp, push</li>
+            <li>Per-channel success and failure response objects</li>
+            <li>BullMQ-backed queue for reliable, retry-safe delivery</li>
+            <li>Configurable key mapping - match any event schema</li>
+            <li>JWT Bearer + division-scoped API key authentication</li>
+          </ul>
+        </div>
+        <div class="how-visual" style="background:#131521;padding:24px;align-items:flex-start;">
+          <div style="width:100%;font-family:'Courier New',monospace;font-size:12px;line-height:1.8;">
+            <div style="color:#6b7280;margin-bottom:4px;">// POST /api/event/send-template</div>
+            <div style="color:#e5e7eb;">&#123;</div>
+            <div style="color:#e5e7eb;">&nbsp;&nbsp;<span style="color:#7dd3fc;">"contactId"</span>: <span style="color:#86efac;">"c_8af3b2"</span>,</div>
+            <div style="color:#e5e7eb;">&nbsp;&nbsp;<span style="color:#7dd3fc;">"templateId"</span>: <span style="color:#86efac;">"tpl_welcome_v3"</span>,</div>
+            <div style="color:#e5e7eb;">&nbsp;&nbsp;<span style="color:#7dd3fc;">"channel"</span>: [<span style="color:#86efac;">"email"</span>, <span style="color:#86efac;">"sms"</span>],</div>
+            <div style="color:#e5e7eb;">&nbsp;&nbsp;<span style="color:#7dd3fc;">"variables"</span>: &#123;</div>
+            <div style="color:#e5e7eb;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7dd3fc;">"first_name"</span>: <span style="color:#fde68a;">"Sarah"</span>,</div>
+            <div style="color:#e5e7eb;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7dd3fc;">"account_ref"</span>: <span style="color:#fde68a;">"ACC-2024-0091"</span></div>
+            <div style="color:#e5e7eb;">&nbsp;&nbsp;&#125;</div>
+            <div style="color:#e5e7eb;">&#125;</div>
+            <div style="color:#6b7280;margin-top:12px;margin-bottom:4px;">// 200 Response</div>
+            <div style="color:#e5e7eb;">&#123;</div>
+            <div style="color:#e5e7eb;">&nbsp;&nbsp;<span style="color:#7dd3fc;">"email"</span>: &#123; <span style="color:#7dd3fc;">"status"</span>: <span style="color:#86efac;">"queued"</span> &#125;,</div>
+            <div style="color:#e5e7eb;">&nbsp;&nbsp;<span style="color:#7dd3fc;">"sms"</span>: &#123; <span style="color:#7dd3fc;">"status"</span>: <span style="color:#86efac;">"queued"</span> &#125;</div>
+            <div style="color:#e5e7eb;">&#125;</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS BLOCK 3: Integration Grid ── -->
+    <section class="how" aria-label="All integrations">
+      <div class="how-inner">
+        <div class="how-text">
+          <span class="how-tag">16 Native Integrations</span>
+          <h2>Your whole stack, already connected</h2>
+          <p>Pronto ships with 16 native integrations across CRM, messaging, event streaming, monitoring, and identity. Every integration is maintained and version-tested by the Kaptea team - not your engineers.</p>
+          <p>New connectors are added on a rolling basis. If you need something not listed here, the open API and webhook layer means you can connect anything that can send or receive an HTTP request.</p>
+          <ul>
+            <li>5 bidirectional CRM connectors</li>
+            <li>3 team messaging platforms: Teams, Slack, Discord</li>
+            <li>3 event streaming destinations: Webhooks, SQS/SNS, Kafka</li>
+            <li>Monitoring and alerting: Datadog, PagerDuty</li>
+            <li>Enterprise SSO: Okta, Azure AD, Google Workspace</li>
+          </ul>
+        </div>
+        <div class="how-visual" style="display:block;padding:24px;">
+          <div class="int-grid">
+      <div class="int-card">
+        <h4>Salesforce</h4>
+        <p>Bidirectional CRM sync</p>
+      </div>
+      <div class="int-card">
+        <h4>Microsoft Dynamics 365</h4>
+        <p>Bidirectional CRM sync</p>
+      </div>
+      <div class="int-card">
+        <h4>HubSpot</h4>
+        <p>Bidirectional CRM sync</p>
+      </div>
+      <div class="int-card">
+        <h4>Zoho CRM</h4>
+        <p>Bidirectional CRM sync</p>
+      </div>
+      <div class="int-card">
+        <h4>SAP</h4>
+        <p>Bidirectional CRM sync</p>
+      </div>
+      <div class="int-card">
+        <h4>Hivebrite</h4>
+        <p>Member management</p>
+      </div>
+      <div class="int-card">
+        <h4>Microsoft Teams</h4>
+        <p>Channel messaging</p>
+      </div>
+      <div class="int-card">
+        <h4>Slack</h4>
+        <p>Channel notifications</p>
+      </div>
+      <div class="int-card">
+        <h4>Webhook</h4>
+        <p>Event destinations</p>
+      </div>
+      <div class="int-card">
+        <h4>AWS SQS / SNS</h4>
+        <p>Event streaming</p>
+      </div>
+      <div class="int-card">
+        <h4>Kafka</h4>
+        <p>Event streaming</p>
+      </div>
+      <div class="int-card">
+        <h4>Datadog</h4>
+        <p>Monitoring &amp; alerting</p>
+      </div>
+      <div class="int-card">
+        <h4>PagerDuty</h4>
+        <p>Incident management</p>
+      </div>
+      <div class="int-card">
+        <h4>Discord</h4>
+        <p>Notifications</p>
+      </div>
+      <div class="int-card">
+        <h4>Google Chat</h4>
+        <p>Notifications</p>
+      </div>
+      <div class="int-card">
+        <h4>Enterprise SSO</h4>
+        <p>Okta, Azure AD, Google</p>
+      </div>
+    </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS BLOCK 4: Open APIs and Webhooks ── -->
+    <section class="how" aria-label="Open APIs and webhooks">
+      <div class="how-inner reverse">
+        <div class="how-text">
+          <span class="how-tag">Open APIs &amp; Webhooks</span>
+          <h2>Full programmatic control. Both directions.</h2>
+          <p>Every Pronto capability is accessible via a documented REST API. Manage contacts, templates, campaigns, event streams, and user permissions - all from your own tooling, with no proprietary abstractions or workarounds.</p>
+          <p>Outbound webhooks use the Pronto Event Streaming Layer (PESL) with HMAC-SHA256 signing on every payload. Inbound callbacks from Twilio and SendGrid are handled automatically - delivery status writes back to your campaign records without extra configuration.</p>
+          <ul>
+            <li>Full CRUD API for all platform resources</li>
+            <li>HMAC-SHA256 signature on every outbound webhook payload</li>
+            <li>Inbound callbacks: Twilio (SMS status), SendGrid (email status)</li>
+            <li>OAuth 2.0 for CRM token management</li>
+            <li>Division-scoped API keys for multi-tenant architectures</li>
+          </ul>
+        </div>
+        <div class="how-visual">
+          <div class="webhook-flow" style="width:100%;">
+            <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;">Outbound - PESL Webhooks</div>
+            <div class="wh-item">
+              <div class="wh-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#dc2727" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#dc2727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="wh-text">
+                <div class="wh-title">message.delivered</div>
+                <div class="wh-sub">X-Pronto-Signature: sha256=&lt;hmac&gt;</div>
+              </div>
+              <span class="wh-badge">Signed</span>
+            </div>
+            <div class="wh-item">
+              <div class="wh-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#dc2727" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#dc2727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="wh-text">
+                <div class="wh-title">contact.opted_out</div>
+                <div class="wh-sub">X-Pronto-Signature: sha256=&lt;hmac&gt;</div>
+              </div>
+              <span class="wh-badge">Signed</span>
+            </div>
+            <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.8px;margin:12px 0 4px;">Inbound - Provider Callbacks</div>
+            <div class="wh-item">
+              <div class="wh-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#dc2727" stroke-width="2"/><path d="M7 12l3 3 7-7" stroke="#dc2727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="wh-text">
+                <div class="wh-title">Twilio - SMS delivery status</div>
+                <div class="wh-sub">/api/campaign/message-status</div>
+              </div>
+              <span class="wh-badge" style="background:#eff6ff;color:#1d4ed8;border-color:#93c5fd;">Auto</span>
+            </div>
+            <div class="wh-item">
+              <div class="wh-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#dc2727" stroke-width="2"/><path d="M7 12l3 3 7-7" stroke="#dc2727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="wh-text">
+                <div class="wh-title">SendGrid - Email delivery status</div>
+                <div class="wh-sub">/api/campaign/mail-status</div>
+              </div>
+              <span class="wh-badge" style="background:#eff6ff;color:#1d4ed8;border-color:#93c5fd;">Auto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── METRICS STRIP ── -->
+    <section class="metrics" aria-label="Integration stats">
+      <div class="metrics-inner">
+        <div>
+          <div class="metric-value">16</div>
+          <div class="metric-label">Native integrations</div>
+        </div>
+        <div>
+          <div class="metric-value">5</div>
+          <div class="metric-label">Bidirectional CRMs</div>
+        </div>
+        <div>
+          <div class="metric-value">0</div>
+          <div class="metric-label">Custom code required</div>
+        </div>
+        <div>
+          <div class="metric-value">Real-time</div>
+          <div class="metric-label">CRM sync latency</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROOF ── -->
+    <section class="proof" aria-label="Customer proof">
+      <div class="proof-inner">
+        <h2>Teams that stopped building custom integrations</h2>
+        <div class="proof-grid">
+          <div class="proof-card">
+            <blockquote>"We had three engineers maintaining a custom Salesforce connector. With Pronto, we turned it off and haven't touched it since. The sync just works."</blockquote>
+            <cite>Head of Engineering
+              <span>Financial services firm, UK</span>
+            </cite>
+          </div>
+          <div class="proof-card">
+            <blockquote>"The send-template API means our product team can trigger communications from any in-app event without involving the comms team. It changed how we operate."</blockquote>
+            <cite>VP Product
+              <span>SaaS platform, Ireland</span>
+            </cite>
+          </div>
+          <div class="proof-card">
+            <blockquote>"HMAC signing on the webhooks was a hard requirement from our InfoSec team. Pronto was the only platform that had it out of the box."</blockquote>
+            <cite>Director of Compliance
+              <span>Regulated enterprise, EU</span>
+            </cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="faq" aria-label="Frequently asked questions">
+      <div class="faq-inner">
+        <h2>Common questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Which CRMs does Pronto support bidirectionally?</div>
+          <div class="faq-a">Pronto natively syncs with Salesforce, Microsoft Dynamics 365, HubSpot, Zoho CRM, and SAP. All five use the same Connector Framework, so configuration is consistent and updates are maintained by Kaptea. Hivebrite is also supported for member management use cases.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What happens if our CRM field names don't match Pronto's schema?</div>
+          <div class="faq-a">Field mapping is fully configurable per CRM. You define which CRM fields map to which Pronto contact properties - there are no reserved field names or schema restrictions. Custom fields are supported on both sides.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How does authentication work for the API?</div>
+          <div class="faq-a">All API requests require a JWT Bearer token and a division-scoped x-api-key header. CRM connectors authenticate via OAuth 2.0 with automatic token refresh. SAP uses a configuration-based auth flow.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do we verify that incoming webhook payloads are genuine?</div>
+          <div class="faq-a">Every outbound webhook from Pronto includes an X-Pronto-Signature header containing an HMAC-SHA256 hash of the payload. Verify it against your shared secret to confirm authenticity before processing.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does the send-template API support multiple channels in one call?</div>
+          <div class="faq-a">Yes. Pass an array of channels in the "channel" field - for example ["email", "sms"]. Pronto routes each channel independently and returns a per-channel status in the response. BullMQ queues ensure reliable delivery even under load.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What if we need an integration that isn't in the native list?</div>
+          <div class="faq-a">Any system that can send or receive HTTP requests can be connected via the open API or outbound webhooks. You retain full programmatic access to all Pronto resources - contacts, templates, campaigns, and event streams - without any proprietary abstraction layer.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED PAGES ── -->
+    <section class="related" aria-label="Related capabilities">
+      <div class="related-inner">
+        <h2>More from the Pronto platform</h2>
+        <div class="related-grid">
+          <a href="omni-channel-communications.html" class="related-card">
+            <h3>Omni-Channel Communications</h3>
+            <p>SMS, email, WhatsApp, push, and voice from a single platform - with intelligent routing between channels.</p>
+            <span class="link-arrow">Learn more &#x2192;</span>
+          </a>
+          <a href="delivery-resilience.html" class="related-card">
+            <h3>Delivery &amp; Resilience</h3>
+            <p>Cross-channel failover, PESL event streaming, and real-time delivery diagnostics - zero silent failures.</p>
+            <span class="link-arrow">Learn more &#x2192;</span>
+          </a>
+          <a href="control-governance.html" class="related-card">
+            <h3>Control &amp; Governance</h3>
+            <p>Role-based access, division segmentation, template governance, and dual audit logging for regulated teams.</p>
+            <span class="link-arrow">Learn more &#x2192;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA CLOSE ── -->
+    <section class="cta-close" aria-label="Call to action">
+      <h2>Your stack is already halfway there</h2>
+      <p>See how Pronto connects to your CRM, triggers from your events, and removes your custom integration backlog - in a 30-minute demo.</p>
+      <a href="#" class="btn-white">Book a demo</a>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="kaptea-logo-white.svg" alt="Kaptea" height="28" style="opacity:0.8;" />
+        <p>The omnichannel communications platform designed for regulated and mission-critical organisations. Built on Twilio and Telnyx.</p>
+        <div class="footer-certs">
+          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> ISO 27001</div>
+          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Cyber Essentials Plus</div>
+          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> CREST</div>
+          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Twilio Gold Partner</div>
+          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Telnyx Partner</div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="pronto.html">Pronto</a></li>
+          <li><a href="#">SMS &amp; RCS</a></li>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">Voice &amp; IVR</a></li>
+          <li><a href="#">Email</a></li>
+          <li><a href="#">Secure Video</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#">Financial Services</a></li>
+          <li><a href="#">Utilities &amp; Energy</a></li>
+          <li><a href="#">Healthcare</a></li>
+          <li><a href="#">Travel &amp; Transportation</a></li>
+          <li><a href="#">Public Sector</a></li>
+          <li><a href="#">Retail &amp; Ecommerce</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Blog &amp; Insights</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">API Reference</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
+          <li><a href="#">Guides</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="why-kaptea.html">Why Kaptea</a></li>
+          <li><a href="demo.html">Book a Demo</a></li>
+          <li><a href="index.html">Pricing</a></li>
+          <li><a href="#">Security &amp; Compliance</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Kaptea. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">GDPR</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script>
+  /* ── Mega-menu hover logic ── */
+  document.querySelectorAll('.nav-item').forEach(function(item) {
+    item.addEventListener('mouseenter', function() {
+      document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+      if (item.querySelector('.mega')) item.classList.add('active');
+    });
+    item.addEventListener('mouseleave', function() {
+      item.classList.remove('active');
+    });
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+    }
+  });
+
+  function initFAQ() {
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        var answer = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!answer) return;
+        btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        answer.hidden = expanded;
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initFAQ);
+</script>
+
+  <script>
+    /* FAQ accordion */
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.closest('.faq-item');
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
