@@ -353,97 +353,107 @@
     }
 
     /* ── HERO ── */
-    .hero-section {
-      background: #131521;
-      padding: 0;
+    .hero {
+      background: #faf8f5;
+      color: #131521;
+      text-align: left;
+      padding: 80px 40px 72px;
+    }
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      min-height: 520px;
+      gap: 64px;
+      align-items: center;
     }
-    .hero-content {
-      padding: 72px 56px 72px 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .bc-strip {
+    .hero-breadcrumb {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 24px;
-      font-size: 12px;
-      color: #9ca3af;
     }
-    .bc-strip a { color: #9ca3af; text-decoration: none; }
-    .bc-strip a:hover { color: #fff; }
-    .bc-sep { color: #475569; }
-    .bc-current { color: #e5e7eb; }
-    .hero-h1 {
-      font-family: 'Manrope', sans-serif;
-      font-size: clamp(36px, 4.5vw, 54px);
-      font-weight: 700;
-      color: #ffffff;
-      line-height: 1.12;
+    .hero-breadcrumb a { color: #dc2727; text-decoration: none; }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .hero-breadcrumb .bc-sep { color: #d1d5db; }
+    .hero-breadcrumb .bc-current { color: #131521; }
+    .hero h1 {
+      font-size: 44px;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      line-height: 1.15;
       margin-bottom: 20px;
+      color: #131521;
     }
-    .hero-h1 span { color: #dc2727; display: block; }
-    .hero-sub {
-      font-size: 16px;
-      color: #9ca3af;
-      line-height: 1.7;
-      max-width: 440px;
-      margin-bottom: 28px;
+    .hero h1 span { color: #dc2727; }
+    .hero .hero-sub {
+      font-size: 17px;
+      color: #555555;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 480px;
     }
-    .feature-badges {
+    .hero-channels {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-bottom: 32px;
     }
-    .feature-badge {
+    .channel-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: #ffffff;
+      border: 1px solid #e0dbd5;
       border-radius: 99px;
-      padding: 5px 12px;
+      padding: 4px 12px;
       font-size: 12px;
-      font-weight: 500;
-      color: #e5e7eb;
-      white-space: nowrap;
+      font-weight: 600;
+      color: #374151;
     }
-    .feature-badge svg { color: #dc2727; flex-shrink: 0; }
+    .channel-pill svg { color: #dc2727; flex-shrink: 0; }
     .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn-primary {
-      background: #dc2727; color: #fff; text-decoration: none;
-      padding: 12px 24px; border-radius: 6px; font-weight: 600;
-      font-size: 14px; transition: background 0.15s;
+      background: #dc2727;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
     }
-    .btn-primary:hover { background: #c02222; }
+    .btn-primary:hover { background: #c02222; box-shadow: 0 4px 12px rgba(220,39,39,0.3); transform: translateY(-1px); }
     .btn-ghost {
-      background: transparent; color: #e5e7eb; text-decoration: none;
-      padding: 12px 24px; border-radius: 6px; font-weight: 600;
-      font-size: 14px; border: 1px solid rgba(255,255,255,0.2);
-      transition: border-color 0.15s, color 0.15s;
+      color: #374151;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid #d1d5db;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.15s ease, color 0.15s ease;
     }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
+    .btn-ghost:hover { border-color: #131521; color: #131521; }
     .hero-visual {
-      background: rgba(255,255,255,0.03);
-      border-left: 1px solid rgba(255,255,255,0.06);
+      background: #f0eeeb;
+      border-radius: 12px;
+      min-height: 340px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      padding: 40px;
-    }
-    .hero-visual span {
-      font-size: 11px;
-      color: rgba(156,163,175,0.7);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      text-align: center;
+      border: 1px solid #e5e2de;
+      overflow: hidden;
     }
 
     /* ── PAIN STRIP ── */
@@ -631,9 +641,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .hero-section { grid-template-columns: 1fr; min-height: auto; }
+      .hero-inner { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
-      .hero-content { padding: 64px 40px; }
       .pain-grid { grid-template-columns: 1fr; }
       .how-block { gap: 40px; }
       .metrics-inner { grid-template-columns: repeat(2, 1fr); }
@@ -658,7 +667,7 @@
       .hamburger span { display: block; width: 22px; height: 2px; background: #131521; transition: all 0.3s; }
       .nav-cta-wrap { padding-left: 8px; }
       .nav-cta { padding: 6px 14px; font-size: 13px; }
-      .hero-content { padding: 48px 24px; }
+      .hero { padding: 48px 24px; }
       .pain-strip { padding: 56px 24px; }
       .pain-grid { grid-template-columns: 1fr; }
       .how-section { padding: 56px 24px; }
@@ -1028,54 +1037,53 @@
 <!-- ===============================
      HERO
 =============================== -->
-<section class="hero-section" aria-labelledby="hero-heading">
-  <div class="hero-content">
-    <nav class="bc-strip" aria-label="Breadcrumb">
-      <span>Platform</span>
-      <span class="bc-sep" aria-hidden="true">&#8250;</span>
-      <a href="pronto.html">Pronto 360</a>
-      <span class="bc-sep" aria-hidden="true">&#8250;</span>
-      <span class="bc-current">Control &amp; Governance</span>
-    </nav>
-    <h1 class="hero-h1" id="hero-heading">
-      Governed access.<br>
-      <span>Division control.</span><br>
-      Zero compliance gaps.
-    </h1>
-    <p class="hero-sub">Enterprise-grade access control, division segmentation, template approval workflows, and tamper-evident audit logs - built for regulated industries.</p>
-    <div class="feature-badges" aria-label="Feature highlights">
-      <span class="feature-badge">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        Role-Based Access
-      </span>
-      <span class="feature-badge">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        Division Segmentation
-      </span>
-      <span class="feature-badge">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        Template Controls
-      </span>
-      <span class="feature-badge">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        Audit Logs
-      </span>
-      <span class="feature-badge">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        SSO Integration
-      </span>
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-breadcrumb">
+        <span>Platform</span>
+        <span class="bc-sep">&#8594;</span>
+        <a href="pronto.html">Pronto 360</a>
+        <span class="bc-sep">&#8594;</span>
+        <span class="bc-current">Control &amp; Governance</span>
+      </div>
+      <h1 id="hero-heading">Governed access.<br><span>Division control.</span><br>Zero compliance gaps.</h1>
+      <p class="hero-sub">Enterprise-grade access control, division segmentation, template approval workflows, and tamper-evident audit logs - built for regulated industries.</p>
+      <div class="hero-channels">
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Role-Based Access
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Division Segmentation
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Template Controls
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Audit Logs
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          SSO Integration
+        </span>
+      </div>
+      <div class="hero-ctas">
+        <a href="demo.html" class="btn-primary">Book a Demo</a>
+        <a href="pronto.html" class="btn-ghost">Explore Pronto 360</a>
+      </div>
     </div>
-    <div class="hero-ctas">
-      <a href="demo.html" class="btn-primary">Book a Demo</a>
-      <a href="pronto.html" class="btn-ghost">Explore Pronto 360</a>
+    <div class="hero-visual">
+      <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:32px;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span style="font-size:11px;color:#9ca3af;letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Screenshot to be supplied</span>
+      </div>
     </div>
-  </div>
-  <div class="hero-visual" aria-hidden="true">
-    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    <span>Screenshot to be supplied</span>
   </div>
 </section>
-
 
 <!-- ===============================
      THE PROBLEM
