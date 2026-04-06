@@ -401,6 +401,11 @@
     .how-inner.reverse > * { direction: ltr; }
     .how-tag { display: inline-block; font-size: 11px; font-weight: 600; color: #dc2727; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
     .how-text h2 { font-family: 'Manrope', sans-serif; font-size: clamp(22px,3vw,32px); font-weight: 700; color: #131521; margin-bottom: 16px; line-height: 1.3; }
+    .how-text h3 { font-family: 'Manrope', sans-serif; font-size: clamp(22px,3vw,32px); font-weight: 700; color: #131521; margin-bottom: 16px; line-height: 1.3; }
+    .how-intro { background: #131521; padding: 56px 24px; text-align: center; }
+    .how-intro-inner { max-width: 720px; margin: 0 auto; }
+    .how-intro h2 { font-family: 'Manrope', sans-serif; font-size: clamp(24px,3.5vw,36px); font-weight: 700; color: #ffffff; margin-bottom: 12px; line-height: 1.25; }
+    .how-intro p { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.65; }
     .how-text p { font-size: 15px; color: #555555; line-height: 1.7; margin-bottom: 16px; }
     .how-text ul { margin-top: 12px; }
     .how-text ul li { font-size: 14px; color: #555555; padding: 6px 0 6px 20px; position: relative; border-bottom: 1px solid #f0ede8; }
@@ -1029,12 +1034,20 @@
       </div>
     </section>
 
+    <!-- ── HOW INTRO ── -->
+    <section class="how-intro" aria-label="How deployment works">
+      <div class="how-intro-inner">
+        <h2>Rapid to deploy. Dedicated by design. Managed by Kaptea from day one.</h2>
+        <p>Four things that make a Pronto deployment faster, simpler, and more compliant than any other enterprise communications platform.</p>
+      </div>
+    </section>
+
     <!-- ── HOW IT WORKS BLOCK 1: Rapid Deployment ── -->
     <section class="how" aria-label="Rapid deployment process">
       <div class="how-inner">
         <div class="how-text">
           <span class="how-tag">Dedicated Instance in Days</span>
-          <h2>From contract to live traffic in under a week</h2>
+          <h3>From contract to live traffic in under a week</h3>
           <p>Kaptea provisions a dedicated, single-tenant Pronto instance on AWS or Azure within days of contract. You get your own environment - your own carrier configuration, your own data residency, your own governance rules - not a partition of somebody else's platform.</p>
           <p>Kaptea's onboarding team handles the full implementation. For standard deployments there is no code to write and no infrastructure to provision on your side. Channels, user roles, division structure, SSO, and event streaming are all configured by us.</p>
           <ul>
@@ -1081,7 +1094,7 @@
       <div class="how-inner reverse">
         <div class="how-text">
           <span class="how-tag">Twilio &amp; Telnyx Token Integration</span>
-          <h2>Bring your carrier account. Keep your rates, your numbers, your relationship.</h2>
+          <h3>Bring your carrier account. Keep your rates, your numbers, your relationship.</h3>
           <p>Pronto is a Bring Your Own Carrier platform. Connect your existing Twilio or Telnyx account credentials and Pronto adds the orchestration, governance, and operational control layer on top - without migrating your numbers, renegotiating carrier rates, or rebuilding your existing investment.</p>
           <p>Kaptea also takes over your Twilio support relationship entirely. Carrier issues, number provisioning, compliance queries, API change notifications - Kaptea manages them directly so your team doesn't have to.</p>
           <ul>
@@ -1145,7 +1158,7 @@
       <div class="how-inner">
         <div class="how-text">
           <span class="how-tag">Cloud-Managed Infrastructure</span>
-          <h2>Kaptea runs the platform. You run the communications.</h2>
+          <h3>Kaptea runs the platform. You run the communications.</h3>
           <p>Every Pronto instance operates on a 99.5% uptime SLA with continuous monitoring of delivery rates, carrier performance, and message throughput. Security patches, Twilio API changes, and platform updates are applied by Kaptea - your engineers never need to plan an upgrade cycle.</p>
           <p>Event streaming pushes delivery alerts and incident notifications to your Slack, PagerDuty, Datadog, or monitoring stack before failures become visible to customers. For critical SLA customers, 24x7x365 incident response is included.</p>
           <ul>
@@ -1200,7 +1213,7 @@
       <div class="how-inner reverse">
         <div class="how-text">
           <span class="how-tag">EU &amp; US Data Residency</span>
-          <h2>Choose your region at provisioning. Clean compliance from day one.</h2>
+          <h3>Choose your region at provisioning. Clean compliance from day one.</h3>
           <p>Select EU or US data residency when your instance is provisioned. Because Pronto runs as a dedicated single-tenant environment, your data never shares infrastructure with another customer - which means your DPO can sign off cleanly and your audit trails are yours alone.</p>
           <p>Kaptea holds ISO 27001:2022 certification, SOC 2-compliant infrastructure, a GDPR Data Processor Agreement, Cyber Essentials Plus, and CREST accreditation. For regulated industries - financial services, utilities, healthcare - this is the baseline your InfoSec team will ask for.</p>
           <ul>
