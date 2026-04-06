@@ -509,6 +509,22 @@
     .btn-white { display: inline-block; background: #ffffff; color: #dc2727; padding: 16px 36px; border-radius: 8px; font-size: 16px; font-weight: 700; font-family: 'Manrope', sans-serif; transition: transform .15s, box-shadow .15s; }
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 
+    /* ── FOOTER ── */
+    footer { background: #0e1019; color: #9ca3af; padding: 64px 40px 32px; font-size: 13px; }
+    .footer-inner { max-width: 1080px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand p { font-size: 13px; color: #6b7280; line-height: 1.6; margin-top: 16px; max-width: 280px; }
+    .footer-certs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .footer-cert { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #4b5563; }
+    .footer-col h4 { font-size: 12px; font-weight: 700; color: #e5e7eb; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { color: #6b7280; text-decoration: none; font-size: 13px; transition: color 0.15s; }
+    .footer-col ul li a:hover { color: #e5e7eb; }
+    .footer-bottom { border-top: 1px solid #1f2937; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #4b5563; }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { color: #4b5563; text-decoration: none; }
+    .footer-legal a:hover { color: #9ca3af; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .pain-grid { grid-template-columns: 1fr; }
@@ -523,6 +539,12 @@
       .nav-inner { padding: 0 16px; }
       .metrics-inner { grid-template-columns: repeat(2,1fr); gap: 24px; }
       .mega-menu { display: none !important; }
+      footer { padding: 48px 24px 24px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     }
 
   </style>
@@ -881,7 +903,7 @@
             <span class="bc-current">Deployment &amp; Infrastructure</span>
           </div>
           <h1 id="hero-heading">Live in days.<br><span>Managed forever.</span><br>Your data, your residency.</h1>
-          <p class="hero-sub">A dedicated Pronto instance - yours alone, on AWS or Azure - deployed in days. Bring your existing Twilio or Telnyx account. Choose EU or US data residency. Kaptea handles everything after that.</p>
+          <p class="hero-sub">Enterprise communications needs are never off-the-shelf. Pronto is the rapid path to a dedicated instance tailored to your needs: your carrier account, your cloud region, your data residency - live in days, managed by Kaptea from day one.</p>
           <div class="hero-channels">
             <span class="channel-pill">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="#dc2727" stroke-width="2"/><polyline points="9,22 9,12 15,12 15,22" stroke="#dc2727" stroke-width="2"/></svg>
@@ -1077,7 +1099,7 @@
               </div>
               <div class="byo-arrow">&#8594;</div>
               <div class="byo-box pronto" style="flex:1;">
-                <div class="byo-label">Orchestration layer</div>
+                <div class="byo-label">Orchestration platform</div>
                 <div class="byo-name">Pronto</div>
               </div>
             </div>
