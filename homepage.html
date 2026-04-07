@@ -1695,8 +1695,12 @@
 </nav>
 
 <script>
+  let mouseHasMoved = false;
+  document.addEventListener('mousemove', function() { mouseHasMoved = true; }, { once: true });
+
   document.querySelectorAll('.nav-item').forEach(function(item) {
     item.addEventListener('mouseenter', function() {
+      if (!mouseHasMoved) return;
       document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
       if (item.querySelector('.mega')) item.classList.add('active');
     });
