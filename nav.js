@@ -342,6 +342,65 @@
   mobileStyles.id = 'nav-mobile-styles';
   mobileStyles.textContent = `
     @media (max-width: 768px) {
+      /* Fix mobile nav container to fill screen */
+      .nav-links {
+        display: none !important;
+        position: fixed !important;
+        top: 64px !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        height: auto !important;
+        background: #131521 !important;
+        flex-direction: column !important;
+        padding: 24px !important;
+        gap: 0 !important;
+        z-index: 300 !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+      }
+      .nav-links.open {
+        display: flex !important;
+      }
+      .nav-links a, .nav-item > a {
+        color: rgba(255,255,255,0.8) !important;
+        height: auto !important;
+        padding: 14px 0 !important;
+        font-size: 16px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        white-space: normal !important;
+      }
+      .nav-links a:hover, .nav-item > a:hover {
+        color: #ffffff !important;
+      }
+      .nav-item {
+        position: relative !important;
+        display: block !important;
+        height: auto !important;
+      }
+      .hamburger {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 301;
+      }
+      .hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #131521;
+        transition: all 0.3s;
+      }
+      .nav-cta-wrap {
+        padding-left: 8px !important;
+      }
+      .nav-cta {
+        padding: 6px 14px !important;
+        font-size: 13px !important;
+      }
+
       /* Default: hide all mega-menus on mobile */
       .mega, .mega-resources, .mega-platform, .mega-solutions {
         display: none !important;
