@@ -337,6 +337,116 @@
   </div>
 </nav>`;
 
+  // Inject mobile nav styles
+  const mobileStyles = document.createElement('style');
+  mobileStyles.textContent = `
+    @media (max-width: 768px) {
+      /* Mobile accordion: show mega content inline */
+      .nav-item.mobile-open .mega {
+        display: block !important;
+        position: static !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        min-width: 0 !important;
+        width: 100% !important;
+      }
+      .nav-item.mobile-open .mega-inner {
+        padding: 0 !important;
+        max-width: none !important;
+      }
+      .nav-item.mobile-open .mega-cols {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+      }
+      .nav-item.mobile-open .mega-left,
+      .nav-item.mobile-open .mega-right {
+        border: none !important;
+        padding: 0 !important;
+      }
+      .nav-item.mobile-open .mega-right-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+      }
+      .nav-item.mobile-open .mega-industry-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+      }
+      /* Style the mobile sub-links */
+      .nav-item.mobile-open .mega-section,
+      .nav-item.mobile-open .mega-use-case,
+      .nav-item.mobile-open .industry-block,
+      .nav-item.mobile-open .mega-right-grid > div {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+      .nav-item.mobile-open .mega-section-title,
+      .nav-item.mobile-open .mega-section-title a,
+      .nav-item.mobile-open .mega-col-title,
+      .nav-item.mobile-open .mega-panel-label,
+      .nav-item.mobile-open .use-case-title,
+      .nav-item.mobile-open .use-case-title a,
+      .nav-item.mobile-open .industry-title,
+      .nav-item.mobile-open .industry-title a {
+        color: rgba(255,255,255,0.9) !important;
+        font-size: 13px !important;
+        text-transform: none !important;
+      }
+      .nav-item.mobile-open .mega-section-title a:hover,
+      .nav-item.mobile-open .use-case-title a:hover,
+      .nav-item.mobile-open .industry-title a:hover {
+        color: #f43130 !important;
+      }
+      .nav-item.mobile-open .mega-detail {
+        color: rgba(255,255,255,0.45) !important;
+        font-size: 12px !important;
+      }
+      .nav-item.mobile-open .mega-links li a {
+        color: rgba(255,255,255,0.6) !important;
+        font-size: 13px !important;
+        padding: 4px 0 !important;
+        border: none !important;
+      }
+      .nav-item.mobile-open .mega-links li a:hover {
+        color: #f43130 !important;
+      }
+      /* Hide elements that don't work well on mobile */
+      .nav-item.mobile-open .mega-carriers,
+      .nav-item.mobile-open .mega-pronto-cta,
+      .nav-item.mobile-open .mega-carrier-row,
+      .nav-item.mobile-open .use-case-num {
+        display: none !important;
+      }
+      .nav-item.mobile-open .pronto-logo-img {
+        height: 20px !important;
+        filter: brightness(10) !important;
+      }
+      /* Chevron rotation for open state */
+      .nav-item.mobile-open > a .nav-chevron {
+        display: inline !important;
+        transform: rotate(180deg);
+      }
+      .nav-item > a .nav-chevron {
+        display: none;
+      }
+      /* Hamburger X animation */
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+  `;
+  document.head.appendChild(mobileStyles);
+
   // Inject nav before this script tag
   const script = document.currentScript;
   script.insertAdjacentHTML('beforebegin', html);
@@ -345,14 +455,20 @@
   let mouseHasMoved = false;
   document.addEventListener('mousemove', function () { mouseHasMoved = true; }, { once: true });
 
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
   function initNav() {
+    // Desktop: hover-based mega-menus
     document.querySelectorAll('.nav-item').forEach(function (item) {
       item.addEventListener('mouseenter', function () {
-        if (!mouseHasMoved) return;
+        if (isMobile() || !mouseHasMoved) return;
         document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
         if (item.querySelector('.mega')) item.classList.add('active');
       });
       item.addEventListener('mouseleave', function () {
+        if (isMobile()) return;
         item.classList.remove('active');
       });
     });
@@ -361,12 +477,33 @@
         document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
       }
     });
+
+    // Mobile: tap to expand dropdowns
+    document.querySelectorAll('.nav-item > a').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        if (!isMobile()) return;
+        const item = link.closest('.nav-item');
+        if (!item.querySelector('.mega')) return;
+        e.preventDefault();
+        const wasActive = item.classList.contains('mobile-open');
+        document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('mobile-open'));
+        if (!wasActive) item.classList.add('mobile-open');
+      });
+    });
+
     // Hamburger toggle
     const hamburger = document.querySelector('.hamburger');
     if (hamburger) {
       hamburger.addEventListener('click', function () {
-        document.querySelector('.nav-links').classList.toggle('open');
-        document.querySelector('nav').classList.toggle('open');
+        const navLinks = document.querySelector('.nav-links');
+        const nav = document.querySelector('nav');
+        navLinks.classList.toggle('open');
+        nav.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        // Close any open mobile dropdowns when closing menu
+        if (!navLinks.classList.contains('open')) {
+          document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('mobile-open'));
+        }
       });
     }
   }
