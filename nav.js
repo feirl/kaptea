@@ -9,7 +9,7 @@
     <!-- PLATFORM -->
     <div class="nav-item" id="nav-platform">
       <a href="#">Platform <span class="nav-chevron">▾</span></a>
-      <div class="mega mega-platform">
+      <div class="mega mega-platform" style="left:0;transform:none;width:max-content;max-width:1080px;">
         <div class="mega-cols">
 
           <!-- LEFT: Pronto -->
@@ -86,7 +86,7 @@
                   <li><a href="#">Voice &amp; IVR</a></li>
                   <li><a href="#">Email</a></li>
                   <li><a href="#">Secure Video</a></li>
-                  <li><a href="#">Twilio Flex</a></li>
+                  <li><a href="#">Social</a></li>
                 </ul>
               </div>
 
@@ -137,10 +137,6 @@
                     <div class="carrier-name">Twilio</div>
                     <div class="carrier-desc">The world's leading cloud communications platforms: SMS, RCS, WhatsApp, Voice, Video and Email, fully operationalised through Pronto.</div>
                   </div>
-                  <div class="carrier-card">
-                    <div class="carrier-name">Telnyx</div>
-                    <div class="carrier-desc">Built on a private global network with elastic SIP trunking, messaging and voice with cost-optimised routing and built-in redundancy.</div>
-                  </div>
                   <div class="carrier-more">+ more carriers &amp; integrations →</div>
                 </div>
               </div>
@@ -155,7 +151,7 @@
     <!-- SOLUTIONS -->
     <div class="nav-item" id="nav-solutions">
       <a href="#">Solutions <span class="nav-chevron">▾</span></a>
-      <div class="mega mega-solutions">
+      <div class="mega mega-solutions" style="left:0;transform:none;width:max-content;max-width:960px;">
         <div class="mega-cols">
 
           <!-- LEFT: Use Cases -->
@@ -250,13 +246,13 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="#">Distributed &amp; Field Operations</a></div>
+                <div class="industry-title"><a href="#">Transport &amp; Travel</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Franchise &amp; depot messaging governance</li>
-                  <li class="mega-detail">Division-level access control</li>
-                  <li class="mega-detail">Brand-safe template enforcement</li>
-                  <li class="mega-detail">Centralised oversight with local flexibility</li>
-                  <li class="mega-detail">CRM-triggered field communications</li>
+                  <li class="mega-detail">Passenger delay &amp; disruption alerts</li>
+                  <li class="mega-detail">Real-time journey updates</li>
+                  <li class="mega-detail">Booking &amp; ticketing confirmations</li>
+                  <li class="mega-detail">Surge communications during disruptions</li>
+                  <li class="mega-detail">Multi-channel traveller notifications</li>
                 </ul>
               </div>
 
