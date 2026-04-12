@@ -337,23 +337,33 @@
   </div>
 </nav>`;
 
-  // Inject mobile nav styles
+  // Inject mobile nav styles (appended to body for higher specificity over page styles)
   const mobileStyles = document.createElement('style');
+  mobileStyles.id = 'nav-mobile-styles';
   mobileStyles.textContent = `
     @media (max-width: 768px) {
-      /* Mobile accordion: show mega content inline */
-      .nav-item.mobile-open .mega {
-        display: block !important;
+      /* Default: hide all mega-menus on mobile */
+      .mega, .mega-resources, .mega-platform, .mega-solutions {
+        display: none !important;
         position: static !important;
+        transform: none !important;
         background: transparent !important;
         box-shadow: none !important;
         border: none !important;
         padding: 0 !important;
         min-width: 0 !important;
         width: 100% !important;
+        animation: none !important;
       }
+
+      /* Show when accordion is open */
+      .nav-item.mobile-open > .mega,
+      .nav-item.mobile-open > .mega-resources {
+        display: block !important;
+      }
+
       .nav-item.mobile-open .mega-inner {
-        padding: 0 !important;
+        padding: 8px 0 0 12px !important;
         max-width: none !important;
       }
       .nav-item.mobile-open .mega-cols {
@@ -376,48 +386,61 @@
         flex-direction: column !important;
         gap: 0 !important;
       }
-      /* Style the mobile sub-links */
-      .nav-item.mobile-open .mega-section,
-      .nav-item.mobile-open .mega-use-case,
-      .nav-item.mobile-open .industry-block,
-      .nav-item.mobile-open .mega-right-grid > div {
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.06);
-      }
+
+      /* Section titles as tappable links */
       .nav-item.mobile-open .mega-section-title,
       .nav-item.mobile-open .mega-section-title a,
       .nav-item.mobile-open .mega-col-title,
-      .nav-item.mobile-open .mega-panel-label,
       .nav-item.mobile-open .use-case-title,
       .nav-item.mobile-open .use-case-title a,
       .nav-item.mobile-open .industry-title,
       .nav-item.mobile-open .industry-title a {
         color: rgba(255,255,255,0.9) !important;
-        font-size: 13px !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
         text-transform: none !important;
+        text-decoration: none !important;
+      }
+      .nav-item.mobile-open .mega-panel-label {
+        color: #f43130 !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.1em !important;
+        margin: 12px 0 8px !important;
       }
       .nav-item.mobile-open .mega-section-title a:hover,
       .nav-item.mobile-open .use-case-title a:hover,
       .nav-item.mobile-open .industry-title a:hover {
         color: #f43130 !important;
       }
+      .nav-item.mobile-open .mega-section,
+      .nav-item.mobile-open .mega-use-case,
+      .nav-item.mobile-open .industry-block,
+      .nav-item.mobile-open .mega-right-grid > div {
+        padding: 6px 0;
+      }
+
+      /* Hide detail text on mobile to keep it clean */
       .nav-item.mobile-open .mega-detail {
-        color: rgba(255,255,255,0.45) !important;
-        font-size: 12px !important;
+        display: none !important;
       }
       .nav-item.mobile-open .mega-links li a {
-        color: rgba(255,255,255,0.6) !important;
+        color: rgba(255,255,255,0.55) !important;
         font-size: 13px !important;
-        padding: 4px 0 !important;
+        padding: 5px 0 !important;
         border: none !important;
+        border-left: none !important;
       }
       .nav-item.mobile-open .mega-links li a:hover {
         color: #f43130 !important;
       }
-      /* Hide elements that don't work well on mobile */
+
+      /* Hide elements not suited for mobile */
       .nav-item.mobile-open .mega-carriers,
       .nav-item.mobile-open .mega-pronto-cta,
       .nav-item.mobile-open .mega-carrier-row,
+      .nav-item.mobile-open .carrier-more,
       .nav-item.mobile-open .use-case-num {
         display: none !important;
       }
@@ -425,14 +448,29 @@
         height: 20px !important;
         filter: brightness(10) !important;
       }
-      /* Chevron rotation for open state */
-      .nav-item.mobile-open > a .nav-chevron {
-        display: inline !important;
-        transform: rotate(180deg);
+
+      /* Resources dropdown */
+      .nav-item.mobile-open .mega-resources {
+        display: block !important;
+        position: static !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 8px 0 0 12px !important;
+        min-width: 0 !important;
       }
+
+      /* Chevrons */
       .nav-item > a .nav-chevron {
-        display: none;
+        display: inline !important;
+        opacity: 0.5;
+        transition: transform 0.2s;
       }
+      .nav-item.mobile-open > a .nav-chevron {
+        transform: rotate(180deg);
+        opacity: 1;
+      }
+
       /* Hamburger X animation */
       .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -445,7 +483,14 @@
       }
     }
   `;
-  document.head.appendChild(mobileStyles);
+  // Append after body loads to ensure it overrides page inline styles
+  if (document.body) {
+    document.body.appendChild(mobileStyles);
+  } else {
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.appendChild(mobileStyles);
+    });
+  }
 
   // Inject nav before this script tag
   const script = document.currentScript;
