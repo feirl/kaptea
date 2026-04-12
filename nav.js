@@ -86,7 +86,6 @@
                   <li><a href="#">Voice &amp; IVR</a></li>
                   <li><a href="#">Email</a></li>
                   <li><a href="#">Secure Video</a></li>
-                  <li><a href="#">Twilio Flex</a></li>
                 </ul>
               </div>
 
@@ -136,10 +135,6 @@
                   <div class="carrier-card">
                     <div class="carrier-name">Twilio</div>
                     <div class="carrier-desc">The world's leading cloud communications platform — messaging, voice, video, Flex and Verify — fully operationalised through Pronto.</div>
-                  </div>
-                  <div class="carrier-card">
-                    <div class="carrier-name">Telnyx</div>
-                    <div class="carrier-desc">Built on a private global network — elastic SIP trunking, messaging and voice with cost-optimised routing and built-in redundancy.</div>
                   </div>
                   <div class="carrier-more">+ more carriers &amp; integrations →</div>
                 </div>
