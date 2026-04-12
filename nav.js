@@ -86,7 +86,7 @@
                   <li><a href="#">Voice &amp; IVR</a></li>
                   <li><a href="#">Email</a></li>
                   <li><a href="#">Secure Video</a></li>
-                  <li><a href="#">Twilio Flex</a></li>
+                  <li><a href="#">Social</a></li>
                 </ul>
               </div>
 
@@ -136,10 +136,6 @@
                   <div class="carrier-card">
                     <div class="carrier-name">Twilio</div>
                     <div class="carrier-desc">The world's leading cloud communications platform — messaging, voice, video, Flex and Verify — fully operationalised through Pronto.</div>
-                  </div>
-                  <div class="carrier-card">
-                    <div class="carrier-name">Telnyx</div>
-                    <div class="carrier-desc">Built on a private global network — elastic SIP trunking, messaging and voice with cost-optimised routing and built-in redundancy.</div>
                   </div>
                   <div class="carrier-more">+ more carriers &amp; integrations →</div>
                 </div>
@@ -250,13 +246,13 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="#">Distributed &amp; Field Operations</a></div>
+                <div class="industry-title"><a href="#">Travel &amp; Transport</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Franchise &amp; depot messaging governance</li>
-                  <li class="mega-detail">Division-level access control</li>
-                  <li class="mega-detail">Brand-safe template enforcement</li>
-                  <li class="mega-detail">Centralised oversight with local flexibility</li>
-                  <li class="mega-detail">CRM-triggered field communications</li>
+                  <li class="mega-detail">Real-time disruption &amp; delay alerts</li>
+                  <li class="mega-detail">Passenger &amp; operational notifications</li>
+                  <li class="mega-detail">High-volume delivery communications</li>
+                  <li class="mega-detail">Cross-channel customer engagement</li>
+                  <li class="mega-detail">Logistics &amp; dispatch messaging</li>
                 </ul>
               </div>
 
