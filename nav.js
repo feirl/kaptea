@@ -9,8 +9,8 @@
     <!-- PLATFORM -->
     <div class="nav-item" id="nav-platform">
       <a href="#">Platform <span class="nav-chevron">▾</span></a>
-      <div class="mega mega-platform" style="left:0;transform:none;width:max-content;max-width:1080px;">
-        <div class="mega-cols">
+      <div class="mega mega-platform">
+        <div class="mega-inner"><div class="mega-cols">
 
           <!-- LEFT: Pronto -->
           <div class="mega-left">
@@ -144,15 +144,15 @@
             </div>
           </div>
 
-        </div>
+        </div></div>
       </div>
     </div>
 
     <!-- SOLUTIONS -->
     <div class="nav-item" id="nav-solutions">
       <a href="#">Solutions <span class="nav-chevron">▾</span></a>
-      <div class="mega mega-solutions" style="left:0;transform:none;width:max-content;max-width:960px;">
-        <div class="mega-cols">
+      <div class="mega mega-solutions">
+        <div class="mega-inner"><div class="mega-cols">
 
           <!-- LEFT: Use Cases -->
           <div class="mega-left">
@@ -281,7 +281,7 @@
             </div>
           </div>
 
-        </div>
+        </div></div>
       </div>
     </div>
 
@@ -328,7 +328,7 @@
 
   </div>
 
-  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open'); document.querySelector('nav').classList.toggle('open');">
+  <div class="hamburger">
     <span></span><span></span><span></span>
   </div>
 
