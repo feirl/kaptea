@@ -133,7 +133,7 @@
       <!-- Brand -->
       <div class="footer-brand">
         <img src="kaptea-logo-white.svg" alt="Kaptea" height="28" style="opacity:0.8;" />
-        <p>The omnichannel communications platform designed for regulated and mission-critical organisations. Built on Twilio and Telnyx.</p>
+        <p>The only compliance-first communications platform built for enterprise, on carrier-grade infrastructure.</p>
         <div class="footer-certs">
           <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> ISO 27001 Certified</div>
           <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Cyber Essentials Plus</div>

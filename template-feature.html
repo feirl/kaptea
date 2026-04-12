@@ -33,15 +33,9 @@
 
   <!-- AI / LLM Crawler Optimisation -->
   <meta name="ai-content-declaration" content="This page describes Kaptea's Omni-Channel Communications capability. Key facts: five channels (SMS, RCS, WhatsApp, Voice & IVR, Email), unified inbox, two-way messaging, AI-assisted replies, campaign wizard with A/B testing, inbound and outbound orchestration, full conversation history across channels." />
+  <link rel="stylesheet" href="styles.css">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #131521; }
-    /* ── ACCESSIBILITY ── */
-    a:focus-visible, button:focus-visible { outline: 2px solid #dc2727; outline-offset: 2px; }
-    :focus:not(:focus-visible) { outline: none; }
-
-
-    /* ── NAV ── */
     nav {
       background: #ffffff;
       padding: 0 40px;
@@ -54,8 +48,6 @@
       z-index: 200;
       border-bottom: 1px solid #eeebe6;
     }
-    .nav-logo { text-decoration: none; display: flex; align-items: center; }
-    .nav-links { display: flex; gap: 0; align-items: center; }
     .nav-links a {
       color: #555555;
       text-decoration: none;
@@ -68,9 +60,6 @@
       white-space: nowrap;
       transition: color 0.15s;
     }
-    .nav-links a:hover { color: #131521; }
-    .nav-links a.active { color: #131521; border-bottom: 2px solid #dc2727; }
-    .nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
     .nav-cta {
       background: #dc2727;
       color: white !important;
@@ -81,8 +70,6 @@
       text-decoration: none;
       white-space: nowrap;
     }
-    .nav-cta:hover { background: #c02222; }
-    .hamburger { display: none; }
 
     /* ── DESIGN NOTES ── */
 
@@ -141,20 +128,7 @@
       max-width: 480px;
     }
     .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn-primary {
-      background: #dc2727;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 15px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .btn-primary:hover { background: #c02222; }
-    .btn-ghost {
+.btn-ghost {
       color: #374151;
       padding: 12px 28px;
       border-radius: 6px;
@@ -500,7 +474,6 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      nav { padding: 0 24px; }
       .hero { padding: 56px 24px 48px; }
       .hero-inner { grid-template-columns: 1fr; gap: 32px; }
       .hero-visual { height: 240px; }
@@ -533,15 +506,11 @@
         height: auto; padding: 14px 0; font-size: 16px;
         border-bottom: 1px solid rgba(255,255,255,0.1);
       }
-      .nav-links a:hover { color: #fff; }
-      .nav-links a.active { border-bottom-color: #dc2727; color: #fff; }
       .hamburger {
         display: flex; flex-direction: column; gap: 5px;
         cursor: pointer; padding: 8px; z-index: 301;
       }
       .hamburger span { display: block; width: 22px; height: 2px; background: #111; }
-      .nav-cta-wrap { padding-left: 8px; }
-      .nav-cta { padding: 6px 14px; font-size: 13px; }
 
       /* Hero */
       .hero { padding: 40px 20px 36px; }
