@@ -81,7 +81,7 @@
               <div>
                 <div class="mega-col-title">Channels</div>
                 <ul class="mega-links">
-                  <li><a href="#">SMS &amp; RCS</a></li>
+                  <li><a href="sms-rcs.html">SMS &amp; RCS</a></li>
                   <li><a href="#">WhatsApp</a></li>
                   <li><a href="#">Voice &amp; IVR</a></li>
                   <li><a href="#">Email</a></li>
