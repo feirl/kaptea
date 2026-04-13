@@ -158,6 +158,7 @@
           <li><a href="omni-channel-communications.html">Omni-Channel</a></li>
           <li><a href="sms-rcs.html">SMS &amp; RCS</a></li>
           <li><a href="whatsapp.html">WhatsApp</a></li>
+          <li><a href="voice-ivr.html">Voice &amp; IVR</a></li>
           <li><a href="control-governance.html">Control &amp; Governance</a></li>
           <li><a href="delivery-resilience.html">Delivery &amp; Resilience</a></li>
           <li><a href="integration-api-framework.html">Integration &amp; API</a></li>
