@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp Business - Enterprise Messaging | Kaptea Pronto</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Enterprise WhatsApp Business API with template governance, two-way agent inbox, AI-assisted replies, and full compliance. Built on Twilio's BSP infrastructure for regulated organisations." />
+  <meta name="keywords" content="WhatsApp Business API enterprise, WhatsApp BSP, WhatsApp template management, WhatsApp governance, enterprise WhatsApp, regulated WhatsApp messaging, WhatsApp two-way messaging, WhatsApp CRM integration" />
+  <link rel="canonical" href="https://feirl.github.io/kaptea/whatsapp.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WhatsApp Business - Enterprise Messaging | Kaptea Pronto" />
+  <meta property="og:description" content="Enterprise WhatsApp Business API with template governance, two-way agent inbox, AI-assisted replies, and full compliance for regulated organisations." />
+  <meta property="og:url" content="https://feirl.github.io/kaptea/whatsapp.html" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta property="og:image" content="https://feirl.github.io/kaptea/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="640" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WhatsApp Business - Enterprise Messaging | Kaptea Pronto" />
+  <meta name="twitter:description" content="Enterprise WhatsApp Business API with template governance, two-way agent inbox, and full compliance for regulated organisations." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23dc2727'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='20' font-weight='700' fill='white'%3EK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- AI / LLM Crawler Optimisation -->
+  <meta name="ai-content-declaration" content="This page describes Kaptea Pronto WhatsApp Business API capabilities. Key facts: WhatsApp Business API via Twilio BSP, Meta-approved template management with governance workflows, two-way conversational messaging with unified agent inbox, AI-assisted reply suggestions, 24-hour session window compliance, rich media support (image, audio, video), CRM integrations (Salesforce, Dynamics, HubSpot), workflow automation, suppression and opt-in management, dedicated instance no shared tenancy, ISO 27001, Cyber Essentials Plus, CREST accredited." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://feirl.github.io/kaptea/whatsapp.html",
+        "url": "https://feirl.github.io/kaptea/whatsapp.html",
+        "name": "WhatsApp Business - Enterprise Messaging | Kaptea Pronto",
+        "description": "Enterprise WhatsApp Business API with template governance, two-way agent inbox, AI-assisted replies, and full compliance for regulated organisations.",
+        "isPartOf": { "@id": "https://feirl.github.io/kaptea/" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Platform", "item": "https://feirl.github.io/kaptea/index.html" },
+            { "@type": "ListItem", "position": 2, "name": "Pronto", "item": "https://feirl.github.io/kaptea/pronto.html" },
+            { "@type": "ListItem", "position": 3, "name": "WhatsApp" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://feirl.github.io/kaptea/whatsapp.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does Kaptea connect to WhatsApp Business API?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kaptea connects to WhatsApp Business API through Twilio, an official Meta Business Solution Provider (BSP). This means your messages are routed through a fully certified, compliant infrastructure without any grey-route risk. You bring your WhatsApp Business Account, Kaptea handles the BSP relationship, and your messages are sent on dedicated infrastructure — not shared with other businesses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a WhatsApp template and why does it need approval?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WhatsApp requires all outbound messages sent outside an active 24-hour customer session to use pre-approved message templates. Meta reviews templates for quality and compliance before they can be used. Kaptea manages the full template lifecycle — creation, submission for Meta approval, version control, and governance workflows — so your teams always use compliant, approved content."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the 24-hour session window work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When a customer messages your WhatsApp Business Account, a 24-hour session window opens during which you can send free-form replies without a template. Once the window closes, only approved templates can initiate the next message. Kaptea tracks session windows automatically, enforces the policy, and auto-closes stale conversations — so your agents are never exposed to compliance failures from timing violations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Kaptea manage opt-ins for WhatsApp?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WhatsApp requires explicit opt-in before you can send outbound messages to a contact. Kaptea maintains a suppression list synced in real time — contacts who opt out are immediately removed from all future sends. Opt-in and opt-out events are timestamped and logged in the audit trail for regulatory reporting. Suppression lists can be exported for compliance documentation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can WhatsApp be triggered from our CRM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Kaptea integrates with Salesforce, Microsoft Dynamics 365, HubSpot, Zoho, SAP, and Hivebrite. CRM events — a new lead, a support case update, an appointment reminder — can automatically trigger a WhatsApp message using an approved template. Delivery status and customer replies are written back to the CRM contact record in real time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of media can be sent via WhatsApp on Kaptea?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kaptea supports images, audio, and video in WhatsApp conversations, in addition to text templates. Rich media can be sent in both outbound campaigns and two-way agent conversations. All media is handled through your dedicated instance — no media is stored on shared infrastructure."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* ── HERO ── */
+    .hero {
+      background: #faf8f5;
+      color: #131521;
+      text-align: left;
+      padding: 80px 40px 72px;
+    }
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-breadcrumb {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-breadcrumb a { color: #dc2727; text-decoration: none; }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .hero-breadcrumb .bc-sep { color: #d1d5db; }
+    .hero-breadcrumb .bc-current { color: #131521; }
+    .hero h1 {
+      font-size: 44px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #131521;
+    }
+    .hero h1 span { color: #dc2727; }
+    .hero .hero-sub {
+      font-size: 17px;
+      color: #555555;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .channel-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      border: 1px solid #e0dbd5;
+      border-radius: 99px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #374151;
+    }
+    .channel-pill svg { color: #dc2727; flex-shrink: 0; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-ghost {
+      color: #374151;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid #d1d5db;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-ghost:hover { border-color: #131521; color: #131521; }
+    .hero-visual {
+      background: #f0eeeb;
+      border-radius: 12px;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e5e2de;
+      overflow: hidden;
+    }
+
+    /* ── PAIN STRIP ── */
+    .pain-strip {
+      background: #ffffff;
+      padding: 72px 40px;
+      border-top: 1px solid #eeebe6;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .pain-strip-inner { max-width: 1080px; margin: 0 auto; }
+    .pain-strip h2 {
+      font-size: 28px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 40px;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+    .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .pain-card {
+      padding: 24px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #faf8f5;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .pain-card:hover { border-color: rgba(220,39,39,0.3); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+    .pain-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: #dc2727;
+    }
+    .pain-card h3 { font-size: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
+    .pain-card p { font-size: 14px; color: #555555; line-height: 1.6; }
+
+    /* ── HOW IT WORKS ── */
+    .how-section { padding: 80px 40px; background: #ffffff; }
+    .how-section.alt { background: #faf8f5; border-top: 1px solid #eeebe6; border-bottom: 1px solid #eeebe6; }
+    .how-inner { max-width: 1080px; margin: 0 auto; }
+    .how-inner > h2 {
+      font-size: 28px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 56px;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+    .how-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 72px;
+    }
+    .how-block:last-child { margin-bottom: 0; }
+    .how-block.reverse { direction: rtl; }
+    .how-block.reverse > * { direction: ltr; }
+    .how-text h3 {
+      font-size: 22px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .how-text p { font-size: 15px; color: #555555; line-height: 1.7; margin-bottom: 20px; }
+    .how-text ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .how-text ul li {
+      font-size: 14px;
+      color: #374151;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .how-text ul li::before { content: '✓'; position: absolute; left: 0; color: #dc2727; font-weight: 700; }
+    .how-visual {
+      background: #f0eeeb;
+      border-radius: 12px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid #e5e2de;
+      padding: 32px;
+    }
+    .how-visual span { font-size: 11px; color: #9ca3af; letter-spacing: 0.06em; text-transform: uppercase; text-align: center; }
+
+    /* Session window explainer */
+    .session-explainer {
+      margin-top: 24px;
+      background: rgba(220,39,39,0.04);
+      border: 1px solid rgba(220,39,39,0.15);
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+    .session-explainer-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #dc2727;
+      margin-bottom: 6px;
+    }
+    .session-explainer p {
+      font-size: 13px;
+      color: #555555;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* ── METRICS STRIP ── */
+    .metrics-strip { background: #131521; padding: 56px 40px; }
+    .metrics-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .metric-item h3 {
+      font-size: 36px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #dc2727;
+      margin-bottom: 6px;
+    }
+    .metric-item p { font-size: 13px; color: #9ca3af; line-height: 1.5; }
+
+    /* ── PROOF BLOCK ── */
+    .proof-section {
+      padding: 80px 40px;
+      background: #faf8f5;
+      border-top: 1px solid #eeebe6;
+    }
+    .proof-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .proof-quote {
+      font-size: 19px;
+      font-weight: 500;
+      color: #131521;
+      line-height: 1.55;
+      font-style: italic;
+      margin-bottom: 20px;
+      padding-left: 24px;
+      border-left: 3px solid #dc2727;
+    }
+    .proof-attribution { font-size: 14px; color: #555555; }
+    .proof-attribution strong { color: #131521; font-weight: 600; }
+    .proof-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .proof-metric-card {
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+    }
+    .proof-metric-card h4 { font-size: 28px; font-weight: 700; color: #dc2727; margin-bottom: 4px; }
+    .proof-metric-card p { font-size: 13px; color: #555555; line-height: 1.5; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 80px 40px; background: #ffffff; border-top: 1px solid #eeebe6; }
+    .faq-inner { max-width: 720px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header .section-label { margin-bottom: 8px; }
+    .section-header h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid #eeebe6; }
+    .faq-item:first-child { border-top: 1px solid #eeebe6; }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 20px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: #131521;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-q:hover { color: #dc2727; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; color: #dc2727; transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-a { padding-bottom: 20px; font-size: 14px; color: #555555; line-height: 1.7; }
+    .faq-a[hidden] { display: none; }
+
+    /* ── RELATED ── */
+    .related-section { padding: 72px 40px; border-top: 1px solid #eeebe6; background: #faf8f5; }
+    .related-inner { max-width: 1080px; margin: 0 auto; }
+    .related-inner > h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 32px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .related-card {
+      padding: 28px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #ffffff;
+      text-decoration: none;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    }
+    .related-card:hover { border-color: #dc2727; box-shadow: 0 4px 16px rgba(220,39,39,0.08); transform: translateY(-2px); }
+    .related-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
+    .related-card p { font-size: 13px; color: #555555; line-height: 1.6; }
+    .related-arrow { font-size: 13px; color: #dc2727; font-weight: 600; margin-top: 12px; display: block; }
+
+    /* ── CTA CLOSE ── */
+    .cta-close { background: #131521; color: white; text-align: center; padding: 80px 40px; }
+    .cta-close h2 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700; margin-bottom: 12px; }
+    .cta-close p { font-size: 17px; color: #9ca3af; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .reassurance { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+    .reassurance span { font-size: 12px; color: #6b7280; display: flex; align-items: center; gap: 6px; }
+    .reassurance span::before { content: '✓'; color: #dc2727; font-weight: 700; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero { padding: 56px 24px 48px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .pain-strip { padding: 48px 24px; }
+      .pain-grid { grid-template-columns: 1fr 1fr; }
+      .how-section { padding: 56px 24px; }
+      .how-block { gap: 40px; }
+      .metrics-inner { grid-template-columns: repeat(2, 1fr); }
+      .proof-section { padding: 56px 24px; }
+      .proof-inner { grid-template-columns: 1fr; gap: 40px; }
+      .related-section { padding: 56px 24px; }
+    }
+    @media (max-width: 768px) {
+      .hero { padding: 40px 20px 32px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 24px; }
+      .hero h1 { font-size: 30px; }
+      .hero .hero-sub { font-size: 15px; }
+      .hero-visual { min-height: 200px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas a { text-align: center; justify-content: center; }
+      .pain-strip { padding: 40px 20px; }
+      .pain-strip h2 { font-size: 22px; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .how-section { padding: 48px 20px; }
+      .how-inner > h2 { font-size: 22px; }
+      .how-block, .how-block.reverse { grid-template-columns: 1fr; gap: 24px; direction: ltr; }
+      .how-block.reverse > * { direction: ltr; }
+      .metrics-strip { padding: 40px 20px; }
+      .metrics-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .metric-item h3 { font-size: 28px; }
+      .proof-section { padding: 48px 20px; }
+      .proof-inner { grid-template-columns: 1fr; }
+      .proof-metrics { grid-template-columns: 1fr; gap: 16px; }
+      .faq-section { padding: 48px 20px; }
+      .related-section { padding: 48px 20px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .cta-close { padding: 56px 20px; }
+      .cta-close h2 { font-size: 24px; }
+      .reassurance { gap: 16px; flex-direction: column; align-items: center; }
+    }
+    a { transition: color 0.15s ease; }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#dc2727;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<script src="nav.js"></script>
+
+<main id="main-content">
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-breadcrumb">
+        <span>Platform</span>
+        <span class="bc-sep">→</span>
+        <a href="pronto.html">Pronto</a>
+        <span class="bc-sep">→</span>
+        <span class="bc-current">WhatsApp</span>
+      </div>
+      <h1>WhatsApp Business.<br><span>Enterprise-grade,<br>compliance-first.</span></h1>
+      <p class="hero-sub">The world's most widely used messaging channel, governed for regulated enterprise. Two-way conversations, Meta-approved template management, and AI-assisted agent inbox — all on carrier-grade infrastructure.</p>
+      <div class="hero-pills">
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          WhatsApp Business API
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Template Governance
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Agent Inbox
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          AI-Assisted Replies
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+          Rich Media
+        </span>
+      </div>
+      <div class="hero-ctas">
+        <a href="demo.html" class="btn-primary">Book a Demo</a>
+        <a href="pronto.html" class="btn-ghost">Explore Pronto</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:32px;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <span style="font-size:11px;color:#9ca3af;letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Screenshot to be supplied</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     THE PROBLEM
+═══════════════════════════════ -->
+<section class="pain-strip">
+  <div class="pain-strip-inner">
+    <div class="section-label">The problem</div>
+    <h2>WhatsApp at enterprise scale creates problems most platforms weren't built to solve.</h2>
+    <div class="pain-grid">
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Template compliance is a manual liability</h3>
+        <p>Every outbound message outside a session window requires a Meta-approved template. Without a governed workflow, teams use unapproved content, submissions pile up untracked, and a rejected template can halt a campaign at the worst possible moment.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Inbound conversations fall through the gaps</h3>
+        <p>When a customer replies on WhatsApp, who picks it up? Without a proper agent inbox and routing logic, replies go unseen, conversations go cold, and the 24-hour session window closes before anyone responds — forcing a template-only restart.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>Opt-in risk in regulated industries</h3>
+        <p>WhatsApp requires explicit opt-in before any outbound message. Across large contact databases — with contacts added through multiple channels — managing opt-in status manually is error-prone, and a single wrong send is a regulatory event.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════ -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="section-label">How it works</div>
+    <h2>WhatsApp, governed from first message to final audit log.</h2>
+
+    <!-- Block 1: BSP infrastructure -->
+    <div class="how-block">
+      <div class="how-text">
+        <h3>Official WhatsApp Business API on carrier-grade infrastructure</h3>
+        <p>Kaptea connects to WhatsApp Business API through Twilio — an official Meta Business Solution Provider (BSP). Every message is routed through fully certified infrastructure, with no grey-route risk, no shared message queues, and no co-mingling of customer data. Your WhatsApp Business Account, on dedicated infrastructure, from day one.</p>
+        <ul>
+          <li>Twilio BSP relationship — Meta-certified, fully compliant</li>
+          <li>Dedicated instance, no shared tenancy with other businesses</li>
+          <li>Send broadcast campaigns to large contact lists with approved templates</li>
+          <li>Rich media support: images, audio, and video in campaigns and conversations</li>
+          <li>Read receipts and delivery confirmation per message</li>
+          <li>180+ countries reachable via global carrier network</li>
+        </ul>
+      </div>
+      <div class="how-visual">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+    <!-- Block 2: Template governance -->
+    <div class="how-block reverse">
+      <div class="how-text">
+        <h3>Template governance with Meta approval built in</h3>
+        <p>Pronto manages the full WhatsApp template lifecycle — from creation through internal review, Meta submission, approval tracking, and version control. Templates are locked once approved. Amendments require a new change request. Every action is logged. For regulated organisations, this is the difference between an audit-ready process and a compliance exposure.</p>
+        <ul>
+          <li>Step-by-step template creation with variable and media support</li>
+          <li>Internal approval workflow before Meta submission</li>
+          <li>Real-time Meta approval status tracking</li>
+          <li>Version history with full change log</li>
+          <li>Division scoping — teams see only their approved templates</li>
+          <li>AI content checks flag non-compliant language before submission</li>
+          <li>Exportable audit log: who created, approved, and used every template</li>
+        </ul>
+        <div class="session-explainer">
+          <div class="session-explainer-label">How session windows work</div>
+          <p>When a customer messages you, a 24-hour window opens for free-form replies. Outside this window, only approved templates can initiate contact. Kaptea tracks session state automatically, enforces the policy, and auto-closes stale conversations — keeping your agents and your compliance team on the right side of Meta's rules.</p>
+        </div>
+      </div>
+      <div class="how-visual">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+    <!-- Block 3: Agent inbox -->
+    <div class="how-block">
+      <div class="how-text">
+        <h3>Two-way conversations with a purpose-built agent inbox</h3>
+        <p>When customers reply, Pronto routes the conversation to the right agent based on skills, availability, and channel — with the full interaction history visible at a glance. Agents get AI-generated reply suggestions and contact summaries so they can respond faster, with more context, and without switching tools. Conversations can be transferred, snoozed, or closed with a single click.</p>
+        <ul>
+          <li>Unified inbox: WhatsApp alongside SMS, Voice, and social in one view</li>
+          <li>Smart routing based on agent skills and real-time availability</li>
+          <li>AI-assisted reply suggestions and message composition</li>
+          <li>AI-generated contact summaries for instant context on every conversation</li>
+          <li>Conversation transfer between agents with full history preserved</li>
+          <li>Snooze and reopen conversations with timestamp tracking</li>
+          <li>Labels and tagging for conversation categorisation and reporting</li>
+        </ul>
+      </div>
+      <div class="how-visual">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+    <!-- Block 4: Automation & CRM -->
+    <div class="how-block reverse">
+      <div class="how-text">
+        <h3>Workflow automation and CRM-triggered messaging</h3>
+        <p>WhatsApp on Kaptea isn't just a send button. Incoming messages trigger automated workflows — route to an agent, send a template reply, update a CRM record, fire a webhook. Outbound messages are triggered by CRM events. The result is a WhatsApp channel that's connected to your business, not bolted on beside it.</p>
+        <ul>
+          <li>Incoming WhatsApp message as a workflow trigger</li>
+          <li>Condition-based auto-replies using approved templates</li>
+          <li>CRM integrations: Salesforce, Dynamics 365, HubSpot, Zoho, SAP</li>
+          <li>CRM-triggered sends on events: appointments, case updates, payment reminders</li>
+          <li>Delivery status and replies written back to CRM contact records</li>
+          <li>Event streaming to Slack, Kafka, Webhook, PagerDuty, Datadog, and more</li>
+          <li>A/B testing of WhatsApp templates with configurable split percentages</li>
+        </ul>
+      </div>
+      <div class="how-visual">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     METRICS STRIP
+═══════════════════════════════ -->
+<section class="metrics-strip">
+  <div class="metrics-inner">
+
+    <div class="metric-item">
+      <h3>3×</h3>
+      <p>Higher open rates than SMS —<br>WhatsApp messages are read</p>
+    </div>
+
+    <div class="metric-item">
+      <h3>99.5%</h3>
+      <p>Average delivery rate across<br>regulated enterprise customers</p>
+    </div>
+
+    <div class="metric-item">
+      <h3>180+</h3>
+      <p>Countries reachable via<br>Twilio BSP carrier network</p>
+    </div>
+
+    <div class="metric-item">
+      <h3>8 weeks</h3>
+      <p>From contract signature<br>to live WhatsApp deployment</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     PROOF BLOCK
+═══════════════════════════════ -->
+<section class="proof-section">
+  <div class="proof-inner">
+    <div>
+      <div class="section-label">In practice</div>
+      <blockquote class="proof-quote">
+        "The ability to shut down a channel instantly — a red button to stop all traffic — was critical for us. And the team's responsiveness when we needed customisations was unlike anything we'd experienced with a technology vendor before."
+      </blockquote>
+      <p class="proof-attribution">
+        <strong>An Post</strong><br>
+        Ireland's national postal service — Public Sector &amp; Logistics
+      </p>
+    </div>
+    <div class="proof-metrics">
+      <div class="proof-metric-card">
+        <h4>99.5%</h4>
+        <p>Average message delivery rate across all regulated enterprise customers</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>Days</h4>
+        <p>Emergency channel shutdown capability — full traffic stop at the click of a button</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>8 wks</h4>
+        <p>Typical deployment from contract to live, including WhatsApp BSP setup</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>10/10</h4>
+        <p>NPS from regulated enterprise customers on team responsiveness and delivery</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     FAQ
+═══════════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-header">
+      <div class="section-label">FAQ</div>
+      <h2>Common questions about WhatsApp</h2>
+    </div>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-1">
+          How does Kaptea connect to WhatsApp Business API?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-1" hidden>Kaptea connects to WhatsApp Business API through Twilio, an official Meta Business Solution Provider (BSP). This means your messages are routed through fully certified, compliant infrastructure — no grey-route risk. You bring your WhatsApp Business Account; Kaptea handles the BSP relationship, and your messages are sent on a dedicated instance, not shared with other businesses.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-2">
+          What is a WhatsApp template and why does it need approval?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-2" hidden>WhatsApp requires all outbound messages sent outside an active 24-hour customer session to use pre-approved message templates. Meta reviews templates for quality and compliance before they can be used. Kaptea manages the full template lifecycle — creation, internal governance review, Meta submission, approval tracking, and version control — so your teams always work with compliant, approved content.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-3">
+          How does the 24-hour session window work?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-3" hidden>When a customer messages your WhatsApp Business Account, a 24-hour session window opens during which agents can send free-form replies without a template. Once the window closes, only approved templates can initiate the next message. Kaptea tracks session windows automatically, enforces Meta's policy across all conversations, and auto-closes stale sessions — so agents are never accidentally exposed to compliance failures from timing violations.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-4">
+          How does Kaptea manage WhatsApp opt-ins?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-4" hidden>WhatsApp requires explicit opt-in before you can send outbound messages to a contact. Kaptea maintains a suppression list that is automatically updated when contacts opt out. Opt-in and opt-out events are timestamped and logged in the audit trail for regulatory reporting. Suppression lists can be exported for compliance documentation and are kept in sync with your CRM contact records.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-5">
+          Can WhatsApp be triggered from our CRM?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-5" hidden>Yes. Kaptea integrates with Salesforce, Microsoft Dynamics 365, HubSpot, Zoho, SAP, and Hivebrite. CRM events — a new appointment, a payment reminder, a case update — can automatically trigger a WhatsApp message using an approved template. Delivery status and customer replies are written back to the CRM contact record in real time.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-6">
+          Where is WhatsApp message data stored?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-6" hidden>All message data, contact records, and conversation history are stored within your dedicated Kaptea instance — no shared infrastructure, no co-mingling with other customers' data. EU and US data residency options are available. Kaptea holds ISO 27001 certification, Cyber Essentials Plus, and CREST accreditation, with GDPR Data Processor Agreements available as standard.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     RELATED
+═══════════════════════════════ -->
+<section class="related-section">
+  <div class="related-inner">
+    <h2>Related capabilities</h2>
+    <div class="related-grid">
+
+      <a href="sms-rcs.html" class="related-card">
+        <h3>SMS &amp; RCS</h3>
+        <p>Carrier-grade SMS and rich RCS messaging with 99.5% delivery rates, compliance-first governance, and automatic SMS fallback.</p>
+        <span class="related-arrow">Explore →</span>
+      </a>
+
+      <a href="control-governance.html" class="related-card">
+        <h3>Control &amp; Governance</h3>
+        <p>Role-based access, template approval workflows, division segmentation, and full audit logs across every channel and team.</p>
+        <span class="related-arrow">Explore →</span>
+      </a>
+
+      <a href="omni-channel-communications.html" class="related-card">
+        <h3>Omni-Channel Communications</h3>
+        <p>Orchestrate WhatsApp, SMS, Voice, Email, RCS, and social from a single governed platform — with cross-channel failover and unified inbox.</p>
+        <span class="related-arrow">Explore →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     CTA CLOSE
+═══════════════════════════════ -->
+<section class="cta-close">
+  <h2>WhatsApp, the way enterprise demands it.</h2>
+  <p>See how Kaptea brings governance, compliance, and two-way conversational capability to the world's most widely used messaging channel.</p>
+  <a href="demo.html" class="btn-primary">Book a Demo</a>
+  <div class="reassurance">
+    <span>Official Meta BSP via Twilio</span>
+    <span>Dedicated instance, no shared tenancy</span>
+    <span>ISO 27001 Certified</span>
+    <span>Live in 8 weeks</span>
+  </div>
+</section>
+
+</main>
+
+<script src="footer.js"></script>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const answerId = btn.getAttribute('aria-controls');
+      const answer = document.getElementById(answerId);
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (expanded) {
+        answer.setAttribute('hidden', '');
+      } else {
+        answer.removeAttribute('hidden');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
