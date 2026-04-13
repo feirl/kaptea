@@ -84,7 +84,7 @@
                   <li><a href="sms-rcs.html">SMS &amp; RCS</a></li>
                   <li><a href="whatsapp.html">WhatsApp</a></li>
                   <li><a href="voice-ivr.html">Voice &amp; IVR</a></li>
-                  <li><a href="#">Email</a></li>
+                  <li><a href="email.html">Email</a></li>
                   <li><a href="#">Secure Video</a></li>
                   <li><a href="#">Social</a></li>
                 </ul>
