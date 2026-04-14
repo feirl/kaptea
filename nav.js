@@ -12,7 +12,7 @@
       <div class="mega mega-platform">
         <div class="mega-inner"><div class="mega-cols">
 
-          <!-- LEFT: Pronto -->
+          <!-- COL 1: Pronto logo + first 3 sub-categories -->
           <div class="mega-left">
             <div class="mega-panel-label"><a href="pronto.html" class="pronto-logo-link"><img src="Pronto-360-Logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
 
@@ -47,6 +47,11 @@
               </ul>
             </div>
 
+          </div>
+
+          <!-- COL 2: Remaining 2 sub-categories + CTA -->
+          <div class="mega-col2">
+
             <div class="mega-section">
               <div class="mega-section-title"><a href="integration-api-framework.html">Integration &amp; API Framework</a></div>
               <ul class="mega-links">
@@ -74,7 +79,7 @@
 
           </div>
 
-          <!-- RIGHT: Capabilities grid -->
+          <!-- COL 3: Channels + Carrier -->
           <div class="mega-right">
             <div class="mega-right-grid">
 
@@ -90,55 +95,12 @@
                 </ul>
               </div>
 
-              <div>
-                <div class="mega-col-title">Resilience &amp; Orchestration</div>
-                <ul class="mega-links">
-                  <li><a href="#">Cross-Channel Failover</a></li>
-                  <li><a href="#">Surge &amp; Load Management</a></li>
-                  <li><a href="#">Queue Orchestration</a></li>
-                  <li><a href="#">Delivery Diagnostics</a></li>
-                </ul>
-              </div>
-
-              <div>
-                <div class="mega-col-title">Governance &amp; Compliance</div>
-                <ul class="mega-links">
-                  <li><a href="#">Access &amp; Identity</a></li>
-                  <li><a href="#">Template Governance</a></li>
-                  <li><a href="#">Compliance &amp; Audit</a></li>
-                  <li><a href="#">Division &amp; Segmentation</a></li>
-                </ul>
-              </div>
-
-              <div>
-                <div class="mega-col-title">Integrations</div>
-                <ul class="mega-links">
-                  <li><a href="#">CRM Integrations</a></li>
-                  <li><a href="#">API &amp; Webhooks</a></li>
-                  <li><a href="#">Event-Driven Architecture</a></li>
-                  <li><a href="#">Identity &amp; SSO</a></li>
-                </ul>
-              </div>
-
-              <div>
-                <div class="mega-col-title">Deployment &amp; Infrastructure</div>
-                <ul class="mega-links">
-                  <li><a href="#">Dedicated Instance</a></li>
-                  <li><a href="#">EU &amp; US Data Residency</a></li>
-                  <li><a href="#">AWS &amp; Azure Cloud Hosting</a></li>
-                  <li><a href="#">Rapid Instance Deployment</a></li>
-                </ul>
-              </div>
-
               <div class="mega-carriers">
-                <div class="mega-col-title">Carrier Infrastructure</div>
-                <div class="mega-carrier-row">
-                  <div class="carrier-card">
-                    <div class="carrier-name">Twilio</div>
-                    <div class="carrier-desc">The world's leading cloud communications platform — messaging, voice, video, Flex and Verify — fully operationalised through Pronto.</div>
-                  </div>
-                  <div class="carrier-more">+ more carriers &amp; integrations →</div>
+                <div class="carrier-card">
+                  <div class="carrier-name">Twilio</div>
+                  <div class="carrier-desc">The world's leading cloud communications platform — messaging, voice, video, Flex and Verify — fully operationalised through Pronto.</div>
                 </div>
+                <div class="carrier-more">+ more carriers &amp; integrations →</div>
               </div>
 
             </div>
