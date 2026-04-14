@@ -161,6 +161,7 @@
           <li><a href="voice-ivr.html">Voice &amp; IVR</a></li>
           <li><a href="email.html">Email</a></li>
           <li><a href="secure-video.html">Secure Video</a></li>
+          <li><a href="social-messaging.html">Social</a></li>
           <li><a href="control-governance.html">Control &amp; Governance</a></li>
           <li><a href="delivery-resilience.html">Delivery &amp; Resilience</a></li>
           <li><a href="integration-api-framework.html">Integration &amp; API</a></li>

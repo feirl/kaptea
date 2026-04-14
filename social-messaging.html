@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Messaging - Microsoft Teams &amp; Slack | Kaptea Pronto</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Extend Pronto into Microsoft Teams and Slack. Bidirectional channel messaging, workflow triggers from incoming messages, and platform event streaming to the collaboration tools your teams already use." />
+  <meta name="keywords" content="Microsoft Teams enterprise messaging, Slack integration, enterprise collaboration messaging, Teams channel messaging, Slack workflow automation, omnichannel Teams Slack, social messaging enterprise" />
+  <link rel="canonical" href="https://feirl.github.io/kaptea/social-messaging.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Social Messaging - Microsoft Teams &amp; Slack | Kaptea Pronto" />
+  <meta property="og:description" content="Bidirectional Microsoft Teams and Slack messaging inside Pronto — reach employees where they work and trigger workflows from incoming channel messages." />
+  <meta property="og:url" content="https://feirl.github.io/kaptea/social-messaging.html" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta property="og:image" content="https://feirl.github.io/kaptea/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="640" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Social Messaging - Microsoft Teams &amp; Slack | Kaptea Pronto" />
+  <meta name="twitter:description" content="Bidirectional Microsoft Teams and Slack messaging inside Pronto — workflow triggers, event streaming, and unified inbox." />
+  <meta name="twitter:image" content="https://feirl.github.io/kaptea/Pronto-Email-Campaign-Detail.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23dc2727'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='20' font-weight='700' fill='white'%3EK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- AI / LLM Crawler Optimisation -->
+  <meta name="ai-content-declaration" content="This page describes Kaptea Pronto Social Messaging capabilities. Key facts: bidirectional Microsoft Teams integration via Graph API and OAuth 2.0, bidirectional Slack integration via OAuth 2.0, channel messaging in both directions, Teams and Slack New Channel Message workflow triggers, PESL event streaming to Teams, Slack, Discord, Google Chat, PagerDuty, webhook HMAC verification, unified inbox alongside SMS and WhatsApp, ISO 27001 certified, dedicated instance no shared tenancy." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://feirl.github.io/kaptea/social-messaging.html",
+        "url": "https://feirl.github.io/kaptea/social-messaging.html",
+        "name": "Social Messaging - Microsoft Teams & Slack | Kaptea Pronto",
+        "description": "Bidirectional Microsoft Teams and Slack messaging inside Pronto. Workflow triggers from incoming messages and event streaming to collaboration channels.",
+        "isPartOf": { "@id": "https://feirl.github.io/kaptea/" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Platform", "item": "https://feirl.github.io/kaptea/index.html" },
+            { "@type": "ListItem", "position": 2, "name": "Pronto", "item": "https://feirl.github.io/kaptea/pronto.html" },
+            { "@type": "ListItem", "position": 3, "name": "Social Messaging" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://feirl.github.io/kaptea/social-messaging.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which social and collaboration platforms does Pronto support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pronto supports bidirectional messaging with Microsoft Teams (via Graph API and OAuth 2.0) and Slack (via OAuth 2.0). For event streaming, Pronto's PESL layer also supports Teams, Slack, Discord, Google Chat, PagerDuty, and Datadog as outbound destinations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Teams and Slack messaging truly bidirectional?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Pronto can both send messages to Teams and Slack channels and receive incoming channel messages as workflow triggers. A new message in a monitored Teams or Slack channel can automatically trigger an SMS, WhatsApp, or email action in Pronto — closing the loop between internal collaboration and external communications."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the Teams and Slack integration connect?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both integrations use OAuth 2.0 for secure authorisation. Microsoft Teams connects via the Microsoft Graph API. Slack connects via the Slack Web API. Once authorised, you select which channels to monitor or send to from the Pronto integrations settings page. No webhook configuration is required by the user."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can platform events be streamed to Teams or Slack automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Pronto's event streaming layer (PESL) supports Teams and Slack as destinations alongside Webhook, AWS SQS, SNS, Kafka, Datadog, Discord, Google Chat, and PagerDuty. Delivery events, campaign completions, and system alerts can be routed to any channel in real time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do Teams and Slack messages appear in Pronto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Incoming Teams and Slack channel messages that match configured triggers appear in Pronto's workflow engine and can be acted on — triggering an SMS reply, WhatsApp message, email, or conditional branching logic. The unified inbox handles these alongside SMS, WhatsApp, and Voice interactions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this useful for internal team alerting as well as customer communications?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many Pronto customers use the Teams and Slack integration for both directions: customer-facing events (delivery failures, campaign completions, inbound surges) stream to internal Teams or Slack channels for operational visibility, while incoming internal messages can trigger customer-facing follow-up actions automatically."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* ── HERO ── */
+    .hero {
+      background: #faf8f5;
+      color: #131521;
+      text-align: left;
+      padding: 80px 40px 72px;
+    }
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-breadcrumb {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-breadcrumb a { color: #dc2727; text-decoration: none; }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .hero-breadcrumb .bc-sep { color: #d1d5db; }
+    .hero-breadcrumb .bc-current { color: #131521; }
+    .hero h1 {
+      font-size: 44px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #131521;
+    }
+    .hero h1 span { color: #dc2727; }
+    .hero .hero-sub {
+      font-size: 17px;
+      color: #555555;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .channel-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      border: 1px solid #e0dbd5;
+      border-radius: 99px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #374151;
+    }
+    .channel-pill svg { color: #dc2727; flex-shrink: 0; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-ghost {
+      color: #374151;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid #d1d5db;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-ghost:hover { border-color: #131521; color: #131521; }
+    .hero-visual {
+      background: #f0eeeb;
+      border-radius: 12px;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e5e2de;
+      overflow: hidden;
+    }
+
+    /* ── PAIN STRIP ── */
+    .pain-strip {
+      background: #ffffff;
+      padding: 72px 40px;
+      border-top: 1px solid #eeebe6;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .pain-strip-inner { max-width: 1080px; margin: 0 auto; }
+    .pain-strip h2 {
+      font-size: 28px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 40px;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+    .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .pain-card {
+      padding: 24px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #faf8f5;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .pain-card:hover { border-color: rgba(220,39,39,0.3); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+    .pain-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: #dc2727;
+    }
+    .pain-card h3 { font-size: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
+    .pain-card p { font-size: 14px; color: #555555; line-height: 1.6; }
+
+    /* ── HOW IT WORKS ── */
+    .how-section { padding: 80px 40px; background: #ffffff; }
+    .how-section.alt { background: #faf8f5; border-top: 1px solid #eeebe6; border-bottom: 1px solid #eeebe6; }
+    .how-inner { max-width: 1080px; margin: 0 auto; }
+    .how-inner > h2 {
+      font-size: 28px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 56px;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+    .how-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 72px;
+    }
+    .how-block:last-child { margin-bottom: 0; }
+    .how-block.reverse { direction: rtl; }
+    .how-block.reverse > * { direction: ltr; }
+    .how-text h3 {
+      font-size: 22px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .how-text p { font-size: 15px; color: #555555; line-height: 1.7; margin-bottom: 20px; }
+    .how-text ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .how-text ul li {
+      font-size: 14px;
+      color: #374151;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .how-text ul li::before { content: '✓'; position: absolute; left: 0; color: #dc2727; font-weight: 700; }
+    .how-visual {
+      background: #f0eeeb;
+      border-radius: 12px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid #e5e2de;
+      padding: 32px;
+    }
+    .how-visual span { font-size: 11px; color: #9ca3af; letter-spacing: 0.06em; text-transform: uppercase; text-align: center; }
+
+    /* Workflow trigger flow */
+    .trigger-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 24px;
+    }
+    .trigger-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .trigger-step:last-child { border-bottom: none; }
+    .trigger-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(220,39,39,0.1);
+      color: #dc2727;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .trigger-step-text { font-size: 13px; color: #374151; line-height: 1.5; }
+    .trigger-step-text strong { color: #131521; font-weight: 600; }
+
+    /* Destination chips */
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .destination-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #131521;
+    }
+    .destination-chip-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #dc2727;
+      flex-shrink: 0;
+    }
+
+    /* ── METRICS STRIP ── */
+    .metrics-strip { background: #131521; padding: 56px 40px; }
+    .metrics-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .metric-item h3 {
+      font-size: 36px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #dc2727;
+      margin-bottom: 6px;
+    }
+    .metric-item p { font-size: 13px; color: #9ca3af; line-height: 1.5; }
+
+    /* ── PROOF BLOCK ── */
+    .proof-section {
+      padding: 80px 40px;
+      background: #faf8f5;
+      border-top: 1px solid #eeebe6;
+    }
+    .proof-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .proof-quote {
+      font-size: 18px;
+      font-weight: 500;
+      color: #131521;
+      line-height: 1.55;
+      font-style: italic;
+      margin-bottom: 12px;
+      padding-left: 20px;
+      border-left: 3px solid #dc2727;
+    }
+    .proof-attribution { font-size: 14px; color: #555555; }
+    .proof-attribution strong { color: #131521; font-weight: 600; }
+    .proof-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .proof-metric-card {
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+    }
+    .proof-metric-card h4 { font-size: 28px; font-weight: 700; color: #dc2727; margin-bottom: 4px; }
+    .proof-metric-card p { font-size: 13px; color: #555555; line-height: 1.5; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 80px 40px; background: #ffffff; border-top: 1px solid #eeebe6; }
+    .faq-inner { max-width: 720px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header .section-label { margin-bottom: 8px; }
+    .section-header h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid #eeebe6; }
+    .faq-item:first-child { border-top: 1px solid #eeebe6; }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 20px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: #131521;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-q:hover { color: #dc2727; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; color: #dc2727; transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-a { padding-bottom: 20px; font-size: 14px; color: #555555; line-height: 1.7; }
+    .faq-a[hidden] { display: none; }
+
+    /* ── RELATED ── */
+    .related-section { padding: 72px 40px; border-top: 1px solid #eeebe6; background: #faf8f5; }
+    .related-inner { max-width: 1080px; margin: 0 auto; }
+    .related-inner > h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 32px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .related-card {
+      padding: 28px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #ffffff;
+      text-decoration: none;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    }
+    .related-card:hover { border-color: #dc2727; box-shadow: 0 4px 16px rgba(220,39,39,0.08); transform: translateY(-2px); }
+    .related-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
+    .related-card p { font-size: 13px; color: #555555; line-height: 1.6; }
+    .related-arrow { font-size: 13px; color: #dc2727; font-weight: 600; margin-top: 12px; display: block; }
+
+    /* ── CTA CLOSE ── */
+    .cta-close { background: #131521; color: white; text-align: center; padding: 80px 40px; }
+    .cta-close h2 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700; margin-bottom: 12px; }
+    .cta-close p { font-size: 17px; color: #9ca3af; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .reassurance { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+    .reassurance span { font-size: 12px; color: #6b7280; display: flex; align-items: center; gap: 6px; }
+    .reassurance span::before { content: '✓'; color: #dc2727; font-weight: 700; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero { padding: 56px 24px 48px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .pain-strip { padding: 48px 24px; }
+      .pain-grid { grid-template-columns: 1fr 1fr; }
+      .how-section { padding: 56px 24px; }
+      .how-block { gap: 40px; }
+      .metrics-inner { grid-template-columns: repeat(2, 1fr); }
+      .proof-section { padding: 56px 24px; }
+      .proof-inner { grid-template-columns: 1fr; gap: 40px; }
+      .related-section { padding: 56px 24px; }
+    }
+    @media (max-width: 768px) {
+      .hero { padding: 40px 20px 32px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 24px; }
+      .hero h1 { font-size: 30px; }
+      .hero .hero-sub { font-size: 15px; }
+      .hero-visual { min-height: 200px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas a { text-align: center; justify-content: center; }
+      .pain-strip { padding: 40px 20px; }
+      .pain-strip h2 { font-size: 22px; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .how-section { padding: 48px 20px; }
+      .how-inner > h2 { font-size: 22px; }
+      .how-block, .how-block.reverse { grid-template-columns: 1fr; gap: 24px; direction: ltr; }
+      .how-block.reverse > * { direction: ltr; }
+      .metrics-strip { padding: 40px 20px; }
+      .metrics-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .metric-item h3 { font-size: 28px; }
+      .proof-section { padding: 48px 20px; }
+      .proof-inner { grid-template-columns: 1fr; }
+      .proof-metrics { grid-template-columns: 1fr; gap: 16px; }
+      .faq-section { padding: 48px 20px; }
+      .related-section { padding: 48px 20px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .destination-grid { grid-template-columns: 1fr; }
+      .cta-close { padding: 56px 20px; }
+      .cta-close h2 { font-size: 24px; }
+      .reassurance { gap: 16px; flex-direction: column; align-items: center; }
+    }
+    a { transition: color 0.15s ease; }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#dc2727;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<script src="nav.js"></script>
+
+<main id="main-content">
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-breadcrumb">
+        <span>Platform</span>
+        <span class="bc-sep">→</span>
+        <a href="pronto.html">Pronto</a>
+        <span class="bc-sep">→</span>
+        <span class="bc-current">Social Messaging</span>
+      </div>
+      <h1>Reach your teams and customers<br><span>where they already work.</span></h1>
+      <p class="hero-sub">Pronto connects bidirectionally to Microsoft Teams and Slack — so your customer communications platform talks to your internal collaboration tools, not around them. Incoming channel messages trigger automated workflows. Platform events stream to the channels your ops teams monitor.</p>
+      <div class="hero-pills">
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Microsoft Teams
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Slack
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          Bidirectional Messaging
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Workflow Triggers
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Event Streaming
+        </span>
+      </div>
+      <div class="hero-ctas">
+        <a href="demo.html" class="btn-primary">Book a Demo</a>
+        <a href="pronto.html" class="btn-ghost">Explore Pronto</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:32px;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span style="font-size:11px;color:#9ca3af;letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Screenshot to be supplied</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     THE PROBLEM
+═══════════════════════════════ -->
+<section class="pain-strip">
+  <div class="pain-strip-inner">
+    <div class="section-label">The problem</div>
+    <h2>Your teams live in Teams and Slack. Your comms platform doesn't know they exist.</h2>
+    <div class="pain-grid">
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <h3>Customer comms and internal ops are disconnected</h3>
+        <p>Agents handle customer messages in Pronto but escalate to Teams or Slack for internal resolution — and the two systems never talk. Context gets lost in translation, response times suffer, and nothing is logged in one place.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>Critical alerts buried in email</h3>
+        <p>Delivery failures, campaign completions, surge alerts — all routed to an email inbox that ops teams check once a day. By the time someone sees the notification, the window for action has already closed.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>Teams messages can't trigger anything</h3>
+        <p>An employee posts in a Teams channel requesting a customer follow-up. Someone copies and pastes the details into a different tool to send the message. Manual, slow, and never auditable — because the platforms don't speak to each other.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════ -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="section-label">How it works</div>
+    <h2>Your collaboration tools, connected to your communications platform.</h2>
+
+    <!-- Block 1: Bidirectional Teams & Slack -->
+    <div class="how-block">
+      <div class="how-text">
+        <h3>Bidirectional Microsoft Teams and Slack — both directions, one OAuth connection.</h3>
+        <p>Pronto connects to Microsoft Teams via the Microsoft Graph API and to Slack via the Slack Web API — both using OAuth 2.0 for secure, revocable authorisation. Once connected, you select which channels to monitor or send to. Pronto can send messages outbound to any channel, and receive incoming channel messages as triggers for automated actions.</p>
+        <ul>
+          <li>Microsoft Teams: Graph API, OAuth 2.0, bidirectional channel messaging</li>
+          <li>Slack: Slack Web API, OAuth 2.0, bidirectional channel messaging</li>
+          <li>Select target channels from Pronto's integrations settings — no webhooks to configure</li>
+          <li>Send formatted messages to Teams or Slack channels from Pronto campaigns and workflows</li>
+          <li>Receive incoming Teams and Slack channel messages as workflow triggers</li>
+          <li>Connection status, test connection, and sync controls from the integrations page</li>
+          <li>OAuth token refresh managed automatically by Pronto's token manager</li>
+        </ul>
+      </div>
+      <div class="how-visual">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+    <!-- Block 2: Workflow triggers -->
+    <div class="how-block reverse">
+      <div class="how-text">
+        <h3>Incoming Teams and Slack messages that trigger real customer actions.</h3>
+        <p>Pronto's workflow engine treats incoming Teams and Slack channel messages as first-class triggers — the same way it handles incoming SMS or WhatsApp. A new message in a monitored channel can automatically fire an SMS, send a WhatsApp template, trigger an email, or branch on conditions. The gap between internal request and external action closes to seconds.</p>
+        <div class="trigger-steps">
+          <div class="trigger-step">
+            <div class="trigger-num">1</div>
+            <div class="trigger-step-text"><strong>Message posted</strong> — employee sends a message to a monitored Teams or Slack channel</div>
+          </div>
+          <div class="trigger-step">
+            <div class="trigger-num">2</div>
+            <div class="trigger-step-text"><strong>Pronto receives trigger</strong> — "Teams New Channel Message" or "Slack New Channel Message" workflow trigger fires</div>
+          </div>
+          <div class="trigger-step">
+            <div class="trigger-num">3</div>
+            <div class="trigger-step-text"><strong>Workflow executes</strong> — conditional split, delay, SMS reply, WhatsApp message, email, or voice call action runs automatically</div>
+          </div>
+          <div class="trigger-step">
+            <div class="trigger-num">4</div>
+            <div class="trigger-step-text"><strong>Execution logged</strong> — full workflow execution history and detailed logs captured for audit and troubleshooting</div>
+          </div>
+        </div>
+      </div>
+      <div class="how-visual">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+    <!-- Block 3: Event streaming -->
+    <div class="how-block">
+      <div class="how-text">
+        <h3>Platform events streamed to the channels your ops teams watch.</h3>
+        <p>Pronto's event streaming layer (PESL) routes platform events — delivery failures, campaign completions, inbound message surges, system alerts — to the collaboration channels where your operations teams are. Real-time notifications reach the right people without anyone needing to log into Pronto to check a dashboard.</p>
+        <ul>
+          <li>Delivery events, campaign status, and system alerts stream in real time</li>
+          <li>Event type filters — send only the events that matter to each channel</li>
+          <li>Channel filters — route different event types to different Teams or Slack channels</li>
+          <li>Rate limiting to prevent alert flooding during high-volume events</li>
+          <li>Webhook HMAC signature verification (X-Pronto-Signature) for all outbound payloads</li>
+          <li>SSRF protection — private and localhost URLs rejected at configuration</li>
+          <li>Enable, disable, and test each destination from the Pronto admin UI</li>
+        </ul>
+        <div class="destination-grid">
+          <div class="destination-chip"><div class="destination-chip-dot"></div>Microsoft Teams</div>
+          <div class="destination-chip"><div class="destination-chip-dot"></div>Slack</div>
+          <div class="destination-chip"><div class="destination-chip-dot"></div>Discord</div>
+          <div class="destination-chip"><div class="destination-chip-dot"></div>Google Chat</div>
+          <div class="destination-chip"><div class="destination-chip-dot"></div>PagerDuty</div>
+          <div class="destination-chip"><div class="destination-chip-dot"></div>Datadog</div>
+        </div>
+      </div>
+      <div class="how-visual">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+    <!-- Block 4: Unified platform -->
+    <div class="how-block reverse">
+      <div class="how-text">
+        <h3>Teams and Slack in the same unified platform as SMS, WhatsApp, and Voice.</h3>
+        <p>Social messaging in Pronto isn't a bolt-on — it's part of the same workflow engine, the same contact model, the same analytics layer, and the same governance framework that governs every other channel. Teams and Slack interactions are logged, auditable, and visible alongside everything else your organisation sends and receives.</p>
+        <ul>
+          <li>Unified workflow engine: Teams and Slack triggers alongside SMS and WhatsApp</li>
+          <li>Shared contact model — channel interactions linked to the same contact record</li>
+          <li>Role-based access controls and division segmentation apply to all integrations</li>
+          <li>Workflow execution logs capture every Teams and Slack triggered action</li>
+          <li>AI content checks (profanity layer) apply to workflow message actions</li>
+          <li>Full audit trail — every action logged with timestamp, user, and outcome</li>
+          <li>16 total integration connectors — CRM, event streaming, and messaging in one framework</li>
+        </ul>
+      </div>
+      <div class="how-visual">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 9h20"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     METRICS STRIP
+═══════════════════════════════ -->
+<section class="metrics-strip">
+  <div class="metrics-inner">
+
+    <div class="metric-item">
+      <h3>2</h3>
+      <p>Bidirectional social channels —<br>Microsoft Teams and Slack</p>
+    </div>
+
+    <div class="metric-item">
+      <h3>6+</h3>
+      <p>Collaboration and alerting destinations<br>via PESL event streaming</p>
+    </div>
+
+    <div class="metric-item">
+      <h3>Real-time</h3>
+      <p>Event streaming from Pronto<br>to Teams and Slack channels</p>
+    </div>
+
+    <div class="metric-item">
+      <h3>16</h3>
+      <p>Total integration connectors<br>in the Pronto connector framework</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     PROOF BLOCK
+═══════════════════════════════ -->
+<section class="proof-section">
+  <div class="proof-inner">
+    <div>
+      <div class="section-label">In practice</div>
+      <blockquote class="proof-quote">
+        "The Teams integration meant our operations team stopped missing critical alerts. Delivery events and campaign completions now route straight to the channel they're watching — no checking dashboards, no catching up after the fact."
+      </blockquote>
+      <p class="proof-attribution">
+        <strong>Head of Operations</strong><br>
+        Enterprise Customer Communications Team
+      </p>
+    </div>
+    <div class="proof-metrics">
+      <div class="proof-metric-card">
+        <h4>Real-time</h4>
+        <p>Delivery events reach Teams and Slack channels as they happen</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>Zero</h4>
+        <p>Manual copy-paste between Teams and customer comms tools</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>Both ways</h4>
+        <p>Teams and Slack trigger customer-facing actions without leaving Pronto</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>One log</h4>
+        <p>All channel interactions auditable in a single unified workflow history</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     FAQ
+═══════════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-header">
+      <div class="section-label">FAQ</div>
+      <h2>Common questions about Social Messaging</h2>
+    </div>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-1">
+          Which platforms does Pronto support for Social Messaging?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-1" hidden>Pronto supports bidirectional messaging with Microsoft Teams (via Graph API and OAuth 2.0) and Slack (via OAuth 2.0). For event streaming, Pronto's PESL layer also supports Teams, Slack, Discord, Google Chat, PagerDuty, and Datadog as outbound destinations — in addition to Webhook, AWS SQS, AWS SNS, and Kafka.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-2">
+          Is Teams and Slack messaging truly bidirectional?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-2" hidden>Yes. Pronto can both send messages to Teams and Slack channels and receive incoming channel messages as workflow triggers. A new message in a monitored Teams or Slack channel can automatically trigger an SMS, WhatsApp, or email action in Pronto — closing the loop between internal collaboration and external customer communications automatically.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-3">
+          How does the Teams or Slack integration connect?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-3" hidden>Both integrations use OAuth 2.0 for secure, revocable authorisation. Microsoft Teams connects via the Microsoft Graph API; Slack connects via the Slack Web API. Once authorised, you select which channels to monitor or send to from the Pronto integrations settings page. No webhook configuration is required by the user — Pronto handles the subscription and token refresh automatically.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-4">
+          Can platform events be streamed to Teams or Slack automatically?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-4" hidden>Yes. Pronto's event streaming layer (PESL) supports Teams and Slack as destinations alongside Webhook, AWS SQS, SNS, Kafka, Datadog, Discord, Google Chat, and PagerDuty. Delivery events, campaign completions, and system alerts can be routed to any channel in real time. Event type filters let you route specific events to specific channels — for example, delivery failures to an ops channel and campaign completions to a marketing channel.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-5">
+          How are Teams and Slack interactions governed and audited?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-5" hidden>All workflow executions triggered by Teams or Slack messages are logged in Pronto's workflow execution history — including the trigger source, actions taken, timestamps, and outcomes. Role-based access controls and division segmentation apply to integrations the same way they apply to every other channel. Every triggered action is auditable in the same unified log as SMS, WhatsApp, and Voice interactions.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-6">
+          Is Social Messaging useful for internal alerting as well as customer communications?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq-6" hidden>Yes — and many Pronto customers use it for both simultaneously. Customer-facing events stream to internal Teams or Slack channels for operational visibility; incoming internal messages trigger customer-facing follow-up actions automatically. The same integration handles both directions in a single OAuth connection, so there's no need to configure separate inbound and outbound tools.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     RELATED
+═══════════════════════════════ -->
+<section class="related-section">
+  <div class="related-inner">
+    <h2>Related capabilities</h2>
+    <div class="related-grid">
+
+      <a href="omni-channel-communications.html" class="related-card">
+        <h3>Omni-Channel Communications</h3>
+        <p>SMS, WhatsApp, Voice, Email, and Social — all handled from a single unified inbox with AI-assisted agents and full interaction history.</p>
+        <span class="related-arrow">Explore →</span>
+      </a>
+
+      <a href="delivery-resilience.html" class="related-card">
+        <h3>Delivery &amp; Resilience</h3>
+        <p>Event streaming to Teams, Slack, and beyond — plus cross-channel failover, load-aware routing, and full delivery diagnostics.</p>
+        <span class="related-arrow">Explore →</span>
+      </a>
+
+      <a href="control-governance.html" class="related-card">
+        <h3>Control &amp; Governance</h3>
+        <p>Role-based access, division segmentation, and full audit logging that applies across every channel — including Teams and Slack integrations.</p>
+        <span class="related-arrow">Explore →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     CTA CLOSE
+═══════════════════════════════ -->
+<section class="cta-close">
+  <h2>Connect your comms platform to the tools your teams live in.</h2>
+  <p>See how Pronto bridges Microsoft Teams and Slack with your customer communications — bidirectional, automated, and fully auditable.</p>
+  <a href="demo.html" class="btn-primary">Book a Demo</a>
+  <div class="reassurance">
+    <span>Microsoft Teams &amp; Slack</span>
+    <span>Bidirectional messaging</span>
+    <span>Real-time event streaming</span>
+    <span>ISO 27001 certified</span>
+  </div>
+</section>
+
+</main>
+
+<script src="footer.js"></script>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        document.getElementById(b.getAttribute('aria-controls')).hidden = true;
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        document.getElementById(btn.getAttribute('aria-controls')).hidden = false;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
