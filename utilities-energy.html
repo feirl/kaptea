@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utilities &amp; Energy Communications — Kaptea Pronto</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Enterprise communications platform for utilities and energy providers. Surge-proof IVR for storm events, multi-channel outage alerts, field engineer dispatch, and regulatory incident reporting — built on carrier-grade infrastructure." />
+  <meta name="keywords" content="utilities communications platform, energy outage alerts, storm surge IVR, field engineer messaging, smart meter notifications, Ofgem compliance communications, electricity network communications, utility SMS platform" />
+  <link rel="canonical" href="https://feirl.github.io/kaptea/utilities-energy.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Utilities &amp; Energy Communications — Kaptea Pronto" />
+  <meta property="og:description" content="Surge-proof IVR for storm events, multi-channel outage alerts, field dispatch messaging, and regulatory incident reporting for utilities and energy providers." />
+  <meta property="og:url" content="https://feirl.github.io/kaptea/utilities-energy.html" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23dc2727'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='20' font-weight='700' fill='white'%3EK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- AI / LLM -->
+  <meta name="ai-content-declaration" content="Kaptea Pronto for Utilities and Energy. Surge-proof IVR handling 750x normal call volume during storm events. Multi-channel outage alerts across SMS, WhatsApp, Email, and RCS with automatic failover. Field engineer appointment and dispatch messaging. Smart meter installation and reading notifications. Regulatory incident reporting with per-message audit trails for Ofgem and CRU. ISO 27001:2022 certified. CREST certified. EU and US data residency. CRM integration with Salesforce, Dynamics 365, SAP. Dedicated instance live in days." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://feirl.github.io/kaptea/utilities-energy.html",
+        "url": "https://feirl.github.io/kaptea/utilities-energy.html",
+        "name": "Utilities & Energy Communications — Kaptea Pronto",
+        "description": "Enterprise communications platform for utilities and energy providers. Surge-proof IVR, outage alerts, field dispatch messaging, and regulatory incident reporting.",
+        "isPartOf": { "@id": "https://feirl.github.io/kaptea/" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Solutions", "item": "https://feirl.github.io/kaptea/index.html" },
+            { "@type": "ListItem", "position": 2, "name": "Utilities & Energy" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://feirl.github.io/kaptea/utilities-energy.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does Kaptea handle extreme call volume spikes during storm events?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pronto's IVR is built on Twilio's carrier-grade infrastructure with queue-based architecture designed for surge. During Storm Éowyn, NIE Networks experienced 750× their normal inbound call volume overnight. Pronto managed queue depth, played position announcements, and routed without degradation — no system collapse, no dropped calls, no manual intervention required. The platform scales elastically with demand."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Kaptea send outage alerts to millions of customers simultaneously?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Pronto orchestrates high-volume outbound alerts across SMS, WhatsApp, Email, and RCS from a single campaign workflow. When a channel fails to deliver, the platform automatically cascades to the next — so outage notifications reach every customer regardless of which channel they respond to. CRM or billing system events can trigger sends automatically without manual campaign setup."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Kaptea support field engineer communications?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pronto manages the full field appointment communication lifecycle: appointment confirmations, pre-visit reminders, engineer ETA updates, and post-visit follow-ups — all triggered automatically from your field management or CRM system. Two-way SMS and WhatsApp allow customers to confirm, reschedule, or query appointments without calling in, reducing inbound volume by handling routine interactions in the messaging channel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Kaptea support regulatory incident reporting for Ofgem or CRU requirements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every message sent through Pronto has a complete audit trail — timestamp, delivery status, channel, and content version. During a major incident, this gives operations and compliance teams a full record of every customer communication sent. Audit logs are exportable as CSV for regulatory submission to Ofgem, CRU, or other national regulators, demonstrating that affected customers were notified within required timeframes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Kaptea integrate with existing utility billing and field management systems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kaptea integrates via REST API and pre-built connectors with major CRM and field management platforms including Salesforce, Microsoft Dynamics 365, SAP, and specialist utility platforms. Billing system events — such as payment reminders, smart meter readings, or tariff change notices — can trigger automated sends directly. Kaptea's implementation team handles integration design and build as part of the standard deployment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can Kaptea be deployed for a utility or energy organisation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A dedicated Pronto instance — configured for your channels, CRM integrations, IVR flows, and regulatory requirements — can be live in days. Utility deployments typically include IVR flow configuration, outage alert campaign setup, field engineer messaging automation, and billing system integration. Kaptea provides structured implementation with dedicated support through go-live and beyond."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* ── HERO (dark — problem-led) ── */
+    .hero {
+      background: #131521;
+      color: #ffffff;
+      padding: 80px 40px 72px;
+    }
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-breadcrumb {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6b7280;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-breadcrumb a { color: #dc2727; text-decoration: none; }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .hero-breadcrumb .bc-sep { color: #374151; }
+    .hero h1 {
+      font-size: 42px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      line-height: 1.18;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .hero h1 span { color: #dc2727; }
+    .hero .hero-sub {
+      font-size: 17px;
+      color: #9ca3af;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 99px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+    }
+    .hero-pill svg { color: #dc2727; flex-shrink: 0; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-visual {
+      background: #1c2033;
+      border-radius: 12px;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #2d3348;
+      overflow: hidden;
+    }
+
+    /* ── CHALLENGE ── */
+    .challenge {
+      padding: 72px 40px;
+      background: #ffffff;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .challenge-inner { max-width: 1080px; margin: 0 auto; }
+    .challenge h2 {
+      font-size: 28px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 40px;
+      max-width: 640px;
+      line-height: 1.3;
+    }
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .challenge-card {
+      padding: 28px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      display: flex;
+      gap: 20px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .challenge-card:hover { border-color: rgba(220,39,39,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
+    .challenge-num {
+      font-size: 28px;
+      font-weight: 700;
+      color: rgba(220,39,39,0.15);
+      line-height: 1;
+      flex-shrink: 0;
+      font-family: 'Manrope', sans-serif;
+    }
+    .challenge-card h3 {
+      font-size: 15px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 6px;
+    }
+    .challenge-card p { font-size: 14px; color: #555555; line-height: 1.6; }
+
+    /* ── SOLUTIONS ── */
+    .solutions {
+      padding: 80px 40px;
+      background: #faf8f5;
+      border-top: 1px solid #eeebe6;
+    }
+    .solutions-inner { max-width: 1080px; margin: 0 auto; }
+    .solutions h2 {
+      font-size: 28px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 56px;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+    .solution-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid #e5e2de;
+    }
+    .solution-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .solution-block.reverse { direction: rtl; }
+    .solution-block.reverse > * { direction: ltr; }
+    .solution-pain {
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-left: 3px solid rgba(220,39,39,0.4);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .solution-pain-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #dc2727;
+      margin-bottom: 10px;
+    }
+    .solution-pain p {
+      font-size: 14px;
+      color: #555555;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .solution-answer h3 {
+      font-size: 20px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .solution-answer p {
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .solution-answer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .solution-answer ul li {
+      font-size: 14px;
+      color: #374151;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .solution-answer ul li::before { content: '✓'; position: absolute; left: 0; color: #dc2727; font-weight: 700; }
+    .feature-link { font-size: 13px; color: #dc2727; font-weight: 600; text-decoration: none; }
+    .feature-link:hover { text-decoration: underline; }
+
+    /* ── METRICS ── */
+    .numbers-strip { background: #131521; padding: 56px 40px; }
+    .numbers-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .number-item h3 {
+      font-size: 36px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #dc2727;
+      margin-bottom: 6px;
+    }
+    .number-item p { font-size: 13px; color: #9ca3af; line-height: 1.5; }
+
+    /* ── FEATURED CUSTOMER ── */
+    .featured-customer {
+      padding: 72px 40px;
+      background: #ffffff;
+      border-top: 1px solid #eeebe6;
+    }
+    .featured-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .featured-quote {
+      font-size: 19px;
+      font-weight: 500;
+      color: #131521;
+      line-height: 1.5;
+      font-style: italic;
+      margin-bottom: 20px;
+      padding-left: 24px;
+      border-left: 3px solid #dc2727;
+    }
+    .featured-attribution { font-size: 14px; color: #555555; }
+    .featured-attribution strong { color: #131521; }
+    .featured-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .featured-metric {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+    .featured-metric h4 {
+      font-size: 26px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #dc2727;
+      margin-bottom: 4px;
+    }
+    .featured-metric p { font-size: 12px; color: #555555; line-height: 1.4; }
+
+    /* ── TRUST ── */
+    .trust-section {
+      padding: 64px 40px;
+      background: #faf8f5;
+      border-top: 1px solid #eeebe6;
+    }
+    .trust-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
+    .trust-inner h2 {
+      font-size: 24px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 12px;
+    }
+    .trust-inner > p {
+      font-size: 15px;
+      color: #555555;
+      margin-bottom: 36px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .trust-card {
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .trust-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+      color: #dc2727;
+    }
+    .trust-card h3 { font-size: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 6px; }
+    .trust-card p { font-size: 12px; color: #555555; line-height: 1.5; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 80px 40px; background: #ffffff; border-top: 1px solid #eeebe6; }
+    .faq-inner { max-width: 720px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header .section-label { margin-bottom: 8px; }
+    .section-header h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; }
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid #eeebe6; }
+    .faq-item:first-child { border-top: 1px solid #eeebe6; }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 20px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: #131521;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-q:hover { color: #dc2727; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; color: #dc2727; transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-a { padding-bottom: 20px; font-size: 14px; color: #555555; line-height: 1.7; }
+    .faq-a[hidden] { display: none; }
+
+    /* ── RELATED ── */
+    .related-section {
+      padding: 72px 40px;
+      border-top: 1px solid #eeebe6;
+      background: #faf8f5;
+    }
+    .related-inner { max-width: 1080px; margin: 0 auto; }
+    .related-inner > h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 32px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .related-card {
+      padding: 28px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #ffffff;
+      text-decoration: none;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    }
+    .related-card:hover { border-color: #dc2727; box-shadow: 0 4px 16px rgba(220,39,39,0.08); transform: translateY(-2px); }
+    .related-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
+    .related-card p { font-size: 13px; color: #555555; line-height: 1.6; }
+    .related-arrow { font-size: 13px; color: #dc2727; font-weight: 600; margin-top: 12px; display: block; }
+
+    /* ── CTA CLOSE ── */
+    .cta-close { background: #131521; color: white; text-align: center; padding: 80px 40px; }
+    .cta-close h2 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700; margin-bottom: 12px; }
+    .cta-close p { font-size: 17px; color: #9ca3af; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .reassurance { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+    .reassurance span { font-size: 12px; color: #6b7280; display: flex; align-items: center; gap: 6px; }
+    .reassurance span::before { content: '✓'; color: #dc2727; font-weight: 700; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero { padding: 56px 24px 48px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .challenge { padding: 56px 24px; }
+      .challenge-grid { grid-template-columns: 1fr 1fr; }
+      .solutions { padding: 56px 24px; }
+      .solution-block { gap: 32px; }
+      .numbers-inner { grid-template-columns: repeat(2, 1fr); }
+      .featured-customer { padding: 56px 24px; }
+      .featured-inner { grid-template-columns: 1fr; gap: 40px; }
+      .trust-section { padding: 56px 24px; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .related-section { padding: 56px 24px; }
+      .faq-section { padding: 56px 24px; }
+    }
+    @media (max-width: 768px) {
+      .hero { padding: 40px 20px 36px; }
+      .hero h1 { font-size: 28px; }
+      .hero .hero-sub { font-size: 15px; }
+      .hero-visual { min-height: 200px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas a { text-align: center; justify-content: center; }
+      .challenge { padding: 40px 20px; }
+      .challenge h2 { font-size: 22px; }
+      .challenge-grid { grid-template-columns: 1fr; }
+      .solutions { padding: 48px 20px; }
+      .solutions h2 { font-size: 22px; }
+      .solution-block, .solution-block.reverse { grid-template-columns: 1fr; gap: 24px; direction: ltr; }
+      .solution-block.reverse > * { direction: ltr; }
+      .numbers-strip { padding: 40px 20px; }
+      .numbers-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .number-item h3 { font-size: 28px; }
+      .featured-customer { padding: 48px 20px; }
+      .featured-metrics { grid-template-columns: 1fr 1fr; }
+      .trust-section { padding: 48px 20px; }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .faq-section { padding: 48px 20px; }
+      .related-section { padding: 48px 20px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .cta-close { padding: 56px 20px; }
+      .cta-close h2 { font-size: 24px; }
+      .reassurance { gap: 16px; flex-direction: column; align-items: center; }
+    }
+    a { transition: color 0.15s ease; }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#dc2727;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<script src="nav.js"></script>
+
+<main id="main-content">
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-breadcrumb">
+        <a href="index.html">Solutions</a>
+        <span class="bc-sep">→</span>
+        <span>Utilities &amp; Energy</span>
+      </div>
+      <h1>When the storm hits, your communications <span>can't go down with it.</span></h1>
+      <p class="hero-sub">Surge-proof IVR, outage alerts at scale, and cross-channel failover for utilities and energy providers that can't afford to lose contact with their customers at exactly the moment they need them most.</p>
+      <div class="hero-pills">
+        <span class="hero-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Storm &amp; Outage Alerts
+        </span>
+        <span class="hero-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Surge IVR
+        </span>
+        <span class="hero-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Cross-Channel Failover
+        </span>
+        <span class="hero-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Field Dispatch
+        </span>
+        <span class="hero-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Regulatory Reporting
+        </span>
+      </div>
+      <div class="hero-ctas">
+        <a href="demo.html" class="btn-primary">Book a Demo</a>
+        <a href="voice-ivr.html" class="btn-ghost-light">See Surge IVR in Action</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:32px;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span style="font-size:11px;color:rgba(255,255,255,0.25);letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Screenshot to be supplied</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     THE CHALLENGE
+═══════════════════════════════ -->
+<section class="challenge">
+  <div class="challenge-inner">
+    <div class="section-label">The challenge</div>
+    <h2>The moments utilities most need to communicate are exactly when their systems are most likely to fail.</h2>
+    <div class="challenge-grid">
+
+      <div class="challenge-card">
+        <div class="challenge-num">01</div>
+        <div>
+          <h3>Legacy IVR that collapses under surge</h3>
+          <p>A major storm drives call volumes from hundreds to hundreds of thousands overnight. Legacy telephony systems queue-drop, agents are overwhelmed, and the organisation loses control of its most critical customer touchpoint at exactly the wrong moment.</p>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-num">02</div>
+        <div>
+          <h3>Outage notifications that can't reach everyone</h3>
+          <p>Mass SMS campaigns to millions of customers hit carrier throughput limits. Some messages are delayed by hours. Others are filtered. Customers call in to find out what they could have been told automatically — creating the surge your IVR just collapsed under.</p>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-num">03</div>
+        <div>
+          <h3>Field communications that rely on phone calls</h3>
+          <p>Engineer appointment confirmations, ETA updates, and access instructions go out by phone — tying up agents for calls that could be automated. Customers miss appointments because nobody told them the engineer was running late, and repeat visit costs mount up.</p>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-num">04</div>
+        <div>
+          <h3>No audit trail during a major incident</h3>
+          <p>Regulators want evidence of who was notified, when, and through which channel during a significant outage. Batch delivery reports don't answer that question. Without per-message records, incident reporting becomes reconstruction rather than reporting.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     HOW KAPTEA SOLVES IT
+═══════════════════════════════ -->
+<section class="solutions">
+  <div class="solutions-inner">
+    <div class="section-label">How Kaptea solves it</div>
+    <h2>Communications infrastructure that gets stronger under pressure — not weaker.</h2>
+
+    <!-- Solution 1: Surge IVR -->
+    <div class="solution-block">
+      <div class="solution-pain">
+        <div class="solution-pain-label">The pain</div>
+        <p>"Storm Éowyn hit overnight and our call volume went to levels we'd never seen. Our IVR went down within the first hour. We had no way to manage the queue or update customers on their outage status."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Surge-proof IVR that handled 750× normal volume — without degradation</h3>
+        <p>Pronto's IVR is built on Twilio's carrier-grade infrastructure with queue-based architecture designed for exactly these moments. During Storm Éowyn, NIE Networks' call volume spiked 750× overnight. Pronto managed queue depth, played position announcements, and routed every call — with no system collapse and no manual intervention required.</p>
+        <ul>
+          <li>Elastic call queue management — no hard capacity ceiling</li>
+          <li>Real-time queue position announcements and estimated wait times</li>
+          <li>Load-aware routing distributing calls across all available agents</li>
+          <li>Configurable IVR flows for storm, outage, and emergency scenarios</li>
+          <li>WebRTC browser-based agent calling — no desk phones needed</li>
+        </ul>
+        <a href="voice-ivr.html" class="feature-link">Explore Voice &amp; IVR →</a>
+      </div>
+    </div>
+
+    <!-- Solution 2: Outage alerts -->
+    <div class="solution-block reverse">
+      <div class="solution-pain">
+        <div class="solution-pain-label">The pain</div>
+        <p>"We tried to send three million SMS messages in the first two hours of the storm. Most of them arrived four hours later. Customers were calling in to find out what they should have already been told."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Multi-channel outage alerts that reach everyone — before they pick up the phone</h3>
+        <p>Pronto orchestrates high-volume outbound alerts across SMS, WhatsApp, Email, and RCS from a single campaign workflow — with automatic failover when a channel fails to deliver. When outage data is in your billing or CRM system, Pronto can trigger sends automatically by affected postcode, meter point, or customer segment.</p>
+        <ul>
+          <li>SMS, WhatsApp, RCS, and Email orchestrated from a single send</li>
+          <li>Automatic failover — if SMS fails, WhatsApp triggers within seconds</li>
+          <li>Audience segmentation by postcode, contract type, or priority customer status</li>
+          <li>CRM or GIS event triggers for automated dispatch on outage detection</li>
+          <li>Two-way messaging for customers to report faults or request callbacks</li>
+        </ul>
+        <a href="sms-rcs.html" class="feature-link">Explore SMS &amp; RCS →</a>
+      </div>
+    </div>
+
+    <!-- Solution 3: Field engineer comms -->
+    <div class="solution-block">
+      <div class="solution-pain">
+        <div class="solution-pain-label">The pain</div>
+        <p>"We're spending agent time on appointment reminders, engineer ETAs, and access instructions that all go out by phone. And we're still getting missed appointments because customers didn't get the update in time."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Automated field communications that reduce missed appointments and inbound calls</h3>
+        <p>Pronto manages the full field appointment lifecycle — confirmations, pre-visit reminders, engineer ETA updates, and post-visit follow-ups — all triggered automatically from your field management or CRM system. Two-way messaging lets customers confirm, reschedule, or query without calling in.</p>
+        <ul>
+          <li>Appointment confirmation and 24-hour SMS/WhatsApp reminders</li>
+          <li>Real-time engineer ETA notifications triggered from field management system</li>
+          <li>Two-way customer responses handled in Pronto — no agent needed for routine queries</li>
+          <li>Smart meter installation scheduling and post-installation instructions</li>
+          <li>Post-visit satisfaction surveys via WhatsApp or SMS</li>
+        </ul>
+        <a href="whatsapp.html" class="feature-link">Explore WhatsApp →</a>
+      </div>
+    </div>
+
+    <!-- Solution 4: Regulatory reporting -->
+    <div class="solution-block reverse">
+      <div class="solution-pain">
+        <div class="solution-pain-label">The pain</div>
+        <p>"After the storm, Ofgem wanted a full record of which customers were notified, when, and through which channel. We had aggregate delivery reports. We couldn't answer per-customer questions."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Per-message audit trail for incident reporting and regulatory evidence</h3>
+        <p>Every message sent through Pronto has a complete, immutable record — timestamp, delivery status, channel, content version, and recipient. During or after a major incident, operations and compliance teams can pull a full communication log per customer, per postcode, or per event — exportable as CSV for Ofgem, CRU, or any national regulator.</p>
+        <ul>
+          <li>Per-message delivery receipt with timestamp precision</li>
+          <li>Exportable audit log by customer, postcode, incident window, or campaign</li>
+          <li>Template version control — always know exactly what wording was sent</li>
+          <li>Priority customer flags for vulnerable customer regulatory obligations</li>
+          <li>Event streaming to your incident management platform in real time</li>
+        </ul>
+        <a href="control-governance.html" class="feature-link">Explore Control &amp; Governance →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     METRICS
+═══════════════════════════════ -->
+<section class="numbers-strip">
+  <div class="numbers-inner">
+    <div class="number-item">
+      <h3>750×</h3>
+      <p>Peak surge volume handled without degradation — NIE Networks Storm Éowyn</p>
+    </div>
+    <div class="number-item">
+      <h3>Days</h3>
+      <p>To deploy a dedicated Pronto instance — from contract to production</p>
+    </div>
+    <div class="number-item">
+      <h3>180+</h3>
+      <p>Countries on Twilio's carrier-grade network — global reach from day one</p>
+    </div>
+    <div class="number-item">
+      <h3>ISO 27001</h3>
+      <p>Certified — dedicated instance, no shared tenancy, EU or US data residency</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     FEATURED CUSTOMER
+═══════════════════════════════ -->
+<section class="featured-customer">
+  <div class="featured-inner">
+    <div>
+      <div class="section-label">Customer story</div>
+      <blockquote class="featured-quote">
+        "When Storm Éowyn hit overnight, our call volume went to levels we'd never seen. Kaptea's platform handled the surge without us having to do anything. The IVR kept routing, the queues stayed manageable, and our teams could focus on the actual emergency rather than the phone system."
+      </blockquote>
+      <div class="featured-attribution">
+        <strong>NIE Networks</strong><br>
+        Northern Ireland's electricity distribution operator — Utilities &amp; Infrastructure
+      </div>
+    </div>
+    <div class="featured-metrics">
+      <div class="featured-metric">
+        <h4>750×</h4>
+        <p>Peak inbound call volume — handled without system degradation</p>
+      </div>
+      <div class="featured-metric">
+        <h4>Zero</h4>
+        <p>Manual interventions required during the storm event</p>
+      </div>
+      <div class="featured-metric">
+        <h4>100%</h4>
+        <p>Queue continuity maintained throughout the surge</p>
+      </div>
+      <div class="featured-metric">
+        <h4>Days</h4>
+        <p>From contract to live production environment</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     TRUST & COMPLIANCE
+═══════════════════════════════ -->
+<section class="trust-section">
+  <div class="trust-inner">
+    <div class="section-label">Security &amp; compliance</div>
+    <h2>Built for regulated infrastructure</h2>
+    <p>Utility and energy operators are critical national infrastructure. Kaptea's security posture reflects that — dedicated instances, certified controls, and data residency you choose.</p>
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>ISO 27001:2022</h3>
+        <p>Certified information security management across all operations and infrastructure</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>CREST Certified</h3>
+        <p>Independent penetration testing to the highest UK standard for critical infrastructure</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Dedicated Instance</h3>
+        <p>No shared tenancy. Your instance, your data — isolated and independently managed</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Data Residency</h3>
+        <p>EU or US data residency. Private cloud infrastructure in Dublin, London, or Amsterdam</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     FAQ
+═══════════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-header">
+      <div class="section-label">Common questions</div>
+      <h2>Utilities &amp; Energy — what you need to know</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+          How does Kaptea handle extreme call volume spikes during storm events?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq1" hidden>
+          Pronto's IVR is built on Twilio's carrier-grade infrastructure with queue-based architecture designed for surge. During Storm Éowyn, NIE Networks experienced 750× their normal inbound call volume overnight. Pronto managed queue depth, played position announcements, and routed without degradation — no system collapse, no dropped calls, no manual intervention required. The platform scales elastically with demand, with no hard capacity ceiling.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+          Can Kaptea send outage alerts to millions of customers simultaneously?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq2" hidden>
+          Yes. Pronto orchestrates high-volume outbound alerts across SMS, WhatsApp, Email, and RCS from a single workflow. When a channel fails to deliver, the platform automatically cascades to the next — so outage notifications reach every customer regardless of which channel they respond to. CRM or billing system events can trigger sends automatically without manual campaign setup, segmented by affected postcode, meter point, or customer priority.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+          How does Kaptea support field engineer communications?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq3" hidden>
+          Pronto manages the full field appointment communication lifecycle: appointment confirmations, pre-visit reminders, engineer ETA updates, and post-visit follow-ups — all triggered automatically from your field management or CRM system. Two-way SMS and WhatsApp allow customers to confirm, reschedule, or query appointments without calling in, reducing inbound volume by deflecting routine interactions to the messaging channel.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4">
+          Does Kaptea support regulatory incident reporting for Ofgem or CRU?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq4" hidden>
+          Yes. Every message sent through Pronto has a complete audit trail — timestamp, delivery status, channel, and content version. During a major incident, this gives operations and compliance teams a full record of every customer communication. Audit logs are exportable as CSV for submission to Ofgem, CRU, or other national regulators, demonstrating that affected customers were notified within required timeframes. Priority customer flags support vulnerable customer regulatory obligations.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq5">
+          How does Kaptea integrate with utility billing and field management systems?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq5" hidden>
+          Kaptea integrates via REST API and pre-built connectors with Salesforce, Microsoft Dynamics 365, SAP, and specialist field management platforms. Billing system events — payment reminders, smart meter readings, tariff change notices — can trigger automated sends directly. Kaptea's implementation team handles integration design and build as part of the standard deployment, with no requirement for a large internal engineering resource.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq6">
+          How quickly can Kaptea be deployed for a utility or energy organisation?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq6" hidden>
+          A dedicated Pronto instance — configured for your channels, CRM integrations, IVR flows, and regulatory requirements — can be live in days. Utility deployments typically cover IVR flow configuration, outage alert campaign setup, field engineer messaging automation, and billing system integration. Kaptea provides structured implementation with dedicated support through go-live and beyond.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     RELATED SOLUTIONS
+═══════════════════════════════ -->
+<section class="related-section">
+  <div class="related-inner">
+    <div class="section-label">Related solutions</div>
+    <h2>Other industries we serve</h2>
+    <div class="related-grid">
+
+      <a href="financial-services.html" class="related-card">
+        <h3>Financial Services</h3>
+        <p>Fraud alerts with failover, OTP delivery, per-message compliance evidence, and multi-division governance for regulated financial institutions.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="#" class="related-card">
+        <h3>Public Sector</h3>
+        <p>Citizen notifications, emergency alerts, and regulated audit-ready messaging at the scale national organisations demand.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="#" class="related-card">
+        <h3>Travel &amp; Transport</h3>
+        <p>Real-time disruption alerts, passenger notifications, and operational messaging for transport networks managing millions of journeys.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     CTA CLOSE
+═══════════════════════════════ -->
+<section class="cta-close">
+  <h2>Built for the moments that matter most</h2>
+  <p>See how Pronto keeps utilities communicating when the pressure is highest — surge IVR, outage alerts, field dispatch, and regulatory evidence, all in one platform.</p>
+  <a href="demo.html" class="btn-primary">Book a Demo</a>
+  <div class="reassurance">
+    <span>No commitment required</span>
+    <span>Tailored to utilities &amp; energy</span>
+    <span>Live in days</span>
+  </div>
+</section>
+
+</main>
+
+<script src="footer.js"></script>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(function(b) {
+        b.setAttribute('aria-expanded', 'false');
+        var ans = document.getElementById(b.getAttribute('aria-controls'));
+        if (ans) ans.hidden = true;
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        var answer = document.getElementById(btn.getAttribute('aria-controls'));
+        if (answer) answer.hidden = false;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
