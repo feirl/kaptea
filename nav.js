@@ -157,7 +157,7 @@
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">04</span><a href="#">Enterprise Transactional Messaging</a></div>
+              <div class="use-case-title"><span class="use-case-num">04</span><a href="enterprise-transactional-messaging.html">Enterprise Transactional Messaging</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Event-driven message orchestration</li>
                 <li class="mega-detail">Cross-channel failover &amp; retry logic</li>
