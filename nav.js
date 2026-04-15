@@ -121,7 +121,7 @@
             <div class="mega-panel-label">Use Cases</div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">01</span><a href="#">Emergency &amp; Surge Communications</a></div>
+              <div class="use-case-title"><span class="use-case-num">01</span><a href="emergency-surge-communications.html">Emergency &amp; Surge Communications</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Storm-grade IVR orchestration</li>
                 <li class="mega-detail">Surge-proof inbound routing</li>
