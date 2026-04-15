@@ -14,7 +14,7 @@
 
           <!-- COL 1: Pronto logo + first 3 sub-categories -->
           <div class="mega-left">
-            <div class="mega-panel-label"><a href="pronto.html" class="pronto-logo-link"><img src="Pronto-360-Logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
+            <div class="mega-panel-label"><a href="pronto.html" class="pronto-logo-link"><img src="pronto-logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
 
             <div class="mega-section">
               <div class="mega-section-title"><a href="omni-channel-communications.html">Omni-Channel Communications</a></div>
