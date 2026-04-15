@@ -579,6 +579,28 @@
     .faq-a { padding-bottom: 20px; font-size: 14px; color: #555555; line-height: 1.7; }
     .faq-a[hidden] { display: none; }
 
+    /* ── RELATED USE CASES ── */
+    .related-section {
+      padding: 72px 40px;
+      border-top: 1px solid #eeebe6;
+      background: #ffffff;
+    }
+    .related-inner { max-width: 1080px; margin: 0 auto; }
+    .related-inner > h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 32px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .related-card {
+      padding: 28px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #ffffff;
+      text-decoration: none;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    }
+    .related-card:hover { border-color: #dc2727; box-shadow: 0 4px 16px rgba(220,39,39,0.08); transform: translateY(-2px); }
+    .related-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
+    .related-card p { font-size: 13px; color: #555555; line-height: 1.6; }
+    .related-arrow { font-size: 13px; color: #dc2727; font-weight: 600; margin-top: 12px; display: block; }
+
     /* ── CTA CLOSE ── */
     .cta-close { background: #131521; color: white; text-align: center; padding: 80px 40px; }
     .cta-close h2 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700; margin-bottom: 12px; }
@@ -1103,6 +1125,38 @@
         </button>
         <div class="faq-a" id="faq-a6" hidden>Utilities and energy operators use Pronto for storm outage alerts and surge IVR orchestration. Transport operators use it for major disruption notifications and carrier-proof passenger alerts. Public sector and emergency services organisations use it for citizen notifications and national incident communications. Healthcare organisations use it for public health emergency messaging. Financial services firms use it for fraud alert delivery and OTP under high-traffic periods. Retail and ecommerce operators use it for peak event surge during Black Friday and seasonal campaigns.</div>
       </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     RELATED USE CASES
+═══════════════════════════════ -->
+<section class="related-section">
+  <div class="related-inner">
+    <div class="section-label">Related use cases</div>
+    <h2>Other ways Pronto solves at scale</h2>
+    <div class="related-grid">
+
+      <a href="distributed-messaging-governance.html" class="related-card">
+        <h3>Distributed Messaging Governance</h3>
+        <p>Role-based access, division-level guardrails, and brand-safe template controls — so distributed teams communicate locally without the centre losing control.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="ivr-voice-orchestration.html" class="related-card">
+        <h3>IVR &amp; Voice Orchestration</h3>
+        <p>API-first IVR architecture, CRM-integrated intelligent routing, and complex call flow logic for organisations that can't rely on legacy voice infrastructure.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="enterprise-transactional-messaging.html" class="related-card">
+        <h3>Enterprise Transactional Messaging</h3>
+        <p>Event-driven message orchestration, cross-channel failover, and CRM-triggered automation for high-volume transactional communications at enterprise scale.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
 
     </div>
   </div>
