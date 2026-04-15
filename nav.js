@@ -133,7 +133,7 @@
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">02</span><a href="#">Distributed Messaging Governance</a></div>
+              <div class="use-case-title"><span class="use-case-num">02</span><a href="distributed-messaging-governance.html">Distributed Messaging Governance</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Role-based access &amp; SSO</li>
                 <li class="mega-detail">Division-level guardrails &amp; enforcement</li>
