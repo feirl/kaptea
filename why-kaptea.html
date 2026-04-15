@@ -130,6 +130,70 @@
     .cert-card h3 { font-size: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 4px; }
     .cert-card p { font-size: 12px; color: #555555; line-height: 1.5; }
 
+    /* ── VOICE OF CUSTOMER ── */
+    .voc-section { padding: 80px 40px; background: #ffffff; border-top: 1px solid #eeebe6; }
+    .voc-inner { max-width: 1080px; margin: 0 auto; }
+    .voc-header { text-align: center; margin-bottom: 48px; }
+    .voc-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #fff3f3; color: #dc2727;
+      padding: 6px 14px; border-radius: 99px;
+      font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .voc-eyebrow strong { color: #131521; letter-spacing: 0; text-transform: none; font-weight: 700; }
+    .voc-header h2 {
+      font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: #131521; line-height: 1.2; letter-spacing: -0.01em;
+      max-width: 680px; margin: 0 auto;
+    }
+    .voc-header h2 em { color: #dc2727; font-style: normal; }
+    .voc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .voc-card {
+      background: #faf8f5; border: 1px solid #e0dbd5;
+      border-radius: 12px; padding: 28px;
+      display: flex; flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+    }
+    .voc-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-2px); border-color: #d6c9be; }
+    .voc-stars { color: #dc2727; font-size: 13px; letter-spacing: 0.1em; margin-bottom: 12px; }
+    .voc-quote { font-size: 16px; color: #131521; line-height: 1.55; font-weight: 500; margin-bottom: 22px; flex: 1; }
+    .voc-quote em { color: #dc2727; font-style: normal; font-weight: 700; }
+    .voc-attr {
+      display: flex; align-items: center; gap: 12px;
+      padding-top: 16px; border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    .voc-avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: #dc2727; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; flex-shrink: 0;
+    }
+    .voc-name { font-size: 13px; font-weight: 700; color: #131521; line-height: 1.3; }
+    .voc-rolecompany { font-size: 12px; color: #6b7280; line-height: 1.4; margin-top: 1px; }
+    .voc-nps-inline {
+      margin-top: 36px;
+      padding: 24px 32px;
+      background: #131521;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: space-between; gap: 28px;
+      flex-wrap: wrap;
+    }
+    .voc-nps-inline .nps-num {
+      font-size: 46px; font-family: 'Manrope', sans-serif; font-weight: 800;
+      color: #ffffff; line-height: 1; letter-spacing: -0.02em;
+    }
+    .voc-nps-inline .nps-num span { color: #dc2727; font-size: 20px; vertical-align: super; margin-left: 2px; }
+    .voc-nps-inline .nps-label { font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-top: 4px; display: block; }
+    .voc-nps-inline .nps-text { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.5; flex: 1; min-width: 240px; }
+    .voc-nps-inline .nps-text strong { color: #ffffff; font-weight: 700; }
+    @media (max-width: 768px) {
+      .voc-section { padding: 56px 20px; }
+      .voc-grid { grid-template-columns: 1fr; }
+      .voc-nps-inline { flex-direction: column; align-items: flex-start; text-align: left; }
+    }
+
     /* ── CTA CLOSE ── */
     .cta-close { background: #131521; color: white; text-align: center; padding: 72px 40px; }
     .cta-close h2 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700; margin-bottom: 12px; }
@@ -510,22 +574,116 @@
 <section class="logos">
   <div class="logos-inner">
     <h2>Trusted by regulated and high-scale enterprises</h2>
-    <p>From public sector healthcare to multi-brand retail, these organisations trust Kaptea with their critical communications.</p>
+    <p>From national utilities and postal services to overnight rail and hospitality — these organisations trust Kaptea with their critical communications.</p>
 
     <div class="logo-grid">
+      <div class="logo-item">NIE Networks</div>
       <div class="logo-item">HSE</div>
       <div class="logo-item">An Post</div>
-      <div class="logo-item">Dialectica</div>
-      <div class="logo-item">Quandoo</div>
-      <div class="logo-item">Barratt Homes</div>
       <div class="logo-item">Caledonia Sleeper</div>
-      <div class="logo-item">eFlow</div>
-      <div class="logo-item">RTE</div>
+      <div class="logo-item">Eflow</div>
+      <div class="logo-item">Quandoo</div>
+      <div class="logo-item">Dialectica</div>
+      <div class="logo-item">Hot Box Sauna</div>
     </div>
   </div>
 </section>
 
-<div class="content-note"><strong>Content needed from Alan</strong> 1) Can we use all these logos publicly on the website? Need explicit approval per customer. 2) Can we get 1-2 testimonial quotes for this page? Ideal: a senior stakeholder from HSE, Barratt Homes, or Dialectica. 3) The leadership team previously worked at Cisco, Ryanair, Bank of America, HP, Bank of Ireland - can we reference these by name on the website?</div>
+<!-- VOICE OF CUSTOMER -->
+<section class="voc-section" aria-labelledby="wk-voc-heading">
+  <div class="voc-inner">
+    <div class="voc-header">
+      <div class="voc-eyebrow">Why they chose us <strong>· NPS 9.7 / 10</strong></div>
+      <h2 id="wk-voc-heading">Don't take our word for it.<br><em>Take theirs.</em></h2>
+    </div>
+
+    <div class="voc-grid">
+
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"There was very much a <em>can-do attitude</em> — not 'oh, that's going to be a bit tricky, or that's going to be expensive.' It was, yeah, we'll find a way to make it."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">AM</div>
+          <div>
+            <div class="voc-name">Ayran Myhill</div>
+            <div class="voc-rolecompany">Commercial Lead · Quandoo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"If you need something that's <em>really solid, compliant, secure</em>, but you also want something that's easy to use and works as an email marketing tool — it's probably the best."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">DF</div>
+          <div>
+            <div class="voc-name">Darren F.</div>
+            <div class="voc-rolecompany">Marketing Manager · Eflow</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"They give you a standardised, customised box — and they <em>elevate it 10 times</em>. We can change our messaging literally straight away. There's no waiting days for changes."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">JD</div>
+          <div>
+            <div class="voc-name">Jennifer D'Arcy</div>
+            <div class="voc-rolecompany">Contact Centre · An Post</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"The level of care and detail is something you <em>don't really get</em>. They literally couldn't have done enough. That's what sets them apart from competitors."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">NG</div>
+          <div>
+            <div class="voc-name">Nicole Guildea</div>
+            <div class="voc-rolecompany">Customer Operations · The Hot Box Sauna</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"The responsiveness and the time to respond and fix an issue is always really, really quick. <em>We have very little downtime.</em>"</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">ML</div>
+          <div>
+            <div class="voc-name">Mark Lonie</div>
+            <div class="voc-rolecompany">Contact Centre Manager · Caledonia Sleeper</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"Any sort of requests you've come up with, they come up with solutions that work. <em>He gave us the controls to actually be able to just red-button shut it down.</em>"</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">RL</div>
+          <div>
+            <div class="voc-name">Robert Leddy</div>
+            <div class="voc-rolecompany">Contact Centre · An Post</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="voc-nps-inline">
+      <div>
+        <div class="nps-num">9.7<span>/10</span></div>
+        <div class="nps-label">Average NPS · Wave 1</div>
+      </div>
+      <div class="nps-text">
+        <strong>Five of six Wave 1 customers scored Kaptea a perfect 10.</strong> Independently-conducted Voice of Customer interviews across utilities, postal, rail, hospitality and tolling — April 2026.
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- LEADERSHIP -->

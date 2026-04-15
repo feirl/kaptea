@@ -518,6 +518,140 @@
     .step p { font-size: 14px; color: #6b7280; line-height: 1.65; }
     .steps-cta { text-align: center; }
 
+    /* ── TESTIMONIALS WALL ── */
+    .voc-band {
+      background: #ffffff;
+      padding: 88px 40px;
+      border-top: 1px solid #eeebe6;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .voc-inner { max-width: 1160px; margin: 0 auto; }
+    .voc-header { text-align: center; margin-bottom: 56px; }
+    .voc-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #fff3f3; color: #dc2727;
+      padding: 6px 14px; border-radius: 99px;
+      font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+    .voc-eyebrow strong { color: #131521; letter-spacing: 0; text-transform: none; font-size: 13px; font-weight: 700; }
+    .voc-header h2 {
+      font-size: 36px; font-family: 'Manrope', sans-serif; font-weight: 800;
+      color: #131521; line-height: 1.2; letter-spacing: -0.02em;
+      max-width: 720px; margin: 0 auto;
+    }
+    .voc-header h2 em { color: #dc2727; font-style: normal; }
+    .voc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .voc-card {
+      background: #faf8f5;
+      border: 1px solid #e0dbd5;
+      border-radius: 14px;
+      padding: 32px;
+      display: flex; flex-direction: column;
+      transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    }
+    .voc-card:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+      border-color: #d6c9be;
+    }
+    .voc-card.voc-feature {
+      grid-column: span 2;
+      background: #131521;
+      border-color: #131521;
+    }
+    .voc-card.voc-feature .voc-quote,
+    .voc-card.voc-feature .voc-name,
+    .voc-card.voc-feature .voc-rolecompany { color: #ffffff; }
+    .voc-card.voc-feature .voc-quote { font-size: 24px; line-height: 1.35; }
+    .voc-card.voc-feature .voc-rolecompany { color: rgba(255,255,255,0.6); }
+    .voc-card.voc-feature .voc-metric-num { color: #ff6e6d; }
+    .voc-card.voc-feature .voc-metric-label { color: rgba(255,255,255,0.6); }
+    .voc-stars {
+      color: #dc2727; font-size: 13px; letter-spacing: 0.1em;
+      margin-bottom: 14px;
+    }
+    .voc-quote {
+      font-size: 16px; color: #131521; line-height: 1.55;
+      font-weight: 500; margin-bottom: 24px; flex: 1;
+    }
+    .voc-quote em, .voc-quote strong { color: #dc2727; font-style: normal; font-weight: 700; }
+    .voc-attr {
+      display: flex; align-items: center; gap: 14px;
+      padding-top: 18px; border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    .voc-card.voc-feature .voc-attr { border-top-color: rgba(255,255,255,0.12); }
+    .voc-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: #dc2727; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .voc-card.voc-feature .voc-avatar { background: #dc2727; }
+    .voc-name { font-size: 14px; font-weight: 700; color: #131521; line-height: 1.3; }
+    .voc-rolecompany { font-size: 12px; color: #6b7280; line-height: 1.4; margin-top: 1px; }
+    .voc-metric {
+      margin-top: 20px; padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display: flex; align-items: baseline; gap: 10px;
+    }
+    .voc-metric-num { font-size: 32px; font-weight: 800; line-height: 1; color: #dc2727; }
+    .voc-metric-label { font-size: 12px; color: #6b7280; line-height: 1.3; }
+    .voc-nps-band {
+      margin-top: 40px;
+      padding: 28px 32px;
+      background: #131521;
+      border-radius: 14px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 32px;
+    }
+    .voc-nps-badge {
+      display: flex; flex-direction: column; align-items: center;
+      padding: 0 20px;
+      border-right: 1px solid rgba(255,255,255,0.12);
+    }
+    .voc-nps-num {
+      font-size: 52px; font-family: 'Manrope', sans-serif; font-weight: 800;
+      color: #ffffff; line-height: 1; letter-spacing: -0.02em;
+    }
+    .voc-nps-num span { color: #dc2727; font-size: 24px; vertical-align: super; margin-left: 2px; }
+    .voc-nps-label { font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-top: 6px; }
+    .voc-nps-text { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.5; }
+    .voc-nps-text strong { color: #ffffff; font-weight: 700; }
+    .voc-nps-cta {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .voc-nps-cta:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
+    @media (max-width: 1024px) {
+      .voc-grid { grid-template-columns: 1fr 1fr; }
+      .voc-card.voc-feature { grid-column: span 2; }
+      .voc-nps-band { grid-template-columns: 1fr; gap: 16px; text-align: center; }
+      .voc-nps-badge { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); padding: 0 0 16px; }
+    }
+    @media (max-width: 768px) {
+      .voc-band { padding: 56px 20px; }
+      .voc-grid { grid-template-columns: 1fr; }
+      .voc-card.voc-feature { grid-column: span 1; }
+      .voc-card.voc-feature .voc-quote { font-size: 19px; }
+    }
+
     /* ── CASE STUDY ── */
     .case-study-block {
       background: #faf8f5;
@@ -1146,11 +1280,11 @@
     <div class="logo-placeholder">NIE Networks</div>
     <div class="logo-placeholder">HSE</div>
     <div class="logo-placeholder">An Post</div>
-    <div class="logo-placeholder">Barratt Homes</div>
-    <div class="logo-placeholder">Dialectica</div>
+    <div class="logo-placeholder">Caledonia Sleeper</div>
+    <div class="logo-placeholder">Eflow</div>
     <div class="logo-placeholder">Quandoo</div>
-    <div class="logo-placeholder">Howdens</div>
-    <div class="logo-placeholder">Kingfisher</div>
+    <div class="logo-placeholder">Dialectica</div>
+    <div class="logo-placeholder">Hot Box Sauna</div>
   </div>
 </div>
 
@@ -1368,6 +1502,128 @@
           <div class="cs-stat-label">Resilience monitoring with Kaptea managing all Twilio escalations on NIE's behalf</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     VOICE OF THE CUSTOMER — TESTIMONIALS WALL
+════════════════════════════════════════════════════ -->
+<section class="voc-band" aria-labelledby="voc-heading">
+  <div class="voc-inner">
+    <div class="voc-header">
+      <div class="voc-eyebrow">In their own words <strong>· NPS 9.7 / 10</strong></div>
+      <h2 id="voc-heading">We asked our customers what they thought.<br><em>This is what they said.</em></h2>
+    </div>
+
+    <div class="voc-grid">
+
+      <!-- FEATURE QUOTE: Hot Box — the 60% → 7% story -->
+      <div class="voc-card voc-feature">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"We were abandoning 60% of our calls. <em>We're below 7% now.</em> In comparison to six months ago, it's massive. The customer experience has been improved so much — it's actually an enjoyable experience now."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">NG</div>
+          <div>
+            <div class="voc-name">Nicole Guildea</div>
+            <div class="voc-rolecompany">Customer Operations · The Hot Box Sauna</div>
+          </div>
+        </div>
+        <div class="voc-metric">
+          <div class="voc-metric-num">60% → &lt;7%</div>
+          <div class="voc-metric-label">Call abandonment, after replacing Zendesk Talk with Kaptea on Twilio Flex</div>
+        </div>
+      </div>
+
+      <!-- Ayran / Quandoo — "it's robust" + can-do -->
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"There was very much a <strong>can-do attitude</strong> — not 'oh, that's going to be a bit tricky, or that's going to be expensive.' It was, <em>yeah, we'll find a way</em>. And it's robust. It doesn't fail."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">AM</div>
+          <div>
+            <div class="voc-name">Ayran Myhill</div>
+            <div class="voc-rolecompany">Commercial Lead · Quandoo</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mark / Caledonia Sleepers — push of a button -->
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"<em>At the push of a button</em>, we contact all of them very quickly and manage the impact on customers and on the crew. The responsiveness and the time to fix an issue is always really, really quick."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">ML</div>
+          <div>
+            <div class="voc-name">Mark Lonie</div>
+            <div class="voc-rolecompany">Contact Centre Manager · Caledonia Sleeper</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jennifer / An Post — standardised, customised, elevated -->
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"They give you a standardised, customised box — and they <em>elevate it 10 times</em>. We can change our messaging literally straight away. It's not a case of waiting days for changes."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">JD</div>
+          <div>
+            <div class="voc-name">Jennifer D'Arcy</div>
+            <div class="voc-rolecompany">Contact Centre · An Post</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Darren / Eflow — compliance-first -->
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"If you need something that's <em>really solid, compliant, secure</em>, but you also want something that is easy to use and works and functions as an email marketing tool — it's probably the best."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">DF</div>
+          <div>
+            <div class="voc-name">Darren F.</div>
+            <div class="voc-rolecompany">Marketing Manager · Eflow</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nicole / Hot Box — care & partnership -->
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"The level of care and detail is something that you <em>don't really get</em>. They literally couldn't have done enough. That's what sets them apart from competitors."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">NG</div>
+          <div>
+            <div class="voc-name">Nicole Guildea</div>
+            <div class="voc-rolecompany">Customer Operations · The Hot Box Sauna</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Robert / An Post — red button control -->
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">"He gave us the controls to actually be able to just <em>red-button shut it down</em>. Any request we've come up with, they come up with solutions that work."</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">RL</div>
+          <div>
+            <div class="voc-name">Robert Leddy</div>
+            <div class="voc-rolecompany">Contact Centre · An Post</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="voc-nps-band">
+      <div class="voc-nps-badge">
+        <div class="voc-nps-num">9.7<span>/10</span></div>
+        <div class="voc-nps-label">Average NPS · Wave 1</div>
+      </div>
+      <div class="voc-nps-text">
+        <strong>Five of six Wave 1 customers scored Kaptea a 10.</strong> Independently-conducted Voice of Customer interviews across utilities, postal, rail, hospitality and tolling — verbatim quotes above.
+      </div>
+      <a href="why-kaptea.html" class="voc-nps-cta">See why enterprises choose Kaptea →</a>
     </div>
   </div>
 </section>
