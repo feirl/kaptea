@@ -96,10 +96,10 @@
               </div>
 
               <div class="mega-carriers">
-                <div class="carrier-card">
+                <a href="twilio-partner.html" class="carrier-card" style="text-decoration:none;display:block;">
                   <img src="twilio-logo.png" alt="Twilio" class="carrier-logo">
                   <div class="carrier-desc">The world's leading cloud communications platform — messaging, voice, video, Flex and Verify — fully operationalised through Pronto.</div>
-                </div>
+                </a>
                 <div class="carrier-more">+ more carriers &amp; integrations →</div>
               </div>
 

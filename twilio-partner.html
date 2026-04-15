@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twilio Partner — Kaptea | Premium Twilio Implementation & Deployment</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Kaptea is a premium Twilio implementation partner and rapid-deploy platform. Get Twilio's carrier-grade messaging, voice, video and email working at enterprise scale — governed, orchestrated, and live in weeks." />
+  <meta name="keywords" content="Twilio partner, Twilio implementation, Twilio enterprise, Twilio deployment, Twilio integration, Kaptea Twilio, CPaaS partner, Twilio Flex, Twilio Programmable Voice, Twilio SendGrid" />
+  <link rel="canonical" href="https://feirl.github.io/kaptea/twilio-partner.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Twilio Partner — Kaptea | Premium Twilio Implementation & Deployment" />
+  <meta property="og:description" content="Kaptea sits on top of Twilio's world-class CPaaS — adding enterprise governance, multi-channel orchestration, and deployment speed. Premium Twilio implementation partner." />
+  <meta property="og:url" content="https://feirl.github.io/kaptea/twilio-partner.html" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23dc2727'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='20' font-weight='700' fill='white'%3EK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://feirl.github.io/kaptea/twilio-partner.html",
+        "url": "https://feirl.github.io/kaptea/twilio-partner.html",
+        "name": "Twilio Partner — Kaptea | Premium Twilio Implementation & Deployment",
+        "description": "Kaptea is a premium Twilio implementation partner. Enterprise governance, multi-channel orchestration, and rapid deployment on top of Twilio's CPaaS platform.",
+        "isPartOf": { "@id": "https://feirl.github.io/kaptea/" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://feirl.github.io/kaptea/twilio-partner.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What Twilio products does Kaptea support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kaptea operationalises the full Twilio stack through the Pronto platform: Twilio Programmable Messaging (SMS, RCS, WhatsApp), Twilio Programmable Voice and IVR, Twilio Video (powering Dialectica), Twilio SendGrid (email delivery), Twilio Verify (authentication), and Twilio Flex (contact centre). Each product is exposed through Pronto's governed, multi-tenant interface — so enterprises get Twilio's power without needing to build or maintain the integration layer themselves."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need my own Twilio account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kaptea can operate on either model. Many enterprise customers use Twilio token-based access, where Kaptea connects to your existing Twilio account — giving you full visibility of usage and billing directly within Twilio. Alternatively, Kaptea can manage Twilio provisioning entirely on your behalf as part of a fully managed deployment. Either way, you retain full ownership and portability of your Twilio numbers, credentials, and data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Kaptea migrate us from our current telephony or messaging platform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — migration from legacy IVR systems, on-premises telephony, or incumbent CPaaS providers is a core part of Kaptea's implementation capability. We handle number porting, IVR flow redesign, template migration, CRM re-integration, and parallel-run testing before cutover. Most migrations complete within the standard 8-week deployment window, with no customer-facing downtime."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Kaptea's implementation engagement work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kaptea follows a structured 5-phase implementation: Discovery (requirements, architecture, compliance review), Solution Design (channel configuration, IVR logic, integration mapping), Build & Configure (Pronto instance setup, Twilio provisioning, CRM connectors), UAT & Parallel Run (testing against live traffic), and Go-Live & Hypercare (dedicated support through the first 30 days of production). Typical engagement length is 6–10 weeks depending on channel complexity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Kaptea provide that Twilio alone doesn't?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Twilio provides world-class programmable communications infrastructure — carrier-grade APIs for messaging, voice, video, and authentication. What Twilio doesn't provide is the enterprise management layer: role-based access, division segmentation, template approval workflows, audit trails, multi-channel orchestration, cross-channel failover, and a governed UI for non-technical users. Kaptea adds all of that on top of Twilio, so regulated enterprises can deploy and manage Twilio at scale without a large internal engineering team."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Kaptea an official Twilio partner?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Kaptea is a certified Twilio implementation partner with direct access to Twilio's partner engineering, commercial, and support teams. This means faster issue escalation, access to Twilio's roadmap, and commercial terms that benefit Kaptea customers."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* ── HERO ── */
+    .hero {
+      background: #faf8f5;
+      color: #131521;
+      text-align: left;
+      padding: 80px 40px 72px;
+    }
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-breadcrumb {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-breadcrumb a { color: #dc2727; text-decoration: none; }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .hero-breadcrumb .bc-sep { color: #d1d5db; }
+    .hero-breadcrumb .bc-current { color: #131521; }
+    .hero h1 {
+      font-size: 44px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #131521;
+    }
+    .hero h1 span { color: #dc2727; }
+    .hero .hero-sub {
+      font-size: 17px;
+      color: #555555;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .channel-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      border: 1px solid #e0dbd5;
+      border-radius: 99px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #374151;
+    }
+    .channel-pill svg { color: #dc2727; flex-shrink: 0; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-ghost {
+      color: #374151;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid #d1d5db;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-ghost:hover { border-color: #131521; color: #131521; }
+    .hero-visual {
+      background: #f0eeeb;
+      border-radius: 12px;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e5e2de;
+      overflow: hidden;
+      flex-direction: column;
+      gap: 20px;
+      padding: 40px;
+    }
+    .hero-twilio-logo {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+    .hero-visual-divider {
+      width: 40px;
+      height: 2px;
+      background: #e0dbd5;
+      border-radius: 2px;
+    }
+    .hero-partner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #131521;
+    }
+    .hero-partner-badge span { color: #dc2727; }
+
+    /* ── PAIN STRIP ── */
+    .pain-strip {
+      background: #ffffff;
+      padding: 72px 40px;
+      border-top: 1px solid #eeebe6;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .pain-strip-inner { max-width: 1080px; margin: 0 auto; }
+    .pain-strip h2 {
+      font-size: 28px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 40px;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+    .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .pain-card {
+      padding: 24px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #faf8f5;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .pain-card:hover { border-color: rgba(220,39,39,0.3); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+    .pain-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: #dc2727;
+    }
+    .pain-card h3 { font-size: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
+    .pain-card p { font-size: 14px; color: #555555; line-height: 1.6; }
+
+    /* ── HOW IT WORKS ── */
+    .how-section { padding: 80px 40px; background: #ffffff; }
+    .how-section.alt { background: #faf8f5; border-top: 1px solid #eeebe6; border-bottom: 1px solid #eeebe6; }
+    .how-inner { max-width: 1080px; margin: 0 auto; }
+    .how-inner > h2 {
+      font-size: 28px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 56px;
+      max-width: 560px;
+      line-height: 1.3;
+    }
+    .how-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 72px;
+    }
+    .how-block:last-child { margin-bottom: 0; }
+    .how-block.reverse { direction: rtl; }
+    .how-block.reverse > * { direction: ltr; }
+    .how-text h3 {
+      font-size: 22px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .how-text p { font-size: 15px; color: #555555; line-height: 1.7; margin-bottom: 20px; }
+    .how-text ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .how-text ul li {
+      font-size: 14px;
+      color: #374151;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .how-text ul li::before { content: '✓'; position: absolute; left: 0; color: #dc2727; font-weight: 700; }
+    .how-visual {
+      background: #f0eeeb;
+      border-radius: 12px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid #e5e2de;
+      padding: 32px;
+    }
+    .how-visual span { font-size: 11px; color: #9ca3af; letter-spacing: 0.06em; text-transform: uppercase; text-align: center; }
+
+    /* Implementation steps component */
+    .impl-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+    .impl-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .impl-step:last-child { border-bottom: none; }
+    .impl-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(220,39,39,0.1);
+      color: #dc2727;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .impl-step-text { font-size: 13px; color: #374151; line-height: 1.5; }
+    .impl-step-text strong { color: #131521; font-weight: 600; }
+
+    /* Twilio product grid */
+    .twilio-product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 100%;
+    }
+    .twilio-product-chip {
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 7px;
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #131521;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .twilio-product-chip svg { color: #dc2727; flex-shrink: 0; }
+
+    /* ── METRICS STRIP ── */
+    .metrics-strip { background: #131521; padding: 56px 40px; }
+    .metrics-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .metric-item h3 {
+      font-size: 36px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #dc2727;
+      margin-bottom: 6px;
+    }
+    .metric-item p { font-size: 13px; color: #9ca3af; line-height: 1.5; }
+
+    /* ── PROOF BLOCK ── */
+    .proof-section {
+      padding: 80px 40px;
+      background: #faf8f5;
+      border-top: 1px solid #eeebe6;
+    }
+    .proof-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .proof-quote {
+      font-size: 18px;
+      font-weight: 500;
+      color: #131521;
+      line-height: 1.55;
+      font-style: italic;
+      margin-bottom: 12px;
+      padding-left: 20px;
+      border-left: 3px solid #dc2727;
+    }
+    .proof-attribution { font-size: 14px; color: #555555; }
+    .proof-attribution strong { color: #131521; font-weight: 600; }
+    .proof-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .proof-metric-card {
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+    }
+    .proof-metric-card h4 { font-size: 28px; font-weight: 700; color: #dc2727; margin-bottom: 4px; }
+    .proof-metric-card p { font-size: 13px; color: #555555; line-height: 1.5; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 80px 40px; background: #ffffff; border-top: 1px solid #eeebe6; }
+    .faq-inner { max-width: 720px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header .section-label { margin-bottom: 8px; }
+    .section-header h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid #eeebe6; }
+    .faq-item:first-child { border-top: 1px solid #eeebe6; }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 20px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: #131521;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-q:hover { color: #dc2727; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; color: #dc2727; transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-a { padding-bottom: 20px; font-size: 14px; color: #555555; line-height: 1.7; }
+    .faq-a[hidden] { display: none; }
+
+    /* ── RELATED ── */
+    .related-section { padding: 72px 40px; border-top: 1px solid #eeebe6; background: #faf8f5; }
+    .related-inner { max-width: 1080px; margin: 0 auto; }
+    .related-inner > h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 32px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .related-card {
+      padding: 28px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      background: #ffffff;
+      text-decoration: none;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    }
+    .related-card:hover { border-color: #dc2727; box-shadow: 0 4px 16px rgba(220,39,39,0.08); transform: translateY(-2px); }
+    .related-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 8px; }
+    .related-card p { font-size: 13px; color: #555555; line-height: 1.6; }
+    .related-arrow { font-size: 13px; color: #dc2727; font-weight: 600; margin-top: 12px; display: block; }
+
+    /* ── CTA CLOSE ── */
+    .cta-close { background: #131521; color: white; text-align: center; padding: 80px 40px; }
+    .cta-close h2 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700; margin-bottom: 12px; }
+    .cta-close p { font-size: 17px; color: #9ca3af; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .reassurance { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+    .reassurance span { font-size: 12px; color: #6b7280; display: flex; align-items: center; gap: 6px; }
+    .reassurance span::before { content: '✓'; color: #dc2727; font-weight: 700; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero { padding: 56px 24px 48px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .pain-strip { padding: 48px 24px; }
+      .pain-grid { grid-template-columns: 1fr 1fr; }
+      .how-section { padding: 56px 24px; }
+      .how-block { gap: 40px; }
+      .metrics-inner { grid-template-columns: repeat(2, 1fr); }
+      .proof-section { padding: 56px 24px; }
+      .proof-inner { grid-template-columns: 1fr; gap: 40px; }
+      .related-section { padding: 56px 24px; }
+    }
+    @media (max-width: 768px) {
+      .hero { padding: 40px 20px 32px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 24px; }
+      .hero h1 { font-size: 30px; }
+      .hero .hero-sub { font-size: 15px; }
+      .hero-visual { min-height: 200px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas a { text-align: center; justify-content: center; }
+      .pain-strip { padding: 40px 20px; }
+      .pain-strip h2 { font-size: 22px; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .how-section { padding: 48px 20px; }
+      .how-inner > h2 { font-size: 22px; }
+      .how-block, .how-block.reverse { grid-template-columns: 1fr; gap: 24px; direction: ltr; }
+      .how-block.reverse > * { direction: ltr; }
+      .metrics-strip { padding: 40px 20px; }
+      .metrics-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .metric-item h3 { font-size: 28px; }
+      .proof-section { padding: 48px 20px; }
+      .proof-inner { grid-template-columns: 1fr; }
+      .proof-metrics { grid-template-columns: 1fr; gap: 16px; }
+      .faq-section { padding: 48px 20px; }
+      .related-section { padding: 48px 20px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .cta-close { padding: 56px 20px; }
+      .cta-close h2 { font-size: 24px; }
+      .reassurance { gap: 16px; flex-direction: column; align-items: center; }
+      .twilio-product-grid { grid-template-columns: 1fr; }
+    }
+    a { transition: color 0.15s ease; }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#dc2727;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<script src="nav.js"></script>
+
+<main id="main-content">
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-breadcrumb">
+        <span>Platform</span>
+        <span class="bc-sep">→</span>
+        <span class="bc-current">Twilio Partner</span>
+      </div>
+      <h1>Twilio's power.<br><span>Enterprise-ready,<br>in weeks.</span></h1>
+      <p class="hero-sub">Kaptea sits on top of Twilio's world-class CPaaS — adding the governance layer, multi-channel orchestration, and deployment speed that regulated enterprises need. We're also a premium Twilio implementation partner, with the expertise to get you live fast and keep you there.</p>
+      <div class="hero-pills">
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Programmable Messaging
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Programmable Voice
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          Twilio Video
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          SendGrid Email
+        </span>
+        <span class="channel-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          Verify
+        </span>
+      </div>
+      <div class="hero-ctas">
+        <a href="demo.html" class="btn-primary">Book a Demo</a>
+        <a href="pronto.html" class="btn-ghost">Explore Pronto</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="twilio-logo.png" alt="Twilio" class="hero-twilio-logo">
+      <div class="hero-visual-divider"></div>
+      <div class="hero-partner-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span>Certified Twilio</span> Implementation Partner
+      </div>
+      <span style="font-size:11px;color:#9ca3af;letter-spacing:0.04em;text-align:center;max-width:200px;line-height:1.5;">Kaptea operationalises the full Twilio stack for regulated enterprises</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     WHY TWILIO
+═══════════════════════════════ -->
+<section class="pain-strip">
+  <div class="pain-strip-inner">
+    <div class="section-label">The foundation</div>
+    <h2>Twilio sets the standard for cloud communications. Here's why it's the only platform we build on.</h2>
+    <div class="pain-grid">
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Global reach at carrier scale</h3>
+        <p>Twilio operates in 180+ countries with direct carrier connections, local number provisioning, and PSTN access across every major market. Whatever region your customers are in, Twilio's infrastructure is already there — delivering with the reliability and throughput that enterprise operations demand.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>99.95% uptime across channels</h3>
+        <p>Twilio's cloud infrastructure is built for production workloads — redundant, distributed, and backed by a commercially binding SLA. For regulated industries where downtime isn't an option, that reliability is the baseline from which Kaptea adds its own resilience and failover layers.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3>Fully programmable APIs</h3>
+        <p>Every Twilio product — messaging, voice, video, email, authentication — is exposed through clean, well-documented REST APIs. That programmability is what allows Kaptea to wrap Twilio in a governed enterprise layer without sacrificing any of the underlying flexibility or capability.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3>A product for every channel</h3>
+        <p>Twilio's portfolio spans the full communications stack: Programmable Messaging, Programmable Voice, Twilio Video, SendGrid for email, Verify for authentication, and Flex for contact centre. Kaptea surfaces all of these through a single governed platform — so your teams don't need to manage multiple Twilio products directly.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Enterprise-grade security and compliance</h3>
+        <p>Twilio holds ISO 27001, SOC 2 Type II, PCI DSS, and HIPAA certifications. Data handling, encryption in transit and at rest, and audit controls are built into the platform. Combined with Kaptea's own compliance layer, regulated enterprises have a defensible, audit-ready communications stack from day one.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Trusted by 300,000+ businesses</h3>
+        <p>From early-stage startups to Fortune 500 enterprises, Twilio is the world's most widely adopted cloud communications platform. The ecosystem of carrier relationships, partner integrations, and battle-tested infrastructure is the result of two decades of production workloads — and it's what every Kaptea deployment runs on.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     THE KAPTEA LAYER
+═══════════════════════════════ -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="section-label">The Kaptea layer</div>
+    <h2>What Twilio doesn't provide — Kaptea does.</h2>
+
+    <!-- Block 1: Governance -->
+    <div class="how-block">
+      <div class="how-text">
+        <h3>Enterprise governance that Twilio's APIs alone can't give you</h3>
+        <p>Twilio's APIs are deliberately open and programmable — which is their strength. But for regulated enterprises, open access is exactly the problem. Kaptea wraps Twilio in a governance layer that controls who can send what, to whom, and through which channel. Template approval workflows, role-based access, division segmentation, and a full audit trail — all enforced at the platform level, not bolted on after the fact.</p>
+        <ul>
+          <li>Role-based access control across every channel and division</li>
+          <li>Template creation, approval, and version-controlled publishing</li>
+          <li>Division-level guardrails — departments can only access their own data</li>
+          <li>Full audit log of every send, every edit, every login</li>
+          <li>Compliance enforcement without involving your engineering team</li>
+        </ul>
+      </div>
+      <div class="how-visual">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+    <!-- Block 2: Rapid deployment -->
+    <div class="how-block reverse">
+      <div class="how-text">
+        <h3>A dedicated Twilio instance live in weeks — not months</h3>
+        <p>Deploying Twilio from scratch requires significant engineering resource: account provisioning, API integration, number porting, IVR build, CRM connectors, testing, and ongoing maintenance. Kaptea removes that burden entirely. Because Pronto is a pre-built enterprise layer on top of Twilio, a dedicated instance — configured to your channels, your workflows, and your compliance requirements — can be live in eight weeks.</p>
+        <ul>
+          <li>No in-house Twilio engineering team required</li>
+          <li>Twilio token-based access — you retain your own account and billing</li>
+          <li>Number porting, channel setup, and CRM integration handled by Kaptea</li>
+          <li>EU or US data residency — your choice from day one</li>
+          <li>Dedicated instance, no shared tenancy with other customers</li>
+        </ul>
+      </div>
+      <div class="how-visual">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+    <!-- Block 3: Multi-channel orchestration -->
+    <div class="how-block">
+      <div class="how-text">
+        <h3>Multi-channel orchestration across the full Twilio product stack</h3>
+        <p>Running multiple Twilio products — messaging, voice, video, email — means building and maintaining multiple integrations. Kaptea brings all of them together in a single platform, with unified reporting, cross-channel failover, and a single governance framework covering every touchpoint. Add a new Twilio product and it slots into the same Pronto instance without a new build.</p>
+        <div class="twilio-product-grid" style="margin-top:20px;">
+          <div class="twilio-product-chip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Programmable Messaging
+          </div>
+          <div class="twilio-product-chip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Programmable Voice
+          </div>
+          <div class="twilio-product-chip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            Twilio Video
+          </div>
+          <div class="twilio-product-chip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            SendGrid Email
+          </div>
+          <div class="twilio-product-chip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            Twilio Verify
+          </div>
+          <div class="twilio-product-chip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Twilio Flex
+          </div>
+        </div>
+      </div>
+      <div class="how-visual">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+        <span>Screenshot to be supplied</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     IMPLEMENTATION PARTNER
+═══════════════════════════════ -->
+<section class="how-section alt">
+  <div class="how-inner">
+    <div class="section-label">Implementation partner</div>
+    <h2>Not just a platform — a team that gets Twilio live for you.</h2>
+
+    <div class="how-block">
+      <div class="how-text">
+        <h3>Deep Twilio expertise, from architecture to go-live</h3>
+        <p>Kaptea's implementation team has designed and delivered Twilio environments for some of the UK's largest regulated organisations — utilities, financial services, public sector, and retail. We don't just configure the platform. We design the architecture, advise on Twilio product selection, handle number porting, migrate legacy IVR flows, integrate your CRM, and provide dedicated hypercare through the first weeks of production.</p>
+        <ul>
+          <li>Architecture review and Twilio product selection</li>
+          <li>Legacy IVR migration — no customer-facing downtime</li>
+          <li>Number porting and telephony transition</li>
+          <li>CRM integration: Salesforce, Dynamics 365, HubSpot, Zoho, SAP</li>
+          <li>Custom workflow and automation development</li>
+          <li>Staff training and documented runbooks</li>
+          <li>30-day hypercare and ongoing managed support</li>
+        </ul>
+      </div>
+      <div class="how-visual">
+        <div class="impl-steps" style="width:100%;">
+          <div class="impl-step">
+            <div class="impl-num">1</div>
+            <div class="impl-step-text"><strong>Discovery</strong> — requirements, compliance review, channel mapping, and architecture design</div>
+          </div>
+          <div class="impl-step">
+            <div class="impl-num">2</div>
+            <div class="impl-step-text"><strong>Solution design</strong> — Twilio provisioning plan, IVR logic, CRM integration mapping, data residency</div>
+          </div>
+          <div class="impl-step">
+            <div class="impl-num">3</div>
+            <div class="impl-step-text"><strong>Build &amp; configure</strong> — Pronto instance setup, Twilio credentials, channel activation, connector deployment</div>
+          </div>
+          <div class="impl-step">
+            <div class="impl-num">4</div>
+            <div class="impl-step-text"><strong>UAT &amp; parallel run</strong> — testing against live traffic alongside the existing system before cutover</div>
+          </div>
+          <div class="impl-step">
+            <div class="impl-num">5</div>
+            <div class="impl-step-text"><strong>Go-live &amp; hypercare</strong> — dedicated support through the first 30 days of production</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     METRICS
+═══════════════════════════════ -->
+<section class="metrics-strip">
+  <div class="metrics-inner">
+    <div class="metric-item">
+      <h3>8 weeks</h3>
+      <p>Typical time from contract to a production-ready Twilio environment via Pronto</p>
+    </div>
+    <div class="metric-item">
+      <h3>6</h3>
+      <p>Twilio products operationalised through a single Pronto instance</p>
+    </div>
+    <div class="metric-item">
+      <h3>10M+</h3>
+      <p>Messages delivered annually for Kaptea enterprise customers on Twilio infrastructure</p>
+    </div>
+    <div class="metric-item">
+      <h3>750×</h3>
+      <p>Peak surge volume handled without degradation — NIE Networks storm event</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     PROOF BLOCK
+═══════════════════════════════ -->
+<section class="proof-section">
+  <div class="proof-inner">
+    <div>
+      <div class="section-label">In practice</div>
+      <blockquote class="proof-quote">
+        "When Storm Éowyn hit overnight, our call volume went to levels we'd never seen. Kaptea's platform — built on Twilio — handled the surge without us having to do anything. The IVR kept routing, the queues stayed manageable, and our teams could focus on the actual emergency rather than the phone system."
+      </blockquote>
+      <div class="proof-attribution">
+        <strong>NIE Networks</strong><br>
+        Northern Ireland's electricity distribution operator — Utilities &amp; Infrastructure
+      </div>
+    </div>
+    <div class="proof-metrics">
+      <div class="proof-metric-card">
+        <h4>750×</h4>
+        <p>Peak inbound call volume handled during Storm Éowyn — without system degradation</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>Zero</h4>
+        <p>In-house Twilio engineers required to operate the platform day-to-day</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>8 wks</h4>
+        <p>From contract signature to live production environment on Twilio infrastructure</p>
+      </div>
+      <div class="proof-metric-card">
+        <h4>ISO 27001</h4>
+        <p>Certified — Kaptea and Twilio security controls stack end to end</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     FAQ
+═══════════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-header">
+      <div class="section-label">Common questions</div>
+      <h2>Twilio + Kaptea — what you need to know</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+          What Twilio products does Kaptea support?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq1" hidden>
+          Kaptea operationalises the full Twilio stack through the Pronto platform: Twilio Programmable Messaging (SMS, RCS, WhatsApp), Twilio Programmable Voice and IVR, Twilio Video (powering Dialectica secure video), Twilio SendGrid for email delivery, Twilio Verify for authentication, and Twilio Flex for contact centre. Each product is exposed through Pronto's governed, multi-tenant interface — so enterprises get Twilio's power without needing to build or maintain the integration layer themselves.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+          Do I need my own Twilio account?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq2" hidden>
+          Kaptea can operate on either model. Many enterprise customers use Twilio token-based access, where Kaptea connects to your existing Twilio account — giving you full visibility of usage and billing directly in Twilio's console. Alternatively, Kaptea can manage Twilio provisioning entirely on your behalf. Either way, you retain full ownership and portability of your Twilio numbers, credentials, and data.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+          Can Kaptea migrate us from our current platform?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq3" hidden>
+          Yes — migration from legacy IVR systems, on-premises telephony, or incumbent CPaaS providers is a core part of Kaptea's implementation capability. We handle number porting, IVR flow redesign, template migration, CRM re-integration, and parallel-run testing before cutover. Most migrations complete within the standard 8-week deployment window, with no customer-facing downtime.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4">
+          What does Kaptea provide that Twilio alone doesn't?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq4" hidden>
+          Twilio provides world-class programmable communications infrastructure — carrier-grade APIs for messaging, voice, video, and authentication. What Twilio doesn't provide is the enterprise management layer: role-based access, division segmentation, template approval workflows, audit trails, multi-channel orchestration, cross-channel failover, and a governed UI for non-technical users. Kaptea adds all of that on top of Twilio, so regulated enterprises can deploy and manage Twilio at scale without a large internal engineering team.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq5">
+          How does Kaptea's implementation engagement work?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq5" hidden>
+          Kaptea follows a structured 5-phase implementation: Discovery (requirements, architecture, compliance review), Solution Design (channel configuration, IVR logic, integration mapping), Build &amp; Configure (Pronto instance setup, Twilio provisioning, CRM connectors), UAT &amp; Parallel Run (testing against live traffic), and Go-Live &amp; Hypercare (dedicated support through the first 30 days of production). Typical engagement length is 6–10 weeks depending on channel complexity.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq6">
+          Is Kaptea an official Twilio partner?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq6" hidden>
+          Yes. Kaptea is a certified Twilio implementation partner with direct access to Twilio's partner engineering, commercial, and support teams. This means faster issue escalation, access to Twilio's product roadmap, and commercial terms that benefit Kaptea customers.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     RELATED
+═══════════════════════════════ -->
+<section class="related-section">
+  <div class="related-inner">
+    <div class="section-label">Also in Pronto</div>
+    <h2>Related capabilities</h2>
+    <div class="related-grid">
+
+      <a href="omni-channel-communications.html" class="related-card">
+        <h3>Omni-Channel Communications</h3>
+        <p>SMS, WhatsApp, Voice, Email, Secure Video, and Social Messaging — all managed through a single Pronto instance on Twilio.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="deployment-infrastructure.html" class="related-card">
+        <h3>Deployment &amp; Infrastructure</h3>
+        <p>Dedicated Pronto instance in eight weeks, EU or US data residency, cloud-managed infrastructure, no heavy engineering team required.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="control-governance.html" class="related-card">
+        <h3>Control &amp; Governance</h3>
+        <p>The enterprise layer on top of Twilio — role-based access, template approval, division segmentation, and a full compliance audit trail.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     CTA CLOSE
+═══════════════════════════════ -->
+<section class="cta-close">
+  <h2>Ready to get Twilio working at enterprise scale?</h2>
+  <p>Book a 30-minute call with the Kaptea team. We'll show you exactly how Pronto works on top of Twilio — and what a deployment for your organisation would look like.</p>
+  <a href="demo.html" class="btn-primary">Book a Demo</a>
+  <div class="reassurance">
+    <span>Certified Twilio partner</span>
+    <span>Live in 8 weeks</span>
+    <span>Talk to the team who built it</span>
+  </div>
+</section>
+
+</main>
+
+<script src="footer.js"></script>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(function(b) {
+        b.setAttribute('aria-expanded', 'false');
+        var ans = document.getElementById(b.getAttribute('aria-controls'));
+        if (ans) ans.hidden = true;
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        var answer = document.getElementById(btn.getAttribute('aria-controls'));
+        if (answer) answer.hidden = false;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
