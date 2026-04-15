@@ -173,10 +173,10 @@
       <div class="footer-col">
         <h4>Use Cases</h4>
         <ul>
-          <li><a href="#">Emergency &amp; Surge</a></li>
-          <li><a href="#">Distributed Governance</a></li>
-          <li><a href="#">IVR &amp; Voice</a></li>
-          <li><a href="#">Enterprise Transactional</a></li>
+          <li><a href="emergency-surge-communications.html">Emergency &amp; Surge</a></li>
+          <li><a href="distributed-messaging-governance.html">Distributed Governance</a></li>
+          <li><a href="ivr-voice-orchestration.html">IVR &amp; Voice</a></li>
+          <li><a href="enterprise-transactional-messaging.html">Enterprise Transactional</a></li>
         </ul>
       </div>
 
@@ -184,12 +184,12 @@
       <div class="footer-col">
         <h4>Industries</h4>
         <ul>
-          <li><a href="#">Financial Services</a></li>
-          <li><a href="#">Utilities &amp; Energy</a></li>
-          <li><a href="#">Healthcare</a></li>
-          <li><a href="#">Travel &amp; Transport</a></li>
-          <li><a href="#">Public Sector</a></li>
-          <li><a href="#">Retail &amp; Ecommerce</a></li>
+          <li><a href="financial-services.html">Financial Services</a></li>
+          <li><a href="utilities-energy.html">Utilities &amp; Energy</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+          <li><a href="travel-transport.html">Travel &amp; Transport</a></li>
+          <li><a href="public-sector.html">Public Sector</a></li>
+          <li><a href="retail-ecommerce.html">Retail &amp; Ecommerce</a></li>
         </ul>
       </div>
 
