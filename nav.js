@@ -219,7 +219,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="#">Public Sector</a></div>
+                <div class="industry-title"><a href="public-sector.html">Public Sector</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Citizen notifications</li>
                   <li class="mega-detail">Emergency &amp; public safety alerts</li>
