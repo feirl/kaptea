@@ -100,6 +100,7 @@
                   <img src="twilio-logo.png" alt="Twilio" class="carrier-logo">
                   <div class="carrier-desc">The world's leading cloud communications platform — messaging, voice, video, Flex and Verify — fully operationalised through Pronto.</div>
                 </div>
+                <div class="carrier-more">+ more carriers &amp; integrations →</div>
               </div>
 
             </div>
