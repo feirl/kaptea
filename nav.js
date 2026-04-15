@@ -175,7 +175,7 @@
             <div class="mega-industry-grid">
 
               <div class="industry-block">
-                <div class="industry-title"><a href="template-solution.html">Financial Services</a></div>
+                <div class="industry-title"><a href="financial-solutions.html">Financial Services</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Fraud &amp; transaction alerts</li>
                   <li class="mega-detail">Secure authentication messaging</li>
