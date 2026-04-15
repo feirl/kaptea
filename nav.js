@@ -186,7 +186,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="#">Utilities &amp; Energy</a></div>
+                <div class="industry-title"><a href="utilities-energy.html">Utilities &amp; Energy</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Storm &amp; outage alerts</li>
                   <li class="mega-detail">Surge IVR orchestration</li>
