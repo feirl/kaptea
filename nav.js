@@ -230,7 +230,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="#">Retail &amp; Ecommerce</a></div>
+                <div class="industry-title"><a href="retail-ecommerce.html">Retail &amp; Ecommerce</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Order &amp; delivery updates</li>
                   <li class="mega-detail">Peak event surge messaging</li>
