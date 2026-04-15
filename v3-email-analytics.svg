@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 660" fill="none">
+  <defs>
+    <filter id="browser-shadow" x="-4%" y="-2%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+    <filter id="card-shadow-sm" x="-8%" y="-6%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <clipPath id="browser-clip">
+      <rect x="20" y="20" width="800" height="620" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <g filter="url(#browser-shadow)">
+    <rect x="20" y="20" width="800" height="620" rx="12" fill="#fff" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="20" y="20" width="800" height="40" rx="12" fill="#F8FAFC"/>
+    <rect x="20" y="48" width="800" height="12" fill="#F8FAFC"/>
+    <line x1="20" y1="60" x2="820" y2="60" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="44" cy="40" r="5.5" fill="#EF4444" opacity="0.8"/>
+    <circle cx="64" cy="40" r="5.5" fill="#F59E0B" opacity="0.8"/>
+    <circle cx="84" cy="40" r="5.5" fill="#22C55E" opacity="0.8"/>
+    <rect x="110" y="30" width="500" height="22" rx="6" fill="#fff" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="126" cy="41" r="4" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+    <rect x="123" y="42" width="6" height="4" rx="1" fill="#94A3B8"/>
+    <text x="140" y="45" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">app.kaptea.com/pronto/campaigns/analytics</text>
+    <circle cx="740" cy="41" r="3" fill="#CBD5E1"/>
+    <circle cx="760" cy="41" r="3" fill="#CBD5E1"/>
+    <circle cx="780" cy="41" r="3" fill="#CBD5E1"/>
+  </g>
+
+  <g clip-path="url(#browser-clip)">
+    <rect x="20" y="60" width="800" height="580" fill="#fff"/>
+    <!-- Pronto sidebar -->
+    <rect x="20" y="60" width="36" height="580" fill="#131521"/>
+    <g transform="translate(24, 64) scale(0.22)">
+      <path fill="#dc2727" d="M68.01,25.4c-1.15-.31-2.36-.52-3.64-.63-1.28-.1-2.44-.16-3.48-.16h-28.57v41.33h28.57c1.04,0,2.2-.05,3.48-.16,1.28-.1,2.49-.29,3.64-.55,3.34-.78,6.03-2.23,8.06-4.34,2.04-2.11,3.5-4.55,4.38-7.32.89-2.76,1.33-5.53,1.33-8.3s-.44-5.52-1.33-8.26c-.89-2.74-2.35-5.17-4.38-7.28-2.03-2.11-4.72-3.56-8.06-4.35Z"/>
+      <path fill="#dc2727" d="M61.51,9.2c1.1,0,2.45.04,4.07.12,1.62.08,3.16.25,4.62.51,6.26.99,11.49,3.13,15.7,6.42.9.7,1.74,1.46,2.55,2.24C75.57-5.65,51.5-3.45,31.66,9.2h29.84Z"/>
+      <path fill="#dc2727" d="M95.33,61.96c-2.09,5.01-5.23,9.16-9.43,12.45-4.2,3.29-9.43,5.43-15.7,6.42-1.46.21-3.01.37-4.66.47-1.64.11-2.99.16-4.03.16h-29.2v20.16c13.99,9.03,29.34,13.68,39.42,10.49,15.25-4.81,23.85-28.95,24.65-53.02-.32.97-.66,1.93-1.05,2.87Z"/>
+      <path fill="#dc2727" d="M14.95,23.43C3.73,35.95-2.9,51.26.66,63.58c2.42,8.38,7.63,16.47,14.28,23.6V23.43Z"/>
+    </g>
+    <g fill="#fff" fill-opacity="0.35">
+      <rect x="30" y="102" width="16" height="2" rx="1"/>
+      <rect x="30" y="106" width="10" height="2" rx="1"/>
+      <rect x="30" y="110" width="16" height="2" rx="1"/>
+    </g>
+    <rect x="20" y="122" width="2.5" height="20" rx="1.2" fill="#dc2727"/>
+
+    <!-- Page content starts at x=56 y=60 -->
+
+    <!-- Header -->
+    <rect x="56" y="60" width="764" height="42" fill="#FAFBFC"/>
+    <line x1="56" y1="102" x2="820" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="72" y="80" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Campaign Analytics</text>
+    <text x="72" y="94" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Campaigns / February Promotion Campaign</text>
+    <rect x="710" y="70" width="94" height="26" rx="6" fill="#dc2727"/>
+    <text x="757" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#fff">Export Report</text>
+    <!-- Meta bar -->
+    <rect x="72" y="112" width="732" height="36" rx="8" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="86" y="128" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">CAMPAIGN</text>
+    <text x="86" y="140" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#0F172A">February Promotion</text>
+    <text x="260" y="128" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">SENT BY</text>
+    <text x="260" y="140" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#0F172A">Pronto Admin</text>
+    <circle cx="380" cy="134" r="4" fill="#16A34A"/>
+    <text x="388" y="138" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#16A34A">Completed</text>
+    <text x="490" y="128" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">SENT</text>
+    <text x="490" y="140" font-family="Arial, sans-serif" font-size="9" fill="#334155">03 Feb 2026, 14:00</text>
+    <text x="660" y="128" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">ENDED</text>
+    <text x="660" y="140" font-family="Arial, sans-serif" font-size="9" fill="#334155">18 Feb 2026, 09:30</text>
+    <!-- Donut -->
+    <rect x="72" y="162" width="188" height="190" rx="10" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="86" y="182" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Total (1,247)</text>
+    <g transform="translate(166, 272)">
+      <circle cx="0" cy="0" r="46" fill="none" stroke="#F1F5F9" stroke-width="14"/>
+      <circle cx="0" cy="0" r="46" fill="none" stroke="#7C4DFF" stroke-width="14" stroke-dasharray="278 12" stroke-dashoffset="72" stroke-linecap="round"/>
+      <text x="0" y="-4" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0F172A">96%</text>
+      <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Delivered</text>
+    </g>
+    <!-- KPI cards -->
+    <g transform="translate(274, 162)">
+      <rect width="128" height="84" rx="8" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="12" y="20" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">TOTAL SENT</text>
+      <text x="12" y="46" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">1,247</text>
+      <rect x="12" y="56" width="34" height="14" rx="7" fill="#DCFCE7"/>
+      <text x="29" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#16A34A">100%</text>
+    </g>
+    <g transform="translate(416, 162)">
+      <rect width="128" height="84" rx="8" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="12" y="20" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">OPENED</text>
+      <text x="12" y="46" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">856</text>
+      <text x="100" y="46" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#F59E0B">68%</text>
+    </g>
+    <g transform="translate(558, 162)">
+      <rect width="128" height="84" rx="8" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="12" y="20" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">CLICKED</text>
+      <text x="12" y="46" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">342</text>
+      <text x="100" y="46" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#4A90D9">27%</text>
+    </g>
+    <g transform="translate(700, 162)">
+      <rect width="104" height="84" rx="8" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="12" y="20" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">BOUNCED</text>
+      <text x="12" y="46" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">49</text>
+      <text x="76" y="46" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#EF4444">4%</text>
+    </g>
+    <!-- Second KPI row -->
+    <g transform="translate(274, 258)">
+      <rect width="128" height="70" rx="8" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="12" y="18" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">UNIQUE CLICKED</text>
+      <text x="12" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0F172A">298</text>
+      <text x="58" y="42" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">24%</text>
+    </g>
+    <g transform="translate(416, 258)">
+      <rect width="128" height="70" rx="8" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="12" y="18" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">UNSUBSCRIBED</text>
+      <text x="12" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0F172A">12</text>
+      <text x="38" y="42" font-family="Arial, sans-serif" font-size="10" fill="#EF4444">1%</text>
+    </g>
+    <g transform="translate(558, 258)">
+      <rect width="246" height="70" rx="8" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="12" y="18" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">CLICK-TO-OPEN RATE</text>
+      <text x="12" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0F172A">40%</text>
+      <rect x="60" y="30" width="50" height="14" rx="7" fill="#DCFCE7"/>
+      <text x="85" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#16A34A">&#9650; +3%</text>
+    </g>
+    <!-- Recipients table -->
+    <rect x="72" y="342" width="732" height="236" rx="10" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="88" y="366" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Email Recipients</text>
+    <line x1="88" y1="380" x2="788" y2="380" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="88" y="396" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">RECIPIENT</text>
+    <text x="280" y="396" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">STATUS</text>
+    <text x="390" y="396" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">SENT AT</text>
+    <text x="520" y="396" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">OPENED AT</text>
+    <text x="660" y="396" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">CLICKED AT</text>
+    <line x1="88" y1="404" x2="788" y2="404" stroke="#F1F5F9" stroke-width="1"/>
+    <!-- Row 1 -->
+    <text x="88" y="424" font-family="Arial, sans-serif" font-size="10" fill="#4A90D9">marticjc@example.com</text>
+    <rect x="280" y="412" width="50" height="16" rx="8" fill="#DCFCE7"/>
+    <text x="305" y="424" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#16A34A">Opened</text>
+    <text x="390" y="424" font-family="Arial, sans-serif" font-size="9" fill="#64748B">03 Feb, 14:00</text>
+    <text x="520" y="424" font-family="Arial, sans-serif" font-size="9" fill="#64748B">03 Feb, 14:23</text>
+    <text x="660" y="424" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">-</text>
+    <line x1="88" y1="436" x2="788" y2="436" stroke="#F8FAFC" stroke-width="1"/>
+    <!-- Row 2 -->
+    <text x="88" y="456" font-family="Arial, sans-serif" font-size="10" fill="#4A90D9">john.smith@example.com</text>
+    <rect x="280" y="444" width="50" height="16" rx="8" fill="#FEF3C7"/>
+    <text x="305" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#D97706">Clicked</text>
+    <text x="390" y="456" font-family="Arial, sans-serif" font-size="9" fill="#64748B">03 Feb, 14:00</text>
+    <text x="520" y="456" font-family="Arial, sans-serif" font-size="9" fill="#64748B">03 Feb, 14:15</text>
+    <text x="660" y="456" font-family="Arial, sans-serif" font-size="9" fill="#64748B">03 Feb, 14:18</text>
+    <line x1="88" y1="468" x2="788" y2="468" stroke="#F8FAFC" stroke-width="1"/>
+    <!-- Row 3 -->
+    <text x="88" y="488" font-family="Arial, sans-serif" font-size="10" fill="#4A90D9">sarah.jones@company.com</text>
+    <rect x="280" y="476" width="56" height="16" rx="8" fill="#DBEAFE"/>
+    <text x="308" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#2563EB">Delivered</text>
+    <text x="390" y="488" font-family="Arial, sans-serif" font-size="9" fill="#64748B">03 Feb, 14:00</text>
+    <text x="520" y="488" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">-</text>
+    <text x="660" y="488" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">-</text>
+    <line x1="88" y1="500" x2="788" y2="500" stroke="#F8FAFC" stroke-width="1"/>
+    <!-- Row 4 -->
+    <text x="88" y="520" font-family="Arial, sans-serif" font-size="10" fill="#4A90D9">mike.wilson@email.com</text>
+    <rect x="280" y="508" width="54" height="16" rx="8" fill="#FEE2E2"/>
+    <text x="307" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#DC2626">Bounced</text>
+    <text x="390" y="520" font-family="Arial, sans-serif" font-size="9" fill="#64748B">03 Feb, 14:00</text>
+    <text x="520" y="520" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">-</text>
+    <text x="660" y="520" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">-</text>
+    <!-- Email preview -->
+    <rect x="72" y="590" width="732" height="46" rx="10" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="88" y="612" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#0F172A">Email Preview</text>
+    <rect x="340" y="596" width="200" height="32" rx="6" fill="#131521"/>
+    <rect x="350" y="600" width="180" height="12" rx="3" fill="#7C4DFF"/>
+    <text x="440" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#fff">Sample Name</text>
+    <rect x="380" y="616" width="120" height="4" rx="2" fill="#334155"/>
+
+  </g>
+</svg>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 570" fill="none">
+  <defs>
+    <filter id="browser-shadow" x="-4%" y="-2%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+    <filter id="card-shadow-sm" x="-8%" y="-6%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <clipPath id="browser-clip">
+      <rect x="20" y="20" width="800" height="530" rx="12"/>
+    </clipPath>
+  </defs>
+  <g filter="url(#browser-shadow)">
+    <rect x="20" y="20" width="800" height="530" rx="12" fill="#fff" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="20" y="20" width="800" height="40" rx="12" fill="#F8FAFC"/>
+    <rect x="20" y="48" width="800" height="12" fill="#F8FAFC"/>
+    <line x1="20" y1="60" x2="820" y2="60" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="44" cy="40" r="5.5" fill="#EF4444" opacity="0.8"/>
+    <circle cx="64" cy="40" r="5.5" fill="#F59E0B" opacity="0.8"/>
+    <circle cx="84" cy="40" r="5.5" fill="#22C55E" opacity="0.8"/>
+    <rect x="110" y="30" width="500" height="22" rx="6" fill="#fff" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="126" cy="41" r="4" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+    <rect x="123" y="42" width="6" height="4" rx="1" fill="#94A3B8"/>
+    <text x="140" y="45" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">app.kaptea.com/pronto/templates/whatsapp/create</text>
+    <circle cx="740" cy="41" r="3" fill="#CBD5E1"/><circle cx="760" cy="41" r="3" fill="#CBD5E1"/><circle cx="780" cy="41" r="3" fill="#CBD5E1"/>
+  </g>
+  <g clip-path="url(#browser-clip)">
+    <rect x="20" y="60" width="800" height="490" fill="#fff"/>
+    <rect x="20" y="60" width="36" height="490" fill="#131521"/>
+    <g transform="translate(24, 64) scale(0.22)">
+      <path fill="#dc2727" d="M68.01,25.4c-1.15-.31-2.36-.52-3.64-.63-1.28-.1-2.44-.16-3.48-.16h-28.57v41.33h28.57c1.04,0,2.2-.05,3.48-.16,1.28-.1,2.49-.29,3.64-.55,3.34-.78,6.03-2.23,8.06-4.34,2.04-2.11,3.5-4.55,4.38-7.32.89-2.76,1.33-5.53,1.33-8.3s-.44-5.52-1.33-8.26c-.89-2.74-2.35-5.17-4.38-7.28-2.03-2.11-4.72-3.56-8.06-4.35Z"/>
+      <path fill="#dc2727" d="M61.51,9.2c1.1,0,2.45.04,4.07.12,1.62.08,3.16.25,4.62.51,6.26.99,11.49,3.13,15.7,6.42.9.7,1.74,1.46,2.55,2.24C75.57-5.65,51.5-3.45,31.66,9.2h29.84Z"/>
+      <path fill="#dc2727" d="M95.33,61.96c-2.09,5.01-5.23,9.16-9.43,12.45-4.2,3.29-9.43,5.43-15.7,6.42-1.46.21-3.01.37-4.66.47-1.64.11-2.99.16-4.03.16h-29.2v20.16c13.99,9.03,29.34,13.68,39.42,10.49,15.25-4.81,23.85-28.95,24.65-53.02-.32.97-.66,1.93-1.05,2.87Z"/>
+      <path fill="#dc2727" d="M14.95,23.43C3.73,35.95-2.9,51.26.66,63.58c2.42,8.38,7.63,16.47,14.28,23.6V23.43Z"/>
+    </g>
+    <g fill="#fff" fill-opacity="0.35"><rect x="30" y="102" width="16" height="2" rx="1"/><rect x="30" y="106" width="10" height="2" rx="1"/><rect x="30" y="110" width="16" height="2" rx="1"/></g>
+    <rect x="20" y="122" width="2.5" height="20" rx="1.2" fill="#dc2727"/>
+
+    <text x="72" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Add New Content Type</text>
+    <text x="72" y="96" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">WhatsApp Templates / Create New</text>
+    <!-- Content type tabs -->
+    <rect x="72" y="108" width="140" height="24" rx="12" fill="#25D366" opacity="0.08" stroke="#25D366" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="142" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#25D366">WhatsApp business initiated</text>
+    <rect x="220" y="108" width="130" height="24" rx="12" fill="#F1F5F9"/>
+    <text x="285" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#64748B">WhatsApp user initiated</text>
+    <rect x="358" y="108" width="110" height="24" rx="12" fill="#F1F5F9"/>
+    <text x="413" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#64748B">Facebook Messenger</text>
+    <rect x="476" y="108" width="44" height="24" rx="12" fill="#F1F5F9"/>
+    <text x="498" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#64748B">SMS</text>
+    <!-- Content area -->
+    <text x="72" y="158" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Content</text>
+    <text x="72" y="172" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Configure content - text</text>
+    <text x="72" y="196" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Body</text>
+    <rect x="72" y="204" width="436" height="130" rx="8" fill="#fff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="86" y="226" font-family="Arial, sans-serif" font-size="10" fill="#334155">Thanks for your order!</text>
+    <text x="86" y="244" font-family="Arial, sans-serif" font-size="10" fill="#334155">Order #</text>
+    <rect x="134" y="234" width="68" height="14" rx="3" fill="#25D366" opacity="0.08"/>
+    <text x="138" y="245" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#25D366">{{order_id}}</text>
+    <text x="206" y="244" font-family="Arial, sans-serif" font-size="10" fill="#334155"> with</text>
+    <rect x="86" y="252" width="62" height="14" rx="3" fill="#25D366" opacity="0.08"/>
+    <text x="90" y="263" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#25D366">{{division}}</text>
+    <text x="152" y="262" font-family="Arial, sans-serif" font-size="10" fill="#334155"> is confirmed.</text>
+    <text x="86" y="280" font-family="Arial, sans-serif" font-size="10" fill="#334155">We'll text you when it ships. Test changes.</text>
+    <text x="72" y="352" font-family="Arial, sans-serif" font-size="9" fill="#4A90D9">Select custom fields &#9662;</text>
+    <text x="436" y="352" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">118/1600</text>
+    <line x1="72" y1="368" x2="520" y2="368" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="72" y="390" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Template Info</text>
+    <text x="72" y="412" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Friendly Name:</text><text x="260" y="412" font-family="Arial, sans-serif" font-size="9" fill="#0F172A">Test Templates</text>
+    <text x="72" y="430" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Name:</text><text x="260" y="430" font-family="Arial, sans-serif" font-size="9" fill="#0F172A">Test Templates</text>
+    <text x="72" y="448" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Type:</text><text x="260" y="448" font-family="Arial, sans-serif" font-size="9" fill="#0F172A">Text</text>
+    <text x="72" y="466" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Language:</text><text x="260" y="466" font-family="Arial, sans-serif" font-size="9" fill="#0F172A">English</text>
+    <rect x="72" y="486" width="100" height="30" rx="8" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="122" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748B">Back</text>
+    <rect x="186" y="486" width="140" height="30" rx="8" fill="#25D366"/>
+    <text x="256" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#fff">Review &amp; Submit</text>
+    <!-- WhatsApp phone preview -->
+    <rect x="556" y="72" width="248" height="460" rx="10" fill="#FAFBFC" filter="url(#card-shadow-sm)" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="572" y="94" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Preview</text>
+    <text x="572" y="108" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Live template preview</text>
+    <rect x="624" y="120" width="150" height="320" rx="20" fill="#131521"/>
+    <rect x="630" y="134" width="138" height="290" rx="2" fill="#ECE5DD"/>
+    <rect x="630" y="134" width="138" height="38" rx="2" fill="#075E54"/>
+    <circle cx="646" cy="153" r="8" fill="#128C7E"/>
+    <text x="646" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#fff">WB</text>
+    <text x="660" y="151" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#fff">WhatsApp Business</text>
+    <text x="660" y="162" font-family="Arial, sans-serif" font-size="7" fill="#fff" fill-opacity="0.7">Online</text>
+    <rect x="638" y="180" width="120" height="106" rx="8" fill="#fff"/>
+    <text x="646" y="194" font-family="Arial, sans-serif" font-size="7.5" fill="#333">Thanks for your order!</text>
+    <text x="646" y="206" font-family="Arial, sans-serif" font-size="7.5" fill="#333">Order #</text><text x="676" y="206" font-family="Arial, sans-serif" font-size="7.5" font-weight="600" fill="#25D366">{{order_id}}</text>
+    <text x="646" y="218" font-family="Arial, sans-serif" font-size="7.5" fill="#333">with </text><text x="664" y="218" font-family="Arial, sans-serif" font-size="7.5" font-weight="600" fill="#25D366">{{division}}</text>
+    <text x="646" y="230" font-family="Arial, sans-serif" font-size="7.5" fill="#333">is confirmed. We'll text</text>
+    <text x="646" y="242" font-family="Arial, sans-serif" font-size="7.5" fill="#333">you when it ships.</text>
+    <text x="646" y="258" font-family="Arial, sans-serif" font-size="7.5" fill="#333">Test changes.</text>
+    <text x="724" y="278" font-family="Arial, sans-serif" font-size="6" fill="#999">09:43</text>
+    <text x="742" y="278" font-family="Arial, sans-serif" font-size="7" fill="#53BDEB">&#10003;&#10003;</text>
+
+  </g>
+</svg>

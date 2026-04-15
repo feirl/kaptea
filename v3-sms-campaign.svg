@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 660" fill="none">
+  <defs>
+    <filter id="browser-shadow" x="-4%" y="-2%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+    <filter id="card-shadow-sm" x="-8%" y="-6%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <clipPath id="browser-clip">
+      <rect x="20" y="20" width="800" height="620" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <g filter="url(#browser-shadow)">
+    <rect x="20" y="20" width="800" height="620" rx="12" fill="#fff" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="20" y="20" width="800" height="40" rx="12" fill="#F8FAFC"/>
+    <rect x="20" y="48" width="800" height="12" fill="#F8FAFC"/>
+    <line x1="20" y1="60" x2="820" y2="60" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="44" cy="40" r="5.5" fill="#EF4444" opacity="0.8"/>
+    <circle cx="64" cy="40" r="5.5" fill="#F59E0B" opacity="0.8"/>
+    <circle cx="84" cy="40" r="5.5" fill="#22C55E" opacity="0.8"/>
+    <rect x="110" y="30" width="500" height="22" rx="6" fill="#fff" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="126" cy="41" r="4" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+    <rect x="123" y="42" width="6" height="4" rx="1" fill="#94A3B8"/>
+    <text x="140" y="45" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">app.kaptea.com/pronto/campaigns/sms/create</text>
+    <circle cx="740" cy="41" r="3" fill="#CBD5E1"/>
+    <circle cx="760" cy="41" r="3" fill="#CBD5E1"/>
+    <circle cx="780" cy="41" r="3" fill="#CBD5E1"/>
+  </g>
+
+  <g clip-path="url(#browser-clip)">
+    <rect x="20" y="60" width="800" height="580" fill="#fff"/>
+    <!-- Pronto sidebar -->
+    <rect x="20" y="60" width="36" height="580" fill="#131521"/>
+    <g transform="translate(24, 64) scale(0.22)">
+      <path fill="#dc2727" d="M68.01,25.4c-1.15-.31-2.36-.52-3.64-.63-1.28-.1-2.44-.16-3.48-.16h-28.57v41.33h28.57c1.04,0,2.2-.05,3.48-.16,1.28-.1,2.49-.29,3.64-.55,3.34-.78,6.03-2.23,8.06-4.34,2.04-2.11,3.5-4.55,4.38-7.32.89-2.76,1.33-5.53,1.33-8.3s-.44-5.52-1.33-8.26c-.89-2.74-2.35-5.17-4.38-7.28-2.03-2.11-4.72-3.56-8.06-4.35Z"/>
+      <path fill="#dc2727" d="M61.51,9.2c1.1,0,2.45.04,4.07.12,1.62.08,3.16.25,4.62.51,6.26.99,11.49,3.13,15.7,6.42.9.7,1.74,1.46,2.55,2.24C75.57-5.65,51.5-3.45,31.66,9.2h29.84Z"/>
+      <path fill="#dc2727" d="M95.33,61.96c-2.09,5.01-5.23,9.16-9.43,12.45-4.2,3.29-9.43,5.43-15.7,6.42-1.46.21-3.01.37-4.66.47-1.64.11-2.99.16-4.03.16h-29.2v20.16c13.99,9.03,29.34,13.68,39.42,10.49,15.25-4.81,23.85-28.95,24.65-53.02-.32.97-.66,1.93-1.05,2.87Z"/>
+      <path fill="#dc2727" d="M14.95,23.43C3.73,35.95-2.9,51.26.66,63.58c2.42,8.38,7.63,16.47,14.28,23.6V23.43Z"/>
+    </g>
+    <g fill="#fff" fill-opacity="0.35">
+      <rect x="30" y="102" width="16" height="2" rx="1"/>
+      <rect x="30" y="106" width="10" height="2" rx="1"/>
+      <rect x="30" y="110" width="16" height="2" rx="1"/>
+    </g>
+    <rect x="20" y="122" width="2.5" height="20" rx="1.2" fill="#dc2727"/>
+
+    <!-- Page content starts at x=56 y=60 -->
+
+    <!-- Header -->
+    <text x="72" y="84" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Create SMS Campaign</text>
+    <text x="72" y="98" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Marketing / Campaigns / SMS</text>
+    <!-- Channel tabs -->
+    <rect x="72" y="106" width="48" height="24" rx="6" fill="#131521"/>
+    <text x="96" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#fff">SMS</text>
+    <rect x="126" y="106" width="48" height="24" rx="6" fill="#F1F5F9"/>
+    <text x="150" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748B">Email</text>
+    <!-- Step progress -->
+    <g transform="translate(160, 150)">
+      <circle cx="0" cy="0" r="14" fill="#16A34A"/>
+      <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#fff">&#10003;</text>
+      <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#0F172A">Setup</text>
+      <line x1="16" y1="0" x2="134" y2="0" stroke="#16A34A" stroke-width="2"/>
+      <circle cx="150" cy="0" r="14" fill="#16A34A"/>
+      <text x="150" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#fff">&#10003;</text>
+      <text x="150" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#0F172A">Audience</text>
+      <line x1="166" y1="0" x2="284" y2="0" stroke="#16A34A" stroke-width="2"/>
+      <circle cx="300" cy="0" r="14" fill="#dc2727"/>
+      <text x="300" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#fff">3</text>
+      <text x="300" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#dc2727">Message</text>
+      <line x1="316" y1="0" x2="434" y2="0" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="450" cy="0" r="14" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="450" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">4</text>
+      <text x="450" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Review &amp; Send</text>
+    </g>
+    <!-- Compose section -->
+    <text x="86" y="200" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Message</text>
+    <text x="86" y="214" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Compose content</text>
+    <rect x="86" y="224" width="68" height="24" rx="6" fill="#131521"/>
+    <text x="120" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#fff">Compose</text>
+    <rect x="160" y="224" width="86" height="24" rx="6" fill="#F1F5F9"/>
+    <text x="203" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748B">Select Template</text>
+    <text x="86" y="268" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">SMS Body *</text>
+    <!-- Text area -->
+    <rect x="86" y="276" width="430" height="140" rx="8" fill="#fff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="100" y="298" font-family="Arial, sans-serif" font-size="10.5" fill="#334155">Thanks for your order! Order #</text>
+    <rect x="272" y="287" width="68" height="14" rx="3" fill="#dc2727" opacity="0.08"/>
+    <text x="276" y="298" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#dc2727">{{order_id}}</text>
+    <text x="344" y="298" font-family="Arial, sans-serif" font-size="10.5" fill="#334155"> with</text>
+    <rect x="100" y="305" width="62" height="14" rx="3" fill="#dc2727" opacity="0.08"/>
+    <text x="104" y="316" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#dc2727">{{division}}</text>
+    <text x="166" y="316" font-family="Arial, sans-serif" font-size="10.5" fill="#334155"> is confirmed. We'll text you</text>
+    <text x="100" y="334" font-family="Arial, sans-serif" font-size="10.5" fill="#334155">when it ships.</text>
+    <text x="100" y="362" font-family="Arial, sans-serif" font-size="10.5" fill="#94A3B8">Txt STOP to opt out.</text>
+    <!-- Char count -->
+    <text x="86" y="434" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">125 characters (Unicode)</text>
+    <text x="260" y="434" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">2 Segments</text>
+    <!-- Footer toggle -->
+    <rect x="86" y="448" width="430" height="42" rx="8" fill="#FAFBFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="100" y="468" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Enable Footer</text>
+    <text x="100" y="482" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Add unsubscribe link to message</text>
+    <rect x="468" y="461" width="34" height="18" rx="9" fill="#16A34A"/>
+    <circle cx="493" cy="470" r="6.5" fill="#fff"/>
+    <!-- CTA -->
+    <rect x="358" y="506" width="158" height="34" rx="8" fill="#dc2727"/>
+    <text x="437" y="527" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#fff">Next: Review &amp; Send &#8594;</text>
+    <!-- Phone preview -->
+    <rect x="560" y="180" width="244" height="370" rx="10" fill="#FAFBFC" filter="url(#card-shadow-sm)" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="576" y="202" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Message Preview</text>
+    <text x="576" y="216" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">See how your SMS will appear</text>
+    <!-- Mini phone -->
+    <rect x="622" y="230" width="140" height="280" rx="18" fill="#131521"/>
+    <rect x="628" y="244" width="128" height="252" rx="2" fill="#ECE5DD"/>
+    <rect x="628" y="244" width="128" height="34" rx="2" fill="#075E54"/>
+    <text x="648" y="266" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#fff">Kaptea</text>
+    <!-- Bubble -->
+    <rect x="636" y="286" width="112" height="96" rx="8" fill="#fff"/>
+    <text x="644" y="300" font-family="Arial, sans-serif" font-size="7.5" fill="#333">Thanks for your order!</text>
+    <text x="644" y="312" font-family="Arial, sans-serif" font-size="7.5" fill="#333">Order #ORD-4829 with</text>
+    <text x="644" y="324" font-family="Arial, sans-serif" font-size="7.5" fill="#333">Depot 2 is confirmed.</text>
+    <text x="644" y="340" font-family="Arial, sans-serif" font-size="7.5" fill="#333">We'll text you when</text>
+    <text x="644" y="352" font-family="Arial, sans-serif" font-size="7.5" fill="#333">it ships.</text>
+    <text x="644" y="372" font-family="Arial, sans-serif" font-size="7" fill="#999">Txt STOP to opt out.</text>
+    <text x="720" y="378" font-family="Arial, sans-serif" font-size="6" fill="#999">Now</text>
+    <!-- Pro Tips -->
+    <rect x="560" y="562" width="244" height="72" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+    <text x="576" y="580" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#B45309">Pro Tips</text>
+    <text x="576" y="596" font-family="Arial, sans-serif" font-size="8" fill="#78716C">Keep under 160 chars to minimize costs</text>
+    <text x="576" y="610" font-family="Arial, sans-serif" font-size="8" fill="#78716C">Test on your own number before sending</text>
+    <text x="576" y="624" font-family="Arial, sans-serif" font-size="8" fill="#78716C">Personalize with contact variables</text>
+
+  </g>
+</svg>

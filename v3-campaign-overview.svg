@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 660" fill="none">
+  <defs>
+    <filter id="browser-shadow" x="-4%" y="-2%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+    <filter id="card-shadow-sm" x="-8%" y="-6%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <clipPath id="browser-clip">
+      <rect x="20" y="20" width="800" height="620" rx="12"/>
+    </clipPath>
+  </defs>
+  <g filter="url(#browser-shadow)">
+    <rect x="20" y="20" width="800" height="620" rx="12" fill="#fff" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="20" y="20" width="800" height="40" rx="12" fill="#F8FAFC"/>
+    <rect x="20" y="48" width="800" height="12" fill="#F8FAFC"/>
+    <line x1="20" y1="60" x2="820" y2="60" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="44" cy="40" r="5.5" fill="#EF4444" opacity="0.8"/>
+    <circle cx="64" cy="40" r="5.5" fill="#F59E0B" opacity="0.8"/>
+    <circle cx="84" cy="40" r="5.5" fill="#22C55E" opacity="0.8"/>
+    <rect x="110" y="30" width="500" height="22" rx="6" fill="#fff" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="126" cy="41" r="4" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+    <rect x="123" y="42" width="6" height="4" rx="1" fill="#94A3B8"/>
+    <text x="140" y="45" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">app.kaptea.com/pronto/campaigns</text>
+    <circle cx="740" cy="41" r="3" fill="#CBD5E1"/><circle cx="760" cy="41" r="3" fill="#CBD5E1"/><circle cx="780" cy="41" r="3" fill="#CBD5E1"/>
+  </g>
+  <g clip-path="url(#browser-clip)">
+    <rect x="20" y="60" width="800" height="580" fill="#fff"/>
+    <rect x="20" y="60" width="36" height="580" fill="#131521"/>
+    <g transform="translate(24, 64) scale(0.22)">
+      <path fill="#dc2727" d="M68.01,25.4c-1.15-.31-2.36-.52-3.64-.63-1.28-.1-2.44-.16-3.48-.16h-28.57v41.33h28.57c1.04,0,2.2-.05,3.48-.16,1.28-.1,2.49-.29,3.64-.55,3.34-.78,6.03-2.23,8.06-4.34,2.04-2.11,3.5-4.55,4.38-7.32.89-2.76,1.33-5.53,1.33-8.3s-.44-5.52-1.33-8.26c-.89-2.74-2.35-5.17-4.38-7.28-2.03-2.11-4.72-3.56-8.06-4.35Z"/>
+      <path fill="#dc2727" d="M61.51,9.2c1.1,0,2.45.04,4.07.12,1.62.08,3.16.25,4.62.51,6.26.99,11.49,3.13,15.7,6.42.9.7,1.74,1.46,2.55,2.24C75.57-5.65,51.5-3.45,31.66,9.2h29.84Z"/>
+      <path fill="#dc2727" d="M95.33,61.96c-2.09,5.01-5.23,9.16-9.43,12.45-4.2,3.29-9.43,5.43-15.7,6.42-1.46.21-3.01.37-4.66.47-1.64.11-2.99.16-4.03.16h-29.2v20.16c13.99,9.03,29.34,13.68,39.42,10.49,15.25-4.81,23.85-28.95,24.65-53.02-.32.97-.66,1.93-1.05,2.87Z"/>
+      <path fill="#dc2727" d="M14.95,23.43C3.73,35.95-2.9,51.26.66,63.58c2.42,8.38,7.63,16.47,14.28,23.6V23.43Z"/>
+    </g>
+    <g fill="#fff" fill-opacity="0.35"><rect x="30" y="102" width="16" height="2" rx="1"/><rect x="30" y="106" width="10" height="2" rx="1"/><rect x="30" y="110" width="16" height="2" rx="1"/></g>
+    <rect x="20" y="122" width="2.5" height="20" rx="1.2" fill="#dc2727"/>
+
+    <!-- Header -->
+    <rect x="56" y="60" width="764" height="42" fill="#FAFBFC"/>
+    <line x1="56" y1="102" x2="820" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="72" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Campaigns</text>
+    <text x="72" y="94" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Create and manage your messaging campaigns</text>
+    <rect x="706" y="70" width="100" height="26" rx="6" fill="#dc2727"/>
+    <text x="756" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#fff">+ New Campaign</text>
+    <!-- KPIs -->
+    <g transform="translate(72, 114)">
+      <rect width="168" height="74" rx="10" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="14" y="20" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Total Campaigns</text>
+      <text x="14" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0F172A">24</text>
+      <text x="14" y="62" font-family="Arial, sans-serif" font-size="8" fill="#16A34A">+3 this month</text>
+    </g>
+    <g transform="translate(254, 114)">
+      <rect width="168" height="74" rx="10" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="14" y="20" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Total Sent</text>
+      <text x="14" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0F172A">98.5K</text>
+      <text x="14" y="62" font-family="Arial, sans-serif" font-size="8" fill="#16A34A">+12% vs last month</text>
+    </g>
+    <g transform="translate(436, 114)">
+      <rect width="168" height="74" rx="10" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="14" y="20" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Avg Open Rate</text>
+      <text x="14" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#F59E0B">68.2%</text>
+      <text x="14" y="62" font-family="Arial, sans-serif" font-size="8" fill="#16A34A">+2.4% vs last month</text>
+    </g>
+    <g transform="translate(618, 114)">
+      <rect width="186" height="74" rx="10" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+      <text x="14" y="20" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Avg Click Rate</text>
+      <text x="14" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#4A90D9">34.6%</text>
+      <text x="14" y="62" font-family="Arial, sans-serif" font-size="8" fill="#16A34A">+1.8% vs last month</text>
+    </g>
+    <!-- Campaign table -->
+    <rect x="72" y="202" width="732" height="420" rx="10" fill="#fff" filter="url(#card-shadow-sm)" stroke="#F1F5F9" stroke-width="1"/>
+    <!-- Search -->
+    <rect x="88" y="214" width="180" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="102" y="230" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Search campaigns...</text>
+    <rect x="276" y="214" width="56" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="304" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94A3B8">Filter</text>
+    <!-- Table header -->
+    <line x1="88" y1="248" x2="788" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="88" y="266" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">CAMPAIGN</text>
+    <text x="290" y="266" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">STATUS</text>
+    <text x="370" y="266" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">SENT</text>
+    <text x="440" y="266" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">OPEN RATE</text>
+    <text x="550" y="266" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">CLICK RATE</text>
+    <text x="660" y="266" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#94A3B8">PERIOD</text>
+    <line x1="88" y1="274" x2="788" y2="274" stroke="#F1F5F9" stroke-width="1"/>
+    <!-- Row 1 -->
+    <text x="88" y="298" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Summer Product Launch</text>
+    <text x="88" y="312" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">8,921 opens, 4,234 clicks</text>
+    <rect x="290" y="290" width="46" height="16" rx="8" fill="#DCFCE7"/><text x="313" y="301" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="600" fill="#16A34A">Active</text>
+    <text x="370" y="298" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">12,453</text>
+    <rect x="440" y="292" width="80" height="5" rx="2.5" fill="#F1F5F9"/><rect x="440" y="292" width="57" height="5" rx="2.5" fill="#F59E0B"/>
+    <text x="440" y="312" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#F59E0B">71.6%</text>
+    <rect x="550" y="292" width="80" height="5" rx="2.5" fill="#F1F5F9"/><rect x="550" y="292" width="27" height="5" rx="2.5" fill="#4A90D9"/>
+    <text x="550" y="312" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#4A90D9">34.0%</text>
+    <text x="660" y="298" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Jun 1 - Aug 31, 2024</text>
+    <line x1="88" y1="324" x2="788" y2="324" stroke="#F8FAFC" stroke-width="1"/>
+    <!-- Row 2 -->
+    <text x="88" y="348" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Customer Re-engagement</text>
+    <text x="88" y="362" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">5,123 opens, 2,891 clicks</text>
+    <rect x="290" y="340" width="46" height="16" rx="8" fill="#DCFCE7"/><text x="313" y="351" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="600" fill="#16A34A">Active</text>
+    <text x="370" y="348" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">8,234</text>
+    <rect x="440" y="342" width="80" height="5" rx="2.5" fill="#F1F5F9"/><rect x="440" y="342" width="50" height="5" rx="2.5" fill="#F59E0B"/>
+    <text x="440" y="362" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#F59E0B">62.2%</text>
+    <rect x="550" y="342" width="80" height="5" rx="2.5" fill="#F1F5F9"/><rect x="550" y="342" width="28" height="5" rx="2.5" fill="#4A90D9"/>
+    <text x="550" y="362" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#4A90D9">35.1%</text>
+    <text x="660" y="348" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Jul 15 - Sep 15, 2024</text>
+    <line x1="88" y1="374" x2="788" y2="374" stroke="#F8FAFC" stroke-width="1"/>
+    <!-- Row 3 -->
+    <text x="88" y="398" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Newsletter Q3 2024</text>
+    <text x="88" y="412" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Not yet sent</text>
+    <rect x="290" y="390" width="62" height="16" rx="8" fill="#DBEAFE"/><text x="321" y="401" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="600" fill="#2563EB">Scheduled</text>
+    <text x="370" y="398" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">-</text>
+    <text x="440" y="398" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">-</text>
+    <text x="550" y="398" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">-</text>
+    <text x="660" y="398" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Aug 1 - Oct 1, 2024</text>
+    <line x1="88" y1="424" x2="788" y2="424" stroke="#F8FAFC" stroke-width="1"/>
+    <!-- Row 4 -->
+    <text x="88" y="448" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Holiday Special Offer</text>
+    <text x="88" y="462" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Not yet sent</text>
+    <rect x="290" y="440" width="40" height="16" rx="8" fill="#F1F5F9"/><text x="310" y="451" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="600" fill="#94A3B8">Draft</text>
+    <text x="660" y="448" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Nov 1 - Dec 31, 2024</text>
+    <line x1="88" y1="474" x2="788" y2="474" stroke="#F8FAFC" stroke-width="1"/>
+    <!-- Row 5 -->
+    <text x="88" y="498" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">Black Friday Flash Sale</text>
+    <text x="88" y="512" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">12,450 opens, 6,230 clicks</text>
+    <rect x="290" y="490" width="64" height="16" rx="8" fill="#EDE9FE"/><text x="322" y="501" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="600" fill="#7C3AED">Completed</text>
+    <text x="370" y="498" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#0F172A">18,700</text>
+    <rect x="440" y="492" width="80" height="5" rx="2.5" fill="#F1F5F9"/><rect x="440" y="492" width="53" height="5" rx="2.5" fill="#F59E0B"/>
+    <text x="440" y="512" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#F59E0B">66.6%</text>
+    <rect x="550" y="492" width="80" height="5" rx="2.5" fill="#F1F5F9"/><rect x="550" y="492" width="27" height="5" rx="2.5" fill="#4A90D9"/>
+    <text x="550" y="512" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#4A90D9">33.3%</text>
+    <text x="660" y="498" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Nov 24 - Nov 28, 2024</text>
+    <text x="700" y="604" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Showing 1-5 of 24</text>
+
+  </g>
+</svg>
