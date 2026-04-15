@@ -145,7 +145,7 @@
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">03</span><a href="#">IVR &amp; Voice Orchestration</a></div>
+              <div class="use-case-title"><span class="use-case-num">03</span><a href="ivr-voice-orchestration.html">IVR &amp; Voice Orchestration</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">API-first IVR architecture</li>
                 <li class="mega-detail">CRM-integrated intelligent routing</li>
