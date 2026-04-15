@@ -197,7 +197,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="#">Healthcare</a></div>
+                <div class="industry-title"><a href="healthcare.html">Healthcare</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Appointment &amp; patient messaging</li>
                   <li class="mega-detail">Secure two-way communications</li>
