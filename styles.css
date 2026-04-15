@@ -117,9 +117,9 @@ nav {
 .nav-item.active .mega { display: block; }
 
 /* Platform mega: three-panel layout */
-.mega-platform { min-width: 1140px; }
+.mega-platform { min-width: 880px; }
 .mega-cols { display: grid; gap: 0; }
-.mega-platform .mega-cols { grid-template-columns: 260px 240px 1fr; }
+.mega-platform .mega-cols { grid-template-columns: 256px 292px 190px; }
 .mega-solutions .mega-cols { grid-template-columns: auto 1fr; }
 
 /* Left panel */
@@ -128,10 +128,10 @@ nav {
   padding-right: 28px;
 }
 
-/* Middle panel (col 2) */
+/* Middle panel (col 2) — top-aligned with first section in col 1 */
 .mega-col2 {
   border-right: 1px solid #eeebe6;
-  padding: 0 28px;
+  padding: 42px 28px 0;
   display: flex;
   flex-direction: column;
 }
@@ -187,7 +187,7 @@ nav {
 .industry-title a:hover { color: #dc2727; }
 
 /* Right panel */
-.mega-right { padding-left: 32px; }
+.mega-right { padding-left: 24px; }
 .mega-right-grid {
   display: flex;
   flex-direction: column;
