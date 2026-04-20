@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23dc2727'/><text x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='18' font-weight='700' fill='white'>K</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications &amp; Accreditations | Kaptea</title>
+  <meta name="description" content="Kaptea holds ISO 27001, Cyber Essentials Plus, CREST accreditation, Twilio Gold &amp; AI Partner status, and Telnyx partnership. Every credential is independently audited and publicly verifiable." />
+  <link rel="canonical" href="https://feirl.github.io/kaptea/certification.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Certifications &amp; Accreditations | Kaptea" />
+  <meta property="og:description" content="Independent, audited certifications across information security, cyber assurance and technical security testing. Every credential publicly verifiable." />
+  <meta property="og:url" content="https://feirl.github.io/kaptea/certification.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* ─── HERO ───────────────────────────────────────────────── */
+    .cert-hero {
+      background: #131521;
+      color: #fff;
+      padding: 88px 40px 96px;
+      text-align: center;
+    }
+    .cert-hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .cert-hero-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2727;
+      margin-bottom: 20px;
+    }
+    .cert-hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    .cert-hero h1 em { color: #dc2727; font-style: normal; }
+    .cert-hero p {
+      font-size: 18px;
+      color: #9ca3af;
+      line-height: 1.7;
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+    .cert-hero-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .cert-hero-badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .cert-hero-badge svg { color: #dc2727; flex-shrink: 0; }
+
+    /* ─── VERIFICATION STRIP ─────────────────────────────────── */
+    .cert-verify-strip {
+      background: #fff;
+      border-bottom: 1px solid #eeebe6;
+      padding: 18px 40px;
+    }
+    .cert-verify-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+    .cert-verify-inner svg { color: #16a34a; flex-shrink: 0; }
+    .cert-verify-inner strong { color: #131521; }
+    .cert-verify-inner a { color: #dc2727; text-decoration: none; font-weight: 500; }
+    .cert-verify-inner a:hover { text-decoration: underline; }
+
+    /* ─── CREDENTIAL CARDS ───────────────────────────────────── */
+    .cert-credentials {
+      padding: 80px 40px;
+      background: #fff;
+    }
+    .cert-credentials-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .cert-section-intro {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .cert-section-intro h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 14px;
+    }
+    .cert-section-intro p {
+      font-size: 17px;
+      color: #666;
+      line-height: 1.65;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .cert-card {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+      border: 1px solid #eeebe6;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .cert-card:last-child { margin-bottom: 0; }
+
+    .cert-card-left {
+      background: #faf8f5;
+      border-right: 1px solid #eeebe6;
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .cert-badge-box {
+      width: 120px;
+      height: 120px;
+      background: #fff;
+      border: 1px solid #e5e2de;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #bbb;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.4;
+      padding: 12px;
+    }
+    .cert-issuer {
+      font-size: 12px;
+      color: #999;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .cert-issuer strong {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 4px;
+    }
+    .cert-verify-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #dc2727;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .cert-verify-link:hover { opacity: 0.75; }
+
+    .cert-card-right {
+      padding: 36px 40px;
+    }
+    .cert-card-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #dc2727;
+      background: rgba(220,39,39,0.07);
+      border: 1px solid rgba(220,39,39,0.15);
+      border-radius: 20px;
+      padding: 3px 10px;
+      margin-bottom: 14px;
+    }
+    .cert-card-right h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .cert-card-right .cert-plain-english {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      max-width: 560px;
+    }
+    .cert-proves {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .cert-prove-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .cert-prove-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: rgba(22,163,74,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .cert-prove-item p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .cert-prove-item p strong {
+      color: #131521;
+      font-weight: 600;
+    }
+
+    /* ─── PROCUREMENT TABLE ──────────────────────────────────── */
+    .cert-procurement {
+      background: #131521;
+      padding: 80px 40px;
+      color: #fff;
+    }
+    .cert-procurement-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .cert-procurement-header {
+      margin-bottom: 48px;
+    }
+    .cert-procurement-header .cert-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2727;
+      margin-bottom: 12px;
+    }
+    .cert-procurement-header h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    .cert-procurement-header p {
+      font-size: 16px;
+      color: #9ca3af;
+      line-height: 1.65;
+      max-width: 560px;
+    }
+    .cert-proc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .cert-proc-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 24px 28px;
+    }
+    .cert-proc-card-scenario {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+    .cert-proc-card h4 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .cert-proc-creds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .cert-proc-cred {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(220,39,39,0.12);
+      border: 1px solid rgba(220,39,39,0.25);
+      color: #f87171;
+    }
+
+    /* ─── SECURITY ARCHITECTURE ──────────────────────────────── */
+    .cert-security {
+      background: #faf8f5;
+      border-top: 1px solid #eeebe6;
+      border-bottom: 1px solid #eeebe6;
+      padding: 80px 40px;
+    }
+    .cert-security-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .cert-security-header {
+      margin-bottom: 48px;
+    }
+    .cert-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2727;
+      margin-bottom: 12px;
+    }
+    .cert-security-header h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 14px;
+    }
+    .cert-security-header p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.65;
+      max-width: 560px;
+    }
+    .cert-controls-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .cert-control-card {
+      background: #fff;
+      border: 1px solid #eeebe6;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .cert-control-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: #dc2727;
+    }
+    .cert-control-card h4 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 8px;
+    }
+    .cert-control-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ─── COMPLIANCE PACK CTA ────────────────────────────────── */
+    .cert-pack {
+      background: #fff;
+      padding: 80px 40px;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .cert-pack-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 80px;
+      align-items: center;
+    }
+    .cert-pack-content .cert-label { margin-bottom: 12px; }
+    .cert-pack-content h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .cert-pack-content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .cert-pack-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .cert-pack-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #444;
+    }
+    .cert-pack-list li svg { color: #16a34a; flex-shrink: 0; }
+    .cert-pack-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #131521;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cert-pack-btn:hover { background: #1e2235; }
+    .cert-pack-card {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 14px;
+      padding: 32px;
+    }
+    .cert-pack-card-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .cert-pack-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .cert-pack-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: #fff;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+    }
+    .cert-pack-item-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(220,39,39,0.07);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #dc2727;
+    }
+    .cert-pack-item-text strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #131521;
+    }
+    .cert-pack-item-text span {
+      font-size: 12px;
+      color: #999;
+    }
+
+    /* ─── CTA CLOSE ──────────────────────────────────────────── */
+    .cert-cta {
+      background: #dc2727;
+      padding: 80px 40px;
+      text-align: center;
+      color: #fff;
+    }
+    .cert-cta-inner { max-width: 600px; margin: 0 auto; }
+    .cert-cta h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cert-cta p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .cert-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: #fff;
+      color: #dc2727;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+    .btn-outline-white {
+      border: 2px solid rgba(255,255,255,0.4);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s;
+    }
+    .btn-outline-white:hover { border-color: #fff; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .cert-card { grid-template-columns: 1fr; }
+      .cert-card-left { border-right: none; border-bottom: 1px solid #eeebe6; flex-direction: row; justify-content: flex-start; padding: 24px 28px; gap: 24px; text-align: left; }
+      .cert-proc-grid { grid-template-columns: 1fr; }
+      .cert-controls-grid { grid-template-columns: 1fr 1fr; }
+      .cert-pack-inner { grid-template-columns: 1fr; gap: 40px; }
+      .cert-hero h1 { font-size: 36px; }
+    }
+    @media (max-width: 640px) {
+      .cert-hero { padding: 64px 20px 72px; }
+      .cert-credentials { padding: 56px 20px; }
+      .cert-procurement { padding: 56px 20px; }
+      .cert-security { padding: 56px 20px; }
+      .cert-pack { padding: 56px 20px; }
+      .cert-cta { padding: 56px 20px; }
+      .cert-verify-strip { padding: 16px 20px; }
+      .cert-controls-grid { grid-template-columns: 1fr; }
+      .cert-card-right { padding: 24px 20px; }
+      .cert-hero h1 { font-size: 30px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="cert-hero">
+  <div class="cert-hero-inner">
+    <p class="cert-hero-label">Certifications &amp; Accreditations</p>
+    <h1>Security and compliance you can <em>verify,</em> not just trust.</h1>
+    <p>Kaptea holds independent, audited certifications across information security, cyber assurance and technical security testing. Every credential listed here is publicly verifiable — here is what we hold, what it means, and where to check it.</p>
+    <div class="cert-hero-badges">
+      <span class="cert-hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        ISO 27001
+      </span>
+      <span class="cert-hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Cyber Essentials Plus
+      </span>
+      <span class="cert-hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        CREST Accredited
+      </span>
+      <span class="cert-hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Twilio Gold &amp; AI Partner
+      </span>
+      <span class="cert-hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Telnyx Partner
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     VERIFICATION STRIP
+═══════════════════════════════ -->
+<div class="cert-verify-strip">
+  <div class="cert-verify-inner">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    <span><strong>All certifications independently verified.</strong> Each credential below links to the issuing body's public directory. No self-certification — every standard listed here has been assessed by an external auditor.</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     CREDENTIAL CARDS
+═══════════════════════════════ -->
+<section class="cert-credentials">
+  <div class="cert-credentials-inner">
+
+    <div class="cert-section-intro">
+      <h2>Our credentials</h2>
+      <p>Five independent certifications and partnerships, covering information security, cyber hygiene, technical security assurance and carrier-grade infrastructure.</p>
+    </div>
+
+    <!-- ISO 27001 -->
+    <article class="cert-card">
+      <div class="cert-card-left">
+        <div class="cert-badge-box" aria-label="ISO 27001 badge placeholder">
+          Badge<br>coming soon
+        </div>
+        <div class="cert-issuer">
+          <strong>Issued by</strong>
+          UKAS-accredited<br>Certification Body
+        </div>
+        <a href="https://certcheck.ukas.com" target="_blank" rel="noopener" class="cert-verify-link">
+          Verify on UKAS
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="cert-card-right">
+        <span class="cert-card-tag">Information Security</span>
+        <h3>ISO/IEC 27001:2022</h3>
+        <p class="cert-plain-english">The international benchmark for information security management, independently audited every year. The global standard your procurement team is most likely to ask about first.</p>
+        <div class="cert-proves">
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p>Documented controls across access management, encryption, incident response, supplier security and business continuity — assessed by an independent auditor, not self-declared.</p>
+          </div>
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p><strong>Annual surveillance audits, full re-certification every three years.</strong> This is not a one-time badge — the standard requires continuous operation and improvement of the ISMS.</p>
+          </div>
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p>Passes the pass/fail threshold on most enterprise and public sector procurement questionnaires. The certificate number, scope and issuing body are available on request.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cyber Essentials Plus -->
+    <article class="cert-card">
+      <div class="cert-card-left">
+        <div class="cert-badge-box" aria-label="Cyber Essentials Plus badge placeholder">
+          Badge<br>coming soon
+        </div>
+        <div class="cert-issuer">
+          <strong>Issued by</strong>
+          IASME-licensed<br>Certification Body<br>(NCSC scheme)
+        </div>
+        <a href="https://iasme.co.uk/cyber-essentials/ncsc-certificate-search/" target="_blank" rel="noopener" class="cert-verify-link">
+          Verify on IASME
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="cert-card-right">
+        <span class="cert-card-tag">Cyber Assurance</span>
+        <h3>Cyber Essentials Plus</h3>
+        <p class="cert-plain-english">The UK government's cyber hygiene standard at the independently verified level. "Plus" means an external tester has audited the controls in practice, not just reviewed our answers to a questionnaire.</p>
+        <div class="cert-proves">
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p>Five core technical controls — firewalls, secure configuration, access control, malware protection and patch management — validated by hands-on technical testing, not self-attestation.</p>
+          </div>
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p><strong>Mandatory for all UK government contracts involving personal data or technical services.</strong> Required under Cabinet Office guidance and for suppliers to critical national infrastructure sectors.</p>
+          </div>
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p>Certificate renewed annually. Current status is verifiable in real time via the IASME certificate search — the dynamic badge confirms it has not lapsed.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CREST -->
+    <article class="cert-card">
+      <div class="cert-card-left">
+        <div class="cert-badge-box" aria-label="CREST badge placeholder">
+          Badge<br>coming soon
+        </div>
+        <div class="cert-issuer">
+          <strong>Issued by</strong>
+          CREST<br>(Council of Registered<br>Ethical Security Testers)
+        </div>
+        <a href="https://marketplace.crest.org/suppliers/" target="_blank" rel="noopener" class="cert-verify-link">
+          Verify on CREST
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="cert-card-right">
+        <span class="cert-card-tag">Technical Security</span>
+        <h3>CREST Accredited</h3>
+        <p class="cert-plain-english">The accreditation body formally recognised by the NCSC, the FCA and the Bank of England for technical security testing. CREST is how regulated sectors specify and verify the quality of security assurance work.</p>
+        <div class="cert-proves">
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p>Independently audited across scoping methodology, testing execution, data handling, quality assurance and reporting standards — not a membership fee or self-declaration.</p>
+          </div>
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p><strong>Recognised for CBEST assessments</strong> — the Bank of England and FCA's financial sector cyber resilience testing programme. Required under UK Procurement Policy Note PPN 014 for government security suppliers.</p>
+          </div>
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p>For financial services, healthcare and CNI buyers: CREST accreditation means any security testing work Kaptea commissions or delivers against your environment meets the standards your own regulator would expect.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Twilio Gold & AI Partner -->
+    <article class="cert-card">
+      <div class="cert-card-left">
+        <div class="cert-badge-box" aria-label="Twilio Gold Partner badge placeholder">
+          Badge<br>coming soon
+        </div>
+        <div class="cert-issuer">
+          <strong>Issued by</strong>
+          Twilio<br>Build Partner Program
+        </div>
+        <a href="https://showcase.twilio.com/partner-listings?partnerTier=Gold" target="_blank" rel="noopener" class="cert-verify-link">
+          Verify on Twilio
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="cert-card-right">
+        <span class="cert-card-tag">Partner Certification</span>
+        <h3>Twilio Gold &amp; AI Partner</h3>
+        <p class="cert-plain-english">Twilio's highest publicly achievable partner tier, plus one of only 16 partners globally to hold Twilio AI Certified status. This is a delivery track record designation, not a commercial relationship.</p>
+        <div class="cert-proves">
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p>Gold tier requires revenue thresholds, customer satisfaction scores, multiple Twilio-certified staff and a joint business plan. It cannot be purchased — it reflects consistent enterprise delivery performance.</p>
+          </div>
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p><strong>AI Certified status: technically assessed by Twilio's own Product team</strong> on ConversationRelay and Conversational Intelligence implementations. Fewer than 20 partners globally hold this designation.</p>
+          </div>
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p>Kaptea is listed in the Twilio Showcase partner directory — meaning Twilio's own sales team actively refers enterprise customers to us. Twilio puts its brand behind the recommendation.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Telnyx Partner -->
+    <article class="cert-card">
+      <div class="cert-card-left">
+        <div class="cert-badge-box" aria-label="Telnyx Partner badge placeholder">
+          Badge<br>coming soon
+        </div>
+        <div class="cert-issuer">
+          <strong>Issued by</strong>
+          Telnyx<br>Partner Program
+        </div>
+        <a href="https://telnyx.partnerpage.io/partners" target="_blank" rel="noopener" class="cert-verify-link">
+          Verify on Telnyx
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="cert-card-right">
+        <span class="cert-card-tag">Carrier Partnership</span>
+        <h3>Telnyx Partner</h3>
+        <p class="cert-plain-english">A direct partner relationship with Telnyx's private global IP network. Where Twilio is Kaptea's primary platform, Telnyx is our carrier independence play — the infrastructure resilience credential that single-carrier platforms cannot offer.</p>
+        <div class="cert-proves">
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p>Kaptea deployments can route across both Twilio and Telnyx infrastructure. No single-carrier dependency means no single point of failure — critical for utilities, emergency services and financial services.</p>
+          </div>
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p><strong>Telnyx operates its own private global IP network</strong> — not aggregated third-party carrier routes. This gives differentiated latency and cost characteristics for voice-critical and high-volume messaging deployments.</p>
+          </div>
+          <div class="cert-prove-item">
+            <span class="cert-prove-icon" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <p>Carrier diversity is an increasingly common expectation in regulated sector procurement. A Kaptea deployment is not dependent on any single provider's uptime — by design.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     PROCUREMENT TABLE
+═══════════════════════════════ -->
+<section class="cert-procurement">
+  <div class="cert-procurement-inner">
+    <div class="cert-procurement-header">
+      <p class="cert-label">For procurement teams</p>
+      <h2>What our credentials answer on your supplier questionnaire</h2>
+      <p>If you are assessing Kaptea for a regulated procurement, here is how our certifications map to the most common requirements.</p>
+    </div>
+    <div class="cert-proc-grid">
+
+      <div class="cert-proc-card">
+        <p class="cert-proc-card-scenario">Procurement scenario</p>
+        <h4>UK public sector ITT — supply chain cyber assurance</h4>
+        <div class="cert-proc-creds">
+          <span class="cert-proc-cred">Cyber Essentials Plus</span>
+          <span class="cert-proc-cred">ISO 27001</span>
+        </div>
+      </div>
+
+      <div class="cert-proc-card">
+        <p class="cert-proc-card-scenario">Procurement scenario</p>
+        <h4>Financial services — FCA/PRA supplier assurance</h4>
+        <div class="cert-proc-creds">
+          <span class="cert-proc-cred">CREST Accredited</span>
+          <span class="cert-proc-cred">ISO 27001</span>
+          <span class="cert-proc-cred">Cyber Essentials Plus</span>
+        </div>
+      </div>
+
+      <div class="cert-proc-card">
+        <p class="cert-proc-card-scenario">Procurement scenario</p>
+        <h4>NHS / healthcare — DSPT supplier requirements</h4>
+        <div class="cert-proc-creds">
+          <span class="cert-proc-cred">ISO 27001</span>
+          <span class="cert-proc-cred">Cyber Essentials Plus</span>
+        </div>
+      </div>
+
+      <div class="cert-proc-card">
+        <p class="cert-proc-card-scenario">Procurement scenario</p>
+        <h4>CNI / utilities — carrier resilience and single-provider risk</h4>
+        <div class="cert-proc-creds">
+          <span class="cert-proc-cred">Twilio Gold Partner</span>
+          <span class="cert-proc-cred">Telnyx Partner</span>
+        </div>
+      </div>
+
+      <div class="cert-proc-card">
+        <p class="cert-proc-card-scenario">Procurement scenario</p>
+        <h4>Enterprise InfoSec DDQ — standard security questionnaire</h4>
+        <div class="cert-proc-creds">
+          <span class="cert-proc-cred">ISO 27001</span>
+          <span class="cert-proc-cred">Cyber Essentials Plus</span>
+          <span class="cert-proc-cred">CREST Accredited</span>
+        </div>
+      </div>
+
+      <div class="cert-proc-card">
+        <p class="cert-proc-card-scenario">Procurement scenario</p>
+        <h4>AI and automation deployments — validated delivery capability</h4>
+        <div class="cert-proc-creds">
+          <span class="cert-proc-cred">Twilio AI Certified</span>
+          <span class="cert-proc-cred">ISO 27001</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     SECURITY BY DESIGN
+═══════════════════════════════ -->
+<section class="cert-security">
+  <div class="cert-security-inner">
+    <div class="cert-security-header">
+      <p class="cert-label">Security architecture</p>
+      <h2>Certifications reflect controls, not claims.</h2>
+      <p>The standards above exist because the underlying security controls are real. Here is what is in place across every Kaptea deployment.</p>
+    </div>
+    <div class="cert-controls-grid">
+
+      <div class="cert-control-card">
+        <div class="cert-control-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h4>Encryption</h4>
+        <p>AES-256 encryption at rest. TLS 1.2+ in transit across all platform components and API connections. No exceptions.</p>
+      </div>
+
+      <div class="cert-control-card">
+        <div class="cert-control-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h4>Access control</h4>
+        <p>Role-based access controls across every deployment. SSO support, two-factor authentication enforced at login, admin-only template and configuration controls.</p>
+      </div>
+
+      <div class="cert-control-card">
+        <div class="cert-control-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h4>Data residency</h4>
+        <p>EU and UK residency options available as standard. Irish residency for Irish public sector customers. Data does not leave the agreed jurisdiction.</p>
+      </div>
+
+      <div class="cert-control-card">
+        <div class="cert-control-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h4>Incident response</h4>
+        <p>Documented incident response procedures, tested and reviewed annually as part of ISO 27001 surveillance. Defined RTO/RPO for mission-critical deployments.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     COMPLIANCE PACK CTA
+═══════════════════════════════ -->
+<section class="cert-pack">
+  <div class="cert-pack-inner">
+    <div class="cert-pack-content">
+      <p class="cert-label">For procurement and InfoSec teams</p>
+      <h2>Completing a DDQ or supplier questionnaire?</h2>
+      <p>Request our compliance pack: certificate scope statements, certifying body details, certificate numbers and our security architecture overview — ready to attach to your procurement submission.</p>
+      <ul class="cert-pack-list">
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          ISO 27001 certificate scope and certifying body details
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Cyber Essentials Plus certificate number and expiry
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          CREST member reference and accredited service categories
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Security architecture overview document
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          GDPR and data residency statement
+        </li>
+      </ul>
+      <a href="demo.html" class="cert-pack-btn">
+        Request Compliance Pack
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="cert-pack-card" aria-label="Compliance pack contents">
+      <p class="cert-pack-card-label">What you'll receive</p>
+      <div class="cert-pack-items">
+        <div class="cert-pack-item">
+          <div class="cert-pack-item-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="cert-pack-item-text">
+            <strong>Certificate summary sheet</strong>
+            <span>All five credentials on one page</span>
+          </div>
+        </div>
+        <div class="cert-pack-item">
+          <div class="cert-pack-item-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="cert-pack-item-text">
+            <strong>Security architecture overview</strong>
+            <span>Controls, encryption, residency</span>
+          </div>
+        </div>
+        <div class="cert-pack-item">
+          <div class="cert-pack-item-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="cert-pack-item-text">
+            <strong>GDPR and data residency statement</strong>
+            <span>Jurisdiction, retention, processor details</span>
+          </div>
+        </div>
+        <div class="cert-pack-item">
+          <div class="cert-pack-item-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1.04 3.38 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="cert-pack-item-text">
+            <strong>Direct line to our security team</strong>
+            <span>For follow-up questions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     CTA CLOSE
+═══════════════════════════════ -->
+<section class="cert-cta" aria-labelledby="cert-cta-heading">
+  <div class="cert-cta-inner">
+    <h2 id="cert-cta-heading">Ready to see the platform behind the credentials?</h2>
+    <p>Talk to us about your compliance requirements. We will show you how Pronto is configured to meet them.</p>
+    <div class="cert-cta-btns">
+      <a href="demo.html" class="btn-white">Book a Demo</a>
+      <a href="implementation.html" class="btn-outline-white">Implementation &amp; Support</a>
+    </div>
+  </div>
+</section>
+
+<script src="footer.js"></script>
+</body>
+</html>
