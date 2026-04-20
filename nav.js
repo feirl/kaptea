@@ -252,37 +252,14 @@
       <a href="#">Resources <span class="nav-chevron">▾</span></a>
       <div class="mega mega-resources">
 
-        <div class="mega-section">
-          <div class="mega-section-title">Learn</div>
-          <ul class="mega-links">
-            <li><a href="#">Blog &amp; Insights</a></li>
-            <li><a href="#">Guides &amp; Whitepapers</a></li>
-            <li><a href="#">Webinars &amp; Events</a></li>
-          </ul>
-        </div>
-
-        <div class="mega-section">
-          <div class="mega-section-title">Proof</div>
-          <ul class="mega-links">
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">Customer Stories</a></li>
-          </ul>
-        </div>
-
-        <div class="mega-section">
-          <div class="mega-section-title">Developer</div>
-          <ul class="mega-links">
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">API Reference</a></li>
-            <li><a href="#">Integration Guides</a></li>
-          </ul>
-        </div>
-
-        <div class="mega-section" style="border-top:1px solid #e2e8f0; padding-top:12px; margin-top:8px;">
-          <ul class="mega-links">
-            <li><a href="implementation.html">Implementation &amp; Support</a></li>
-          </ul>
-        </div>
+        <ul class="mega-links">
+          <li><a href="case-studies.html">Customer Stories</a></li>
+          <li><a href="#">Blog &amp; Insights</a></li>
+          <li><a href="#">Certification</a></li>
+          <li><a href="#">Security &amp; Compliance</a></li>
+          <li><a href="#">API Documentation</a></li>
+          <li><a href="implementation.html">Implementation &amp; Support</a></li>
+        </ul>
 
       </div>
     </div>

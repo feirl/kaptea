@@ -197,12 +197,12 @@
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="#">Case Studies</a></li>
+          <li><a href="case-studies.html">Customer Stories</a></li>
           <li><a href="#">Blog &amp; Insights</a></li>
-          <li><a href="#">Documentation</a></li>
-          <li><a href="#">API Reference</a></li>
-          <li><a href="implementation.html">Implementation</a></li>
-          <li><a href="#">Guides</a></li>
+          <li><a href="#">Certification</a></li>
+          <li><a href="#">Security &amp; Compliance</a></li>
+          <li><a href="#">API Documentation</a></li>
+          <li><a href="implementation.html">Implementation &amp; Support</a></li>
         </ul>
       </div>
 
@@ -211,9 +211,9 @@
         <h4>Company</h4>
         <ul>
           <li><a href="why-kaptea.html">Why Kaptea</a></li>
+          <li><a href="#">Meet The Team</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="demo.html">Book a Demo</a></li>
-          <li><a href="#">Security &amp; Compliance</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
