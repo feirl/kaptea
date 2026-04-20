@@ -254,7 +254,7 @@
 
         <ul class="mega-links">
           <li><a href="case-studies.html">Customer Stories</a></li>
-          <li><a href="#">Blog &amp; Insights</a></li>
+          <li><a href="blog.html">Blog &amp; Insights</a></li>
           <li><a href="#">Certification</a></li>
           <li><a href="security-compliance.html">Security &amp; Compliance</a></li>
           <li><a href="#">API Documentation</a></li>

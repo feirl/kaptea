@@ -198,7 +198,7 @@
         <h4>Resources</h4>
         <ul>
           <li><a href="case-studies.html">Customer Stories</a></li>
-          <li><a href="#">Blog &amp; Insights</a></li>
+          <li><a href="blog.html">Blog &amp; Insights</a></li>
           <li><a href="#">Certification</a></li>
           <li><a href="security-compliance.html">Security &amp; Compliance</a></li>
           <li><a href="#">API Documentation</a></li>
