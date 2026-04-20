@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23dc2727'/><text x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='18' font-weight='700' fill='white'>K</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security &amp; Compliance | Kaptea</title>
+  <meta name="description" content="Dedicated instances, Irish and EU data residency, GDPR-compliant by architecture. Every security and compliance question answered — before you have to ask." />
+  <link rel="canonical" href="https://feirl.github.io/kaptea/security-compliance.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Security &amp; Compliance | Kaptea" />
+  <meta property="og:description" content="Dedicated instances, Irish and EU data residency, GDPR-compliant by architecture. Not a configuration option bolted on later." />
+  <meta property="og:url" content="https://feirl.github.io/kaptea/security-compliance.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* ─── HERO ──────────────────────────────────────────────── */
+    .sc-hero {
+      background: #131521;
+      color: #fff;
+      padding: 88px 40px 96px;
+    }
+    .sc-hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 80px;
+      align-items: center;
+    }
+    .sc-hero-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2727;
+      margin-bottom: 20px;
+    }
+    .sc-hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    .sc-hero h1 em { color: #dc2727; font-style: normal; }
+    .sc-hero-sub {
+      font-size: 18px;
+      color: #9ca3af;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 520px;
+    }
+    .sc-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #dc2727;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .sc-hero-cta:hover { background: #b91c1c; }
+
+    /* Hero right: residency card */
+    .sc-residency-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 14px;
+      padding: 32px;
+    }
+    .sc-residency-card-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+    .sc-residency-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .sc-residency-opt {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .sc-residency-opt-flag {
+      font-size: 20px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .sc-residency-opt-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .sc-residency-opt-text span {
+      font-size: 12px;
+      color: #6b7280;
+    }
+    .sc-residency-note {
+      font-size: 12px;
+      color: #4b5563;
+      line-height: 1.55;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 16px;
+    }
+
+    /* ─── ANSWER STRIP ───────────────────────────────────────── */
+    .sc-answer-strip {
+      background: #dc2727;
+      padding: 20px 40px;
+    }
+    .sc-answer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+    }
+    .sc-answer-inner svg { color: #fff; flex-shrink: 0; opacity: 0.8; }
+    .sc-answer-inner strong { color: #fff; }
+
+    /* ─── DEDICATED INSTANCE ─────────────────────────────────── */
+    .sc-dedicated {
+      background: #fff;
+      padding: 88px 40px;
+    }
+    .sc-dedicated-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .sc-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2727;
+      margin-bottom: 12px;
+    }
+    .sc-section-h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: #131521;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .sc-section-h2 em { color: #dc2727; font-style: normal; }
+    .sc-section-lead {
+      font-size: 17px;
+      color: #555;
+      line-height: 1.7;
+      max-width: 660px;
+      margin-bottom: 48px;
+    }
+
+    .sc-di-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .sc-di-card {
+      border: 1px solid #eeebe6;
+      border-radius: 12px;
+      padding: 24px;
+      background: #faf8f5;
+    }
+    .sc-di-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: #e5e2de;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .sc-di-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .sc-di-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Dedicated vs shared comparison */
+    .sc-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .sc-compare-col {
+      border-radius: 12px;
+      padding: 28px;
+      border: 1px solid #eeebe6;
+    }
+    .sc-compare-col.dedicated { background: #131521; border-color: #131521; }
+    .sc-compare-col.shared { background: #faf8f5; }
+    .sc-compare-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .dedicated .sc-compare-label { color: #dc2727; }
+    .shared .sc-compare-label { color: #999; }
+    .sc-compare-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .dedicated .sc-compare-title { color: #fff; }
+    .shared .sc-compare-title { color: #131521; }
+    .sc-compare-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sc-compare-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .dedicated .sc-compare-list li { color: #d1d5db; }
+    .shared .sc-compare-list li { color: #666; }
+    .sc-compare-list li svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* ─── GDPR SECTION ───────────────────────────────────────── */
+    .sc-gdpr {
+      background: #faf8f5;
+      border-top: 1px solid #eeebe6;
+      border-bottom: 1px solid #eeebe6;
+      padding: 88px 40px;
+    }
+    .sc-gdpr-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 440px;
+      gap: 80px;
+      align-items: start;
+    }
+    .sc-gdpr-content .sc-section-lead { margin-bottom: 32px; }
+    .sc-gdpr-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .sc-gdpr-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .sc-gdpr-item-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #dc2727;
+    }
+    .sc-gdpr-item-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 3px;
+    }
+    .sc-gdpr-item-text p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* GDPR right: processor card */
+    .sc-processor-card {
+      background: #fff;
+      border: 1px solid #eeebe6;
+      border-radius: 14px;
+      padding: 32px;
+      position: sticky;
+      top: 24px;
+    }
+    .sc-processor-card-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 20px;
+    }
+    .sc-processor-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .sc-processor-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .sc-processor-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .sc-processor-item-role {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 4px;
+    }
+    .sc-processor-item strong {
+      font-size: 14px;
+      font-weight: 700;
+      color: #131521;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .sc-processor-item p {
+      font-size: 12px;
+      color: #888;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .sc-dpa-note {
+      margin-top: 20px;
+      background: rgba(220,39,39,0.05);
+      border: 1px solid rgba(220,39,39,0.12);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 12px;
+      color: #555;
+      line-height: 1.55;
+    }
+    .sc-dpa-note strong { color: #131521; }
+
+    /* ─── CONTROLS GRID ──────────────────────────────────────── */
+    .sc-controls {
+      background: #131521;
+      padding: 88px 40px;
+    }
+    .sc-controls-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .sc-controls .sc-section-label { color: #dc2727; }
+    .sc-controls .sc-section-h2 { color: #fff; }
+    .sc-controls .sc-section-lead { color: #9ca3af; }
+    .sc-controls-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .sc-control-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .sc-control-card-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(220,39,39,0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: #dc2727;
+    }
+    .sc-control-card h4 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .sc-control-card p {
+      font-size: 13px;
+      color: #9ca3af;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .sc-control-card .sc-control-detail {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .sc-control-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.5);
+      width: fit-content;
+    }
+
+    /* ─── INCIDENT RESPONSE ──────────────────────────────────── */
+    .sc-incident {
+      background: #fff;
+      padding: 88px 40px;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .sc-incident-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .sc-incident-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .sc-incident-step {
+      display: flex;
+      gap: 16px;
+      padding-bottom: 28px;
+      position: relative;
+    }
+    .sc-incident-step:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 32px;
+      bottom: 0;
+      width: 1px;
+      background: #eeebe6;
+    }
+    .sc-incident-step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #dc2727;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .sc-incident-step-body strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 4px;
+      margin-top: 4px;
+    }
+    .sc-incident-step-body p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .sc-incident-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .sc-sla-card {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .sc-sla-card h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 14px;
+    }
+    .sc-sla-rows { display: flex; flex-direction: column; gap: 0; }
+    .sc-sla-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #eeebe6;
+      font-size: 13px;
+    }
+    .sc-sla-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .sc-sla-row span:first-child { color: #666; }
+    .sc-sla-row span:last-child { font-weight: 600; color: #131521; }
+    .sc-sla-severity {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+    .sev-p1 { background: rgba(220,39,39,0.1); color: #dc2727; }
+    .sev-p2 { background: rgba(245,158,11,0.1); color: #d97706; }
+    .sev-p3 { background: rgba(59,130,246,0.1); color: #3b82f6; }
+
+    /* ─── VOC QUOTE ──────────────────────────────────────────── */
+    .sc-quote {
+      background: #131521;
+      padding: 80px 40px;
+    }
+    .sc-quote-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .sc-quote-mark {
+      font-size: 80px;
+      line-height: 1;
+      color: #dc2727;
+      font-family: Georgia, serif;
+      margin-bottom: -12px;
+      display: block;
+    }
+    .sc-quote-text {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.55;
+      margin-bottom: 28px;
+    }
+    .sc-quote-attr {
+      font-size: 14px;
+      color: #6b7280;
+    }
+    .sc-quote-attr strong { color: #9ca3af; font-weight: 600; }
+
+    /* ─── CERTS LINK STRIP ───────────────────────────────────── */
+    .sc-certs-strip {
+      background: #faf8f5;
+      border-top: 1px solid #eeebe6;
+      border-bottom: 1px solid #eeebe6;
+      padding: 48px 40px;
+    }
+    .sc-certs-strip-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+    .sc-certs-strip h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 8px;
+    }
+    .sc-certs-strip p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .sc-certs-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .sc-cert-badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e5e2de;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sc-cert-badge svg { color: #dc2727; }
+    .sc-certs-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #131521;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .sc-certs-link:hover { background: #1e2235; }
+
+    /* ─── CTA CLOSE ──────────────────────────────────────────── */
+    .sc-cta {
+      background: #dc2727;
+      padding: 80px 40px;
+      text-align: center;
+      color: #fff;
+    }
+    .sc-cta-inner { max-width: 600px; margin: 0 auto; }
+    .sc-cta h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .sc-cta p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .sc-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: #fff;
+      color: #dc2727;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+    .btn-outline-white {
+      border: 2px solid rgba(255,255,255,0.4);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s;
+    }
+    .btn-outline-white:hover { border-color: #fff; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .sc-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .sc-di-grid { grid-template-columns: 1fr 1fr; }
+      .sc-compare { grid-template-columns: 1fr; }
+      .sc-gdpr-inner { grid-template-columns: 1fr; }
+      .sc-processor-card { position: static; }
+      .sc-controls-grid { grid-template-columns: 1fr 1fr; }
+      .sc-incident-inner { grid-template-columns: 1fr; }
+      .sc-certs-strip-inner { grid-template-columns: 1fr; }
+      .sc-hero h1 { font-size: 36px; }
+    }
+    @media (max-width: 640px) {
+      .sc-hero { padding: 64px 20px 72px; }
+      .sc-dedicated { padding: 56px 20px; }
+      .sc-gdpr { padding: 56px 20px; }
+      .sc-controls { padding: 56px 20px; }
+      .sc-incident { padding: 56px 20px; }
+      .sc-quote { padding: 56px 20px; }
+      .sc-certs-strip { padding: 40px 20px; }
+      .sc-cta { padding: 56px 20px; }
+      .sc-answer-strip { padding: 16px 20px; }
+      .sc-di-grid { grid-template-columns: 1fr; }
+      .sc-controls-grid { grid-template-columns: 1fr; }
+      .sc-hero h1 { font-size: 30px; }
+      .sc-quote-text { font-size: 18px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="sc-hero">
+  <div class="sc-hero-inner">
+
+    <div>
+      <p class="sc-hero-label">Security &amp; Compliance</p>
+      <h1>Your data stays <em>where you say</em> it does.</h1>
+      <p class="sc-hero-sub">Dedicated instances, Irish and EU data residency, GDPR-compliant by architecture. These are not configuration options bolted on later — they are decisions made at the infrastructure level, so your procurement and InfoSec teams get specific answers, not approximations.</p>
+      <a href="demo.html" class="sc-hero-cta">
+        Book a Demo
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="sc-residency-card" aria-label="Data residency options">
+      <p class="sc-residency-card-label">Data residency options</p>
+      <div class="sc-residency-options">
+        <div class="sc-residency-opt">
+          <span class="sc-residency-opt-flag" aria-hidden="true">🇮🇪</span>
+          <div class="sc-residency-opt-text">
+            <strong>Ireland</strong>
+            <span>For Irish public sector, semi-state and regulated organisations</span>
+          </div>
+        </div>
+        <div class="sc-residency-opt">
+          <span class="sc-residency-opt-flag" aria-hidden="true">🇬🇧</span>
+          <div class="sc-residency-opt-text">
+            <strong>United Kingdom</strong>
+            <span>UK-based processing for UK-regulated deployments</span>
+          </div>
+        </div>
+        <div class="sc-residency-opt">
+          <span class="sc-residency-opt-flag" aria-hidden="true">🇪🇺</span>
+          <div class="sc-residency-opt-text">
+            <strong>European Union</strong>
+            <span>EU residency for GDPR-scoped deployments</span>
+          </div>
+        </div>
+      </div>
+      <p class="sc-residency-note">Residency is agreed at deployment. Data does not move between jurisdictions without explicit contractual authorisation.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     ANSWER STRIP
+═══════════════════════════════ -->
+<div class="sc-answer-strip">
+  <div class="sc-answer-inner">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    <span><strong>Where is my data processed?</strong> For Irish deployments: Ireland. For UK deployments: United Kingdom. Kaptea manages the Twilio data processing relationship — you do not need to navigate that separately.</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     DEDICATED INSTANCE
+═══════════════════════════════ -->
+<section class="sc-dedicated" id="dedicated-instance">
+  <div class="sc-dedicated-inner">
+    <p class="sc-section-label">Architecture</p>
+    <h2 class="sc-section-h2">Every customer gets their <em>own instance.</em><br>Not a seat in someone else's.</h2>
+    <p class="sc-section-lead">Kaptea does not operate a shared multi-tenant environment where your data sits alongside other customers' data. Each deployment is an isolated Pronto instance — its own infrastructure, its own configuration, its own access controls. That choice has four direct consequences for compliance.</p>
+
+    <div class="sc-di-grid">
+      <div class="sc-di-card">
+        <div class="sc-di-num">01</div>
+        <h4>No data co-mingling</h4>
+        <p>Your contact data, message history and configuration are completely isolated. No other customer's data is in your instance and none of yours is in theirs.</p>
+      </div>
+      <div class="sc-di-card">
+        <div class="sc-di-num">02</div>
+        <h4>Configuration locked to your requirements</h4>
+        <p>RBAC, retention policies, open-hours controls, template governance — all set to your standards. No shared defaults that another customer's configuration could affect.</p>
+      </div>
+      <div class="sc-di-card">
+        <div class="sc-di-num">03</div>
+        <h4>Specific answers for your DPO</h4>
+        <p>Where is data stored? Who can access it? How is it encrypted? The answers are specific to your instance, not approximations based on a shared environment.</p>
+      </div>
+      <div class="sc-di-card">
+        <div class="sc-di-num">04</div>
+        <h4>Incident scope is contained</h4>
+        <p>If an issue occurs in another customer's deployment, it does not affect yours. Isolation is structural, not a policy commitment.</p>
+      </div>
+    </div>
+
+    <div class="sc-compare">
+      <div class="sc-compare-col dedicated" aria-label="Dedicated instance model">
+        <p class="sc-compare-label">Kaptea: dedicated instance</p>
+        <p class="sc-compare-title">Your instance. Your configuration. Your data only.</p>
+        <ul class="sc-compare-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Data isolated at infrastructure level
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Residency agreed and documented at deployment
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Configuration specific to your governance standards
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Incident scope contained to your environment
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Specific answers for procurement questionnaires
+          </li>
+        </ul>
+      </div>
+      <div class="sc-compare-col shared" aria-label="Shared platform model">
+        <p class="sc-compare-label">Shared platform model</p>
+        <p class="sc-compare-title">Your data in a shared environment with other customers.</p>
+        <ul class="sc-compare-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Data co-located with other organisations' data
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Residency may follow platform defaults, not your requirements
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Shared configuration defaults across all tenants
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Incidents in other tenants can have knock-on effects
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Generic answers to specific compliance questions
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     GDPR
+═══════════════════════════════ -->
+<section class="sc-gdpr" id="gdpr">
+  <div class="sc-gdpr-inner">
+
+    <div class="sc-gdpr-content">
+      <p class="sc-section-label">GDPR</p>
+      <h2 class="sc-section-h2">GDPR by design,<br>not by documentation.</h2>
+      <p class="sc-section-lead">GDPR compliance is not a feature Kaptea adds for regulated customers — it is how the platform is built. For Irish and EU customers, every decision about data storage, access and retention was made with the Regulation in mind from the start.</p>
+
+      <div class="sc-gdpr-items">
+
+        <div class="sc-gdpr-item">
+          <div class="sc-gdpr-item-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="sc-gdpr-item-text">
+            <strong>Standard Data Processing Agreement provided</strong>
+            <p>A GDPR-compliant DPA is included with every deployment. Kaptea acts as data processor; the customer acts as data controller. Roles, obligations and sub-processor details are documented.</p>
+          </div>
+        </div>
+
+        <div class="sc-gdpr-item">
+          <div class="sc-gdpr-item-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="sc-gdpr-item-text">
+            <strong>Configurable data retention, down to 90 days</strong>
+            <p>Retention periods are set at deployment and enforced automatically. Contact data, message logs and delivery records are purged on schedule, not on request.</p>
+          </div>
+        </div>
+
+        <div class="sc-gdpr-item">
+          <div class="sc-gdpr-item-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+          </div>
+          <div class="sc-gdpr-item-text">
+            <strong>Right to erasure process documented</strong>
+            <p>Data subject deletion requests are handled within the timescales required by the Regulation. The process is documented and available to your DPO on request.</p>
+          </div>
+        </div>
+
+        <div class="sc-gdpr-item">
+          <div class="sc-gdpr-item-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="sc-gdpr-item-text">
+            <strong>No data used for training or third-party analytics</strong>
+            <p>Customer data processed through Pronto is not used for model training, platform improvement analytics, or shared with any third party beyond documented sub-processors in the DPA.</p>
+          </div>
+        </div>
+
+        <div class="sc-gdpr-item">
+          <div class="sc-gdpr-item-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="sc-gdpr-item-text">
+            <strong>Twilio sub-processor relationship managed by Kaptea</strong>
+            <p>Kaptea manages the data processing addendum with Twilio as a sub-processor. Customers do not need to negotiate this separately or understand the underlying carrier relationship.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="sc-processor-card" aria-label="Data processing roles">
+      <p class="sc-processor-card-label">Who does what under GDPR</p>
+      <div class="sc-processor-row">
+        <div class="sc-processor-item">
+          <p class="sc-processor-item-role">Data Controller</p>
+          <strong>Your organisation</strong>
+          <p>Determines the purposes and means of processing. Responsible for lawful basis, privacy notices and data subject rights.</p>
+        </div>
+        <div class="sc-processor-item">
+          <p class="sc-processor-item-role">Data Processor</p>
+          <strong>Kaptea</strong>
+          <p>Processes personal data on your behalf, under your instruction. Bound by the DPA. Appoints sub-processors only as documented.</p>
+        </div>
+        <div class="sc-processor-item">
+          <p class="sc-processor-item-role">Sub-processor</p>
+          <strong>Twilio (and documented others)</strong>
+          <p>Infrastructure and carrier services used by Kaptea to provide the platform. Listed in the DPA. Subject to Twilio's own DPA with Kaptea.</p>
+        </div>
+      </div>
+      <div class="sc-dpa-note">
+        <strong>Need the DPA?</strong> Request a copy through the compliance pack — includes the full sub-processor list, processing purposes and data transfer mechanisms.
+        <br><br>
+        <a href="demo.html" style="color:#dc2727;font-weight:600;text-decoration:none;font-size:13px;">Request compliance pack →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     ACCESS & SECURITY CONTROLS
+═══════════════════════════════ -->
+<section class="sc-controls" id="controls">
+  <div class="sc-controls-inner">
+    <p class="sc-section-label">Access &amp; security controls</p>
+    <h2 class="sc-section-h2">The controls that stop human error<br>becoming a compliance incident.</h2>
+    <p class="sc-section-lead">Certifications confirm the framework. These are the specific controls in every Pronto deployment that make the framework real.</p>
+
+    <div class="sc-controls-grid">
+
+      <div class="sc-control-card">
+        <div class="sc-control-card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h4>Role-based access control</h4>
+        <p>Every user is assigned a role that determines exactly what they can see and do. Roles are defined at deployment and can only be changed by administrators.</p>
+        <div class="sc-control-detail">
+          <span class="sc-control-tag">SuperAdmin</span>
+          <span class="sc-control-tag">Admin</span>
+          <span class="sc-control-tag">User</span>
+          <span class="sc-control-tag">Read-only</span>
+        </div>
+      </div>
+
+      <div class="sc-control-card">
+        <div class="sc-control-card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h4>Two-factor authentication</h4>
+        <p>2FA is enforced at login across all platform access points — there is no opt-out path for users. For high-assurance deployments, hardware key support is available.</p>
+        <div class="sc-control-detail">
+          <span class="sc-control-tag">Enforced by default</span>
+          <span class="sc-control-tag">No opt-out</span>
+        </div>
+      </div>
+
+      <div class="sc-control-card">
+        <div class="sc-control-card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        </div>
+        <h4>Single sign-on (SSO)</h4>
+        <p>SSO integration removes password friction while enforcing your organisation's identity policies. Supports SAML 2.0 and OAuth 2.0 identity providers.</p>
+        <div class="sc-control-detail">
+          <span class="sc-control-tag">SAML 2.0</span>
+          <span class="sc-control-tag">OAuth 2.0</span>
+        </div>
+      </div>
+
+      <div class="sc-control-card">
+        <div class="sc-control-card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <h4>Admin-only template controls</h4>
+        <p>Message templates can only be created or edited by administrators. Operators can select and send from approved templates — they cannot modify them mid-send or create unapproved content.</p>
+        <div class="sc-control-detail">
+          <span class="sc-control-tag">Brand-safe</span>
+          <span class="sc-control-tag">Compliance-enforced</span>
+        </div>
+      </div>
+
+      <div class="sc-control-card">
+        <div class="sc-control-card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>Open-hours controls</h4>
+        <p>Campaigns can only be scheduled and sent within configured time windows. A campaign manager cannot accidentally trigger a send outside permitted hours, no matter what time they are logged in.</p>
+        <div class="sc-control-detail">
+          <span class="sc-control-tag">Configurable per instance</span>
+        </div>
+      </div>
+
+      <div class="sc-control-card">
+        <div class="sc-control-card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h4>Audit logs</h4>
+        <p>All platform activity is logged: who accessed the system, what they did, when. Audit logs are available to administrators and can be exported for compliance reporting and GDPR accountability obligations.</p>
+        <div class="sc-control-detail">
+          <span class="sc-control-tag">Exportable</span>
+          <span class="sc-control-tag">Tamper-evident</span>
+        </div>
+      </div>
+
+      <div class="sc-control-card">
+        <div class="sc-control-card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h4>Encryption</h4>
+        <p>AES-256 encryption at rest across all data stores. TLS 1.2+ in transit for all API connections and platform communications. SMS number obfuscation available for operators who must protect passenger or customer mobile numbers.</p>
+        <div class="sc-control-detail">
+          <span class="sc-control-tag">AES-256 at rest</span>
+          <span class="sc-control-tag">TLS 1.2+ in transit</span>
+          <span class="sc-control-tag">SMS obfuscation</span>
+        </div>
+      </div>
+
+      <div class="sc-control-card">
+        <div class="sc-control-card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h4>Platform self-service controls</h4>
+        <p>Administrators can pause campaigns, shut down channels and remove access in real time without contacting Kaptea. For mission-critical environments, you need the red button — not a support ticket.</p>
+        <div class="sc-control-detail">
+          <span class="sc-control-tag">Instant channel pause</span>
+          <span class="sc-control-tag">No ticket required</span>
+        </div>
+      </div>
+
+      <div class="sc-control-card">
+        <div class="sc-control-card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h4>Carrier-level redundancy</h4>
+        <p>Deployments can route across both Twilio and Telnyx infrastructure. No single-carrier dependency means no single point of failure at the communications layer, a requirement in several regulated sectors.</p>
+        <div class="sc-control-detail">
+          <span class="sc-control-tag">Twilio</span>
+          <span class="sc-control-tag">Telnyx</span>
+          <span class="sc-control-tag">Multi-carrier failover</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     INCIDENT RESPONSE
+═══════════════════════════════ -->
+<section class="sc-incident" id="incident-response">
+  <div class="sc-incident-inner">
+
+    <div>
+      <p class="sc-section-label">Incident response</p>
+      <h2 class="sc-section-h2">When something goes wrong,<br>you hear about it first.</h2>
+      <p class="sc-section-lead">Documented procedures, named contacts, defined response times. For organisations using Pronto for mission-critical communications, uptime is not a performance metric — it is a service requirement.</p>
+
+      <div class="sc-incident-steps">
+        <div class="sc-incident-step">
+          <div class="sc-incident-step-num" aria-hidden="true">1</div>
+          <div class="sc-incident-step-body">
+            <strong>Detection and classification</strong>
+            <p>Issues are detected through monitoring and classified by severity (P1, P2, P3) within defined timeframes. The classification determines the response path and escalation chain.</p>
+          </div>
+        </div>
+        <div class="sc-incident-step">
+          <div class="sc-incident-step-num" aria-hidden="true">2</div>
+          <div class="sc-incident-step-body">
+            <strong>Named point of contact activated</strong>
+            <p>A named Kaptea contact is assigned to the incident. Customers are notified directly — no ticket queue, no generic support inbox for P1 and P2 issues.</p>
+          </div>
+        </div>
+        <div class="sc-incident-step">
+          <div class="sc-incident-step-num" aria-hidden="true">3</div>
+          <div class="sc-incident-step-body">
+            <strong>Root cause identified and communicated</strong>
+            <p>The cause is identified, not just the symptom. Customers receive a clear explanation of what happened, what was done and what is in place to prevent recurrence.</p>
+          </div>
+        </div>
+        <div class="sc-incident-step">
+          <div class="sc-incident-step-num" aria-hidden="true">4</div>
+          <div class="sc-incident-step-body">
+            <strong>Post-incident review</strong>
+            <p>All P1 incidents receive a written post-incident review. For deployments with an Enterprise support agreement, reviews are provided within five business days.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-incident-right">
+      <div class="sc-sla-card">
+        <h4>Response SLA by severity</h4>
+        <div class="sc-sla-rows">
+          <div class="sc-sla-row">
+            <span><span class="sc-sla-severity sev-p1">P1 Critical</span></span>
+            <span>15 minute response</span>
+          </div>
+          <div class="sc-sla-row">
+            <span>Platform unavailable or data incident</span>
+            <span style="color:#999;font-size:12px;">24/7 coverage</span>
+          </div>
+          <div class="sc-sla-row">
+            <span><span class="sc-sla-severity sev-p2">P2 High</span></span>
+            <span>2 hour response</span>
+          </div>
+          <div class="sc-sla-row">
+            <span>Major feature degraded</span>
+            <span style="color:#999;font-size:12px;">Business hours + on-call</span>
+          </div>
+          <div class="sc-sla-row">
+            <span><span class="sc-sla-severity sev-p3">P3 Standard</span></span>
+            <span>Next business day</span>
+          </div>
+          <div class="sc-sla-row">
+            <span>Minor issue or configuration request</span>
+            <span style="color:#999;font-size:12px;">Business hours</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-sla-card">
+        <h4>Annual testing</h4>
+        <div class="sc-sla-rows">
+          <div class="sc-sla-row">
+            <span>Incident response procedures</span>
+            <span>Tested annually</span>
+          </div>
+          <div class="sc-sla-row">
+            <span>Business continuity plan</span>
+            <span>Reviewed annually</span>
+          </div>
+          <div class="sc-sla-row">
+            <span>Penetration testing</span>
+            <span>Annual (CREST standard)</span>
+          </div>
+          <div class="sc-sla-row">
+            <span>ISO 27001 surveillance audit</span>
+            <span>Annual</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     VOC PULL QUOTE
+═══════════════════════════════ -->
+<section class="sc-quote" aria-label="Customer perspective">
+  <div class="sc-quote-inner">
+    <span class="sc-quote-mark" aria-hidden="true">"</span>
+    <p class="sc-quote-text">Where the data was processed — that was a big, big question for us. The guys being able to go and find the information and come back and work with Twilio, that was a huge piece that could have been a blocker. They knew what they were talking about and they'd done it before.</p>
+    <p class="sc-quote-attr"><strong>Digital Programme Manager</strong> · Irish Semi-State Organisation</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     CERTIFICATIONS LINK STRIP
+═══════════════════════════════ -->
+<div class="sc-certs-strip">
+  <div class="sc-certs-strip-inner">
+    <div>
+      <h3>The credentials behind the architecture</h3>
+      <p>ISO 27001, Cyber Essentials Plus, CREST accreditation, Twilio Gold and AI Partner status — each independently audited and publicly verifiable. The certifications page has full details, issuing body information and direct verification links.</p>
+      <div class="sc-certs-badges">
+        <span class="sc-cert-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          ISO 27001
+        </span>
+        <span class="sc-cert-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Cyber Essentials Plus
+        </span>
+        <span class="sc-cert-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          CREST Accredited
+        </span>
+        <span class="sc-cert-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Twilio Gold &amp; AI Partner
+        </span>
+      </div>
+    </div>
+    <a href="certification.html" class="sc-certs-link">
+      View all certifications
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     CTA CLOSE
+═══════════════════════════════ -->
+<section class="sc-cta" aria-labelledby="sc-cta-heading">
+  <div class="sc-cta-inner">
+    <h2 id="sc-cta-heading">Have a specific compliance requirement?</h2>
+    <p>Talk to us. If you are completing a DDQ, preparing a tender response or assessing Kaptea for a regulated procurement, we have the documentation ready.</p>
+    <div class="sc-cta-btns">
+      <a href="demo.html" class="btn-white">Book a Demo</a>
+      <a href="certification.html" class="btn-outline-white">View Certifications</a>
+    </div>
+  </div>
+</section>
+
+<script src="footer.js"></script>
+</body>
+</html>
