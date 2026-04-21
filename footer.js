@@ -154,18 +154,18 @@
       <div class="footer-col">
         <h4>Platform</h4>
         <ul>
-          <li><a href="pronto.html">Pronto</a></li>
-          <li><a href="omni-channel-communications.html">Omni-Channel</a></li>
-          <li><a href="sms-rcs.html">SMS &amp; RCS</a></li>
-          <li><a href="whatsapp.html">WhatsApp</a></li>
-          <li><a href="voice-ivr.html">Voice &amp; IVR</a></li>
-          <li><a href="email.html">Email</a></li>
-          <li><a href="secure-video.html">Secure Video</a></li>
-          <li><a href="social-messaging.html">Social</a></li>
-          <li><a href="control-governance.html">Control &amp; Governance</a></li>
-          <li><a href="delivery-resilience.html">Delivery &amp; Resilience</a></li>
-          <li><a href="integration-api-framework.html">Integration &amp; API</a></li>
-          <li><a href="deployment-infrastructure.html">Deployment</a></li>
+          <li><a href="pronto">Pronto</a></li>
+          <li><a href="omni-channel-communications">Omni-Channel</a></li>
+          <li><a href="sms-rcs">SMS &amp; RCS</a></li>
+          <li><a href="whatsapp">WhatsApp</a></li>
+          <li><a href="voice-ivr">Voice &amp; IVR</a></li>
+          <li><a href="email">Email</a></li>
+          <li><a href="secure-video">Secure Video</a></li>
+          <li><a href="social-messaging">Social</a></li>
+          <li><a href="control-governance">Control &amp; Governance</a></li>
+          <li><a href="delivery-resilience">Delivery &amp; Resilience</a></li>
+          <li><a href="integration-api-framework">Integration &amp; API</a></li>
+          <li><a href="deployment-infrastructure">Deployment</a></li>
         </ul>
       </div>
 
@@ -173,10 +173,10 @@
       <div class="footer-col">
         <h4>Use Cases</h4>
         <ul>
-          <li><a href="emergency-surge-communications.html">Emergency &amp; Surge</a></li>
-          <li><a href="distributed-messaging-governance.html">Distributed Governance</a></li>
-          <li><a href="ivr-voice-orchestration.html">IVR &amp; Voice</a></li>
-          <li><a href="enterprise-transactional-messaging.html">Enterprise Transactional</a></li>
+          <li><a href="emergency-surge-communications">Emergency &amp; Surge</a></li>
+          <li><a href="distributed-messaging-governance">Distributed Governance</a></li>
+          <li><a href="ivr-voice-orchestration">IVR &amp; Voice</a></li>
+          <li><a href="enterprise-transactional-messaging">Enterprise Transactional</a></li>
         </ul>
       </div>
 
@@ -184,12 +184,12 @@
       <div class="footer-col">
         <h4>Industries</h4>
         <ul>
-          <li><a href="financial-services.html">Financial Services</a></li>
-          <li><a href="utilities-energy.html">Utilities &amp; Energy</a></li>
-          <li><a href="healthcare.html">Healthcare</a></li>
-          <li><a href="travel-transport.html">Travel &amp; Transport</a></li>
-          <li><a href="public-sector.html">Public Sector</a></li>
-          <li><a href="retail-ecommerce.html">Retail &amp; Ecommerce</a></li>
+          <li><a href="financial-services">Financial Services</a></li>
+          <li><a href="utilities-energy">Utilities &amp; Energy</a></li>
+          <li><a href="healthcare">Healthcare</a></li>
+          <li><a href="travel-transport">Travel &amp; Transport</a></li>
+          <li><a href="public-sector">Public Sector</a></li>
+          <li><a href="retail-ecommerce">Retail &amp; Ecommerce</a></li>
         </ul>
       </div>
 
@@ -197,12 +197,12 @@
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="case-studies.html">Customer Stories</a></li>
-          <li><a href="blog.html">Blog &amp; Insights</a></li>
-          <li><a href="certification.html">Certification</a></li>
-          <li><a href="security-compliance.html">Security &amp; Compliance</a></li>
+          <li><a href="case-studies">Customer Stories</a></li>
+          <li><a href="blog">Blog &amp; Insights</a></li>
+          <li><a href="certification">Certification</a></li>
+          <li><a href="security-compliance">Security &amp; Compliance</a></li>
           <li><a href="#">API Documentation</a></li>
-          <li><a href="implementation.html">Implementation &amp; Support</a></li>
+          <li><a href="implementation">Implementation &amp; Support</a></li>
         </ul>
       </div>
 
@@ -210,10 +210,10 @@
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="why-kaptea.html">Why Kaptea</a></li>
+          <li><a href="why-kaptea">Why Kaptea</a></li>
           <li><a href="#">Meet The Team</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="demo.html">Book a Demo</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="demo">Book a Demo</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Contact</a></li>
         </ul>

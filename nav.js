@@ -2,7 +2,7 @@
 // Edit this file once to update the nav across all pages.
 (function () {
   const html = `<nav role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="nav-logo"><img src="kaptea-logo.svg" alt="Kaptea" height="38" style="display:block;" /></a>
+  <a href="/" class="nav-logo"><img src="kaptea-logo.svg" alt="Kaptea" height="38" style="display:block;" /></a>
 
   <div class="nav-links">
 
@@ -14,10 +14,10 @@
 
           <!-- COL 1: Pronto logo + first 3 sub-categories -->
           <div class="mega-left">
-            <div class="mega-panel-label"><a href="pronto.html" class="pronto-logo-link"><img src="pronto-logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
+            <div class="mega-panel-label"><a href="pronto" class="pronto-logo-link"><img src="pronto-logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="omni-channel-communications.html">Omni-Channel Communications</a></div>
+              <div class="mega-section-title"><a href="omni-channel-communications">Omni-Channel Communications</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">SMS, WhatsApp, Voice, Email, RCS</li>
                 <li class="mega-detail">Two-way messaging</li>
@@ -26,7 +26,7 @@
             </div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="control-governance.html">Control &amp; Governance</a></div>
+              <div class="mega-section-title"><a href="control-governance">Control &amp; Governance</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Role-based access</li>
                 <li class="mega-detail">Division segmentation</li>
@@ -37,7 +37,7 @@
             </div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="delivery-resilience.html">Delivery &amp; Resilience</a></div>
+              <div class="mega-section-title"><a href="delivery-resilience">Delivery &amp; Resilience</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Cross-channel failover</li>
                 <li class="mega-detail">Delivery diagnostics</li>
@@ -53,7 +53,7 @@
           <div class="mega-col2">
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="integration-api-framework.html">Integration &amp; API Framework</a></div>
+              <div class="mega-section-title"><a href="integration-api-framework">Integration &amp; API Framework</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Two-way CRM sync</li>
                 <li class="mega-detail">Event-driven architecture</li>
@@ -63,7 +63,7 @@
             </div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="deployment-infrastructure.html">Deployment &amp; Infrastructure</a></div>
+              <div class="mega-section-title"><a href="deployment-infrastructure">Deployment &amp; Infrastructure</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Dedicated instance in days</li>
                 <li class="mega-detail">No heavy engineering team required</li>
@@ -74,7 +74,7 @@
             </div>
 
             <div class="mega-pronto-cta">
-              <a href="pronto.html">See Pronto in Action →</a>
+              <a href="pronto">See Pronto in Action →</a>
             </div>
 
           </div>
@@ -86,17 +86,17 @@
               <div>
                 <div class="mega-col-title">Channels</div>
                 <ul class="mega-links">
-                  <li><a href="sms-rcs.html">SMS &amp; RCS</a></li>
-                  <li><a href="whatsapp.html">WhatsApp</a></li>
-                  <li><a href="voice-ivr.html">Voice &amp; IVR</a></li>
-                  <li><a href="email.html">Email</a></li>
-                  <li><a href="secure-video.html">Secure Video</a></li>
-                  <li><a href="social-messaging.html">Social</a></li>
+                  <li><a href="sms-rcs">SMS &amp; RCS</a></li>
+                  <li><a href="whatsapp">WhatsApp</a></li>
+                  <li><a href="voice-ivr">Voice &amp; IVR</a></li>
+                  <li><a href="email">Email</a></li>
+                  <li><a href="secure-video">Secure Video</a></li>
+                  <li><a href="social-messaging">Social</a></li>
                 </ul>
               </div>
 
               <div class="mega-carriers">
-                <a href="twilio-partner.html" class="carrier-card" style="text-decoration:none;display:block;">
+                <a href="twilio-partner" class="carrier-card" style="text-decoration:none;display:block;">
                   <img src="twilio-logo.png" alt="Twilio" class="carrier-logo">
                   <div class="carrier-desc">The world's leading cloud communications platform — messaging, voice, video, Flex and Verify — fully operationalised through Pronto.</div>
                 </a>
@@ -121,7 +121,7 @@
             <div class="mega-panel-label">Use Cases</div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">01</span><a href="emergency-surge-communications.html">Emergency &amp; Surge Communications</a></div>
+              <div class="use-case-title"><span class="use-case-num">01</span><a href="emergency-surge-communications">Emergency &amp; Surge Communications</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Storm-grade IVR orchestration</li>
                 <li class="mega-detail">Surge-proof inbound routing</li>
@@ -133,7 +133,7 @@
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">02</span><a href="distributed-messaging-governance.html">Distributed Messaging Governance</a></div>
+              <div class="use-case-title"><span class="use-case-num">02</span><a href="distributed-messaging-governance">Distributed Messaging Governance</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Role-based access &amp; SSO</li>
                 <li class="mega-detail">Division-level guardrails &amp; enforcement</li>
@@ -145,7 +145,7 @@
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">03</span><a href="ivr-voice-orchestration.html">IVR &amp; Voice Orchestration</a></div>
+              <div class="use-case-title"><span class="use-case-num">03</span><a href="ivr-voice-orchestration">IVR &amp; Voice Orchestration</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">API-first IVR architecture</li>
                 <li class="mega-detail">CRM-integrated intelligent routing</li>
@@ -157,7 +157,7 @@
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">04</span><a href="enterprise-transactional-messaging.html">Enterprise Transactional Messaging</a></div>
+              <div class="use-case-title"><span class="use-case-num">04</span><a href="enterprise-transactional-messaging">Enterprise Transactional Messaging</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Event-driven message orchestration</li>
                 <li class="mega-detail">Cross-channel failover &amp; retry logic</li>
@@ -175,7 +175,7 @@
             <div class="mega-industry-grid">
 
               <div class="industry-block">
-                <div class="industry-title"><a href="financial-services.html">Financial Services</a></div>
+                <div class="industry-title"><a href="financial-services">Financial Services</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Fraud &amp; transaction alerts</li>
                   <li class="mega-detail">Secure authentication messaging</li>
@@ -186,7 +186,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="utilities-energy.html">Utilities &amp; Energy</a></div>
+                <div class="industry-title"><a href="utilities-energy">Utilities &amp; Energy</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Storm &amp; outage alerts</li>
                   <li class="mega-detail">Surge IVR orchestration</li>
@@ -197,7 +197,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="healthcare.html">Healthcare</a></div>
+                <div class="industry-title"><a href="healthcare">Healthcare</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Appointment &amp; patient messaging</li>
                   <li class="mega-detail">Secure two-way communications</li>
@@ -208,7 +208,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="travel-transport.html">Travel &amp; Transport</a></div>
+                <div class="industry-title"><a href="travel-transport">Travel &amp; Transport</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Real-time disruption &amp; delay alerts</li>
                   <li class="mega-detail">Passenger &amp; operational notifications</li>
@@ -219,7 +219,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="public-sector.html">Public Sector</a></div>
+                <div class="industry-title"><a href="public-sector">Public Sector</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Citizen notifications</li>
                   <li class="mega-detail">Emergency &amp; public safety alerts</li>
@@ -230,7 +230,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="retail-ecommerce.html">Retail &amp; Ecommerce</a></div>
+                <div class="industry-title"><a href="retail-ecommerce">Retail &amp; Ecommerce</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Order &amp; delivery updates</li>
                   <li class="mega-detail">Peak event surge messaging</li>
@@ -247,23 +247,23 @@
       </div>
     </div>
 
-    <div class="nav-item"><a href="pricing.html">Pricing</a></div>
+    <div class="nav-item"><a href="pricing">Pricing</a></div>
     <div class="nav-item" id="nav-resources">
       <a href="#">Resources <span class="nav-chevron">▾</span></a>
       <div class="mega mega-resources">
 
         <ul class="mega-links">
-          <li><a href="case-studies.html">Customer Stories</a></li>
-          <li><a href="blog.html">Blog &amp; Insights</a></li>
-          <li><a href="certification.html">Certification</a></li>
-          <li><a href="security-compliance.html">Security &amp; Compliance</a></li>
+          <li><a href="case-studies">Customer Stories</a></li>
+          <li><a href="blog">Blog &amp; Insights</a></li>
+          <li><a href="certification">Certification</a></li>
+          <li><a href="security-compliance">Security &amp; Compliance</a></li>
           <li><a href="#">API Documentation</a></li>
-          <li><a href="implementation.html">Implementation &amp; Support</a></li>
+          <li><a href="implementation">Implementation &amp; Support</a></li>
         </ul>
 
       </div>
     </div>
-    <div class="nav-item"><a href="why-kaptea.html">Why Kaptea</a></div>
+    <div class="nav-item"><a href="why-kaptea">Why Kaptea</a></div>
 
   </div>
 
@@ -272,7 +272,7 @@
   </div>
 
   <div class="nav-cta-wrap">
-    <a href="demo.html" class="nav-cta">Book a Demo</a>
+    <a href="demo" class="nav-cta">Book a Demo</a>
   </div>
 </nav>`;
 

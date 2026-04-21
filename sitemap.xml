@@ -1,33 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- DOMAIN: replace feirl.github.io/kaptea with your production domain before launch -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://feirl.github.io/kaptea/index.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://feirl.github.io/kaptea/pronto.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://feirl.github.io/kaptea/why-kaptea.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feirl.github.io/kaptea/implementation.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feirl.github.io/kaptea/demo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://feirl.github.io/kaptea/index.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
+  <!-- Core -->
+  <url><loc>https://feirl.github.io/kaptea/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/pricing</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/demo</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Platform -->
+  <url><loc>https://feirl.github.io/kaptea/pronto</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/omni-channel-communications</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/sms-rcs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/whatsapp</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/voice-ivr</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/email</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/secure-video</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/social-messaging</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/control-governance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/delivery-resilience</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/integration-api-framework</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/deployment-infrastructure</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/twilio-partner</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Use Cases -->
+  <url><loc>https://feirl.github.io/kaptea/emergency-surge-communications</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/distributed-messaging-governance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/ivr-voice-orchestration</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/enterprise-transactional-messaging</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Industries -->
+  <url><loc>https://feirl.github.io/kaptea/financial-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/utilities-energy</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/healthcare</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/travel-transport</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/public-sector</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/retail-ecommerce</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Trust & Credentials -->
+  <url><loc>https://feirl.github.io/kaptea/why-kaptea</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/security-compliance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/certification</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/implementation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Case Studies -->
+  <url><loc>https://feirl.github.io/kaptea/case-studies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/case-study-an-post</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/case-study-caledonian-sleeper</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/case-study-tickmill</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/case-study-teaching-council</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Blog -->
+  <url><loc>https://feirl.github.io/kaptea/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feirl.github.io/kaptea/blog-post-template</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
 </urlset>
