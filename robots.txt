@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://feirl.github.io/kaptea/sitemap.xml
+Sitemap: https://kaptea.vercel.app/sitemap.xml
