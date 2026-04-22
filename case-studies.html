@@ -197,20 +197,27 @@
       color: #dc2727;
     }
     .csl-card-logo {
-      font-family: 'Manrope', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: #131521;
-      margin-bottom: 8px;
-      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
     }
-    .csl-card-logo em { color: #dc2727; font-style: normal; }
-    .csl-card-logo small {
-      font-size: 12px;
-      font-weight: 500;
-      color: #999;
+    .csl-card-logo img {
+      height: 36px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
       display: block;
-      margin-top: 2px;
+    }
+    /* White logos get a dark pill so they read on the card */
+    .csl-card-logo--dark {
+      background: #131521;
+      border-radius: 6px;
+      padding: 8px 14px;
+      min-height: auto;
+    }
+    .csl-card-logo--dark img {
+      height: 28px;
     }
     .csl-card h2 {
       font-family: 'Manrope', sans-serif;
@@ -477,7 +484,7 @@
             <span class="csl-card-tag">GDPR</span>
             <span class="csl-card-tag">Ireland</span>
           </div>
-          <div class="csl-card-logo">An <em>Post</em></div>
+          <div class="csl-card-logo"><img src="img/logos/anpost.svg" alt="An Post"></div>
           <h2>Bringing WhatsApp to Ireland's national postal service</h2>
           <p>Ireland's national postal service wanted to add WhatsApp as a customer engagement channel. Tried to build it internally — too complex. Kaptea, introduced via Twilio and backed by a Meta-sponsored proof of concept, delivered a high-standard MVP that became a production solution.</p>
           <div class="csl-card-footer">
@@ -513,7 +520,7 @@
             <span class="csl-card-tag">GDPR</span>
             <span class="csl-card-tag">Ireland</span>
           </div>
-          <div class="csl-card-logo">TVLicence<em>.ie</em><small>by An Post</small></div>
+          <div class="csl-card-logo"><img src="img/logos/tvlicence.png" alt="TVLicence.ie"></div>
           <h2>Enterprise control behind every TV licence campaign</h2>
           <p>Ireland's TV licensing authority needed governance, Irish data residency and full GDPR compliance for high-volume licence renewal campaigns — a platform their team could operate without engineering support.</p>
           <div class="csl-card-footer">
@@ -549,7 +556,7 @@
             <span class="csl-card-tag">Email</span>
             <span class="csl-card-tag">WhatsApp</span>
           </div>
-          <div class="csl-card-logo">Caledonian <em>Sleeper</em></div>
+          <div class="csl-card-logo"><img src="img/logos/caledonian-sleeper.svg" alt="Caledonian Sleeper"></div>
           <h2>Mission-critical passenger communications, even at 3am</h2>
           <p>Scotland's iconic overnight rail service runs reservation-only, giving them contact details for 91% of passengers. When disruptions hit in the night, Pronto lets them reach everyone at the push of a button.</p>
           <div class="csl-card-footer">
@@ -585,7 +592,7 @@
             <span class="csl-card-tag">CRM Integration</span>
             <span class="csl-card-tag">Compliance</span>
           </div>
-          <div class="csl-card-logo">Tick<em>Mill</em></div>
+          <div class="csl-card-logo csl-card-logo--dark"><img src="img/logos/tickmill.svg" alt="Tickmill"></div>
           <h2>100% call recording compliance, without slowing agents down</h2>
           <p>A globally regulated online trading platform had a compliance gap: call recordings were not consistently matched to HubSpot records. Kaptea replaced CloudTalk and HubSpot Voice with a single Twilio Flex deployment.</p>
           <div class="csl-card-footer">
@@ -621,7 +628,7 @@
             <span class="csl-card-tag">Transactional</span>
             <span class="csl-card-tag">Ireland</span>
           </div>
-          <div class="csl-card-logo">e<em>Flow</em></div>
+          <div class="csl-card-logo"><img src="img/logos/eflow.svg" alt="eFlow"></div>
           <h2>High-volume transactional email for Ireland's national tolling network</h2>
           <p>Ireland's electronic tolling operator runs 1M+ email campaigns with a 99% sender reputation — and zero dependency on IT or engineering to build and deploy.</p>
           <div class="csl-card-footer">
@@ -657,7 +664,7 @@
             <span class="csl-card-tag">Email</span>
             <span class="csl-card-tag">Ireland</span>
           </div>
-          <div class="csl-card-logo"><em>HSE</em><small>Health Service Executive</small></div>
+          <div class="csl-card-logo"><img src="img/logos/hse.jpg" alt="HSE – Health Service Executive"></div>
           <h2>Patient communications at national health system scale</h2>
           <p>Ireland's Health Service Executive uses Pronto to deliver appointment notifications, public health alerts and care pathway communications — with strict GDPR and clinical governance requirements met from day one.</p>
           <div class="csl-card-footer">
@@ -686,7 +693,7 @@
             <span class="csl-card-tag">Email</span>
             <span class="csl-card-tag">UK</span>
           </div>
-          <div class="csl-card-logo">Barratt <em>Homes</em></div>
+          <div class="csl-card-logo csl-card-logo--dark"><img src="img/logos/barratt.svg" alt="Barratt Redrow"></div>
           <h2>Customer communications across the UK homebuying journey</h2>
           <p>One of the UK's largest housebuilders uses Pronto to manage customer communications from reservation through to legal completion — milestone updates, appointment reminders and after-care messaging at national scale.</p>
           <div class="csl-card-footer">
@@ -715,7 +722,7 @@
             <span class="csl-card-tag">Email</span>
             <span class="csl-card-tag">Ireland</span>
           </div>
-          <div class="csl-card-logo">Food<em>Cloud</em></div>
+          <div class="csl-card-logo"><img src="img/logos/foodcloud.svg" alt="FoodCloud"></div>
           <h2>Coordinating food redistribution across hundreds of charity partners</h2>
           <p>Ireland's leading food surplus charity connects retailers with local community organisations. Pronto handles the real-time notifications that keep hundreds of food redistribution partners informed and operational across Ireland and the UK.</p>
           <div class="csl-card-footer">
@@ -743,7 +750,7 @@
             <span class="csl-card-tag">Voice &amp; IVR</span>
             <span class="csl-card-tag">Global</span>
           </div>
-          <div class="csl-card-logo"><em>Quandoo</em></div>
+          <div class="csl-card-logo"><img src="img/logos/quandoo.svg" alt="Quandoo"></div>
           <h2>A flexible restaurant reservation IVR built to last</h2>
           <p>The global restaurant reservation platform has worked with Kaptea for over five years — a 10/10 NPS relationship built on consistent delivery, deep product knowledge, and a team that does what they say they'll do.</p>
           <div class="csl-card-footer">
@@ -778,7 +785,7 @@
             <span class="csl-card-tag">SMS</span>
             <span class="csl-card-tag">Email</span>
           </div>
-          <div class="csl-card-logo"><em>Dialectica</em></div>
+          <div class="csl-card-logo"><img src="img/logos/dialectica.png" alt="Dialectica"></div>
           <h2>Expert session coordination at scale across 40+ markets</h2>
           <p>The leading expert network uses Pronto to coordinate session bookings, expert availability notifications and client briefing reminders across a global network of thousands of specialists in over 40 countries.</p>
           <div class="csl-card-footer">
@@ -806,7 +813,7 @@
             <span class="csl-card-tag">Voice &amp; IVR</span>
             <span class="csl-card-tag">Ireland</span>
           </div>
-          <div class="csl-card-logo">Hot<em>box</em></div>
+          <div class="csl-card-logo csl-card-logo--dark"><img src="img/logos/hotbox.svg" alt="The Hot Box Sauna"></div>
           <h2>From 60% call abandonment to under 7%</h2>
           <p>The Hot Box Sauna was losing over half of all inbound calls before Kaptea rebuilt their voice infrastructure. Now abandonment is under 7% — with Zendesk and Shopify integrations built in.</p>
           <div class="csl-card-footer">
