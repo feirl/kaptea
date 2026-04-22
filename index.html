@@ -239,22 +239,28 @@
       gap: 48px;
       flex-wrap: wrap;
     }
-    .logo-placeholder {
-      background: transparent;
-      height: 32px;
+    .client-logo {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 8px;
-      font-size: 15px;
-      font-weight: 700;
-      color: #b0aaa0;
-      letter-spacing: 0.02em;
-      min-width: 80px;
-      opacity: 0.7;
-      transition: opacity 0.2s ease;
+      text-decoration: none;
+      filter: grayscale(1) opacity(0.5);
+      transition: filter 0.25s ease, opacity 0.25s ease;
     }
-    .logo-placeholder:hover { opacity: 1; }
+    .client-logo:hover { filter: grayscale(0) opacity(1); }
+    .client-logo img {
+      height: 32px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      display: block;
+    }
+    .client-logo--dark {
+      background: #131521;
+      border-radius: 6px;
+      padding: 6px 14px;
+    }
+    .client-logo--dark img { height: 22px; }
 
     /* ── SECTION WRAPPERS ── */
     .section { padding: 88px 40px; }
@@ -1246,14 +1252,15 @@
 <div class="logo-bar">
   <div class="logo-bar-label">Trusted by regulated organisations across utilities, healthcare, financial services, and travel &amp; transportation</div>
   <div class="logo-row">
-    <div class="logo-placeholder">NIE Networks</div>
-    <div class="logo-placeholder">HSE</div>
-    <div class="logo-placeholder">An Post</div>
-    <div class="logo-placeholder">Caledonia Sleeper</div>
-    <div class="logo-placeholder">Eflow</div>
-    <div class="logo-placeholder">Quandoo</div>
-    <div class="logo-placeholder">Dialectica</div>
-    <div class="logo-placeholder">Hot Box Sauna</div>
+    <div class="client-logo"><img src="img/logos/hse.jpg" alt="HSE – Health Service Executive"></div>
+    <a href="case-study-an-post-whatsapp" class="client-logo"><img src="img/logos/anpost.svg" alt="An Post"></a>
+    <a href="case-study-an-post" class="client-logo"><img src="img/logos/tvlicence.png" alt="TVLicence.ie by An Post"></a>
+    <a href="case-study-caledonian-sleeper" class="client-logo"><img src="img/logos/caledonian-sleeper.svg" alt="Caledonian Sleeper"></a>
+    <a href="case-study-tickmill" class="client-logo client-logo--dark"><img src="img/logos/tickmill.svg" alt="Tickmill"></a>
+    <a href="case-study-eflow" class="client-logo"><img src="img/logos/eflow.svg" alt="eFlow"></a>
+    <a href="case-study-quandoo" class="client-logo"><img src="img/logos/quandoo.svg" alt="Quandoo"></a>
+    <div class="client-logo"><img src="img/logos/dialectica.png" alt="Dialectica"></div>
+    <a href="case-study-hotbox" class="client-logo client-logo--dark"><img src="img/logos/hotbox.svg" alt="The Hot Box Sauna"></a>
   </div>
 </div>
 
@@ -1447,28 +1454,28 @@
 
     <div class="case-study-block">
       <div>
-        <div class="cs-label">NIE Networks, Utilities &amp; Energy</div>
-        <h2>"Storm-proof IVR for a national grid operator."</h2>
-        <p class="challenge">NIE Networks manages electricity distribution across Northern Ireland. During major storm events, inbound call volumes spike from 100 to over 75,000 per hour. Their legacy IVR infrastructure couldn't cope. During an outage, every missed call is a customer without power and no information.</p>
+        <div class="cs-label">The Hot Box Sauna · Hospitality &amp; Wellness</div>
+        <h2>"We went from abandoning 60% of calls to under 7%."</h2>
+        <p class="challenge">The Hot Box Sauna is one of Ireland's fastest-growing wellness brands. High call volumes were creating a broken customer experience — over 60% of inbound calls went unanswered, costing bookings and damaging the brand. Their previous provider had left a number porting issue unresolved for months.</p>
         <div class="cs-outcome">
-          <strong>The outcome:</strong> Surge-proof IVR orchestration, integrated with Microsoft Dynamics CRM and Azure AD, deployed in under 90 days. NIE Networks now handles any storm-scale event without a single dropped customer escalation.
+          <strong>The outcome:</strong> Kaptea rebuilt their voice infrastructure on Twilio Flex, integrating Zendesk and Shopify so agents see full customer context on every call. Call abandonment dropped from 60% to under 7% — and they scored Kaptea 10 out of 10.
         </div>
-        <div class="cs-quote">"Kaptea gave us the confidence that our communications infrastructure would hold when our customers needed us most."</div>
-        <a href="#" class="cs-link">Read the full case study →</a>
+        <div class="cs-quote">"The Kaptea team literally couldn't have done enough for us. The level of care and detail is something you just don't get anywhere else."</div>
+        <a href="case-study-hotbox" class="cs-link">Read the full case study →</a>
       </div>
 
       <div class="cs-stats">
         <div class="cs-stat">
-          <div class="cs-stat-number">750×</div>
-          <div class="cs-stat-label">Surge in inbound call volume during storm events, handled without dropped escalations</div>
+          <div class="cs-stat-number">60%→&lt;7%</div>
+          <div class="cs-stat-label">Call abandonment — from over half of all calls lost to under 1 in 14</div>
         </div>
         <div class="cs-stat">
-          <div class="cs-stat-number">&lt;90</div>
-          <div class="cs-stat-label">Days from contract to full live deployment, including CRM and SSO integration</div>
+          <div class="cs-stat-number">2</div>
+          <div class="cs-stat-label">System integrations (Zendesk + Shopify) wired in during deployment</div>
         </div>
         <div class="cs-stat">
-          <div class="cs-stat-number">24/7</div>
-          <div class="cs-stat-label">Resilience monitoring with Kaptea managing all Twilio escalations on NIE's behalf</div>
+          <div class="cs-stat-number">10/10</div>
+          <div class="cs-stat-label">NPS — scored by the customer at end of implementation</div>
         </div>
       </div>
     </div>

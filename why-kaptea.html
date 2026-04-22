@@ -106,8 +106,23 @@
     .logos-inner { max-width: 1080px; margin: 0 auto; }
     .logos h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 12px; }
     .logos > .logos-inner > p { font-size: 15px; color: #555555; margin-bottom: 36px; }
-    .logo-grid { display: flex; gap: 48px; justify-content: center; align-items: center; flex-wrap: wrap; }
-    .logo-item { font-size: 15px; font-weight: 600; color: #9ca3af; padding: 16px 24px; border: 1px solid #eeebe6; border-radius: 8px; }
+    .logo-grid { display: flex; gap: 32px; justify-content: center; align-items: center; flex-wrap: wrap; }
+    .logo-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      text-decoration: none;
+      filter: grayscale(1) opacity(0.5);
+      transition: filter 0.25s ease, border-color 0.2s;
+    }
+    .logo-item:hover { filter: grayscale(0) opacity(1); border-color: #d1cdc7; }
+    .logo-item img { height: 28px; width: auto; max-width: 120px; object-fit: contain; display: block; }
+    .logo-item--dark { background: #131521; border-color: #131521; }
+    .logo-item--dark:hover { border-color: #131521; }
+    .logo-item--dark img { height: 20px; }
 
     /* ── LEADERSHIP ── */
     .leadership { padding: 72px 40px; background: #faf8f5; }
@@ -577,13 +592,15 @@
     <p>From national utilities and postal services to overnight rail and hospitality — these organisations trust Kaptea with their critical communications.</p>
 
     <div class="logo-grid">
-      <div class="logo-item">HSE</div>
-      <div class="logo-item">An Post</div>
-      <div class="logo-item">Caledonia Sleeper</div>
-      <div class="logo-item">Eflow</div>
-      <div class="logo-item">Quandoo</div>
-      <div class="logo-item">Dialectica</div>
-      <div class="logo-item">Hot Box Sauna</div>
+      <div class="logo-item"><img src="img/logos/hse.jpg" alt="HSE – Health Service Executive"></div>
+      <a href="case-study-an-post-whatsapp" class="logo-item"><img src="img/logos/anpost.svg" alt="An Post"></a>
+      <a href="case-study-an-post" class="logo-item"><img src="img/logos/tvlicence.png" alt="TVLicence.ie by An Post"></a>
+      <a href="case-study-caledonian-sleeper" class="logo-item"><img src="img/logos/caledonian-sleeper.svg" alt="Caledonian Sleeper"></a>
+      <a href="case-study-tickmill" class="logo-item logo-item--dark"><img src="img/logos/tickmill.svg" alt="Tickmill"></a>
+      <a href="case-study-eflow" class="logo-item"><img src="img/logos/eflow.svg" alt="eFlow"></a>
+      <a href="case-study-quandoo" class="logo-item"><img src="img/logos/quandoo.svg" alt="Quandoo"></a>
+      <div class="logo-item"><img src="img/logos/dialectica.png" alt="Dialectica"></div>
+      <a href="case-study-hotbox" class="logo-item logo-item--dark"><img src="img/logos/hotbox.svg" alt="The Hot Box Sauna"></a>
     </div>
   </div>
 </section>
