@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23dc2727'/><text x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='18' font-weight='700' fill='white'>K</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Quandoo built a flexible restaurant reservation IVR with Kaptea | Kaptea</title>
+  <meta name="description" content="How Quandoo — the global restaurant reservation platform — replaced an inflexible third-party IVR with a customisable Kaptea solution, deployed globally across their restaurant network." />
+  <link rel="canonical" href="https://kaptea.vercel.app/case-study-quandoo" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How Quandoo built a flexible restaurant reservation IVR with Kaptea | Kaptea" />
+  <meta property="og:description" content="How Quandoo — the global restaurant reservation platform — replaced an inflexible third-party IVR with a customisable Kaptea solution, deployed globally across their restaurant network." />
+  <meta property="og:url" content="https://kaptea.vercel.app/case-study-quandoo" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* ─── CASE STUDY TEMPLATE STYLES ─────────────────────────────── */
+
+    /* Hero */
+    .cs-hero {
+      background: #131521;
+      color: #fff;
+      padding: 64px 40px 80px;
+    }
+    .cs-hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .cs-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 80px;
+      align-items: start;
+    }
+    .cs-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .cs-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
+    }
+    .cs-tag-red {
+      background: rgba(220,39,39,0.15);
+      border-color: rgba(220,39,39,0.3);
+      color: #f87171;
+    }
+    .cs-hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .cs-hero h1 em { color: #dc2727; font-style: normal; }
+    .cs-hero-sub {
+      font-size: 17px;
+      color: #9ca3af;
+      line-height: 1.65;
+      max-width: 580px;
+      margin-bottom: 36px;
+    }
+    .cs-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #dc2727;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cs-hero-cta:hover { background: #b91c1c; }
+
+    /* Sidebar card */
+    .cs-sidebar {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 8px;
+    }
+    .cs-sidebar-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 8px;
+      padding: 18px 24px;
+      margin-bottom: 24px;
+    }
+    .cs-sidebar-logo span {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #131521;
+      letter-spacing: -0.5px;
+    }
+    .cs-sidebar-logo span em {
+      color: #dc2727;
+      font-style: normal;
+    }
+    .cs-meta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cs-meta-item label {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 4px;
+    }
+    .cs-meta-item p {
+      font-size: 14px;
+      color: #d1d5db;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Stats bar */
+    .cs-stats {
+      background: #fff;
+      border-bottom: 1px solid #eeebe6;
+    }
+    .cs-stats-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .cs-stat {
+      padding: 40px 32px;
+      border-right: 1px solid #eeebe6;
+    }
+    .cs-stat:first-child { padding-left: 0; }
+    .cs-stat:last-child { border-right: none; padding-right: 0; }
+    .cs-stat-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: #dc2727;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .cs-stat-label {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Body */
+    .cs-body {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 72px 40px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 80px;
+      align-items: start;
+    }
+    .cs-content { min-width: 0; }
+    .cs-content section { margin-bottom: 56px; }
+    .cs-content section:last-child { margin-bottom: 0; }
+    .cs-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2727;
+      margin-bottom: 12px;
+    }
+    .cs-content h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #131521;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .cs-content p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .cs-content p:last-child { margin-bottom: 0; }
+
+    /* Requirement list */
+    .cs-req-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .cs-req-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+    .cs-req-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .cs-req-icon svg { display: block; }
+
+    /* Solution cards */
+    .cs-solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .cs-solution-card {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .cs-solution-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 6px;
+    }
+    .cs-solution-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Results */
+    .cs-results-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .cs-results-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .cs-result-check {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: #16a34a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .cs-result-body { min-width: 0; }
+    .cs-result-body strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: #131521;
+      margin-bottom: 3px;
+    }
+    .cs-result-body p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Pull quote */
+    .cs-quote-section {
+      background: #131521;
+      padding: 72px 40px;
+    }
+    .cs-quote-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cs-quote-mark {
+      font-size: 80px;
+      line-height: 1;
+      color: #dc2727;
+      font-family: Georgia, serif;
+      margin-bottom: -12px;
+      display: block;
+    }
+    .cs-quote-text {
+      font-family: 'Manrope', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .cs-quote-attr {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    .cs-quote-attr strong { color: #fff; font-weight: 600; }
+
+    /* Sidebar sticky */
+    .cs-aside {
+      position: sticky;
+      top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cs-aside-card {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .cs-aside-card h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 14px;
+    }
+    .cs-aside-tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .cs-aside-tag {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #fff;
+      border: 1px solid #e5e2de;
+      color: #444;
+    }
+    .cs-aside-metric {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eeebe6;
+      font-size: 13px;
+    }
+    .cs-aside-metric:last-child { border-bottom: none; padding-bottom: 0; }
+    .cs-aside-metric span:first-child { color: #777; }
+    .cs-aside-metric span:last-child { font-weight: 600; color: #131521; }
+
+    /* CTA close */
+    .cs-cta {
+      background: #dc2727;
+      padding: 72px 40px;
+      text-align: center;
+      color: #fff;
+    }
+    .cs-cta-inner { max-width: 600px; margin: 0 auto; }
+    .cs-cta h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cs-cta p { font-size: 17px; color: rgba(255,255,255,0.8); margin-bottom: 32px; line-height: 1.6; }
+    .cs-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: #fff;
+      color: #dc2727;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+    .btn-outline-white {
+      border: 2px solid rgba(255,255,255,0.4);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s;
+    }
+    .btn-outline-white:hover { border-color: #fff; }
+
+    /* More case studies */
+    .cs-more {
+      background: #faf8f5;
+      padding: 72px 40px;
+      border-top: 1px solid #eeebe6;
+    }
+    .cs-more-inner { max-width: 1080px; margin: 0 auto; }
+    .cs-more h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 32px;
+    }
+    .cs-more-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .cs-more-card {
+      background: #fff;
+      border: 1px solid #eeebe6;
+      border-radius: 10px;
+      padding: 24px;
+      text-decoration: none;
+      display: block;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .cs-more-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); border-color: #d1cdc7; }
+    .cs-more-card-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #dc2727;
+      margin-bottom: 10px;
+    }
+    .cs-more-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #131521;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .cs-more-card p {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .cs-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .cs-sidebar { margin-top: 0; }
+      .cs-stats-inner { grid-template-columns: 1fr; }
+      .cs-stat { border-right: none; border-bottom: 1px solid #eeebe6; padding: 32px 0; }
+      .cs-stat:last-child { border-bottom: none; }
+      .cs-body { grid-template-columns: 1fr; gap: 48px; }
+      .cs-aside { position: static; }
+      .cs-req-grid { grid-template-columns: 1fr; }
+      .cs-solution-grid { grid-template-columns: 1fr; }
+      .cs-more-grid { grid-template-columns: 1fr; }
+      .cs-hero h1 { font-size: 32px; }
+      .cs-quote-text { font-size: 20px; }
+    }
+    @media (max-width: 600px) {
+      .cs-hero { padding: 48px 20px 56px; }
+      .cs-stats-inner { padding: 0 20px; }
+      .cs-body { padding: 48px 20px; }
+      .cs-quote-section { padding: 56px 20px; }
+      .cs-cta { padding: 56px 20px; }
+      .cs-more { padding: 56px 20px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="cs-hero">
+  <div class="cs-hero-inner">
+
+    <div class="cs-hero-grid">
+
+      <div class="cs-hero-content">
+        <div class="cs-tag-row">
+          <span class="cs-tag cs-tag-red">Case Study</span>
+          <span class="cs-tag">Hospitality</span>
+          <span class="cs-tag">Voice &amp; IVR</span>
+          <span class="cs-tag">Global</span>
+        </div>
+        <h1>How Quandoo built a <em>restaurant reservation IVR</em> that actually flexes</h1>
+        <p class="cs-hero-sub">Quandoo needed a voice solution that could adapt to individual restaurant requirements — without expensive developer work every time. Kaptea delivered a customisable IVR that has routed restaurant reservations globally for over five years, with near-zero operational friction.</p>
+        <a href="demo" class="cs-hero-cta">
+          Book a Demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <aside class="cs-sidebar" aria-label="Case study details">
+        <div class="cs-sidebar-logo" aria-label="Quandoo logo">
+          <span><em>Quandoo</em></span>
+        </div>
+        <div class="cs-meta-row">
+          <div class="cs-meta-item">
+            <label>Industry</label>
+            <p>Hospitality Technology</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Location</label>
+            <p>Global (HQ: Dublin)</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Channel</label>
+            <p>Voice &amp; IVR</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Platform</label>
+            <p>Kaptea via Twilio</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Outcome</label>
+            <p>5+ year partnership</p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     STATS BAR
+═══════════════════════════════ -->
+<div class="cs-stats" role="region" aria-label="Key outcomes">
+  <div class="cs-stats-inner">
+    <div class="cs-stat">
+      <div class="cs-stat-num">5+ yrs</div>
+      <div class="cs-stat-label">Partnership and uninterrupted global deployment</div>
+    </div>
+    <div class="cs-stat">
+      <div class="cs-stat-num">Global</div>
+      <div class="cs-stat-label">Deployed wherever Quandoo's service is available</div>
+    </div>
+    <div class="cs-stat">
+      <div class="cs-stat-num">10/10</div>
+      <div class="cs-stat-label">NPS from commercial director with multi-platform vendor experience</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     BODY
+═══════════════════════════════ -->
+<div class="cs-body">
+  <main class="cs-content" id="main-content">
+
+    <!-- Background -->
+    <section>
+      <p class="cs-section-label">Background</p>
+      <h2>A reservation platform that needs a voice for every restaurant</h2>
+      <p>Quandoo operates one of the world's leading restaurant reservation platforms — connecting diners to thousands of restaurants across multiple markets. A core part of that experience is voice: diners calling to make reservations, or restaurants needing to speak to incoming callers.</p>
+      <p>Each restaurant is different. Some want specific routing logic. Some want particular options in the IVR flow. What works for one merchant doesn't always work for another. The platform's value depends on its ability to serve individual restaurant requirements at scale — not a one-size-fits-all IVR that treats every merchant identically.</p>
+    </section>
+
+    <!-- Challenge -->
+    <section>
+      <p class="cs-section-label">The Challenge</p>
+      <h2>Inflexible, expensive, and about to end</h2>
+      <p>The existing IVR was built by a third party. The problem wasn't capability — it was flexibility. Every customisation, however minor, required going back to the original developer, scoping the change, and paying for it. When a restaurant wanted something specific, Quandoo couldn't just configure it themselves — they had to commission it.</p>
+      <p>And when the contract with that provider was ending, the window to move was tight. Quandoo needed a replacement that could be stood up quickly, without sacrificing the per-restaurant configurability that was essential to their model.</p>
+      <div class="cs-req-grid" role="list">
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Per-restaurant IVR customisation
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Restaurant-specific call routing
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Flexible configuration without developer dependency
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Fast MVP to replace ending contract
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Global telephony coverage
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Twilio integration and number management
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Responsive support for merchant requests
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Low operational overhead
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Scalable to Quandoo's restaurant network
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Reliable uptime across all markets
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section>
+      <p class="cs-section-label">The Solution</p>
+      <h2>Configure once, adapt always — through a Slack message</h2>
+      <p>Kaptea was introduced by Twilio. The first conversations stood out immediately: a can-do attitude, clear technical knowledge, and an evident willingness to understand Quandoo's specific requirements rather than pushing a standard product. Where a previous provider had responded to every change request with cost and complexity, Kaptea's answer was simply: we'll find a way.</p>
+      <p>With the existing contract ending, Kaptea moved quickly to deliver an MVP. The harder challenge was extracting the requirements from Quandoo's own resource-constrained team — but Kaptea worked above and beyond to hit the deadline, getting the information they needed and building around it.</p>
+      <div class="cs-solution-grid">
+        <div class="cs-solution-card">
+          <h4>Customisable IVR per restaurant</h4>
+          <p>Each merchant can have specific routing logic, IVR options and call handling configured for their requirements. No developer engagement needed every time a restaurant wants something different.</p>
+        </div>
+        <div class="cs-solution-card">
+          <h4>Fast MVP delivery</h4>
+          <p>With the existing contract ending, Kaptea moved quickly. The challenge was extracting requirements from Quandoo's own resource-constrained team — they worked above and beyond to hit the deadline.</p>
+        </div>
+        <div class="cs-solution-card">
+          <h4>Global telephony management</h4>
+          <p>Wherever Quandoo's service runs, Kaptea manages the underlying telephony — number assignment, routing, and regulatory compliance across all markets, without Quandoo needing to manage multiple providers.</p>
+        </div>
+        <div class="cs-solution-card">
+          <h4>Slack-based support</h4>
+          <p>Merchant-specific requests — assigning a number, adjusting a routing rule, adding an IVR option — are handled via a Slack ping to Robert. Typically resolved the same day, often within hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section>
+      <p class="cs-section-label">Results</p>
+      <h2>Five years. It just works.</h2>
+      <p>The clearest sign of a successful infrastructure partnership is that there's nothing to report. In five years, Quandoo's commercial director can recall one significant support event. The platform runs, merchants don't complain, and Quandoo's team can focus on the product — not the telephony underneath it.</p>
+      <ul class="cs-results-list">
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Restaurant-specific customisation, without developer costs</strong>
+            <p>Quandoo can adapt IVR flows for individual merchants without commissioning external development work. Configuration changes happen through a support channel, not a change request process.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Global deployment, minimal overhead</strong>
+            <p>The platform runs across all of Quandoo's markets, managed through a lightweight support contract. Scale without the operational complexity that would typically accompany it.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Near-zero escalations</strong>
+            <p>In five years, Quandoo's commercial director can recall one significant support event. That's the reliability benchmark — infrastructure that is simply not a source of operational risk.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Merchant requests resolved same-day</strong>
+            <p>Number assignments, routing changes, IVR adjustments — handled via Slack and typically completed within hours. No tickets, no scoping sessions, no invoices for minor changes.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Partner proactively identifies opportunities</strong>
+            <p>Kaptea brought a well-considered expansion proposition, showing genuine understanding of Quandoo's business rather than a generic upsell. Described as "solid — a genuine fit for us and a natural fit for them."</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="cs-aside" aria-label="Case study quick facts">
+    <div class="cs-aside-card">
+      <h4>Channels used</h4>
+      <div class="cs-aside-tag-list">
+        <span class="cs-aside-tag">Voice</span>
+        <span class="cs-aside-tag">IVR</span>
+        <span class="cs-aside-tag">Twilio</span>
+      </div>
+    </div>
+    <div class="cs-aside-card">
+      <h4>Platform features</h4>
+      <div class="cs-aside-tag-list">
+        <span class="cs-aside-tag">Per-merchant IVR configuration</span>
+        <span class="cs-aside-tag">Global number management</span>
+        <span class="cs-aside-tag">Twilio routing</span>
+        <span class="cs-aside-tag">Slack-based support</span>
+        <span class="cs-aside-tag">Restaurant-specific customisation</span>
+        <span class="cs-aside-tag">SLA management</span>
+      </div>
+    </div>
+    <div class="cs-aside-card">
+      <h4>At a glance</h4>
+      <div class="cs-aside-metric">
+        <span>Industry</span>
+        <span>Hospitality Technology</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>Markets</span>
+        <span>Global</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>Channel</span>
+        <span>Voice &amp; IVR</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>Partnership</span>
+        <span>5+ years</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>NPS</span>
+        <span>10/10</span>
+      </div>
+    </div>
+    <div class="cs-aside-card">
+      <h4>Related pages</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+        <a href="voice-ivr" style="font-size:13px;color:#dc2727;text-decoration:none;font-weight:500;">Voice &amp; IVR →</a>
+        <a href="ivr-voice-orchestration" style="font-size:13px;color:#dc2727;text-decoration:none;font-weight:500;">IVR &amp; Voice Orchestration →</a>
+        <a href="twilio-partner" style="font-size:13px;color:#dc2727;text-decoration:none;font-weight:500;">Twilio Partner →</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- ═══════════════════════════════
+     PULL QUOTE
+═══════════════════════════════ -->
+<section class="cs-quote-section" aria-label="Client testimonial">
+  <div class="cs-quote-inner">
+    <span class="cs-quote-mark" aria-hidden="true">"</span>
+    <p class="cs-quote-text">It's a 10 out of 10. I can't think of a reason to score them less. They do what they say they're going to do, they meet their SLAs, and I proactively recommend them — I wouldn't even hesitate.</p>
+    <p class="cs-quote-attr"><strong>Commercial Director</strong> · Global Restaurant Reservation Platform</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     MORE CASE STUDIES
+═══════════════════════════════ -->
+<section class="cs-more">
+  <div class="cs-more-inner">
+    <h3>More customer stories</h3>
+    <div class="cs-more-grid">
+      <a href="case-study-hotbox" class="cs-more-card" aria-label="The Hot Box Sauna case study">
+        <p class="cs-more-card-tag">Hospitality</p>
+        <h4>The Hot Box Sauna</h4>
+        <p>How a fast-growing Irish wellness brand cut call abandonment from 60% to under 7% with Twilio Flex.</p>
+      </a>
+      <a href="case-study-caledonian-sleeper" class="cs-more-card" aria-label="Caledonian Sleeper case study">
+        <p class="cs-more-card-tag">Travel &amp; Transport</p>
+        <h4>Caledonian Sleeper</h4>
+        <p>Mission-critical passenger communications at the push of a button, even at 3am.</p>
+      </a>
+      <a href="demo" class="cs-more-card" aria-label="Book a demo">
+        <p class="cs-more-card-tag">Your organisation</p>
+        <h4>Could be next</h4>
+        <p>See how Kaptea handles your specific voice, IVR and telephony requirements in a personalised demo.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     CTA CLOSE
+═══════════════════════════════ -->
+<section class="cs-cta" aria-labelledby="cta-heading">
+  <div class="cs-cta-inner">
+    <h2 id="cta-heading">See what Kaptea can do for your organisation</h2>
+    <p>One platform. Every channel. Full control, without waiting on engineering.</p>
+    <div class="cs-cta-btns">
+      <a href="demo" class="btn-white">Book a Demo</a>
+      <a href="pronto" class="btn-outline-white">Explore Pronto</a>
+    </div>
+  </div>
+</section>
+
+<script src="footer.js"></script>
+</body>
+</html>

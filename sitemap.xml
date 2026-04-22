@@ -44,7 +44,11 @@
   <!-- Case Studies -->
   <url><loc>https://kaptea.vercel.app/case-studies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaptea.vercel.app/case-study-an-post</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.vercel.app/case-study-an-post-whatsapp</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://kaptea.vercel.app/case-study-caledonian-sleeper</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.vercel.app/case-study-eflow</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.vercel.app/case-study-hotbox</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.vercel.app/case-study-quandoo</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://kaptea.vercel.app/case-study-tickmill</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Blog -->
