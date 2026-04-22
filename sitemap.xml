@@ -46,7 +46,6 @@
   <url><loc>https://kaptea.vercel.app/case-study-an-post</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://kaptea.vercel.app/case-study-caledonian-sleeper</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://kaptea.vercel.app/case-study-tickmill</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-study-teaching-council</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Blog -->
   <url><loc>https://kaptea.vercel.app/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
