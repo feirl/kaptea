@@ -61,7 +61,7 @@
             "name": "How does Kaptea handle extreme call volume spikes during storm events?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pronto's IVR is built on Twilio's carrier-grade infrastructure with queue-based architecture designed for surge. During Storm Éowyn, a national utility operator experienced 750× their normal inbound call volume overnight. Pronto managed queue depth, played position announcements, and routed without degradation — no system collapse, no dropped calls, no manual intervention required. The platform scales elastically with demand."
+              "text": "Pronto's IVR is built on Twilio's carrier-grade infrastructure with queue-based architecture designed for surge. When inbound call volume spikes to 750× normal during a storm or outage event, Pronto manages queue depth, plays position announcements, and routes without degradation — no system collapse, no dropped calls, no manual intervention required. The platform scales elastically with demand."
             }
           },
           {
@@ -656,11 +656,11 @@
     <div class="solution-block">
       <div class="solution-pain">
         <div class="solution-pain-label">The pain</div>
-        <p>"Storm Éowyn hit overnight and our call volume went to levels we'd never seen. Our IVR went down within the first hour. We had no way to manage the queue or update customers on their outage status."</p>
+        <p>A major storm hits overnight. Call volume spikes to levels the IVR was never designed for. The system goes down within the first hour. There's no way to manage the queue or update customers on their outage status.</p>
       </div>
       <div class="solution-answer">
-        <h3>Surge-proof IVR that handled 750× normal volume — without degradation</h3>
-        <p>Pronto's IVR is built on Twilio's carrier-grade infrastructure with queue-based architecture designed for exactly these moments. During a major storm event, a national utility operator's call volume spiked 750× overnight. Pronto managed queue depth, played position announcements, and routed every call — with no system collapse and no manual intervention required.</p>
+        <h3>Surge-proof IVR that handles 750× normal volume — without degradation</h3>
+        <p>Pronto's IVR is built on Twilio's carrier-grade infrastructure with queue-based architecture designed for exactly these moments. When inbound call volume spikes to 750× normal overnight, Pronto manages queue depth, plays position announcements, and routes every call — with no system collapse and no manual intervention required.</p>
         <ul>
           <li>Elastic call queue management — no hard capacity ceiling</li>
           <li>Real-time queue position announcements and estimated wait times</li>
@@ -764,38 +764,6 @@
 <!-- ═══════════════════════════════
      FEATURED CUSTOMER
 ═══════════════════════════════ -->
-<section class="featured-customer">
-  <div class="featured-inner">
-    <div>
-      <div class="section-label">Customer story</div>
-      <blockquote class="featured-quote">
-        "When Storm Éowyn hit overnight, our call volume went to levels we'd never seen. Kaptea's platform handled the surge without us having to do anything. The IVR kept routing, the queues stayed manageable, and our teams could focus on the actual emergency rather than the phone system."
-      </blockquote>
-      <div class="featured-attribution">
-        <strong>Operations Director</strong><br>
-        Regional electricity network operator — Northern Ireland, Utilities &amp; Energy
-      </div>
-    </div>
-    <div class="featured-metrics">
-      <div class="featured-metric">
-        <h4>750×</h4>
-        <p>Peak inbound call volume — handled without system degradation</p>
-      </div>
-      <div class="featured-metric">
-        <h4>Zero</h4>
-        <p>Manual interventions required during the storm event</p>
-      </div>
-      <div class="featured-metric">
-        <h4>100%</h4>
-        <p>Queue continuity maintained throughout the surge</p>
-      </div>
-      <div class="featured-metric">
-        <h4>Days</h4>
-        <p>From contract to live production environment</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ═══════════════════════════════
