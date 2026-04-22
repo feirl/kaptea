@@ -129,8 +129,10 @@
     .leadership-inner { max-width: 1080px; margin: 0 auto; }
     .leadership h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 12px; }
     .leadership > .leadership-inner > p { font-size: 15px; color: #555555; margin-bottom: 36px; max-width: 600px; line-height: 1.6; }
-    .leader-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .leader-card { padding: 24px; background: #ffffff; border: 1px solid #eeebe6; border-radius: 8px; }
+    .leader-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 720px; }
+    .leader-card { background: #ffffff; border: 1px solid #eeebe6; border-radius: 8px; overflow: hidden; }
+    .leader-card .leader-photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center top; display: block; }
+    .leader-card .leader-info { padding: 20px 24px 24px; }
     .leader-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #131521; margin-bottom: 2px; }
     .leader-card .leader-role { font-size: 13px; color: #dc2727; font-weight: 600; margin-bottom: 10px; }
     .leader-card p { font-size: 13px; color: #555555; line-height: 1.6; }
@@ -712,15 +714,21 @@
     <div class="leader-grid">
 
       <div class="leader-card">
-        <h3>Alan McNab</h3>
-        <div class="leader-role">CEO &amp; Co-Founder</div>
-        <p>Former HP, Cisco, NCR, Arista Networks. Expertise in cloud architecture, high-availability systems, and customer service transformation. BSEE from Santa Clara University, MBA from Trinity College Dublin.</p>
+        <img src="img/alan-mcnab.webp" alt="Alan McNab, CEO &amp; Co-Founder of Kaptea" class="leader-photo">
+        <div class="leader-info">
+          <h3>Alan McNab</h3>
+          <div class="leader-role">CEO &amp; Co-Founder</div>
+          <p>Former HP, Cisco, NCR, Arista Networks. Expertise in cloud architecture, high-availability systems, and customer service transformation. BSEE from Santa Clara University, MBA from Trinity College Dublin.</p>
+        </div>
       </div>
 
       <div class="leader-card">
-        <h3>Robert Norton</h3>
-        <div class="leader-role">CTO &amp; Co-Founder</div>
-        <p>18+ years driving digital transformation at Ryanair, Bank of Ireland, HSE, and 123.ie. Led the design and delivery of secure, scalable platforms serving millions of users.</p>
+        <img src="img/robert-norton.webp" alt="Robert Norton, CTO &amp; Co-Founder of Kaptea" class="leader-photo">
+        <div class="leader-info">
+          <h3>Robert Norton</h3>
+          <div class="leader-role">CTO &amp; Co-Founder</div>
+          <p>18+ years driving digital transformation at Ryanair, Bank of Ireland, HSE, and 123.ie. Led the design and delivery of secure, scalable platforms serving millions of users.</p>
+        </div>
       </div>
 
     </div>
