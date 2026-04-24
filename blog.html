@@ -10,7 +10,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Blog &amp; Insights — Kaptea" />
   <meta property="og:description" content="Straight talk on enterprise communications, compliance, data residency and carrier-grade infrastructure." />
-  <meta property="og:url" content="https://kaptea.vercel.app/blog.html" />
+  <meta property="og:url" content="https://kaptea.vercel.app/blog" />
   <meta property="og:site_name" content="Kaptea" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@kaptea" />
@@ -22,9 +22,9 @@
   {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Kaptea Blog &amp; Insights",
+    "name": "Kaptea Blog & Insights",
     "description": "Enterprise communications insight from the team at Kaptea: compliance, infrastructure, channel strategy and industry perspectives.",
-    "url": "https://kaptea.vercel.app/blog.html",
+    "url": "https://kaptea.vercel.app/blog",
     "publisher": {
       "@type": "Organization",
       "name": "Kaptea",
@@ -34,47 +34,61 @@
   }
   </script>
   <style>
-    /* =========================================================
-       BLOG OVERVIEW — blog-* namespace
-    ========================================================= */
 
-    /* Hero */
+    /* ── HERO ── */
     .blog-hero {
-      background: var(--kaptea-charcoal);
+      background: #131521;
       padding: 80px 40px 64px;
     }
     .blog-hero-inner {
-      max-width: 1280px;
+      max-width: 1200px;
       margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
     }
+    .blog-hero-text {}
     .blog-hero-eyebrow {
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--kaptea-red);
+      color: #dc2727;
       margin-bottom: 16px;
     }
     .blog-hero h1 {
       font-family: 'Manrope', sans-serif;
-      font-size: clamp(30px, 5vw, 50px);
+      font-size: clamp(28px, 4vw, 44px);
       font-weight: 800;
-      color: var(--kaptea-white);
-      margin: 0 0 16px;
-      max-width: 600px;
+      color: #ffffff;
+      margin: 0 0 14px;
+      max-width: 560px;
       line-height: 1.15;
     }
     .blog-hero p {
-      font-size: 17px;
-      color: rgba(255,255,255,0.5);
-      max-width: 540px;
+      font-size: 16px;
+      color: rgba(255,255,255,0.45);
+      max-width: 480px;
       line-height: 1.65;
       margin: 0;
     }
+    .blog-hero-stat {
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .blog-hero-stat .stat-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 56px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.06);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
 
-    /* Filter strip */
+    /* ── FILTER STRIP ── */
     .blog-filter {
-      background: var(--kaptea-white);
+      background: #ffffff;
       border-bottom: 1px solid #e8eaf0;
       padding: 0 40px;
       position: sticky;
@@ -82,7 +96,7 @@
       z-index: 10;
     }
     .blog-filter-inner {
-      max-width: 1280px;
+      max-width: 1200px;
       margin: 0 auto;
       display: flex;
       overflow-x: auto;
@@ -93,7 +107,7 @@
       padding: 16px 20px;
       font-size: 13px;
       font-weight: 600;
-      color: var(--kaptea-tagline-grey);
+      color: #6b7280;
       border: none;
       background: none;
       cursor: pointer;
@@ -104,10 +118,10 @@
       display: block;
       font-family: 'Inter', sans-serif;
     }
-    .blog-filter-btn:hover { color: var(--kaptea-charcoal); }
-    .blog-filter-btn.active { color: var(--kaptea-red); border-bottom-color: var(--kaptea-red); }
+    .blog-filter-btn:hover { color: #131521; }
+    .blog-filter-btn.active { color: #dc2727; border-bottom-color: #dc2727; }
 
-    /* Category pills */
+    /* ── CATEGORY PILLS ── */
     .blog-cat {
       display: inline-block;
       font-size: 11px;
@@ -117,169 +131,281 @@
       padding: 3px 10px;
       border-radius: 100px;
     }
-    .blog-cat--platform     { background: #fee2e2; color: var(--kaptea-red); }
-    .blog-cat--compliance   { background: #dbeafe; color: #1d4ed8; }
-    .blog-cat--industry     { background: #dcfce7; color: #15803d; }
+    .blog-cat--platform       { background: #fee2e2; color: #dc2727; }
+    .blog-cat--compliance     { background: #dbeafe; color: #1d4ed8; }
+    .blog-cat--industry       { background: #dcfce7; color: #15803d; }
     .blog-cat--infrastructure { background: #ede9fe; color: #7c3aed; }
-    .blog-cat--company      { background: #fef3c7; color: #b45309; }
-    .blog-cat--procurement  { background: #f0fdf4; color: #166534; }
+    .blog-cat--company        { background: #fef3c7; color: #b45309; }
+    .blog-cat--procurement    { background: #f0fdf4; color: #166534; }
 
-    /* Content area */
+    /* ── CONTENT AREA ── */
     .blog-content {
       background: #f7f8fc;
       padding: 56px 40px 80px;
     }
     .blog-content-inner {
-      max-width: 1280px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
-    /* Featured post */
+    /* ── FEATURED POST ── */
     .blog-featured {
-      background: var(--kaptea-white);
-      border-radius: 12px;
-      overflow: hidden;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e8eaf0;
+      overflow: hidden;
       margin-bottom: 48px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
       text-decoration: none;
-      transition: box-shadow 0.2s;
+      transition: box-shadow 0.2s, border-color 0.2s;
     }
-    .blog-featured:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.1); }
-    .blog-featured-img {
-      background: linear-gradient(135deg, var(--kaptea-charcoal) 0%, #1e2640 55%, #9b1c1c 100%);
-      min-height: 340px;
-      position: relative;
+    .blog-featured:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.09);
+      border-color: rgba(220,39,39,0.2);
+    }
+
+    /* Left panel — dark editorial accent */
+    .blog-featured-accent {
+      background: #131521;
+      padding: 48px 44px;
       display: flex;
-      align-items: flex-end;
-      padding: 24px;
-    }
-    .blog-featured-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      inset: 0;
-    }
-    .blog-featured-img-label {
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 360px;
       position: relative;
-      z-index: 1;
+      overflow: hidden;
+    }
+    .blog-featured-accent::before {
+      content: '\201C';
+      position: absolute;
+      top: -10px;
+      right: 24px;
+      font-family: Georgia, serif;
+      font-size: 180px;
+      color: rgba(220,39,39,0.12);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .blog-featured-accent .feat-label {
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.3);
     }
+    .blog-featured-accent .feat-quote {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.35;
+      position: relative;
+      z-index: 1;
+    }
+    .blog-featured-accent .feat-quote em {
+      color: #dc2727;
+      font-style: normal;
+    }
+    .blog-featured-accent .feat-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .blog-featured-accent .feat-author-photo {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .blog-featured-accent .feat-author-photo img {
+      width: 116%;
+      height: 116%;
+      margin: -8%;
+      display: block;
+      object-fit: cover;
+    }
+    .blog-featured-accent .feat-author-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+    }
+    .blog-featured-accent .feat-author-role {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 1px;
+    }
+
+    /* Right panel — content */
     .blog-featured-body {
-      padding: 44px 44px 40px;
+      padding: 48px 44px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    .blog-featured-body .blog-cat { margin-bottom: 14px; }
+    .blog-featured-body .blog-cat { margin-bottom: 16px; }
     .blog-featured-body h2 {
       font-family: 'Manrope', sans-serif;
-      font-size: clamp(20px, 2.5vw, 28px);
+      font-size: clamp(18px, 2.2vw, 26px);
       font-weight: 800;
-      color: var(--kaptea-charcoal);
+      color: #131521;
       line-height: 1.2;
       margin: 0 0 14px;
     }
     .blog-featured-body p {
       font-size: 15px;
-      color: var(--kaptea-tagline-grey);
-      line-height: 1.65;
-      margin: 0 0 24px;
+      color: #6b7280;
+      line-height: 1.7;
+      margin: 0 0 28px;
     }
     .blog-featured-meta {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       font-size: 12px;
-      color: var(--kaptea-neutral-grey);
+      color: #9ca3af;
       font-weight: 500;
+      margin-bottom: 20px;
     }
-    .blog-featured-meta .sep { opacity: 0.4; }
+    .blog-featured-meta .sep { opacity: 0.5; }
     .blog-read-link {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       font-size: 13px;
       font-weight: 700;
-      color: var(--kaptea-red);
+      color: #dc2727;
       text-decoration: none;
-      margin-top: 22px;
     }
-    .blog-read-link:hover { text-decoration: underline; }
+    .blog-read-link svg { transition: transform 0.15s; }
+    .blog-featured:hover .blog-read-link svg { transform: translateX(3px); }
 
-    /* Post grid */
+    /* ── SECTION LABEL ── */
+    .blog-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9ca3af;
+      margin-bottom: 20px;
+    }
+
+    /* ── POST GRID ── */
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 20px;
     }
+
     .blog-card {
-      background: var(--kaptea-white);
+      background: #ffffff;
       border-radius: 10px;
-      overflow: hidden;
+      border: 1px solid #e8eaf0;
       text-decoration: none;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-      transition: box-shadow 0.2s, transform 0.18s;
+      transition: box-shadow 0.18s, border-color 0.18s, transform 0.18s;
+      overflow: hidden;
     }
     .blog-card:hover {
-      box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      border-color: #d1d5db;
       transform: translateY(-2px);
     }
-    .blog-card-img {
-      height: 160px;
-      overflow: hidden;
+
+    /* Category-coloured top accent bar */
+    .blog-card-accent {
+      height: 4px;
       flex-shrink: 0;
     }
-    .blog-card-img svg { display: block; width: 100%; height: 100%; }
+    .accent--platform       { background: #dc2727; }
+    .accent--compliance     { background: #1d4ed8; }
+    .accent--industry       { background: #15803d; }
+    .accent--infrastructure { background: #7c3aed; }
+    .accent--company        { background: #b45309; }
+    .accent--procurement    { background: #166534; }
+
     .blog-card-body {
-      padding: 20px 22px 22px;
+      padding: 22px 24px 24px;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
-    .blog-card-body .blog-cat { margin-bottom: 10px; }
+    .blog-card-body .blog-cat { margin-bottom: 12px; }
+
     .blog-card h3 {
       font-family: 'Manrope', sans-serif;
       font-size: 16px;
       font-weight: 800;
-      color: var(--kaptea-charcoal);
+      color: #131521;
       line-height: 1.3;
       margin: 0 0 10px;
     }
     .blog-card p {
       font-size: 13px;
-      color: var(--kaptea-tagline-grey);
-      line-height: 1.6;
+      color: #6b7280;
+      line-height: 1.65;
       margin: 0;
       flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .blog-card-footer {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
     }
     .blog-card-meta {
       font-size: 11px;
-      color: var(--kaptea-neutral-grey);
-      display: flex;
-      gap: 10px;
+      color: #9ca3af;
       font-weight: 500;
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px solid #f3f4f6;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     .blog-card-meta .sep { opacity: 0.4; }
+    .blog-card-arrow {
+      color: #dc2727;
+      opacity: 0;
+      transition: opacity 0.15s, transform 0.15s;
+      flex-shrink: 0;
+    }
+    .blog-card:hover .blog-card-arrow {
+      opacity: 1;
+      transform: translateX(2px);
+    }
 
-    /* Newsletter strip */
+    /* Coming soon state */
+    .blog-card.blog-card--soon {
+      opacity: 0.65;
+      pointer-events: none;
+    }
+    .blog-card--soon .blog-card-body { position: relative; }
+    .blog-soon-tag {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9ca3af;
+      border: 1px solid #e5e7eb;
+      border-radius: 4px;
+      padding: 2px 7px;
+    }
+
+    /* ── NEWSLETTER ── */
     .blog-newsletter {
-      background: var(--kaptea-charcoal);
+      background: #131521;
       padding: 64px 40px;
     }
     .blog-newsletter-inner {
-      max-width: 560px;
+      max-width: 520px;
       margin: 0 auto;
       text-align: center;
     }
@@ -287,12 +413,12 @@
       font-family: 'Manrope', sans-serif;
       font-size: 26px;
       font-weight: 800;
-      color: var(--kaptea-white);
+      color: #ffffff;
       margin: 0 0 10px;
     }
     .blog-newsletter p {
       font-size: 15px;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255,255,255,0.45);
       margin: 0 0 28px;
       line-height: 1.65;
     }
@@ -306,21 +432,22 @@
       flex: 1;
       padding: 12px 16px;
       border-radius: 6px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.07);
-      color: var(--kaptea-white);
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: #ffffff;
       font-size: 14px;
       font-family: 'Inter', sans-serif;
       outline: none;
+      transition: border-color 0.15s;
     }
-    .blog-newsletter-form input::placeholder { color: rgba(255,255,255,0.3); }
-    .blog-newsletter-form input:focus { border-color: rgba(255,255,255,0.3); }
+    .blog-newsletter-form input::placeholder { color: rgba(255,255,255,0.25); }
+    .blog-newsletter-form input:focus { border-color: rgba(255,255,255,0.28); }
     .blog-newsletter-form button {
       padding: 12px 20px;
       border-radius: 6px;
       border: none;
-      background: var(--kaptea-red);
-      color: var(--kaptea-white);
+      background: #dc2727;
+      color: #ffffff;
       font-size: 14px;
       font-weight: 700;
       font-family: 'Inter', sans-serif;
@@ -331,17 +458,20 @@
     .blog-newsletter-form button:hover { background: #b91c1c; }
     .blog-newsletter-note {
       font-size: 11px;
-      color: rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.2);
       margin-top: 12px;
     }
 
-    /* Responsive */
+    /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .blog-hero  { padding: 60px 24px 48px; }
+      .blog-hero { padding: 60px 24px 48px; }
+      .blog-hero-inner { flex-direction: column; align-items: flex-start; }
+      .blog-hero-stat { display: none; }
       .blog-filter { padding: 0 24px; }
       .blog-content { padding: 40px 24px 60px; }
       .blog-featured { grid-template-columns: 1fr; }
-      .blog-featured-img { min-height: 220px; }
+      .blog-featured-accent { min-height: 240px; padding: 32px; }
+      .blog-featured-body { padding: 32px; }
       .blog-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 640px) {
@@ -351,7 +481,7 @@
       .blog-grid { grid-template-columns: 1fr; }
       .blog-newsletter { padding: 48px 20px; }
       .blog-newsletter-form { flex-direction: column; }
-      .blog-featured-body { padding: 28px 24px 24px; }
+      .blog-featured-accent::before { font-size: 120px; }
     }
   </style>
 </head>
@@ -361,9 +491,14 @@
 <!-- Hero -->
 <section class="blog-hero">
   <div class="blog-hero-inner">
-    <div class="blog-hero-eyebrow">Blog &amp; Insights</div>
-    <h1>Straight talk on enterprise communications</h1>
-    <p>Compliance, infrastructure, channel strategy and the decisions that matter for regulated organisations. Written for IT leaders, DPOs and operations teams.</p>
+    <div class="blog-hero-text">
+      <div class="blog-hero-eyebrow">Blog &amp; Insights</div>
+      <h1>Straight talk on enterprise communications</h1>
+      <p>Compliance, infrastructure, channel strategy and the decisions that matter for regulated organisations. Written for IT leaders, DPOs and operations teams.</p>
+    </div>
+    <div class="blog-hero-stat" aria-hidden="true">
+      <div class="stat-num">Blog</div>
+    </div>
   </div>
 </section>
 
@@ -383,174 +518,132 @@
 <section class="blog-content">
   <div class="blog-content-inner">
 
-    <!-- Featured article -->
-    <a href="blog-post-template" class="blog-featured">
-      <div class="blog-featured-img">
-        <!-- Replace with: <img src="img/blog/your-image.jpg" alt="..." /> -->
-        <svg viewBox="0 0 700 340" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="bfg1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="var(--kaptea-charcoal)"/>
-              <stop offset="60%" stop-color="#1e2a50"/>
-              <stop offset="100%" stop-color="#9b1c1c" stop-opacity="0.8"/>
-            </linearGradient>
-          </defs>
-          <rect width="700" height="340" fill="url(#bfg1)"/>
-          <circle cx="560" cy="60" r="140" fill="#dc2727" fill-opacity="0.1"/>
-          <circle cx="80" cy="300" r="90" fill="#3b82f6" fill-opacity="0.07"/>
-          <rect x="60" y="100" width="200" height="2" rx="1" fill="#fff" fill-opacity="0.06"/>
-          <rect x="60" y="112" width="120" height="2" rx="1" fill="#fff" fill-opacity="0.04"/>
-          <rect x="60" y="140" width="280" height="1" rx="0.5" fill="#dc2727" fill-opacity="0.15"/>
-        </svg>
-        <div class="blog-featured-img-label">Featured article</div>
-      </div>
-      <div class="blog-featured-body">
-        <span class="blog-cat blog-cat--infrastructure">Infrastructure</span>
-        <h2>What is a dedicated communications instance? The enterprise buyer's guide</h2>
-        <p>Shared platforms cut costs but concentrate risk. A dedicated instance gives your organisation its own isolated deployment, its own data residency and its own configuration. Here is what that means in practice and why regulated enterprises should care.</p>
-        <div class="blog-featured-meta">
-          <time datetime="2026-04-14">14 Apr 2026</time>
-          <span class="sep">·</span>
-          <span>8 min read</span>
+    <!-- Featured post — Alan's manifesto piece -->
+    <a href="blog-trust-not-a-kpi" class="blog-featured">
+
+      <div class="blog-featured-accent">
+        <span class="feat-label">Featured article</span>
+        <p class="feat-quote">
+          Most CX platforms help you <em>measure</em> trust.<br>
+          Kaptea helps you make trust <em>inevitable</em>.
+        </p>
+        <div class="feat-author">
+          <div class="feat-author-photo">
+            <img src="img/alan-mcnab.webp" alt="Alan McNab">
+          </div>
+          <div>
+            <div class="feat-author-name">Alan McNab</div>
+            <div class="feat-author-role">CEO &amp; Co-Founder, Kaptea</div>
+          </div>
         </div>
-        <span class="blog-read-link">Read article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+
+      <div class="blog-featured-body">
+        <span class="blog-cat blog-cat--company">Founder's View</span>
+        <h2>The problem isn't your technology. It's your promises.</h2>
+        <p>After 30 years in enterprise tech, I've watched organisations invest in every tool imaginable while customer trust keeps declining. The problem isn't the technology. It's that we've never treated promises as operational objects — and until we do, no dashboard will close the gap.</p>
+        <div class="blog-featured-meta">
+          <time datetime="2026-01-15">15 Jan 2026</time>
+          <span class="sep">·</span>
+          <span>9 min read</span>
+        </div>
+        <span class="blog-read-link">
+          Read article
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
       </div>
     </a>
 
     <!-- Article grid -->
+    <div class="blog-section-label">More articles</div>
     <div class="blog-grid">
 
-      <a href="#" class="blog-card">
-        <div class="blog-card-img">
-          <svg viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs><linearGradient id="bcg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0.7"/></linearGradient></defs>
-            <rect width="400" height="160" fill="url(#bcg1)"/>
-            <circle cx="340" cy="30" r="80" fill="#fff" fill-opacity="0.04"/>
-          </svg>
+      <a href="blog-post-template" class="blog-card">
+        <div class="blog-card-accent accent--infrastructure"></div>
+        <div class="blog-card-body">
+          <span class="blog-cat blog-cat--infrastructure">Infrastructure</span>
+          <h3>What is a dedicated communications instance? The enterprise buyer's guide</h3>
+          <p>Shared platforms cut costs but concentrate risk. A dedicated instance gives your organisation its own isolated deployment, its own data residency and its own configuration — and makes compliance evidence straightforward.</p>
+          <div class="blog-card-footer">
+            <div class="blog-card-meta">
+              <time datetime="2026-04-14">14 Apr 2026</time>
+              <span class="sep">·</span>
+              <span>8 min</span>
+            </div>
+            <svg class="blog-card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
         </div>
+      </a>
+
+      <div class="blog-card blog-card--soon">
+        <div class="blog-card-accent accent--compliance"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--compliance">Compliance</span>
           <h3>GDPR and enterprise messaging: five things your DPO needs to know</h3>
           <p>Data processing agreements, sub-processor chains, right to erasure. What your DPO should be checking before your next communications platform renewal.</p>
-          <div class="blog-card-meta">
-            <time datetime="2026-04-07">7 Apr 2026</time>
-            <span class="sep">·</span>
-            <span>6 min read</span>
+          <div class="blog-card-footer">
+            <div class="blog-card-meta"><span class="blog-soon-tag">Coming soon</span></div>
           </div>
         </div>
-      </a>
+      </div>
 
-      <a href="#" class="blog-card">
-        <div class="blog-card-img">
-          <svg viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs><linearGradient id="bcg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="var(--kaptea-charcoal)"/><stop offset="100%" stop-color="var(--kaptea-red)" stop-opacity="0.6"/></linearGradient></defs>
-            <rect width="400" height="160" fill="url(#bcg2)"/>
-            <rect x="260" y="20" width="100" height="100" rx="8" fill="#fff" fill-opacity="0.03"/>
-          </svg>
-        </div>
+      <div class="blog-card blog-card--soon">
+        <div class="blog-card-accent accent--platform"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--platform">Platform</span>
           <h3>RCS vs SMS in 2026: what enterprises should be planning for now</h3>
           <p>Apple joined RCS in 2024. Business Messaging is live across all major carriers. Here is what the shift means for enterprise template strategy and fallback routing.</p>
-          <div class="blog-card-meta">
-            <time datetime="2026-03-31">31 Mar 2026</time>
-            <span class="sep">·</span>
-            <span>5 min read</span>
+          <div class="blog-card-footer">
+            <div class="blog-card-meta"><span class="blog-soon-tag">Coming soon</span></div>
           </div>
         </div>
-      </a>
+      </div>
 
-      <a href="#" class="blog-card">
-        <div class="blog-card-img">
-          <svg viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs><linearGradient id="bcg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#14532d"/><stop offset="100%" stop-color="#22c55e" stop-opacity="0.5"/></linearGradient></defs>
-            <rect width="400" height="160" fill="url(#bcg3)"/>
-            <circle cx="50" cy="130" r="60" fill="#fff" fill-opacity="0.04"/>
-          </svg>
-        </div>
+      <div class="blog-card blog-card--soon">
+        <div class="blog-card-accent accent--industry"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--industry">Industry</span>
           <h3>How utilities manage communications surges: lessons from the field</h3>
           <p>Storm events do not give advance notice. How utilities architect IVR, outbound alerts and inbound routing to handle 50x normal call volumes without collapse.</p>
-          <div class="blog-card-meta">
-            <time datetime="2026-03-24">24 Mar 2026</time>
-            <span class="sep">·</span>
-            <span>7 min read</span>
+          <div class="blog-card-footer">
+            <div class="blog-card-meta"><span class="blog-soon-tag">Coming soon</span></div>
           </div>
         </div>
-      </a>
+      </div>
 
-      <a href="#" class="blog-card">
-        <div class="blog-card-img">
-          <svg viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs><linearGradient id="bcg4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e1b4b"/><stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.6"/></linearGradient></defs>
-            <rect width="400" height="160" fill="url(#bcg4)"/>
-            <circle cx="350" cy="80" r="55" fill="#a78bfa" fill-opacity="0.07"/>
-          </svg>
-        </div>
+      <div class="blog-card blog-card--soon">
+        <div class="blog-card-accent accent--compliance"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--compliance">Compliance</span>
           <h3>ISO 27001 explained: what it means for enterprise communications buyers</h3>
           <p>Certification is a statement of intent and a verifiable commitment. What procurement and security teams should be checking beyond the certificate itself.</p>
-          <div class="blog-card-meta">
-            <time datetime="2026-03-17">17 Mar 2026</time>
-            <span class="sep">·</span>
-            <span>5 min read</span>
+          <div class="blog-card-footer">
+            <div class="blog-card-meta"><span class="blog-soon-tag">Coming soon</span></div>
           </div>
         </div>
-      </a>
+      </div>
 
-      <a href="#" class="blog-card">
-        <div class="blog-card-img">
-          <svg viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs><linearGradient id="bcg5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1c1917"/><stop offset="100%" stop-color="#f59e0b" stop-opacity="0.5"/></linearGradient></defs>
-            <rect width="400" height="160" fill="url(#bcg5)"/>
-            <rect x="20" y="20" width="100" height="4" rx="2" fill="#f59e0b" fill-opacity="0.18"/>
-            <rect x="20" y="32" width="60" height="4" rx="2" fill="#f59e0b" fill-opacity="0.1"/>
-          </svg>
-        </div>
+      <div class="blog-card blog-card--soon">
+        <div class="blog-card-accent accent--procurement"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--procurement">Procurement</span>
           <h3>Five questions to ask your comms vendor before you sign</h3>
           <p>Where is my data processed? Who is the sub-processor? What happens if there is an outage? The questions that reveal whether a vendor is actually enterprise-ready.</p>
-          <div class="blog-card-meta">
-            <time datetime="2026-03-10">10 Mar 2026</time>
-            <span class="sep">·</span>
-            <span>4 min read</span>
+          <div class="blog-card-footer">
+            <div class="blog-card-meta"><span class="blog-soon-tag">Coming soon</span></div>
           </div>
         </div>
-      </a>
-
-      <a href="#" class="blog-card">
-        <div class="blog-card-img">
-          <svg viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs><linearGradient id="bcg6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="var(--kaptea-charcoal)"/><stop offset="100%" stop-color="var(--kaptea-charcoal)"/></linearGradient></defs>
-            <rect width="400" height="160" fill="url(#bcg6)"/>
-            <circle cx="200" cy="80" r="40" fill="#dc2727" fill-opacity="0.09"/>
-          </svg>
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-cat blog-cat--company">Company</span>
-          <h3>What does Twilio Gold Partner status actually mean?</h3>
-          <p>Gold is the second-highest tier in the Twilio partner programme. What it requires, what it signals, and why it matters when an enterprise is choosing a delivery partner.</p>
-          <div class="blog-card-meta">
-            <time datetime="2026-03-03">3 Mar 2026</time>
-            <span class="sep">·</span>
-            <span>3 min read</span>
-          </div>
-        </div>
-      </a>
+      </div>
 
     </div>
   </div>
 </section>
 
-<!-- Newsletter sign-up -->
+<!-- Newsletter -->
 <section class="blog-newsletter">
   <div class="blog-newsletter-inner">
     <h2>Insight in your inbox</h2>
-    <p>New articles on compliance, infrastructure and enterprise communications. No marketing noise, no weekly digest spam.</p>
-    <!-- WIRE UP: connect this form to your email provider (Mailchimp, ConvertKit, etc.) -->
+    <p>New articles on compliance, infrastructure and enterprise communications. No marketing noise.</p>
     <form class="blog-newsletter-form" onsubmit="return false;" novalidate>
       <input type="email" placeholder="your@organisation.com" autocomplete="email" aria-label="Email address" />
       <button type="submit">Subscribe</button>
@@ -563,7 +656,7 @@
 <section class="cta-section">
   <div class="cta-inner">
     <h2 class="cta-title">Ready to see Kaptea in action?</h2>
-    <p class="cta-sub">Book a 30-minute session with our team. We will walk through your specific compliance requirements and show you exactly how Pronto handles them.</p>
+    <p class="cta-sub">Book a 30-minute session with Alan or Robert. We will walk through your specific requirements and show you exactly how Pronto handles them.</p>
     <a href="demo" class="btn btn-white">Book a Demo</a>
   </div>
 </section>
