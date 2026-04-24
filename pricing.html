@@ -42,16 +42,16 @@
   <style>
 /* ── HERO ── */
     .hero {
-      background: #faf8f5;
-      color: #131521;
+      background: var(--kaptea-surface-muted);
+      color: var(--kaptea-charcoal);
       text-align: center;
       padding: 72px 24px 56px;
     }
     .hero-label {
       display: inline-block;
-      background: rgba(244,49,48,0.08);
-      color: #dc2727;
-      border: 1px solid rgba(244,49,48,0.2);
+      background: rgba(220,39,39,0.08);
+      color: var(--kaptea-red);
+      border: 1px solid rgba(220,39,39,0.2);
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -67,10 +67,10 @@
       max-width: 680px;
       margin: 0 auto 16px;
     }
-    .hero h1 span { color: #dc2727; }
+    .hero h1 span { color: var(--kaptea-red); }
     .hero p {
       font-size: 17px;
-      color: #555555;
+      color: var(--kaptea-tagline-grey);
       max-width: 520px;
       margin: 0 auto 32px;
       line-height: 1.6;
@@ -79,18 +79,18 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(244,49,48,0.1);
-      border: 1px solid rgba(244,49,48,0.25);
+      background: rgba(220,39,39,0.1);
+      border: 1px solid rgba(220,39,39,0.25);
       border-radius: 8px;
       padding: 10px 20px;
       font-size: 14px;
       color: #c03030;
     }
-    .delivery-badge strong { color: #dc2727; font-size: 18px; }
+    .delivery-badge strong { color: var(--kaptea-red); font-size: 18px; }
 
     /* ── CONTROLS ── */
     .controls {
-      background: #fff;
+      background: var(--kaptea-white);
       border-bottom: 1px solid #e5e7eb;
       padding: 28px 24px;
       display: flex;
@@ -106,7 +106,7 @@
       gap: 12px;
       font-size: 14px;
       font-weight: 500;
-      color: #374151;
+      color: var(--kaptea-charcoal);
     }
     .toggle-switch {
       position: relative;
@@ -118,7 +118,7 @@
     .toggle-slider {
       position: absolute;
       inset: 0;
-      background: #d1d5db;
+      background: var(--kaptea-border);
       border-radius: 99px;
       transition: background 0.2s;
     }
@@ -132,12 +132,12 @@
       transition: transform 0.2s;
       box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
-    input:checked + .toggle-slider { background: #dc2727; }
+    input:checked + .toggle-slider { background: var(--kaptea-red); }
     input:checked + .toggle-slider:before { transform: translateX(22px); }
     .saving-badge {
       display: inline-block;
       background: rgba(220,39,39,0.08);
-      color: #dc2727;
+      color: var(--kaptea-red);
       font-size: 11px;
       font-weight: 600;
       padding: 2px 8px;
@@ -167,16 +167,16 @@
       position: relative;
     }
     .plan-card.featured {
-      border-color: #dc2727;
+      border-color: var(--kaptea-red);
       border-width: 2px;
-      box-shadow: 0 8px 32px rgba(244,49,48,0.12);
+      box-shadow: 0 8px 32px rgba(220,39,39,0.12);
     }
     .featured-label {
       position: absolute;
       top: -13px;
       left: 50%;
       transform: translateX(-50%);
-      background: #dc2727;
+      background: var(--kaptea-red);
       color: white;
       font-size: 11px;
       font-weight: 700;
@@ -192,12 +192,12 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #6b7280;
+      color: var(--kaptea-tagline-grey);
       margin-bottom: 6px;
     }
     .plan-tagline {
       font-size: 14px;
-      color: #374151;
+      color: var(--kaptea-charcoal);
       margin-bottom: 24px;
       line-height: 1.5;
       min-height: 42px;
@@ -209,7 +209,7 @@
     .price-amount {
       font-size: 42px;
       font-weight: 800;
-      color: #131521;
+      color: var(--kaptea-charcoal);
       line-height: 1;
     }
     .price-amount.enterprise-price {
@@ -219,27 +219,27 @@
     .price-currency {
       font-size: 22px;
       font-weight: 600;
-      color: #374151;
+      color: var(--kaptea-charcoal);
       vertical-align: top;
       margin-top: 8px;
       display: inline-block;
     }
     .price-period {
       font-size: 14px;
-      color: #9ca3af;
+      color: var(--kaptea-neutral-grey);
       margin-bottom: 6px;
     }
     .price-volume {
       font-size: 13px;
-      color: #6b7280;
+      color: var(--kaptea-tagline-grey);
       margin-bottom: 4px;
     }
     .price-overage {
       font-size: 12px;
-      color: #9ca3af;
+      color: var(--kaptea-neutral-grey);
       margin-bottom: 24px;
     }
-    .price-overage span { color: #dc2727; font-weight: 600; }
+    .price-overage span { color: var(--kaptea-red); font-weight: 600; }
 
     .plan-cta {
       display: block;
@@ -256,21 +256,21 @@
       margin-bottom: 28px;
     }
     .cta-primary {
-      background: #dc2727;
+      background: var(--kaptea-red);
       color: white;
     }
-    .cta-primary:hover { background: #c02222; }
+    .cta-primary:hover { background: var(--kaptea-red-hover); }
     .cta-secondary {
       background: transparent;
-      color: #dc2727;
-      border: 1.5px solid #dc2727;
+      color: var(--kaptea-red);
+      border: 1.5px solid var(--kaptea-red);
     }
-    .cta-secondary:hover { background: #fff3f3; }
+    .cta-secondary:hover { background: color-mix(in srgb, var(--kaptea-red) 10%, var(--kaptea-white)); }
     .cta-enterprise {
-      background: #131521;
+      background: var(--kaptea-charcoal);
       color: white;
     }
-    .cta-enterprise:hover { background: #c02222; }
+    .cta-enterprise:hover { background: var(--kaptea-red-hover); }
 
     /* Features */
     .features-heading {
@@ -278,7 +278,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      color: #9ca3af;
+      color: var(--kaptea-neutral-grey);
       margin-bottom: 14px;
     }
     .feature-list {
@@ -292,7 +292,7 @@
       align-items: flex-start;
       gap: 10px;
       font-size: 13.5px;
-      color: #374151;
+      color: var(--kaptea-charcoal);
       line-height: 1.4;
     }
     .feature-list li .icon {
@@ -301,8 +301,8 @@
       height: 18px;
       margin-top: 1px;
     }
-    .icon-check { color: #dc2727; }
-    .icon-dash { color: #d1d5db; }
+    .icon-check { color: var(--kaptea-red); }
+    .icon-dash { color: var(--kaptea-border); }
 
     .feature-divider {
       border: none;
@@ -317,7 +317,7 @@
       padding: 0 24px;
     }
     .universal-inner {
-      background: #fff3f3;
+      background: color-mix(in srgb, var(--kaptea-red) 10%, var(--kaptea-white));
       border: 1px solid #fdb5b4;
       border-radius: 12px;
       padding: 16px 24px;
@@ -328,7 +328,7 @@
       color: #b01e1d;
       flex-wrap: wrap;
     }
-    .universal-inner strong { color: #c02222; }
+    .universal-inner strong { color: var(--kaptea-red-hover); }
     .universal-dot {
       width: 6px; height: 6px;
       background: #f99695;
@@ -345,7 +345,7 @@
     .compare-section h2 {
       font-size: 22px;
       font-family: 'Manrope', sans-serif; font-weight: 700;
-      color: #131521;
+      color: var(--kaptea-charcoal);
       margin-bottom: 24px;
     }
     .compare-table {
@@ -356,32 +356,32 @@
     .compare-table th {
       text-align: left;
       padding: 12px 16px;
-      background: #faf8f5;
+      background: var(--kaptea-surface-muted);
       border-bottom: 2px solid #e5e7eb;
       font-weight: 700;
-      color: #374151;
+      color: var(--kaptea-charcoal);
     }
     .compare-table th:not(:first-child) { text-align: center; }
     .compare-table td {
       padding: 12px 16px;
       border-bottom: 1px solid #f3f4f6;
-      color: #374151;
+      color: var(--kaptea-charcoal);
       vertical-align: middle;
     }
     .compare-table td:not(:first-child) { text-align: center; }
     .compare-table tr:hover td { background: #fafafa; }
     .compare-table .section-row td {
-      background: #faf8f5;
+      background: var(--kaptea-surface-muted);
       font-weight: 700;
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      color: #9ca3af;
+      color: var(--kaptea-neutral-grey);
       padding: 10px 16px 6px;
       border-bottom: none;
     }
-    .check { color: #dc2727; font-size: 16px; }
-    .dash { color: #d1d5db; font-size: 16px; }
+    .check { color: var(--kaptea-red); font-size: 16px; }
+    .dash { color: var(--kaptea-border); font-size: 16px; }
     .partial { color: #f59e0b; font-size: 13px; font-weight: 600; }
 
     /* ── FOOTER NOTE ── */
@@ -391,7 +391,7 @@
       padding: 0 24px;
     }
     .footer-note-inner {
-      background: #fff;
+      background: var(--kaptea-white);
       border: 1px solid #e5e7eb;
       border-radius: 12px;
       padding: 24px 28px;
@@ -405,12 +405,12 @@
     .footer-note-inner h3 {
       font-size: 14px;
       font-family: 'Manrope', sans-serif; font-weight: 700;
-      color: #131521;
+      color: var(--kaptea-charcoal);
       margin-bottom: 8px;
     }
     .footer-note-inner p, .footer-note-inner li {
       font-size: 13px;
-      color: #6b7280;
+      color: var(--kaptea-tagline-grey);
       line-height: 1.6;
     }
     .footer-note-inner ul { padding-left: 16px; }
@@ -421,7 +421,7 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #0e1019;
+      background: var(--kaptea-bg-dark);
       padding: 64px 40px 32px;
       color: rgba(255,255,255,0.6);
       font-size: 13px;
@@ -496,7 +496,7 @@
     /* ── HOVER STATES (polish pass) ── */
     a { transition: color 0.15s ease; }
     .btn-primary { transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
-    .btn-primary:hover { box-shadow: 0 4px 12px rgba(244,49,48,0.3); transform: translateY(-1px); }
+    .btn-primary:hover { box-shadow: 0 4px 12px rgba(220,39,39,0.3); transform: translateY(-1px); }
     .btn-ghost { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
     .btn-ghost:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
     .btn-secondary { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
@@ -506,7 +506,7 @@
 <body>
 
 <!-- Skip navigation for accessibility -->
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#dc2727;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:var(--kaptea-red);color: var(--kaptea-white);font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
 
 
 <!-- NAV -->
@@ -529,12 +529,12 @@
 
   <!-- Billing toggle -->
   <div class="billing-toggle">
-    <span id="monthly-label" style="color:#131521; font-weight:700;">Monthly</span>
+    <span id="monthly-label" style="color:var(--kaptea-charcoal); font-weight:700;">Monthly</span>
     <label class="toggle-switch">
       <input type="checkbox" id="billing-toggle" onchange="updatePricing()" />
       <span class="toggle-slider"></span>
     </label>
-    <span id="annual-label" style="color:#6b7280;">Annual <span class="saving-badge">Save 5%</span></span>
+    <span id="annual-label" style="color:var(--kaptea-tagline-grey);">Annual <span class="saving-badge">Save 5%</span></span>
   </div>
 
 </div>
@@ -883,9 +883,9 @@
     // Toggle label styling
     const mLabel = document.getElementById('monthly-label');
     const aLabel = document.getElementById('annual-label');
-    mLabel.style.color      = annual ? '#6b7280' : '#131521';
+    mLabel.style.color      = annual ? 'var(--kaptea-tagline-grey)' : 'var(--kaptea-charcoal)';
     mLabel.style.fontWeight = annual ? '500' : '700';
-    aLabel.style.color      = annual ? '#131521' : '#6b7280';
+    aLabel.style.color      = annual ? 'var(--kaptea-charcoal)' : 'var(--kaptea-tagline-grey)';
     aLabel.style.fontWeight = annual ? '700' : '500';
   }
 </script>
