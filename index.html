@@ -1429,7 +1429,7 @@
 <!-- Platform Preview (icon tabs → sliding screenshots, inspired by https://www.superchat.de/ product strip) -->
 <div class="platform-preview" role="complementary" aria-label="Pronto product preview">
   <div class="platform-preview-inner">
-    <div class="hero-showcase" data-hero-showcase style="--hs-count: 8;">
+    <div class="hero-showcase" data-hero-showcase style="--hs-count: 9;">
       <div class="hero-showcase-tabs" role="tablist" aria-label="Pronto product stories">
         <button type="button" class="hero-showcase-tab" role="tab" aria-selected="true" id="hs-tab-0" aria-controls="hs-panel-0" aria-label="Inbox — core experience" data-slide="0">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
@@ -1447,19 +1447,23 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           Automate
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-4" aria-controls="hs-panel-4" aria-label="Analytics — insight" data-slide="4">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-4" aria-controls="hs-panel-4" aria-label="AI — assisted drafting and intelligence" data-slide="4">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 6V2"/><path d="M12 22v-4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M22 12h-4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+          AI
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-5" aria-controls="hs-panel-5" aria-label="Analytics — insight" data-slide="5">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
           Analytics
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-5" aria-controls="hs-panel-5" aria-label="Delivery — reliability and zero dropped messages" data-slide="5">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-6" aria-controls="hs-panel-6" aria-label="Delivery — reliability and zero dropped messages" data-slide="6">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
           Delivery
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-6" aria-controls="hs-panel-6" aria-label="Integrations — ecosystem" data-slide="6">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-7" aria-controls="hs-panel-7" aria-label="Integrations — ecosystem" data-slide="7">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51 8.59 10.49"/></svg>
           Integrations
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-7" aria-controls="hs-panel-7" aria-label="Team — people using Pronto" data-slide="7">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-8" aria-controls="hs-panel-8" aria-label="Team — people and collaboration in Pronto" data-slide="8">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           Team
         </button>
@@ -1470,25 +1474,28 @@
             <img src="img/illustrations/HomeScreen.png" width="1024" height="642" alt="Pronto inbox: core experience — unified conversations and contacts" fetchpriority="high" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-1" role="tabpanel" aria-labelledby="hs-tab-1" aria-hidden="true">
-            <img src="img/illustrations/Pronto-Email-Campaign-Detail.jpg" width="1080" height="640" alt="Outbound campaigns: email and cross-channel sends in Pronto" loading="lazy" decoding="async">
+            <img src="img/illustrations/EmailDetailsScreen.png" width="3456" height="2168" alt="Outbound campaigns: email details, content, and sends in Pronto" loading="lazy" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-2" role="tabpanel" aria-labelledby="hs-tab-2" aria-hidden="true">
             <img src="img/illustrations/Inbox-CloseUp.png" width="1920" height="1440" alt="Omni-channel conversations across SMS, chat, and voice in one thread" loading="lazy" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-3" role="tabpanel" aria-labelledby="hs-tab-3" aria-hidden="true">
-            <img src="img/illustrations/AI-CloseUp.png" width="1920" height="1440" alt="Automation and AI-assisted workflows in Pronto" loading="lazy" decoding="async">
+            <img src="img/illustrations/Worflows.png" width="3456" height="2168" alt="Automate: workflows, triggers, and automation in Pronto" loading="lazy" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-4" role="tabpanel" aria-labelledby="hs-tab-4" aria-hidden="true">
-            <img src="img/illustrations/Analytics-CloseUp1.png" width="1920" height="1440" alt="Analytics and delivery insight in Pronto" loading="lazy" decoding="async">
+            <img src="img/illustrations/AI-CloseUp.png" width="1920" height="1440" alt="AI-assisted drafting and intelligence in Pronto" loading="lazy" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-5" role="tabpanel" aria-labelledby="hs-tab-5" aria-hidden="true">
-            <img src="img/illustrations/Logs-CloseUp.png" width="1920" height="1440" alt="Delivery and audit visibility: timelines, status, and nothing dropped silently" loading="lazy" decoding="async">
+            <img src="img/illustrations/Analytics.png" width="3456" height="2168" alt="Analytics dashboards and insight in Pronto" loading="lazy" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-6" role="tabpanel" aria-labelledby="hs-tab-6" aria-hidden="true">
-            <img src="img/illustrations/Integration-CloseUp.png" width="1920" height="1440" alt="Integrations: CRM and ecosystem connectors in Pronto" loading="lazy" decoding="async">
+            <img src="img/illustrations/deliveryrates.png" width="722" height="378" alt="Delivery rates and reliability — visibility into sends, failures, and zero dropped messages" loading="lazy" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-7" role="tabpanel" aria-labelledby="hs-tab-7" aria-hidden="true">
-            <img src="img/illustrations/v3-hero-homepage.png" width="4200" height="2853" alt="Teams using Pronto in the browser — campaigns, inbox, and controls" loading="lazy" decoding="async">
+            <img src="img/illustrations/Integration-CloseUp.png" width="1920" height="1440" alt="Integrations: CRM and ecosystem connectors in Pronto" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-8" role="tabpanel" aria-labelledby="hs-tab-8" aria-hidden="true">
+            <img src="img/illustrations/TeamV2.png" width="3456" height="2168" alt="Teams using Pronto — collaboration, roles, and workspace" loading="lazy" decoding="async">
           </figure>
         </div>
       </div>
