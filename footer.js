@@ -211,7 +211,7 @@
         <h4>Company</h4>
         <ul>
           <li><a href="why-kaptea">Why Kaptea</a></li>
-          <li><a href="#">Meet The Team</a></li>
+          <li><a href="meet-the-team">Meet The Team</a></li>
           <li><a href="pricing">Pricing</a></li>
           <li><a href="demo">Book a Demo</a></li>
           <li><a href="#">Careers</a></li>

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Team | Kaptea — Enterprise Communications Platform</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Kaptea is founded by Alan McNab and Robert Norton — decades of experience at HP, Cisco, Ryanair, Bank of Ireland, and HSE. Built by people who know what breaks." />
+  <link rel="canonical" href="https://kaptea.vercel.app/meet-the-team" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Meet the Team | Kaptea" />
+  <meta property="og:description" content="Kaptea is founded by Alan McNab and Robert Norton — decades of experience at HP, Cisco, Ryanair, Bank of Ireland, and HSE. Built by people who know what breaks." />
+  <meta property="og:url" content="https://kaptea.vercel.app/meet-the-team" />
+  <meta property="og:image" content="https://kaptea.vercel.app/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meet the Team | Kaptea" />
+  <meta name="twitter:description" content="Kaptea is founded by Alan McNab and Robert Norton — decades of experience at HP, Cisco, Ryanair, Bank of Ireland, and HSE." />
+  <meta name="twitter:image" content="https://kaptea.vercel.app/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- AI / LLM Crawler Optimisation -->
+  <meta name="ai-content-declaration" content="Kaptea team page. Co-founders: Alan McNab (CEO) — former HP, Cisco, NCR, Arista Networks, BSEE Santa Clara, MBA Trinity College Dublin. Robert Norton (CTO) — 18+ years at Ryanair, Bank of Ireland, HSE, 123.ie. Based in Dublin, Ireland." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Meet the Kaptea Team",
+    "url": "https://kaptea.vercel.app/meet-the-team",
+    "description": "Kaptea is built by a team with decades of experience in enterprise communications, cloud infrastructure, and digital transformation.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "url": "https://kaptea.vercel.app",
+      "member": [
+        {
+          "@type": "Person",
+          "name": "Alan McNab",
+          "jobTitle": "CEO & Co-Founder",
+          "worksFor": { "@type": "Organization", "name": "Kaptea" },
+          "alumniOf": ["Santa Clara University", "Trinity College Dublin"],
+          "description": "Former HP, Cisco, NCR, Arista Networks. Expertise in cloud architecture, high-availability systems, and customer service transformation."
+        },
+        {
+          "@type": "Person",
+          "name": "Robert Norton",
+          "jobTitle": "CTO & Co-Founder",
+          "worksFor": { "@type": "Organization", "name": "Kaptea" },
+          "description": "18+ years driving digital transformation at Ryanair, Bank of Ireland, HSE, and 123.ie."
+        }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* ── HERO ── */
+    .hero {
+      background: #131521;
+      color: #ffffff;
+      padding: 96px 40px 80px;
+      text-align: center;
+    }
+    .hero-inner { max-width: 760px; margin: 0 auto; }
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2727;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+    .hero h1 em { color: #dc2727; font-style: normal; }
+    .hero .hero-sub {
+      font-size: 18px;
+      color: #9ca3af;
+      line-height: 1.65;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ── FOUNDING STORY ── */
+    .story {
+      padding: 88px 40px;
+      background: #ffffff;
+    }
+    .story-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .story-text h2 {
+      font-size: 32px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .story-text h2 em { color: #dc2727; font-style: normal; }
+    .story-text p {
+      font-size: 16px;
+      color: #555555;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .story-text p:last-child { margin-bottom: 0; }
+    .story-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .stat-block {
+      padding: 28px 24px;
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .stat-block .stat-num {
+      font-size: 40px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      color: #131521;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .stat-block .stat-num span { color: #dc2727; }
+    .stat-block .stat-label {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 6px;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    /* ── FOUNDERS ── */
+    .founders {
+      padding: 88px 40px;
+      background: #faf8f5;
+    }
+    .founders-inner { max-width: 1080px; margin: 0 auto; }
+    .founders-header { text-align: center; margin-bottom: 56px; }
+    .founders-header h2 {
+      font-size: 32px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 12px;
+    }
+    .founders-header p {
+      font-size: 16px;
+      color: #6b7280;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .founder-card {
+      background: #ffffff;
+      border: 1px solid #eeebe6;
+      border-radius: 12px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 24px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .founder-card:hover {
+      border-color: rgba(220,39,39,0.25);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+    .founder-card:last-child { margin-bottom: 0; }
+
+    .founder-photo-col { text-align: center; }
+    .founder-photo-wrap {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 16px;
+    }
+    .founder-photo-wrap img {
+      width: 116%;
+      height: 116%;
+      margin: -8%;
+      display: block;
+      object-fit: cover;
+    }
+    .founder-name {
+      font-size: 18px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 4px;
+    }
+    .founder-role {
+      font-size: 12px;
+      font-weight: 700;
+      color: #dc2727;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .founder-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: 12px;
+      color: #6b7280;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .founder-linkedin:hover { color: #131521; }
+    .founder-linkedin svg { flex-shrink: 0; }
+
+    .founder-bio h3 {
+      font-size: 22px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 4px;
+    }
+    .founder-bio .bio-tagline {
+      font-size: 14px;
+      color: #dc2727;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .founder-bio p {
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .founder-bio p:last-of-type { margin-bottom: 20px; }
+
+    .career-track {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .career-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #374151;
+      font-weight: 500;
+    }
+    .career-pill::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #dc2727;
+      flex-shrink: 0;
+    }
+
+    /* ── PHILOSOPHY ── */
+    .philosophy {
+      padding: 88px 40px;
+      background: #131521;
+      color: #ffffff;
+    }
+    .philosophy-inner { max-width: 1080px; margin: 0 auto; }
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .philosophy-left h2 {
+      font-size: 32px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .philosophy-left h2 em { color: #dc2727; font-style: normal; }
+    .philosophy-left p {
+      font-size: 16px;
+      color: #9ca3af;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .philosophy-left p:last-child { margin-bottom: 0; }
+
+    .principle-list { list-style: none; padding: 0; margin: 0; }
+    .principle-list li {
+      padding: 20px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .principle-list li:last-child {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .principle-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: #dc2727;
+      letter-spacing: 0.08em;
+      padding-top: 2px;
+      flex-shrink: 0;
+      width: 24px;
+    }
+    .principle-content h4 {
+      font-size: 15px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .principle-content p {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── BROADER TEAM ── */
+    .broader-team {
+      padding: 80px 40px;
+      background: #ffffff;
+      text-align: center;
+    }
+    .broader-team-inner { max-width: 720px; margin: 0 auto; }
+    .broader-team h2 {
+      font-size: 28px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 16px;
+    }
+    .broader-team p {
+      font-size: 16px;
+      color: #6b7280;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .team-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+      text-align: left;
+    }
+    .team-pillar {
+      padding: 24px;
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 10px;
+    }
+    .team-pillar-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      color: #dc2727;
+    }
+    .team-pillar h4 {
+      font-size: 14px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin-bottom: 6px;
+    }
+    .team-pillar p {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── CTA ── */
+    .cta-close {
+      background: #dc2727;
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 40px;
+    }
+    .cta-close h2 {
+      font-size: 32px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-close p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .cta-close .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      color: #131521;
+      padding: 13px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .btn-white:hover { background: #f3f4f6; transform: translateY(-1px); }
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid rgba(255,255,255,0.5);
+      padding: 11px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .btn-outline-white:hover {
+      border-color: #ffffff;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .story-inner { grid-template-columns: 1fr; gap: 48px; }
+      .story-stats { grid-template-columns: repeat(2, 1fr); }
+      .philosophy-grid { grid-template-columns: 1fr; gap: 40px; }
+      .founder-card { grid-template-columns: 160px 1fr; gap: 32px; }
+      .founder-photo-wrap { width: 140px; height: 140px; }
+    }
+    @media (max-width: 768px) {
+      .hero { padding: 64px 20px 56px; }
+      .hero h1 { font-size: 34px; }
+      .hero .hero-sub { font-size: 16px; }
+      .story { padding: 56px 20px; }
+      .founders { padding: 56px 20px; }
+      .philosophy { padding: 56px 20px; }
+      .broader-team { padding: 56px 20px; }
+      .cta-close { padding: 56px 20px; }
+      .cta-close h2 { font-size: 24px; }
+      .cta-close .cta-buttons { flex-direction: column; align-items: center; }
+      .founder-card {
+        grid-template-columns: 1fr;
+        padding: 28px;
+        text-align: center;
+      }
+      .founder-photo-col { margin: 0 auto; }
+      .founder-photo-wrap { width: 128px; height: 128px; }
+      .career-track { justify-content: center; }
+      .founder-bio h3 { display: none; }
+      .team-pillars { grid-template-columns: 1fr; }
+    }
+
+  </style>
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="section-label">Our team</div>
+    <h1>Built by people who know<br><em>what breaks</em></h1>
+    <p class="hero-sub">Kaptea isn't a product built in a vacuum. It was built by operators who've been on the other side of the table — fighting through enterprise communications outages, compliance failures, and fragmented vendor stacks.</p>
+  </div>
+</section>
+
+<!-- FOUNDING STORY -->
+<section class="story">
+  <div class="story-inner">
+
+    <div class="story-text">
+      <div class="section-label">The founding story</div>
+      <h2>We've lived inside the<br><em>problem we solve</em></h2>
+      <p>Alan and Robert didn't start Kaptea because they saw a market gap on a slide deck. They started it because they'd each spent two decades watching organisations struggle with the same problem: the gap between what modern communications carriers can offer and what enterprise operations teams can actually use safely.</p>
+      <p>At HP, Cisco, and Arista, Alan saw firsthand how critical communications infrastructure could fail enterprises during their most important moments. At Ryanair and Bank of Ireland, Robert built the kind of high-stakes, regulated digital systems that can't afford failure.</p>
+      <p>Kaptea is what they would have wanted to buy — but couldn't find.</p>
+    </div>
+
+    <div class="story-stats">
+      <div class="stat-block">
+        <div class="stat-num">40<span>+</span></div>
+        <div class="stat-label">Years combined enterprise experience</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">99<span>.5%</span></div>
+        <div class="stat-label">Delivery rate on production deployments</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">5<span>+</span></div>
+        <div class="stat-label">Regulated industries served at scale</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Independent security certifications</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="founders">
+  <div class="founders-inner">
+
+    <div class="founders-header">
+      <div class="section-label">The co-founders</div>
+      <h2>Talk to founders, not salespeople</h2>
+      <p>Every demo is run by the people who built Kaptea. You'll get straight answers — no pitch theatre.</p>
+    </div>
+
+    <!-- Alan -->
+    <div class="founder-card">
+      <div class="founder-photo-col">
+        <div class="founder-photo-wrap">
+          <img src="img/alan-mcnab.webp" alt="Alan McNab, CEO and Co-Founder of Kaptea">
+        </div>
+        <div class="founder-name">Alan McNab</div>
+        <div class="founder-role">CEO &amp; Co-Founder</div>
+        <a href="https://www.linkedin.com/in/alanmcnab" target="_blank" rel="noopener" class="founder-linkedin">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="founder-bio">
+        <h3>Alan McNab</h3>
+        <div class="bio-tagline">The enterprise infrastructure operator</div>
+        <p>Alan brings three decades of experience scaling mission-critical infrastructure at some of the world's most demanding technology companies. From carrier-grade networks at HP and Cisco to cloud architecture at Arista Networks and service transformation at NCR, he's led the kind of initiatives where downtime isn't measured in SLA percentages — it's measured in real-world consequences.</p>
+        <p>His experience on both the vendor and buyer side of enterprise communications gives Kaptea a commercial clarity that pure-tech founders rarely have: he knows what procurement teams are actually worried about, what CIOs ask in the second meeting, and what makes a platform genuinely enterprise-ready versus enterprise-marketed.</p>
+        <p>Alan holds a BSEE from Santa Clara University and an MBA from Trinity College Dublin.</p>
+        <div class="career-track">
+          <span class="career-pill">HP</span>
+          <span class="career-pill">Cisco</span>
+          <span class="career-pill">NCR</span>
+          <span class="career-pill">Arista Networks</span>
+          <span class="career-pill">Trinity College Dublin MBA</span>
+          <span class="career-pill">Santa Clara BSEE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Robert -->
+    <div class="founder-card">
+      <div class="founder-photo-col">
+        <div class="founder-photo-wrap">
+          <img src="img/robert-norton.webp" alt="Robert Norton, CTO and Co-Founder of Kaptea">
+        </div>
+        <div class="founder-name">Robert Norton</div>
+        <div class="founder-role">CTO &amp; Co-Founder</div>
+        <a href="https://www.linkedin.com/in/robertnorton" target="_blank" rel="noopener" class="founder-linkedin">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="founder-bio">
+        <h3>Robert Norton</h3>
+        <div class="bio-tagline">The platform architect for regulated industries</div>
+        <p>Robert has spent 18+ years leading digital transformation at some of Ireland's most complex and scrutinised organisations. At Ryanair, he built high-availability systems operating at airline scale. At Bank of Ireland, he navigated the compliance and security requirements that come with financial services at national level. At HSE, he worked within the most regulated communications environment in the country.</p>
+        <p>That experience is baked into Pronto's architecture. The platform's governance controls, audit logging, role-based access, and failover logic aren't features added after the fact — they were design constraints from day one, informed by what Robert knows breaks when it matters most.</p>
+        <p>Robert leads Kaptea's engineering and product direction, keeping the platform as close to the operational reality of enterprise customers as possible.</p>
+        <div class="career-track">
+          <span class="career-pill">Ryanair</span>
+          <span class="career-pill">Bank of Ireland</span>
+          <span class="career-pill">HSE</span>
+          <span class="career-pill">123.ie</span>
+          <span class="career-pill">18+ years enterprise platforms</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <div class="philosophy-inner">
+    <div class="philosophy-grid">
+
+      <div class="philosophy-left">
+        <div class="section-label" style="color:#dc2727;">How we work</div>
+        <h2>Promises made.<br><em>Promises kept.</em></h2>
+        <p>Enterprise software is full of things that sound good in a demo and disappoint in production. We built Kaptea with the opposite philosophy: under-promise on the slide deck, over-deliver in the platform.</p>
+        <p>That means dedicated instances — not a shared tenant hoping your peak doesn't coincide with someone else's. It means governance built in, not bolted on. It means a 60-day pilot, so you can verify what we claim before you commit.</p>
+        <p>And it means when you call, you reach the people who built it.</p>
+      </div>
+
+      <ul class="principle-list">
+        <li>
+          <span class="principle-num">01</span>
+          <div class="principle-content">
+            <h4>Dedicated over shared</h4>
+            <p>Every customer gets their own instance. Your traffic, your data, your performance — never affected by another organisation's peaks or problems.</p>
+          </div>
+        </li>
+        <li>
+          <span class="principle-num">02</span>
+          <div class="principle-content">
+            <h4>Compliance by design, not by exception</h4>
+            <p>Governance, audit logging, role-based access, and template controls were in the architecture before the first line of product code. Not added later when a customer asked.</p>
+          </div>
+        </li>
+        <li>
+          <span class="principle-num">03</span>
+          <div class="principle-content">
+            <h4>Operated, not just deployed</h4>
+            <p>We don't hand you API keys and documentation. We operationalise the full Twilio stack and give your team a platform they can actually run.</p>
+          </div>
+        </li>
+        <li>
+          <span class="principle-num">04</span>
+          <div class="principle-content">
+            <h4>Speed without shortcuts</h4>
+            <p>A dedicated instance in days, not months. That timeline is real — but it doesn't mean skipping the security or compliance work. It means we've done it before and know the path.</p>
+          </div>
+        </li>
+        <li>
+          <span class="principle-num">05</span>
+          <div class="principle-content">
+            <h4>Straight answers</h4>
+            <p>If Kaptea isn't the right fit, we'll tell you. We'd rather lose a deal than set up a customer for a bad experience. Referrals come from customers who trust you.</p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<!-- BROADER TEAM -->
+<section class="broader-team">
+  <div class="broader-team-inner">
+    <div class="section-label">The broader team</div>
+    <h2>A small team with a deliberate footprint</h2>
+    <p>Kaptea is intentionally lean. We believe depth beats headcount. The people building and operating Pronto have done it before — at airline scale, at banking scale, and at telecoms scale.</p>
+    <p>Behind the founders, we have a team of experienced engineers, implementation specialists, and compliance advisors — each brought in because of what they've already built, not what they're learning on the job.</p>
+
+    <div class="team-pillars">
+      <div class="team-pillar">
+        <div class="team-pillar-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h4>Platform Engineering</h4>
+        <p>Carrier-grade systems engineers who've scaled communications infrastructure to hundreds of millions of messages.</p>
+      </div>
+      <div class="team-pillar">
+        <div class="team-pillar-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Compliance &amp; Security</h4>
+        <p>Specialists who understand what ISO 27001, Cyber Essentials Plus, and regulated-industry requirements actually mean in a live production environment.</p>
+      </div>
+      <div class="team-pillar">
+        <div class="team-pillar-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h4>Customer Success</h4>
+        <p>Implementation and onboarding led by people who have delivered regulated communications systems — not account managers reading from playbooks.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-close">
+  <h2>Meet the team. Actually.</h2>
+  <p>Book a 30-minute call with Alan or Robert directly. No pre-sales filter. No BDR. Just the founders.</p>
+  <div class="cta-buttons">
+    <a href="demo" class="btn-white">Book a Demo</a>
+    <a href="contact" class="btn-outline-white">Get in touch</a>
+  </div>
+</section>
+
+<script src="footer.js"></script>
+</body>
+</html>
