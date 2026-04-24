@@ -6,6 +6,17 @@
   <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
   <title>Integration &amp; API Framework - Pronto | Kaptea</title>
   <meta name="description" content="Connect your CRM, trigger messages from any event, and extend Pronto through open APIs and webhooks. No custom integration work required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Integration &amp; API Framework - Pronto | Kaptea" />
+  <meta property="og:description" content="Connect your CRM, trigger messages from any event, and extend Pronto through open APIs and webhooks." />
+  <meta property="og:url" content="https://kaptea.vercel.app/integration-api-framework.html" />
+  <meta property="og:image" content="https://kaptea.vercel.app/img/illustrations/Integration-CloseUp.png" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1440" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Integration &amp; API Framework - Pronto | Kaptea" />
+  <meta name="twitter:description" content="Connect your CRM, trigger messages from any event, and extend Pronto through open APIs and webhooks." />
+  <meta name="twitter:image" content="https://kaptea.vercel.app/img/illustrations/Integration-CloseUp.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -37,18 +48,63 @@ img { max-width: 100%; display: block; }
     
     /* ── HERO ── */
     .hero {
-      background: #faf8f5;
+      position: relative;
       color: #131521;
       text-align: left;
-      padding: 80px 40px 72px;
+      padding: 80px 40px 88px;
+      background-color: #ffffff;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0.92) 7%,
+          rgba(255, 255, 255, 0.78) 16%,
+          rgba(255, 255, 255, 0.52) 30%,
+          rgba(255, 255, 255, 0.26) 42%,
+          rgba(255, 255, 255, 0.08) 54%,
+          rgba(255, 255, 255, 0.02) 60%,
+          rgba(255, 255, 255, 0.2) 70%,
+          rgba(255, 255, 255, 0.36) 82%,
+          rgba(255, 255, 255, 0.46) 100%
+        ),
+        url(img/illustrations/Integration-CloseUp.png);
+      background-size: 100% 100%, 64% auto;
+      background-position: 0 0, 56% 42%;
+      background-repeat: no-repeat, no-repeat;
+      transform: translateX(20vw);
+      opacity: 0.72;
+      pointer-events: none;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.98) 26%,
+        rgba(255, 255, 255, 0.9) 36%,
+        rgba(255, 255, 255, 0.42) 46%,
+        transparent 56%
+      );
+      pointer-events: none;
     }
     .hero-inner {
+      position: relative;
+      z-index: 2;
       max-width: 1080px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
+    }
+    .hero-inner > .hero-copy {
+      max-width: 560px;
     }
     .hero-breadcrumb {
       font-size: 12px;
@@ -72,7 +128,7 @@ img { max-width: 100%; display: block; }
       margin-bottom: 20px;
       color: #131521;
     }
-    .hero h1 span { color: #dc2727; }
+    .hero h1 .hero-accent { color: #dc2727; }
     .hero .hero-sub {
       font-size: 17px;
       color: #555555;
@@ -115,18 +171,6 @@ img { max-width: 100%; display: block; }
       transition: border-color 0.15s ease, color 0.15s ease;
     }
     .btn-ghost:hover { border-color: #131521; color: #131521; }
-    .hero-visual {
-      background: #f0eeeb;
-      border-radius: 12px;
-      min-height: 340px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #e5e2de;
-      overflow: hidden;
-    }
-
-    
 
     /* ── PAIN STRIP ── */
     .pain { background: #f5f4f1; padding: 72px 24px; }
@@ -243,6 +287,23 @@ img { max-width: 100%; display: block; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
+      .hero {
+        padding: 56px 24px 64px;
+      }
+      .hero::after {
+        transform: translateX(16vw);
+        background-size: 100% 100%, 68% auto;
+        background-position: 0 0, 52% 40%;
+      }
+      .hero::before {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.99) 0%,
+          rgba(255, 255, 255, 0.94) 34%,
+          rgba(255, 255, 255, 0.62) 48%,
+          transparent 62%
+        );
+      }
       .pain-grid { grid-template-columns: 1fr; }
       .how-inner { grid-template-columns: 1fr; gap: 32px; }
       .how-inner.reverse { direction: ltr; }
@@ -253,6 +314,27 @@ img { max-width: 100%; display: block; }
     }
     @media (max-width: 600px) {
       .nav-inner { padding: 0 16px; }
+      .hero {
+        padding: 40px 20px 48px;
+      }
+      .hero::after {
+        transform: translateX(10vw);
+        background-size: 100% 100%, 72% auto;
+        background-position: 0 0, 54% 38%;
+      }
+      .hero::before {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.99) 0%,
+          rgba(255, 255, 255, 0.95) 58%,
+          rgba(255, 255, 255, 0.55) 78%,
+          transparent 94%
+        );
+      }
+      .hero h1 { font-size: 28px; }
+      .hero .hero-sub { font-size: 15px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas a { text-align: center; justify-content: center; }
       .metrics-inner { grid-template-columns: repeat(2,1fr); gap: 24px; }
       .int-grid { grid-template-columns: repeat(2,1fr); }
     }
@@ -270,9 +352,9 @@ img { max-width: 100%; display: block; }
   <main id="main">
 
     <!-- ── HERO ── -->
-    <section class="hero" aria-label="Integration and API Framework hero">
+    <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-inner">
-        <div class="hero-text">
+        <div class="hero-copy">
           <div class="hero-breadcrumb">
             <span>Platform</span>
             <span class="bc-sep">&#8594;</span>
@@ -280,9 +362,9 @@ img { max-width: 100%; display: block; }
             <span class="bc-sep">&#8594;</span>
             <span class="bc-current">Integration &amp; API Framework</span>
           </div>
-          <h1 class="hero-h1">
+          <h1 id="hero-heading">
             Connect your stack.<br>
-            <span>Sync every contact.</span><br>
+            <span class="hero-accent">Sync every contact.</span><br>
             Build nothing custom.
           </h1>
           <p class="hero-sub">Pronto plugs directly into your CRM, triggers messages from any event, and exposes clean APIs and webhooks - so your engineering team never has to build a custom integration again.</p>
@@ -311,38 +393,6 @@ img { max-width: 100%; display: block; }
           <div class="hero-ctas">
             <a href="demo" class="btn-primary">Book a Demo</a>
             <a href="pronto" class="btn-ghost">Explore Pronto</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div style="width:100%;">
-            <div style="margin-bottom:12px;">
-              <div style="background:#ffffff;border:1.5px solid #e0ddd8;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
-                <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px;">Connector Framework</div>
-                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                  <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid #fca5a5;">Salesforce</span>
-                  <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid #fca5a5;">Dynamics 365</span>
-                  <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid #fca5a5;">HubSpot</span>
-                  <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid #fca5a5;">Zoho CRM</span>
-                  <span style="background:#fef2f2;color:#dc2727;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid #fca5a5;">SAP</span>
-                </div>
-              </div>
-              <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:8px 0;">
-                <div style="font-size:12px;color:#131521;font-weight:600;background:#fff;border:1.5px solid #dc2727;border-radius:6px;padding:6px 14px;">CRM record updated</div>
-                <span style="color:#dc2727;font-size:20px;font-weight:700;">&#8644;</span>
-                <div style="font-size:12px;color:#fff;font-weight:600;background:#dc2727;border-radius:6px;padding:6px 14px;">Pronto contact synced</div>
-              </div>
-              <div style="background:#ffffff;border:1.5px solid #e0ddd8;border-radius:10px;padding:14px 16px;">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                  <span style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.8px;">IntegrationCursorState</span>
-                  <span style="background:#f0fdf4;color:#16a34a;font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;border:1px solid #86efac;">LIVE</span>
-                </div>
-                <div style="font-family:'Courier New',monospace;font-size:11px;color:#555;line-height:1.8;background:#f5f4f1;padding:10px;border-radius:6px;">
-                  <div><span style="color:#2563eb;">lastSyncedAt</span>: <span style="color:#16a34a;">"2026-04-06T10:42:00Z"</span></div>
-                  <div><span style="color:#2563eb;">recordsCursor</span>: <span style="color:#9333ea;">"0n00000ABC123"</span></div>
-                  <div><span style="color:#2563eb;">pendingWrites</span>: <span style="color:#dc2727;">0</span></div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
