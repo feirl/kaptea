@@ -51,8 +51,21 @@
   <url><loc>https://kaptea.vercel.app/case-study-quandoo</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://kaptea.vercel.app/case-study-tickmill</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
+  <!-- Company -->
+  <url><loc>https://kaptea.vercel.app/meet-the-team</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.vercel.app/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://kaptea.vercel.app/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://kaptea.vercel.app/cookie-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://kaptea.vercel.app/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
   <!-- Blog -->
   <url><loc>https://kaptea.vercel.app/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog-post-template</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.vercel.app/blog-trust-not-a-kpi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.vercel.app/blog-dedicated-instance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.vercel.app/blog-whatsapp-compliance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.vercel.app/blog-multichannel-vs-omnichannel</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.vercel.app/blog-gold-partner-twilio</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
 </urlset>

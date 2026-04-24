@@ -66,6 +66,47 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need to archive WhatsApp messages used in my contact centre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. In regulated industries, WhatsApp messages exchanged with customers are subject to the same archiving obligations as voice calls and emails. Financial services firms regulated by the FCA or CBI must retain records of all communications relating to regulated business for a minimum of five years under MiFID II. Healthcare and utilities organisations face similar obligations under GDPR and sector-specific rules. The WhatsApp Business App does not support compliant archiving; you need the WhatsApp Business API integrated with a compliant archiving solution."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use the standard WhatsApp Business App in a regulated contact centre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, not if you have archiving, monitoring, or supervision obligations. The WhatsApp Business App does not provide the API-level access needed to capture, archive, and make messages available for regulatory review. Only the WhatsApp Business API, accessed through an approved provider such as Twilio, allows compliant enterprise deployments with full message capture and monitoring."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the GDPR requirements for using WhatsApp in a business context?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You need a Data Processing Agreement with your WhatsApp Business API provider, a documented legal basis for processing personal data via WhatsApp (typically contract performance or legitimate interests), and data residency controls for archived communications. You must also have customer consent mechanisms for outbound WhatsApp communications. WhatsApp is owned by Meta, so transfers of personal data outside the EEA must be covered by appropriate transfer mechanisms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What fines have been issued for non-compliant WhatsApp use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In 2022, US regulators imposed over $1.8 billion in fines on major financial institutions for failures to preserve employee WhatsApp communications. European regulators have followed a similar trajectory. The FCA has made clear that its requirements for communication capture and retention extend to all electronic channels used for regulated business, including WhatsApp."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     .post-breadcrumb {
       background: #f7f8fc;
