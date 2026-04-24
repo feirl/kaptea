@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
+
+  <title>The problem isn't your technology. It's your promises. — Alan McNab, Kaptea</title>
+  <meta name="description" content="After 30 years in enterprise tech, I've watched organisations invest in every tool imaginable while customer trust keeps declining. The problem isn't the technology. It's that we've never treated promises as operational objects." />
+  <link rel="canonical" href="https://kaptea.vercel.app/blog-trust-not-a-kpi" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The problem isn't your technology. It's your promises." />
+  <meta property="og:description" content="After 30 years in enterprise tech, I've watched organisations invest in every tool imaginable while customer trust keeps declining. The problem isn't the technology. It's that we've never treated promises as operational objects." />
+  <meta property="og:url" content="https://kaptea.vercel.app/blog-trust-not-a-kpi" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta property="og:image" content="https://kaptea.vercel.app/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="article:published_time" content="2026-01-15T09:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-01-15T09:00:00+00:00" />
+  <meta property="article:section" content="Thought Leadership" />
+  <meta property="article:tag" content="trust, enterprise communications, omnichannel, promises, CX" />
+  <meta property="article:author" content="Alan McNab" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@kaptea" />
+  <meta name="twitter:title" content="The problem isn't your technology. It's your promises." />
+  <meta name="twitter:description" content="After 30 years in enterprise tech, I've watched organisations invest in every tool imaginable while customer trust keeps declining." />
+  <meta name="twitter:image" content="https://kaptea.vercel.app/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaptea.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog & Insights", "item": "https://kaptea.vercel.app/blog" },
+      { "@type": "ListItem", "position": 3, "name": "The problem isn't your technology. It's your promises.", "item": "https://kaptea.vercel.app/blog-trust-not-a-kpi" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The problem isn't your technology. It's your promises.",
+    "description": "After 30 years in enterprise tech, I've watched organisations invest in every tool imaginable while customer trust keeps declining. The problem isn't the technology. It's that we've never treated promises as operational objects.",
+    "datePublished": "2026-01-15T09:00:00+00:00",
+    "dateModified": "2026-01-15T09:00:00+00:00",
+    "author": {
+      "@type": "Person",
+      "name": "Alan McNab",
+      "jobTitle": "CEO & Co-Founder",
+      "worksFor": { "@type": "Organization", "name": "Kaptea" },
+      "url": "https://kaptea.vercel.app/meet-the-team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "logo": { "@type": "ImageObject", "url": "https://kaptea.vercel.app/img/brand/kaptea-logo.svg" }
+    },
+    "url": "https://kaptea.vercel.app/blog-trust-not-a-kpi",
+    "mainEntityOfPage": "https://kaptea.vercel.app/blog-trust-not-a-kpi",
+    "articleSection": "Thought Leadership",
+    "keywords": "enterprise trust, omnichannel communications, promises, customer experience, trust infrastructure",
+    "wordCount": "2100",
+    "timeRequired": "PT9M"
+  }
+  </script>
+
+  <style>
+    .post-breadcrumb {
+      background: #f7f8fc;
+      border-bottom: 1px solid #e8eaf0;
+      padding: 12px 40px;
+    }
+    .post-breadcrumb-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--kaptea-neutral-grey);
+    }
+    .post-breadcrumb a {
+      color: var(--kaptea-tagline-grey);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .post-breadcrumb a:hover { color: var(--kaptea-red); }
+    .post-breadcrumb svg { flex-shrink: 0; opacity: 0.4; }
+
+    .post-header {
+      background: var(--kaptea-white);
+      padding: 56px 40px 0;
+      border-bottom: 1px solid #e8eaf0;
+    }
+    .post-header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .blog-cat {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .blog-cat--company { background: #fef3c7; color: #b45309; }
+
+    .post-cat-wrap { margin-bottom: 20px; }
+
+    .post-header h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      line-height: 1.15;
+      margin: 0 0 20px;
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      color: var(--kaptea-neutral-grey);
+      padding-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .post-meta time     { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .post-author { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .sep     { opacity: 0.4; }
+
+    .post-body-wrap {
+      background: var(--kaptea-white);
+      padding: 0 40px 80px;
+    }
+    .post-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-top: 48px;
+    }
+
+    .post-answer-box {
+      background: #f0f9ff;
+      border-left: 4px solid var(--kaptea-red);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-answer-box-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--kaptea-red);
+      margin-bottom: 8px;
+    }
+    .post-answer-box p {
+      font-size: 15px;
+      color: #1e3a5f;
+      line-height: 1.7;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .post-toc {
+      background: #f7f8fc;
+      border: 1px solid #e8eaf0;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-toc-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--kaptea-neutral-grey);
+      margin-bottom: 12px;
+    }
+    .post-toc ol { margin: 0; padding-left: 20px; }
+    .post-toc li { margin-bottom: 6px; }
+    .post-toc a {
+      font-size: 13px;
+      color: var(--kaptea-charcoal);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .post-toc a:hover { color: var(--kaptea-red); }
+
+    .post-body h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 52px 0 16px;
+      line-height: 1.25;
+      scroll-margin-top: 80px;
+    }
+    .post-body h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin: 32px 0 12px;
+      line-height: 1.3;
+    }
+    .post-body p {
+      font-size: 16px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.8;
+      margin: 0 0 20px;
+    }
+    .post-body ul, .post-body ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+    }
+    .post-body li {
+      font-size: 16px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .post-body strong { color: var(--kaptea-charcoal); font-weight: 700; }
+    .post-body a { color: var(--kaptea-red); text-decoration: underline; text-underline-offset: 2px; }
+    .post-body a:hover { text-decoration: none; }
+
+    .post-pullquote {
+      border-left: 3px solid var(--kaptea-red);
+      margin: 40px 0;
+      padding: 4px 0 4px 28px;
+    }
+    .post-pullquote blockquote {
+      font-family: 'Manrope', sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.4;
+      margin: 0;
+      font-style: normal;
+    }
+
+    /* Manifesto-style bold statements */
+    .post-manifesto {
+      background: #131521;
+      border-radius: 10px;
+      padding: 32px 36px;
+      margin: 40px 0;
+    }
+    .post-manifesto p {
+      font-family: 'Manrope', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+      margin: 0 0 10px;
+    }
+    .post-manifesto p:last-child { margin: 0; }
+    .post-manifesto p em {
+      color: #dc2727;
+      font-style: normal;
+    }
+
+    .post-author-bio {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 28px 0;
+      border-top: 1px solid #e8eaf0;
+      border-bottom: 1px solid #e8eaf0;
+      margin: 44px 0 0;
+    }
+    .post-author-avatar {
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .post-author-avatar img {
+      width: 116%;
+      height: 116%;
+      margin: -8%;
+      display: block;
+      object-fit: cover;
+    }
+    .post-author-name  { font-size: 14px; font-weight: 700; color: var(--kaptea-charcoal); }
+    .post-author-role  { font-size: 12px; color: var(--kaptea-neutral-grey); margin-top: 2px; }
+    .post-author-bio-text {
+      font-size: 13px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+    .post-author-bio-text a { color: var(--kaptea-red); text-decoration: none; }
+
+    .post-related {
+      background: #f7f8fc;
+      padding: 48px 40px 64px;
+      border-top: 1px solid #e8eaf0;
+    }
+    .post-related-inner { max-width: 780px; margin: 0 auto; }
+    .post-related-heading {
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 0 0 24px;
+    }
+    .post-related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .post-related-card {
+      background: var(--kaptea-white);
+      border-radius: 8px;
+      padding: 18px 18px 16px;
+      text-decoration: none;
+      display: block;
+      border: 1px solid #e8eaf0;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .post-related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-1px); }
+    .post-related-card .blog-cat { margin-bottom: 10px; }
+    .post-related-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.35;
+      margin: 0 0 10px;
+    }
+    .post-related-meta { font-size: 11px; color: var(--kaptea-neutral-grey); font-weight: 500; }
+
+    @media (max-width: 768px) {
+      .post-breadcrumb { padding: 12px 20px; }
+      .post-header { padding: 40px 20px 0; }
+      .post-body-wrap { padding: 0 20px 60px; }
+      .post-body { padding-top: 32px; }
+      .post-related { padding: 40px 20px 48px; }
+      .post-related-grid { grid-template-columns: 1fr; }
+      .post-manifesto { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+<script src="nav.js"></script>
+
+<nav class="post-breadcrumb" aria-label="Breadcrumb">
+  <div class="post-breadcrumb-inner">
+    <a href="/">Home</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <a href="blog">Blog &amp; Insights</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <span>The problem isn't your technology</span>
+  </div>
+</nav>
+
+<header class="post-header" id="post-header">
+  <div class="post-header-inner">
+    <div class="post-cat-wrap">
+      <span class="blog-cat blog-cat--company">Founder's View</span>
+    </div>
+    <h1>The problem isn't your technology. It's your promises.</h1>
+    <div class="post-meta">
+      <time datetime="2026-01-15">15 Jan 2026</time>
+      <span class="sep">·</span>
+      <span>9 min read</span>
+      <span class="sep">·</span>
+      <span class="post-author">By Alan McNab, CEO &amp; Co-Founder</span>
+    </div>
+  </div>
+</header>
+
+<div class="post-body-wrap">
+  <article class="post-body">
+
+    <div class="post-answer-box" role="note">
+      <div class="post-answer-box-label">The core argument</div>
+      <p>Enterprises invest heavily in CX tools, AI, and analytics — yet customer trust keeps declining. The reason: organisations make promises implicitly and break them invisibly. Until promises are treated as operational objects — tracked, coordinated, and kept — no amount of technology will close the gap.</p>
+    </div>
+
+    <nav class="post-toc" aria-label="Article contents">
+      <div class="post-toc-label">In this article</div>
+      <ol>
+        <li><a href="#invisible-infrastructure">Trust is invisible infrastructure</a></li>
+        <li><a href="#measurement-trap">The measurement trap</a></li>
+        <li><a href="#atomic-unit">Promises are the atomic unit of service</a></li>
+        <li><a href="#coordination-problem">Omnichannel without coordination is noise</a></li>
+        <li><a href="#ai-question">The right question to ask about AI</a></li>
+        <li><a href="#what-we-are-building">What we are building at Kaptea</a></li>
+        <li><a href="#provocation">A provocation</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="invisible-infrastructure">Trust is invisible infrastructure</h2>
+
+    <p>I have spent thirty years helping enterprises deploy complex technology. Global networks. Data centres. Cloud platforms. Omnichannel customer systems. The pattern, across all of it, has been remarkably consistent: organisations invest in systems, automation, and analytics — and still struggle to create experiences that feel reliable, human, and worthy of trust.</p>
+
+    <p>I have thought about this for a long time. And I have come to believe that the problem is not effort. It is not investment. It is not even capability.</p>
+
+    <p>The problem is framing.</p>
+
+    <p>Trust is the quiet infrastructure of modern service. When it works, it is invisible. Nobody phones their bank to say "I just wanted to let you know my transaction went through." Nobody emails their utility provider to thank them for the fact that the lights came on this morning.</p>
+
+    <p>Trust only becomes visible when it fails. And when it fails, everything stops.</p>
+
+    <p>A storm hits. Call volumes spike tenfold. IVR systems that were never designed for surge buckle under the load. Customers — who needed to report an outage, not navigate a phone tree — abandon the channel, turn to social media, and tell ten thousand followers exactly what they think. The trust that was invisible for years becomes a front-page story in an afternoon.</p>
+
+    <p>I have seen this pattern repeat across utilities, financial services, healthcare, public sector. The organisations involved were not poorly run. Many had invested substantially in communications infrastructure. But the infrastructure was built to handle normal volume efficiently — not to maintain trust under pressure.</p>
+
+    <h2 id="measurement-trap">The measurement trap</h2>
+
+    <p>Here is the part that genuinely puzzles me, even after three decades in the industry: modern enterprises are drowning in dashboards, and customer trust is declining.</p>
+
+    <p>This is not a fringe observation. Edelman, PwC, and Salesforce all publish trust indices. The direction, across most industries, is clear. Organisations measure response times, SLAs, NPS, automation rates, CSAT scores — and trust keeps eroding.</p>
+
+    <p>Most organisations treat trust as something to be measured — another KPI on a quarterly dashboard. But trust is not a score. It is not a report. It is not a metric that moves when you optimise the right upstream variable.</p>
+
+    <div class="post-pullquote">
+      <blockquote>Trust is a background condition — a shared expectation that an organisation will keep its word. You feel it before you measure it. And you lose it long before it shows up in a dashboard.</blockquote>
+    </div>
+
+    <p>Think about the last time you truly trusted a service provider. You did not check their NPS score. You did not review their SLA documentation. You trusted them because, repeatedly, over time, they did what they said they would do. The phone was answered. The engineer arrived when they said they would. The notification came through before you needed to chase it. The problem was resolved before you had to escalate it.</p>
+
+    <p>The operational machinery behind each of those moments — routing logic, escalation rules, message delivery, agent handoffs — was completely invisible to you. It is the kind of infrastructure nobody talks about when it works. And the kind that dominates every post-incident review when it does not.</p>
+
+    <h2 id="atomic-unit">Promises are the atomic unit of service</h2>
+
+    <p>If I had to reduce this to a single idea — the idea that drove me to co-found Kaptea — it is this:</p>
+
+    <div class="post-manifesto">
+      <p>Every customer interaction is <em>a promise</em>.</p>
+      <p>"We will call you back."</p>
+      <p>"Your issue will be resolved."</p>
+      <p>"Your data is secure."</p>
+      <p>"Your service will be available."</p>
+      <p>Most organisations make promises <em>implicitly</em> and break them <em>invisibly</em>.</p>
+    </div>
+
+    <p>When you put a customer on hold and say "your call is important to us," that is a promise — implicit, untracked, and entirely unenforceable. When a messaging campaign goes out confirming an appointment that was already cancelled in the CRM, that is a broken promise — one that probably nobody will ever connect to the NPS drop it caused six weeks later.</p>
+
+    <p>The problem is not that organisations are dishonest. Most enterprises genuinely intend to keep their promises. The problem is that the promises are never made explicit. They are never tracked as operational objects. They are never coordinated across channels. And so they break — not through malice, but through complexity.</p>
+
+    <p>Every channel you add is another surface on which a promise can be made and broken. Every system integration is another potential point of inconsistency. Every handoff between agent, automation, and back-end system is another place where the coordination can fail invisibly — until the customer tells you it has.</p>
+
+    <h2 id="coordination-problem">Omnichannel without coordination is noise</h2>
+
+    <p>The enterprise communications industry spent the 2010s telling organisations they needed to be "omnichannel." Add WhatsApp. Add RCS. Add live chat. Add social. Add video. The assumption was that more channels would create better service.</p>
+
+    <p>In many cases, the opposite happened. Enterprises added channels faster than they added coherence. The result was fragmented customer histories — where an agent on voice has no visibility of the WhatsApp conversation that happened twenty minutes earlier. Disconnected workflows, where the CRM and the messaging platform have diverged and nobody quite knows which record is correct. Inconsistent responses, where two customers with the same question get different answers depending on which channel they used. And invisible breakdowns, where the failure happened somewhere between the systems and nobody owns it.</p>
+
+    <p>Omnichannel is not a technology problem. It is a coordination problem.</p>
+
+    <p>The question is not "can we add this channel?" The question is "can we make a coherent, trackable promise to a customer across every channel they use, and know — in real time — whether we are keeping it?"</p>
+
+    <p>That is a fundamentally different architectural challenge. And it is the one that most platforms have not been designed to solve. They were designed to add channels. The coordination layer was left to the customer to build — usually through a series of painful integrations that become a liability every time a channel partner updates their API.</p>
+
+    <h2 id="ai-question">The right question to ask about AI</h2>
+
+    <p>Everyone in enterprise technology is being asked about AI right now. What AI features are you shipping? How are you using large language models? What is your automation roadmap?</p>
+
+    <p>These are the wrong questions. Or rather, they are incomplete questions.</p>
+
+    <p>Automation without accountability erodes trust. If a customer asks a question and an automated system gives the wrong answer, and there is no escalation path, and there is no audit trail, and there is no human being who can be reached when the automated answer causes a problem — the automation has not improved the service. It has made the failure mode invisible and the resolution path harder.</p>
+
+    <p>The right question about AI is: how does it serve human coordination? How does it detect when a promise is at risk of being broken? How does it escalate intelligently to a person who can intervene? How does it preserve human agency in moments that matter — while taking the load off humans in moments that do not?</p>
+
+    <p>AI is not a replacement for people in the service of trust. It is infrastructure for better promises. It can monitor delivery in real time. It can flag when a message has not been received, when a callback has not happened, when a case has aged beyond its committed resolution time. It can route more intelligently. It can surface the right context to the right agent at the right moment.</p>
+
+    <p>But it has to be designed to serve accountability — not to replace it.</p>
+
+    <h2 id="what-we-are-building">What we are building at Kaptea</h2>
+
+    <p>Robert Norton and I founded Kaptea because we had both spent careers on the inside of the problem we are trying to solve. I have watched organisations spend fortunes on communications technology and still fail their customers at the worst moments. Robert spent eighteen years building high-stakes digital platforms at Ryanair, Bank of Ireland, and HSE — organisations where a broken promise is not a disappointing customer experience. It is a public safety issue, a regulatory event, or a national news story.</p>
+
+    <p>We did not build Kaptea because we saw a gap in the market on a slide deck. We built it because we wanted something we could not find.</p>
+
+    <p>Specifically: a platform that treats promises as operational objects. That makes commitments explicit and trackable. That gives compliance, governance, and operations teams the visibility they need — not after the fact, but in real time. That runs on dedicated infrastructure, because enterprises operating in regulated industries cannot afford the compliance ambiguity of a shared multi-tenant platform.</p>
+
+    <p>The platform is called Pronto. It sits above the carrier infrastructure — Twilio, Telnyx, and others — and provides the coordination layer that those carriers were never designed to provide. Role-based access, so the right people can commit to the right promises. Template controls, so the promise made in Dublin is the same one made in Edinburgh. Delivery diagnostics, so you know the moment a promise is at risk. Audit logs, so your regulators and your DPO get the evidence they need, already organised.</p>
+
+    <p>We call this trust infrastructure. Not CX tooling. Not another omnichannel dashboard. The foundational layer that makes it possible for organisations to keep their word, at scale, across every channel they use.</p>
+
+    <h2 id="provocation">A provocation</h2>
+
+    <p>I want to leave you with a question that has shaped how we think about everything at Kaptea.</p>
+
+    <p>Most CX platforms help you <em>measure</em> trust. They give you NPS trends, CSAT breakdowns, sentiment analysis, correlation charts. They help you understand — after the fact — that trust went up or down, and they give you a list of hypotheses about why.</p>
+
+    <p>The question we asked when we built Kaptea was different: what would it look like to make trust <em>inevitable</em>?</p>
+
+    <p>Not measured. Not monitored. Not tracked retrospectively. Engineered in — through explicit promises, coordinated delivery, real-time visibility, and systems designed from the ground up to close the loop between what you commit to and what you actually do.</p>
+
+    <p>That is a harder problem than building another dashboard. But it is the right problem. And it is the one we are here to solve.</p>
+
+    <p>If this resonates with how you think about your communications infrastructure — or if you are tired of explaining to your board why the NPS investment has not moved the needle — I would genuinely like to talk. Not a sales call. A conversation about the problem.</p>
+
+    <p><a href="contact">Get in touch directly</a>, or <a href="demo">book time with me or Robert</a>. We run every demo ourselves.</p>
+
+    <address class="post-author-bio" rel="author">
+      <div class="post-author-avatar">
+        <img src="img/alan-mcnab.webp" alt="Alan McNab, CEO and Co-Founder of Kaptea">
+      </div>
+      <div>
+        <div class="post-author-name">Alan McNab</div>
+        <div class="post-author-role">CEO &amp; Co-Founder, Kaptea</div>
+        <div class="post-author-bio-text">Former HP, Cisco, NCR, Arista Networks. BSEE from Santa Clara University, MBA from Trinity College Dublin. Alan co-founded Kaptea to build the trust infrastructure he spent thirty years wishing existed. <a href="meet-the-team">About Alan →</a></div>
+      </div>
+    </address>
+
+  </article>
+</div>
+
+<section class="post-related">
+  <div class="post-related-inner">
+    <h2 class="post-related-heading">Related reading</h2>
+    <div class="post-related-grid">
+      <a href="why-kaptea" class="post-related-card">
+        <span class="blog-cat blog-cat--company">Platform</span>
+        <h4>Why enterprises choose Kaptea over direct carrier solutions</h4>
+        <div class="post-related-meta">Platform overview</div>
+      </a>
+      <a href="meet-the-team" class="post-related-card">
+        <span class="blog-cat blog-cat--company">Founder's View</span>
+        <h4>Meet the founders: built by people who know what breaks</h4>
+        <div class="post-related-meta">Meet the team</div>
+      </a>
+      <a href="security-compliance" class="post-related-card">
+        <span class="blog-cat blog-cat--compliance" style="background:#dbeafe;color:#1d4ed8;">Compliance</span>
+        <h4>Security &amp; compliance at Kaptea: the full overview</h4>
+        <div class="post-related-meta">Security &amp; Compliance</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">Ready to make trust inevitable?</h2>
+    <p class="cta-sub">Book a session directly with Alan or Robert. No pre-sales filter. A straight conversation about your communications infrastructure and whether Kaptea can help.</p>
+    <a href="demo" class="btn btn-white">Book a Demo</a>
+  </div>
+</section>
+
+<script src="footer.js"></script>
+</body>
+</html>
