@@ -20,15 +20,15 @@
   <meta property="og:description" content="Enterprise RBAC, division segmentation, template governance and tamper-evident audit logs built for regulated industries." />
   <meta property="og:url" content="https://kaptea.vercel.app/control-governance.html" />
   <meta property="og:site_name" content="Kaptea" />
-  <meta property="og:image" content="https://kaptea.vercel.app/Pronto-Email-Campaign-Detail.jpg" />
-  <meta property="og:image:width" content="1080" />
-  <meta property="og:image:height" content="640" />
+  <meta property="og:image" content="https://kaptea.vercel.app/img/illustrations/Logs-CloseUp.png" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1440" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Control &amp; Governance - Pronto | Kaptea" />
   <meta name="twitter:description" content="Enterprise RBAC, division segmentation, template governance and audit logs for regulated communications." />
-  <meta name="twitter:image" content="https://kaptea.vercel.app/Pronto-Email-Campaign-Detail.jpg" />
+  <meta name="twitter:image" content="https://kaptea.vercel.app/img/illustrations/Logs-CloseUp.png" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23dc2727'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='20' font-weight='700' fill='white'%3EK%3C/text%3E%3C/svg%3E" />
@@ -111,18 +111,64 @@
 
     /* ── HERO ── */
     .hero {
-      background: #faf8f5;
+      position: relative;
       color: #131521;
       text-align: left;
-      padding: 80px 40px 72px;
+      padding: 80px 40px 88px;
+      background-color: #faf8f5;
+      overflow: hidden;
+    }
+    /* Photo layer: zoomed-out % width + shifted left (translate + position) */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          #faf8f5 0%,
+          rgba(250, 248, 245, 0.9) 5%,
+          rgba(250, 248, 245, 0.68) 13%,
+          rgba(250, 248, 245, 0.38) 24%,
+          rgba(250, 248, 245, 0.12) 36%,
+          rgba(250, 248, 245, 0.02) 46%,
+          rgba(250, 248, 245, 0.22) 58%,
+          rgba(250, 248, 245, 0.38) 72%,
+          rgba(250, 248, 245, 0.48) 100%
+        ),
+        url(img/illustrations/Logs-CloseUp.png);
+      background-size: 100% 100%, 64% auto;
+      background-position: 0 0, 56% 42%;
+      background-repeat: no-repeat, no-repeat;
+      transform: translateX(20vw);
+      opacity: 0.72;
+      pointer-events: none;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      /* Scrim only behind copy — leave mid/right of hero clear */
+      background: linear-gradient(
+        90deg,
+        #faf8f5 0%,
+        rgba(250, 248, 245, 0.98) 22%,
+        rgba(250, 248, 245, 0.88) 30%,
+        rgba(250, 248, 245, 0.35) 38%,
+        transparent 46%
+      );
+      pointer-events: none;
     }
     .hero-inner {
+      position: relative;
+      z-index: 2;
       max-width: 1080px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
+    }
+    .hero-inner > .hero-copy {
+      max-width: 560px;
     }
     .hero-breadcrumb {
       font-size: 12px;
@@ -146,7 +192,11 @@
       margin-bottom: 20px;
       color: #131521;
     }
-    .hero h1 span { color: #dc2727; }
+    .hero h1 .hero-accent { color: #dc2727; }
+    .hero h1 .hero-title-line {
+      display: inline-block;
+      white-space: nowrap;
+    }
     .hero .hero-sub {
       font-size: 17px;
       color: #555555;
@@ -189,16 +239,6 @@
       transition: border-color 0.15s ease, color 0.15s ease;
     }
     .btn-ghost:hover { border-color: #131521; color: #131521; }
-    .hero-visual {
-      background: #f0eeeb;
-      border-radius: 12px;
-      min-height: 340px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #e5e2de;
-      overflow: hidden;
-    }
 
     /* ── PAIN STRIP ── */
     .pain-strip { background: #faf8f5; padding: 80px 40px; border-bottom: 1px solid #eeebe6; }
@@ -381,8 +421,23 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-visual { display: none; }
+      .hero {
+        padding: 56px 24px 64px;
+      }
+      .hero::after {
+        transform: translateX(16vw);
+        background-size: 100% 100%, 68% auto;
+        background-position: 0 0, 52% 40%;
+      }
+      .hero::before {
+        background: linear-gradient(
+          90deg,
+          rgba(250, 248, 245, 0.99) 0%,
+          rgba(250, 248, 245, 0.92) 28%,
+          rgba(250, 248, 245, 0.55) 40%,
+          transparent 52%
+        );
+      }
       .pain-grid { grid-template-columns: 1fr; }
       .how-block { gap: 40px; }
       .metrics-inner { grid-template-columns: repeat(2, 1fr); }
@@ -403,7 +458,27 @@
       /* Mobile mega-menu and chevron handled by nav.js */
       .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 301; }
       .hamburger span { display: block; width: 22px; height: 2px; background: #131521; transition: all 0.3s; }
-      .hero { padding: 48px 24px; }
+      .hero {
+        padding: 40px 20px 48px;
+      }
+      .hero::after {
+        transform: translateX(10vw);
+        background-size: 100% 100%, 72% auto;
+        background-position: 0 0, 54% 38%;
+      }
+      .hero::before {
+        background: linear-gradient(
+          90deg,
+          rgba(250, 248, 245, 0.98) 0%,
+          rgba(250, 248, 245, 0.93) 52%,
+          rgba(250, 248, 245, 0.45) 72%,
+          transparent 88%
+        );
+      }
+      .hero h1 { font-size: 28px; }
+      .hero .hero-sub { font-size: 15px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas a { text-align: center; justify-content: center; }
       .pain-strip { padding: 56px 24px; }
       .pain-grid { grid-template-columns: 1fr; }
       .how-section { padding: 56px 24px; }
@@ -441,7 +516,7 @@
 =============================== -->
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
-    <div>
+    <div class="hero-copy">
       <div class="hero-breadcrumb">
         <span>Platform</span>
         <span class="bc-sep">&#8594;</span>
@@ -449,7 +524,7 @@
         <span class="bc-sep">&#8594;</span>
         <span class="bc-current">Control &amp; Governance</span>
       </div>
-      <h1 id="hero-heading">Governed access.<br><span>Division control.</span><br>Zero compliance gaps.</h1>
+      <h1 id="hero-heading"><span class="hero-title-line">Governed access. <span class="hero-accent">Division control.</span></span><br>Zero compliance gaps.</h1>
       <p class="hero-sub">Enterprise-grade access control, division segmentation, template approval workflows, and tamper-evident audit logs - built for regulated industries.</p>
       <div class="hero-channels">
         <span class="channel-pill">
@@ -477,9 +552,6 @@
         <a href="demo" class="btn-primary">Book a Demo</a>
         <a href="pronto" class="btn-ghost">Explore Pronto</a>
       </div>
-    </div>
-    <div class="hero-visual">
-      <img src="v3-task-dashboard.svg" alt="Pronto task dashboard showing cross-channel delivery metrics and real-time agent availability" style="width:100%;height:auto;display:block;" loading="lazy">
     </div>
   </div>
 </section>

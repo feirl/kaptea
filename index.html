@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
@@ -20,9 +20,9 @@
   <meta property="og:title" content="Kaptea | Enterprise Communications Platform for Regulated Organisations" />
   <meta property="og:description" content="Orchestrate SMS, RCS, WhatsApp, Voice, Video and Email with enterprise governance, resilience and compliance. Built on Twilio and Telnyx. Deploy in days." />
   <meta property="og:url" content="https://kaptea.vercel.app/index.html" />
-  <meta property="og:image" content="https://kaptea.vercel.app/Pronto-Email-Campaign-Detail.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://kaptea.vercel.app/img/illustrations/HomeScreen.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="642" />
   <meta property="og:site_name" content="Kaptea" />
 
   <!-- Twitter Card -->
@@ -59,7 +59,7 @@
       "@type": "Organization",
       "name": "Kaptea",
       "url": "https://kaptea.vercel.app/index.html",
-      "logo": "kaptea-logo.svg",
+      "logo": "https://kaptea.vercel.app/img/brand/kaptea-logo.svg",
       "sameAs": [
         "https://www.linkedin.com/company/kaptea"
       ]
@@ -146,7 +146,7 @@
         #faf8f5;
       color: #131521;
       text-align: center;
-      padding: 96px 24px 140px;
+      padding: 96px 24px 160px;
       position: relative;
       z-index: 1;
       overflow: visible;
@@ -926,7 +926,7 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .hero { padding: 64px 24px 180px; }
+      .hero { padding: 64px 24px 160px; }
       .hero h1 { font-size: 36px; }
       .section, .section-alt, .section-dark { padding: 56px 24px; }
       .problem-grid, .capabilities-grid { grid-template-columns: 1fr 1fr; }
@@ -981,10 +981,9 @@
         transition: all 0.3s;
       }
 
-      /* Hero */
-      .hero { padding: 48px 20px 64px; overflow: hidden; }
+      .hero { padding: 48px 20px 40px; overflow: hidden; }
       .hero h1 { font-size: 28px; }
-      .hero p { font-size: 15px; }
+      .hero p { font-size: 15px; margin-bottom: 40px; }
       .cert-strip-inner { gap: 16px; }
       .cert-item { font-size: 11px; }
       .cert-divider { display: none; }
@@ -1027,7 +1026,7 @@
       .steps-cta a { text-align: center; justify-content: center; margin-left: 0 !important; }
 
       /* Platform Preview, mobile */
-      .platform-preview { padding: 40px 20px 0; margin-top: 0 !important; }
+      .platform-preview { padding: 0 20px 0; margin-top: 0 !important; }
       .browser-content img { max-height: 320px; }
       .browser-actions { display: none; }
       .platform-certs { gap: 8px 0; padding: 28px 12px 48px; }
@@ -1061,6 +1060,13 @@
       width: 100%;
       height: auto;
       border-radius: 14px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.14),
+        0 2px 4px rgba(0,0,0,0.06),
+        0 12px 28px rgba(0,0,0,0.12),
+        0 28px 64px rgba(0,0,0,0.2),
+        0 48px 100px rgba(0,0,0,0.28),
+        0 0 72px rgba(220,39,39,0.07);
     }
     .platform-eyebrow { display: none; }
     .browser-frame {
@@ -1219,8 +1225,8 @@
 <div class="platform-preview" role="complementary" aria-label="Platform screenshot">
   <div class="platform-preview-inner">
     <img
-      src="v3-hero-homepage.png"
-      width="4199" height="2853"
+      src="img/illustrations/HomeScreen.png"
+      width="1024" height="642"
       alt="Pronto unified inbox: conversations, rich messages, and contact details in one workspace"
       fetchpriority="high"
       decoding="async"

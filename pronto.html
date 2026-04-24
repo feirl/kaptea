@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
@@ -19,15 +19,16 @@
   <meta property="og:title" content="Pronto - Enterprise Communications Platform | Kaptea" />
   <meta property="og:description" content="Pronto is Kaptea's unified communications platform. Manage SMS, RCS, WhatsApp, Voice, Video and Email through a single governed interface with enterprise resilience and compliance." />
   <meta property="og:url" content="https://kaptea.vercel.app/pronto.html" />
-  <meta property="og:image" content="https://kaptea.vercel.app/Pronto-Email-Campaign-Detail.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://kaptea.vercel.app/img/illustrations/EmailDetailsScreen.png" />
+  <meta property="og:image:width" content="3456" />
+  <meta property="og:image:height" content="2168" />
   <meta property="og:site_name" content="Kaptea" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Pronto - Enterprise Communications Platform | Kaptea" />
   <meta name="twitter:description" content="Pronto is Kaptea's unified communications platform. Manage SMS, RCS, WhatsApp, Voice, Video and Email through a single governed interface with enterprise resilience and compliance." />
+  <meta name="twitter:image" content="https://kaptea.vercel.app/img/illustrations/EmailDetailsScreen.png" />
 
   <!-- Security -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -79,7 +80,7 @@
       background: #faf8f5;
       color: #131521;
       text-align: center;
-      padding: 80px 24px 120px;
+      padding: 80px 24px 160px;
     }
     .hero-inner { max-width: 800px; margin: 0 auto; }
     .hero-breadcrumb {
@@ -103,7 +104,7 @@
       font-size: 18px;
       color: #555555;
       max-width: 620px;
-      margin: 0 auto 36px;
+      margin: 0 auto 40px;
       line-height: 1.65;
     }
     .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
@@ -243,6 +244,7 @@
       top: 0; left: 0; right: 0;
       height: 3px;
       background: #dc2727;
+      z-index: 2;
     }
     .cap-card:hover {
       box-shadow: 0 12px 32px rgba(0,0,0,0.08);
@@ -521,80 +523,36 @@
 
     /* ── PLATFORM PREVIEW ── */
     .platform-preview {
-      background: linear-gradient(180deg, #faf8f5 0%, #f0ede8 22%, #1a1d2e 52%, #0d0f1a 100%);
+      background: linear-gradient(180deg, #faf8f5 0%, #faf8f5 26%, #1a1d2e 58%, #0d0f1a 100%);
       padding: 0 40px 0;
-      margin-top: -80px;
+      margin-top: -120px;
       position: relative;
       z-index: 2;
       text-align: center;
-      overflow: hidden;
+      overflow: visible;
     }
     .platform-preview-inner {
-      max-width: 1080px;
+      max-width: 1060px;
       margin: 0 auto;
-      padding-top: 24px;
+      padding-top: 0;
     }
-    .browser-frame {
-      border-radius: 12px 12px 0 0;
-      overflow: hidden;
-      box-shadow:
-        0 0 0 1px rgba(255,255,255,0.08),
-        0 32px 96px rgba(0,0,0,0.6),
-        0 8px 32px rgba(0,0,0,0.4),
-        0 0 80px rgba(220,39,39,0.06);
-      position: relative;
-      transform: perspective(1200px) rotateX(1.5deg);
-      transform-origin: top center;
+    @media (min-width: 1440px) {
+      .platform-preview-inner {
+        max-width: 1230px;
+      }
     }
-    .browser-chrome {
-      background: #1e2130;
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .browser-dots { display: flex; gap: 7px; flex-shrink: 0; }
-    .browser-dots span { width: 12px; height: 12px; border-radius: 50%; display: block; }
-    .browser-dots span:nth-child(1) { background: #ff5f57; }
-    .browser-dots span:nth-child(2) { background: #febc2e; }
-    .browser-dots span:nth-child(3) { background: #28c840; }
-    .browser-url {
-      flex: 1;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 5px;
-      padding: 5px 12px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.35);
-      font-family: 'Inter', monospace;
-      text-align: left;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    .browser-actions { display: flex; gap: 8px; flex-shrink: 0; }
-    .browser-actions span {
-      width: 18px; height: 18px;
-      border-radius: 4px;
-      background: rgba(255,255,255,0.06);
+    .platform-preview-inner > img {
       display: block;
-    }
-    .browser-content { display: block; line-height: 0; background: #0d0f1a; }
-    .browser-content img {
       width: 100%;
-      max-height: 480px;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-    /* Fade the bottom of the screenshot into the dark gradient */
-    .browser-frame::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 120px;
-      background: linear-gradient(to top, #0d0f1a, transparent);
-      pointer-events: none;
+      height: auto;
+      border-radius: 14px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.14),
+        0 2px 4px rgba(0,0,0,0.06),
+        0 12px 28px rgba(0,0,0,0.12),
+        0 28px 64px rgba(0,0,0,0.2),
+        0 48px 100px rgba(0,0,0,0.28),
+        0 0 72px rgba(220,39,39,0.07);
     }
 
     /* ── CAPABILITY CARD THUMBNAIL ── */
@@ -626,12 +584,77 @@
       z-index: 1;
       position: relative;
     }
+    .cap-thumb--photo {
+      padding: 0;
+      display: block;
+    }
+    .cap-thumb--photo::before {
+      display: none;
+    }
+    .cap-thumb--photo .cap-thumb-label {
+      display: none;
+    }
+    .cap-thumb--photo img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border-radius: 7px;
+      position: relative;
+      z-index: 1;
+    }
+    /* Photo thumbs (e.g. Delivery): full-bleed, flush top, taller than default placeholder */
+    .cap-card:has(> .cap-thumb--photo:first-child) {
+      padding: 0 32px 32px;
+    }
+    .cap-card:has(> .cap-thumb--photo:first-child) > .cap-thumb--photo {
+      margin-left: -32px;
+      margin-right: -32px;
+      width: calc(100% + 64px);
+      height: 220px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 0;
+    }
+    .cap-card:has(> .cap-thumb--photo:first-child) > .cap-thumb--photo img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      /* Vertical % crops window chrome (red + dark title bar) off the top */
+      object-position: 22% 10%;
+      border-radius: 0;
+      border-top-left-radius: 13px;
+      border-top-right-radius: 13px;
+      transform: translateY(-18px) scale(1.22);
+      transform-origin: top left;
+    }
+    /* Control & Governance: Logs-CloseUp — same idea, tuned for lower zoom */
+    .cap-card--governance-thumb:has(> .cap-thumb--photo:first-child) > .cap-thumb--photo img {
+      transform: translateY(-2px) scale(1.06);
+      object-position: 30% 16%;
+    }
+    /* Delivery: Analytics-CloseUp1 — slightly zoomed out vs other caps; modest vertical crop */
+    .cap-card--delivery-thumb:has(> .cap-thumb--photo:first-child) > .cap-thumb--photo img {
+      transform: translateY(-2px) scale(1.1);
+      object-position: 22% 14%;
+    }
+    /* Integration & API: Integration-CloseUp — same 220px strip as other caps; overflow clips */
+    .cap-card--integration-thumb:has(> .cap-thumb--photo:first-child) > .cap-thumb--photo img {
+      transform: translateY(-6px) scale(1.08);
+      object-position: 22% 16%;
+    }
+    /* Deployment & Infrastructure: same 220px strip; crop tuned for diagram + bottom bar */
+    .cap-card--deployment-thumb:has(> .cap-thumb--photo:first-child) > .cap-thumb--photo img {
+      transform: translateY(-6px) scale(1.04);
+      transform-origin: top left;
+      object-position: 50% 40%;
+    }
 
     /* Mobile overrides */
     @media (max-width: 768px) {
-      .platform-preview { padding: 40px 20px 0; margin-top: 0 !important; }
-      .browser-content img { max-height: 280px; }
-      .browser-actions { display: none; }
+      .platform-preview { padding: 0 20px 0; margin-top: 0 !important; }
     }
 
     /* ── PLATFORM CERT STRIP (below browser frame) ── */
@@ -947,9 +970,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .hero { padding: 56px 24px 72px; }
+      .hero { padding: 64px 24px 160px; }
       .hero h1 { font-size: 36px; }
-      .platform-preview { margin-top: 0; }
       .section, .section-alt { padding: 56px 24px; }
       .value-strip-inner { grid-template-columns: 1fr 1fr; }
       .channel-grid { grid-template-columns: 1fr 1fr; }
@@ -1003,9 +1025,9 @@
       }
 
       /* Hero */
-      .hero { padding: 48px 20px; }
+      .hero { padding: 48px 20px 40px; }
       .hero h1 { font-size: 28px; }
-      .hero-sub { font-size: 15px; }
+      .hero-sub { font-size: 15px; margin-bottom: 40px; }
       .hero-ctas { flex-direction: column; align-items: stretch; }
       .hero-ctas .btn-primary, .hero-ctas .btn-ghost { text-align: center; }
 
@@ -1126,7 +1148,7 @@
     <div class="hero-breadcrumb">
       <a href="/">Kaptea</a> <span>→</span> Platform
     </div>
-    <img src="pronto-logo.svg" alt="Pronto" class="hero-logo">
+    <img src="img/brand/pronto-logo.svg" alt="Pronto" class="hero-logo">
     <h1>When it can't wait,<br><em>Pronto delivers.</em></h1>
     <p class="hero-sub">The enterprise communications platform built for regulated industries. Carrier-grade infrastructure, compliance built in, full operational control - without waiting on engineering.</p>
     <div class="hero-ctas">
@@ -1137,29 +1159,17 @@
   </div>
 </section>
 <!-- ─────────────────────────────────────────────
-     PLATFORM PREVIEW - Browser mockup, peeks up from hero
+     PLATFORM PREVIEW — Pronto campaign / email analytics screenshot
 ───────────────────────────────────────────────── -->
 <div class="platform-preview" role="complementary" aria-label="Pronto platform screenshot">
   <div class="platform-preview-inner">
-    <div class="browser-frame" role="img" aria-label="Pronto campaign analytics dashboard">
-      <div class="browser-chrome">
-        <div class="browser-dots">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="browser-url">app.kaptea.com / pronto / campaigns / analytics</div>
-        <div class="browser-actions">
-          <span></span><span></span>
-        </div>
-      </div>
-      <div class="browser-content">
-        <img
-          src="Pronto-Email-Campaign-Detail.jpg"
-          width="1080" height="640"
-          alt="Pronto Campaign Analytics: delivery rates, engagement metrics, and channel performance in one view"
-          loading="lazy"
-        />
-      </div>
-    </div>
+    <img
+      src="img/illustrations/EmailDetailsScreen.png"
+      width="3456" height="2168"
+      alt="Pronto campaign analytics: performance overview, delivery metrics, and email recipients breakdown"
+      fetchpriority="high"
+      decoding="async"
+    />
     <div class="platform-certs" role="list" aria-label="Security certifications and partnerships">
       <div class="platform-cert-item" role="listitem">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1406,7 +1416,10 @@
 
       <!-- Omni-Channel Communications -->
       <a href="omni-channel-communications" class="cap-card">
-        <div class="cap-thumb" aria-hidden="true"><span class="cap-thumb-label">Screenshot - Unified Inbox</span></div>
+        <div class="cap-thumb cap-thumb--photo" aria-hidden="true">
+          <img src="img/illustrations/Inbox-CloseUp.png" width="1920" height="1440" alt="" />
+          <span class="cap-thumb-label">Screenshot - Unified Inbox</span>
+        </div>
         <div class="cap-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         </div>
@@ -1422,8 +1435,11 @@
       </a>
 
       <!-- Control & Governance -->
-      <a href="#" class="cap-card">
-        <div class="cap-thumb" aria-hidden="true"><span class="cap-thumb-label">Screenshot - Governance & Roles</span></div>
+      <a href="#" class="cap-card cap-card--governance-thumb">
+        <div class="cap-thumb cap-thumb--photo" aria-hidden="true">
+          <img src="img/illustrations/Logs-CloseUp.png" width="1920" height="1440" alt="" />
+          <span class="cap-thumb-label">Screenshot - Governance & Roles</span>
+        </div>
         <div class="cap-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
@@ -1439,8 +1455,11 @@
       </a>
 
       <!-- Delivery & Resilience -->
-      <a href="#" class="cap-card">
-        <div class="cap-thumb" aria-hidden="true"><span class="cap-thumb-label">Screenshot - Delivery Analytics</span></div>
+      <a href="#" class="cap-card cap-card--delivery-thumb">
+        <div class="cap-thumb cap-thumb--photo" aria-hidden="true">
+          <img src="img/illustrations/Analytics-CloseUp1.png" width="1920" height="1440" alt="" />
+          <span class="cap-thumb-label">Screenshot - Delivery Analytics</span>
+        </div>
         <div class="cap-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
@@ -1456,8 +1475,11 @@
       </a>
 
       <!-- Integration & API -->
-      <a href="#" class="cap-card">
-        <div class="cap-thumb" aria-hidden="true"><span class="cap-thumb-label">Screenshot - Integrations Hub</span></div>
+      <a href="#" class="cap-card cap-card--integration-thumb">
+        <div class="cap-thumb cap-thumb--photo" aria-hidden="true">
+          <img src="img/illustrations/Integration-CloseUp.png" width="1920" height="1440" alt="" />
+          <span class="cap-thumb-label">Screenshot - Integrations Hub</span>
+        </div>
         <div class="cap-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
         </div>
@@ -1473,13 +1495,16 @@
       </a>
 
       <!-- Deployment & Infrastructure -->
-      <a href="#" class="cap-card">
-        <div class="cap-thumb" aria-hidden="true"><span class="cap-thumb-label">Screenshot - Instance Config</span></div>
+      <a href="#" class="cap-card cap-card--deployment-thumb">
+        <div class="cap-thumb cap-thumb--photo" aria-hidden="true">
+          <img src="img/illustrations/Deployment-CloseUp.png" width="1920" height="1440" alt="" />
+          <span class="cap-thumb-label">Screenshot - Instance Config</span>
+        </div>
         <div class="cap-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
         </div>
         <h3>Deployment &amp; Infrastructure</h3>
-        <p>Dedicated single-tenant instances deployed on AWS or Azure, with EU and US data residency options and rapid go-live.</p>
+        <p>Dedicated single-tenant instances deployed in days, with EU, UK and US data residency with rapid go-live.</p>
         <ul class="cap-features">
           <li>Dedicated instance - not multi-tenant</li>
           <li>Connect your own Twilio or Telnyx token</li>
@@ -1491,7 +1516,10 @@
 
       <!-- AI & Intelligence -->
       <a href="#" class="cap-card">
-        <div class="cap-thumb" aria-hidden="true"><span class="cap-thumb-label">Screenshot - AI Copilot & Insights</span></div>
+        <div class="cap-thumb cap-thumb--photo" aria-hidden="true">
+          <img src="img/illustrations/AI-CloseUp.png" width="1920" height="1440" alt="" />
+          <span class="cap-thumb-label">Screenshot - AI Copilot & Insights</span>
+        </div>
         <div class="cap-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 014 4v2h2a2 2 0 012 2v8a4 4 0 01-4 4H8a4 4 0 01-4-4v-8a2 2 0 012-2h2V6a4 4 0 014-4z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>
         </div>

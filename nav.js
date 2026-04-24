@@ -2,7 +2,7 @@
 // Edit this file once to update the nav across all pages.
 (function () {
   const html = `<nav role="navigation" aria-label="Main navigation">
-  <a href="/" class="nav-logo"><img src="kaptea-logo.svg" alt="Kaptea" height="38" style="display:block;" /></a>
+  <a href="/" class="nav-logo"><img src="img/brand/kaptea-logo.svg" alt="Kaptea" height="38" style="display:block;" /></a>
 
   <div class="nav-links">
 
@@ -14,7 +14,7 @@
 
           <!-- COL 1: Pronto logo + first 3 sub-categories -->
           <div class="mega-left">
-            <div class="mega-panel-label"><a href="pronto" class="pronto-logo-link"><img src="pronto-logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
+            <div class="mega-panel-label"><a href="pronto" class="pronto-logo-link"><img src="img/brand/pronto-logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
 
             <div class="mega-section">
               <div class="mega-section-title"><a href="omni-channel-communications">Omni-Channel Communications</a></div>
@@ -97,7 +97,7 @@
 
               <div class="mega-carriers">
                 <a href="twilio-partner" class="carrier-card" style="text-decoration:none;display:block;">
-                  <img src="twilio-logo.png" alt="Twilio" class="carrier-logo">
+                  <img src="img/brand/twilio-logo.png" alt="Twilio" class="carrier-logo">
                   <div class="carrier-desc">The world's leading cloud communications platform — messaging, voice, video, Flex and Verify — fully operationalised through Pronto.</div>
                 </a>
                 <div class="carrier-more">+ more carriers &amp; integrations →</div>

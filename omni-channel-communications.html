@@ -20,15 +20,15 @@
   <meta property="og:description" content="Orchestrate SMS, WhatsApp, Voice, Email, RCS, and social messaging through one governed platform. Two-way messaging, cross-channel failover, and full delivery visibility." />
   <meta property="og:url" content="https://kaptea.vercel.app/omni-channel-communications.html" />
   <meta property="og:site_name" content="Kaptea" />
-  <meta property="og:image" content="https://kaptea.vercel.app/Pronto-Email-Campaign-Detail.jpg" />
-  <meta property="og:image:width" content="1080" />
-  <meta property="og:image:height" content="640" />
+  <meta property="og:image" content="https://kaptea.vercel.app/img/illustrations/Inbox-CloseUp.png" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1440" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Omni-Channel Communications - Pronto | Kaptea" />
   <meta name="twitter:description" content="Orchestrate SMS, WhatsApp, Voice, Email, RCS, and social messaging through one governed platform." />
-  <meta name="twitter:image" content="https://kaptea.vercel.app/Pronto-Email-Campaign-Detail.jpg" />
+  <meta name="twitter:image" content="https://kaptea.vercel.app/img/illustrations/Inbox-CloseUp.png" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23dc2727'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='20' font-weight='700' fill='white'%3EK%3C/text%3E%3C/svg%3E" />
@@ -112,18 +112,60 @@
 
     /* ── HERO ── */
     .hero {
-      background: #faf8f5;
+      position: relative;
       color: #131521;
       text-align: left;
-      padding: 80px 40px 72px;
+      padding: 80px 40px 88px;
+      background-color: #faf8f5;
+      overflow: hidden;
+    }
+    /* Photo layer: shift right by 50vw; left fade blends into page bg near copy */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(
+          90deg,
+          #faf8f5 0%,
+          rgba(250, 248, 245, 0.9) 5%,
+          rgba(250, 248, 245, 0.68) 13%,
+          rgba(250, 248, 245, 0.38) 24%,
+          rgba(250, 248, 245, 0.12) 36%,
+          transparent 50%
+        ),
+        url(img/illustrations/Inbox-CloseUp.png);
+      background-size: 100% 100%, cover;
+      background-position: 0 0, 100% 42%;
+      background-repeat: no-repeat, no-repeat;
+      transform: translateX(50vw);
+      pointer-events: none;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      /* Scrim only behind copy — leave mid/right of hero clear so chats read */
+      background: linear-gradient(
+        90deg,
+        #faf8f5 0%,
+        rgba(250, 248, 245, 0.98) 22%,
+        rgba(250, 248, 245, 0.88) 30%,
+        rgba(250, 248, 245, 0.35) 38%,
+        transparent 46%
+      );
+      pointer-events: none;
     }
     .hero-inner {
+      position: relative;
+      z-index: 2;
       max-width: 1080px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
+    }
+    .hero-inner > .hero-copy {
+      max-width: 560px;
     }
     .hero-breadcrumb {
       font-size: 12px;
@@ -147,7 +189,11 @@
       margin-bottom: 20px;
       color: #131521;
     }
-    .hero h1 span { color: #dc2727; }
+    .hero h1 .hero-accent { color: #dc2727; }
+    .hero h1 .hero-title-line {
+      display: inline-block;
+      white-space: nowrap;
+    }
     .hero .hero-sub {
       font-size: 17px;
       color: #555555;
@@ -221,16 +267,6 @@
       transition: border-color 0.15s ease, color 0.15s ease;
     }
     .btn-ghost:hover { border-color: #131521; color: #131521; }
-    .hero-visual {
-      background: #f0eeeb;
-      border-radius: 12px;
-      min-height: 340px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #e5e2de;
-      overflow: hidden;
-    }
 
     /* ── PAIN STRIP ── */
     .pain-strip {
@@ -335,6 +371,17 @@
       padding: 32px;
     }
     .how-visual span { font-size: 11px; color: #9ca3af; letter-spacing: 0.06em; text-transform: uppercase; text-align: center; }
+    .how-visual--screenshot {
+      padding: 0;
+      display: block;
+      overflow: hidden;
+      min-height: 0;
+    }
+    .how-visual--screenshot img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
     /* ── METRICS STRIP ── */
     .metrics-strip { background: #131521; padding: 56px 40px; }
@@ -552,8 +599,22 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .hero { padding: 56px 24px 48px; }
-      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero {
+        padding: 56px 24px 64px;
+      }
+      .hero::after {
+        transform: translateX(42vw);
+        background-position: 0 0, 100% 40%;
+      }
+      .hero::before {
+        background: linear-gradient(
+          90deg,
+          rgba(250, 248, 245, 0.99) 0%,
+          rgba(250, 248, 245, 0.92) 28%,
+          rgba(250, 248, 245, 0.55) 40%,
+          transparent 52%
+        );
+      }
       .pain-strip { padding: 48px 24px; }
       .pain-grid { grid-template-columns: 1fr 1fr; }
       .how-section { padding: 56px 24px; }
@@ -595,11 +656,24 @@
       }
       .hamburger span { display: block; width: 22px; height: 2px; background: #131521; transition: all 0.3s; }
 
-      .hero { padding: 40px 20px 32px; }
-      .hero-inner { grid-template-columns: 1fr; gap: 24px; }
-      .hero h1 { font-size: 30px; }
+      .hero {
+        padding: 40px 20px 48px;
+      }
+      .hero::after {
+        transform: translateX(28vw);
+        background-position: 0 0, 96% 38%;
+      }
+      .hero::before {
+        background: linear-gradient(
+          90deg,
+          rgba(250, 248, 245, 0.98) 0%,
+          rgba(250, 248, 245, 0.93) 52%,
+          rgba(250, 248, 245, 0.45) 72%,
+          transparent 88%
+        );
+      }
+      .hero h1 { font-size: 28px; }
       .hero .hero-sub { font-size: 15px; }
-      .hero-visual { min-height: 200px; }
       .hero-ctas { flex-direction: column; align-items: stretch; }
       .hero-ctas a { text-align: center; justify-content: center; }
 
@@ -653,9 +727,9 @@
 <!-- ═══════════════════════════════
      HERO
 ═══════════════════════════════ -->
-<section class="hero">
+<section class="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
-    <div>
+    <div class="hero-copy">
       <div class="hero-breadcrumb">
         <span>Platform</span>
         <span class="bc-sep">→</span>
@@ -663,7 +737,7 @@
         <span class="bc-sep">→</span>
         <span class="bc-current">Omni-Channel Communications</span>
       </div>
-      <h1>Every channel.<br><span>One platform.</span><br>Zero dropped messages.</h1>
+      <h1 id="hero-heading"><span class="hero-title-line">Every channel. <span class="hero-accent">One platform.</span></span><br>Zero dropped messages.</h1>
       <p class="hero-sub">Orchestrate SMS, WhatsApp, Voice, Email, RCS, and social messaging from a single governed interface - with built-in failover, two-way messaging, and full delivery visibility across every conversation.</p>
       <div class="hero-channels">
         <a href="sms-rcs" class="channel-pill">
@@ -695,9 +769,6 @@
         <a href="demo" class="btn-primary">Book a Demo</a>
         <a href="pronto" class="btn-ghost">Explore Pronto</a>
       </div>
-    </div>
-    <div class="hero-visual">
-      <img src="v3-dashboard-browser.svg" alt="Pronto omnichannel dashboard showing SMS, email and WhatsApp campaign performance in a unified view" style="width:100%;height:auto;display:block;" loading="lazy">
     </div>
   </div>
 </section>
@@ -763,9 +834,8 @@
           <li>Social messaging via Facebook Messenger and Instagram Direct</li>
         </ul>
       </div>
-      <div class="how-visual">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        <span>Screenshot to be supplied</span>
+      <div class="how-visual how-visual--screenshot">
+        <img src="img/illustrations/HomeScreen.png" width="1920" height="1080" alt="Pronto home screen: all channels in one interface" loading="lazy" />
       </div>
     </div>
 
