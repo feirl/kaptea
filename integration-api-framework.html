@@ -232,8 +232,35 @@ img { max-width: 100%; display: block; }
       box-shadow: 0 4px 16px rgba(0,0,0,0.05);
       transform: translateY(-1px);
     }
+    .int-card-logo {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .int-card-logo img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .int-card-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      min-height: 44px;
+      margin-bottom: 12px;
+    }
+    .int-card-logos img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
     .int-card h4 { font-size: 14px; font-weight: 700; color: #131521; margin-bottom: 4px; }
-    .int-card p { font-size: 12px; color: #888888; }
+    .int-card p { font-size: 12px; color: #888888; line-height: 1.45; }
 
     
 
@@ -549,68 +576,89 @@ img { max-width: 100%; display: block; }
           </ul>
         </div>
         <div class="how-visual" style="display:block;padding:24px;">
+          <!-- Brand marks: Simple Icons (CC0) in img/integrations/; Hivebrite + Webhook use Kaptea placeholders -->
           <div class="int-grid">
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/salesforce.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Salesforce</h4>
         <p>Bidirectional CRM sync</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/dynamics365.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Microsoft Dynamics 365</h4>
         <p>Bidirectional CRM sync</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/hubspot.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>HubSpot</h4>
         <p>Bidirectional CRM sync</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/zoho.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Zoho CRM</h4>
         <p>Bidirectional CRM sync</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/sap.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>SAP</h4>
         <p>Bidirectional CRM sync</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/hivebrite.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Hivebrite</h4>
         <p>Member management</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/microsoftteams.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Microsoft Teams</h4>
         <p>Channel messaging</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/slack.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Slack</h4>
         <p>Channel notifications</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/webhook.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Webhook</h4>
         <p>Event destinations</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/amazonaws.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>AWS SQS / SNS</h4>
         <p>Event streaming</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/apachekafka.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Kafka</h4>
         <p>Event streaming</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/datadog.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Datadog</h4>
         <p>Monitoring &amp; alerting</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/pagerduty.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>PagerDuty</h4>
         <p>Incident management</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/discord.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Discord</h4>
         <p>Notifications</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logo"><img src="img/integrations/googlechat.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></div>
         <h4>Google Chat</h4>
         <p>Notifications</p>
       </div>
       <div class="int-card">
+        <div class="int-card-logos" aria-hidden="true">
+          <img src="img/integrations/okta.svg" alt="" width="28" height="28" loading="lazy" decoding="async">
+          <img src="img/integrations/microsoftazure.svg" alt="" width="28" height="28" loading="lazy" decoding="async">
+          <img src="img/integrations/google.svg" alt="" width="28" height="28" loading="lazy" decoding="async">
+        </div>
         <h4>Enterprise SSO</h4>
         <p>Okta, Azure AD, Google</p>
       </div>

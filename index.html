@@ -265,6 +265,11 @@
     /* ── SECTION WRAPPERS ── */
     .section { padding: 88px 40px; }
     .section-alt { background: #faf8f5; }
+    .integrations-band.section-alt { background: #ffffff; }
+    .integrations-band .section-label,
+    .integrations-band .section-title {
+      text-align: center;
+    }
     .section-dark { background: #faf8f5; color: #131521; }
     .inner { max-width: 1160px; margin: 0 auto; }
 .section-label-light { color: #dc2727; }
@@ -691,6 +696,27 @@
     .cs-stat-label { font-size: 13px; color: #555555; line-height: 1.5; }
 
     /* ── INTEGRATIONS ── */
+    .integrations-band .integration-section-sub {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      text-align: left;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+    }
+    .integrations-band .integration-section-sub > img {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      margin-top: 3px;
+      object-fit: contain;
+    }
+    .integrations-band .integration-section-sub > span {
+      flex: 1;
+      min-width: 0;
+    }
     .integration-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -716,8 +742,34 @@
     .int-logo {
       width: 48px;
       height: 48px;
-      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 8px;
+      background: #f9fafb;
+      border: 1px solid #f3f4f6;
+    }
+    .int-logo img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+    .int-logo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 4px;
+      border-radius: 8px;
+      background: #f9fafb;
+      border: 1px solid #f3f4f6;
+    }
+    .int-logo-row img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
     }
     .int-name { font-size: 13px; font-weight: 600; color: #374151; }
     .int-type { font-size: 11px; color: #9ca3af; }
@@ -1611,80 +1663,87 @@
   </div>
 </section>
 
-<section class="section section-alt">
+<section class="section section-alt integrations-band">
   <div class="inner">
     <div class="section-label">Integrations</div>
     <div class="section-title">Works with the systems<br>you already run.</div>
-    <div class="section-sub">Open APIs, event-driven webhooks and native CRM sync, built for enterprise integration complexity. No rip-and-replace required.</div>
+    <div class="section-sub integration-section-sub">
+      <img src="img/integrations/webhook.svg" alt="" width="28" height="28" loading="lazy" decoding="async">
+      <span>Open APIs, event-driven webhooks and native CRM sync, built for enterprise integration complexity. No rip-and-replace required.</span>
+    </div>
 
     <div class="integration-grid">
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/salesforce.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">Salesforce</div>
         <div class="int-type">Bidirectional CRM</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/dynamics365.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">Microsoft Dynamics 365</div>
         <div class="int-type">Bidirectional CRM</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/hubspot.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">HubSpot</div>
         <div class="int-type">Bidirectional CRM</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/sap.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">SAP</div>
         <div class="int-type">Bidirectional CRM</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/zoho.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">Zoho CRM</div>
         <div class="int-type">Bidirectional CRM</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/microsoftteams.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">Microsoft Teams</div>
         <div class="int-type">Collaboration</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/slack.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">Slack</div>
         <div class="int-type">Collaboration</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo-row" aria-hidden="true">
+          <img src="img/integrations/okta.svg" alt="" width="24" height="24" loading="lazy" decoding="async">
+          <img src="img/integrations/microsoftazure.svg" alt="" width="24" height="24" loading="lazy" decoding="async">
+          <img src="img/integrations/google.svg" alt="" width="24" height="24" loading="lazy" decoding="async">
+        </div>
         <div class="int-name">Enterprise SSO</div>
         <div class="int-type">Okta · Azure AD · Google</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/apachekafka.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">Apache Kafka</div>
         <div class="int-type">Event Streaming</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/datadog.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">Datadog</div>
         <div class="int-type">Monitoring &amp; Alerting</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/pagerduty.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">PagerDuty</div>
         <div class="int-type">Incident Management</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/amazonaws.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">AWS SQS / SNS</div>
         <div class="int-type">Event Streaming</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/logos/twilio-dark.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">Twilio</div>
         <div class="int-type">Carrier Infrastructure</div>
       </div>
       <div class="integration-card">
-        <div class="int-logo"></div>
+        <div class="int-logo"><img src="img/integrations/telnyx.svg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
         <div class="int-name">Telnyx</div>
         <div class="int-type">Carrier Infrastructure</div>
       </div>
