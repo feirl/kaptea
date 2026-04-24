@@ -1080,6 +1080,17 @@
       /* Platform Preview, mobile */
       .platform-preview { padding: 0 20px 0; margin-top: 0 !important; }
       .browser-content img { max-height: 320px; }
+      .hero-showcase-tabs {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 6px;
+        margin-bottom: 14px;
+        scrollbar-width: thin;
+      }
+      .hero-showcase-tab { flex-shrink: 0; }
+      .hero-showcase-slide img { max-height: 48vh; }
       .browser-actions { display: none; }
       .platform-certs { gap: 8px 0; padding: 28px 12px 48px; }
       .platform-cert-item { padding: 6px 14px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; justify-content: center; }
@@ -1107,10 +1118,54 @@
         max-width: 1230px;
       }
     }
-    .platform-preview-inner > img {
-      display: block;
+    /* Hero / platform image showcase (tab icons → sliding panels, Superchat-style) */
+    .hero-showcase {
+      text-align: center;
+    }
+    .hero-showcase-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 auto 20px;
+      max-width: 100%;
+      padding: 0 4px;
+    }
+    .hero-showcase-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(19, 21, 33, 0.12);
+      background: rgba(255, 255, 255, 0.92);
+      color: #374151;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .hero-showcase-tab:hover {
+      border-color: rgba(220, 39, 39, 0.35);
+      color: #131521;
+    }
+    .hero-showcase-tab[aria-selected="true"] {
+      border-color: #dc2727;
+      background: #fff;
+      color: #131521;
+      box-shadow: 0 0 0 1px rgba(220, 39, 39, 0.2), 0 4px 14px rgba(220, 39, 39, 0.12);
+    }
+    .hero-showcase-tab svg {
+      flex-shrink: 0;
+      color: #9ca3af;
+      transition: color 0.2s ease;
+    }
+    .hero-showcase-tab[aria-selected="true"] svg { color: #dc2727; }
+    .hero-showcase-viewport {
+      overflow: hidden;
       width: 100%;
-      height: auto;
       border-radius: 14px;
       box-shadow:
         0 0 0 1px rgba(255,255,255,0.14),
@@ -1119,6 +1174,30 @@
         0 28px 64px rgba(0,0,0,0.2),
         0 48px 100px rgba(0,0,0,0.28),
         0 0 72px rgba(220,39,39,0.07);
+      line-height: 0;
+    }
+    .hero-showcase-track {
+      display: flex;
+      width: calc(var(--hs-count) * 100%);
+      transform: translateX(calc(-100% * var(--hs-slide) / var(--hs-count)));
+      transition: transform 0.55s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-showcase-track { transition-duration: 0.01ms; }
+    }
+    .hero-showcase-slide {
+      flex: 0 0 calc(100% / var(--hs-count));
+      width: calc(100% / var(--hs-count));
+      box-sizing: border-box;
+    }
+    .hero-showcase-slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: min(62vh, 620px);
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 14px;
     }
     .platform-eyebrow { display: none; }
     .browser-frame {
@@ -1257,6 +1336,80 @@
     });
   }
   document.addEventListener('DOMContentLoaded', initFAQ);
+
+  function initHeroShowcase() {
+    var root = document.querySelector('[data-hero-showcase]');
+    if (!root) return;
+    var track = root.querySelector('.hero-showcase-track');
+    var tabs = root.querySelectorAll('.hero-showcase-tab');
+    if (!track || !tabs.length) return;
+    var count = tabs.length;
+    var slide = 0;
+    var timer = null;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var panels = root.querySelectorAll('.hero-showcase-slide');
+
+    function setSlide(i) {
+      slide = ((i % count) + count) % count;
+      track.style.setProperty('--hs-slide', String(slide));
+      tabs.forEach(function (t, idx) {
+        var on = idx === slide;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+      });
+      panels.forEach(function (p, idx) {
+        p.setAttribute('aria-hidden', idx === slide ? 'false' : 'true');
+      });
+    }
+
+    function next() { setSlide(slide + 1); }
+
+    function startAuto() {
+      if (reduceMotion) return;
+      stopAuto();
+      timer = window.setInterval(next, 6000);
+    }
+    function stopAuto() {
+      if (timer) { window.clearInterval(timer); timer = null; }
+    }
+
+    tabs.forEach(function (tab, idx) {
+      tab.addEventListener('click', function () {
+        setSlide(idx);
+        stopAuto();
+        startAuto();
+      });
+    });
+
+    var tablist = root.querySelector('.hero-showcase-tabs');
+    if (tablist) {
+      tablist.addEventListener('keydown', function (e) {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        if (e.key === 'ArrowRight') setSlide(slide + 1);
+        else setSlide(slide - 1);
+        stopAuto();
+        startAuto();
+      });
+    }
+
+    root.addEventListener('mouseenter', stopAuto);
+    root.addEventListener('mouseleave', startAuto);
+    root.addEventListener('focusin', stopAuto);
+    root.addEventListener('focusout', function (e) {
+      if (!root.contains(e.relatedTarget)) startAuto();
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stopAuto();
+      else startAuto();
+    });
+
+    setSlide(0);
+    startAuto();
+  }
+  document.addEventListener('DOMContentLoaded', initHeroShowcase);
 </script>
 
 <main id="main-content">
@@ -1273,16 +1426,73 @@
 
 </section>
 
-<!-- Platform Preview -->
-<div class="platform-preview" role="complementary" aria-label="Platform screenshot">
+<!-- Platform Preview (icon tabs → sliding screenshots, inspired by https://www.superchat.de/ product strip) -->
+<div class="platform-preview" role="complementary" aria-label="Pronto product preview">
   <div class="platform-preview-inner">
-    <img
-      src="img/illustrations/HomeScreen.png"
-      width="1024" height="642"
-      alt="Pronto unified inbox: conversations, rich messages, and contact details in one workspace"
-      fetchpriority="high"
-      decoding="async"
-    />
+    <div class="hero-showcase" data-hero-showcase style="--hs-count: 8;">
+      <div class="hero-showcase-tabs" role="tablist" aria-label="Pronto product stories">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="true" id="hs-tab-0" aria-controls="hs-panel-0" aria-label="Inbox — core experience" data-slide="0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+          Inbox
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-1" aria-controls="hs-panel-1" aria-label="Campaigns — outbound power" data-slide="1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Campaigns
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-2" aria-controls="hs-panel-2" aria-label="Channels — omni-channel story" data-slide="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7"/><path d="M17 12H7"/></svg>
+          Channels
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-3" aria-controls="hs-panel-3" aria-label="Automate — flows and automation" data-slide="3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Automate
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-4" aria-controls="hs-panel-4" aria-label="Analytics — insight" data-slide="4">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          Analytics
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-5" aria-controls="hs-panel-5" aria-label="Delivery — reliability and zero dropped messages" data-slide="5">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+          Delivery
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-6" aria-controls="hs-panel-6" aria-label="Integrations — ecosystem" data-slide="6">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51 8.59 10.49"/></svg>
+          Integrations
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-7" aria-controls="hs-panel-7" aria-label="Team — people using Pronto" data-slide="7">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Team
+        </button>
+      </div>
+      <div class="hero-showcase-viewport" aria-live="polite">
+        <div class="hero-showcase-track" style="--hs-slide: 0;">
+          <figure class="hero-showcase-slide" id="hs-panel-0" role="tabpanel" aria-labelledby="hs-tab-0" aria-hidden="false">
+            <img src="img/illustrations/HomeScreen.png" width="1024" height="642" alt="Pronto inbox: core experience — unified conversations and contacts" fetchpriority="high" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-1" role="tabpanel" aria-labelledby="hs-tab-1" aria-hidden="true">
+            <img src="img/illustrations/Pronto-Email-Campaign-Detail.jpg" width="1080" height="640" alt="Outbound campaigns: email and cross-channel sends in Pronto" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-2" role="tabpanel" aria-labelledby="hs-tab-2" aria-hidden="true">
+            <img src="img/illustrations/Inbox-CloseUp.png" width="1920" height="1440" alt="Omni-channel conversations across SMS, chat, and voice in one thread" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-3" role="tabpanel" aria-labelledby="hs-tab-3" aria-hidden="true">
+            <img src="img/illustrations/AI-CloseUp.png" width="1920" height="1440" alt="Automation and AI-assisted workflows in Pronto" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-4" role="tabpanel" aria-labelledby="hs-tab-4" aria-hidden="true">
+            <img src="img/illustrations/Analytics-CloseUp1.png" width="1920" height="1440" alt="Analytics and delivery insight in Pronto" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-5" role="tabpanel" aria-labelledby="hs-tab-5" aria-hidden="true">
+            <img src="img/illustrations/Logs-CloseUp.png" width="1920" height="1440" alt="Delivery and audit visibility: timelines, status, and nothing dropped silently" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-6" role="tabpanel" aria-labelledby="hs-tab-6" aria-hidden="true">
+            <img src="img/illustrations/Integration-CloseUp.png" width="1920" height="1440" alt="Integrations: CRM and ecosystem connectors in Pronto" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-7" role="tabpanel" aria-labelledby="hs-tab-7" aria-hidden="true">
+            <img src="img/illustrations/v3-hero-homepage.png" width="4200" height="2853" alt="Teams using Pronto in the browser — campaigns, inbox, and controls" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </div>
     <div class="platform-certs" role="list" aria-label="Security certifications and partnerships">
       <div class="platform-cert-item" role="listitem">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
