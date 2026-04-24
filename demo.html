@@ -58,7 +58,7 @@
 
   <style>
     nav {
-      background: #ffffff;
+      background: var(--kaptea-white);
       padding: 0 40px;
       display: flex;
       align-items: center;
@@ -67,10 +67,10 @@
       position: sticky;
       top: 0;
       z-index: 200;
-      border-bottom: 1px solid #eeebe6;
+      border-bottom: 1px solid var(--kaptea-border);
     }
     .nav-links a {
-      color: #555555;
+      color: var(--kaptea-tagline-grey);
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
@@ -82,7 +82,7 @@
       transition: color 0.15s;
     }
     .nav-cta {
-      background: #dc2727;
+      background: var(--kaptea-red);
       color: white !important;
       padding: 8px 20px;
       border-radius: 6px;
@@ -111,9 +111,9 @@
 
     .demo-label {
       display: inline-block;
-      background: rgba(244,49,48,0.08);
-      color: #dc2727;
-      border: 1px solid rgba(244,49,48,0.2);
+      background: rgba(220,39,39,0.08);
+      color: var(--kaptea-red);
+      border: 1px solid rgba(220,39,39,0.2);
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -127,14 +127,14 @@
       font-size: 36px;
       font-family: 'Manrope', sans-serif; font-weight: 700;
       line-height: 1.2;
-      color: #131521;
+      color: var(--kaptea-charcoal);
       margin-bottom: 16px;
     }
-    .demo-value h1 span { color: #dc2727; }
+    .demo-value h1 span { color: var(--kaptea-red); }
 
     .demo-value .subhead {
       font-size: 17px;
-      color: #555555;
+      color: var(--kaptea-tagline-grey);
       line-height: 1.6;
       margin-bottom: 32px;
       max-width: 480px;
@@ -149,7 +149,7 @@
       font-family: 'Manrope', sans-serif; font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      color: #9ca3af;
+      color: var(--kaptea-neutral-grey);
       margin-bottom: 16px;
     }
     .expect-list {
@@ -163,7 +163,7 @@
       align-items: flex-start;
       gap: 12px;
       font-size: 15px;
-      color: #374151;
+      color: var(--kaptea-charcoal);
       line-height: 1.5;
     }
     .expect-list li .icon {
@@ -171,7 +171,7 @@
       width: 20px;
       height: 20px;
       margin-top: 2px;
-      color: #dc2727;
+      color: var(--kaptea-red);
     }
 
     /* Proof points */
@@ -186,16 +186,16 @@
       align-items: center;
       gap: 8px;
       font-size: 14px;
-      color: #555555;
+      color: var(--kaptea-tagline-grey);
     }
     .proof-item strong {
-      color: #dc2727;
+      color: var(--kaptea-red);
       font-size: 18px;
     }
     .proof-item .icon-sm {
       width: 16px;
       height: 16px;
-      color: #dc2727;
+      color: var(--kaptea-red);
       flex-shrink: 0;
     }
 
@@ -206,20 +206,20 @@
       gap: 28px;
       flex-wrap: wrap;
       padding-top: 24px;
-      border-top: 1px solid #eeebe6;
+      border-top: 1px solid var(--kaptea-border);
     }
     .trust-badge {
       display: flex;
       align-items: center;
       gap: 8px;
       font-size: 13px;
-      color: #6b7280;
+      color: var(--kaptea-tagline-grey);
       font-weight: 500;
     }
     .trust-badge .badge-icon {
       width: 18px;
       height: 18px;
-      color: #dc2727;
+      color: var(--kaptea-red);
       flex-shrink: 0;
     }
 
@@ -238,12 +238,12 @@
     .booking-header h2 {
       font-size: 18px;
       font-family: 'Manrope', sans-serif; font-weight: 700;
-      color: #131521;
+      color: var(--kaptea-charcoal);
       margin-bottom: 4px;
     }
     .booking-header p {
       font-size: 14px;
-      color: #6b7280;
+      color: var(--kaptea-tagline-grey);
     }
     .calendly-container {
       min-height: 580px;
@@ -267,19 +267,19 @@
     .calendly-placeholder .cal-icon {
       width: 48px;
       height: 48px;
-      color: #d1d5db;
+      color: var(--kaptea-border);
       margin-bottom: 16px;
     }
     .calendly-placeholder p {
       font-size: 15px;
-      color: #6b7280;
+      color: var(--kaptea-tagline-grey);
       margin-bottom: 20px;
       max-width: 300px;
       line-height: 1.5;
     }
     .calendly-placeholder a {
       display: inline-block;
-      background: #dc2727;
+      background: var(--kaptea-red);
       color: white;
       padding: 12px 28px;
       border-radius: 8px;
@@ -288,7 +288,7 @@
       text-decoration: none;
       transition: background 0.15s;
     }
-    .calendly-placeholder a:hover { background: #c02222; }
+    .calendly-placeholder a:hover { background: var(--kaptea-red-hover); }
 
     /* ── BOTTOM: NO OBLIGATION STRIP ── */
     .reassurance {
@@ -297,7 +297,7 @@
       padding: 0 24px;
     }
     .reassurance-inner {
-      background: #fff;
+      background: var(--kaptea-white);
       border: 1px solid #e5e7eb;
       border-radius: 12px;
       padding: 24px 32px;
@@ -312,7 +312,7 @@
       align-items: center;
       gap: 10px;
       font-size: 14px;
-      color: #374151;
+      color: var(--kaptea-charcoal);
       font-weight: 500;
     }
     .reassurance-item .r-icon {
@@ -327,7 +327,7 @@
     @media (max-width: 768px) {
       .nav-links {
         display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
-        background: #131521; flex-direction: column; padding: 24px; gap: 0; z-index: 300; overflow-y: auto;
+        background: var(--kaptea-charcoal); flex-direction: column; padding: 24px; gap: 0; z-index: 300; overflow-y: auto;
       }
       .nav-links.open { display: flex; }
       .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 301; }
@@ -342,7 +342,7 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #0e1019;
+      background: var(--kaptea-bg-dark);
       padding: 64px 40px 32px;
       color: rgba(255,255,255,0.6);
       font-size: 13px;
@@ -417,7 +417,7 @@
     /* ── HOVER STATES (polish pass) ── */
     a { transition: color 0.15s ease; }
     .btn-primary { transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
-    .btn-primary:hover { box-shadow: 0 4px 12px rgba(244,49,48,0.3); transform: translateY(-1px); }
+    .btn-primary:hover { box-shadow: 0 4px 12px rgba(220,39,39,0.3); transform: translateY(-1px); }
     .btn-ghost { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
     .btn-ghost:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
     .btn-secondary { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
@@ -427,7 +427,7 @@
 <body>
 
 <!-- Skip navigation for accessibility -->
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:#dc2727;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:var(--kaptea-red);color: var(--kaptea-white);font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
 
 <script src="nav.js"></script>
 

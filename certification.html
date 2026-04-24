@@ -21,8 +21,8 @@
 
     /* ─── HERO ───────────────────────────────────────────────── */
     .cert-hero {
-      background: #131521;
-      color: #fff;
+      background: var(--kaptea-charcoal);
+      color: var(--kaptea-white);
       padding: 88px 40px 96px;
       text-align: center;
     }
@@ -35,7 +35,7 @@
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #dc2727;
+      color: var(--kaptea-red);
       margin-bottom: 20px;
     }
     .cert-hero h1 {
@@ -44,13 +44,13 @@
       font-weight: 800;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      color: #fff;
+      color: var(--kaptea-white);
       margin-bottom: 24px;
     }
-    .cert-hero h1 em { color: #dc2727; font-style: normal; }
+    .cert-hero h1 em { color: var(--kaptea-red); font-style: normal; }
     .cert-hero p {
       font-size: 18px;
-      color: #9ca3af;
+      color: var(--kaptea-neutral-grey);
       line-height: 1.7;
       max-width: 620px;
       margin: 0 auto 36px;
@@ -73,12 +73,12 @@
       align-items: center;
       gap: 7px;
     }
-    .cert-hero-badge svg { color: #dc2727; flex-shrink: 0; }
+    .cert-hero-badge svg { color: var(--kaptea-red); flex-shrink: 0; }
 
     /* ─── VERIFICATION STRIP ─────────────────────────────────── */
     .cert-verify-strip {
-      background: #fff;
-      border-bottom: 1px solid #eeebe6;
+      background: var(--kaptea-white);
+      border-bottom: 1px solid var(--kaptea-border);
       padding: 18px 40px;
     }
     .cert-verify-inner {
@@ -91,14 +91,14 @@
       color: #555;
     }
     .cert-verify-inner svg { color: #16a34a; flex-shrink: 0; }
-    .cert-verify-inner strong { color: #131521; }
-    .cert-verify-inner a { color: #dc2727; text-decoration: none; font-weight: 500; }
+    .cert-verify-inner strong { color: var(--kaptea-charcoal); }
+    .cert-verify-inner a { color: var(--kaptea-red); text-decoration: none; font-weight: 500; }
     .cert-verify-inner a:hover { text-decoration: underline; }
 
     /* ─── CREDENTIAL CARDS ───────────────────────────────────── */
     .cert-credentials {
       padding: 80px 40px;
-      background: #fff;
+      background: var(--kaptea-white);
     }
     .cert-credentials-inner {
       max-width: 1080px;
@@ -112,7 +112,7 @@
       font-family: 'Manrope', sans-serif;
       font-size: 32px;
       font-weight: 700;
-      color: #131521;
+      color: var(--kaptea-charcoal);
       margin-bottom: 14px;
     }
     .cert-section-intro p {
@@ -127,7 +127,7 @@
       display: grid;
       grid-template-columns: 260px 1fr;
       gap: 0;
-      border: 1px solid #eeebe6;
+      border: 1px solid var(--kaptea-border);
       border-radius: 14px;
       overflow: hidden;
       margin-bottom: 24px;
@@ -135,8 +135,8 @@
     .cert-card:last-child { margin-bottom: 0; }
 
     .cert-card-left {
-      background: #faf8f5;
-      border-right: 1px solid #eeebe6;
+      background: var(--kaptea-surface-muted);
+      border-right: 1px solid var(--kaptea-border);
       padding: 36px 28px;
       display: flex;
       flex-direction: column;
@@ -148,8 +148,8 @@
     .cert-badge-box {
       width: 120px;
       height: 120px;
-      background: #fff;
-      border: 1px solid #e5e2de;
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -192,7 +192,7 @@
       gap: 5px;
       font-size: 12px;
       font-weight: 600;
-      color: #dc2727;
+      color: var(--kaptea-red);
       text-decoration: none;
       transition: opacity 0.15s;
     }
@@ -207,7 +207,7 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #dc2727;
+      color: var(--kaptea-red);
       background: rgba(220,39,39,0.07);
       border: 1px solid rgba(220,39,39,0.15);
       border-radius: 20px;
@@ -218,7 +218,7 @@
       font-family: 'Manrope', sans-serif;
       font-size: 22px;
       font-weight: 700;
-      color: #131521;
+      color: var(--kaptea-charcoal);
       margin-bottom: 8px;
       line-height: 1.2;
     }
@@ -257,15 +257,15 @@
       margin: 0;
     }
     .cert-prove-item p strong {
-      color: #131521;
+      color: var(--kaptea-charcoal);
       font-weight: 600;
     }
 
     /* ─── PROCUREMENT TABLE ──────────────────────────────────── */
     .cert-procurement {
-      background: #131521;
+      background: var(--kaptea-charcoal);
       padding: 80px 40px;
-      color: #fff;
+      color: var(--kaptea-white);
     }
     .cert-procurement-inner {
       max-width: 1080px;
@@ -279,19 +279,19 @@
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #dc2727;
+      color: var(--kaptea-red);
       margin-bottom: 12px;
     }
     .cert-procurement-header h2 {
       font-family: 'Manrope', sans-serif;
       font-size: 32px;
       font-weight: 700;
-      color: #fff;
+      color: var(--kaptea-white);
       margin-bottom: 14px;
     }
     .cert-procurement-header p {
       font-size: 16px;
-      color: #9ca3af;
+      color: var(--kaptea-neutral-grey);
       line-height: 1.65;
       max-width: 560px;
     }
@@ -311,14 +311,14 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #6b7280;
+      color: var(--kaptea-tagline-grey);
       margin-bottom: 8px;
     }
     .cert-proc-card h4 {
       font-family: 'Manrope', sans-serif;
       font-size: 16px;
       font-weight: 700;
-      color: #fff;
+      color: var(--kaptea-white);
       margin-bottom: 12px;
       line-height: 1.3;
     }
@@ -339,9 +339,9 @@
 
     /* ─── SECURITY ARCHITECTURE ──────────────────────────────── */
     .cert-security {
-      background: #faf8f5;
-      border-top: 1px solid #eeebe6;
-      border-bottom: 1px solid #eeebe6;
+      background: var(--kaptea-surface-muted);
+      border-top: 1px solid var(--kaptea-border);
+      border-bottom: 1px solid var(--kaptea-border);
       padding: 80px 40px;
     }
     .cert-security-inner {
@@ -356,14 +356,14 @@
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #dc2727;
+      color: var(--kaptea-red);
       margin-bottom: 12px;
     }
     .cert-security-header h2 {
       font-family: 'Manrope', sans-serif;
       font-size: 32px;
       font-weight: 700;
-      color: #131521;
+      color: var(--kaptea-charcoal);
       margin-bottom: 14px;
     }
     .cert-security-header p {
@@ -378,8 +378,8 @@
       gap: 20px;
     }
     .cert-control-card {
-      background: #fff;
-      border: 1px solid #eeebe6;
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
       border-radius: 12px;
       padding: 24px;
     }
@@ -392,13 +392,13 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 16px;
-      color: #dc2727;
+      color: var(--kaptea-red);
     }
     .cert-control-card h4 {
       font-family: 'Manrope', sans-serif;
       font-size: 15px;
       font-weight: 700;
-      color: #131521;
+      color: var(--kaptea-charcoal);
       margin-bottom: 8px;
     }
     .cert-control-card p {
@@ -410,9 +410,9 @@
 
     /* ─── COMPLIANCE PACK CTA ────────────────────────────────── */
     .cert-pack {
-      background: #fff;
+      background: var(--kaptea-white);
       padding: 80px 40px;
-      border-bottom: 1px solid #eeebe6;
+      border-bottom: 1px solid var(--kaptea-border);
     }
     .cert-pack-inner {
       max-width: 1080px;
@@ -427,7 +427,7 @@
       font-family: 'Manrope', sans-serif;
       font-size: 30px;
       font-weight: 700;
-      color: #131521;
+      color: var(--kaptea-charcoal);
       margin-bottom: 14px;
       line-height: 1.2;
     }
@@ -457,8 +457,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #131521;
-      color: #fff;
+      background: var(--kaptea-charcoal);
+      color: var(--kaptea-white);
       font-size: 15px;
       font-weight: 600;
       padding: 14px 28px;
@@ -468,8 +468,8 @@
     }
     .cert-pack-btn:hover { background: #1e2235; }
     .cert-pack-card {
-      background: #faf8f5;
-      border: 1px solid #eeebe6;
+      background: var(--kaptea-surface-muted);
+      border: 1px solid var(--kaptea-border);
       border-radius: 14px;
       padding: 32px;
     }
@@ -491,8 +491,8 @@
       align-items: center;
       gap: 12px;
       padding: 12px;
-      background: #fff;
-      border: 1px solid #eeebe6;
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
       border-radius: 8px;
     }
     .cert-pack-item-icon {
@@ -504,13 +504,13 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      color: #dc2727;
+      color: var(--kaptea-red);
     }
     .cert-pack-item-text strong {
       display: block;
       font-size: 13px;
       font-weight: 600;
-      color: #131521;
+      color: var(--kaptea-charcoal);
     }
     .cert-pack-item-text span {
       font-size: 12px;
@@ -519,10 +519,10 @@
 
     /* ─── CTA CLOSE ──────────────────────────────────────────── */
     .cert-cta {
-      background: #dc2727;
+      background: var(--kaptea-red);
       padding: 80px 40px;
       text-align: center;
-      color: #fff;
+      color: var(--kaptea-white);
     }
     .cert-cta-inner { max-width: 600px; margin: 0 auto; }
     .cert-cta h2 {
@@ -539,8 +539,8 @@
     }
     .cert-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn-white {
-      background: #fff;
-      color: #dc2727;
+      background: var(--kaptea-white);
+      color: var(--kaptea-red);
       font-weight: 700;
       font-size: 15px;
       padding: 14px 28px;
@@ -552,7 +552,7 @@
     .btn-white:hover { opacity: 0.9; }
     .btn-outline-white {
       border: 2px solid rgba(255,255,255,0.4);
-      color: #fff;
+      color: var(--kaptea-white);
       font-weight: 600;
       font-size: 15px;
       padding: 12px 28px;
@@ -561,12 +561,12 @@
       display: inline-block;
       transition: border-color 0.2s;
     }
-    .btn-outline-white:hover { border-color: #fff; }
+    .btn-outline-white:hover { border-color: var(--kaptea-white); }
 
     /* ─── RESPONSIVE ─────────────────────────────────────────── */
     @media (max-width: 960px) {
       .cert-card { grid-template-columns: 1fr; }
-      .cert-card-left { border-right: none; border-bottom: 1px solid #eeebe6; flex-direction: row; justify-content: flex-start; padding: 24px 28px; gap: 24px; text-align: left; }
+      .cert-card-left { border-right: none; border-bottom: 1px solid var(--kaptea-border); flex-direction: row; justify-content: flex-start; padding: 24px 28px; gap: 24px; text-align: left; }
       .cert-proc-grid { grid-template-columns: 1fr; }
       .cert-controls-grid { grid-template-columns: 1fr 1fr; }
       .cert-pack-inner { grid-template-columns: 1fr; gap: 40px; }
