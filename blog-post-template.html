@@ -290,14 +290,14 @@
       padding-left: 20px;
     }
     .post-toc li { margin-bottom: 6px; }
-    .post-toc a {
+    .post-body .post-toc a {
       font-size: 13px;
       color: var(--kaptea-charcoal);
       text-decoration: none;
       font-weight: 500;
       transition: color 0.15s;
     }
-    .post-toc a:hover { color: var(--kaptea-red); }
+    .post-body .post-toc a:hover { color: var(--kaptea-red); }
 
     /* Article body typography */
     .post-body h2 {
@@ -641,7 +641,7 @@
     </div>
 
     <!-- Table of contents — helps AI and readers understand structure -->
-    <nav class="post-toc" aria-label="Article contents">
+    <div class="post-toc" aria-label="Article contents">
       <div class="post-toc-label">In this article</div>
       <ol>
         <li><a href="#what-is-it">What is a dedicated communications instance?</a></li>
@@ -651,7 +651,7 @@
         <li><a href="#what-to-ask">What to ask your vendor</a></li>
         <li><a href="#faq">Frequently asked questions</a></li>
       </ol>
-    </nav>
+    </div>
 
     <!-- Section 1 -->
     <h2 id="what-is-it">What is a dedicated communications instance?</h2>

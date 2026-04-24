@@ -23,6 +23,10 @@ Vercel deploys automatically from `main`. `Robert` is the designer's branch and 
 - `nav.js` — global nav (injected into every page)
 - `footer.js` — global footer (injected into every page)
 
+## Writing & Copy Rules
+
+- **No em dashes (—).** Replace with: commas, colons, semicolons, parentheses, or split into two sentences. This applies to all copy across every page, meta description, and JS file.
+
 ## Page Conventions
 
 - Always link `styles.css`, `nav.js`, and `footer.js`
