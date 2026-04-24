@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
-  <title>Blog &amp; Insights — Enterprise Communications — Kaptea</title>
+  <title>Blog &amp; Insights: Enterprise Communications | Kaptea</title>
   <meta name="description" content="Straight talk on enterprise communications, compliance, data residency and carrier-grade infrastructure. Written for IT leaders, DPOs and operations teams at regulated organisations." />
   <link rel="canonical" href="https://kaptea.vercel.app/blog" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Blog &amp; Insights — Kaptea" />
+  <meta property="og:title" content="Blog &amp; Insights | Kaptea" />
   <meta property="og:description" content="Straight talk on enterprise communications, compliance, data residency and carrier-grade infrastructure." />
   <meta property="og:url" content="https://kaptea.vercel.app/blog" />
   <meta property="og:site_name" content="Kaptea" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@kaptea" />
-  <meta name="twitter:title" content="Blog &amp; Insights — Kaptea" />
+  <meta name="twitter:title" content="Blog &amp; Insights | Kaptea" />
   <meta name="twitter:description" content="Straight talk on enterprise communications, compliance, data residency and carrier-grade infrastructure." />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
@@ -137,6 +137,7 @@
     .blog-cat--infrastructure { background: #ede9fe; color: #7c3aed; }
     .blog-cat--company        { background: #fef3c7; color: #b45309; }
     .blog-cat--procurement    { background: #f0fdf4; color: #166534; }
+    .blog-cat--strategy       { background: #cffafe; color: #0e7490; }
 
     /* ── CONTENT AREA ── */
     .blog-content {
@@ -165,7 +166,7 @@
       border-color: rgba(220,39,39,0.2);
     }
 
-    /* Left panel — dark editorial accent */
+    /* Left panel: dark editorial accent */
     .blog-featured-accent {
       background: #131521;
       padding: 48px 44px;
@@ -237,7 +238,7 @@
       margin-top: 1px;
     }
 
-    /* Right panel — content */
+    /* Right panel: content */
     .blog-featured-body {
       padding: 48px 44px;
       display: flex;
@@ -325,6 +326,7 @@
     .accent--infrastructure { background: #7c3aed; }
     .accent--company        { background: #b45309; }
     .accent--procurement    { background: #166534; }
+    .accent--strategy       { background: #0891b2; }
 
     .blog-card-body {
       padding: 22px 24px 24px;
@@ -518,7 +520,7 @@
 <section class="blog-content">
   <div class="blog-content-inner">
 
-    <!-- Featured post — Alan's manifesto piece -->
+    <!-- Featured post: Alan's manifesto piece -->
     <a href="blog-trust-not-a-kpi" class="blog-featured">
 
       <div class="blog-featured-accent">
@@ -541,7 +543,7 @@
       <div class="blog-featured-body">
         <span class="blog-cat blog-cat--company">Founder's View</span>
         <h2>The problem isn't your technology. It's your promises.</h2>
-        <p>After 30 years in enterprise tech, I've watched organisations invest in every tool imaginable while customer trust keeps declining. The problem isn't the technology. It's that we've never treated promises as operational objects — and until we do, no dashboard will close the gap.</p>
+        <p>After 30 years in enterprise tech, I've watched organisations invest in every tool imaginable while customer trust keeps declining. The problem isn't the technology. It's that we've never treated promises as operational objects, and until we do, no dashboard will close the gap.</p>
         <div class="blog-featured-meta">
           <time datetime="2026-01-15">15 Jan 2026</time>
           <span class="sep">·</span>
@@ -563,7 +565,7 @@
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--infrastructure">Infrastructure</span>
           <h3>What is a dedicated communications instance? The enterprise buyer's guide</h3>
-          <p>Shared platforms cut costs but concentrate risk. A dedicated instance gives your organisation its own isolated deployment, its own data residency and its own configuration — and makes compliance evidence straightforward.</p>
+          <p>Shared platforms cut costs but concentrate risk. A dedicated instance gives your organisation its own isolated deployment, its own data residency and its own configuration, and makes compliance evidence straightforward.</p>
           <div class="blog-card-footer">
             <div class="blog-card-meta">
               <time datetime="2026-04-14">14 Apr 2026</time>
@@ -575,41 +577,56 @@
         </div>
       </a>
 
-      <div class="blog-card blog-card--soon">
+      <a href="blog-whatsapp-compliance" class="blog-card">
         <div class="blog-card-accent accent--compliance"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--compliance">Compliance</span>
-          <h3>GDPR and enterprise messaging: five things your DPO needs to know</h3>
-          <p>Data processing agreements, sub-processor chains, right to erasure. What your DPO should be checking before your next communications platform renewal.</p>
+          <h3>WhatsApp in your contact centre: what compliance actually requires</h3>
+          <p>Adding WhatsApp to your contact centre creates real regulatory obligations around archiving, monitoring, and data residency. Most organisations using it for customer service have not yet addressed all of them.</p>
           <div class="blog-card-footer">
-            <div class="blog-card-meta"><span class="blog-soon-tag">Coming soon</span></div>
+            <div class="blog-card-meta">
+              <time datetime="2025-10-09">9 Oct 2025</time>
+              <span class="sep">·</span>
+              <span>5 min</span>
+            </div>
+            <svg class="blog-card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="blog-card blog-card--soon">
-        <div class="blog-card-accent accent--platform"></div>
+      <a href="blog-multichannel-vs-omnichannel" class="blog-card">
+        <div class="blog-card-accent accent--strategy"></div>
         <div class="blog-card-body">
-          <span class="blog-cat blog-cat--platform">Platform</span>
-          <h3>RCS vs SMS in 2026: what enterprises should be planning for now</h3>
-          <p>Apple joined RCS in 2024. Business Messaging is live across all major carriers. Here is what the shift means for enterprise template strategy and fallback routing.</p>
+          <span class="blog-cat blog-cat--strategy">Strategy</span>
+          <h3>Multichannel vs omnichannel: why the difference matters more than you think</h3>
+          <p>Most organisations think they are doing omnichannel. Most are not. Understanding the real difference is the starting point for building customer communications that actually work.</p>
           <div class="blog-card-footer">
-            <div class="blog-card-meta"><span class="blog-soon-tag">Coming soon</span></div>
+            <div class="blog-card-meta">
+              <time datetime="2025-09-25">25 Sep 2025</time>
+              <span class="sep">·</span>
+              <span>7 min</span>
+            </div>
+            <svg class="blog-card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="blog-card blog-card--soon">
-        <div class="blog-card-accent accent--industry"></div>
+      <a href="blog-gold-partner-twilio" class="blog-card">
+        <div class="blog-card-accent accent--company"></div>
         <div class="blog-card-body">
-          <span class="blog-cat blog-cat--industry">Industry</span>
-          <h3>How utilities manage communications surges: lessons from the field</h3>
-          <p>Storm events do not give advance notice. How utilities architect IVR, outbound alerts and inbound routing to handle 50x normal call volumes without collapse.</p>
+          <span class="blog-cat blog-cat--company">Company News</span>
+          <h3>Kaptea achieves Twilio Gold Partner status</h3>
+          <p>After delivering over 7 million messages and supporting 240,000 contact-centre conversations, including Ireland's COVID-19 contact tracing system, Kaptea has achieved Twilio Gold Consulting Partner status.</p>
           <div class="blog-card-footer">
-            <div class="blog-card-meta"><span class="blog-soon-tag">Coming soon</span></div>
+            <div class="blog-card-meta">
+              <time datetime="2025-10-09">9 Oct 2025</time>
+              <span class="sep">·</span>
+              <span>4 min</span>
+            </div>
+            <svg class="blog-card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
         </div>
-      </div>
+      </a>
 
       <div class="blog-card blog-card--soon">
         <div class="blog-card-accent accent--compliance"></div>

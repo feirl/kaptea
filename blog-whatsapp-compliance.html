@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
+
+  <title>WhatsApp in Your Contact Centre: What Compliance Actually Requires — Kaptea Blog</title>
+  <meta name="description" content="WhatsApp is now a mainstream business communication channel. But for regulated industries, using it in a contact centre creates serious compliance obligations around archiving, monitoring, and data privacy. Here is what you need to know." />
+  <link rel="canonical" href="https://kaptea.vercel.app/blog-whatsapp-compliance" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="WhatsApp in Your Contact Centre: What Compliance Actually Requires" />
+  <meta property="og:description" content="WhatsApp creates serious compliance obligations for regulated industries. Here is what contact centres actually need to know about archiving, monitoring, and data privacy." />
+  <meta property="og:url" content="https://kaptea.vercel.app/blog-whatsapp-compliance" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta property="og:image" content="https://kaptea.vercel.app/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="article:published_time" content="2025-10-09T09:00:00+00:00" />
+  <meta property="article:section" content="Compliance" />
+  <meta property="article:tag" content="WhatsApp, compliance, GDPR, FCA, omnichannel, contact centre" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WhatsApp in Your Contact Centre: What Compliance Actually Requires" />
+  <meta name="twitter:description" content="WhatsApp creates serious compliance obligations for regulated industries. Here is what contact centres actually need to know." />
+  <meta name="twitter:image" content="https://kaptea.vercel.app/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaptea.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog & Insights", "item": "https://kaptea.vercel.app/blog" },
+      { "@type": "ListItem", "position": 3, "name": "WhatsApp in Your Contact Centre: What Compliance Actually Requires", "item": "https://kaptea.vercel.app/blog-whatsapp-compliance" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "WhatsApp in Your Contact Centre: What Compliance Actually Requires",
+    "description": "WhatsApp is now a mainstream business communication channel. For regulated industries, using it in a contact centre creates serious compliance obligations around archiving, monitoring, and data privacy.",
+    "datePublished": "2025-10-09T09:00:00+00:00",
+    "dateModified": "2025-10-09T09:00:00+00:00",
+    "author": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "url": "https://kaptea.vercel.app"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "logo": { "@type": "ImageObject", "url": "https://kaptea.vercel.app/img/brand/kaptea-logo.svg" }
+    },
+    "url": "https://kaptea.vercel.app/blog-whatsapp-compliance",
+    "mainEntityOfPage": "https://kaptea.vercel.app/blog-whatsapp-compliance",
+    "articleSection": "Compliance",
+    "keywords": "WhatsApp compliance, contact centre, GDPR, FCA, communication archiving, omnichannel compliance",
+    "wordCount": "1300",
+    "timeRequired": "PT5M"
+  }
+  </script>
+
+  <style>
+    .post-breadcrumb {
+      background: #f7f8fc;
+      border-bottom: 1px solid #e8eaf0;
+      padding: 12px 40px;
+    }
+    .post-breadcrumb-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--kaptea-neutral-grey);
+    }
+    .post-breadcrumb a {
+      color: var(--kaptea-tagline-grey);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .post-breadcrumb a:hover { color: var(--kaptea-red); }
+    .post-breadcrumb svg { flex-shrink: 0; opacity: 0.4; }
+
+    .post-header {
+      background: var(--kaptea-white);
+      padding: 56px 40px 0;
+      border-bottom: 1px solid #e8eaf0;
+    }
+    .post-header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .blog-cat {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .blog-cat--compliance { background: #dbeafe; color: #1d4ed8; }
+    .blog-cat--company { background: #fef3c7; color: #b45309; }
+    .blog-cat--thought-leadership { background: #f3e8ff; color: #7c3aed; }
+
+    .post-cat-wrap { margin-bottom: 20px; }
+
+    .post-header h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      line-height: 1.15;
+      margin: 0 0 20px;
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      color: var(--kaptea-neutral-grey);
+      padding-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .post-meta time     { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .post-author { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .sep     { opacity: 0.4; }
+
+    .post-body-wrap {
+      background: var(--kaptea-white);
+      padding: 0 40px 80px;
+    }
+    .post-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-top: 48px;
+    }
+
+    .post-answer-box {
+      background: #f0f9ff;
+      border-left: 4px solid var(--kaptea-red);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-answer-box-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--kaptea-red);
+      margin-bottom: 8px;
+    }
+    .post-answer-box p {
+      font-size: 15px;
+      color: #1e3a5f;
+      line-height: 1.7;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .post-toc {
+      background: #f7f8fc;
+      border: 1px solid #e8eaf0;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-toc-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--kaptea-neutral-grey);
+      margin-bottom: 12px;
+    }
+    .post-toc ol { margin: 0; padding-left: 20px; }
+    .post-toc li { margin-bottom: 6px; }
+    .post-body .post-toc a {
+      font-size: 13px;
+      color: var(--kaptea-charcoal);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .post-body .post-toc a:hover { color: var(--kaptea-red); }
+
+    .post-body h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 52px 0 16px;
+      line-height: 1.25;
+      scroll-margin-top: 80px;
+    }
+    .post-body h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin: 32px 0 12px;
+      line-height: 1.3;
+    }
+    .post-body p {
+      font-size: 16px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.8;
+      margin: 0 0 20px;
+    }
+    .post-body ul, .post-body ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+    }
+    .post-body li {
+      font-size: 16px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .post-body strong { color: var(--kaptea-charcoal); font-weight: 700; }
+    .post-body a { color: var(--kaptea-red); text-decoration: underline; text-underline-offset: 2px; }
+    .post-body a:hover { text-decoration: none; }
+
+    .post-pullquote {
+      border-left: 3px solid var(--kaptea-red);
+      margin: 40px 0;
+      padding: 4px 0 4px 28px;
+    }
+    .post-pullquote blockquote {
+      font-family: 'Manrope', sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.4;
+      margin: 0;
+      font-style: normal;
+    }
+
+    .post-warning-box {
+      background: #fff7ed;
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .post-warning-box-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #b45309;
+      margin-bottom: 8px;
+    }
+    .post-warning-box p {
+      font-size: 15px;
+      color: #78350f;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .post-author-bio {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 28px 0;
+      border-top: 1px solid #e8eaf0;
+      border-bottom: 1px solid #e8eaf0;
+      margin: 44px 0 0;
+    }
+    .post-author-avatar {
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #e8eaf0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .post-author-avatar svg { width: 28px; height: 28px; color: #9ca3af; }
+    .post-author-name  { font-size: 14px; font-weight: 700; color: var(--kaptea-charcoal); }
+    .post-author-role  { font-size: 12px; color: var(--kaptea-neutral-grey); margin-top: 2px; }
+    .post-author-bio-text {
+      font-size: 13px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+    .post-author-bio-text a { color: var(--kaptea-red); text-decoration: none; }
+
+    .post-related {
+      background: #f7f8fc;
+      padding: 48px 40px 64px;
+      border-top: 1px solid #e8eaf0;
+    }
+    .post-related-inner { max-width: 780px; margin: 0 auto; }
+    .post-related-heading {
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 0 0 24px;
+    }
+    .post-related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .post-related-card {
+      background: var(--kaptea-white);
+      border-radius: 8px;
+      padding: 18px 18px 16px;
+      text-decoration: none;
+      display: block;
+      border: 1px solid #e8eaf0;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .post-related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-1px); }
+    .post-related-card .blog-cat { margin-bottom: 10px; }
+    .post-related-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.35;
+      margin: 0 0 10px;
+    }
+    .post-related-meta { font-size: 11px; color: var(--kaptea-neutral-grey); font-weight: 500; }
+
+    @media (max-width: 768px) {
+      .post-breadcrumb { padding: 12px 20px; }
+      .post-header { padding: 40px 20px 0; }
+      .post-body-wrap { padding: 0 20px 60px; }
+      .post-body { padding-top: 32px; }
+      .post-related { padding: 40px 20px 48px; }
+      .post-related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<script src="nav.js"></script>
+
+<nav class="post-breadcrumb" aria-label="Breadcrumb">
+  <div class="post-breadcrumb-inner">
+    <a href="/">Home</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <a href="blog">Blog &amp; Insights</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <span>WhatsApp compliance for contact centres</span>
+  </div>
+</nav>
+
+<header class="post-header" id="post-header">
+  <div class="post-header-inner">
+    <div class="post-cat-wrap">
+      <span class="blog-cat blog-cat--compliance">Compliance</span>
+    </div>
+    <h1>WhatsApp in your contact centre: what compliance actually requires</h1>
+    <div class="post-meta">
+      <time datetime="2025-10-09">9 Oct 2025</time>
+      <span class="sep">·</span>
+      <span>5 min read</span>
+      <span class="sep">·</span>
+      <span class="post-author">Kaptea Team</span>
+    </div>
+  </div>
+</header>
+
+<div class="post-body-wrap">
+  <article class="post-body">
+
+    <div class="post-answer-box" role="note">
+      <div class="post-answer-box-label">The short answer</div>
+      <p>Adding WhatsApp to your contact centre creates real regulatory obligations: you must capture every message, archive it for defined retention periods, make conversations available for monitoring and review, and ensure data is processed in compliance with GDPR and any sector-specific rules. Most organisations using WhatsApp for customer service have not yet addressed all of these requirements.</p>
+    </div>
+
+    <div class="post-toc">
+      <div class="post-toc-label">In this article</div>
+      <ol>
+        <li><a href="#why-different">Why WhatsApp is different from your other channels</a></li>
+        <li><a href="#regulatory-landscape">The regulatory landscape</a></li>
+        <li><a href="#archiving">Archiving and retrieval obligations</a></li>
+        <li><a href="#monitoring">Monitoring and supervision requirements</a></li>
+        <li><a href="#gdpr">GDPR and data residency considerations</a></li>
+        <li><a href="#how-to-approach">How to approach WhatsApp compliance properly</a></li>
+      </ol>
+    </div>
+
+    <p>WhatsApp has 2 billion active users worldwide. In Ireland and the UK, it is often the first messaging application people reach for, ahead of SMS. For contact centres looking to meet customers where they actually communicate, adding WhatsApp feels like an obvious move.</p>
+
+    <p>And it is. But the way most organisations bolt WhatsApp onto their contact centre infrastructure introduces compliance exposure that is easy to miss and difficult to remediate retrospectively.</p>
+
+    <p>This article is for compliance leads, operations directors, and technology teams at regulated organisations who are evaluating WhatsApp as a customer communication channel. It is also relevant to anyone who has already deployed WhatsApp and wants to understand what they may have missed.</p>
+
+    <h2 id="why-different">Why WhatsApp is different from your other channels</h2>
+
+    <p>Voice calls have been subject to compliance recording requirements in financial services for decades. Email archiving is well understood. SMS logging is a solved problem for any mature contact centre platform.</p>
+
+    <p>WhatsApp sits in a different category in the minds of many compliance teams, because it started as a consumer application. The assumption is that it operates like an informal channel. The regulatory reality is that as soon as you use it to conduct regulated business, it becomes a regulated communication channel with all the obligations that entails.</p>
+
+    <p>The additional complexity is that WhatsApp's native end-to-end encryption creates technical barriers to the kinds of monitoring and archiving that regulators require. Using the WhatsApp Business App (the free application for small businesses) makes compliance almost impossible at scale. The WhatsApp Business API, accessed through an approved provider such as Twilio, is the only viable route for organisations with genuine compliance obligations.</p>
+
+    <h2 id="regulatory-landscape">The regulatory landscape</h2>
+
+    <p>The obligations vary by sector, but the pattern is consistent across regulated industries in Ireland, the UK, and the EU.</p>
+
+    <p><strong>Financial services (FCA-regulated firms, CBI-regulated firms):</strong> MiFID II requires that communications relating to client orders, transactions, and related advice are recorded and retained for a minimum of five years. The FCA has made clear that this extends to all electronic communication channels used for regulated business, including WhatsApp. Several major financial institutions have faced enforcement action and material fines specifically for WhatsApp communications that were not captured.</p>
+
+    <p><strong>Healthcare:</strong> Communications containing or referencing patient information are subject to data protection requirements under GDPR and, in Ireland, the Health (Assisted Human Reproduction) Act framework. The principle is that patient communications must be securely handled, stored in auditable systems, and accessible only to authorised personnel.</p>
+
+    <p><strong>Utilities and energy:</strong> Consumer-facing communications, including complaints and billing disputes, may be subject to retention and retrieval requirements under sector-specific regulation from the CRU (Ireland) or Ofgem (UK).</p>
+
+    <div class="post-warning-box">
+      <div class="post-warning-box-label">Enforcement precedent</div>
+      <p>In 2022, US regulators imposed over $1.8 billion in fines on major financial institutions for failures to preserve employee WhatsApp communications. European regulators have followed a similar trajectory. The message is clear: "we didn't know we needed to capture those" is not a defence.</p>
+    </div>
+
+    <h2 id="archiving">Archiving and retrieval obligations</h2>
+
+    <p>The core requirement, across virtually all regulated sectors, is that business communications must be captured, stored in a tamper-evident format, and retrievable on request by regulators or in response to legal proceedings.</p>
+
+    <p>For WhatsApp, this means:</p>
+
+    <ul>
+      <li><strong>Every inbound and outbound message must be captured in full</strong>, including any attachments, images, or documents exchanged.</li>
+      <li><strong>Metadata must be preserved</strong>: sender identity, recipient, timestamp, and channel.</li>
+      <li><strong>Storage must be in a system that prevents tampering</strong> with or deletion of records during the retention period.</li>
+      <li><strong>Search and retrieval must be possible</strong> within the timeframes regulators specify (typically 72 hours for urgent requests).</li>
+    </ul>
+
+    <p>None of this is possible with a standard WhatsApp Business App deployment. It requires an enterprise API integration with a compliant archiving solution, built into your contact centre infrastructure from the outset.</p>
+
+    <h2 id="monitoring">Monitoring and supervision requirements</h2>
+
+    <p>In financial services, compliance monitoring of communications is an active obligation. Supervisors must be able to review a statistically meaningful sample of customer communications on an ongoing basis. For some firms, this extends to real-time or near-real-time supervisory access.</p>
+
+    <p>WhatsApp's end-to-end encryption protects messages between the consumer's phone and WhatsApp's servers. But when accessed via the Business API, messages pass through the API in unencrypted form before being delivered to the business. This is the point at which compliant platforms capture, archive, and make available for supervision the content of every conversation.</p>
+
+    <p>The implication: your contact centre infrastructure must be built to intercept and process WhatsApp messages at the API layer, not after the fact.</p>
+
+    <h2 id="gdpr">GDPR and data residency considerations</h2>
+
+    <p>WhatsApp is owned by Meta. Under GDPR, transmitting personal data to a third party located outside the EEA requires either an adequacy decision, standard contractual clauses, or another approved transfer mechanism. The legal basis for processing the personal data contained in WhatsApp conversations must be established and documented.</p>
+
+    <p>For organisations operating under Irish or UK data protection law, the practical requirements include:</p>
+
+    <ul>
+      <li>A Data Processing Agreement (DPA) with your WhatsApp Business API provider.</li>
+      <li>Clear documentation of the legal basis for processing personal data via WhatsApp (typically contract performance or legitimate interests).</li>
+      <li>Data residency controls for archived communications, particularly if your sector requires data to be stored within the EEA.</li>
+      <li>Customer consent mechanisms for using WhatsApp, particularly for outbound communications.</li>
+    </ul>
+
+    <h2 id="how-to-approach">How to approach WhatsApp compliance properly</h2>
+
+    <div class="post-pullquote">
+      <blockquote>The organisations that get WhatsApp compliance right do not retrofit it. They design it into the architecture from the beginning, with archiving, monitoring, and access controls built at the infrastructure layer.</blockquote>
+    </div>
+
+    <p>The starting point is the WhatsApp Business API via an approved provider, not the consumer app or WhatsApp Business App. From there, the integration must be built to capture every message, route it through compliant archiving, and surface it to supervisory tools with the right access controls.</p>
+
+    <p>At Kaptea, we build WhatsApp integrations as part of broader omnichannel contact centre deployments where compliance is a first-class requirement. The channel sits alongside voice, SMS, and email in a unified platform, with consistent archiving and monitoring across all of them. There is no separate compliance process for WhatsApp; it inherits the same controls as every other channel.</p>
+
+    <p>If you are operating in a regulated industry and currently using WhatsApp for customer communication without a compliant archiving and monitoring infrastructure in place, the question is not whether you have a problem. It is how significant the exposure is.</p>
+
+    <p><a href="contact">Talk to us about building a compliant WhatsApp deployment</a> for your contact centre.</p>
+
+    <div class="post-author-bio">
+      <div class="post-author-avatar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </div>
+      <div>
+        <div class="post-author-name">Kaptea Team</div>
+        <div class="post-author-role">Kaptea</div>
+        <div class="post-author-bio-text">Kaptea builds compliance-first enterprise communications infrastructure for regulated industries. <a href="meet-the-team">Meet the team.</a></div>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<section class="post-related">
+  <div class="post-related-inner">
+    <h2 class="post-related-heading">Keep reading</h2>
+    <div class="post-related-grid">
+      <a href="blog-trust-not-a-kpi" class="post-related-card">
+        <span class="blog-cat blog-cat--thought-leadership">Founder's View</span>
+        <h4>The problem isn't your technology. It's your promises.</h4>
+        <div class="post-related-meta">Alan McNab &middot; 9 min read</div>
+      </a>
+      <a href="blog-multichannel-vs-omnichannel" class="post-related-card">
+        <span class="blog-cat blog-cat--compliance">Strategy</span>
+        <h4>Multichannel vs omnichannel: why the difference matters more than you think</h4>
+        <div class="post-related-meta">Kaptea Team &middot; 7 min read</div>
+      </a>
+      <a href="blog-gold-partner-twilio" class="post-related-card">
+        <span class="blog-cat blog-cat--company">Company News</span>
+        <h4>Kaptea achieves Twilio Gold Partner status</h4>
+        <div class="post-related-meta">Kaptea Team &middot; 4 min read</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script src="footer.js"></script>
+</body>
+</html>

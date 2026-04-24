@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
+
+  <title>Multichannel vs Omnichannel: Why the Difference Matters More Than You Think — Kaptea Blog</title>
+  <meta name="description" content="Most organisations think they are doing omnichannel. Most are not. Understanding the difference between multichannel and omnichannel is the starting point for building customer communications that actually work." />
+  <link rel="canonical" href="https://kaptea.vercel.app/blog-multichannel-vs-omnichannel" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Multichannel vs Omnichannel: Why the Difference Matters More Than You Think" />
+  <meta property="og:description" content="Most organisations think they are doing omnichannel. Most are not. Here is what the difference actually means for customer experience and how to move from one to the other." />
+  <meta property="og:url" content="https://kaptea.vercel.app/blog-multichannel-vs-omnichannel" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta property="og:image" content="https://kaptea.vercel.app/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="article:published_time" content="2025-09-25T09:00:00+00:00" />
+  <meta property="article:section" content="Strategy" />
+  <meta property="article:tag" content="omnichannel, multichannel, customer experience, contact centre, CX strategy" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Multichannel vs Omnichannel: Why the Difference Matters More Than You Think" />
+  <meta name="twitter:description" content="Most organisations think they are doing omnichannel. Most are not. Here is what the difference actually means." />
+  <meta name="twitter:image" content="https://kaptea.vercel.app/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaptea.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog & Insights", "item": "https://kaptea.vercel.app/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Multichannel vs Omnichannel", "item": "https://kaptea.vercel.app/blog-multichannel-vs-omnichannel" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Multichannel vs Omnichannel: Why the Difference Matters More Than You Think",
+    "description": "Most organisations think they are doing omnichannel. Most are not. Understanding the real difference between multichannel and omnichannel is the starting point for building customer communications that work.",
+    "datePublished": "2025-09-25T09:00:00+00:00",
+    "dateModified": "2025-09-25T09:00:00+00:00",
+    "author": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "url": "https://kaptea.vercel.app"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "logo": { "@type": "ImageObject", "url": "https://kaptea.vercel.app/img/brand/kaptea-logo.svg" }
+    },
+    "url": "https://kaptea.vercel.app/blog-multichannel-vs-omnichannel",
+    "mainEntityOfPage": "https://kaptea.vercel.app/blog-multichannel-vs-omnichannel",
+    "articleSection": "Strategy",
+    "keywords": "omnichannel, multichannel, customer experience, contact centre, CX strategy, communication platform",
+    "wordCount": "1700",
+    "timeRequired": "PT7M"
+  }
+  </script>
+
+  <style>
+    .post-breadcrumb {
+      background: #f7f8fc;
+      border-bottom: 1px solid #e8eaf0;
+      padding: 12px 40px;
+    }
+    .post-breadcrumb-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--kaptea-neutral-grey);
+    }
+    .post-breadcrumb a {
+      color: var(--kaptea-tagline-grey);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .post-breadcrumb a:hover { color: var(--kaptea-red); }
+    .post-breadcrumb svg { flex-shrink: 0; opacity: 0.4; }
+
+    .post-header {
+      background: var(--kaptea-white);
+      padding: 56px 40px 0;
+      border-bottom: 1px solid #e8eaf0;
+    }
+    .post-header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .blog-cat {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .blog-cat--strategy { background: #d1fae5; color: #065f46; }
+    .blog-cat--compliance { background: #dbeafe; color: #1d4ed8; }
+    .blog-cat--company { background: #fef3c7; color: #b45309; }
+    .blog-cat--thought-leadership { background: #f3e8ff; color: #7c3aed; }
+
+    .post-cat-wrap { margin-bottom: 20px; }
+
+    .post-header h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      line-height: 1.15;
+      margin: 0 0 20px;
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      color: var(--kaptea-neutral-grey);
+      padding-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .post-meta time     { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .post-author { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .sep     { opacity: 0.4; }
+
+    .post-body-wrap {
+      background: var(--kaptea-white);
+      padding: 0 40px 80px;
+    }
+    .post-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-top: 48px;
+    }
+
+    .post-answer-box {
+      background: #f0f9ff;
+      border-left: 4px solid var(--kaptea-red);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-answer-box-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--kaptea-red);
+      margin-bottom: 8px;
+    }
+    .post-answer-box p {
+      font-size: 15px;
+      color: #1e3a5f;
+      line-height: 1.7;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .post-toc {
+      background: #f7f8fc;
+      border: 1px solid #e8eaf0;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-toc-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--kaptea-neutral-grey);
+      margin-bottom: 12px;
+    }
+    .post-toc ol { margin: 0; padding-left: 20px; }
+    .post-toc li { margin-bottom: 6px; }
+    .post-body .post-toc a {
+      font-size: 13px;
+      color: var(--kaptea-charcoal);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .post-body .post-toc a:hover { color: var(--kaptea-red); }
+
+    .post-body h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 52px 0 16px;
+      line-height: 1.25;
+      scroll-margin-top: 80px;
+    }
+    .post-body h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin: 32px 0 12px;
+      line-height: 1.3;
+    }
+    .post-body p {
+      font-size: 16px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.8;
+      margin: 0 0 20px;
+    }
+    .post-body ul, .post-body ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+    }
+    .post-body li {
+      font-size: 16px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .post-body strong { color: var(--kaptea-charcoal); font-weight: 700; }
+    .post-body a { color: var(--kaptea-red); text-decoration: underline; text-underline-offset: 2px; }
+    .post-body a:hover { text-decoration: none; }
+
+    .post-pullquote {
+      border-left: 3px solid var(--kaptea-red);
+      margin: 40px 0;
+      padding: 4px 0 4px 28px;
+    }
+    .post-pullquote blockquote {
+      font-family: 'Manrope', sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.4;
+      margin: 0;
+      font-style: normal;
+    }
+
+    .post-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 36px 0;
+    }
+    .post-comparison-col {
+      border-radius: 10px;
+      padding: 24px 22px;
+    }
+    .post-comparison-col--multi {
+      background: #f7f8fc;
+      border: 1px solid #e8eaf0;
+    }
+    .post-comparison-col--omni {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+    }
+    .post-comparison-col h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      margin: 0 0 16px;
+      padding: 0;
+    }
+    .post-comparison-col--multi h3 { color: var(--kaptea-charcoal); }
+    .post-comparison-col--omni h3 { color: #065f46; }
+    .post-comparison-col ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .post-comparison-col li {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+      color: var(--kaptea-tagline-grey);
+    }
+
+    .post-stat-highlight {
+      background: #131521;
+      border-radius: 10px;
+      padding: 32px 36px;
+      margin: 40px 0;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .post-stat-highlight-number {
+      font-family: 'Manrope', sans-serif;
+      font-size: 52px;
+      font-weight: 800;
+      color: #dc2727;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .post-stat-highlight-text {
+      font-size: 16px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    .post-stat-highlight-text strong { color: white; }
+
+    .post-author-bio {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 28px 0;
+      border-top: 1px solid #e8eaf0;
+      border-bottom: 1px solid #e8eaf0;
+      margin: 44px 0 0;
+    }
+    .post-author-avatar {
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #e8eaf0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .post-author-avatar svg { width: 28px; height: 28px; color: #9ca3af; }
+    .post-author-name  { font-size: 14px; font-weight: 700; color: var(--kaptea-charcoal); }
+    .post-author-role  { font-size: 12px; color: var(--kaptea-neutral-grey); margin-top: 2px; }
+    .post-author-bio-text {
+      font-size: 13px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+    .post-author-bio-text a { color: var(--kaptea-red); text-decoration: none; }
+
+    .post-related {
+      background: #f7f8fc;
+      padding: 48px 40px 64px;
+      border-top: 1px solid #e8eaf0;
+    }
+    .post-related-inner { max-width: 780px; margin: 0 auto; }
+    .post-related-heading {
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 0 0 24px;
+    }
+    .post-related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .post-related-card {
+      background: var(--kaptea-white);
+      border-radius: 8px;
+      padding: 18px 18px 16px;
+      text-decoration: none;
+      display: block;
+      border: 1px solid #e8eaf0;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .post-related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-1px); }
+    .post-related-card .blog-cat { margin-bottom: 10px; }
+    .post-related-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.35;
+      margin: 0 0 10px;
+    }
+    .post-related-meta { font-size: 11px; color: var(--kaptea-neutral-grey); font-weight: 500; }
+
+    @media (max-width: 768px) {
+      .post-breadcrumb { padding: 12px 20px; }
+      .post-header { padding: 40px 20px 0; }
+      .post-body-wrap { padding: 0 20px 60px; }
+      .post-body { padding-top: 32px; }
+      .post-related { padding: 40px 20px 48px; }
+      .post-related-grid { grid-template-columns: 1fr; }
+      .post-comparison { grid-template-columns: 1fr; }
+      .post-stat-highlight { flex-direction: column; gap: 16px; padding: 24px 20px; }
+      .post-stat-highlight-number { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+<script src="nav.js"></script>
+
+<nav class="post-breadcrumb" aria-label="Breadcrumb">
+  <div class="post-breadcrumb-inner">
+    <a href="/">Home</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <a href="blog">Blog &amp; Insights</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <span>Multichannel vs omnichannel</span>
+  </div>
+</nav>
+
+<header class="post-header" id="post-header">
+  <div class="post-header-inner">
+    <div class="post-cat-wrap">
+      <span class="blog-cat blog-cat--strategy">Strategy</span>
+    </div>
+    <h1>Multichannel vs omnichannel: why the difference matters more than you think</h1>
+    <div class="post-meta">
+      <time datetime="2025-09-25">25 Sep 2025</time>
+      <span class="sep">·</span>
+      <span>7 min read</span>
+      <span class="sep">·</span>
+      <span class="post-author">Kaptea Team</span>
+    </div>
+  </div>
+</header>
+
+<div class="post-body-wrap">
+  <article class="post-body">
+
+    <div class="post-answer-box" role="note">
+      <div class="post-answer-box-label">The core distinction</div>
+      <p>Multichannel means being present on multiple platforms. Omnichannel means those platforms are connected, with shared context and coordinated communication. The difference sounds small. The impact on customer experience is substantial. Companies with genuinely connected systems retain 89% of their customers; those with disconnected channels retain just 33%.</p>
+    </div>
+
+    <div class="post-toc">
+      <div class="post-toc-label">In this article</div>
+      <ol>
+        <li><a href="#the-definition">The actual definitions</a></li>
+        <li><a href="#why-matters">Why it matters in practice</a></li>
+        <li><a href="#signs-multichannel">Signs you are multichannel, not omnichannel</a></li>
+        <li><a href="#what-true-omnichannel">What true omnichannel looks like operationally</a></li>
+        <li><a href="#regulated-industries">The stakes in regulated industries</a></li>
+        <li><a href="#how-to-move">How to move from multichannel to omnichannel</a></li>
+      </ol>
+    </div>
+
+    <p>Ask almost any contact centre leader whether their organisation is omnichannel, and most will say yes. They have a phone line, an email address, a live chat function, and WhatsApp. They are present everywhere their customers want to reach them.</p>
+
+    <p>That is multichannel. And it is not the same thing.</p>
+
+    <p>The confusion between these two terms has real consequences for customer experience, operational efficiency, and, in regulated industries, compliance. This article is an attempt to draw the distinction clearly and explain why it matters.</p>
+
+    <h2 id="the-definition">The actual definitions</h2>
+
+    <p><strong>Multichannel</strong> means a customer can reach you through multiple channels. Phone, email, SMS, live chat, social media. Each channel exists and works. But each channel is typically managed separately, with its own inbox, its own team, its own history. The customer has to start over every time they switch channel.</p>
+
+    <p><strong>Omnichannel</strong> means those channels are integrated into a single, unified system. The conversation history from the phone call is visible to the agent picking up the WhatsApp message. The email sent yesterday is connected to the SMS sent this morning. The customer does not repeat themselves, because your system remembers.</p>
+
+    <div class="post-comparison">
+      <div class="post-comparison-col post-comparison-col--multi">
+        <h3>Multichannel</h3>
+        <ul>
+          <li>Multiple channels available</li>
+          <li>Each channel is managed independently</li>
+          <li>No shared conversation history</li>
+          <li>Customer repeats information on each contact</li>
+          <li>Separate teams, separate tools, separate reporting</li>
+          <li>Channel-switching breaks the experience</li>
+        </ul>
+      </div>
+      <div class="post-comparison-col post-comparison-col--omni">
+        <h3>Omnichannel</h3>
+        <ul>
+          <li>Same channels, but fully integrated</li>
+          <li>Single platform, unified conversation view</li>
+          <li>Shared context across every channel</li>
+          <li>Customer continues where they left off</li>
+          <li>One team, one view, one reporting layer</li>
+          <li>Channel-switching is invisible to the customer</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The technical difference is in the architecture. Multichannel organisations buy separate tools for each channel and try to integrate them later, imperfectly. Omnichannel organisations build from a unified platform where integration is the starting point, not the afterthought.</p>
+
+    <h2 id="why-matters">Why it matters in practice</h2>
+
+    <p>The impact on customer experience is measurable. When a customer contacts you about an issue, is transferred between departments, calls back three days later, and has to explain the situation from the beginning every time, trust erodes. Not dramatically. Gradually. With each repetition, the relationship becomes slightly more transactional and slightly less loyal.</p>
+
+    <div class="post-stat-highlight">
+      <div class="post-stat-highlight-number">89%</div>
+      <div class="post-stat-highlight-text">Customer retention rate for companies with <strong>genuinely connected communication systems</strong>, compared to just 33% for those with disconnected multichannel setups. The gap between these two numbers represents the compounding value of an experience that respects the customer's time.</div>
+    </div>
+
+    <p>For contact centre operations, the efficiency argument is equally compelling. When agents have complete conversation history in a single interface, handling times fall. When routing is informed by the full context of a customer relationship rather than just the current channel, first contact resolution rates improve. When reporting is unified across all channels, operational blind spots disappear.</p>
+
+    <h2 id="signs-multichannel">Signs you are multichannel, not omnichannel</h2>
+
+    <p>The indicators are usually obvious once you know what to look for:</p>
+
+    <ul>
+      <li>Your email team does not know what was discussed in the last phone call.</li>
+      <li>Customers who contact you by WhatsApp have no history visible to the agent who picks up their call.</li>
+      <li>Your CRM has to be manually updated when a new channel interaction occurs.</li>
+      <li>You have different teams managing different channels, with separate queue management and separate reporting.</li>
+      <li>Customers frequently start messages with "I've already explained this to someone."</li>
+      <li>You cannot tell, from a single report, what the full customer journey across all channels looked like.</li>
+    </ul>
+
+    <p>Most contact centres that describe themselves as omnichannel have three or four of these indicators. It does not mean the technology investment has failed. It means the integration work has not been completed.</p>
+
+    <h2 id="what-true-omnichannel">What true omnichannel looks like operationally</h2>
+
+    <p>An agent working in a genuinely omnichannel contact centre sees, in a single interface, the complete interaction history for every customer. It does not matter whether previous contacts were by phone, email, SMS, WhatsApp, or web chat. The history is there, timestamped, searchable, and attributed to the right customer record.</p>
+
+    <p>When a customer moves from one channel to another, the transition is invisible operationally. The context travels with them. Routing is informed by that context: if a customer has been waiting for a resolution on a billing issue for five days, the system routes them to a specialist, not back to the general queue.</p>
+
+    <p>Supervisors and operations managers see the same unified picture. Reporting covers all channels in a single view, so anomalies in one channel surface against the baseline of all the others. Compliance monitoring applies consistently, whether the interaction happened on voice, SMS, or a messaging application.</p>
+
+    <h2 id="regulated-industries">The stakes in regulated industries</h2>
+
+    <p>For financial services firms, healthcare organisations, utilities providers, and other regulated entities, the multichannel/omnichannel distinction has a dimension beyond customer experience.</p>
+
+    <p>Regulatory obligations around communication capture, archiving, and monitoring assume that all customer communications can be retrieved and audited. In a multichannel architecture, those communications exist in separate systems with different archiving configurations. Gaps are inevitable. Audit requests become painful. The risk of producing incomplete records in response to a regulatory inquiry is real.</p>
+
+    <p>In an omnichannel architecture built with compliance as a first-class requirement, every interaction is captured in a unified system with consistent archiving. A single retrieval request covers all channels. Supervision tools apply across the full picture, not channel by channel.</p>
+
+    <div class="post-pullquote">
+      <blockquote>Compliance in a multichannel environment means assembling a patchwork of records from separate systems. Compliance in an omnichannel environment means pulling one report.</blockquote>
+    </div>
+
+    <h2 id="how-to-move">How to move from multichannel to omnichannel</h2>
+
+    <p>The transition is not primarily about adding more technology. It is about integration: building the data flows and process connections that allow separate channels to share context.</p>
+
+    <p>The practical starting point is an honest audit of where conversations currently live and how they could be unified. Which channels are managed by separate teams? Which CRM records are incomplete because channel interactions are not logged? Where does the customer experience break down when a contact switches channel?</p>
+
+    <p>From there, the architecture question is whether to build integration between existing tools or to consolidate onto a unified platform. For organisations with complex channel requirements and compliance obligations, a platform designed for integration from the outset (rather than patched together from separate tools) almost always produces better long-term outcomes.</p>
+
+    <p>Kaptea builds omnichannel contact centre infrastructure on Twilio Flex, with CRM integrations (Salesforce, Microsoft Dynamics, and others) that ensure every channel interaction is captured, contextualised, and available to the right people at the right time. The starting point is always the architecture: compliance and channel integration designed in from the beginning, not retrofitted.</p>
+
+    <p><a href="contact">Talk to us about moving from multichannel to omnichannel</a> in your contact centre.</p>
+
+    <div class="post-author-bio">
+      <div class="post-author-avatar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </div>
+      <div>
+        <div class="post-author-name">Kaptea Team</div>
+        <div class="post-author-role">Kaptea</div>
+        <div class="post-author-bio-text">Kaptea builds compliance-first enterprise communications infrastructure for regulated industries. <a href="meet-the-team">Meet the team.</a></div>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<section class="post-related">
+  <div class="post-related-inner">
+    <h2 class="post-related-heading">Keep reading</h2>
+    <div class="post-related-grid">
+      <a href="blog-trust-not-a-kpi" class="post-related-card">
+        <span class="blog-cat blog-cat--thought-leadership">Founder's View</span>
+        <h4>The problem isn't your technology. It's your promises.</h4>
+        <div class="post-related-meta">Alan McNab &middot; 9 min read</div>
+      </a>
+      <a href="blog-whatsapp-compliance" class="post-related-card">
+        <span class="blog-cat blog-cat--compliance">Compliance</span>
+        <h4>WhatsApp in your contact centre: what compliance actually requires</h4>
+        <div class="post-related-meta">Kaptea Team &middot; 5 min read</div>
+      </a>
+      <a href="blog-gold-partner-twilio" class="post-related-card">
+        <span class="blog-cat blog-cat--company">Company News</span>
+        <h4>Kaptea achieves Twilio Gold Partner status</h4>
+        <div class="post-related-meta">Kaptea Team &middot; 4 min read</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script src="footer.js"></script>
+</body>
+</html>
