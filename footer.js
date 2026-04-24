@@ -224,10 +224,10 @@
     <div class="footer-bottom">
       <div>&copy; 2026 Kaptea. All rights reserved.</div>
       <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Cookie Policy</a>
-        <a href="#">GDPR</a>
+        <a href="privacy-policy">Privacy Policy</a>
+        <a href="terms">Terms of Service</a>
+        <a href="cookie-policy">Cookie Policy</a>
+        <a href="privacy-policy#your-rights">GDPR</a>
       </div>
     </div>
   </div>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Kaptea</title>
+  <meta name="description" content="Kaptea Privacy Policy — how we collect, use, and protect your personal data. Data controller: Kaptea, 71 Baggot Street Lower, Dublin, Ireland." />
+  <link rel="canonical" href="https://kaptea.vercel.app/privacy-policy" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacy Policy | Kaptea" />
+  <meta property="og:description" content="How Kaptea collects, uses, and protects your personal data." />
+  <meta property="og:url" content="https://kaptea.vercel.app/privacy-policy" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .legal-hero {
+      background: #131521;
+      color: #fff;
+      padding: 72px 40px 56px;
+    }
+    .legal-hero-inner { max-width: 860px; margin: 0 auto; }
+    .legal-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2727;
+      margin-bottom: 14px;
+    }
+    .legal-hero h1 {
+      font-size: 36px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.15;
+    }
+    .legal-hero .meta {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .legal-body {
+      padding: 64px 40px 96px;
+      background: #ffffff;
+    }
+    .legal-layout {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* Sticky sidebar TOC */
+    .legal-toc {
+      position: sticky;
+      top: 88px;
+    }
+    .legal-toc h4 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9ca3af;
+      margin-bottom: 12px;
+    }
+    .legal-toc ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: toc;
+    }
+    .legal-toc li {
+      counter-increment: toc;
+      margin-bottom: 6px;
+    }
+    .legal-toc a {
+      font-size: 13px;
+      color: #6b7280;
+      text-decoration: none;
+      display: flex;
+      gap: 8px;
+      line-height: 1.4;
+      transition: color 0.15s;
+    }
+    .legal-toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 10px;
+      color: #d1d5db;
+      padding-top: 2px;
+      flex-shrink: 0;
+    }
+    .legal-toc a:hover { color: #131521; }
+    .toc-contact {
+      margin-top: 28px;
+      padding: 16px;
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #6b7280;
+      line-height: 1.6;
+    }
+    .toc-contact strong { color: #131521; display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .toc-contact a { color: #dc2727; text-decoration: none; }
+
+    /* Content */
+    .legal-content h2 {
+      font-size: 20px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin: 48px 0 12px;
+      padding-top: 8px;
+      scroll-margin-top: 96px;
+    }
+    .legal-content h2:first-child { margin-top: 0; }
+    .legal-content p {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .legal-content ul, .legal-content ol {
+      margin: 0 0 16px 0;
+      padding-left: 20px;
+    }
+    .legal-content li {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+    .legal-content a { color: #dc2727; }
+    .legal-content .highlight-box {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-left: 4px solid #dc2727;
+      border-radius: 0 6px 6px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.65;
+    }
+    .legal-content .highlight-box strong { color: #131521; }
+    hr.section-rule {
+      border: none;
+      border-top: 1px solid #eeebe6;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .legal-hero { padding: 56px 20px 40px; }
+      .legal-hero h1 { font-size: 26px; }
+      .legal-body { padding: 40px 20px 64px; }
+      .legal-layout { grid-template-columns: 1fr; gap: 32px; }
+      .legal-toc { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<section class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: 15 January 2026 &nbsp;·&nbsp; Effective date: 15 January 2026</p>
+  </div>
+</section>
+
+<div class="legal-body">
+  <div class="legal-layout">
+
+    <!-- TOC sidebar -->
+    <nav class="legal-toc" aria-label="Privacy Policy sections">
+      <h4>Contents</h4>
+      <ol>
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#information-we-collect">Information we collect</a></li>
+        <li><a href="#how-we-use">How we use your information</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#third-parties">Third-party sharing</a></li>
+        <li><a href="#your-rights">Your rights</a></li>
+        <li><a href="#data-retention">Data retention</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#transfers">International transfers</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+      <div class="toc-contact">
+        <strong>Data Privacy Officer</strong>
+        Alan McNab<br>
+        <a href="mailto:alan.mcnab@kaptea.io">alan.mcnab@kaptea.io</a><br>
+        +353 1 567 2267
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="legal-content">
+
+      <div class="highlight-box">
+        <strong>Plain-English summary:</strong> We collect only what we need to provide our services and respond to enquiries. We do not sell your data. We do not process personal data for marketing without your explicit consent. Irish law governs this policy.
+      </div>
+
+      <h2 id="who-we-are">1. Who we are</h2>
+      <p>Kaptea Limited ("Kaptea", "we", "us", "our") is a company incorporated in Ireland, operating a compliance-first communications platform for enterprise customers. Our registered address is:</p>
+      <p>71 Baggot Street Lower<br>Dublin, D02 P593<br>Ireland</p>
+      <p>Kaptea is the data controller in respect of personal data collected through this website and in connection with our services. Our Data Privacy Officer is Alan McNab, reachable at <a href="mailto:alan.mcnab@kaptea.io">alan.mcnab@kaptea.io</a>.</p>
+      <p>This Privacy Policy applies to personal data collected via <a href="https://kaptea.io">kaptea.io</a>, <a href="https://kaptea.vercel.app">kaptea.vercel.app</a>, and any associated subdomains or services. It does not govern data processed by Kaptea on behalf of its enterprise customers, which is subject to the applicable data processing agreements.</p>
+
+      <hr class="section-rule">
+      <h2 id="information-we-collect">2. Information we collect</h2>
+      <p>We collect personal information only where necessary to provide our services or to communicate with you effectively. We will never ask for more information than we need for those purposes.</p>
+      <p><strong>Information you provide directly:</strong></p>
+      <ul>
+        <li>Name, job title, and company name when submitting a demo request, contact form, or newsletter sign-up</li>
+        <li>Email address and phone number for follow-up communications</li>
+        <li>Message content submitted through enquiry forms</li>
+        <li>Information shared during sales calls, emails, or meetings</li>
+      </ul>
+      <p><strong>Information collected automatically:</strong></p>
+      <ul>
+        <li>Browser type and version</li>
+        <li>Operating system</li>
+        <li>Pages visited and navigation paths on this website</li>
+        <li>Referring website or source</li>
+        <li>IP address (anonymised where possible)</li>
+        <li>Date and time of visit</li>
+      </ul>
+      <p>Automatically collected information is gathered via cookies and analytics tools. See our <a href="cookie-policy">Cookie Policy</a> for full details.</p>
+
+      <hr class="section-rule">
+      <h2 id="how-we-use">3. How we use your information</h2>
+      <p>We use personal data in a manner consistent with the purposes for which it was provided, including:</p>
+      <ul>
+        <li>Responding to enquiries and demo requests</li>
+        <li>Providing information about Kaptea's platform and services</li>
+        <li>Scheduling and conducting product demonstrations</li>
+        <li>Sending service-related communications (account updates, security notices)</li>
+        <li>Analysing website usage to improve content and navigation</li>
+        <li>Complying with legal and regulatory obligations</li>
+      </ul>
+      <p>We will not process your personal data for marketing purposes without your express, informed consent. If you have opted in to marketing communications, you may withdraw that consent at any time by contacting us at <a href="mailto:hello@kaptea.io">hello@kaptea.io</a>.</p>
+      <p>The legal bases we rely on under the UK and EU GDPR include: (a) consent, (b) performance of a contract or pre-contractual steps, (c) legitimate interests (operating and improving our business), and (d) compliance with a legal obligation.</p>
+
+      <hr class="section-rule">
+      <h2 id="cookies">4. Cookies</h2>
+      <p>We use performance cookies to store and retrieve information in your browser for analytics and navigation tracking purposes. Cookies help us understand how visitors use our website so we can improve content and performance.</p>
+      <p>You can manage your cookie preferences at any time through our <a href="cookie-policy">Cookie Policy</a> page. Most browsers also allow you to refuse or delete cookies through their settings.</p>
+
+      <hr class="section-rule">
+      <h2 id="third-parties">5. Third-party sharing</h2>
+      <p>We may share your personal data with the following categories of third parties:</p>
+      <ul>
+        <li><strong>Business partners and suppliers</strong> who help us deliver our services (subject to confidentiality obligations)</li>
+        <li><strong>Analytics providers</strong> (e.g. Google Analytics) who help us understand website usage — on an anonymised or aggregated basis where possible</li>
+        <li><strong>Search engine companies</strong> for website indexing and performance measurement</li>
+        <li><strong>Professional advisors</strong> including lawyers, accountants, and auditors, under strict confidentiality</li>
+      </ul>
+      <p>We may also disclose personal data:</p>
+      <ul>
+        <li>To protect against fraud or to enforce our legal rights</li>
+        <li>In connection with a business sale, merger, or acquisition (where data transferred remains subject to equivalent protections)</li>
+        <li>Where required by applicable law, court order, or regulatory authority</li>
+      </ul>
+      <p>We do not sell personal data to third parties.</p>
+
+      <hr class="section-rule">
+      <h2 id="your-rights">6. Your rights</h2>
+      <p>Under the GDPR and applicable Irish data protection law, you have the following rights in relation to your personal data:</p>
+      <ul>
+        <li><strong>Right of access:</strong> You may request a copy of the personal data we hold about you. We will provide this free of charge within 30 calendar days of receiving your request.</li>
+        <li><strong>Right to rectification:</strong> You may ask us to correct inaccurate or incomplete data.</li>
+        <li><strong>Right to erasure:</strong> You may ask us to delete your personal data where there is no legitimate reason for us to continue holding it.</li>
+        <li><strong>Right to restriction:</strong> You may ask us to restrict processing of your data in certain circumstances.</li>
+        <li><strong>Right to data portability:</strong> You may request your data in a structured, machine-readable format.</li>
+        <li><strong>Right to object:</strong> You may object to processing based on legitimate interests or for direct marketing.</li>
+        <li><strong>Right to withdraw consent:</strong> Where processing is based on consent, you may withdraw it at any time without affecting the lawfulness of prior processing.</li>
+      </ul>
+      <p>To exercise any of these rights, contact our Data Privacy Officer at <a href="mailto:alan.mcnab@kaptea.io">alan.mcnab@kaptea.io</a> or write to us at our registered address. We may need to verify your identity before processing your request.</p>
+      <p>If you are unsatisfied with our response, you have the right to lodge a complaint with the Irish Data Protection Commission: <a href="https://www.dataprotection.ie" target="_blank" rel="noopener">dataprotection.ie</a>.</p>
+
+      <hr class="section-rule">
+      <h2 id="data-retention">7. Data retention</h2>
+      <p>We retain personal data for as long as necessary to fulfil the purposes for which it was collected, including any legal, accounting, or reporting obligations. As a general rule, we retain customer and prospect data for a period of 7 years in line with Irish statutory requirements.</p>
+      <p>Where you have requested erasure and there is no overriding legitimate reason to retain your data, we will delete it promptly.</p>
+
+      <hr class="section-rule">
+      <h2 id="security">8. Security</h2>
+      <p>We implement industry-standard technical and organisational security measures to protect your personal data against unauthorised access, loss, destruction, or alteration. Kaptea is ISO 27001 certified and Cyber Essentials Plus accredited.</p>
+      <p>Where data is transmitted electronically, we use encryption. We restrict access to personal data on a need-to-know basis and require all staff and contractors handling personal data to comply with appropriate confidentiality obligations.</p>
+      <p>No method of transmission over the internet is completely secure, and we cannot guarantee absolute security. In the event of a data breach that is likely to result in risk to your rights and freedoms, we will notify you and the relevant supervisory authority as required by law.</p>
+
+      <hr class="section-rule">
+      <h2 id="transfers">9. International transfers</h2>
+      <p>Kaptea is based in Ireland and primarily processes data within the European Economic Area (EEA). Where we transfer personal data outside the EEA, we ensure appropriate safeguards are in place — such as standard contractual clauses approved by the European Commission — to ensure your data receives an equivalent level of protection.</p>
+
+      <hr class="section-rule">
+      <h2 id="children">10. Children's privacy</h2>
+      <p>Our website and services are directed at business professionals and are not intended for individuals under the age of 18. We do not knowingly collect personal data from children. If you believe we have inadvertently collected such data, please contact us immediately and we will delete it.</p>
+
+      <hr class="section-rule">
+      <h2 id="changes">11. Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make material changes, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of our website following any changes constitutes acceptance of the updated policy.</p>
+
+      <hr class="section-rule">
+      <h2 id="contact">12. Contact us</h2>
+      <p>If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:</p>
+      <p>
+        <strong>Data Privacy Officer:</strong> Alan McNab<br>
+        <strong>Email:</strong> <a href="mailto:alan.mcnab@kaptea.io">alan.mcnab@kaptea.io</a><br>
+        <strong>Phone:</strong> +353 1 567 2267<br>
+        <strong>Post:</strong> 71 Baggot Street Lower, Dublin, D02 P593, Ireland
+      </p>
+      <p>This Privacy Policy is governed exclusively by the laws of Ireland.</p>
+
+    </div>
+  </div>
+</div>
+
+<script src="footer.js"></script>
+</body>
+</html>

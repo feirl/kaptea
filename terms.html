@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Kaptea</title>
+  <meta name="description" content="Kaptea Terms of Service — the terms that govern use of the Kaptea platform and website. Governed by Irish law." />
+  <link rel="canonical" href="https://kaptea.vercel.app/terms" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Terms of Service | Kaptea" />
+  <meta property="og:description" content="The terms that govern use of the Kaptea platform and website." />
+  <meta property="og:url" content="https://kaptea.vercel.app/terms" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .legal-hero {
+      background: #131521;
+      color: #fff;
+      padding: 72px 40px 56px;
+    }
+    .legal-hero-inner { max-width: 860px; margin: 0 auto; }
+    .legal-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2727;
+      margin-bottom: 14px;
+    }
+    .legal-hero h1 {
+      font-size: 36px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.15;
+    }
+    .legal-hero .meta {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .legal-body {
+      padding: 64px 40px 96px;
+      background: #ffffff;
+    }
+    .legal-layout {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .legal-toc {
+      position: sticky;
+      top: 88px;
+    }
+    .legal-toc h4 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9ca3af;
+      margin-bottom: 12px;
+    }
+    .legal-toc ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: toc;
+    }
+    .legal-toc li {
+      counter-increment: toc;
+      margin-bottom: 6px;
+    }
+    .legal-toc a {
+      font-size: 13px;
+      color: #6b7280;
+      text-decoration: none;
+      display: flex;
+      gap: 8px;
+      line-height: 1.4;
+      transition: color 0.15s;
+    }
+    .legal-toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 10px;
+      color: #d1d5db;
+      padding-top: 2px;
+      flex-shrink: 0;
+    }
+    .legal-toc a:hover { color: #131521; }
+    .toc-contact {
+      margin-top: 28px;
+      padding: 16px;
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #6b7280;
+      line-height: 1.6;
+    }
+    .toc-contact strong { color: #131521; display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .toc-contact a { color: #dc2727; text-decoration: none; }
+
+    .legal-content h2 {
+      font-size: 20px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: #131521;
+      margin: 48px 0 12px;
+      padding-top: 8px;
+      scroll-margin-top: 96px;
+    }
+    .legal-content h2:first-child { margin-top: 0; }
+    .legal-content p {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .legal-content ul, .legal-content ol {
+      margin: 0 0 16px 0;
+      padding-left: 20px;
+    }
+    .legal-content li {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+    .legal-content a { color: #dc2727; }
+    .legal-content .highlight-box {
+      background: #faf8f5;
+      border: 1px solid #eeebe6;
+      border-left: 4px solid #dc2727;
+      border-radius: 0 6px 6px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.65;
+    }
+    .legal-content .highlight-box strong { color: #131521; }
+    hr.section-rule {
+      border: none;
+      border-top: 1px solid #eeebe6;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .legal-hero { padding: 56px 20px 40px; }
+      .legal-hero h1 { font-size: 26px; }
+      .legal-body { padding: 40px 20px 64px; }
+      .legal-layout { grid-template-columns: 1fr; gap: 32px; }
+      .legal-toc { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<section class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-label">Legal</div>
+    <h1>Terms of Service</h1>
+    <p class="meta">Last updated: 15 January 2026 &nbsp;·&nbsp; Effective date: 15 January 2026</p>
+  </div>
+</section>
+
+<div class="legal-body">
+  <div class="legal-layout">
+
+    <nav class="legal-toc" aria-label="Terms of Service sections">
+      <h4>Contents</h4>
+      <ol>
+        <li><a href="#definitions">Definitions</a></li>
+        <li><a href="#services">Our services</a></li>
+        <li><a href="#access">Access and accounts</a></li>
+        <li><a href="#acceptable-use">Acceptable use</a></li>
+        <li><a href="#fees">Fees and payment</a></li>
+        <li><a href="#ip">Intellectual property</a></li>
+        <li><a href="#confidentiality">Confidentiality</a></li>
+        <li><a href="#data">Data and privacy</a></li>
+        <li><a href="#warranties">Warranties</a></li>
+        <li><a href="#liability">Limitation of liability</a></li>
+        <li><a href="#indemnity">Indemnity</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#general">General provisions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+      <div class="toc-contact">
+        <strong>Legal enquiries</strong>
+        <a href="mailto:hello@kaptea.io">hello@kaptea.io</a><br>
+        +353 1 567 2267
+      </div>
+    </nav>
+
+    <div class="legal-content">
+
+      <div class="highlight-box">
+        <strong>Important:</strong> These Terms of Service govern your access to and use of Kaptea's website and platform. By accessing our website or entering into a service agreement with Kaptea, you agree to these terms. For enterprise platform agreements, a separate Order Form and Data Processing Agreement will also apply.
+      </div>
+
+      <p>These Terms of Service ("Terms") are entered into between Kaptea Limited ("Kaptea", "we", "us", "our"), a company incorporated in Ireland with its registered address at 71 Baggot Street Lower, Dublin, D02 P593, Ireland, and the individual or entity accessing or using our website or services ("Customer", "you").</p>
+
+      <h2 id="definitions">1. Definitions</h2>
+      <p>In these Terms:</p>
+      <ul>
+        <li><strong>"Agreement"</strong> means these Terms together with any applicable Order Form, Data Processing Agreement, and any other documents incorporated by reference.</li>
+        <li><strong>"Authorised Users"</strong> means employees, contractors, or agents of the Customer who are authorised to access the Platform.</li>
+        <li><strong>"Confidential Information"</strong> means any non-public information disclosed by one party to the other that is designated as confidential or that a reasonable person would understand to be confidential given the nature of the information and the circumstances of disclosure.</li>
+        <li><strong>"Documentation"</strong> means Kaptea's technical and user documentation relating to the Platform.</li>
+        <li><strong>"Order Form"</strong> means a written or electronic order form executed by both parties specifying the services, fees, and term.</li>
+        <li><strong>"Platform"</strong> means the Pronto communications platform and all associated software, APIs, and services provided by Kaptea.</li>
+        <li><strong>"Services"</strong> means access to the Platform and any professional services specified in an Order Form.</li>
+        <li><strong>"Subscription Term"</strong> means the period specified in an Order Form during which Customer is entitled to access the Platform.</li>
+      </ul>
+
+      <hr class="section-rule">
+      <h2 id="services">2. Our services</h2>
+      <p>Kaptea provides a compliance-first enterprise communications platform (Pronto) enabling organisations to manage, govern, and orchestrate multi-channel communications at scale. The specific scope of services, including channels, features, usage limits, and support levels, is set out in the applicable Order Form.</p>
+      <p>Kaptea reserves the right to modify, update, or discontinue features of the Platform with reasonable notice to Customers. We will not make changes that materially reduce core functionality during a Subscription Term without the Customer's consent.</p>
+      <p>Access to the Platform requires a signed Order Form. Use of this website alone does not constitute a service agreement.</p>
+
+      <hr class="section-rule">
+      <h2 id="access">3. Access and accounts</h2>
+      <p>Subject to these Terms and timely payment of applicable fees, Kaptea grants the Customer a non-exclusive, non-transferable, limited right to access and use the Platform during the Subscription Term for the Customer's internal business purposes.</p>
+      <p>The Customer is responsible for:</p>
+      <ul>
+        <li>Ensuring all Authorised Users comply with these Terms</li>
+        <li>Maintaining the confidentiality of account credentials</li>
+        <li>All activity occurring under Customer accounts</li>
+        <li>Promptly notifying Kaptea of any unauthorised access or suspected security breach</li>
+      </ul>
+      <p>Customer may not resell, sublicense, or otherwise make the Platform available to third parties (other than Authorised Users) without Kaptea's prior written consent.</p>
+
+      <hr class="section-rule">
+      <h2 id="acceptable-use">4. Acceptable use</h2>
+      <p>The Customer agrees not to use the Platform to:</p>
+      <ul>
+        <li>Send unsolicited communications (spam) or violate applicable anti-spam laws</li>
+        <li>Transmit unlawful, harmful, defamatory, or fraudulent content</li>
+        <li>Violate applicable telecommunications regulations or carrier terms of service</li>
+        <li>Attempt to gain unauthorised access to other systems or networks</li>
+        <li>Introduce malware, viruses, or other harmful code</li>
+        <li>Circumvent security, rate limiting, or access controls within the Platform</li>
+        <li>Engage in any activity that disrupts or degrades Platform performance for other customers</li>
+        <li>Reverse-engineer, decompile, or attempt to extract source code from the Platform</li>
+      </ul>
+      <p>Kaptea may suspend access to the Platform immediately and without notice if the Customer is in breach of this acceptable use policy or if Kaptea reasonably believes continued access poses a risk to the Platform, other customers, or third parties.</p>
+
+      <hr class="section-rule">
+      <h2 id="fees">5. Fees and payment</h2>
+      <p>Fees for the Services are set out in the applicable Order Form. Unless otherwise specified:</p>
+      <ul>
+        <li>Fees are invoiced annually in advance or as otherwise agreed in the Order Form</li>
+        <li>Payment is due within 30 days of the invoice date</li>
+        <li>All fees are exclusive of VAT and applicable taxes, which will be charged at the prevailing rate</li>
+        <li>Kaptea reserves the right to charge interest on overdue amounts at 2% above the European Central Bank base rate per month</li>
+        <li>Fees are non-refundable except as expressly set out in the Order Form or required by applicable law</li>
+      </ul>
+      <p>Kaptea may adjust fees at renewal with not less than 60 days' prior written notice. If the Customer does not agree to a fee increase, it may terminate the Agreement by providing written notice before the renewal date.</p>
+
+      <hr class="section-rule">
+      <h2 id="ip">6. Intellectual property</h2>
+      <p><strong>Kaptea IP:</strong> Kaptea and its licensors retain all intellectual property rights in the Platform, Documentation, and any related materials. Nothing in these Terms transfers ownership of Kaptea IP to the Customer.</p>
+      <p><strong>Customer data:</strong> The Customer retains all rights in data uploaded to or processed through the Platform ("Customer Data"). The Customer grants Kaptea a limited licence to process Customer Data solely to the extent necessary to provide the Services.</p>
+      <p><strong>Feedback:</strong> If the Customer provides feedback, suggestions, or ideas about the Platform ("Feedback"), the Customer grants Kaptea a perpetual, irrevocable, royalty-free licence to use and incorporate such Feedback into the Platform without obligation to the Customer.</p>
+
+      <hr class="section-rule">
+      <h2 id="confidentiality">7. Confidentiality</h2>
+      <p>Each party agrees to:</p>
+      <ul>
+        <li>Keep the other party's Confidential Information strictly confidential</li>
+        <li>Not disclose Confidential Information to any third party without the disclosing party's prior written consent, except to employees, contractors, or advisors who have a need to know and are bound by equivalent confidentiality obligations</li>
+        <li>Use Confidential Information only for the purposes of performing obligations or exercising rights under these Terms</li>
+      </ul>
+      <p>Confidentiality obligations do not apply to information that: (a) is or becomes publicly available through no fault of the receiving party; (b) was already known to the receiving party before disclosure; (c) is independently developed without use of Confidential Information; or (d) is required to be disclosed by law or regulatory authority, provided the receiving party gives prompt prior written notice where legally permitted.</p>
+      <p>Confidentiality obligations survive termination of these Terms for a period of 5 years.</p>
+
+      <hr class="section-rule">
+      <h2 id="data">8. Data and privacy</h2>
+      <p>The parties' obligations with respect to personal data are governed by a separate Data Processing Agreement ("DPA") which forms part of the Agreement. In the event of conflict between the DPA and these Terms in relation to personal data, the DPA prevails.</p>
+      <p>The Customer is responsible for ensuring it has a lawful basis to process and transmit personal data through the Platform, and for complying with all applicable data protection laws in its use of the Services.</p>
+      <p>Kaptea's processing of personal data collected through this website is governed by our <a href="privacy-policy">Privacy Policy</a>.</p>
+
+      <hr class="section-rule">
+      <h2 id="warranties">9. Warranties</h2>
+      <p><strong>Kaptea warrants that:</strong></p>
+      <ul>
+        <li>It will provide the Services with reasonable skill and care</li>
+        <li>It has the right to grant the licences set out in these Terms</li>
+        <li>The Platform will perform materially in accordance with the Documentation during the Subscription Term</li>
+      </ul>
+      <p><strong>Customer warrants that:</strong></p>
+      <ul>
+        <li>It has the authority to enter into these Terms</li>
+        <li>Its use of the Platform will comply with applicable laws and regulations</li>
+        <li>Customer Data does not infringe any third-party rights</li>
+      </ul>
+      <p>Except as expressly stated in these Terms, all conditions, warranties, and representations are excluded to the fullest extent permitted by law. In particular, Kaptea does not warrant that the Platform will be uninterrupted or error-free, or that all defects will be corrected.</p>
+
+      <hr class="section-rule">
+      <h2 id="liability">10. Limitation of liability</h2>
+      <p><strong>Nothing in these Terms limits or excludes liability for:</strong> death or personal injury caused by negligence; fraud or fraudulent misrepresentation; or any other liability that cannot be excluded or limited by Irish law.</p>
+      <p><strong>Subject to the above, Kaptea's total aggregate liability</strong> to the Customer arising out of or in connection with these Terms — whether in contract, tort (including negligence), breach of statutory duty, or otherwise — shall not exceed the total fees paid by the Customer in the 12 months immediately preceding the event giving rise to the claim.</p>
+      <p><strong>Neither party shall be liable</strong> to the other for any indirect, incidental, special, consequential, or punitive loss or damage, including loss of profits, loss of revenue, loss of business, loss of data, or loss of goodwill, even if advised of the possibility of such damages.</p>
+
+      <hr class="section-rule">
+      <h2 id="indemnity">11. Indemnity</h2>
+      <p>The Customer shall defend, indemnify, and hold harmless Kaptea and its officers, directors, employees, and agents from and against any claims, damages, losses, and expenses (including reasonable legal fees) arising from: (a) Customer's breach of these Terms; (b) Customer's use of the Platform in violation of applicable law; or (c) any claim that Customer Data infringes the intellectual property or other rights of a third party.</p>
+      <p>Kaptea shall defend, indemnify, and hold harmless the Customer from claims by third parties alleging that the Platform, as used in accordance with these Terms, infringes any third-party intellectual property right.</p>
+
+      <hr class="section-rule">
+      <h2 id="termination">12. Termination</h2>
+      <p><strong>By either party for cause:</strong> Either party may terminate the Agreement immediately on written notice if the other party: (a) materially breaches the Agreement and fails to remedy the breach within 30 days of written notice; (b) becomes insolvent, enters administration, or is wound up.</p>
+      <p><strong>By Kaptea:</strong> Kaptea may suspend or terminate access to the Platform immediately for Customer's breach of the acceptable use policy (clause 4) or non-payment of fees.</p>
+      <p><strong>Effect of termination:</strong> On termination or expiry of the Agreement:</p>
+      <ul>
+        <li>All licences granted to the Customer cease immediately</li>
+        <li>The Customer shall cease using the Platform and destroy or return any Kaptea Confidential Information</li>
+        <li>Kaptea will make Customer Data available for export for 30 days post-termination, after which it may be deleted</li>
+        <li>Accrued fees and any provisions intended to survive termination shall remain in force</li>
+      </ul>
+
+      <hr class="section-rule">
+      <h2 id="general">13. General provisions</h2>
+      <p><strong>Governing law:</strong> These Terms and any dispute arising from them are governed exclusively by the laws of Ireland. The parties irrevocably submit to the exclusive jurisdiction of the Irish courts.</p>
+      <p><strong>Entire agreement:</strong> These Terms (together with any Order Form and DPA) constitute the entire agreement between the parties with respect to the subject matter and supersede all prior agreements, understandings, and representations.</p>
+      <p><strong>Amendments:</strong> Kaptea may update these Terms from time to time. Material changes will be communicated with not less than 30 days' notice. Continued use of the Platform after the effective date constitutes acceptance.</p>
+      <p><strong>Severability:</strong> If any provision is found to be unenforceable, the remaining provisions shall continue in full force.</p>
+      <p><strong>Waiver:</strong> Failure to enforce any provision shall not constitute a waiver of that provision.</p>
+      <p><strong>Force majeure:</strong> Neither party shall be liable for delays or failures caused by events outside its reasonable control, provided it gives prompt written notice and uses reasonable efforts to mitigate the impact.</p>
+      <p><strong>Assignment:</strong> The Customer may not assign or transfer any rights under these Terms without Kaptea's prior written consent. Kaptea may assign the Agreement in connection with a merger, acquisition, or sale of all or substantially all of its assets.</p>
+      <p><strong>Notices:</strong> Notices must be in writing and delivered by email (with read receipt or acknowledgement) or recorded post to the addresses specified in the Order Form or to <a href="mailto:hello@kaptea.io">hello@kaptea.io</a>.</p>
+
+      <hr class="section-rule">
+      <h2 id="contact">14. Contact</h2>
+      <p>For questions about these Terms or to request a copy of our Data Processing Agreement, please contact us:</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:hello@kaptea.io">hello@kaptea.io</a><br>
+        <strong>Phone:</strong> +353 1 567 2267<br>
+        <strong>Post:</strong> 71 Baggot Street Lower, Dublin, D02 P593, Ireland
+      </p>
+      <p>See also: <a href="privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="cookie-policy">Cookie Policy</a></p>
+
+    </div>
+  </div>
+</div>
+
+<script src="footer.js"></script>
+</body>
+</html>
