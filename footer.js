@@ -1,4 +1,4 @@
-// footer.js — Global footer for Kaptea
+// footer.js: Global footer for Kaptea
 // Edit this file once to update the footer across all pages.
 (function () {
 

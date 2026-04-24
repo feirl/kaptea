@@ -1,4 +1,4 @@
-// nav.js — Global navigation for Kaptea
+// nav.js: Global navigation for Kaptea
 // Edit this file once to update the nav across all pages.
 (function () {
   const html = `<nav role="navigation" aria-label="Main navigation">
@@ -98,7 +98,7 @@
               <div class="mega-carriers">
                 <a href="twilio-partner" class="carrier-card" style="text-decoration:none;display:block;">
                   <img src="img/brand/twilio-logo.png" alt="Twilio" class="carrier-logo">
-                  <div class="carrier-desc">The world's leading cloud communications platform — messaging, voice, video, Flex and Verify — fully operationalised through Pronto.</div>
+                  <div class="carrier-desc">The world's leading cloud communications platform: messaging, voice, video, Flex and Verify, fully operationalised through Pronto.</div>
                 </a>
                 <div class="carrier-more">+ more carriers &amp; integrations →</div>
               </div>

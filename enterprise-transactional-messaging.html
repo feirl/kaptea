@@ -6,18 +6,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enterprise Transactional Messaging — Kaptea Pronto</title>
+  <title>Enterprise Transactional Messaging | Kaptea Pronto</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Event-driven message orchestration, cross-channel failover with retry logic, per-message delivery verification, and CRM-triggered automation — for organisations where a missed transactional message is never just an inconvenience." />
+  <meta name="description" content="Event-driven message orchestration, cross-channel failover with retry logic, per-message delivery verification, and CRM-triggered automation for organisations where a missed transactional message is never just an inconvenience." />
   <meta name="keywords" content="enterprise transactional messaging, event-driven messaging, CRM triggered SMS, cross-channel failover messaging, delivery verification messaging, transactional SMS platform, OTP delivery, order notification platform, automated transactional communications" />
   <link rel="canonical" href="https://kaptea.vercel.app/enterprise-transactional-messaging" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Enterprise Transactional Messaging — Kaptea Pronto" />
-  <meta property="og:description" content="Event-driven orchestration, cross-channel failover, delivery verification, and CRM-triggered automation for enterprises where transactional messages must arrive — every time." />
+  <meta property="og:title" content="Enterprise Transactional Messaging | Kaptea Pronto" />
+  <meta property="og:description" content="Event-driven orchestration, cross-channel failover, delivery verification, and CRM-triggered automation for enterprises where transactional messages must arrive every time." />
   <meta property="og:url" content="https://kaptea.vercel.app/enterprise-transactional-messaging.html" />
   <meta property="og:site_name" content="Kaptea" />
 
@@ -30,7 +30,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <!-- AI / LLM -->
-  <meta name="ai-content-declaration" content="Kaptea Pronto for Enterprise Transactional Messaging. Event-driven message orchestration — CRM and system events trigger sends automatically via REST API with no manual campaign setup. Cross-channel failover with retry logic — up to 5 retry attempts with exponential backoff, automatic cascade from SMS to WhatsApp to Email to RCS when primary channel fails. Per-message delivery verification — real-time delivery status per recipient (Queued, Sent, Delivered, Bounced, Failed) with event streaming to Slack, PagerDuty, Datadog, and 11 other destinations. CRM-triggered automation — native integration with Salesforce, Dynamics 365, and specialist platforms. Centralised governance — brand-safe template management, approval workflows, send-limit controls. ISO 27001:2022 certified. CREST certified. Dedicated instance live in days." />
+  <meta name="ai-content-declaration" content="Kaptea Pronto for Enterprise Transactional Messaging. Event-driven message orchestration: CRM and system events trigger sends automatically via REST API with no manual campaign setup. Cross-channel failover with retry logic: up to 5 retry attempts with exponential backoff, automatic cascade from SMS to WhatsApp to Email to RCS when primary channel fails. Per-message delivery verification: real-time delivery status per recipient (Queued, Sent, Delivered, Bounced, Failed) with event streaming to Slack, PagerDuty, Datadog, and 11 other destinations. CRM-triggered automation: native integration with Salesforce, Dynamics 365, and specialist platforms. Centralised governance: brand-safe template management, approval workflows, send-limit controls. ISO 27001:2022 certified. CREST certified. Dedicated instance live in days." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -41,7 +41,7 @@
         "@type": "WebPage",
         "@id": "https://kaptea.vercel.app/enterprise-transactional-messaging.html",
         "url": "https://kaptea.vercel.app/enterprise-transactional-messaging.html",
-        "name": "Enterprise Transactional Messaging — Kaptea Pronto",
+        "name": "Enterprise Transactional Messaging | Kaptea Pronto",
         "description": "Event-driven message orchestration, cross-channel failover with retry logic, per-message delivery verification, and CRM-triggered automation for enterprises where transactional messages must arrive every time.",
         "isPartOf": { "@id": "https://kaptea.vercel.app/" },
         "breadcrumb": {
@@ -62,7 +62,7 @@
             "name": "What is the difference between transactional and marketing messaging in Pronto?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Transactional messages are triggered by a specific event — an order placed, a payment processed, a fraud alert triggered, an appointment confirmed — and carry information the recipient needs right now. They are time-sensitive and high-stakes. Marketing messages are batch sends driven by campaign logic. Pronto separates these workloads with priority queue management, ensuring transactional sends are never delayed by marketing batch volumes. Delivery verification, retry logic, and audit trails are configured specifically for transactional message requirements."
+              "text": "Transactional messages are triggered by a specific event (an order placed, a payment processed, a fraud alert triggered, an appointment confirmed) and carry information the recipient needs right now. They are time-sensitive and high-stakes. Marketing messages are batch sends driven by campaign logic. Pronto separates these workloads with priority queue management, ensuring transactional sends are never delayed by marketing batch volumes. Delivery verification, retry logic, and audit trails are configured specifically for transactional message requirements."
             }
           },
           {
@@ -70,7 +70,7 @@
             "name": "How does Pronto trigger sends from our CRM or backend system?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pronto integrates via REST API and pre-built connectors with Salesforce, Microsoft Dynamics 365, and specialist platforms. An event in your source system — order confirmed, payment received, account status changed, appointment scheduled — fires a webhook or API call to Pronto. Pronto processes the event, selects the appropriate approved template, resolves the recipient's preferred channel, and dispatches the message. No manual campaign setup. No human in the loop. Configuration is done once; every subsequent event is handled automatically."
+              "text": "Pronto integrates via REST API and pre-built connectors with Salesforce, Microsoft Dynamics 365, and specialist platforms. An event in your source system (order confirmed, payment received, account status changed, appointment scheduled) fires a webhook or API call to Pronto. Pronto processes the event, selects the appropriate approved template, resolves the recipient's preferred channel, and dispatches the message. No manual campaign setup. No human in the loop. Configuration is done once; every subsequent event is handled automatically."
             }
           },
           {
@@ -78,7 +78,7 @@
             "name": "What happens if a transactional message fails to deliver?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pronto retries failed delivery attempts up to 5 times with exponential backoff, starting at 20 seconds between retries. If the primary channel fails after all retries, the message automatically cascades to the next configured channel — SMS to WhatsApp, WhatsApp to Email, Email to RCS — until delivery is confirmed or all channels are exhausted. Every attempt is logged with a diagnostic reason. A message.failed event fires to your configured streaming destinations — Slack, PagerDuty, Datadog — so your team is notified without having to monitor the platform manually."
+              "text": "Pronto retries failed delivery attempts up to 5 times with exponential backoff, starting at 20 seconds between retries. If the primary channel fails after all retries, the message automatically cascades to the next configured channel (SMS to WhatsApp, WhatsApp to Email, Email to RCS) until delivery is confirmed or all channels are exhausted. Every attempt is logged with a diagnostic reason. A message.failed event fires to your configured streaming destinations (Slack, PagerDuty, Datadog) so your team is notified without having to monitor the platform manually."
             }
           },
           {
@@ -86,7 +86,7 @@
             "name": "How does Pronto verify that a transactional message was delivered?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pronto tracks per-recipient delivery status in real time — Queued, Sent, Delivered, Bounced, Failed — using provider callbacks from SMS carriers, WhatsApp, and SendGrid. For regulated industries where proof of delivery is a compliance requirement, this provides an exportable per-message audit trail with timestamp, channel, delivery status, and content version. Event streaming allows delivery events to be pushed in real time to your monitoring systems or CRM so the record of delivery lives alongside the original transaction."
+              "text": "Pronto tracks per-recipient delivery status in real time (Queued, Sent, Delivered, Bounced, Failed) using provider callbacks from SMS carriers, WhatsApp, and SendGrid. For regulated industries where proof of delivery is a compliance requirement, this provides an exportable per-message audit trail with timestamp, channel, delivery status, and content version. Event streaming allows delivery events to be pushed in real time to your monitoring systems or CRM so the record of delivery lives alongside the original transaction."
             }
           },
           {
@@ -94,7 +94,7 @@
             "name": "Can Pronto separate transactional sends from marketing campaigns to avoid interference?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Pronto uses priority queue separation to ensure transactional messages — fraud alerts, OTP codes, order confirmations, appointment reminders — are never queued behind marketing batch sends. When your marketing team runs a large campaign at the same time a fraud alert needs to reach a customer within seconds, the transactional message takes priority. Both workloads run through the same platform with full governance — the priority model ensures critical messages are never delayed by volume."
+              "text": "Yes. Pronto uses priority queue separation to ensure transactional messages (fraud alerts, OTP codes, order confirmations, appointment reminders) are never queued behind marketing batch sends. When your marketing team runs a large campaign at the same time a fraud alert needs to reach a customer within seconds, the transactional message takes priority. Both workloads run through the same platform with full governance; the priority model ensures critical messages are never delayed by volume."
             }
           },
           {
@@ -102,7 +102,7 @@
             "name": "Which industries use Pronto for enterprise transactional messaging?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Financial services firms use it for OTP delivery, fraud alerts, and account notifications — where a missed message creates customer exposure and regulatory risk. Retail and ecommerce operators use it for order confirmations, dispatch alerts, and delivery notifications at scale. Healthcare organisations use it for appointment reminders and patient notifications. Utilities and energy operators use it for billing notifications and outage updates. Postal and logistics operators use it for parcel tracking and delivery confirmation across millions of items per day."
+              "text": "Financial services firms use it for OTP delivery, fraud alerts, and account notifications, where a missed message creates customer exposure and regulatory risk. Retail and ecommerce operators use it for order confirmations, dispatch alerts, and delivery notifications at scale. Healthcare organisations use it for appointment reminders and patient notifications. Utilities and energy operators use it for billing notifications and outage updates. Postal and logistics operators use it for parcel tracking and delivery confirmation across millions of items per day."
             }
           }
         ]
@@ -679,7 +679,7 @@
         <span>Enterprise Transactional Messaging</span>
       </div>
       <h1>A transactional message that doesn't arrive <span>isn't just a missed notification.</span></h1>
-      <p class="hero-sub">A fraud alert that goes undelivered. An OTP that never reaches the customer. An order confirmation that arrives three hours late. Transactional messages carry real consequence when they fail. Pronto ensures they don't — with event-driven automation, cross-channel failover, and per-message delivery verification built in from the start.</p>
+      <p class="hero-sub">A fraud alert that goes undelivered. An OTP that never reaches the customer. An order confirmation that arrives three hours late. Transactional messages carry real consequence when they fail. Pronto ensures they don't, with event-driven automation, cross-channel failover, and per-message delivery verification built in from the start.</p>
       <div class="hero-pills">
         <span class="hero-pill">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -720,7 +720,7 @@
 <section class="scenarios-strip" aria-label="Where transactional messaging is high-stakes">
   <div class="scenarios-inner">
     <div class="scenarios-label">Where the stakes are highest</div>
-    <p class="scenarios-title">Transactional messages aren't campaigns. They're commitments — triggered by a real event, expected by the recipient, and consequential when they fail.</p>
+    <p class="scenarios-title">Transactional messages aren't campaigns. They're commitments, triggered by a real event, expected by the recipient, and consequential when they fail.</p>
     <div class="scenarios-grid">
 
       <a href="financial-services" class="scenario-card">
@@ -728,7 +728,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
         </div>
         <h4>OTP &amp; Fraud Alerts</h4>
-        <p>Authentication codes and fraud notifications that must arrive within seconds — not minutes</p>
+        <p>Authentication codes and fraud notifications that must arrive within seconds, not minutes</p>
       </a>
 
       <a href="retail-ecommerce" class="scenario-card">
@@ -736,7 +736,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
         </div>
         <h4>Order &amp; Delivery Notifications</h4>
-        <p>Confirmation, dispatch, out-for-delivery, and delivered — expected by every customer on every order</p>
+        <p>Confirmation, dispatch, out-for-delivery, and delivered: expected by every customer on every order</p>
       </a>
 
       <a href="healthcare" class="scenario-card">
@@ -744,7 +744,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </div>
         <h4>Appointment Reminders</h4>
-        <p>Patient notifications that reduce DNA rates — reliably delivered across SMS, WhatsApp, and Email</p>
+        <p>Patient notifications that reduce DNA rates, reliably delivered across SMS, WhatsApp, and Email</p>
       </a>
 
       <a href="utilities-energy" class="scenario-card">
@@ -773,14 +773,14 @@
 ═══════════════════════════════ -->
 <section class="challenge">
   <div class="challenge-inner">
-    <h2>Why enterprise transactional messaging fails — and why it matters when it does</h2>
+    <h2>Why enterprise transactional messaging fails, and why it matters when it does</h2>
     <div class="challenge-grid">
 
       <div class="challenge-card">
         <div class="challenge-num">01</div>
         <div>
-          <h3>Silent delivery failure — messages appear sent but never arrive</h3>
-          <p>The most dangerous transactional messaging failure isn't a visible error. It's a message that shows as sent in your platform, is logged as dispatched in your CRM, but never reaches the recipient. No alert fires. No retry triggers. The customer never gets their fraud warning or OTP. Nobody on your team knows until the complaint comes in — or the regulator asks.</p>
+          <h3>Silent delivery failure: messages appear sent but never arrive</h3>
+          <p>The most dangerous transactional messaging failure isn't a visible error. It's a message that shows as sent in your platform, is logged as dispatched in your CRM, but never reaches the recipient. No alert fires. No retry triggers. The customer never gets their fraud warning or OTP. Nobody on your team knows until the complaint comes in, or the regulator asks.</p>
         </div>
       </div>
 
@@ -788,7 +788,7 @@
         <div class="challenge-num">02</div>
         <div>
           <h3>CRM events trigger manual processes instead of automatic sends</h3>
-          <p>A payment clears, an order ships, an appointment is booked — and somewhere, a person has to build a campaign, export a contact list, and press send. At low volumes this is inconvenient. At scale it's unsustainable, error-prone, and slow. The gap between when the event happens and when the customer hears about it is filled with manual effort that adds latency and risk to every transactional touchpoint.</p>
+          <p>A payment clears, an order ships, an appointment is booked, and somewhere a person has to build a campaign, export a contact list, and press send. At low volumes this is inconvenient. At scale it's unsustainable, error-prone, and slow. The gap between when the event happens and when the customer hears about it is filled with manual effort that adds latency and risk to every transactional touchpoint.</p>
         </div>
       </div>
 
@@ -796,7 +796,7 @@
         <div class="challenge-num">03</div>
         <div>
           <h3>A single carrier outage stops all transactional communications</h3>
-          <p>When your transactional messaging runs through a single SMS provider, that provider's availability is your availability. A 30-minute carrier outage during peak hours means thousands of order confirmations, OTP codes, and fraud alerts simply don't arrive. With no automatic failover to a secondary carrier or alternative channel, there's no safety net — and no way to know which recipients were affected until the damage is done.</p>
+          <p>When your transactional messaging runs through a single SMS provider, that provider's availability is your availability. A 30-minute carrier outage during peak hours means thousands of order confirmations, OTP codes, and fraud alerts simply don't arrive. With no automatic failover to a secondary carrier or alternative channel, there's no safety net and no way to know which recipients were affected until the damage is done.</p>
         </div>
       </div>
 
@@ -804,7 +804,7 @@
         <div class="challenge-num">04</div>
         <div>
           <h3>No proof of delivery when regulators or customers ask</h3>
-          <p>For regulated industries, a transactional message isn't just a customer communication — it's a compliance artefact. FCA rules on fraud alerts, GDPR requirements on consent communications, ORR obligations on passenger notifications — all carry an implicit expectation that delivery can be proven. When the evidence trail lives in a provider dashboard with 30-day retention and no audit export, that proof simply isn't there.</p>
+          <p>For regulated industries, a transactional message isn't just a customer communication; it's a compliance artefact. FCA rules on fraud alerts, GDPR requirements on consent communications, and ORR obligations on passenger notifications all carry an implicit expectation that delivery can be proven. When the evidence trail lives in a provider dashboard with 30-day retention and no audit export, that proof simply isn't there.</p>
         </div>
       </div>
 
@@ -827,13 +827,13 @@
         <p>"Every order confirmation, dispatch notification, and delivery update requires someone to manually set up a send. We have thousands of these a day. The marketing team is running them between campaign work. Messages go out late, we miss events entirely, and the process just doesn't scale."</p>
       </div>
       <div class="solution-answer">
-        <h3>Event-driven orchestration — triggered by your systems, not your team</h3>
-        <p>Pronto integrates with Salesforce, Microsoft Dynamics 365, and specialist platforms via REST API and webhook. An event in your source system — order placed, payment confirmed, appointment booked, account status changed — fires directly to Pronto, which selects the approved template, resolves the recipient's preferred channel, and dispatches the message. No manual campaign. No human in the loop. Configuration is done once; every subsequent event is handled automatically, at any volume, at any hour.</p>
+        <h3>Event-driven orchestration: triggered by your systems, not your team</h3>
+        <p>Pronto integrates with Salesforce, Microsoft Dynamics 365, and specialist platforms via REST API and webhook. An event in your source system (order placed, payment confirmed, appointment booked, account status changed) fires directly to Pronto, which selects the approved template, resolves the recipient's preferred channel, and dispatches the message. No manual campaign. No human in the loop. Configuration is done once; every subsequent event is handled automatically, at any volume, at any hour.</p>
         <ul>
           <li>REST API and webhook integration with CRM and operational platforms</li>
-          <li>Event-to-send in seconds — no manual intervention per message</li>
+          <li>Event-to-send in seconds, with no manual intervention per message</li>
           <li>Template selection and personalisation handled automatically per event</li>
-          <li>Scales with event volume — no additional team resource required</li>
+          <li>Scales with event volume, with no additional team resource required</li>
         </ul>
         <a href="integration-api-framework" class="feature-link">See Integration &amp; API Framework →</a>
       </div>
@@ -846,12 +846,12 @@
         <p>"Our SMS provider had an outage last quarter for about 40 minutes. During that window, thousands of OTP codes and fraud alerts simply didn't get delivered. Some customers couldn't complete transactions. Others had fraudulent activity we couldn't alert them to fast enough. We had no fallback at all."</p>
       </div>
       <div class="solution-answer">
-        <h3>Cross-channel failover with retry logic — no silent failure</h3>
-        <p>Pronto monitors carrier delivery rates in real time. If a primary carrier falls below delivery threshold, the platform automatically reroutes to a secondary carrier within seconds. At the message level, failed delivery attempts are retried up to 5 times with exponential backoff. If the primary channel is exhausted, the message automatically cascades to the next configured channel — SMS to WhatsApp, WhatsApp to Email, Email to RCS — until delivery is confirmed. Every attempt is logged. A message.failed event fires to your monitoring systems if all retries are exhausted, so your team is notified without manual monitoring.</p>
+        <h3>Cross-channel failover with retry logic, no silent failure</h3>
+        <p>Pronto monitors carrier delivery rates in real time. If a primary carrier falls below delivery threshold, the platform automatically reroutes to a secondary carrier within seconds. At the message level, failed delivery attempts are retried up to 5 times with exponential backoff. If the primary channel is exhausted, the message automatically cascades to the next configured channel (SMS to WhatsApp, WhatsApp to Email, Email to RCS) until delivery is confirmed. Every attempt is logged. A message.failed event fires to your monitoring systems if all retries are exhausted, so your team is notified without manual monitoring.</p>
         <ul>
           <li>Real-time carrier monitoring with automatic rerouting on degradation</li>
           <li>Up to 5 retry attempts with exponential backoff per failed message</li>
-          <li>Cross-channel cascade — SMS → WhatsApp → Email → RCS automatically</li>
+          <li>Cross-channel cascade: SMS → WhatsApp → Email → RCS automatically</li>
           <li>Event streaming to Slack, PagerDuty, Datadog on message failure</li>
         </ul>
         <a href="delivery-resilience" class="feature-link">See Delivery &amp; Resilience →</a>
@@ -866,12 +866,12 @@
       </div>
       <div class="solution-answer">
         <h3>Per-message delivery verification with exportable audit trail</h3>
-        <p>Pronto tracks the status of every message at the recipient level in real time — Queued, Sent, Delivered, Bounced, Failed — using provider callbacks from SMS carriers, WhatsApp, and SendGrid. Delivery status is available in the platform dashboard and via event streaming to your CRM or monitoring tools the moment it changes. For regulated industries, audit logs are exportable as CSV — per-message sender identity, timestamp, channel, template version, and delivery status — providing complete compliance evidence without relying on provider dashboards with short retention windows.</p>
+        <p>Pronto tracks the status of every message at the recipient level in real time (Queued, Sent, Delivered, Bounced, Failed) using provider callbacks from SMS carriers, WhatsApp, and SendGrid. Delivery status is available in the platform dashboard and via event streaming to your CRM or monitoring tools the moment it changes. For regulated industries, audit logs are exportable as CSV with per-message sender identity, timestamp, channel, template version, and delivery status, providing complete compliance evidence without relying on provider dashboards with short retention windows.</p>
         <ul>
-          <li>Per-recipient status tracking — Queued, Sent, Delivered, Bounced, Failed</li>
+          <li>Per-recipient status tracking: Queued, Sent, Delivered, Bounced, Failed</li>
           <li>Real-time delivery callbacks from SMS carriers, WhatsApp, and SendGrid</li>
           <li>Event streaming to CRM or monitoring tools on every status change</li>
-          <li>Exportable audit log — full evidence trail for compliance submissions</li>
+          <li>Exportable audit log: full evidence trail for compliance submissions</li>
         </ul>
         <a href="delivery-resilience" class="feature-link">Explore Delivery &amp; Resilience →</a>
       </div>
@@ -884,13 +884,13 @@
         <p>"We have a central team managing transactional templates but local teams keep creating their own versions. Different wording, different sender names, sometimes wrong regulatory language. We can't have a fraud alert that says something different depending on which team sent it."</p>
       </div>
       <div class="solution-answer">
-        <h3>Centralised governance — consistent, compliant templates across every send</h3>
-        <p>Pronto's template management ensures that every transactional message — regardless of which team, system, or automation triggered it — uses approved content. Templates are created centrally through a draft-review-approve workflow. Compliance-critical fields are locked; personalisation fields are open within defined limits. Once published, templates are available to the divisions and automations configured to use them. No local override, no rogue version — every fraud alert, OTP, and order confirmation sends exactly what compliance approved.</p>
+        <h3>Centralised governance: consistent, compliant templates across every send</h3>
+        <p>Pronto's template management ensures that every transactional message, regardless of which team, system, or automation triggered it, uses approved content. Templates are created centrally through a draft-review-approve workflow. Compliance-critical fields are locked; personalisation fields are open within defined limits. Once published, templates are available to the divisions and automations configured to use them. No local override, no rogue version: every fraud alert, OTP, and order confirmation sends exactly what compliance approved.</p>
         <ul>
-          <li>Central template approval workflow — draft, review, approve, publish</li>
-          <li>Locked fields for regulatory language — can't be changed locally or by automation</li>
+          <li>Central template approval workflow: draft, review, approve, publish</li>
+          <li>Locked fields for regulatory language that can't be changed locally or by automation</li>
           <li>Full template version history with approver identity and timestamp</li>
-          <li>Priority queue separation — transactional sends never delayed by marketing batch</li>
+          <li>Priority queue separation: transactional sends never delayed by marketing batch</li>
         </ul>
         <a href="control-governance" class="feature-link">See Control &amp; Governance →</a>
       </div>
@@ -919,7 +919,7 @@
     </div>
     <div class="number-item">
       <h3>100%</h3>
-      <p>Per-message audit trail coverage — every send logged with delivery evidence</p>
+      <p>Per-message audit trail coverage: every send logged with delivery evidence</p>
     </div>
   </div>
 </section>
@@ -933,7 +933,7 @@
     <div>
       <div class="section-label" style="margin-bottom:16px;">Customer story</div>
       <p class="featured-quote">"At the volumes we operate, every parcel needs a notification and every notification needs to arrive. We can't have a carrier outage silencing millions of delivery updates or a manual process that can't keep up with daily dispatch volumes. Pronto gave us the automation to trigger every notification from our systems, the failover to ensure they get through, and the audit trail to prove delivery when it matters."</p>
-      <p class="featured-attribution"><strong>Head of Customer Experience</strong><br>National postal service operator — Public Sector &amp; Logistics</p>
+      <p class="featured-attribution"><strong>Head of Customer Experience</strong><br>National postal service operator, Public Sector &amp; Logistics</p>
     </div>
     <div class="featured-metrics">
       <div class="featured-metric">
@@ -942,11 +942,11 @@
       </div>
       <div class="featured-metric">
         <h4>Zero</h4>
-        <p>Manual campaign steps — every send triggered automatically from dispatch systems</p>
+        <p>Zero manual campaign steps: every send triggered automatically from dispatch systems</p>
       </div>
       <div class="featured-metric">
         <h4>100%</h4>
-        <p>Audit trail coverage — per-message delivery evidence for every notification</p>
+        <p>Audit trail coverage: per-message delivery evidence for every notification</p>
       </div>
       <div class="featured-metric">
         <h4>Days</h4>
@@ -970,7 +970,7 @@
 
       <div class="voice-card">
         <div class="v-stars">★★★★★</div>
-        <div class="v-quote">"Our new website comms went out to <em>over a million customers</em>. We have a 99% sender reputation score. We're seen as quite reliable. If you need something really solid, compliant, secure — it's probably the best."</div>
+        <div class="v-quote">"Our new website comms went out to <em>over a million customers</em>. We have a 99% sender reputation score. We're seen as quite reliable. If you need something really solid, compliant, secure, it's probably the best."</div>
         <div class="v-attr">
           <div class="v-avatar">MM</div>
           <div>
@@ -982,7 +982,7 @@
 
       <div class="voice-card">
         <div class="v-stars">★★★★★</div>
-        <div class="v-quote">"Previously with our prior email platform, any template you wanted to do, you had to hard-code. The Pronto designer tool — <em>it was a game changer</em>. I don't have to do anything to manage our database. That's probably the easiest thing."</div>
+        <div class="v-quote">"Previously with our prior email platform, any template you wanted to do, you had to hard-code. The Pronto designer tool, <em>it was a game changer</em>. I don't have to do anything to manage our database. That's probably the easiest thing."</div>
         <div class="v-attr">
           <div class="v-avatar">MM</div>
           <div>
@@ -1016,48 +1016,48 @@
   <div class="industries-inner">
     <div class="section-label">Where this applies</div>
     <h2>Industries where transactional messaging carries real consequence</h2>
-    <p>In every industry below, a missed or delayed transactional message has a direct impact — on customers, on compliance, or on revenue. The infrastructure has to match the stakes.</p>
+    <p>In every industry below, a missed or delayed transactional message has a direct impact on customers, on compliance, or on revenue. The infrastructure has to match the stakes.</p>
     <div class="industries-grid">
 
       <a href="financial-services" class="industry-card">
         <div class="industry-card-label">Industry</div>
         <h3>Financial Services</h3>
-        <p>OTP delivery, fraud alerts, and account notifications — where a missed message creates customer exposure, regulatory risk, and potential liability.</p>
+        <p>OTP delivery, fraud alerts, and account notifications where a missed message creates customer exposure, regulatory risk, and potential liability.</p>
         <span class="industry-card-arrow">See the solution →</span>
       </a>
 
       <a href="retail-ecommerce" class="industry-card">
         <div class="industry-card-label">Industry</div>
         <h3>Retail &amp; Ecommerce</h3>
-        <p>Order confirmations, dispatch alerts, and delivery notifications at scale — triggering automatically from fulfilment systems with full failover.</p>
+        <p>Order confirmations, dispatch alerts, and delivery notifications at scale, triggering automatically from fulfilment systems with full failover.</p>
         <span class="industry-card-arrow">See the solution →</span>
       </a>
 
       <a href="healthcare" class="industry-card">
         <div class="industry-card-label">Industry</div>
         <h3>Healthcare</h3>
-        <p>Appointment reminders, patient notifications, and care pathway communications — reliably delivered with compliance-ready audit trails.</p>
+        <p>Appointment reminders, patient notifications, and care pathway communications, reliably delivered with compliance-ready audit trails.</p>
         <span class="industry-card-arrow">See the solution →</span>
       </a>
 
       <a href="utilities-energy" class="industry-card">
         <div class="industry-card-label">Industry</div>
         <h3>Utilities &amp; Energy</h3>
-        <p>Billing notifications, meter alerts, and outage updates triggered by network management and billing systems — automatically, at scale.</p>
+        <p>Billing notifications, meter alerts, and outage updates triggered by network management and billing systems, automatically, at scale.</p>
         <span class="industry-card-arrow">See the solution →</span>
       </a>
 
       <a href="travel-transport" class="industry-card">
         <div class="industry-card-label">Industry</div>
         <h3>Travel &amp; Transport</h3>
-        <p>Booking confirmations, itinerary updates, and check-in notifications — CRM-triggered and delivered with cross-channel failover.</p>
+        <p>Booking confirmations, itinerary updates, and check-in notifications, CRM-triggered and delivered with cross-channel failover.</p>
         <span class="industry-card-arrow">See the solution →</span>
       </a>
 
       <a href="public-sector" class="industry-card">
         <div class="industry-card-label">Industry</div>
         <h3>Public Sector</h3>
-        <p>Citizen notifications, service alerts, and compliance communications — with the audit trail that regulated public organisations require.</p>
+        <p>Citizen notifications, service alerts, and compliance communications, with the audit trail that regulated public organisations require.</p>
         <span class="industry-card-arrow">See the solution →</span>
       </a>
 
@@ -1080,7 +1080,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3>ISO 27001:2022</h3>
-        <p>Independently certified information security management — audited annually.</p>
+        <p>Independently certified information security management, audited annually.</p>
       </div>
 
       <div class="trust-card">
@@ -1096,7 +1096,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
         <h3>Dedicated Instance</h3>
-        <p>Your own isolated environment — no shared infrastructure, no data co-mingling.</p>
+        <p>Your own isolated environment, with no shared infrastructure and no data co-mingling.</p>
       </div>
 
       <div class="trust-card">
@@ -1104,7 +1104,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
         <h3>EU &amp; US Data Residency</h3>
-        <p>Choose where your data lives — UK, EU, or US — for compliance and data sovereignty.</p>
+        <p>Choose where your data lives (UK, EU, or US) for compliance and data sovereignty.</p>
       </div>
 
     </div>
@@ -1128,7 +1128,7 @@
           What is the difference between transactional and marketing messaging in Pronto?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a1" hidden>Transactional messages are triggered by a specific event — an order placed, a payment processed, a fraud alert triggered, an appointment confirmed — and carry information the recipient needs right now. They are time-sensitive and high-stakes. Marketing messages are batch sends driven by campaign logic. Pronto separates these workloads with priority queue management, ensuring transactional sends are never delayed by marketing batch volumes. Delivery verification, retry logic, and audit trails are configured specifically for transactional message requirements.</div>
+        <div class="faq-a" id="faq-a1" hidden>Transactional messages are triggered by a specific event (an order placed, a payment processed, a fraud alert triggered, an appointment confirmed) and carry information the recipient needs right now. They are time-sensitive and high-stakes. Marketing messages are batch sends driven by campaign logic. Pronto separates these workloads with priority queue management, ensuring transactional sends are never delayed by marketing batch volumes. Delivery verification, retry logic, and audit trails are configured specifically for transactional message requirements.</div>
       </div>
 
       <div class="faq-item">
@@ -1136,7 +1136,7 @@
           How does Pronto trigger sends from our CRM or backend system?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a2" hidden>Pronto integrates via REST API and pre-built connectors with Salesforce, Microsoft Dynamics 365, and specialist platforms. An event in your source system — order confirmed, payment received, account status changed, appointment scheduled — fires a webhook or API call to Pronto. Pronto processes the event, selects the appropriate approved template, resolves the recipient's preferred channel, and dispatches the message. No manual campaign setup. No human in the loop. Configuration is done once; every subsequent event is handled automatically.</div>
+        <div class="faq-a" id="faq-a2" hidden>Pronto integrates via REST API and pre-built connectors with Salesforce, Microsoft Dynamics 365, and specialist platforms. An event in your source system (order confirmed, payment received, account status changed, appointment scheduled) fires a webhook or API call to Pronto. Pronto processes the event, selects the appropriate approved template, resolves the recipient's preferred channel, and dispatches the message. No manual campaign setup. No human in the loop. Configuration is done once; every subsequent event is handled automatically.</div>
       </div>
 
       <div class="faq-item">
@@ -1144,7 +1144,7 @@
           What happens if a transactional message fails to deliver?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a3" hidden>Pronto retries failed delivery attempts up to 5 times with exponential backoff, starting at 20 seconds between retries. If the primary channel fails after all retries, the message automatically cascades to the next configured channel — SMS to WhatsApp, WhatsApp to Email, Email to RCS — until delivery is confirmed or all channels are exhausted. Every attempt is logged with a diagnostic reason. A message.failed event fires to your configured streaming destinations — Slack, PagerDuty, Datadog — so your team is notified without having to monitor the platform manually.</div>
+        <div class="faq-a" id="faq-a3" hidden>Pronto retries failed delivery attempts up to 5 times with exponential backoff, starting at 20 seconds between retries. If the primary channel fails after all retries, the message automatically cascades to the next configured channel (SMS to WhatsApp, WhatsApp to Email, Email to RCS) until delivery is confirmed or all channels are exhausted. Every attempt is logged with a diagnostic reason. A message.failed event fires to your configured streaming destinations (Slack, PagerDuty, Datadog) so your team is notified without having to monitor the platform manually.</div>
       </div>
 
       <div class="faq-item">
@@ -1152,7 +1152,7 @@
           How does Pronto verify that a transactional message was delivered?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a4" hidden>Pronto tracks per-recipient delivery status in real time — Queued, Sent, Delivered, Bounced, Failed — using provider callbacks from SMS carriers, WhatsApp, and SendGrid. For regulated industries where proof of delivery is a compliance requirement, this provides an exportable per-message audit trail with timestamp, channel, delivery status, and content version. Event streaming allows delivery events to be pushed in real time to your monitoring systems or CRM so the record of delivery lives alongside the original transaction.</div>
+        <div class="faq-a" id="faq-a4" hidden>Pronto tracks per-recipient delivery status in real time (Queued, Sent, Delivered, Bounced, Failed) using provider callbacks from SMS carriers, WhatsApp, and SendGrid. For regulated industries where proof of delivery is a compliance requirement, this provides an exportable per-message audit trail with timestamp, channel, delivery status, and content version. Event streaming allows delivery events to be pushed in real time to your monitoring systems or CRM so the record of delivery lives alongside the original transaction.</div>
       </div>
 
       <div class="faq-item">
@@ -1160,7 +1160,7 @@
           Can Pronto separate transactional sends from marketing campaigns to avoid interference?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a5" hidden>Yes. Pronto uses priority queue separation to ensure transactional messages — fraud alerts, OTP codes, order confirmations, appointment reminders — are never queued behind marketing batch sends. When your marketing team runs a large campaign at the same time a fraud alert needs to reach a customer within seconds, the transactional message takes priority. Both workloads run through the same platform with full governance — the priority model ensures critical messages are never delayed by volume.</div>
+        <div class="faq-a" id="faq-a5" hidden>Yes. Pronto uses priority queue separation to ensure transactional messages (fraud alerts, OTP codes, order confirmations, appointment reminders) are never queued behind marketing batch sends. When your marketing team runs a large campaign at the same time a fraud alert needs to reach a customer within seconds, the transactional message takes priority. Both workloads run through the same platform with full governance; the priority model ensures critical messages are never delayed by volume.</div>
       </div>
 
       <div class="faq-item">
@@ -1168,7 +1168,7 @@
           Which industries use Pronto for enterprise transactional messaging?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a6" hidden>Financial services firms use it for OTP delivery, fraud alerts, and account notifications — where a missed message creates customer exposure and regulatory risk. Retail and ecommerce operators use it for order confirmations, dispatch alerts, and delivery notifications at scale. Healthcare organisations use it for appointment reminders and patient notifications. Utilities and energy operators use it for billing notifications and outage updates. Postal and logistics operators use it for parcel tracking and delivery confirmation across millions of items per day.</div>
+        <div class="faq-a" id="faq-a6" hidden>Financial services firms use it for OTP delivery, fraud alerts, and account notifications where a missed message creates customer exposure and regulatory risk. Retail and ecommerce operators use it for order confirmations, dispatch alerts, and delivery notifications at scale. Healthcare organisations use it for appointment reminders and patient notifications. Utilities and energy operators use it for billing notifications and outage updates. Postal and logistics operators use it for parcel tracking and delivery confirmation across millions of items per day.</div>
       </div>
 
     </div>
@@ -1187,7 +1187,7 @@
 
       <a href="emergency-surge-communications" class="related-card">
         <h3>Emergency &amp; Surge Communications</h3>
-        <p>Storm-grade IVR, carrier-proof outbound scaling, and cross-channel failover — for the moment messaging infrastructure is tested hardest.</p>
+        <p>Storm-grade IVR, carrier-proof outbound scaling, and cross-channel failover for the moment messaging infrastructure is tested hardest.</p>
         <span class="related-arrow">Learn more →</span>
       </a>
 
