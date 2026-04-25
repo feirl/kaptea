@@ -165,10 +165,10 @@
               <div class="industry-block">
                 <div class="industry-title"><a href="financial-services">Financial Services</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Fraud &amp; transaction alerts</li>
-                  <li class="mega-detail">Secure authentication messaging</li>
-                  <li class="mega-detail">Regulatory &amp; compliance communications</li>
-                  <li class="mega-detail">Multi-channel customer notifications</li>
+                  <li class="mega-detail">Fraud event journeys with live agent escalation</li>
+                  <li class="mega-detail">Regulatory urgent comms &amp; breach notifications</li>
+                  <li class="mega-detail">Transactional alerts with cross-channel failover</li>
+                  <li class="mega-detail">Per-message audit for FCA, MiFID II &amp; GDPR</li>
                   <li class="mega-detail">Contact centre orchestration</li>
                 </ul>
               </div>
@@ -176,21 +176,21 @@
               <div class="industry-block">
                 <div class="industry-title"><a href="utilities-energy">Utilities &amp; Energy</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Storm &amp; outage alerts</li>
-                  <li class="mega-detail">Surge IVR orchestration</li>
-                  <li class="mega-detail">Load shedding communications</li>
-                  <li class="mega-detail">Cross-channel failover</li>
-                  <li class="mega-detail">Public safety messaging at scale</li>
+                  <li class="mega-detail">Outage journey orchestration &amp; restoration updates</li>
+                  <li class="mega-detail">Storm &amp; mass-outage CSV dispatch with escalation</li>
+                  <li class="mega-detail">Meter, billing &amp; rate-change notifications</li>
+                  <li class="mega-detail">Surge IVR for critical events</li>
+                  <li class="mega-detail">Load shedding &amp; public safety messaging</li>
                 </ul>
               </div>
 
               <div class="industry-block">
                 <div class="industry-title"><a href="healthcare">Healthcare</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Appointment &amp; patient messaging</li>
-                  <li class="mega-detail">Secure two-way communications</li>
-                  <li class="mega-detail">Emergency public health alerts</li>
-                  <li class="mega-detail">Compliance-driven communication workflows</li>
+                  <li class="mega-detail">Patient pathway journeys with clinician escalation</li>
+                  <li class="mega-detail">Drug recall &amp; public health emergency dispatch</li>
+                  <li class="mega-detail">Appointment, prescription &amp; secure messaging</li>
+                  <li class="mega-detail">MHRA, EMA &amp; FDA-aware compliance</li>
                   <li class="mega-detail">Care pathway notifications</li>
                 </ul>
               </div>
@@ -198,33 +198,33 @@
               <div class="industry-block">
                 <div class="industry-title"><a href="travel-transport">Travel &amp; Transport</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Real-time disruption &amp; delay alerts</li>
-                  <li class="mega-detail">Passenger &amp; operational notifications</li>
-                  <li class="mega-detail">High-volume delivery communications</li>
-                  <li class="mega-detail">Cross-channel customer engagement</li>
-                  <li class="mega-detail">Logistics &amp; dispatch messaging</li>
+                  <li class="mega-detail">Disruption-driven rebook &amp; refund journeys</li>
+                  <li class="mega-detail">Mass disruption &amp; safety alert dispatch</li>
+                  <li class="mega-detail">Booking confirmations &amp; gate change comms</li>
+                  <li class="mega-detail">Real-time passenger updates</li>
+                  <li class="mega-detail">Logistics &amp; operational messaging</li>
                 </ul>
               </div>
 
               <div class="industry-block">
                 <div class="industry-title"><a href="public-sector">Public Sector</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Citizen notifications</li>
-                  <li class="mega-detail">Emergency &amp; public safety alerts</li>
-                  <li class="mega-detail">Regulated audit-ready messaging</li>
-                  <li class="mega-detail">Multi-channel government communications</li>
-                  <li class="mega-detail">Surge communications for critical events</li>
+                  <li class="mega-detail">Citizen service journeys with conversation intelligence</li>
+                  <li class="mega-detail">Emergency public alerts &amp; citizen recall</li>
+                  <li class="mega-detail">High-volume regulated notifications</li>
+                  <li class="mega-detail">Multi-department divisional governance</li>
+                  <li class="mega-detail">Audit-ready messaging at national scale</li>
                 </ul>
               </div>
 
               <div class="industry-block">
                 <div class="industry-title"><a href="retail-ecommerce">Retail, Ecommerce &amp; Automotive</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Order &amp; delivery updates</li>
-                  <li class="mega-detail">Vehicle warranty &amp; product recall</li>
+                  <li class="mega-detail">Browse-to-delivery customer journeys</li>
+                  <li class="mega-detail">Vehicle warranty &amp; product recall dispatch</li>
+                  <li class="mega-detail">Order &amp; dispatch transactional comms</li>
                   <li class="mega-detail">Peak event surge messaging</li>
                   <li class="mega-detail">Distributed store, depot &amp; dealer communications</li>
-                  <li class="mega-detail">CRM-triggered transactional messaging</li>
                 </ul>
               </div>
 
