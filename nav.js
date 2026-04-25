@@ -165,10 +165,10 @@
               <div class="industry-block">
                 <div class="industry-title"><a href="financial-services">Financial Services</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Fraud event journeys with live agent escalation</li>
-                  <li class="mega-detail">Regulatory urgent comms &amp; breach notifications</li>
-                  <li class="mega-detail">Transactional alerts with cross-channel failover</li>
-                  <li class="mega-detail">Per-message audit for FCA, MiFID II &amp; GDPR</li>
+                  <li class="mega-detail">Fraud event journeys</li>
+                  <li class="mega-detail">Urgent regulatory comms</li>
+                  <li class="mega-detail">Transactional alerts</li>
+                  <li class="mega-detail">FCA &amp; MiFID II audit</li>
                   <li class="mega-detail">Contact centre orchestration</li>
                 </ul>
               </div>
@@ -176,21 +176,21 @@
               <div class="industry-block">
                 <div class="industry-title"><a href="utilities-energy">Utilities &amp; Energy</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Outage journey orchestration &amp; restoration updates</li>
-                  <li class="mega-detail">Storm &amp; mass-outage CSV dispatch with escalation</li>
-                  <li class="mega-detail">Meter, billing &amp; rate-change notifications</li>
-                  <li class="mega-detail">Surge IVR for critical events</li>
-                  <li class="mega-detail">Load shedding &amp; public safety messaging</li>
+                  <li class="mega-detail">Outage journey orchestration</li>
+                  <li class="mega-detail">Storm &amp; outage dispatch</li>
+                  <li class="mega-detail">Meter &amp; billing notifications</li>
+                  <li class="mega-detail">Surge IVR routing</li>
+                  <li class="mega-detail">Public safety messaging</li>
                 </ul>
               </div>
 
               <div class="industry-block">
                 <div class="industry-title"><a href="healthcare">Healthcare</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Patient pathway journeys with clinician escalation</li>
-                  <li class="mega-detail">Drug recall &amp; public health emergency dispatch</li>
-                  <li class="mega-detail">Appointment, prescription &amp; secure messaging</li>
-                  <li class="mega-detail">MHRA, EMA &amp; FDA-aware compliance</li>
+                  <li class="mega-detail">Patient pathway journeys</li>
+                  <li class="mega-detail">Drug recall dispatch</li>
+                  <li class="mega-detail">Appointment &amp; prescription comms</li>
+                  <li class="mega-detail">MHRA &amp; FDA compliance</li>
                   <li class="mega-detail">Care pathway notifications</li>
                 </ul>
               </div>
@@ -198,33 +198,33 @@
               <div class="industry-block">
                 <div class="industry-title"><a href="travel-transport">Travel &amp; Transport</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Disruption-driven rebook &amp; refund journeys</li>
-                  <li class="mega-detail">Mass disruption &amp; safety alert dispatch</li>
-                  <li class="mega-detail">Booking confirmations &amp; gate change comms</li>
+                  <li class="mega-detail">Disruption rebook journeys</li>
+                  <li class="mega-detail">Mass disruption alerts</li>
+                  <li class="mega-detail">Booking &amp; gate updates</li>
                   <li class="mega-detail">Real-time passenger updates</li>
-                  <li class="mega-detail">Logistics &amp; operational messaging</li>
+                  <li class="mega-detail">Logistics messaging</li>
                 </ul>
               </div>
 
               <div class="industry-block">
                 <div class="industry-title"><a href="public-sector">Public Sector</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Citizen service journeys with conversation intelligence</li>
-                  <li class="mega-detail">Emergency public alerts &amp; citizen recall</li>
-                  <li class="mega-detail">High-volume regulated notifications</li>
-                  <li class="mega-detail">Multi-department divisional governance</li>
-                  <li class="mega-detail">Audit-ready messaging at national scale</li>
+                  <li class="mega-detail">Citizen service journeys</li>
+                  <li class="mega-detail">Emergency public alerts</li>
+                  <li class="mega-detail">Regulated notifications</li>
+                  <li class="mega-detail">Divisional governance</li>
+                  <li class="mega-detail">Audit-ready messaging</li>
                 </ul>
               </div>
 
               <div class="industry-block">
                 <div class="industry-title"><a href="retail-ecommerce">Retail, Ecommerce &amp; Automotive</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Browse-to-delivery customer journeys</li>
-                  <li class="mega-detail">Vehicle warranty &amp; product recall dispatch</li>
-                  <li class="mega-detail">Order &amp; dispatch transactional comms</li>
-                  <li class="mega-detail">Peak event surge messaging</li>
-                  <li class="mega-detail">Distributed store, depot &amp; dealer communications</li>
+                  <li class="mega-detail">Browse-to-delivery journeys</li>
+                  <li class="mega-detail">Warranty &amp; recall dispatch</li>
+                  <li class="mega-detail">Order &amp; dispatch comms</li>
+                  <li class="mega-detail">Peak event surge</li>
+                  <li class="mega-detail">Store, depot &amp; dealer comms</li>
                 </ul>
               </div>
 
