@@ -20,9 +20,9 @@ Key credentials: ISO 27001 certified, Cyber Essentials Plus certified, CREST acc
 
 ## Solutions by Use Case
 
-- [Emergency & Surge Communications](https://kaptea.vercel.app/emergency-surge-communications): High-volume outbound alerting and inbound surge management for crisis events
-- [Distributed Messaging Governance](https://kaptea.vercel.app/distributed-messaging-governance): Centralised compliance and control for distributed teams and multi-location contact centres
-- [Enterprise Transactional Messaging](https://kaptea.vercel.app/enterprise-transactional-messaging): Triggered, personalised, high-volume transactional message delivery at scale
+- [Customer Journey Orchestration](https://kaptea.vercel.app/customer-journey-orchestration): End-to-end customer journeys on one platform. Workflows, dual-payload API enrichment, centralised template management, multi-channel dispatch, and live conversation intelligence with agent escalation. Compliance-first alternative to Airship and Braze for regulated industries.
+- [Urgent Messaging & Recall](https://kaptea.vercel.app/emergency-surge-communications): CSV-driven mass dispatch with multi-channel escalation (email to SMS to branded call) and regulator-ready audit. Built for warranty recalls, drug recalls, and time-critical regulatory communications. Branded calling lifts pickup rates by 30 to 50 percent.
+- [Transactional Communication](https://kaptea.vercel.app/enterprise-transactional-messaging): Layer Pronto on top of an existing transactional infrastructure (Twilio, SendGrid, equivalent). Adds drag-and-drop template management, ad-hoc multi-channel campaigns, sub-account billing granularity, and centralised compliance with distributed local execution.
 
 ## Industries
 

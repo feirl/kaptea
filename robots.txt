@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /_skeleton-solution
+Disallow: /_skeleton-feature
+Disallow: /_skeleton-solution.html
+Disallow: /_skeleton-feature.html
 
 Sitemap: https://kaptea.vercel.app/sitemap.xml

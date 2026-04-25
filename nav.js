@@ -121,50 +121,38 @@
             <div class="mega-panel-label">Use Cases</div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">01</span><a href="emergency-surge-communications">Emergency &amp; Surge Communications</a></div>
+              <div class="use-case-title"><span class="use-case-num">01</span><a href="customer-journey-orchestration">Customer Journey Orchestration</a></div>
               <ul class="mega-links">
-                <li class="mega-detail">Storm-grade IVR orchestration</li>
-                <li class="mega-detail">Surge-proof inbound routing</li>
-                <li class="mega-detail">High-volume outbound alert scaling</li>
-                <li class="mega-detail">Load shedding &amp; queue prioritisation</li>
-                <li class="mega-detail">Cross-channel failover under load</li>
-                <li class="mega-detail">AWS &amp; Azure resilience architecture</li>
+                <li class="mega-detail">End-to-end workflow engine</li>
+                <li class="mega-detail">Dual-payload API enrichment</li>
+                <li class="mega-detail">Centralised template management</li>
+                <li class="mega-detail">Conversation intelligence &amp; live escalation</li>
+                <li class="mega-detail">Branded sender &amp; branded calling</li>
+                <li class="mega-detail">Multi-channel: SMS, RCS, WhatsApp, Email, Voice</li>
               </ul>
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">02</span><a href="distributed-messaging-governance">Distributed Messaging Governance</a></div>
+              <div class="use-case-title"><span class="use-case-num">02</span><a href="emergency-surge-communications">Urgent Messaging &amp; Recall</a></div>
               <ul class="mega-links">
-                <li class="mega-detail">Role-based access &amp; SSO</li>
-                <li class="mega-detail">Division-level guardrails &amp; enforcement</li>
-                <li class="mega-detail">Brand-safe template management</li>
-                <li class="mega-detail">CRM-triggered transactional messaging</li>
-                <li class="mega-detail">Audit logging &amp; compliance oversight</li>
-                <li class="mega-detail">Cost-aware routing</li>
+                <li class="mega-detail">CSV upload for mass dispatch</li>
+                <li class="mega-detail">Email to SMS to branded call escalation</li>
+                <li class="mega-detail">Branded calling, 30-50% pickup uplift</li>
+                <li class="mega-detail">Per-message regulator-ready audit</li>
+                <li class="mega-detail">Warranty recall &amp; drug recall workflows</li>
+                <li class="mega-detail">FCA, MHRA, EMA, FDA-aware compliance</li>
               </ul>
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">03</span><a href="ivr-voice-orchestration">IVR &amp; Voice Orchestration</a></div>
+              <div class="use-case-title"><span class="use-case-num">03</span><a href="enterprise-transactional-messaging">Transactional Communication</a></div>
               <ul class="mega-links">
-                <li class="mega-detail">API-first IVR architecture</li>
-                <li class="mega-detail">CRM-integrated intelligent routing</li>
-                <li class="mega-detail">Queue orchestration &amp; callback management</li>
-                <li class="mega-detail">Complex rule &amp; workflow logic</li>
-                <li class="mega-detail">Load shedding &amp; surge handling</li>
-                <li class="mega-detail">Regulatory-safe migration from legacy IVR</li>
-              </ul>
-            </div>
-
-            <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">04</span><a href="enterprise-transactional-messaging">Enterprise Transactional Messaging</a></div>
-              <ul class="mega-links">
-                <li class="mega-detail">Event-driven message orchestration</li>
-                <li class="mega-detail">Cross-channel failover &amp; retry logic</li>
-                <li class="mega-detail">Delivery verification &amp; diagnostics</li>
-                <li class="mega-detail">CRM-triggered automation</li>
-                <li class="mega-detail">Centralised governance &amp; oversight</li>
-                <li class="mega-detail">Brand-safe template control</li>
+                <li class="mega-detail">Layer over existing transactional stack</li>
+                <li class="mega-detail">Drag-and-drop template management</li>
+                <li class="mega-detail">Sub-account billing granularity</li>
+                <li class="mega-detail">Centralised compliance, distributed execution</li>
+                <li class="mega-detail">Ad-hoc multi-channel campaigns</li>
+                <li class="mega-detail">Single audit trail across channels</li>
               </ul>
             </div>
           </div>
