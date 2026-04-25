@@ -173,10 +173,9 @@
       <div class="footer-col">
         <h4>Use Cases</h4>
         <ul>
-          <li><a href="emergency-surge-communications">Emergency &amp; Surge</a></li>
-          <li><a href="distributed-messaging-governance">Distributed Governance</a></li>
-          <li><a href="ivr-voice-orchestration">IVR &amp; Voice</a></li>
-          <li><a href="enterprise-transactional-messaging">Enterprise Transactional</a></li>
+          <li><a href="customer-journey-orchestration">Customer Journey Orchestration</a></li>
+          <li><a href="emergency-surge-communications">Urgent Messaging &amp; Recall</a></li>
+          <li><a href="enterprise-transactional-messaging">Transactional Communication</a></li>
         </ul>
       </div>
 
