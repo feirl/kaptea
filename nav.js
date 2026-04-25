@@ -218,13 +218,13 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="retail-ecommerce">Retail &amp; Ecommerce</a></div>
+                <div class="industry-title"><a href="retail-ecommerce">Retail, Ecommerce &amp; Automotive</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Order &amp; delivery updates</li>
+                  <li class="mega-detail">Vehicle warranty &amp; product recall</li>
                   <li class="mega-detail">Peak event surge messaging</li>
-                  <li class="mega-detail">Distributed store &amp; depot communications</li>
+                  <li class="mega-detail">Distributed store, depot &amp; dealer communications</li>
                   <li class="mega-detail">CRM-triggered transactional messaging</li>
-                  <li class="mega-detail">Post-purchase engagement</li>
                 </ul>
               </div>
 

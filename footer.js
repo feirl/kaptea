@@ -188,7 +188,7 @@
           <li><a href="healthcare">Healthcare</a></li>
           <li><a href="travel-transport">Travel &amp; Transport</a></li>
           <li><a href="public-sector">Public Sector</a></li>
-          <li><a href="retail-ecommerce">Retail &amp; Ecommerce</a></li>
+          <li><a href="retail-ecommerce">Retail, Ecommerce &amp; Automotive</a></li>
         </ul>
       </div>
 
