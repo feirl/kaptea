@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers at Kaptea | Build the platform regulated enterprises trust</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Join Kaptea: a boutique team building the compliance-first communications platform for regulated industries. Engineering, customer success, sales, and implementation roles." />
+  <meta name="keywords" content="Kaptea careers, jobs at Kaptea, Pronto platform careers, communications platform jobs, Twilio partner careers, Dublin tech jobs, regulated communications jobs" />
+  <link rel="canonical" href="https://kaptea.vercel.app/careers" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Careers at Kaptea | Build the platform regulated enterprises trust" />
+  <meta property="og:description" content="Join a boutique team building the compliance-first communications platform that regulated enterprises trust. Small enough to do real work, serious enough to ship to Tier-1 customers." />
+  <meta property="og:url" content="https://kaptea.vercel.app/careers" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23dc2727'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='20' font-weight='700' fill='white'%3EK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://kaptea.vercel.app/careers",
+    "url": "https://kaptea.vercel.app/careers",
+    "name": "Careers at Kaptea",
+    "description": "Join Kaptea: a boutique team building the compliance-first communications platform for regulated industries.",
+    "isPartOf": { "@id": "https://kaptea.vercel.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Company", "item": "https://kaptea.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Careers" }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .hero {
+      background: var(--kaptea-charcoal);
+      color: var(--kaptea-white);
+      padding: 88px 40px 80px;
+    }
+    .hero-inner { max-width: 760px; margin: 0 auto; }
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--kaptea-red);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.18;
+      margin-bottom: 20px;
+    }
+    .hero h1 em { color: var(--kaptea-red); font-style: normal; }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--kaptea-neutral-grey);
+      line-height: 1.65;
+      max-width: 620px;
+    }
+
+    .section { padding: 80px 40px; }
+    .section-inner { max-width: 1080px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--kaptea-red);
+      margin-bottom: 12px;
+    }
+    .section h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.25;
+      margin-bottom: 16px;
+      max-width: 720px;
+    }
+    .section p.lede {
+      font-size: 16px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.7;
+      max-width: 720px;
+      margin-bottom: 40px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .why-card {
+      padding: 28px;
+      border: 1px solid var(--kaptea-border);
+      border-radius: 10px;
+      background: var(--kaptea-white);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .why-card:hover { border-color: rgba(220,39,39,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
+    .why-card h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 8px;
+    }
+    .why-card p {
+      font-size: 14px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.65;
+    }
+
+    .culture {
+      background: var(--kaptea-surface-muted);
+      border-top: 1px solid var(--kaptea-border);
+      border-bottom: 1px solid var(--kaptea-border);
+    }
+    .culture-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 56px;
+    }
+    .culture-block h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 8px;
+    }
+    .culture-block p {
+      font-size: 15px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.7;
+    }
+
+    .roles-card {
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 12px;
+      padding: 36px 40px;
+      max-width: 760px;
+    }
+    .roles-card h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 12px;
+    }
+    .roles-card p {
+      font-size: 15px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .role-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+    .role-list li {
+      font-size: 14px;
+      color: var(--kaptea-charcoal);
+      padding-left: 22px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .role-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      background: var(--kaptea-red);
+      border-radius: 50%;
+    }
+    .roles-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--kaptea-red);
+      color: var(--kaptea-white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .roles-cta:hover { opacity: 0.92; }
+    .roles-note {
+      font-size: 13px;
+      color: var(--kaptea-tagline-grey);
+      margin-top: 14px;
+    }
+
+    .cta-close {
+      background: var(--kaptea-charcoal);
+      color: white;
+      text-align: center;
+      padding: 80px 40px;
+    }
+    .cta-close h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+    .cta-close p {
+      font-size: 16px;
+      color: var(--kaptea-neutral-grey);
+      margin: 0 auto 28px;
+      max-width: 560px;
+      line-height: 1.65;
+    }
+    .cta-close a.btn-primary {
+      display: inline-block;
+      background: var(--kaptea-red);
+      color: var(--kaptea-white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .cta-close a.btn-primary:hover { opacity: 0.92; }
+    .cta-close a.btn-ghost {
+      display: inline-block;
+      color: var(--kaptea-white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.22);
+      margin-left: 10px;
+      transition: border-color 0.15s;
+    }
+    .cta-close a.btn-ghost:hover { border-color: rgba(255,255,255,0.5); }
+
+    @media (max-width: 768px) {
+      .hero { padding: 56px 20px 48px; }
+      .hero h1 { font-size: 30px; }
+      .section { padding: 56px 20px; }
+      .section h2 { font-size: 24px; }
+      .why-grid, .culture-grid, .role-list { grid-template-columns: 1fr; }
+      .roles-card { padding: 28px 22px; }
+      .cta-close { padding: 56px 20px; }
+      .cta-close h2 { font-size: 24px; }
+      .cta-close a.btn-ghost { margin-left: 0; margin-top: 10px; display: block; }
+    }
+  </style>
+
+  <!-- ANALYTICS & MARKETING — managed by cookie-consent.js
+       Replace G-XXXXXXXXXX with the real GA4 Measurement ID
+       Replace LI-XXXXXXX  with the real LinkedIn Partner ID -->
+  <script type="text/plain" data-consent="analytics" async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+  <script type="text/plain" data-consent="marketing">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="marketing" async
+    src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:var(--kaptea-red);color:var(--kaptea-white);font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<script src="nav.js"></script>
+
+<main id="main-content">
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Careers</div>
+    <h1>Build the platform regulated enterprises <em>trust.</em></h1>
+    <p class="hero-sub">Kaptea is a small team. The customers we serve are not. We build Pronto, the compliance-first communications platform deployed by national agencies, regulated financial services, and Tier-1 retailers, on top of carrier-grade infrastructure from Twilio and Telnyx. If you want your work to land in the hands of people who depend on it, this is a good place to be.</p>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Why Kaptea</div>
+    <h2>Boutique team. Tier-1 customers. Real work that ships.</h2>
+    <p class="lede">We're small enough that what you build matters. We're serious enough that what you build has to work. Our average customer NPS is 9.7 out of 10, because the team takes the standard personally.</p>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <h3>Your work reaches real users</h3>
+        <p>The platform you ship handles fraud alerts, recall notices, regulated patient comms, and citizen notifications at national scale. Nothing you build sits idle. Nothing ships half-finished.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Direct line to customers</h3>
+        <p>We don't have layers between engineering, customer success, and the people who use Pronto. You'll talk to the operations leader, the compliance officer, the developer integrating against our API, often in the same week.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Compliance-first by design</h3>
+        <p>ISO 27001, CREST, Cyber Essentials, dedicated-instance architecture, EU and US data residency. The standard isn't optional, and it isn't somebody else's problem.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Twilio Gold &amp; AI Partner</h3>
+        <p>You'll work alongside Twilio's go-to-market and product teams, embedded in the partner programme. The work you do at Kaptea travels further than Kaptea.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section culture">
+  <div class="section-inner">
+    <div class="section-label">How we work</div>
+    <h2>Promises made, promises kept.</h2>
+    <p class="lede">The principles below aren't aspirational. They're how the team actually operates, and they're the reason customers stay.</p>
+
+    <div class="culture-grid">
+
+      <div class="culture-block">
+        <h3>The customer's problem is the team's problem</h3>
+        <p>If a customer raises an issue, the team owns it until it's resolved. There is no handoff. There is no ticket queue. The fastest path between a problem and the person who can fix it is the path we take.</p>
+      </div>
+
+      <div class="culture-block">
+        <h3>Compliance is engineering, not paperwork</h3>
+        <p>Audit trails, role-based access, encryption, residency, and resilience are baked into the product. They aren't bolted on for the sake of a procurement form. We build for the regulator first because that's the bar our customers have to clear.</p>
+      </div>
+
+      <div class="culture-block">
+        <h3>Small team, high autonomy</h3>
+        <p>You'll have ownership of meaningful surface area from week one. Decisions happen close to the work. Approvals don't take five steps. We hire people who can hold the standard themselves.</p>
+      </div>
+
+      <div class="culture-block">
+        <h3>We ship for the long run</h3>
+        <p>Pronto is a platform customers stay on for years. We optimise for what's still working in five years, not what looks impressive in a quarterly all-hands.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Open roles</div>
+    <h2>We don't have a current public job board.</h2>
+    <p class="lede">We hire selectively, when the role and the person both fit. If you're strong in any of the areas below and the company resonates with you, we'd genuinely like to hear from you, even if we're not actively recruiting today.</p>
+
+    <div class="roles-card">
+      <h3>Areas where we typically hire</h3>
+      <p>These are the disciplines closest to how Pronto and the customer base scale. Tell us where you fit.</p>
+      <ul class="role-list">
+        <li>Backend &amp; platform engineering</li>
+        <li>Customer success &amp; implementation</li>
+        <li>Solutions engineering &amp; pre-sales</li>
+        <li>Sales &amp; partner development</li>
+        <li>DevOps &amp; infrastructure</li>
+        <li>Frontend &amp; product engineering</li>
+      </ul>
+      <a href="mailto:hello@kaptea.io?subject=Careers%20at%20Kaptea" class="roles-cta">Send us your CV</a>
+      <p class="roles-note">Email <a href="mailto:hello@kaptea.io" style="color:var(--kaptea-red);text-decoration:none;font-weight:600;">hello@kaptea.io</a> with the subject line <strong>Careers at Kaptea</strong>. Tell us what you do, what you'd want to build here, and a link to anything you've shipped that you're proud of.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-close">
+  <h2>Want to know who you'd be working with?</h2>
+  <p>Meet the team behind Pronto: founders, engineers, and customer leaders who built the platform from the ground up.</p>
+  <a href="meet-the-team" class="btn-primary">Meet the Team</a>
+  <a href="why-kaptea" class="btn-ghost">Why Kaptea</a>
+</section>
+
+</main>
+
+<script src="footer.js"></script>
+
+</body>
+</html>

@@ -445,7 +445,7 @@
           <li><a href="meet-the-team">Meet The Team</a></li>
           <li><a href="pricing">Pricing</a></li>
           <li><a href="demo">Book a Demo</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="careers">Careers</a></li>
           <li><a href="contact">Contact</a></li>
         </ul>
       </div>
