@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conversational AI | Kaptea Pronto</title>
 
-  <meta name="description" content="Pronto's AI Assistant builder on top of Twilio Conversation Relay and Conversation Intelligence. Master prompts, tools, data capture, knowledge bases, and live escalation. Build a voice agent your compliance team would sign off on, in minutes." />
+  <meta name="description" content="Pronto's AI Assistant builder for regulated enterprises. Master prompts, tools, data capture, knowledge bases, and live escalation. Build a voice agent your compliance team would sign off on, in minutes." />
   <meta name="keywords" content="conversational AI, AI voice assistant, Twilio conversation relay, Twilio conversation intelligence, master prompts, AI assistant builder, voice agent, agentic AI, conversation intelligence operators" />
   <link rel="canonical" href="https://kaptea.vercel.app/conversational-ai" />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Conversational AI | Kaptea Pronto" />
-  <meta property="og:description" content="Build a voice AI assistant on Twilio Conversation Relay and Conversation Intelligence. Master prompts, tools, knowledge, and live escalation, configured not coded." />
+  <meta property="og:description" content="Build a voice AI assistant your compliance team would sign off on. Master prompts, tools, knowledge, and live escalation, configured not coded." />
   <meta property="og:url" content="https://kaptea.vercel.app/conversational-ai" />
   <meta property="og:site_name" content="Kaptea" />
 
@@ -25,7 +25,7 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <meta name="ai-content-declaration" content="Kaptea Pronto AI Assistant builder. Built on top of Twilio Conversation Relay and Twilio Conversation Intelligence (twilio.com/en-us/products/conversational-ai). Configurable through nine tabs: Agent (name, status, greeting, master prompt, model, temperature, max tokens), Voice (default language, TTS provider ElevenLabs/Google/Amazon Polly, Deepgram STT with Nova-3 default, smart format, profanity filter, STT hints, interruption and DTMF controls, linear16 16-bit PCM 16kHz audio), Tools (webhook, Pronto, and CRM function calling exposed to the LLM at runtime), Data Capture (structured fields collected during the call and persisted to the call record), Knowledge (RAG with URL, document, and markdown ingestion; Top-K chunks, score threshold, automatic and tool-call retrieval), Escalation (sentiment threshold, trigger keywords, routes to Pronto agents as a voice task with full context), Phone Number (one-click assignment of a Twilio number from the connected Pronto voice channel), Intelligence (Twilio Conversation Intelligence with prebuilt operators including Sentiment Analysis, Escalation Request, Conversation Summary, PII Extraction, Voicemail Detection, plus custom generative operators), Conversations (transcript, summary, and event timeline per call). Six start-from templates: Blank, Appointment Scheduling, Customer Service & Support, Information Collector, Lead Qualifier, Surveys & Feedback. Master-prompt-governed agent with model selection, brand-safe and compliance-aware. ISO 27001:2022 certified. Dedicated instance, EU, UK or US data residency." />
+  <meta name="ai-content-declaration" content="Kaptea Pronto AI Assistant builder. Master-prompt-governed voice agent for regulated enterprises. Configured from a single console covering: Agent (master prompt, model, temperature, max tokens), Voice (TTS providers ElevenLabs, Google, Amazon Polly; Deepgram STT with Nova-3 default; smart format; profanity filter; STT hints; interruption and DTMF controls), Tools (function calling into Pronto, CRM, or webhooks), Data Capture (structured fields collected during the call and persisted to the call record), Knowledge (RAG with URL, document, and markdown ingestion; Top-K chunks, score threshold, automatic and tool-call retrieval), Escalation (sentiment threshold, trigger keywords, routes to a Pronto agent inbox queue with full context), Phone Number (one-click assignment from the connected voice channel), Intelligence (auto-redact PII, conversation summary, per-turn sentiment scoring, plus prebuilt operators Sentiment Analysis, Escalation Request, Conversation Summary, PII Extraction, Voicemail Detection, Do Not Contact, Outbound Call Disposition, Recording Disclosure, Agent Introduction, Non English Call, plus custom generative operators), Conversations (transcript, summary, sentiment timeline, and event log per call). Five pre-built templates: Appointment Scheduling, Customer Service & Support, Information Collector, Lead Qualifier, Surveys & Feedback. ISO 27001:2022 certified. Dedicated instance, EU, UK or US data residency." />
 
   <script type="application/ld+json">
   {
@@ -36,7 +36,7 @@
         "@id": "https://kaptea.vercel.app/conversational-ai",
         "url": "https://kaptea.vercel.app/conversational-ai",
         "name": "Conversational AI | Kaptea Pronto",
-        "description": "Pronto's AI Assistant builder on top of Twilio Conversation Relay and Conversation Intelligence.",
+        "description": "Pronto's AI Assistant builder for regulated enterprises. Master prompts, tools, data capture, knowledge bases, and live escalation.",
         "isPartOf": { "@id": "https://kaptea.vercel.app/" },
         "breadcrumb": {
           "@type": "BreadcrumbList",
@@ -50,13 +50,12 @@
         "@type": "FAQPage",
         "@id": "https://kaptea.vercel.app/conversational-ai#faq",
         "mainEntity": [
-          { "@type": "Question", "name": "How does Pronto's AI Assistant builder relate to Twilio Conversational AI?", "acceptedAnswer": { "@type": "Answer", "text": "Pronto sits as the orchestration and governance layer on top of Twilio Conversation Relay and Twilio Conversation Intelligence. The customer connects their Twilio account through a Pronto voice channel; Pronto provisions a Conversation Intelligence service inside it, configures the operators, and exposes the assistant configuration through nine tabs (Agent, Voice, Tools, Data Capture, Knowledge, Escalation, Phone Number, Intelligence, Conversations). The carrier-grade voice and CI infrastructure stays with Twilio. The control plane, master prompts, tools, and audit layer sit in Pronto." } },
-          { "@type": "Question", "name": "What templates can I start from?", "acceptedAnswer": { "@type": "Answer", "text": "Six templates ship with Pronto: Blank (start from scratch with a neutral prompt), Appointment Scheduling (books, reschedules, and cancels appointments), Customer Service & Support (front-line agent that triages), Information Collector (systematically gathers required fields like name, account number, reason for call), Lead Qualifier (B2B discovery agent), and Surveys & Feedback (rating, NPS, open-text). Templates pre-fill the master prompt, voice, tools, and data capture so a working assistant can be live in minutes." } },
-          { "@type": "Question", "name": "What can the assistant actually do during a call?", "acceptedAnswer": { "@type": "Answer", "text": "Three layers of capability. Tools let the assistant call into Pronto, your CRM, or any webhook at runtime, the function definitions are exposed to the LLM so the model picks the right tool to execute (book a meeting, look up an order, raise a ticket). Data Capture collects structured fields during the conversation (name, account number, booking time, reason) and persists them on the call record. Knowledge bases give the assistant retrieval-augmented context from your URLs, documents, and markdown so it can answer from your own content rather than the model's training data." } },
-          { "@type": "Question", "name": "How does escalation to a human agent work?", "acceptedAnswer": { "@type": "Answer", "text": "Escalation triggers come from three sources: a configurable sentiment threshold (e.g. escalate when sentiment falls below 'negative'), trigger keywords ('speak to a human', 'agent please', 'representative', 'manager', editable per assistant), or explicit intent detected by the LLM. When a trigger fires, Pronto routes the call into a Pronto agent inbox queue as a voice task. The agent picks up with the full transcript, AI-generated summary, sentiment timeline, and event log already on screen, with no need for the customer to repeat themselves." } },
-          { "@type": "Question", "name": "What voice and language options are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Three TTS providers are available out of the box: ElevenLabs (default, with the largest voice catalogue), Google, and Amazon Polly. Voices are organised by language with a Test button that calls a phone number to play the voice live. Default STT is Deepgram with the Nova-3 general model, plus Nova-2 variants tuned for phone calls, meetings, finance, and medical contexts. Smart format auto-formats numbers, dates, and currency. Profanity filter masks profane words in transcripts. STT hints bias recognition toward product names, jargon, and regulated terms (e.g. 'Pronto, Kaptea, FICA, R500')." } },
-          { "@type": "Question", "name": "What does the Twilio Conversation Intelligence integration include?", "acceptedAnswer": { "@type": "Answer", "text": "Pronto provisions a Twilio Intelligence service inside the customer's voice channel and attaches operators to it. Available operators include prebuilt ones (Sentiment Analysis, Escalation Request, Conversation Summary, PII Extraction, Voicemail Detection, Do Not Contact Me, Outbound Call Disposition, Recording Disclosure, Agent Introduction, Non English Call) plus custom generative operators authored in Pronto (e.g. an Agent Performance Score that rates the assistant on each call). Auto-redact PII, summary capture, and per-turn sentiment scoring run on every call by default." } },
-          { "@type": "Question", "name": "Can I change the LLM the assistant uses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each assistant has a model setting selected per deployment, with temperature and max tokens tunable per assistant. The architecture is model-agnostic, so the model can be changed without rewriting workflows or prompts. Specific model availability depends on the deployment configuration agreed with Kaptea." } },
+          { "@type": "Question", "name": "What does the Pronto AI Assistant include?", "acceptedAnswer": { "@type": "Answer", "text": "The assistant is configured from a single console that covers every part of its behaviour: master prompt and model selection, voice and language, tools and function calling, structured data capture, knowledge bases, escalation rules, phone number assignment, conversation intelligence, and a conversation log. Every change is governed and auditable. The infrastructure runs on Pronto's dedicated instance, with carrier-grade voice and intelligence provided through the Twilio stack." } },
+          { "@type": "Question", "name": "What templates can I start from?", "acceptedAnswer": { "@type": "Answer", "text": "Five pre-built templates cover the most common voice-AI use cases: Appointment Scheduling (books, reschedules, and cancels appointments), Customer Service & Support (front-line agent that triages), Information Collector (systematically gathers required fields such as name, account number, and reason for call), Lead Qualifier (B2B discovery agent), and Surveys & Feedback (rating, NPS, open-text). Each template seeds the master prompt, voice, tools, and data capture so a working assistant can be live in minutes." } },
+          { "@type": "Question", "name": "What can the assistant actually do during a call?", "acceptedAnswer": { "@type": "Answer", "text": "Three layers of capability. Tools let the assistant call into Pronto, your CRM, or any webhook at runtime, with function definitions exposed to the model so it picks the right tool to execute (book a meeting, look up an order, raise a ticket). Data Capture collects structured fields during the conversation (name, account number, booking time, reason) and persists them on the call record. Knowledge bases give the assistant retrieval-augmented context from your URLs, documents, and markdown so it can answer from your own content rather than generic training data." } },
+          { "@type": "Question", "name": "How does escalation to a human agent work?", "acceptedAnswer": { "@type": "Answer", "text": "Escalation triggers come from three sources: a configurable sentiment threshold (e.g. escalate when sentiment falls below 'negative'), trigger keywords ('speak to a human', 'agent please', 'representative', 'manager', editable per assistant), or explicit intent detected during the conversation. When a trigger fires, Pronto routes the call into a Pronto agent inbox queue as a voice task. The agent picks up with the full transcript, AI-generated summary, sentiment timeline, and event log already on screen, with no need for the customer to repeat themselves." } },
+          { "@type": "Question", "name": "What voice and language options are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Three TTS providers are available out of the box: ElevenLabs (default, with the largest voice catalogue), Google, and Amazon Polly. Voices are organised by language with a Test button that calls a phone number to play the voice live. Default STT is Deepgram with the Nova-3 general model, plus Nova-2 variants tuned for phone calls, meetings, finance, and medical contexts. Smart format auto-formats numbers, dates, and currency. Profanity filter masks profane words in transcripts. STT hints bias recognition toward product names, jargon, and regulated terms." } },
+          { "@type": "Question", "name": "What conversation intelligence runs on every call?", "acceptedAnswer": { "@type": "Answer", "text": "Auto-redaction of PII, conversation summary capture, and per-turn sentiment scoring run on every call by default. Additional operators can be attached per assistant: Sentiment Analysis, Escalation Request, Conversation Summary, PII Extraction, Voicemail Detection, Do Not Contact, Outbound Call Disposition, Recording Disclosure, Agent Introduction, and Non English Call detection. Custom generative operators can also be authored, for example an Agent Performance Score that rates the assistant on each call." } },
           { "@type": "Question", "name": "Is this suitable for regulated industries?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Pronto runs on a dedicated instance with ISO 27001:2022 certification, EU, UK or US data residency, per-message audit, and template change history. Master prompts are version-controlled and approved through the same governance flow as message templates. PII auto-redaction is on by default. Conversation transcripts and summaries are retained per policy and exportable for regulator submission. Built for FCA, MiFID II, MHRA, EMA, and equivalent regulated contexts." } }
         ]
       }
@@ -80,13 +79,6 @@
     .hero-pill { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 99px; padding: 4px 12px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); }
     .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
     .hero-visual { background: #1c2033; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; border: 1px solid #2d3348; overflow: hidden; }
-
-    .built-on { background: var(--kaptea-white); border-bottom: 1px solid var(--kaptea-border); padding: 36px 40px; }
-    .built-on-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-    .built-on-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--kaptea-tagline-grey); }
-    .built-on-text { font-size: 14px; color: var(--kaptea-charcoal); line-height: 1.6; flex: 1; min-width: 280px; }
-    .built-on-text a { color: var(--kaptea-red); font-weight: 600; text-decoration: none; }
-    .built-on-text a:hover { text-decoration: underline; }
 
     .tabs-strip { background: var(--kaptea-surface-muted); border-bottom: 1px solid var(--kaptea-border); padding: 64px 40px; }
     .tabs-strip-inner { max-width: 1080px; margin: 0 auto; }
@@ -116,9 +108,9 @@
     .solution-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
     .solution-block.reverse { direction: rtl; }
     .solution-block.reverse > * { direction: ltr; }
-    .solution-pain { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-left: 3px solid rgba(220,39,39,0.4); border-radius: 8px; padding: 24px; }
-    .solution-pain-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--kaptea-red); margin-bottom: 10px; }
-    .solution-pain p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.6; font-style: italic; }
+    .solution-visual { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 10px; padding: 56px 24px; min-height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; }
+    .solution-visual svg { color: rgba(220,39,39,0.22); }
+    .solution-visual span { font-size: 11px; color: var(--kaptea-tagline-grey); letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.5; max-width: 220px; }
     .solution-answer h3 { font-size: 20px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 10px; line-height: 1.3; }
     .solution-answer p { font-size: 15px; color: var(--kaptea-tagline-grey); line-height: 1.7; margin-bottom: 16px; }
     .solution-answer ul { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
@@ -131,9 +123,11 @@
     .templates-inner { max-width: 1080px; margin: 0 auto; }
     .templates-inner h2 { font-family: 'Manrope', sans-serif; font-size: 26px; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 8px; text-align: center; }
     .templates-inner > p { text-align: center; max-width: 640px; margin: 0 auto 36px; font-size: 15px; color: var(--kaptea-tagline-grey); line-height: 1.65; }
-    .templates-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .tpl-card { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 10px; padding: 22px; }
-    .tpl-card-icon { width: 36px; height: 36px; background: rgba(220,39,39,0.08); color: var(--kaptea-red); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 15px; }
+    .templates-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    .tpl-card { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 10px; padding: 22px; transition: border-color 0.15s, box-shadow 0.15s; }
+    .tpl-card:hover { border-color: rgba(220,39,39,0.25); box-shadow: 0 4px 14px rgba(0,0,0,0.04); }
+    .tpl-card-icon { width: 38px; height: 38px; background: rgba(220,39,39,0.08); color: var(--kaptea-red); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .tpl-card-icon svg { display: block; }
     .tpl-card h3 { font-family: 'Manrope', sans-serif; font-size: 15px; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 6px; }
     .tpl-card p { font-size: 13px; color: var(--kaptea-tagline-grey); line-height: 1.55; }
 
@@ -193,7 +187,7 @@
       .solutions { padding: 56px 24px; }
       .solution-block { gap: 32px; }
       .templates-section { padding: 56px 24px; }
-      .templates-grid { grid-template-columns: repeat(2, 1fr); }
+      .templates-grid { grid-template-columns: repeat(3, 1fr); }
       .how-steps { grid-template-columns: repeat(2, 1fr); }
       .numbers-inner { grid-template-columns: repeat(2, 1fr); }
       .related-section { padding: 56px 24px; }
@@ -265,17 +259,16 @@
         <span>Conversational AI</span>
       </div>
       <h1>A voice AI assistant your compliance team would <span>sign off on.</span></h1>
-      <p class="hero-sub">Pronto's AI Assistant builder is a master-prompt-governed agent on top of Twilio Conversation Relay and Twilio Conversation Intelligence. Pick a template, choose a voice, plug in tools, point it at your knowledge, assign a phone number. Live in minutes, audited by design.</p>
+      <p class="hero-sub">Pronto's AI Assistant builder is a master-prompt-governed voice agent for regulated enterprises. Pick a template, choose a voice, plug in tools, point it at your knowledge, assign a phone number. Live in minutes, audited by design.</p>
       <div class="hero-pills">
         <span class="hero-pill">Master Prompts</span>
         <span class="hero-pill">Tools &amp; Function Calling</span>
         <span class="hero-pill">Knowledge Bases (RAG)</span>
         <span class="hero-pill">Live Escalation</span>
-        <span class="hero-pill">Twilio Intelligence</span>
       </div>
       <div class="hero-ctas">
         <a href="demo" class="btn-primary">Book a Demo</a>
-        <a href="https://www.twilio.com/en-us/products/conversational-ai" target="_blank" rel="noopener" class="btn-ghost-light">About Twilio Conversational AI →</a>
+        <a href="#how-it-works" class="btn-ghost-light">How it works</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -288,18 +281,10 @@
 </section>
 
 
-<section class="built-on">
-  <div class="built-on-inner">
-    <span class="built-on-tag">Built on</span>
-    <p class="built-on-text">Pronto's AI Assistant is built on top of <a href="https://www.twilio.com/en-us/products/conversational-ai" target="_blank" rel="noopener">Twilio Conversational AI</a>: Conversation Relay for the live voice channel and Conversation Intelligence for transcription, sentiment, and operators. Customers connect their Twilio account through a Pronto voice channel; Pronto provisions the Intelligence service, attaches operators, and adds the master-prompt control plane and audit layer.</p>
-  </div>
-</section>
-
-
-<section class="tabs-strip">
+<section class="tabs-strip" id="how-it-works">
   <div class="tabs-strip-inner">
-    <h2>Nine tabs. One assistant. Configured, not coded.</h2>
-    <p>Each tab handles one part of the assistant's behaviour, and every change is governed and audited.</p>
+    <h2>One assistant. Configured and live in minutes.</h2>
+    <p>Master prompts, voice, tools, knowledge, escalation, and intelligence, all configured in one console and governed end to end.</p>
     <div class="tabs-grid">
 
       <div class="tab-card">
@@ -346,7 +331,7 @@
 
       <div class="tab-card">
         <div class="tab-card-name">Intelligence</div>
-        <h3>Twilio CI &amp; operators</h3>
+        <h3>Conversation intelligence</h3>
         <p>Sentiment, summary, escalation detection, PII auto-redact. Attach prebuilt or custom generative operators per assistant.</p>
       </div>
 
@@ -410,9 +395,9 @@
     <h2>An assistant builder where every tab maps to a real product feature, governed end to end.</h2>
 
     <div class="solution-block">
-      <div class="solution-pain">
-        <div class="solution-pain-label">Voice of customer</div>
-        <p>"We need an AI that says exactly what we approve, not what the LLM defaults to. Our compliance team owns the script. We need a way to change it without redeploying anything."</p>
+      <div class="solution-visual">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span>Master prompt configuration screenshot to be supplied</span>
       </div>
       <div class="solution-answer">
         <h3>Master prompts: your script, governed</h3>
@@ -429,9 +414,9 @@
     </div>
 
     <div class="solution-block reverse">
-      <div class="solution-pain">
-        <div class="solution-pain-label">Voice of customer</div>
-        <p>"Voice quality decides whether the customer trusts the call or hangs up. We can't run a regulated agent on a robot voice, and we can't accept a transcription engine that mishears our product names."</p>
+      <div class="solution-visual">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        <span>Voice configuration screenshot to be supplied</span>
       </div>
       <div class="solution-answer">
         <h3>Voice and language built for live conversation</h3>
@@ -448,9 +433,9 @@
     </div>
 
     <div class="solution-block">
-      <div class="solution-pain">
-        <div class="solution-pain-label">Voice of customer</div>
-        <p>"We need the agent to actually do something: book the meeting, look up the order, capture the right fields, answer from our docs. If it can only chat, it's a demo not a product."</p>
+      <div class="solution-visual">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <span>Tools, data capture &amp; knowledge screenshot to be supplied</span>
       </div>
       <div class="solution-answer">
         <h3>Tools, data capture, and knowledge bases</h3>
@@ -467,9 +452,9 @@
     </div>
 
     <div class="solution-block reverse">
-      <div class="solution-pain">
-        <div class="solution-pain-label">Voice of customer</div>
-        <p>"When the AI hits its limit, the customer should land on a human who already knows what's been said. They shouldn't have to start over. That's where most AI deployments fail."</p>
+      <div class="solution-visual">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Escalation flow &amp; agent inbox screenshot to be supplied</span>
       </div>
       <div class="solution-answer">
         <h3>Live escalation into Pronto with full context</h3>
@@ -479,7 +464,7 @@
           <li>Editable trigger keywords per assistant</li>
           <li>Routes to a named queue in Pronto, or auto-matches by channel</li>
           <li>Full transcript, summary, sentiment, and event timeline on the agent screen</li>
-          <li>Twilio Intelligence operators run on every call (Sentiment, Escalation Request, PII Extraction, Conversation Summary, plus custom operators)</li>
+          <li>Conversation intelligence operators run on every call (Sentiment, Escalation Request, PII Extraction, Conversation Summary, plus custom operators)</li>
         </ul>
         <a href="customer-journey-orchestration" class="feature-link">Explore Customer Journey Orchestration →</a>
       </div>
@@ -492,41 +477,45 @@
 <section class="templates-section">
   <div class="templates-inner">
     <h2>Start from a template, ship in minutes</h2>
-    <p>Six templates ship with Pronto, each pre-fills the master prompt, voice, tools, and data capture so the first working assistant is live in minutes.</p>
+    <p>Pre-built starting points for the most common voice-AI use cases. Each template seeds the master prompt, voice, tools, and data capture so the first working assistant is live in minutes.</p>
     <div class="templates-grid">
 
       <div class="tpl-card">
-        <div class="tpl-card-icon">B</div>
-        <h3>Blank</h3>
-        <p>Start from scratch with a neutral prompt and your own master rules.</p>
-      </div>
-
-      <div class="tpl-card">
-        <div class="tpl-card-icon">A</div>
+        <div class="tpl-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
         <h3>Appointment Scheduling</h3>
         <p>Books, reschedules, and cancels appointments with calendar integration.</p>
       </div>
 
       <div class="tpl-card">
-        <div class="tpl-card-icon">C</div>
+        <div class="tpl-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-7h3z"/><path d="M3 19a2 2 0 0 0 2 2h1v-7H3z"/></svg>
+        </div>
         <h3>Customer Service &amp; Support</h3>
         <p>Front-line agent that triages, answers from your knowledge base, and escalates when needed.</p>
       </div>
 
       <div class="tpl-card">
-        <div class="tpl-card-icon">I</div>
+        <div class="tpl-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11H7a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="6" rx="1"/><line x1="8" y1="15" x2="16" y2="15"/></svg>
+        </div>
         <h3>Information Collector</h3>
         <p>Systematically gathers required fields (name, account, reason) and writes them to the record.</p>
       </div>
 
       <div class="tpl-card">
-        <div class="tpl-card-icon">L</div>
+        <div class="tpl-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+        </div>
         <h3>Lead Qualifier</h3>
         <p>B2B discovery agent that qualifies inbound interest and books the next conversation.</p>
       </div>
 
       <div class="tpl-card">
-        <div class="tpl-card-icon">S</div>
+        <div class="tpl-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
         <h3>Surveys &amp; Feedback</h3>
         <p>Runs short surveys: rating, NPS, open-text, with structured capture per response.</p>
       </div>
@@ -568,7 +557,7 @@
 <section class="numbers-strip">
   <div class="numbers-inner">
     <div class="number-item"><h3>Minutes</h3><p>To build the first assistant from a template</p></div>
-    <div class="number-item"><h3>9</h3><p>Builder tabs covering every part of the assistant's behaviour</p></div>
+    <div class="number-item"><h3>Twilio Gold</h3><p>Consulting Partner, deeply integrated with the Twilio stack</p></div>
     <div class="number-item"><h3>9.7/10</h3><p>Average customer NPS rating across the live customer base</p></div>
     <div class="number-item"><h3>ISO 27001</h3><p>Certified information security with dedicated instance</p></div>
   </div>
@@ -581,13 +570,13 @@
     <div class="faq-list">
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq1">How does Pronto's AI Assistant builder relate to Twilio Conversational AI?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-a" id="faq1" hidden>Pronto sits as the orchestration and governance layer on top of Twilio Conversation Relay and Twilio Conversation Intelligence. The customer connects their Twilio account through a Pronto voice channel; Pronto provisions a Conversation Intelligence service inside it, configures the operators, and exposes the assistant configuration through nine tabs (Agent, Voice, Tools, Data Capture, Knowledge, Escalation, Phone Number, Intelligence, Conversations). The carrier-grade voice and CI infrastructure stays with Twilio. The control plane, master prompts, tools, and audit layer sit in Pronto.</div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">What does the Pronto AI Assistant include?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a" id="faq1" hidden>The assistant is configured from a single console that covers every part of its behaviour: master prompt and model selection, voice and language, tools and function calling, structured data capture, knowledge bases, escalation rules, phone number assignment, conversation intelligence, and a conversation log. Every change is governed and auditable. The infrastructure runs on Pronto's dedicated instance, with carrier-grade voice and intelligence provided through the Twilio stack.</div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" aria-controls="faq2">What templates can I start from?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-a" id="faq2" hidden>Six templates ship with Pronto: Blank (start from scratch with a neutral prompt), Appointment Scheduling (books, reschedules, and cancels appointments), Customer Service &amp; Support (front-line agent that triages), Information Collector (systematically gathers required fields like name, account number, reason for call), Lead Qualifier (B2B discovery agent), and Surveys &amp; Feedback (rating, NPS, open-text). Templates pre-fill the master prompt, voice, tools, and data capture so a working assistant can be live in minutes.</div>
+        <div class="faq-a" id="faq2" hidden>Five pre-built templates cover the most common voice-AI use cases: Appointment Scheduling (books, reschedules, and cancels appointments), Customer Service &amp; Support (front-line agent that triages), Information Collector (systematically gathers required fields such as name, account number, and reason for call), Lead Qualifier (B2B discovery agent), and Surveys &amp; Feedback (rating, NPS, open-text). Each template seeds the master prompt, voice, tools, and data capture so a working assistant can be live in minutes.</div>
       </div>
 
       <div class="faq-item">
@@ -606,18 +595,13 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq6">What does the Twilio Conversation Intelligence integration include?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-a" id="faq6" hidden>Pronto provisions a Twilio Intelligence service inside the customer's voice channel and attaches operators to it. Available operators include prebuilt ones (Sentiment Analysis, Escalation Request, Conversation Summary, PII Extraction, Voicemail Detection, Do Not Contact Me, Outbound Call Disposition, Recording Disclosure, Agent Introduction, Non English Call) plus custom generative operators authored in Pronto (e.g. an Agent Performance Score that rates the assistant on each call). Auto-redact PII, summary capture, and per-turn sentiment scoring run on every call by default.</div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq6">What conversation intelligence runs on every call?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a" id="faq6" hidden>Auto-redaction of PII, conversation summary capture, and per-turn sentiment scoring run on every call by default. Additional operators can be attached per assistant: Sentiment Analysis, Escalation Request, Conversation Summary, PII Extraction, Voicemail Detection, Do Not Contact, Outbound Call Disposition, Recording Disclosure, Agent Introduction, and Non English Call detection. Custom generative operators can also be authored, for example an Agent Performance Score that rates the assistant on each call.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq7">Can I change the LLM the assistant uses?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-a" id="faq7" hidden>Yes. Each assistant has a model setting selected per deployment, with temperature and max tokens tunable per assistant. The architecture is model-agnostic, so the model can be changed without rewriting workflows or prompts. Specific model availability depends on the deployment configuration agreed with Kaptea.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq8">Is this suitable for regulated industries?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-a" id="faq8" hidden>Yes. Pronto runs on a dedicated instance with ISO 27001:2022 certification, EU, UK or US data residency, per-message audit, and template change history. Master prompts are version-controlled and approved through the same governance flow as message templates. PII auto-redaction is on by default. Conversation transcripts and summaries are retained per policy and exportable for regulator submission. Built for FCA, MiFID II, MHRA, EMA, and equivalent regulated contexts.</div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq7">Is this suitable for regulated industries?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="faq-a" id="faq7" hidden>Yes. Pronto runs on a dedicated instance with ISO 27001:2022 certification, EU, UK or US data residency, per-message audit, and template change history. Master prompts are version-controlled and approved through the same governance flow as message templates. PII auto-redaction is on by default. Conversation transcripts and summaries are retained per policy and exportable for regulator submission. Built for FCA, MiFID II, MHRA, EMA, and equivalent regulated contexts.</div>
       </div>
 
     </div>
@@ -632,7 +616,7 @@
     <div class="related-grid">
       <a href="automations-workflow" class="related-card"><h3>Automations &amp; Workflow</h3><p>Plug AI assistants into multi-step workflows. Master prompts and tools as just another step in the journey, governed alongside everything else.</p><span class="related-arrow">Learn more →</span></a>
       <a href="customer-journey-orchestration" class="related-card"><h3>Customer Journey Orchestration</h3><p>End-to-end journeys from commerce trigger to live agent escalation. Conversational AI is the intelligence layer that makes the handoff seamless.</p><span class="related-arrow">Learn more →</span></a>
-      <a href="twilio-partner" class="related-card"><h3>Twilio Partnership</h3><p>Kaptea is a Twilio Gold Consulting Partner. Pronto's AI Assistant is built on Twilio Conversation Relay and Conversation Intelligence.</p><span class="related-arrow">Learn more →</span></a>
+      <a href="twilio-partner" class="related-card"><h3>Twilio Partnership</h3><p>Kaptea is a Twilio Gold Consulting Partner with deep integration across the Twilio stack. Carrier-grade voice, tested at enterprise scale.</p><span class="related-arrow">Learn more →</span></a>
     </div>
   </div>
 </section>

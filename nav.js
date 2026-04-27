@@ -28,9 +28,9 @@
             <div class="mega-section">
               <div class="mega-section-title"><a href="conversational-ai">Conversational AI</a></div>
               <ul class="mega-links">
-                <li class="mega-detail">Bring your own LLM</li>
                 <li class="mega-detail">Master prompts &amp; guardrails</li>
-                <li class="mega-detail">Conversation intelligence</li>
+                <li class="mega-detail">Tools, knowledge &amp; data capture</li>
+                <li class="mega-detail">Live agent escalation</li>
               </ul>
             </div>
 
