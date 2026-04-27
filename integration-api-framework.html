@@ -476,6 +476,25 @@ img { max-width: 100%; display: block; }
     footer { background: var(--kaptea-bg-dark); color: rgba(255,255,255,0.6); padding: 64px 40px 32px; font-size: 13px; line-height: 1.6; }
 
   </style>
+
+  <!-- ANALYTICS & MARKETING — managed by cookie-consent.js
+       Replace G-XXXXXXXXXX with the real GA4 Measurement ID
+       Replace LI-XXXXXXX  with the real LinkedIn Partner ID -->
+  <script type="text/plain" data-consent="analytics" async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+  <script type="text/plain" data-consent="marketing">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="marketing" async
+    src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
 </head>
 <body>
 

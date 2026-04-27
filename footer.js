@@ -122,6 +122,238 @@
       }
       .footer-legal { gap: 12px; }
     }
+
+    /* ── COOKIE CONSENT ── */
+    #kaptea-cookie-banner {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: #131521;
+      color: rgba(255,255,255,0.85);
+      padding: 20px 28px;
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Inter', sans-serif;
+    }
+    #kaptea-cookie-banner .kcb-text {
+      flex: 1 1 480px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.78);
+    }
+    #kaptea-cookie-banner .kcb-text strong {
+      display: block;
+      font-family: 'Manrope', sans-serif;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    #kaptea-cookie-banner .kcb-text a {
+      color: #dc2727;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    #kaptea-cookie-banner .kcb-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .kcb-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: opacity 0.15s, background 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .kcb-btn-primary { background: #dc2727; color: #ffffff; }
+    .kcb-btn-primary:hover { opacity: 0.92; }
+    .kcb-btn-ghost {
+      background: transparent;
+      color: rgba(255,255,255,0.85);
+      border-color: rgba(255,255,255,0.22);
+    }
+    .kcb-btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: #ffffff; }
+    .kcb-btn-link {
+      background: transparent;
+      color: rgba(255,255,255,0.65);
+      border: none;
+      padding: 10px 8px;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .kcb-btn-link:hover { color: #ffffff; }
+
+    #kaptea-cookie-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(15, 17, 28, 0.66);
+      backdrop-filter: blur(2px);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: 'Inter', sans-serif;
+    }
+    .kcm-card {
+      background: #ffffff;
+      border-radius: 14px;
+      max-width: 540px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.28);
+      position: relative;
+    }
+    .kcm-header {
+      padding: 28px 28px 16px;
+      border-bottom: 1px solid #eef0f4;
+    }
+    .kcm-header h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #131521;
+      margin: 0 0 8px;
+      line-height: 1.3;
+    }
+    .kcm-header p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #4b5563;
+      margin: 0;
+    }
+    .kcm-header p a {
+      color: #dc2727;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .kcm-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: transparent;
+      color: #6b7280;
+      font-size: 22px;
+      line-height: 1;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .kcm-close:hover { background: #f3f4f6; color: #131521; }
+    .kcm-body { padding: 12px 28px 8px; }
+    .kcm-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid #eef0f4;
+    }
+    .kcm-row:last-child { border-bottom: none; }
+    .kcm-row-text { flex: 1; }
+    .kcm-row-text h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #131521;
+      margin: 0 0 4px;
+    }
+    .kcm-row-text p {
+      font-size: 12px;
+      line-height: 1.55;
+      color: #6b7280;
+      margin: 0;
+    }
+    .kcm-pill {
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #15803d;
+      background: #dcfce7;
+      padding: 5px 10px;
+      border-radius: 20px;
+      align-self: flex-start;
+    }
+    .kcm-toggle {
+      flex-shrink: 0;
+      position: relative;
+      width: 42px;
+      height: 24px;
+      align-self: flex-start;
+    }
+    .kcm-toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+    .kcm-slider {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background: #d1d5db;
+      border-radius: 24px;
+      transition: background 0.2s;
+    }
+    .kcm-slider::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: 3px;
+      top: 3px;
+      background: #ffffff;
+      border-radius: 50%;
+      transition: transform 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+    }
+    .kcm-toggle input:checked + .kcm-slider { background: #dc2727; }
+    .kcm-toggle input:checked + .kcm-slider::before { transform: translateX(18px); }
+    .kcm-toggle input:focus-visible + .kcm-slider { box-shadow: 0 0 0 3px rgba(220,39,39,0.25); }
+    .kcm-footer {
+      display: flex;
+      gap: 10px;
+      padding: 16px 28px 24px;
+      border-top: 1px solid #eef0f4;
+      flex-wrap: wrap;
+    }
+    .kcm-footer .kcb-btn { flex: 1 1 auto; min-width: 140px; }
+    .kcm-btn-secondary {
+      background: #131521;
+      color: #ffffff;
+    }
+    .kcm-btn-secondary:hover { opacity: 0.92; }
+
+    @media (max-width: 640px) {
+      #kaptea-cookie-banner { padding: 18px 18px 20px; }
+      #kaptea-cookie-banner .kcb-text { flex: 1 1 100%; }
+      #kaptea-cookie-banner .kcb-actions { width: 100%; }
+      .kcb-btn { flex: 1 1 auto; text-align: center; }
+      .kcm-header { padding: 24px 20px 14px; }
+      .kcm-body { padding: 10px 20px 6px; }
+      .kcm-footer { padding: 14px 20px 20px; }
+    }
   `;
   document.head.appendChild(styles);
 
@@ -227,12 +459,86 @@
         <a href="terms">Terms of Service</a>
         <a href="cookie-policy">Cookie Policy</a>
         <a href="privacy-policy#your-rights">GDPR</a>
+        <a href="#" id="kaptea-cookie-settings">Cookie Settings</a>
       </div>
     </div>
   </div>
-</footer>`;
+</footer>
+
+<!-- Cookie consent banner -->
+<div id="kaptea-cookie-banner" role="region" aria-label="Cookie consent">
+  <div class="kcb-text">
+    <strong>We use cookies</strong>
+    Kaptea uses essential cookies to run this site, plus optional analytics and marketing cookies to help us understand how it's used. Read our <a href="cookie-policy">Cookie Policy</a> for details.
+  </div>
+  <div class="kcb-actions">
+    <button type="button" class="kcb-btn kcb-btn-link" id="kaptea-reject-all">Reject non-essential</button>
+    <button type="button" class="kcb-btn kcb-btn-ghost" id="kaptea-manage-prefs">Manage preferences</button>
+    <button type="button" class="kcb-btn kcb-btn-primary" id="kaptea-accept-all">Accept all</button>
+  </div>
+</div>
+
+<!-- Cookie preferences modal -->
+<div id="kaptea-cookie-modal" role="dialog" aria-modal="true" aria-labelledby="kcm-title">
+  <div class="kcm-card">
+    <button type="button" class="kcm-close" id="kaptea-modal-close" aria-label="Close cookie preferences">&times;</button>
+    <div class="kcm-header">
+      <h2 id="kcm-title">Cookie preferences</h2>
+      <p>Choose which categories of cookies Kaptea can use. You can change these settings at any time from the Cookie Settings link in the footer. Read our <a href="cookie-policy">Cookie Policy</a> for full details.</p>
+    </div>
+    <div class="kcm-body">
+      <div class="kcm-row">
+        <div class="kcm-row-text">
+          <h3>Necessary</h3>
+          <p>Required for core site functionality, including session management and remembering your cookie preferences. These cookies cannot be disabled.</p>
+        </div>
+        <span class="kcm-pill">Always on</span>
+      </div>
+      <div class="kcm-row">
+        <div class="kcm-row-text">
+          <h3>Analytics</h3>
+          <p>Help us understand how visitors use the site so we can improve it. These cookies are off by default.</p>
+        </div>
+        <label class="kcm-toggle">
+          <input type="checkbox" id="kaptea-toggle-analytics" aria-label="Enable analytics cookies">
+          <span class="kcm-slider"></span>
+        </label>
+      </div>
+      <div class="kcm-row">
+        <div class="kcm-row-text">
+          <h3>Marketing</h3>
+          <p>Used to measure marketing campaign performance and to show relevant content on third-party platforms. Off by default.</p>
+        </div>
+        <label class="kcm-toggle">
+          <input type="checkbox" id="kaptea-toggle-marketing" aria-label="Enable marketing cookies">
+          <span class="kcm-slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="kcm-footer">
+      <button type="button" class="kcb-btn kcm-btn-secondary" id="kaptea-modal-accept">Accept all</button>
+      <button type="button" class="kcb-btn kcb-btn-primary" id="kaptea-modal-save">Save preferences</button>
+    </div>
+  </div>
+</div>`;
 
   const script = document.currentScript;
   script.insertAdjacentHTML('beforebegin', html);
+
+  // Wire footer "Cookie Settings" link to open the modal
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest && e.target.closest('#kaptea-cookie-settings');
+    if (!trigger) return;
+    e.preventDefault();
+    if (typeof window.kapteaOpenCookieModal === 'function') {
+      window.kapteaOpenCookieModal();
+    }
+  });
+
+  // Load consent logic
+  const consentScript = document.createElement('script');
+  consentScript.src = 'cookie-consent.js';
+  consentScript.defer = true;
+  document.body.appendChild(consentScript);
 
 })();
