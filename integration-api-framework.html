@@ -262,6 +262,25 @@ img { max-width: 100%; display: block; }
     .int-card h4 { font-size: 14px; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 4px; }
     .int-card p { font-size: 12px; color: #888888; line-height: 1.45; }
 
+    /* ── CARRIER GRID ── */
+    .how.how-carriers { padding: 64px 24px 72px; }
+    .carrier-intro { max-width: 720px; margin: 0 auto 40px; text-align: center; }
+    .carrier-intro h3 { font-family: 'Manrope', sans-serif; font-size: clamp(22px,3vw,32px); font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 16px; line-height: 1.3; }
+    .carrier-intro p { font-size: 15px; color: var(--kaptea-tagline-grey); line-height: 1.7; }
+    .carrier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1080px; margin: 0 auto; }
+    .carrier-card-block { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; transition: box-shadow 0.2s ease, transform 0.2s ease; }
+    .carrier-card-block:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.06); transform: translateY(-2px); }
+    .carrier-card-mark { height: 36px; display: flex; align-items: center; margin-bottom: 18px; }
+    .carrier-card-mark img { max-height: 28px; max-width: 130px; object-fit: contain; }
+    .carrier-card-mark-text { font-family: 'Manrope', sans-serif; font-size: 32px; font-weight: 700; color: var(--kaptea-red); line-height: 1; }
+    .carrier-card-block h4 { font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 10px; }
+    .carrier-card-block p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.65; flex: 1; margin-bottom: 16px; }
+    .carrier-card-link { font-size: 13px; font-weight: 600; color: var(--kaptea-red); text-decoration: none; align-self: flex-start; }
+    .carrier-card-link:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      .carrier-grid { grid-template-columns: 1fr; }
+    }
+
     /* Integrations block: tighter vertical rhythm (generic .how-visual uses min-height:320px + flex center) */
     .how.how-integrations {
       padding: 52px 24px 56px;
@@ -754,6 +773,37 @@ img { max-width: 100%; display: block; }
     </div>
           <p class="int-grid-foot">Not listed? REST API, scoped keys, and signed webhooks still connect bespoke stacks. <a href="demo" style="color:var(--kaptea-red);font-weight:600;text-decoration:none;">Priority connectors →</a></p>
         </div>
+      </div>
+    </section>
+
+    <!-- ── CARRIER INTEGRATION ── -->
+    <section class="how how-carriers" id="carrier-integration" aria-label="Carrier integration">
+      <div class="carrier-intro">
+        <span class="how-tag">Carrier Integration</span>
+        <h3>Bring your carrier. Or bring two.</h3>
+        <p>Pronto sits as an orchestration layer above the carrier. Connect Twilio, Telnyx, or both, and route by channel, region, or resilience policy. Multi-carrier routing means no single point of failure at the messaging layer, a baseline expectation in regulated sectors.</p>
+      </div>
+      <div class="carrier-grid">
+
+        <div class="carrier-card-block">
+          <div class="carrier-card-mark"><img src="img/brand/twilio-logo.png" alt="Twilio"></div>
+          <h4>Twilio</h4>
+          <p>The world's leading cloud communications platform. SMS, RCS, WhatsApp, Voice, Video, Flex, and Verify, all operationalised through Pronto. Kaptea is a Twilio Gold Consulting Partner.</p>
+          <a href="twilio-partner" class="carrier-card-link">See our Twilio partnership →</a>
+        </div>
+
+        <div class="carrier-card-block">
+          <div class="carrier-card-mark"><img src="img/integrations/telnyx.svg" alt="Telnyx"></div>
+          <h4>Telnyx</h4>
+          <p>Global voice and messaging carrier infrastructure. Run alongside Twilio for secondary carrier resilience, regional optimisation, or as a primary carrier where Telnyx coverage and pricing fit the use case better.</p>
+        </div>
+
+        <div class="carrier-card-block">
+          <div class="carrier-card-mark"><span class="carrier-card-mark-text">+</span></div>
+          <h4>Other carriers</h4>
+          <p>Pronto's carrier abstraction layer integrates with any carrier capable of HTTP API or SMPP-based dispatch. Bring your existing carrier relationship, or we'll help you select one to match your use case, geography, and compliance requirements.</p>
+        </div>
+
       </div>
     </section>
 
