@@ -69,7 +69,7 @@
                 <li class="mega-detail">No heavy engineering team required</li>
                 <li class="mega-detail">Twilio token integration</li>
                 <li class="mega-detail">Cloud-managed infrastructure</li>
-                <li class="mega-detail">EU or US data residency</li>
+                <li class="mega-detail">EU, UK or US data residency</li>
               </ul>
             </div>
 
