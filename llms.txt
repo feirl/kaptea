@@ -9,6 +9,8 @@ Key credentials: ISO 27001 certified, Cyber Essentials Plus certified, CREST acc
 ## Platform
 
 - [Pronto Platform](https://kaptea.vercel.app/pronto): Kaptea's unified omnichannel communications platform for regulated enterprises
+- [Conversational AI](https://kaptea.vercel.app/conversational-ai): Pronto's AI agent layer built on Twilio Conversational AI. Customers connect their Twilio account, Pronto provisions a Conversation Intelligence service inside it, master prompts govern the agent, and the customer brings their own LLM (Anthropic Claude, OpenAI GPT, or another major model). Live transcription, sentiment, intent detection, and human-in-the-loop escalation. Compliance-first AI for regulated industries.
+- [Automations & Workflow](https://kaptea.vercel.app/automations-workflow): Visual workflow builder, event triggers from any system, conditional branching, and end-to-end journey orchestration. Multi-step automation with approval gates and human-in-the-loop checkpoints. Marketing, ops, and engineering all build on the same canvas.
 - [SMS & RCS](https://kaptea.vercel.app/sms-rcs): Enterprise SMS and RCS messaging with 99.5% delivery, compliance archiving, and intelligent routing
 - [WhatsApp Business](https://kaptea.vercel.app/whatsapp): Compliant WhatsApp integration for contact centres, with archiving and monitoring for regulated industries
 - [Voice & IVR](https://kaptea.vercel.app/voice-ivr): Fully customisable IVR and voice orchestration built for surge and regulated environments

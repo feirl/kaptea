@@ -12,53 +12,66 @@
       <div class="mega mega-platform">
         <div class="mega-inner"><div class="mega-cols">
 
-          <!-- COL 1: Pronto logo + first 3 sub-categories -->
+          <!-- COL 1: Pronto logo + 4 pillars -->
           <div class="mega-left">
             <div class="mega-panel-label"><a href="pronto" class="pronto-logo-link"><img src="img/brand/pronto-logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
 
             <div class="mega-section">
               <div class="mega-section-title"><a href="omni-channel-communications">Omni-Channel Communications</a></div>
               <ul class="mega-links">
-                <li class="mega-detail">SMS, WhatsApp, Voice, Email, RCS</li>
-                <li class="mega-detail">Two-way messaging</li>
-                <li class="mega-detail">Inbound &amp; outbound orchestration</li>
+                <li class="mega-detail">SMS, WhatsApp, RCS, Voice, Email</li>
+                <li class="mega-detail">Two-way conversations</li>
+                <li class="mega-detail">Branded sender &amp; calling</li>
+              </ul>
+            </div>
+
+            <div class="mega-section">
+              <div class="mega-section-title"><a href="conversational-ai">Conversational AI</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Bring your own LLM</li>
+                <li class="mega-detail">Master prompts &amp; guardrails</li>
+                <li class="mega-detail">Conversation intelligence</li>
+              </ul>
+            </div>
+
+            <div class="mega-section">
+              <div class="mega-section-title"><a href="automations-workflow">Automations &amp; Workflow</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Visual workflow builder</li>
+                <li class="mega-detail">Triggers, branching &amp; logic</li>
+                <li class="mega-detail">End-to-end journey orchestration</li>
               </ul>
             </div>
 
             <div class="mega-section">
               <div class="mega-section-title"><a href="control-governance">Control &amp; Governance</a></div>
               <ul class="mega-links">
-                <li class="mega-detail">Role-based access</li>
-                <li class="mega-detail">Division segmentation</li>
-                <li class="mega-detail">Compliance enforcement</li>
-                <li class="mega-detail">Template controls</li>
-                <li class="mega-detail">Audit logs</li>
-              </ul>
-            </div>
-
-            <div class="mega-section">
-              <div class="mega-section-title"><a href="delivery-resilience">Delivery &amp; Resilience</a></div>
-              <ul class="mega-links">
-                <li class="mega-detail">Cross-channel failover</li>
-                <li class="mega-detail">Delivery diagnostics</li>
-                <li class="mega-detail">Event streaming</li>
-                <li class="mega-detail">Error handling visibility</li>
-                <li class="mega-detail">Load-aware routing</li>
+                <li class="mega-detail">Role-based access &amp; SSO</li>
+                <li class="mega-detail">Division &amp; template governance</li>
+                <li class="mega-detail">Per-message audit trail</li>
               </ul>
             </div>
 
           </div>
 
-          <!-- COL 2: Remaining 2 sub-categories + CTA -->
+          <!-- COL 2: 3 pillars + CTA -->
           <div class="mega-col2">
+
+            <div class="mega-section">
+              <div class="mega-section-title"><a href="delivery-resilience">Delivery &amp; Resilience</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Cross-channel failover</li>
+                <li class="mega-detail">Real-time delivery diagnostics</li>
+                <li class="mega-detail">Surge-proof routing</li>
+              </ul>
+            </div>
 
             <div class="mega-section">
               <div class="mega-section-title"><a href="integration-api-framework">Integration &amp; API Framework</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Two-way CRM sync</li>
-                <li class="mega-detail">Event-driven architecture</li>
-                <li class="mega-detail">Open APIs</li>
-                <li class="mega-detail">Webhook support</li>
+                <li class="mega-detail">Event-driven triggers</li>
+                <li class="mega-detail">Open APIs &amp; webhooks</li>
               </ul>
             </div>
 
@@ -66,8 +79,6 @@
               <div class="mega-section-title"><a href="deployment-infrastructure">Deployment &amp; Infrastructure</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Dedicated instance in days</li>
-                <li class="mega-detail">No heavy engineering team required</li>
-                <li class="mega-detail">Twilio token integration</li>
                 <li class="mega-detail">Cloud-managed infrastructure</li>
                 <li class="mega-detail">EU, UK or US data residency</li>
               </ul>

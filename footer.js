@@ -391,6 +391,8 @@
           <li><a href="email">Email</a></li>
           <li><a href="secure-video">Secure Video</a></li>
           <li><a href="social-messaging">Social</a></li>
+          <li><a href="conversational-ai">Conversational AI</a></li>
+          <li><a href="automations-workflow">Automations &amp; Workflow</a></li>
           <li><a href="control-governance">Control &amp; Governance</a></li>
           <li><a href="delivery-resilience">Delivery &amp; Resilience</a></li>
           <li><a href="integration-api-framework">Integration &amp; API</a></li>

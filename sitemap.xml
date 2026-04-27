@@ -19,6 +19,8 @@
   <url><loc>https://kaptea.vercel.app/delivery-resilience</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaptea.vercel.app/integration-api-framework</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaptea.vercel.app/deployment-infrastructure</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.vercel.app/conversational-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.vercel.app/automations-workflow</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kaptea.vercel.app/twilio-partner</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Use Cases -->
