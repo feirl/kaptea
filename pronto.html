@@ -795,7 +795,22 @@
       margin-bottom: 8px;
     }
 
-    /* ── FAILOVER DIAGRAM ── */
+    /* ── FAILOVER IMAGE ── */
+    .failover-image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .failover-image img {
+      width: 100%;
+      height: auto;
+      max-width: 560px;
+      display: block;
+      border-radius: 12px;
+    }
+
+    /* ── FAILOVER DIAGRAM (legacy) ── */
     .failover-diagram {
       background: var(--kaptea-surface-muted);
       border: 1px solid var(--kaptea-border);
@@ -1428,8 +1443,8 @@
 <section class="section">
   <div class="inner">
     <div class="section-label">Platform capabilities</div>
-    <div class="section-title">Five capabilities. One platform.</div>
-    <div class="section-sub">Pronto is built around five core capability areas - each one addressing a specific enterprise requirement that generic messaging tools can't solve.</div>
+    <div class="section-title">Six capabilities. One platform.</div>
+    <div class="section-sub">Pronto is built around six core capability areas - each one addressing a specific enterprise requirement that generic messaging tools can't solve.</div>
 
     <div class="cap-grid">
 
@@ -1650,29 +1665,8 @@
           <li>Surge-proof routing handles storm-scale traffic spikes</li>
         </ul>
       </div>
-      <div class="failover-diagram">
-        <div class="failover-label">Failover cascade - automatic, silent, instant</div>
-        <div class="failover-chain">
-          <div class="failover-node">
-            <div class="failover-badge fail">SMS</div>
-          </div>
-          <div class="failover-arrow-right">→</div>
-          <div class="failover-node">
-            <div class="failover-badge active">WhatsApp</div>
-          </div>
-          <div class="failover-arrow-right">→</div>
-          <div class="failover-node">
-            <div class="failover-badge">Email</div>
-          </div>
-        </div>
-        <div class="failover-outcome">
-          When an SMS fails to deliver, Pronto automatically escalates to WhatsApp, then Email - without any manual intervention. Every step is logged. Every outcome is confirmed or escalated to your monitoring stack.
-        </div>
-        <div style="margin-top:16px; display:flex; gap:16px; flex-wrap:wrap;">
-          <div style="font-size:12px; font-weight:600; color:#555; background:#f5f2ee; border-radius:6px; padding:6px 12px;">Real-time delivery confirmation per message</div>
-          <div style="font-size:12px; font-weight:600; color:#555; background:#f5f2ee; border-radius:6px; padding:6px 12px;">Event streaming to PagerDuty, Datadog, Slack</div>
-          <div style="font-size:12px; font-weight:600; color:#555; background:#f5f2ee; border-radius:6px; padding:6px 12px;">Surge-proof routing for storm-scale events</div>
-        </div>
+      <div class="failover-image">
+        <img src="img/illustrations/Failover.png" alt="Cross-channel failover cascade: SMS, RCS, WhatsApp, Email, and Voice fallback chains" />
       </div>
     </div>
 
