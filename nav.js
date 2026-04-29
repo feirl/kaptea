@@ -2,7 +2,7 @@
 // Edit this file once to update the nav across all pages.
 (function () {
   const html = `<nav role="navigation" aria-label="Main navigation">
-  <a href="/" class="nav-logo"><img src="img/brand/kaptea-logo.svg" alt="Kaptea" height="38" style="display:block;" /></a>
+  <a href="/" class="nav-logo"><img src="/img/brand/kaptea-logo.svg" alt="Kaptea" height="38" style="display:block;" /></a>
 
   <div class="nav-links">
 
@@ -14,10 +14,10 @@
 
           <!-- COL 1: Pronto logo + 4 pillars -->
           <div class="mega-left">
-            <div class="mega-panel-label"><a href="pronto" class="pronto-logo-link"><img src="img/brand/pronto-logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
+            <div class="mega-panel-label"><a href="/pronto" class="pronto-logo-link"><img src="/img/brand/pronto-logo.svg" alt="Pronto" class="pronto-logo-img"></a></div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="omni-channel-communications">Omni-Channel Communications</a></div>
+              <div class="mega-section-title"><a href="/omni-channel-communications">Omni-Channel Communications</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">SMS, WhatsApp, RCS, Voice, Email</li>
                 <li class="mega-detail">Two-way conversations</li>
@@ -26,7 +26,7 @@
             </div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="conversational-ai">Conversational AI</a></div>
+              <div class="mega-section-title"><a href="/conversational-ai">Conversational AI</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Master prompts &amp; guardrails</li>
                 <li class="mega-detail">Tools, knowledge &amp; data capture</li>
@@ -35,7 +35,7 @@
             </div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="automations-workflow">Automations &amp; Workflow</a></div>
+              <div class="mega-section-title"><a href="/automations-workflow">Automations &amp; Workflow</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Visual workflow builder</li>
                 <li class="mega-detail">Triggers, branching &amp; logic</li>
@@ -44,7 +44,7 @@
             </div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="control-governance">Control &amp; Governance</a></div>
+              <div class="mega-section-title"><a href="/control-governance">Control &amp; Governance</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Role-based access &amp; SSO</li>
                 <li class="mega-detail">Division &amp; template governance</li>
@@ -58,7 +58,7 @@
           <div class="mega-col2">
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="delivery-resilience">Delivery &amp; Resilience</a></div>
+              <div class="mega-section-title"><a href="/delivery-resilience">Delivery &amp; Resilience</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Cross-channel failover</li>
                 <li class="mega-detail">Real-time delivery diagnostics</li>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="integration-api-framework">Integration &amp; API Framework</a></div>
+              <div class="mega-section-title"><a href="/integration-api-framework">Integration &amp; API Framework</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Two-way CRM sync</li>
                 <li class="mega-detail">Event-driven triggers</li>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="mega-section">
-              <div class="mega-section-title"><a href="deployment-infrastructure">Deployment &amp; Infrastructure</a></div>
+              <div class="mega-section-title"><a href="/deployment-infrastructure">Deployment &amp; Infrastructure</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Dedicated instance in days</li>
                 <li class="mega-detail">Cloud-managed infrastructure</li>
@@ -85,7 +85,7 @@
             </div>
 
             <div class="mega-pronto-cta">
-              <a href="pronto">See Pronto in Action →</a>
+              <a href="/pronto">See Pronto in Action →</a>
             </div>
 
           </div>
@@ -97,21 +97,21 @@
               <div>
                 <div class="mega-col-title">Channels</div>
                 <ul class="mega-links">
-                  <li><a href="sms-rcs">SMS &amp; RCS</a></li>
-                  <li><a href="whatsapp">WhatsApp</a></li>
-                  <li><a href="voice-ivr">Voice &amp; IVR</a></li>
-                  <li><a href="email">Email</a></li>
-                  <li><a href="secure-video">Secure Video</a></li>
-                  <li><a href="social-messaging">Social</a></li>
+                  <li><a href="/sms-rcs">SMS &amp; RCS</a></li>
+                  <li><a href="/whatsapp">WhatsApp</a></li>
+                  <li><a href="/voice-ivr">Voice &amp; IVR</a></li>
+                  <li><a href="/email">Email</a></li>
+                  <li><a href="/secure-video">Secure Video</a></li>
+                  <li><a href="/social-messaging">Social</a></li>
                 </ul>
               </div>
 
               <div class="mega-carriers">
-                <a href="twilio-partner" class="carrier-card" style="text-decoration:none;display:block;">
-                  <img src="img/brand/twilio-logo.png" alt="Twilio" class="carrier-logo">
+                <a href="/twilio-partner" class="carrier-card" style="text-decoration:none;display:block;">
+                  <img src="/img/brand/twilio-logo.png" alt="Twilio" class="carrier-logo">
                   <div class="carrier-desc">The world's leading cloud communications platform: messaging, voice, video, Flex and Verify, fully operationalised through Pronto.</div>
                 </a>
-                <a href="integration-api-framework#carrier-integration" class="carrier-more" style="text-decoration:none;display:block;">+ more carriers &amp; integrations →</a>
+                <a href="/integration-api-framework#carrier-integration" class="carrier-more" style="text-decoration:none;display:block;">+ more carriers &amp; integrations →</a>
               </div>
 
             </div>
@@ -132,7 +132,7 @@
             <div class="mega-panel-label">Use Cases</div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">01</span><a href="customer-journey-orchestration">Customer Journey Orchestration</a></div>
+              <div class="use-case-title"><span class="use-case-num">01</span><a href="/customer-journey-orchestration">Customer Journey Orchestration</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">End-to-end workflow engine</li>
                 <li class="mega-detail">Dual-payload API enrichment</li>
@@ -144,7 +144,7 @@
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">02</span><a href="emergency-surge-communications">Urgent Messaging &amp; Recall</a></div>
+              <div class="use-case-title"><span class="use-case-num">02</span><a href="/emergency-surge-communications">Urgent Messaging &amp; Recall</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">CSV upload for mass dispatch</li>
                 <li class="mega-detail">Email to SMS to branded call escalation</li>
@@ -156,7 +156,7 @@
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">03</span><a href="enterprise-transactional-messaging">Transactional Communication</a></div>
+              <div class="use-case-title"><span class="use-case-num">03</span><a href="/enterprise-transactional-messaging">Transactional Communication</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">Layer over existing transactional stack</li>
                 <li class="mega-detail">Drag-and-drop template management</li>
@@ -246,23 +246,23 @@
       </div>
     </div>
 
-    <div class="nav-item"><a href="pricing">Pricing</a></div>
+    <div class="nav-item"><a href="/pricing">Pricing</a></div>
     <div class="nav-item" id="nav-resources">
       <a href="#">Resources <span class="nav-chevron">▾</span></a>
       <div class="mega mega-resources">
 
         <ul class="mega-links">
-          <li><a href="case-studies">Customer Stories</a></li>
-          <li><a href="blog">Blog &amp; Insights</a></li>
-          <li><a href="certification">Certification</a></li>
-          <li><a href="security-compliance">Security &amp; Compliance</a></li>
+          <li><a href="/case-studies">Customer Stories</a></li>
+          <li><a href="/blog">Blog &amp; Insights</a></li>
+          <li><a href="/certification">Certification</a></li>
+          <li><a href="/security-compliance">Security &amp; Compliance</a></li>
           <li><a href="https://developers.pronto-360.com/" target="_blank" rel="noopener">API Documentation</a></li>
-          <li><a href="implementation">Implementation &amp; Support</a></li>
+          <li><a href="/implementation">Implementation &amp; Support</a></li>
         </ul>
 
       </div>
     </div>
-    <div class="nav-item"><a href="why-kaptea">Why Kaptea</a></div>
+    <div class="nav-item"><a href="/why-kaptea">Why Kaptea</a></div>
 
   </div>
 
@@ -271,7 +271,7 @@
   </div>
 
   <div class="nav-cta-wrap">
-    <a href="demo" class="nav-cta">Book a Demo</a>
+    <a href="/demo" class="nav-cta">Book a Demo</a>
   </div>
 </nav>`;
 
