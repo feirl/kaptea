@@ -108,9 +108,22 @@
     .solution-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
     .solution-block.reverse { direction: rtl; }
     .solution-block.reverse > * { direction: ltr; }
-    .solution-visual { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 10px; padding: 56px 24px; min-height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; }
-    .solution-visual svg { color: rgba(220,39,39,0.22); }
-    .solution-visual span { font-size: 11px; color: var(--kaptea-tagline-grey); letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.5; max-width: 220px; }
+    .solution-visual {
+      background: #131521;
+      border-radius: 10px;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      border: none;
+      padding: 28px 28px 20px;
+    }
+    .feat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.3); margin-bottom: 18px; font-family: 'Inter', sans-serif; }
+    .feat-row { display: flex; align-items: flex-start; gap: 10px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.78); font-size: 13px; line-height: 1.5; font-family: 'Inter', sans-serif; }
+    .feat-row:last-child { border-bottom: none; }
+    .feat-row svg { flex-shrink: 0; margin-top: 2px; }
     .solution-answer h3 { font-size: 20px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 10px; line-height: 1.3; }
     .solution-answer p { font-size: 15px; color: var(--kaptea-tagline-grey); line-height: 1.7; margin-bottom: 16px; }
     .solution-answer ul { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
@@ -396,8 +409,11 @@
 
     <div class="solution-block">
       <div class="solution-visual">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        <span>Master prompt configuration screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Brand voice and tone defined once, applied to every AI interaction</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Prohibited topics and compliance boundaries enforced at prompt level</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Prompt versioning: approved prompts locked before deployment</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Role-specific prompt sets for different agent or channel types</span></div>
       </div>
       <div class="solution-answer">
         <h3>Master prompts: your script, governed</h3>
@@ -415,8 +431,11 @@
 
     <div class="solution-block reverse">
       <div class="solution-visual">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-        <span>Voice configuration screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Real-time speech recognition built for noisy environments</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Natural language understanding across multiple languages</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Interruption handling: AI responds to mid-sentence corrections</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Configurable speaking pace and tone per use case</span></div>
       </div>
       <div class="solution-answer">
         <h3>Voice and language built for live conversation</h3>
@@ -434,8 +453,11 @@
 
     <div class="solution-block">
       <div class="solution-visual">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        <span>Tools, data capture &amp; knowledge screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Function calling: AI queries CRM, database, or API mid-conversation</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Structured data extraction: names, account numbers, intent</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Knowledge base ingestion: documents, FAQs, product data</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Answers cited to source with configurable confidence threshold</span></div>
       </div>
       <div class="solution-answer">
         <h3>Tools, data capture, and knowledge bases</h3>
@@ -453,8 +475,11 @@
 
     <div class="solution-block reverse">
       <div class="solution-visual">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span>Escalation flow &amp; agent inbox screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Escalation trigger: threshold, keyword, or customer request</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Full conversation transcript passed to agent at handoff</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Agent inbox receives context before the call is connected</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Return-to-AI option available for post-resolution wrap-up</span></div>
       </div>
       <div class="solution-answer">
         <h3>Live escalation into Pronto with full context</h3>

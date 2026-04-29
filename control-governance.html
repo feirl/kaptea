@@ -295,14 +295,25 @@
       width: 6px; height: 6px; border-radius: 50%; background: var(--kaptea-red);
     }
     .how-visual {
-      background: var(--kaptea-surface-muted); border: 1px solid var(--kaptea-border); border-radius: 12px;
-      min-height: 280px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 12px; padding: 40px;
+      background: #131521;
+      border-radius: 12px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      border: none;
+      padding: 28px 28px 20px;
     }
-    .how-visual span {
-      font-size: 11px; color: var(--kaptea-neutral-grey);
-      letter-spacing: 0.06em; text-transform: uppercase; text-align: center;
-    }
+    .feat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.3); margin-bottom: 18px; font-family: 'Inter', sans-serif; }
+    .feat-row { display: flex; align-items: flex-start; gap: 10px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.78); font-size: 13px; line-height: 1.5; font-family: 'Inter', sans-serif; }
+    .feat-row:last-child { border-bottom: none; }
+    .feat-row svg { flex-shrink: 0; margin-top: 2px; }
+    .feat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.3); margin-bottom: 18px; font-family: 'Inter', sans-serif; }
+    .feat-row { display: flex; align-items: flex-start; gap: 10px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.78); font-size: 13px; line-height: 1.5; font-family: 'Inter', sans-serif; }
+    .feat-row:last-child { border-bottom: none; }
+    .feat-row svg { flex-shrink: 0; margin-top: 2px; }
 
     /* ── METRICS STRIP ── */
     .metrics-strip { background: var(--kaptea-charcoal); padding: 56px 40px; }
@@ -629,9 +640,12 @@
           <li>User attributes and division membership synced automatically from SSO claims on login</li>
         </ul>
       </div>
-      <div class="how-visual" aria-hidden="true">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <span>Screenshot to be supplied</span>
+      <div class="how-visual">
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Three access tiers: Admin, Manager, and Agent</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Twelve modules individually permissioned per role</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Role templates: configure once, apply to new users instantly</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>SSO-compatible: roles enforced via your identity provider</span></div>
       </div>
     </div>
 
@@ -648,9 +662,12 @@
           <li>Auto-mapping from SSO department or office location attributes</li>
         </ul>
       </div>
-      <div class="how-visual" aria-hidden="true">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        <span>Screenshot to be supplied</span>
+      <div class="how-visual">
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Each division sees only its own contacts, templates, and reports</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Cross-division visibility granted at Admin level only</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Usage tracked and reportable per division for billing clarity</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Separate approval chains: division heads approve their own sends</span></div>
       </div>
     </div>
 
@@ -667,9 +684,12 @@
           <li>Template categories and types scoped to division for structured organisation</li>
         </ul>
       </div>
-      <div class="how-visual" aria-hidden="true">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        <span>Screenshot to be supplied</span>
+      <div class="how-visual">
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Workflow: Draft, Review, Approved, Archived</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>No template reaches a customer without passing approval</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Version history: every change recorded with author and timestamp</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Compliance hold: templates frozen pending regulatory review</span></div>
       </div>
     </div>
 
@@ -686,9 +706,12 @@
           <li>CSV export accepted by ICO, FCA, and sector-specific regulators</li>
         </ul>
       </div>
-      <div class="how-visual" aria-hidden="true">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        <span>Screenshot to be supplied</span>
+      <div class="how-visual">
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Every send, edit, login, and approval recorded automatically</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Immutable log: entries cannot be edited or deleted</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Exportable to CSV, JSON, or direct SIEM integration</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Retention period configurable to meet your compliance policy</span></div>
       </div>
     </div>
 
