@@ -11,4 +11,4 @@ Disallow: /wp-json/
 Disallow: /admin
 Disallow: /login
 
-Sitemap: https://kaptea.vercel.app/sitemap.xml
+Sitemap: https://kaptea.io/sitemap.xml
