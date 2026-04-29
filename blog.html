@@ -121,6 +121,71 @@
     .blog-filter-btn:hover { color: #131521; }
     .blog-filter-btn.active { color: #dc2727; border-bottom-color: #dc2727; }
 
+    /* ── PAGINATION ── */
+    .blog-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid #e8eaf0;
+      flex-wrap: wrap;
+    }
+    .blog-pagination[hidden] { display: none; }
+    .blog-pg-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #6b7280;
+      background: #ffffff;
+      border: 1px solid #e8eaf0;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+    }
+    .blog-pg-btn:hover:not(:disabled) { color: #131521; border-color: #cdd1da; }
+    .blog-pg-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .blog-pg-pages {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 4px;
+    }
+    .blog-pg-pages button {
+      min-width: 36px;
+      height: 36px;
+      padding: 0 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #6b7280;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.15s, background 0.15s, border-color 0.15s;
+    }
+    .blog-pg-pages button:hover { color: #131521; background: #f5f6fa; }
+    .blog-pg-pages button[aria-current="page"] {
+      color: #dc2727;
+      border-color: #dc2727;
+      background: rgba(220,39,39,0.04);
+    }
+    .blog-empty {
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+      margin-top: 48px;
+      padding: 24px;
+    }
+    .blog-empty[hidden] { display: none; }
+
     /* ── CATEGORY PILLS ── */
     .blog-cat {
       display: inline-block;
@@ -526,12 +591,12 @@
 <!-- Filter strip -->
 <div class="blog-filter" role="navigation" aria-label="Article categories">
   <div class="blog-filter-inner">
-    <a href="#" class="blog-filter-btn active">All</a>
-    <a href="#" class="blog-filter-btn">Platform</a>
-    <a href="#" class="blog-filter-btn">Compliance</a>
-    <a href="#" class="blog-filter-btn">Industry</a>
-    <a href="#" class="blog-filter-btn">Infrastructure</a>
-    <a href="#" class="blog-filter-btn">Company</a>
+    <button type="button" class="blog-filter-btn active" data-filter="all">All</button>
+    <button type="button" class="blog-filter-btn" data-filter="compliance">Compliance</button>
+    <button type="button" class="blog-filter-btn" data-filter="strategy">Strategy</button>
+    <button type="button" class="blog-filter-btn" data-filter="infrastructure">Infrastructure</button>
+    <button type="button" class="blog-filter-btn" data-filter="company">Company</button>
+    <button type="button" class="blog-filter-btn" data-filter="procurement">Procurement</button>
   </div>
 </div>
 
@@ -540,7 +605,7 @@
   <div class="blog-content-inner">
 
     <!-- Featured post: Alan's manifesto piece -->
-    <a href="/blog/trust-not-a-kpi" class="blog-featured">
+    <a href="/blog/trust-not-a-kpi" class="blog-featured" data-category="company">
 
       <div class="blog-featured-accent">
         <span class="feat-label">Featured article</span>
@@ -579,7 +644,7 @@
     <div class="blog-section-label">More articles</div>
     <div class="blog-grid">
 
-      <a href="/blog/dedicated-instance" class="blog-card">
+      <a href="/blog/dedicated-instance" class="blog-card" data-category="infrastructure">
         <div class="blog-card-accent accent--infrastructure"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--infrastructure">Infrastructure</span>
@@ -596,7 +661,7 @@
         </div>
       </a>
 
-      <a href="/blog/whatsapp-compliance" class="blog-card">
+      <a href="/blog/whatsapp-compliance" class="blog-card" data-category="compliance">
         <div class="blog-card-accent accent--compliance"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--compliance">Compliance</span>
@@ -613,7 +678,7 @@
         </div>
       </a>
 
-      <a href="/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement" class="blog-card">
+      <a href="/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement" class="blog-card" data-category="strategy">
         <div class="blog-card-accent accent--strategy"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--strategy">Strategy</span>
@@ -630,7 +695,7 @@
         </div>
       </a>
 
-      <a href="/blog/kaptea-certified-gold-status-twilio-consulting-partner" class="blog-card">
+      <a href="/blog/kaptea-certified-gold-status-twilio-consulting-partner" class="blog-card" data-category="company">
         <div class="blog-card-accent accent--company"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--company">Company News</span>
@@ -647,7 +712,7 @@
         </div>
       </a>
 
-      <div class="blog-card blog-card--soon">
+      <div class="blog-card blog-card--soon" data-category="compliance">
         <div class="blog-card-accent accent--compliance"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--compliance">Compliance</span>
@@ -659,7 +724,7 @@
         </div>
       </div>
 
-      <div class="blog-card blog-card--soon">
+      <div class="blog-card blog-card--soon" data-category="procurement">
         <div class="blog-card-accent accent--procurement"></div>
         <div class="blog-card-body">
           <span class="blog-cat blog-cat--procurement">Procurement</span>
@@ -672,6 +737,23 @@
       </div>
 
     </div>
+
+    <!-- Pagination (auto-hidden when only one page) -->
+    <nav class="blog-pagination" aria-label="Article pagination" hidden>
+      <button type="button" class="blog-pg-btn blog-pg-prev" aria-label="Previous page">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        <span>Previous</span>
+      </button>
+      <ol class="blog-pg-pages" role="list"></ol>
+      <button type="button" class="blog-pg-btn blog-pg-next" aria-label="Next page">
+        <span>Next</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </nav>
+
+    <!-- No-results message (hidden by default) -->
+    <p class="blog-empty" hidden>No articles in this category yet. Try a different filter or check back soon.</p>
+
   </div>
 </section>
 
@@ -696,6 +778,107 @@
     <a href="demo" class="btn btn-white">Book a Demo</a>
   </div>
 </section>
+
+<script>
+(function () {
+  'use strict';
+  var POSTS_PER_PAGE = 9; // pagination kicks in once there are 10+ grid posts
+
+  var featured = document.querySelector('.blog-featured');
+  var gridItems = Array.prototype.slice.call(
+    document.querySelectorAll('.blog-grid .blog-card[data-category]')
+  );
+  var sectionLabel = document.querySelector('.blog-section-label');
+  var filterBtns = document.querySelectorAll('.blog-filter-btn');
+  var pagination = document.querySelector('.blog-pagination');
+  var pageList = document.querySelector('.blog-pg-pages');
+  var prevBtn = document.querySelector('.blog-pg-prev');
+  var nextBtn = document.querySelector('.blog-pg-next');
+  var emptyMsg = document.querySelector('.blog-empty');
+
+  var state = { filter: 'all', page: 1 };
+
+  function matches(el) {
+    return state.filter === 'all' || el.getAttribute('data-category') === state.filter;
+  }
+
+  function visibleGrid() {
+    return gridItems.filter(matches);
+  }
+
+  function render() {
+    // Featured: show only when it matches the current filter
+    var featuredVisible = !!(featured && matches(featured));
+    if (featured) featured.style.display = featuredVisible ? '' : 'none';
+
+    // Grid: filter then paginate
+    var visible = visibleGrid();
+    var totalPages = Math.max(1, Math.ceil(visible.length / POSTS_PER_PAGE));
+    if (state.page > totalPages) state.page = 1;
+    var start = (state.page - 1) * POSTS_PER_PAGE;
+    var end = start + POSTS_PER_PAGE;
+
+    gridItems.forEach(function (el) { el.style.display = 'none'; });
+    visible.slice(start, end).forEach(function (el) { el.style.display = ''; });
+
+    // Hide "More articles" label if grid is empty
+    if (sectionLabel) sectionLabel.style.display = visible.length > 0 ? '' : 'none';
+
+    // Empty-state message: only when nothing matches at all (featured hidden + grid empty)
+    if (emptyMsg) emptyMsg.hidden = featuredVisible || visible.length > 0;
+
+    renderPagination(totalPages);
+  }
+
+  function renderPagination(totalPages) {
+    if (!pagination || !pageList) return;
+    if (totalPages <= 1) {
+      pagination.hidden = true;
+      return;
+    }
+    pagination.hidden = false;
+    pageList.innerHTML = '';
+    for (var i = 1; i <= totalPages; i++) {
+      var li = document.createElement('li');
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = String(i);
+      if (i === state.page) btn.setAttribute('aria-current', 'page');
+      (function (n) {
+        btn.addEventListener('click', function () {
+          state.page = n;
+          render();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      })(i);
+      li.appendChild(btn);
+      pageList.appendChild(li);
+    }
+    if (prevBtn) prevBtn.disabled = state.page <= 1;
+    if (nextBtn) nextBtn.disabled = state.page >= totalPages;
+  }
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      state.filter = btn.getAttribute('data-filter') || 'all';
+      state.page = 1;
+      render();
+    });
+  });
+
+  if (prevBtn) prevBtn.addEventListener('click', function () {
+    if (state.page > 1) { state.page--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  });
+  if (nextBtn) nextBtn.addEventListener('click', function () {
+    var totalPages = Math.max(1, Math.ceil(visibleGrid().length / POSTS_PER_PAGE));
+    if (state.page < totalPages) { state.page++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  });
+
+  render();
+})();
+</script>
 
 <script src="footer.js"></script>
 </body>
