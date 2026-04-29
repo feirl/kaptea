@@ -28,15 +28,16 @@ Key credentials: ISO 27001 certified, Cyber Essentials Plus certified, CREST acc
 
 ## Industries
 
-- [Financial Services](https://kaptea.vercel.app/financial-services): MiFID II and FCA-compliant communications for banks, insurers, and investment firms
-- [Healthcare](https://kaptea.vercel.app/healthcare): GDPR-compliant patient communications for HSE, NHS, and private healthcare providers
-- [Utilities & Energy](https://kaptea.vercel.app/utilities-energy): Surge-capable communications for outage management, CRU compliance, and customer service
-- [Public Sector](https://kaptea.vercel.app/public-sector): Secure citizen communications for government and public bodies
-- [Travel & Transport](https://kaptea.vercel.app/travel-transport): Real-time passenger communications and disruption management
-- [Retail, Ecommerce & Automotive](https://kaptea.vercel.app/retail-ecommerce): Order and dispatch comms, peak surge messaging, distributed store and dealer governance, vehicle warranty and product recall workflows. Built for centralised and distributed retail networks and motoring operators.
+- [Financial Services](https://kaptea.vercel.app/industries/finance): MiFID II and FCA-compliant communications for banks, insurers, and investment firms
+- [Healthcare](https://kaptea.vercel.app/industries/healthcare): GDPR-compliant patient communications for HSE, NHS, and private healthcare providers
+- [Utilities & Energy](https://kaptea.vercel.app/industries/utilities): Surge-capable communications for outage management, CRU compliance, and customer service
+- [Public Sector](https://kaptea.vercel.app/industries/public-sector): Secure citizen communications for government and public bodies
+- [Travel & Transport](https://kaptea.vercel.app/industries/travel-transport): Real-time passenger communications and disruption management
+- [Retail, Ecommerce & Automotive](https://kaptea.vercel.app/industries/retail-ecommerce): Order and dispatch comms, peak surge messaging, distributed store and dealer governance, vehicle warranty and product recall workflows. Built for centralised and distributed retail networks and motoring operators.
 
 ## Trust & Credentials
 
+- [About Kaptea](https://kaptea.vercel.app/about): Company story, founding principles, leadership team, and Dublin HQ. Kaptea is a Twilio Gold Consulting Partner and Twilio AI Partner.
 - [Why Kaptea](https://kaptea.vercel.app/why-kaptea): Company positioning, philosophy, and the "promises made, promises kept" approach
 - [Security & Compliance](https://kaptea.vercel.app/security-compliance): Overview of Kaptea's security posture and compliance certifications
 - [Certifications](https://kaptea.vercel.app/certification): ISO 27001, Cyber Essentials Plus, and CREST accreditation details with verifiable links
@@ -46,19 +47,22 @@ Key credentials: ISO 27001 certified, Cyber Essentials Plus certified, CREST acc
 ## Case Studies
 
 - [Case Studies](https://kaptea.vercel.app/case-studies): Overview of Kaptea client deployments across regulated industries
-- [An Post](https://kaptea.vercel.app/case-study-an-post): National postal service SMS and customer notification infrastructure
-- [An Post WhatsApp](https://kaptea.vercel.app/case-study-an-post-whatsapp): WhatsApp Business integration for parcel delivery notifications
-- [eFlow](https://kaptea.vercel.app/case-study-eflow): Tolling authority automated billing and customer communications
-- [Hotbox](https://kaptea.vercel.app/case-study-hotbox): Hospitality and events SMS communications platform
+- [An Post](https://kaptea.vercel.app/case-studies/an-post): National postal service SMS and customer notification infrastructure
+- [An Post WhatsApp](https://kaptea.vercel.app/case-studies/an-post-whatsapp): WhatsApp Business integration for parcel delivery notifications
+- [eFlow](https://kaptea.vercel.app/case-studies/eflow): Tolling authority automated billing and customer communications
+- [Hotbox](https://kaptea.vercel.app/case-studies/hotbox): Hospitality and events SMS communications platform
+- [Attrix IVR + Zendesk](https://kaptea.vercel.app/case-studies/attrix-ivr-with-zendesk): Custom Twilio Studio IVR integrated directly with Zendesk for fleet and telematics operations. 14,000 monthly calls processed with 53s reduction in average handle time across 28 advisors.
+- [FoodCloud Twilio Flex](https://kaptea.vercel.app/case-studies/kaptea-foodcloud-flex): Cloud contact centre deployed during the pandemic for an Irish food redistribution charity, with custom dual-CRM API spanning legacy and Salesforce systems. 8,000+ tonnes of surplus food and 19.2M meals enabled.
+- [Tomo Networks Flex](https://kaptea.vercel.app/case-studies/tomo-flex-with-hubspot): US mortgage startup contact centre on Twilio Flex, four channels (voice, SMS, email, webchat) deployed in 8 weeks, scaled to 35 agents reaching over a quarter of the US market.
 
 ## Blog & Insights
 
 - [Blog](https://kaptea.vercel.app/blog): Kaptea's editorial hub covering compliance, omnichannel strategy, and enterprise communications
-- [The problem isn't your technology. It's your promises.](https://kaptea.vercel.app/blog-trust-not-a-kpi): CEO Alan McNab on why enterprises fail at customer trust despite heavy technology investment, and why promises are the atomic unit of service delivery
-- [WhatsApp in your contact centre: what compliance actually requires](https://kaptea.vercel.app/blog-whatsapp-compliance): Compliance obligations for regulated industries using WhatsApp, covering archiving, monitoring, GDPR, and FCA requirements
-- [Multichannel vs omnichannel: why the difference matters more than you think](https://kaptea.vercel.app/blog-multichannel-vs-omnichannel): Clear distinction between multichannel and omnichannel strategies, with 89% vs 33% retention data and operational guidance
-- [What is a dedicated communications instance? The enterprise buyer's guide](https://kaptea.vercel.app/blog-dedicated-instance): Enterprise buyers guide to dedicated vs shared communications infrastructure, data residency, and compliance evidence
-- [Kaptea achieves Twilio Gold Partner status](https://kaptea.vercel.app/blog-gold-partner-twilio): Milestone announcement covering 7M+ messages delivered, HSE COVID-19 contact tracing deployment, and counselling platform scaled to 120+ agents
+- [The problem isn't your technology. It's your promises.](https://kaptea.vercel.app/blog/trust-not-a-kpi): CEO Alan McNab on why enterprises fail at customer trust despite heavy technology investment, and why promises are the atomic unit of service delivery
+- [WhatsApp in your contact centre: what compliance actually requires](https://kaptea.vercel.app/blog/whatsapp-compliance): Compliance obligations for regulated industries using WhatsApp, covering archiving, monitoring, GDPR, and FCA requirements
+- [Multichannel vs omnichannel: why the difference matters more than you think](https://kaptea.vercel.app/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement): Clear distinction between multichannel and omnichannel strategies, with 89% vs 33% retention data and operational guidance
+- [What is a dedicated communications instance? The enterprise buyer's guide](https://kaptea.vercel.app/blog/dedicated-instance): Enterprise buyers guide to dedicated vs shared communications infrastructure, data residency, and compliance evidence
+- [Kaptea achieves Twilio Gold Partner status](https://kaptea.vercel.app/blog/kaptea-certified-gold-status-twilio-consulting-partner): Milestone announcement covering 7M+ messages delivered, HSE COVID-19 contact tracing deployment, and counselling platform scaled to 120+ agents
 
 ## Developers
 
@@ -72,5 +76,5 @@ Key credentials: ISO 27001 certified, Cyber Essentials Plus certified, CREST acc
 ## Legal
 
 - [Privacy Policy](https://kaptea.vercel.app/privacy-policy): GDPR-compliant data handling, retention, and your rights as a data subject
-- [Cookie Policy](https://kaptea.vercel.app/cookie-policy): Cookie categories, third-party disclosures, and opt-out options
+- [Cookie Policy](https://kaptea.vercel.app/cookies): Cookie categories, third-party disclosures, and opt-out options
 - [Terms of Service](https://kaptea.vercel.app/terms): B2B SaaS terms governing Kaptea platform access and service delivery

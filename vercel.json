@@ -2,7 +2,29 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/index", "destination": "/", "permanent": true }
+    { "source": "/index", "destination": "/", "permanent": true },
+    { "source": "/services", "destination": "/pronto", "permanent": true },
+    { "source": "/cookie-policy", "destination": "/cookies", "permanent": true },
+    { "source": "/financial-services", "destination": "/industries/finance", "permanent": true },
+    { "source": "/utilities-energy", "destination": "/industries/utilities", "permanent": true },
+    { "source": "/healthcare", "destination": "/industries/healthcare", "permanent": true },
+    { "source": "/travel-transport", "destination": "/industries/travel-transport", "permanent": true },
+    { "source": "/public-sector", "destination": "/industries/public-sector", "permanent": true },
+    { "source": "/retail-ecommerce", "destination": "/industries/retail-ecommerce", "permanent": true },
+    { "source": "/case-study-an-post", "destination": "/case-studies/an-post", "permanent": true },
+    { "source": "/case-study-an-post-whatsapp", "destination": "/case-studies/an-post-whatsapp", "permanent": true },
+    { "source": "/case-study-caledonian-sleeper", "destination": "/case-studies/caledonian-sleeper", "permanent": true },
+    { "source": "/case-study-eflow", "destination": "/case-studies/eflow", "permanent": true },
+    { "source": "/case-study-hotbox", "destination": "/case-studies/hotbox", "permanent": true },
+    { "source": "/case-study-quandoo", "destination": "/case-studies/quandoo", "permanent": true },
+    { "source": "/case-study-teaching-council", "destination": "/case-studies/teaching-council", "permanent": true },
+    { "source": "/case-study-tickmill", "destination": "/case-studies/tickmill", "permanent": true },
+    { "source": "/case-studies/attrix-telematics-ivr-integration-with-zendesk-copy-4", "destination": "/case-studies/attrix-ivr-with-zendesk", "permanent": true },
+    { "source": "/blog-trust-not-a-kpi", "destination": "/blog/trust-not-a-kpi", "permanent": true },
+    { "source": "/blog-dedicated-instance", "destination": "/blog/dedicated-instance", "permanent": true },
+    { "source": "/blog-whatsapp-compliance", "destination": "/blog/whatsapp-compliance", "permanent": true },
+    { "source": "/blog-multichannel-vs-omnichannel", "destination": "/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement", "permanent": true },
+    { "source": "/blog-gold-partner-twilio", "destination": "/blog/kaptea-certified-gold-status-twilio-consulting-partner", "permanent": true }
   ],
   "headers": [
     {
