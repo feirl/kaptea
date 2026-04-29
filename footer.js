@@ -364,7 +364,7 @@
 
       <!-- Brand -->
       <div class="footer-brand">
-        <img src="img/brand/kaptea-logo-white.svg" alt="Kaptea" height="28" style="opacity:0.8;" />
+        <img src="/img/brand/kaptea-logo-white.svg" alt="Kaptea" height="28" style="opacity:0.8;" />
         <p>The only compliance-first communications platform built for enterprise, on carrier-grade infrastructure.</p>
         <div class="footer-certs">
           <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> ISO 27001 Certified</div>
@@ -383,20 +383,20 @@
       <div class="footer-col">
         <h4>Platform</h4>
         <ul>
-          <li><a href="pronto">Pronto</a></li>
-          <li><a href="omni-channel-communications">Omni-Channel</a></li>
-          <li><a href="sms-rcs">SMS &amp; RCS</a></li>
-          <li><a href="whatsapp">WhatsApp</a></li>
-          <li><a href="voice-ivr">Voice &amp; IVR</a></li>
-          <li><a href="email">Email</a></li>
-          <li><a href="secure-video">Secure Video</a></li>
-          <li><a href="social-messaging">Social</a></li>
-          <li><a href="conversational-ai">Conversational AI</a></li>
-          <li><a href="automations-workflow">Automations &amp; Workflow</a></li>
-          <li><a href="control-governance">Control &amp; Governance</a></li>
-          <li><a href="delivery-resilience">Delivery &amp; Resilience</a></li>
-          <li><a href="integration-api-framework">Integration &amp; API</a></li>
-          <li><a href="deployment-infrastructure">Deployment</a></li>
+          <li><a href="/pronto">Pronto</a></li>
+          <li><a href="/omni-channel-communications">Omni-Channel</a></li>
+          <li><a href="/sms-rcs">SMS &amp; RCS</a></li>
+          <li><a href="/whatsapp">WhatsApp</a></li>
+          <li><a href="/voice-ivr">Voice &amp; IVR</a></li>
+          <li><a href="/email">Email</a></li>
+          <li><a href="/secure-video">Secure Video</a></li>
+          <li><a href="/social-messaging">Social</a></li>
+          <li><a href="/conversational-ai">Conversational AI</a></li>
+          <li><a href="/automations-workflow">Automations &amp; Workflow</a></li>
+          <li><a href="/control-governance">Control &amp; Governance</a></li>
+          <li><a href="/delivery-resilience">Delivery &amp; Resilience</a></li>
+          <li><a href="/integration-api-framework">Integration &amp; API</a></li>
+          <li><a href="/deployment-infrastructure">Deployment</a></li>
         </ul>
       </div>
 
@@ -404,9 +404,9 @@
       <div class="footer-col">
         <h4>Use Cases</h4>
         <ul>
-          <li><a href="customer-journey-orchestration">Customer Journey Orchestration</a></li>
-          <li><a href="emergency-surge-communications">Urgent Messaging &amp; Recall</a></li>
-          <li><a href="enterprise-transactional-messaging">Transactional Communication</a></li>
+          <li><a href="/customer-journey-orchestration">Customer Journey Orchestration</a></li>
+          <li><a href="/emergency-surge-communications">Urgent Messaging &amp; Recall</a></li>
+          <li><a href="/enterprise-transactional-messaging">Transactional Communication</a></li>
         </ul>
       </div>
 
@@ -427,12 +427,12 @@
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="case-studies">Customer Stories</a></li>
-          <li><a href="blog">Blog &amp; Insights</a></li>
-          <li><a href="certification">Certification</a></li>
-          <li><a href="security-compliance">Security &amp; Compliance</a></li>
+          <li><a href="/case-studies">Customer Stories</a></li>
+          <li><a href="/blog">Blog &amp; Insights</a></li>
+          <li><a href="/certification">Certification</a></li>
+          <li><a href="/security-compliance">Security &amp; Compliance</a></li>
           <li><a href="https://developers.pronto-360.com/" target="_blank" rel="noopener">API Documentation</a></li>
-          <li><a href="implementation">Implementation &amp; Support</a></li>
+          <li><a href="/implementation">Implementation &amp; Support</a></li>
         </ul>
       </div>
 
@@ -440,13 +440,13 @@
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about">About</a></li>
-          <li><a href="why-kaptea">Why Kaptea</a></li>
-          <li><a href="meet-the-team">Meet The Team</a></li>
-          <li><a href="pricing">Pricing</a></li>
-          <li><a href="demo">Book a Demo</a></li>
-          <li><a href="careers">Careers</a></li>
-          <li><a href="contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/why-kaptea">Why Kaptea</a></li>
+          <li><a href="/meet-the-team">Meet The Team</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/demo">Book a Demo</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
 
@@ -455,10 +455,10 @@
     <div class="footer-bottom">
       <div>&copy; 2026 Kaptea. All rights reserved.</div>
       <div class="footer-legal">
-        <a href="privacy-policy">Privacy Policy</a>
-        <a href="terms">Terms of Service</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
         <a href="/cookies">Cookie Policy</a>
-        <a href="privacy-policy#your-rights">GDPR</a>
+        <a href="/privacy-policy#your-rights">GDPR</a>
         <a href="#" id="kaptea-cookie-settings">Cookie Settings</a>
       </div>
     </div>
@@ -537,7 +537,7 @@
 
   // Load consent logic
   const consentScript = document.createElement('script');
-  consentScript.src = 'cookie-consent.js';
+  consentScript.src = '/cookie-consent.js';
   consentScript.defer = true;
   document.body.appendChild(consentScript);
 
