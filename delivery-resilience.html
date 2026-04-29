@@ -343,14 +343,25 @@
       width: 6px; height: 6px; border-radius: 50%; background: var(--kaptea-red);
     }
     .how-visual {
-      background: var(--kaptea-surface-muted); border: 1px solid var(--kaptea-border); border-radius: 12px;
-      min-height: 280px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 12px; padding: 40px;
+      background: #131521;
+      border-radius: 12px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      border: none;
+      padding: 28px 28px 20px;
     }
-    .how-visual span {
-      font-size: 11px; color: var(--kaptea-neutral-grey);
-      letter-spacing: 0.06em; text-transform: uppercase; text-align: center;
-    }
+    .feat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.3); margin-bottom: 18px; font-family: 'Inter', sans-serif; }
+    .feat-row { display: flex; align-items: flex-start; gap: 10px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.78); font-size: 13px; line-height: 1.5; font-family: 'Inter', sans-serif; }
+    .feat-row:last-child { border-bottom: none; }
+    .feat-row svg { flex-shrink: 0; margin-top: 2px; }
+    .feat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.3); margin-bottom: 18px; font-family: 'Inter', sans-serif; }
+    .feat-row { display: flex; align-items: flex-start; gap: 10px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.78); font-size: 13px; line-height: 1.5; font-family: 'Inter', sans-serif; }
+    .feat-row:last-child { border-bottom: none; }
+    .feat-row svg { flex-shrink: 0; margin-top: 2px; }
 
     /* ── PESL DESTINATION GRID ── */
     .dest-grid {
@@ -697,50 +708,12 @@
           <li>Partial failure handling - one channel failing does not block others</li>
         </ul>
       </div>
-      <div class="how-visual" style="padding: 28px;" aria-hidden="true">
-        <div class="failover-diagram">
-        <div class="failover-label">Failover cascade - automatic, silent, instant</div>
-        <div class="failover-chain">
-          <div class="failover-node">
-            <div class="failover-badge fail">SMS</div>
-          </div>
-          <div class="failover-arrow-right">→</div>
-          <div class="failover-node">
-            <div class="failover-badge active">WhatsApp</div>
-          </div>
-          <div class="failover-arrow-right">→</div>
-          <div class="failover-node">
-            <div class="failover-badge">Email</div>
-          </div>
-        </div>
-        <div class="failover-outcome">
-          When an SMS fails to deliver, Pronto automatically escalates to WhatsApp, then Email - without any manual intervention. Every step is logged. Every outcome is confirmed or escalated to your monitoring stack.
-        </div>
-        <div style="margin-top:16px; display:flex; gap:16px; flex-wrap:wrap;">
-          <div style="font-size:12px; font-weight:600; color:#555; background:#f5f2ee; border-radius:6px; padding:6px 12px;">Real-time delivery confirmation per message</div>
-          <div style="font-size:12px; font-weight:600; color:#555; background:#f5f2ee; border-radius:6px; padding:6px 12px;">Event streaming to PagerDuty, Datadog, Slack</div>
-          <div style="font-size:12px; font-weight:600; color:#555; background:#f5f2ee; border-radius:6px; padding:6px 12px;">Surge-proof routing for storm-scale events</div>
-        </div>
-      </div>
-      </div>
-    </div>
-
-    <!-- Block 2: Delivery diagnostics -->
-    <div class="how-block reverse">
-      <div class="how-text">
-        <h3>Delivery diagnostics - per recipient, per message, in real time</h3>
-        <p>Pronto tracks delivery status at two levels simultaneously: campaign-level aggregation giving you the headline picture, and per-recipient contact-level status so you can drill down to any individual message. Provider callbacks from SendGrid, Twilio, and WhatsApp update status in real time as events occur.</p>
-        <ul>
-          <li>Per-recipient status: Queued, Sent, Delivered, Bounced, Failed</li>
-          <li>Campaign-level view: Uploaded, Queued, Completed, Failed with progress tracking</li>
-          <li>Email bounce classifications: hard bounce, soft bounce, dropped, deferred</li>
-          <li>Full request logs: method, path, user identity, IP, status code, and duration</li>
-          <li>Dedicated analytics per channel - SMS, Email, Voice, WhatsApp</li>
-        </ul>
-      </div>
-      <div class="how-visual" aria-hidden="true">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        <span>Screenshot to be supplied</span>
+      <div class="how-visual">
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Per-recipient delivery status in real time</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Failure classified by type: carrier rejection, opt-out, timeout</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Delivery logs exportable for compliance review</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Alerting when delivery rate drops below configurable threshold</span></div>
       </div>
     </div>
 
@@ -757,73 +730,12 @@
           <li>Rate limiting, enable/disable toggle, and test delivery per connector</li>
         </ul>
       </div>
-      <div class="how-visual" style="padding: 20px;" aria-hidden="true">
-        <div class="dest-grid">
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-            Webhook
-          </div>
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            PagerDuty
-          </div>
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            Datadog
-          </div>
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Slack
-          </div>
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            MS Teams
-          </div>
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            Kafka
-          </div>
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            AWS SQS
-          </div>
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            AWS SNS
-          </div>
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            Google Chat
-          </div>
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Discord
-          </div>
-          <div class="dest-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            SAP
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Block 4: Load-aware routing and retry -->
-    <div class="how-block reverse">
-      <div class="how-text">
-        <h3>Load-aware routing and automatic retry</h3>
-        <p>Pronto's queue architecture handles surge events without degrading delivery quality. Campaign sends are batched intelligently, agent routing prioritises capacity fairly, and every failed delivery retries automatically with exponential backoff - so brief carrier hiccups don't become permanent losses.</p>
-        <ul>
-          <li>Campaign batching: contacts processed in batches of ~1,000 for controlled throughput</li>
-          <li>Worker rate limiting: up to 5,000 jobs per second with Redis-backed queue pooling</li>
-          <li>Agent routing: fairness algorithm assigns tasks to agents with the most remaining capacity</li>
-          <li>5 retry attempts with exponential backoff starting at 20 seconds</li>
-          <li>Failed jobs retained for inspection - not discarded after max retries</li>
-          <li>Cron-based fallback poller reassigns any tasks missed by real-time routing</li>
-        </ul>
-      </div>
-      <div class="how-visual" aria-hidden="true">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span>Screenshot to be supplied</span>
+      <div class="how-visual">
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Carrier load monitored in real time during high-volume sends</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Routing adjusted automatically to avoid congested paths</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Exponential backoff with jitter on transient failures</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Retry window and maximum attempts configurable per channel</span></div>
       </div>
     </div>
 

@@ -291,18 +291,21 @@
     }
     .how-text ul li::before { content: '✓'; position: absolute; left: 0; color: var(--kaptea-red); font-weight: 700; }
     .how-visual {
-      background: var(--kaptea-surface-muted);
+      background: #131521;
       border-radius: 12px;
       min-height: 280px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border: 1px solid var(--kaptea-border);
-      padding: 32px;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      border: none;
+      padding: 28px 28px 20px;
     }
-    .how-visual span { font-size: 11px; color: var(--kaptea-neutral-grey); letter-spacing: 0.06em; text-transform: uppercase; text-align: center; }
+    .feat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.3); margin-bottom: 18px; font-family: 'Inter', sans-serif; }
+    .feat-row { display: flex; align-items: flex-start; gap: 10px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.78); font-size: 13px; line-height: 1.5; font-family: 'Inter', sans-serif; }
+    .feat-row:last-child { border-bottom: none; }
+    .feat-row svg { flex-shrink: 0; margin-top: 2px; }
 
     /* Routing logic diagram */
     .routing-steps {
@@ -632,8 +635,11 @@
         </ul>
       </div>
       <div class="how-visual">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>Screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Visual flow builder: no code required for most changes</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Multi-level menu navigation with keypress and speech input</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Routing by skill, availability, division, or time of day</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Fallback and overflow paths configurable per flow</span></div>
       </div>
     </div>
 
@@ -666,8 +672,11 @@
         </div>
       </div>
       <div class="how-visual">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span>Screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Skills-based routing: match caller need to agent capability</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Real-time availability awareness across all queues</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Priority queuing with configurable wait thresholds</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Automatic overflow to voicemail or scheduled callback</span></div>
       </div>
     </div>
 
@@ -687,8 +696,11 @@
         </ul>
       </div>
       <div class="how-visual">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-        <span>Screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Automatic recording with configurable consent prompts</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Real-time transcription during and after the call</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Sentiment analysis and keyword flagging</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Compliant storage with configurable retention periods</span></div>
       </div>
     </div>
 
@@ -708,8 +720,11 @@
         </ul>
       </div>
       <div class="how-visual">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 9h20"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-        <span>Screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Voice, SMS, WhatsApp, and email in a single platform</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Shared agent inbox: calls and messages in one view</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Cross-channel conversation history per customer</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Escalate from any digital channel directly to a voice call</span></div>
       </div>
     </div>
 

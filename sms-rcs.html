@@ -291,18 +291,21 @@
     }
     .how-text ul li::before { content: '✓'; position: absolute; left: 0; color: var(--kaptea-red); font-weight: 700; }
     .how-visual {
-      background: var(--kaptea-surface-muted);
+      background: #131521;
       border-radius: 12px;
       min-height: 280px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border: 1px solid var(--kaptea-border);
-      padding: 32px;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      border: none;
+      padding: 28px 28px 20px;
     }
-    .how-visual span { font-size: 11px; color: var(--kaptea-neutral-grey); letter-spacing: 0.06em; text-transform: uppercase; text-align: center; }
+    .feat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.3); margin-bottom: 18px; font-family: 'Inter', sans-serif; }
+    .feat-row { display: flex; align-items: flex-start; gap: 10px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.78); font-size: 13px; line-height: 1.5; font-family: 'Inter', sans-serif; }
+    .feat-row:last-child { border-bottom: none; }
+    .feat-row svg { flex-shrink: 0; margin-top: 2px; }
 
     /* RCS comparison table */
     .rcs-compare {
@@ -622,8 +625,11 @@
         </ul>
       </div>
       <div class="how-visual">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        <span>Screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Smart routing across multiple carrier paths</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Automatic failover on delivery failure</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Surge-proof throughput: tested to national-scale volumes</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Real-time delivery status per recipient</span></div>
       </div>
     </div>
 
@@ -656,8 +662,11 @@
         </div>
       </div>
       <div class="how-visual">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        <span>Screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Rich cards, carousels, and interactive buttons</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Read receipts and typing indicators</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Verified sender identity: branded in the recipient inbox</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Automatic SMS fallback for non-RCS handsets</span></div>
       </div>
     </div>
 
@@ -677,8 +686,11 @@
         </ul>
       </div>
       <div class="how-visual">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Built-in opt-in and opt-out management</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>GDPR and CCPA consent records per contact</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Per-campaign audit trail for regulatory review</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Quiet hours and frequency cap enforcement</span></div>
       </div>
     </div>
 
@@ -697,8 +709,11 @@
         </ul>
       </div>
       <div class="how-visual">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(156,163,175,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-        <span>Screenshot to be supplied</span>
+        <div class="feat-label">Key capabilities</div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Per-recipient delivery status in real time</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Bounce and failure classification with reason codes</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Exportable delivery logs for compliance teams</span></div>
+          <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Dashboard and API access to delivery analytics</span></div>
       </div>
     </div>
 
