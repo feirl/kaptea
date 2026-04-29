@@ -51,6 +51,10 @@ Key credentials: ISO 27001 certified, Cyber Essentials Plus certified, CREST acc
 - [An Post WhatsApp](https://kaptea.vercel.app/case-studies/an-post-whatsapp): WhatsApp Business integration for parcel delivery notifications
 - [eFlow](https://kaptea.vercel.app/case-studies/eflow): Tolling authority automated billing and customer communications
 - [Hotbox](https://kaptea.vercel.app/case-studies/hotbox): Hospitality and events SMS communications platform
+- [Caledonian Sleeper](https://kaptea.vercel.app/case-studies/caledonian-sleeper): Mission-critical passenger communications for the Scottish overnight rail service. Disruption alerts, booking confirmations, and 3am-grade reliability.
+- [Teaching Council](https://kaptea.vercel.app/case-studies/teaching-council): Public sector communications deployment for the Teaching Council of Ireland.
+- [Tickmill](https://kaptea.vercel.app/case-studies/tickmill): Twilio Flex contact centre for a global online trading platform, achieving 100% call-recording compliance after replacing CloudTalk.
+- [Quandoo](https://kaptea.vercel.app/case-studies/quandoo): Restaurant reservation IVR deployed globally for over five years with 10/10 NPS from the commercial director.
 - [Attrix IVR + Zendesk](https://kaptea.vercel.app/case-studies/attrix-ivr-with-zendesk): Custom Twilio Studio IVR integrated directly with Zendesk for fleet and telematics operations. 14,000 monthly calls processed with 53s reduction in average handle time across 28 advisors.
 - [FoodCloud Twilio Flex](https://kaptea.vercel.app/case-studies/kaptea-foodcloud-flex): Cloud contact centre deployed during the pandemic for an Irish food redistribution charity, with custom dual-CRM API spanning legacy and Salesforce systems. 8,000+ tonnes of surplus food and 19.2M meals enabled.
 - [Tomo Networks Flex](https://kaptea.vercel.app/case-studies/tomo-flex-with-hubspot): US mortgage startup contact centre on Twilio Flex, four channels (voice, SMS, email, webchat) deployed in 8 weeks, scaled to 35 agents reaching over a quarter of the US market.

@@ -26,6 +26,10 @@
     { "source": "/blog-multichannel-vs-omnichannel", "destination": "/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement", "permanent": true },
     { "source": "/blog-gold-partner-twilio", "destination": "/blog/kaptea-certified-gold-status-twilio-consulting-partner", "permanent": true },
 
+    { "source": "/distributed-messaging-governance", "destination": "/control-governance", "permanent": true },
+    { "source": "/ivr-voice-orchestration", "destination": "/voice-ivr", "permanent": true },
+    { "source": "/financial-solutions", "destination": "/industries/finance", "permanent": true },
+
     { "source": "/zoe", "destination": "/voice-ivr", "permanent": true },
     { "source": "/zoe/", "destination": "/voice-ivr", "permanent": true },
     { "source": "/free-audit", "destination": "/demo", "permanent": true },
