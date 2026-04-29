@@ -76,7 +76,7 @@
     .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
     .hero-pill { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 99px; padding: 4px 12px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); }
     .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
-    .hero-visual { background: #1c2033; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; border: 1px solid #2d3348; overflow: hidden; }
+    .hero-visual { background: #1c2033; border-radius: 12px; min-height: 320px; display: flex; align-items: flex-start; justify-content: flex-start; border: 1px solid #2d3348; overflow: hidden; }
 
     .challenge { padding: 72px 40px; background: var(--kaptea-white); border-bottom: 1px solid var(--kaptea-border); }
     .challenge-inner { max-width: 1080px; margin: 0 auto; }
@@ -226,10 +226,66 @@
         <a href="customer-journey-orchestration" class="btn-ghost-light">See it in a journey</a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:32px;">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        <span style="font-size:11px;color:rgba(255,255,255,0.25);letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Workflow builder UI to be supplied</span>
+    <div class="hero-visual" aria-hidden="true">
+      <div style="width:100%;padding:24px 28px;display:flex;flex-direction:column;gap:0;">
+        <!-- window chrome -->
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:20px;">
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.12);display:inline-block;"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.12);display:inline-block;"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.12);display:inline-block;"></span>
+          <span style="flex:1;margin-left:8px;font-size:10px;color:rgba(255,255,255,0.2);font-family:'Inter',sans-serif;letter-spacing:0.04em;">Pronto / Workflow Builder</span>
+          <span style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.06);border-radius:4px;padding:2px 8px;font-family:'Inter',sans-serif;">Draft</span>
+        </div>
+        <!-- workflow nodes -->
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <!-- trigger -->
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:28px;height:28px;border-radius:7px;background:rgba(220,39,39,0.18);border:1px solid rgba(220,39,39,0.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:7px;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;">Trigger: Form submitted</span>
+              <span style="font-size:10px;color:rgba(255,255,255,0.25);font-family:'Inter',sans-serif;">event</span>
+            </div>
+          </div>
+          <!-- connector -->
+          <div style="display:flex;align-items:center;padding-left:13px;"><div style="width:2px;height:14px;background:rgba(255,255,255,0.1);border-radius:1px;"></div></div>
+          <!-- send SMS step -->
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:7px;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;">Send SMS: Confirmation</span>
+              <span style="font-size:10px;color:rgba(255,255,255,0.25);font-family:'Inter',sans-serif;">action</span>
+            </div>
+          </div>
+          <!-- connector -->
+          <div style="display:flex;align-items:center;padding-left:13px;"><div style="width:2px;height:14px;background:rgba(255,255,255,0.1);border-radius:1px;"></div></div>
+          <!-- wait/condition -->
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:7px;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;">Wait 24h — check reply</span>
+              <span style="font-size:10px;color:rgba(255,255,255,0.25);font-family:'Inter',sans-serif;">delay</span>
+            </div>
+          </div>
+          <!-- connector with branch -->
+          <div style="display:flex;align-items:center;padding-left:13px;"><div style="width:2px;height:14px;background:rgba(255,255,255,0.1);border-radius:1px;"></div></div>
+          <!-- branch row -->
+          <div style="display:flex;gap:8px;padding-left:0px;">
+            <div style="flex:1;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:7px;padding:8px 12px;display:flex;align-items:center;gap:7px;">
+              <span style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;display:inline-block;"></span>
+              <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">Replied: close</span>
+            </div>
+            <div style="flex:1;background:rgba(220,39,39,0.06);border:1px solid rgba(220,39,39,0.2);border-radius:7px;padding:8px 12px;display:flex;align-items:center;gap:7px;">
+              <span style="width:6px;height:6px;border-radius:50%;background:#dc2727;flex-shrink:0;display:inline-block;"></span>
+              <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">No reply: escalate</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

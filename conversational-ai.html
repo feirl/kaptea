@@ -78,7 +78,7 @@
     .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
     .hero-pill { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 99px; padding: 4px 12px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); }
     .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
-    .hero-visual { background: #1c2033; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; border: 1px solid #2d3348; overflow: hidden; }
+    .hero-visual { background: #1c2033; border-radius: 12px; min-height: 320px; display: flex; align-items: flex-start; justify-content: flex-start; border: 1px solid #2d3348; overflow: hidden; }
 
     .tabs-strip { background: var(--kaptea-surface-muted); border-bottom: 1px solid var(--kaptea-border); padding: 64px 40px; }
     .tabs-strip-inner { max-width: 1080px; margin: 0 auto; }
@@ -284,10 +284,41 @@
         <a href="#how-it-works" class="btn-ghost-light">How it works</a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:32px;">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <span style="font-size:11px;color:rgba(255,255,255,0.25);letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Assistant builder UI to be supplied</span>
+    <div class="hero-visual" aria-hidden="true">
+      <div style="width:100%;padding:24px 28px;display:flex;flex-direction:column;gap:0;">
+        <!-- window chrome -->
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:18px;">
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.12);display:inline-block;"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.12);display:inline-block;"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.12);display:inline-block;"></span>
+          <span style="flex:1;margin-left:8px;font-size:10px;color:rgba(255,255,255,0.2);font-family:'Inter',sans-serif;letter-spacing:0.04em;">Pronto / Agent Builder</span>
+          <span style="font-size:10px;font-weight:700;color:#dc2727;background:rgba(220,39,39,0.12);border-radius:4px;padding:2px 8px;font-family:'Inter',sans-serif;">LIVE</span>
+        </div>
+        <!-- agent config row -->
+        <div style="display:flex;gap:14px;margin-bottom:14px;">
+          <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:7px;padding:12px 14px;">
+            <div style="font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.25);margin-bottom:5px;font-family:'Inter',sans-serif;">Agent name</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);font-weight:600;font-family:'Inter',sans-serif;">Aria — Support</div>
+          </div>
+          <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:7px;padding:12px 14px;">
+            <div style="font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.25);margin-bottom:5px;font-family:'Inter',sans-serif;">Model</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);font-weight:600;font-family:'Inter',sans-serif;">claude-3-5-sonnet</div>
+          </div>
+        </div>
+        <!-- master prompt -->
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:7px;padding:12px 14px;margin-bottom:14px;">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.25);margin-bottom:6px;font-family:'Inter',sans-serif;">Master prompt</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.55);line-height:1.55;font-family:'Inter',sans-serif;">You are Aria, a support agent for <span style="color:#dc2727;">{company_name}</span>. Respond in a professional but warm tone. Always confirm the customer's account before discussing <span style="color:#dc2727;">{sensitive_fields}</span>...</div>
+        </div>
+        <!-- simulated chat -->
+        <div style="display:flex;flex-direction:column;gap:7px;">
+          <div style="align-self:flex-start;background:rgba(255,255,255,0.07);border-radius:10px 10px 10px 2px;padding:8px 12px;max-width:78%;font-size:12px;color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;">Hi, I need to update my billing address.</div>
+          <div style="align-self:flex-end;background:#dc2727;border-radius:10px 10px 2px 10px;padding:8px 12px;max-width:78%;font-size:12px;color:#fff;font-family:'Inter',sans-serif;">Of course. Can I confirm your account number first?</div>
+          <div style="align-self:flex-start;display:flex;align-items:center;gap:6px;padding-left:4px;margin-top:2px;">
+            <span style="width:5px;height:5px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.25);font-family:'Inter',sans-serif;">Aria is typing</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
