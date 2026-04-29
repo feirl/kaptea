@@ -414,12 +414,12 @@
       <div class="footer-col">
         <h4>Industries</h4>
         <ul>
-          <li><a href="financial-services">Financial Services</a></li>
-          <li><a href="utilities-energy">Utilities &amp; Energy</a></li>
-          <li><a href="healthcare">Healthcare</a></li>
-          <li><a href="travel-transport">Travel &amp; Transport</a></li>
-          <li><a href="public-sector">Public Sector</a></li>
-          <li><a href="retail-ecommerce">Retail, Ecommerce &amp; Automotive</a></li>
+          <li><a href="/industries/finance">Financial Services</a></li>
+          <li><a href="/industries/utilities">Utilities &amp; Energy</a></li>
+          <li><a href="/industries/healthcare">Healthcare</a></li>
+          <li><a href="/industries/travel-transport">Travel &amp; Transport</a></li>
+          <li><a href="/industries/public-sector">Public Sector</a></li>
+          <li><a href="/industries/retail-ecommerce">Retail, Ecommerce &amp; Automotive</a></li>
         </ul>
       </div>
 
@@ -440,6 +440,7 @@
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
+          <li><a href="about">About</a></li>
           <li><a href="why-kaptea">Why Kaptea</a></li>
           <li><a href="meet-the-team">Meet The Team</a></li>
           <li><a href="pricing">Pricing</a></li>
@@ -456,7 +457,7 @@
       <div class="footer-legal">
         <a href="privacy-policy">Privacy Policy</a>
         <a href="terms">Terms of Service</a>
-        <a href="cookie-policy">Cookie Policy</a>
+        <a href="/cookies">Cookie Policy</a>
         <a href="privacy-policy#your-rights">GDPR</a>
         <a href="#" id="kaptea-cookie-settings">Cookie Settings</a>
       </div>
@@ -468,7 +469,7 @@
 <div id="kaptea-cookie-banner" role="region" aria-label="Cookie consent">
   <div class="kcb-text">
     <strong>We use cookies</strong>
-    Kaptea uses essential cookies to run this site, plus optional analytics and marketing cookies to help us understand how it's used. Read our <a href="cookie-policy">Cookie Policy</a> for details.
+    Kaptea uses essential cookies to run this site, plus optional analytics and marketing cookies to help us understand how it's used. Read our <a href="/cookies">Cookie Policy</a> for details.
   </div>
   <div class="kcb-actions">
     <button type="button" class="kcb-btn kcb-btn-link" id="kaptea-reject-all">Reject non-essential</button>
@@ -483,7 +484,7 @@
     <button type="button" class="kcm-close" id="kaptea-modal-close" aria-label="Close cookie preferences">&times;</button>
     <div class="kcm-header">
       <h2 id="kcm-title">Cookie preferences</h2>
-      <p>Choose which categories of cookies Kaptea can use. You can change these settings at any time from the Cookie Settings link in the footer. Read our <a href="cookie-policy">Cookie Policy</a> for full details.</p>
+      <p>Choose which categories of cookies Kaptea can use. You can change these settings at any time from the Cookie Settings link in the footer. Read our <a href="/cookies">Cookie Policy</a> for full details.</p>
     </div>
     <div class="kcm-body">
       <div class="kcm-row">

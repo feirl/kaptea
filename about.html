@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Kaptea | Compliance-first communications, built by people who've done it before</title>
+
+  <meta name="description" content="Kaptea is a boutique team building Pronto, the compliance-first communications platform for regulated enterprises. Founded by leaders with 40+ years combined enterprise communications experience." />
+  <link rel="canonical" href="https://kaptea.vercel.app/about" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Kaptea | Compliance-first communications, built by people who've done it before" />
+  <meta property="og:description" content="Founded by leaders with 40+ years in enterprise communications. The team building Pronto, the compliance-first platform regulated enterprises trust." />
+  <meta property="og:url" content="https://kaptea.vercel.app/about" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23dc2727'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-size='20' font-weight='700' fill='white'%3EK%3C/text%3E%3C/svg%3E" />
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kaptea",
+    "url": "https://kaptea.vercel.app/",
+    "logo": "https://kaptea.vercel.app/img/brand/kaptea-logo.svg",
+    "description": "Compliance-first enterprise communications platform for regulated industries.",
+    "foundingLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "71 Baggot Street Lower",
+        "addressLocality": "Dublin",
+        "postalCode": "D02 P593",
+        "addressCountry": "IE"
+      }
+    },
+    "sameAs": ["https://www.linkedin.com/company/kaptea"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    .hero {
+      background: var(--kaptea-charcoal);
+      color: var(--kaptea-white);
+      padding: 88px 40px 80px;
+    }
+    .hero-inner { max-width: 760px; margin: 0 auto; }
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--kaptea-red);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.18;
+      margin-bottom: 20px;
+    }
+    .hero h1 em { color: var(--kaptea-red); font-style: normal; }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--kaptea-neutral-grey);
+      line-height: 1.65;
+      max-width: 620px;
+    }
+
+    .section { padding: 80px 40px; }
+    .section-inner { max-width: 1080px; margin: 0 auto; }
+    .section-narrow { max-width: 760px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--kaptea-red);
+      margin-bottom: 12px;
+    }
+    .section h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .section p {
+      font-size: 16px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .section p strong { color: var(--kaptea-charcoal); font-weight: 600; }
+
+    .impact {
+      background: var(--kaptea-surface-muted);
+      border-top: 1px solid var(--kaptea-border);
+      border-bottom: 1px solid var(--kaptea-border);
+    }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 880px;
+      margin: 32px auto 0;
+    }
+    .impact-stat { text-align: center; }
+    .impact-stat h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--kaptea-red);
+      margin-bottom: 6px;
+      line-height: 1;
+    }
+    .impact-stat p {
+      font-size: 14px;
+      color: var(--kaptea-tagline-grey);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .principles {
+      background: var(--kaptea-white);
+    }
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .principle-card {
+      padding: 28px;
+      border: 1px solid var(--kaptea-border);
+      border-radius: 10px;
+      background: var(--kaptea-white);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .principle-card:hover { border-color: rgba(220,39,39,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
+    .principle-card h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 8px;
+    }
+    .principle-card p {
+      font-size: 14px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .leaders {
+      background: var(--kaptea-surface-muted);
+      border-top: 1px solid var(--kaptea-border);
+    }
+    .leader-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .leader-card {
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 10px;
+      padding: 24px;
+    }
+    .leader-card h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 4px;
+    }
+    .leader-card .role {
+      font-size: 13px;
+      color: var(--kaptea-red);
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    .leader-meet-cta {
+      margin-top: 32px;
+      text-align: center;
+    }
+    .leader-meet-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--kaptea-red);
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .leader-meet-cta a:hover { text-decoration: underline; }
+
+    .cta-close {
+      background: var(--kaptea-charcoal);
+      color: white;
+      text-align: center;
+      padding: 80px 40px;
+    }
+    .cta-close h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0 0 12px;
+      color: var(--kaptea-white);
+    }
+    .cta-close p {
+      font-size: 16px;
+      color: var(--kaptea-neutral-grey);
+      margin: 0 auto 28px;
+      max-width: 560px;
+      line-height: 1.65;
+    }
+    .cta-close a.btn-primary {
+      display: inline-block;
+      background: var(--kaptea-red);
+      color: var(--kaptea-white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+      margin: 0 6px;
+    }
+    .cta-close a.btn-primary:hover { opacity: 0.92; }
+    .cta-close a.btn-ghost {
+      display: inline-block;
+      color: var(--kaptea-white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.22);
+      transition: border-color 0.15s;
+      margin: 0 6px;
+    }
+    .cta-close a.btn-ghost:hover { border-color: rgba(255,255,255,0.5); }
+
+    @media (max-width: 768px) {
+      .hero { padding: 56px 20px 48px; }
+      .hero h1 { font-size: 30px; }
+      .section { padding: 56px 20px; }
+      .section h2 { font-size: 24px; }
+      .impact-grid { grid-template-columns: 1fr; gap: 24px; }
+      .principles-grid { grid-template-columns: 1fr; }
+      .leader-grid { grid-template-columns: 1fr; }
+      .cta-close { padding: 56px 20px; }
+      .cta-close h2 { font-size: 24px; }
+      .cta-close a.btn-ghost { display: block; margin-top: 10px; }
+    }
+  </style>
+
+  <!-- ANALYTICS & MARKETING managed by cookie-consent.js -->
+  <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+  <script type="text/plain" data-consent="marketing">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="marketing" async src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:var(--kaptea-red);color:var(--kaptea-white);font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<script src="/nav.js"></script>
+
+<main id="main-content">
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">About Kaptea</div>
+    <h1>Compliance-first communications, built by people who've <em>done it before.</em></h1>
+    <p class="hero-sub">Kaptea is the company behind Pronto, the communications platform for regulated enterprises. We're a small team. The customers we serve are not. And the standard we hold ourselves to is set by the people who depend on the messages we deliver.</p>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-narrow">
+    <div class="section-label">Our story</div>
+    <h2>Why we started Kaptea</h2>
+    <p>Over three decades, the founding team helped enterprises deploy complex technology, global networks, data centres, cloud services, and omnichannel customer engagement platforms, into some of the most regulated and most demanding environments in the world.</p>
+    <p>The pattern we kept seeing: organisations would invest heavily in systems and automation, then still struggle to create experiences that felt reliable, human, and trustworthy. The platforms were powerful. The deployments were expensive. The operations were fragile. And the customer, somewhere in the middle of all of it, kept getting let down.</p>
+    <p>So we built Kaptea to close that gap. Pronto is the platform we always wanted to deploy: compliance-first by design, dedicated infrastructure per customer, and operationally simple enough that one ops lead can run it without raising a ticket for every change. The principle behind it is straightforward: <strong>promises are the atomic unit of service</strong>. Every customer interaction is a promise made. Every delivery, every escalation, every audit log is a promise kept.</p>
+  </div>
+</section>
+
+
+<section class="section impact">
+  <div class="section-narrow" style="text-align:center;">
+    <div class="section-label">Our impact</div>
+    <h2>Measured by what our customers ship</h2>
+    <p style="max-width:560px;margin:0 auto;">A small team punching above its weight. The numbers below are the work, not the marketing.</p>
+    <div class="impact-grid">
+      <div class="impact-stat">
+        <h3>9.7/10</h3>
+        <p>Average customer NPS rating across the live customer base</p>
+      </div>
+      <div class="impact-stat">
+        <h3>99.5%+</h3>
+        <p>Transactional message delivery with cross-channel failover</p>
+      </div>
+      <div class="impact-stat">
+        <h3>Days</h3>
+        <p>To deploy a dedicated Pronto instance, contract to production</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section principles">
+  <div class="section-inner">
+    <div style="max-width:720px;">
+      <div class="section-label">How we work</div>
+      <h2>Three principles that decide everything else</h2>
+      <p>These aren't aspirational. They're how the team actually operates, and they're the reason customers stay.</p>
+    </div>
+    <div class="principles-grid">
+
+      <div class="principle-card">
+        <h3>Clarity over complexity</h3>
+        <p>The customer's problem is the team's problem. We reduce friction across every touchpoint and treat simplicity as a strength, not a compromise.</p>
+      </div>
+
+      <div class="principle-card">
+        <h3>Outcome-driven</h3>
+        <p>Every decision is measured against a real result for a real customer. Not against the report. Not against the dashboard. Against what actually changes for them.</p>
+      </div>
+
+      <div class="principle-card">
+        <h3>Built on trust</h3>
+        <p>Compliance is engineering, not paperwork. Audit trails, role-based access, encryption, residency, and resilience are baked into the product, not bolted on for a procurement form.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section leaders">
+  <div class="section-inner">
+    <div style="max-width:720px;">
+      <div class="section-label">Leadership</div>
+      <h2>The people behind Pronto</h2>
+      <p>Founded and led by people who've spent careers in the communications industry. You'll likely speak to one of them on your first call.</p>
+    </div>
+    <div class="leader-grid">
+
+      <div class="leader-card">
+        <h3>Alan McNab</h3>
+        <p class="role">CEO &amp; Co-Founder</p>
+      </div>
+
+      <div class="leader-card">
+        <h3>Robert Norton</h3>
+        <p class="role">CTO &amp; Co-Founder</p>
+      </div>
+
+      <div class="leader-card">
+        <h3>Danielle O'Meara</h3>
+        <p class="role">Head of Customer Success</p>
+      </div>
+
+    </div>
+    <div class="leader-meet-cta">
+      <a href="/meet-the-team">Meet the full team →</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-narrow">
+    <div class="section-label">Where we are</div>
+    <h2>Headquartered in Dublin</h2>
+    <p>71 Baggot Street Lower, Dublin, D02 P593, Ireland.</p>
+    <p>We work with regulated organisations across Ireland, the UK, Europe, and the US. Customers include national agencies, Tier-1 financial services, healthcare networks, and multi-brand retailers. Notable deployments include Ireland's HSE COVID-19 contact tracing platform (7M+ messages delivered) and a counselling platform scaled from 12 to 120+ agents across four countries.</p>
+    <p>Kaptea is a Twilio Gold Consulting Partner and a Twilio AI Partner. ISO 27001:2022 certified, CREST accredited, Cyber Essentials Plus certified. EU, UK or US data residency.</p>
+  </div>
+</section>
+
+
+<section class="cta-close">
+  <h2>Want to know more?</h2>
+  <p>See how Pronto delivers for regulated enterprises, or book a 30-minute conversation with one of the founders.</p>
+  <a href="/why-kaptea" class="btn-primary">Why Kaptea</a>
+  <a href="/demo" class="btn-ghost">Book a Demo</a>
+</section>
+
+</main>
+
+<script src="/footer.js"></script>
+
+</body>
+</html>

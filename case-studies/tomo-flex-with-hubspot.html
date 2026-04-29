@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Tomo Networks scaled a contact centre to a quarter of the US in 8 weeks | Kaptea</title>
+  <meta name="description" content="How Tomo Networks, a $70M Series A US mortgage startup, deployed a multi-channel Twilio Flex contact centre in 8 weeks to support 35 live agents reaching over a quarter of the US market." />
+  <link rel="canonical" href="https://kaptea.vercel.app/case-studies/tomo-flex-with-hubspot" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How Tomo Networks scaled a contact centre to a quarter of the US in 8 weeks | Kaptea" />
+  <meta property="og:description" content="How Tomo Networks, a $70M Series A US mortgage startup, deployed a multi-channel Twilio Flex contact centre in 8 weeks to support 35 live agents reaching over a quarter of the US market." />
+  <meta property="og:url" content="https://kaptea.vercel.app/case-studies/tomo-flex-with-hubspot" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+
+    /* ─── CASE STUDY TEMPLATE STYLES ─────────────────────────────── */
+
+    /* Hero */
+    .cs-hero {
+      background: var(--kaptea-charcoal);
+      color: var(--kaptea-white);
+      padding: 64px 40px 80px;
+    }
+    .cs-hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .cs-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 80px;
+      align-items: start;
+    }
+    .cs-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .cs-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
+    }
+    .cs-tag-red {
+      background: rgba(220,39,39,0.15);
+      border-color: rgba(220,39,39,0.3);
+      color: #f87171;
+    }
+    .cs-hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: var(--kaptea-white);
+    }
+    .cs-hero h1 em { color: var(--kaptea-red); font-style: normal; }
+    .cs-hero-sub {
+      font-size: 17px;
+      color: var(--kaptea-neutral-grey);
+      line-height: 1.65;
+      max-width: 580px;
+      margin-bottom: 36px;
+    }
+    .cs-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--kaptea-red);
+      color: var(--kaptea-white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cs-hero-cta:hover { background: #b91c1c; }
+
+    /* Sidebar card */
+    .cs-sidebar {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 8px;
+    }
+    .cs-sidebar-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--kaptea-white);
+      border-radius: 8px;
+      padding: 18px 24px;
+      margin-bottom: 24px;
+    }
+    .cs-sidebar-logo span {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      letter-spacing: -0.5px;
+    }
+    .cs-sidebar-logo span em {
+      color: var(--kaptea-red);
+      font-style: normal;
+    }
+    .cs-meta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cs-meta-item label {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--kaptea-tagline-grey);
+      margin-bottom: 4px;
+    }
+    .cs-meta-item p {
+      font-size: 14px;
+      color: var(--kaptea-border);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Stats bar */
+    .cs-stats {
+      background: var(--kaptea-white);
+      border-bottom: 1px solid var(--kaptea-border);
+    }
+    .cs-stats-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .cs-stat {
+      padding: 40px 32px;
+      border-right: 1px solid var(--kaptea-border);
+    }
+    .cs-stat:first-child { padding-left: 0; }
+    .cs-stat:last-child { border-right: none; padding-right: 0; }
+    .cs-stat-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--kaptea-red);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .cs-stat-label {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Body */
+    .cs-body {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 72px 40px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 80px;
+      align-items: start;
+    }
+    .cs-content { min-width: 0; }
+    .cs-content section { margin-bottom: 56px; }
+    .cs-content section:last-child { margin-bottom: 0; }
+    .cs-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--kaptea-red);
+      margin-bottom: 12px;
+    }
+    .cs-content h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .cs-content p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .cs-content p:last-child { margin-bottom: 0; }
+
+    /* Requirement list */
+    .cs-req-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .cs-req-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+    .cs-req-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .cs-req-icon svg { display: block; }
+
+    /* Solution cards */
+    .cs-solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .cs-solution-card {
+      background: var(--kaptea-surface-muted);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .cs-solution-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 6px;
+    }
+    .cs-solution-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Results */
+    .cs-results-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .cs-results-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .cs-result-check {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: #16a34a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .cs-result-body { min-width: 0; }
+    .cs-result-body strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 3px;
+    }
+    .cs-result-body p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Pull quote */
+    .cs-quote-section {
+      background: var(--kaptea-charcoal);
+      padding: 72px 40px;
+    }
+    .cs-quote-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cs-quote-mark {
+      font-size: 80px;
+      line-height: 1;
+      color: var(--kaptea-red);
+      font-family: Georgia, serif;
+      margin-bottom: -12px;
+      display: block;
+    }
+    .cs-quote-text {
+      font-family: 'Manrope', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--kaptea-white);
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .cs-quote-attr {
+      font-size: 14px;
+      color: var(--kaptea-neutral-grey);
+    }
+    .cs-quote-attr strong { color: var(--kaptea-white); font-weight: 600; }
+
+    /* Sidebar sticky */
+    .cs-aside {
+      position: sticky;
+      top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cs-aside-card {
+      background: var(--kaptea-surface-muted);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .cs-aside-card h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--kaptea-neutral-grey);
+      margin-bottom: 14px;
+    }
+    .cs-aside-tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .cs-aside-tag {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
+      color: #444;
+    }
+    .cs-aside-metric {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--kaptea-border);
+      font-size: 13px;
+    }
+    .cs-aside-metric:last-child { border-bottom: none; padding-bottom: 0; }
+    .cs-aside-metric span:first-child { color: #777; }
+    .cs-aside-metric span:last-child { font-weight: 600; color: var(--kaptea-charcoal); }
+
+    /* CTA close */
+    .cs-cta {
+      background: var(--kaptea-red);
+      padding: 72px 40px;
+      text-align: center;
+      color: var(--kaptea-white);
+    }
+    .cs-cta-inner { max-width: 600px; margin: 0 auto; }
+    .cs-cta h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cs-cta p { font-size: 17px; color: rgba(255,255,255,0.8); margin-bottom: 32px; line-height: 1.6; }
+    .cs-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: var(--kaptea-white);
+      color: var(--kaptea-red);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+    .btn-outline-white {
+      border: 2px solid rgba(255,255,255,0.4);
+      color: var(--kaptea-white);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s;
+    }
+    .btn-outline-white:hover { border-color: var(--kaptea-white); }
+
+    /* More case studies */
+    .cs-more {
+      background: var(--kaptea-surface-muted);
+      padding: 72px 40px;
+      border-top: 1px solid var(--kaptea-border);
+    }
+    .cs-more-inner { max-width: 1080px; margin: 0 auto; }
+    .cs-more h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 32px;
+    }
+    .cs-more-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .cs-more-card {
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 10px;
+      padding: 24px;
+      text-decoration: none;
+      display: block;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .cs-more-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); border-color: var(--kaptea-border); }
+    .cs-more-card-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--kaptea-red);
+      margin-bottom: 10px;
+    }
+    .cs-more-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .cs-more-card p {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .cs-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .cs-sidebar { margin-top: 0; }
+      .cs-stats-inner { grid-template-columns: 1fr; }
+      .cs-stat { border-right: none; border-bottom: 1px solid var(--kaptea-border); padding: 32px 0; }
+      .cs-stat:last-child { border-bottom: none; }
+      .cs-body { grid-template-columns: 1fr; gap: 48px; }
+      .cs-aside { position: static; }
+      .cs-req-grid { grid-template-columns: 1fr; }
+      .cs-solution-grid { grid-template-columns: 1fr; }
+      .cs-more-grid { grid-template-columns: 1fr; }
+      .cs-hero h1 { font-size: 32px; }
+      .cs-quote-text { font-size: 20px; }
+    }
+    @media (max-width: 600px) {
+      .cs-hero { padding: 48px 20px 56px; }
+      .cs-stats-inner { padding: 0 20px; }
+      .cs-body { padding: 48px 20px; }
+      .cs-quote-section { padding: 56px 20px; }
+      .cs-cta { padding: 56px 20px; }
+      .cs-more { padding: 56px 20px; }
+    }
+
+  </style>
+
+  <!-- ANALYTICS & MARKETING — managed by cookie-consent.js
+       Replace G-XXXXXXXXXX with the real GA4 Measurement ID
+       Replace LI-XXXXXXX  with the real LinkedIn Partner ID -->
+  <script type="text/plain" data-consent="analytics" async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+  <script type="text/plain" data-consent="marketing">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="marketing" async
+    src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+</head>
+<body>
+
+<script src="/nav.js"></script>
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="cs-hero">
+  <div class="cs-hero-inner">
+
+    <div class="cs-hero-grid">
+
+      <div class="cs-hero-content">
+        <div class="cs-tag-row">
+          <span class="cs-tag cs-tag-red">Case Study</span>
+          <span class="cs-tag">Financial Services</span>
+          <span class="cs-tag">Twilio Flex</span>
+          <span class="cs-tag">CRM Integration</span>
+        </div>
+        <h1>How Tomo scaled a <em>contact centre to a quarter of the US</em> in 8 weeks</h1>
+        <p class="cs-hero-sub">Tomo Networks, a $70M Series A US mortgage startup, needed to launch a contact centre fast enough to keep up with rapid market expansion. Kaptea delivered Twilio Flex across four channels in 8 weeks, supporting 35 live agents reaching over a quarter of the US market.</p>
+        <a href="/demo" class="cs-hero-cta">
+          Book a Demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <aside class="cs-sidebar" aria-label="Case study details">
+        <div class="cs-sidebar-logo" aria-label="Quandoo logo">
+          <span><em>Tomo</em></span>
+        </div>
+        <div class="cs-meta-row">
+          <div class="cs-meta-item">
+            <label>Industry</label>
+            <p>Financial Services (Mortgage)</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Location</label>
+            <p>USA</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Channels</label>
+            <p>Voice, SMS, Email, Webchat</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Platform</label>
+            <p>Twilio Flex via Kaptea</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Outcome</label>
+            <p>Live in 8 weeks</p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     STATS BAR
+═══════════════════════════════ -->
+<div class="cs-stats" role="region" aria-label="Key outcomes">
+  <div class="cs-stats-inner">
+    <div class="cs-stat">
+      <div class="cs-stat-num">8 weeks</div>
+      <div class="cs-stat-label">From project start to launch-ready production</div>
+    </div>
+    <div class="cs-stat">
+      <div class="cs-stat-num">35</div>
+      <div class="cs-stat-label">Live agents supported across four communication channels</div>
+    </div>
+    <div class="cs-stat">
+      <div class="cs-stat-num">25%+</div>
+      <div class="cs-stat-label">Of the US market reached by the platform after launch</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     BODY
+═══════════════════════════════ -->
+<div class="cs-body">
+  <main class="cs-content" id="main-content">
+
+    <!-- Background -->
+    <section>
+      <p class="cs-section-label">Background</p>
+      <h2>A well-funded mortgage startup, racing to scale</h2>
+      <p>Tomo Networks set out to make mortgage approval hassle-free for US homebuyers. With a $70 million Series A behind them, the bar was set: a customer-centric mortgage process, multi-channel from day one, scalable to keep pace with rapid market expansion across the United States.</p>
+      <p>The CTO's problem: spin up enterprise-grade contact-centre infrastructure quickly enough that it doesn't become the bottleneck. Voice, SMS, email, and web chat all live, all integrated with the CRM, all supporting an agent team that needed to grow.</p>
+    </section>
+
+    <!-- Challenge -->
+    <section>
+      <p class="cs-section-label">The Challenge</p>
+      <h2>Build it fast, build it right, and don't slow the company down</h2>
+      <p>The conventional path was a long-cycle enterprise contact-centre rollout: scoping months, integration work in quarters, with a "year one" timeline. That was incompatible with Tomo's growth curve. The contact centre couldn't be the slowest piece of infrastructure in the business.</p>
+      <p>Tomo needed a partner who could move at startup speed, deliver across four channels in parallel, integrate with the existing CRM and IVR routing, and ship analytics good enough to coach a growing agent team in real time.</p>
+      <div class="cs-req-grid" role="list">
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Inbound and outbound voice from day one
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Interactive SMS for follow-ups and qualification
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Email integration into the agent workflow
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Web chat for in-product enquiries
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          CRM integration with mortgage application data
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          IVR routing logic for product and team
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Twilio Flex Insights for performance analytics
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Custom dashboards for management visibility
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Scalable to thousands of daily interactions
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Reliable across the US market footprint
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section>
+      <p class="cs-section-label">The Solution</p>
+      <h2>Twilio Flex across four channels, in eight weeks</h2>
+      <p>Kaptea designed and built Tomo's contact-centre platform on Twilio Flex, with end-to-end delivery in 8 weeks. Voice (inbound and outbound), interactive SMS, email, and web chat all live, all routed through the same agent desktop, all integrated with Tomo's CRM.</p>
+      <p>Twilio Flex Insights provided the analytics layer: customised dashboards built for Tomo's management team, calibrated to the metrics they actually needed to grow the team and improve the customer experience.</p>
+      <div class="cs-solution-grid">
+        <div class="cs-solution-card">
+          <h4>Twilio Flex design and build</h4>
+          <p>End-to-end design and software development on Twilio Flex. The agent desktop, the routing logic, the channel orchestration, the workflow, all built specifically for Tomo's mortgage process and growth model.</p>
+        </div>
+        <div class="cs-solution-card">
+          <h4>Four channels in eight weeks</h4>
+          <p>Voice, SMS, email, and web chat shipped together, integrated with the CRM and IVR routing. No phased rollout, no "we'll add SMS in Q2." Day-one parity with where mortgage customers actually are.</p>
+        </div>
+        <div class="cs-solution-card">
+          <h4>Twilio Flex Insights</h4>
+          <p>Customised analytics dashboards built for the management team's real questions. Performance, agent activity, channel mix, response times. Real-time enough to act on, structured enough to coach against.</p>
+        </div>
+        <div class="cs-solution-card">
+          <h4>Enterprise service support</h4>
+          <p>Project management, platform documentation, and ongoing enterprise service support throughout the build and beyond. The CTO got a delivered platform, not a hand-off and an invoice.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section>
+      <p class="cs-section-label">Results</p>
+      <h2>From launch to a quarter of the US market</h2>
+      <p>Within 10 months of launch, Tomo had scaled from initial customer interactions to thousands of daily conversations across four channels, supporting an agent team of 35 and reaching more than a quarter of the US market. The contact centre kept up, instead of holding things back.</p>
+      <ul class="cs-results-list">
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Live in 8 weeks, contract to production</strong>
+            <p>Twilio Flex deployed end-to-end across four channels in eight weeks. The contact centre was live and supporting agents before most enterprise rollouts have finished requirements gathering.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>4 channels, 1 agent desktop</strong>
+            <p>Voice, SMS, email, and web chat all routed through the same Flex desktop, all integrated with the CRM. Agents work in one place; customers reach Tomo wherever they prefer.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>35 live agents, scaling on the platform</strong>
+            <p>The team grew on Flex without re-platforming. Capacity tracked demand, not the other way around. New agents added on the existing infrastructure with no rebuild.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Quarter of the US market reached</strong>
+            <p>Within 10 months of launch, Tomo's mortgage product was reaching over a quarter of the United States. The contact centre was the operational layer that made that geographic scale conversational.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Real-time analytics for a growing team</strong>
+            <p>Twilio Flex Insights dashboards customised to Tomo's management metrics. Performance and agent activity visible in real time. Coaching, capacity planning, and forecasting all run from the same data.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="cs-aside" aria-label="Case study quick facts">
+    <div class="cs-aside-card">
+      <h4>Channels used</h4>
+      <div class="cs-aside-tag-list">
+        <span class="cs-aside-tag">Voice</span>
+        <span class="cs-aside-tag">SMS</span>
+        <span class="cs-aside-tag">Email</span>
+        <span class="cs-aside-tag">Web Chat</span>
+      </div>
+    </div>
+    <div class="cs-aside-card">
+      <h4>Platform features</h4>
+      <div class="cs-aside-tag-list">
+        <span class="cs-aside-tag">Twilio Flex</span>
+        <span class="cs-aside-tag">Twilio Flex Insights</span>
+        <span class="cs-aside-tag">CRM integration</span>
+        <span class="cs-aside-tag">IVR routing</span>
+        <span class="cs-aside-tag">Custom dashboards</span>
+        <span class="cs-aside-tag">Multi-channel orchestration</span>
+      </div>
+    </div>
+    <div class="cs-aside-card">
+      <h4>At a glance</h4>
+      <div class="cs-aside-metric">
+        <span>Industry</span>
+        <span>Financial Services (Mortgage)</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>Region</span>
+        <span>USA</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>Channel</span>
+        <span>Voice, SMS, Email, Web</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>Time to launch</span>
+        <span>8 weeks</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>Agents</span>
+        <span>35 live</span>
+      </div>
+    </div>
+    <div class="cs-aside-card">
+      <h4>Related pages</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+        <a href="/voice-ivr" style="font-size:13px;color:var(--kaptea-red);text-decoration:none;font-weight:500;">Voice &amp; IVR →</a>
+        <a href="/customer-journey-orchestration" style="font-size:13px;color:var(--kaptea-red);text-decoration:none;font-weight:500;">Customer Journey Orchestration →</a>
+        <a href="/twilio-partner" style="font-size:13px;color:var(--kaptea-red);text-decoration:none;font-weight:500;">Twilio Partner →</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- ═══════════════════════════════
+     PULL QUOTE
+═══════════════════════════════ -->
+<section class="cs-quote-section" aria-label="Client testimonial">
+  <div class="cs-quote-inner">
+    <span class="cs-quote-mark" aria-hidden="true">"</span>
+    <p class="cs-quote-text">It's really been a pleasure working with the team at Kaptea. It's amazing the amount of ground we've covered, thank you again for building a great system for us to work with.</p>
+    <p class="cs-quote-attr"><strong>Dan Koch</strong> · Chief Technology Officer, Tomo Networks</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     MORE CASE STUDIES
+═══════════════════════════════ -->
+<section class="cs-more">
+  <div class="cs-more-inner">
+    <h3>More customer stories</h3>
+    <div class="cs-more-grid">
+      <a href="/case-studies/hotbox" class="cs-more-card" aria-label="The Hot Box Sauna case study">
+        <p class="cs-more-card-tag">Hospitality</p>
+        <h4>The Hot Box Sauna</h4>
+        <p>How a fast-growing Irish wellness brand cut call abandonment from 60% to under 7% with Twilio Flex.</p>
+      </a>
+      <a href="/case-studies/caledonian-sleeper" class="cs-more-card" aria-label="Caledonian Sleeper case study">
+        <p class="cs-more-card-tag">Travel &amp; Transport</p>
+        <h4>Caledonian Sleeper</h4>
+        <p>Mission-critical passenger communications at the push of a button, even at 3am.</p>
+      </a>
+      <a href="/demo" class="cs-more-card" aria-label="Book a demo">
+        <p class="cs-more-card-tag">Your organisation</p>
+        <h4>Could be next</h4>
+        <p>See how Kaptea handles your specific voice, IVR and telephony requirements in a personalised demo.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     CTA CLOSE
+═══════════════════════════════ -->
+<section class="cs-cta" aria-labelledby="cta-heading">
+  <div class="cs-cta-inner">
+    <h2 id="cta-heading">See what Kaptea can do for your organisation</h2>
+    <p>One platform. Every channel. Full control, without waiting on engineering.</p>
+    <div class="cs-cta-btns">
+      <a href="/demo" class="btn-white">Book a Demo</a>
+      <a href="/pronto" class="btn-outline-white">Explore Pronto</a>
+    </div>
+  </div>
+</section>
+
+<script src="/footer.js"></script>
+</body>
+</html>

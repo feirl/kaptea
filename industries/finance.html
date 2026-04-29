@@ -6,19 +6,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Healthcare Communications | Kaptea Pronto</title>
+  <title>Financial Services Communications | Kaptea Pronto</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Enterprise communications platform for healthcare organisations. Appointment management, secure two-way patient messaging, emergency public health alerts, and compliance-ready audit trails, built on carrier-grade infrastructure." />
-  <meta name="keywords" content="healthcare communications platform, patient messaging, appointment reminders, NHS communications, secure patient messaging, healthcare SMS platform, GDPR compliant messaging, care pathway notifications, public health alerts, DSPT compliance messaging" />
-  <link rel="canonical" href="https://kaptea.vercel.app/healthcare" />
+  <meta name="description" content="Enterprise communications platform for financial services. Fraud alerts with failover, per-message compliance evidence, multi-division governance, and contact centre orchestration, built on carrier-grade infrastructure." />
+  <meta name="keywords" content="financial services communications, fraud alert messaging, OTP delivery, FCA compliance messaging, banking communications platform, fintech messaging, regulated communications, SMS failover" />
+  <link rel="canonical" href="https://kaptea.vercel.app/industries/finance" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Healthcare Communications | Kaptea Pronto" />
-  <meta property="og:description" content="Appointment management, secure two-way patient messaging, emergency public health alerts, and compliance-ready audit trails for healthcare organisations." />
-  <meta property="og:url" content="https://kaptea.vercel.app/healthcare.html" />
+  <meta property="og:title" content="Financial Services Communications | Kaptea Pronto" />
+  <meta property="og:description" content="Fraud alerts, OTP delivery, compliance evidence, and multi-division governance for regulated financial services organisations." />
+  <meta property="og:url" content="https://kaptea.vercel.app/industries/finance" />
   <meta property="og:site_name" content="Kaptea" />
 
   <!-- Favicon -->
@@ -30,7 +30,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <!-- AI / LLM -->
-  <meta name="ai-content-declaration" content="Kaptea Pronto for Healthcare. Appointment reminders and two-way confirmation via SMS and WhatsApp, reducing DNA rates. Secure two-way patient communications with full GDPR compliance and audit trails. Emergency public health alert broadcasting across SMS, WhatsApp, Voice, Email, and RCS, deployed for HSE Ireland during COVID-19 contact tracing at national scale. Care pathway notifications triggered from EHR or CRM systems. Compliance-driven workflows with per-message audit trails for CQC, ICO, and NHS DSPT requirements. Secure video for telehealth consultations. ISO 27001:2022 certified. CREST certified. EU, UK and US data residency. Dedicated instance live in days." />
+  <meta name="ai-content-declaration" content="Kaptea Pronto for Financial Services. Priority queue routing for fraud alerts and OTP. Cross-channel failover SMS→WhatsApp→Email. Per-message audit trail for FCA/PRA/GDPR compliance. Template approval workflows. Multi-division governance. ISO 27001:2022 certified. CREST certified. EU, UK and US data residency. CRM integration with Salesforce, Dynamics 365, HubSpot. Dedicated instance live in days." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -39,69 +39,69 @@
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://kaptea.vercel.app/healthcare.html",
-        "url": "https://kaptea.vercel.app/healthcare.html",
-        "name": "Healthcare Communications | Kaptea Pronto",
-        "description": "Enterprise communications platform for healthcare organisations. Appointment management, secure two-way patient messaging, emergency public health alerts, and compliance-ready audit trails.",
+        "@id": "https://kaptea.vercel.app/industries/finance",
+        "url": "https://kaptea.vercel.app/industries/finance",
+        "name": "Financial Services Communications | Kaptea Pronto",
+        "description": "Enterprise communications platform for financial services. Fraud alerts, OTP delivery, compliance evidence, and multi-division governance.",
         "isPartOf": { "@id": "https://kaptea.vercel.app/" },
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Solutions", "item": "https://kaptea.vercel.app/index.html" },
-            { "@type": "ListItem", "position": 2, "name": "Healthcare" }
+            { "@type": "ListItem", "position": 2, "name": "Financial Services" }
           ]
         }
       },
       {
         "@type": "FAQPage",
-        "@id": "https://kaptea.vercel.app/healthcare.html#faq",
+        "@id": "https://kaptea.vercel.app/industries/finance#faq",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How does Kaptea help reduce appointment DNA rates?",
+            "name": "How does Kaptea ensure fraud alerts are delivered instantly?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pronto automates the full appointment communication cycle: confirmation at booking, reminder sequences in the days and hours before, and a final check-in on the day. Two-way SMS and WhatsApp allow patients to confirm, cancel, or request a reschedule directly from the message, without calling the practice or hospital. Each interaction updates your booking or CRM system automatically. Organisations typically see significant reductions in did-not-attend rates within weeks of deployment."
+              "text": "Pronto uses priority queue separation to ensure transactional messages (fraud alerts, OTP codes, and compliance notices) are never delayed by marketing batch sends. When SMS delivery fails, the platform automatically cascades to WhatsApp or email within seconds. Real-time delivery diagnostics give operations teams visibility per message, with event streaming to PagerDuty or Slack when a critical message fails."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Kaptea compliant with NHS DSPT and GDPR requirements for patient messaging?",
+            "name": "Can Kaptea provide compliance evidence for FCA and GDPR requirements?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Pronto is built for regulated environments. Data is held in an isolated dedicated instance, with no shared infrastructure with other organisations. EU data residency is available for UK and European healthcare providers. Every message carries a complete audit trail (timestamp, delivery status, content version) supporting NHS DSPT, ICO, and CQC requirements. Kaptea holds ISO 27001:2022 certification and CREST accreditation."
+              "text": "Yes. Every message sent through Pronto has a complete, immutable audit trail: from template approval through to delivery confirmation and recipient engagement. Template change request workflows record every approval, rejection, and comment. Audit logs are exportable as CSV for regulatory evidence. For MiFID II and GDPR obligations, per-message delivery proof means compliance is demonstrable rather than assumed."
             }
           },
           {
             "@type": "Question",
-            "name": "Can Kaptea handle high-volume emergency public health alerts?",
+            "name": "How does Kaptea handle multi-division governance for financial groups?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Pronto's infrastructure is designed for exactly this scenario. During the COVID-19 pandemic, Kaptea's platform was deployed by the HSE (Ireland's Health Service Executive) to manage contact tracing communications and IVR orchestration at national scale. The platform handled high-volume outbound notification and complex IVR flows simultaneously, without degradation. For public health events requiring mass notification, Pronto scales elastically with demand across SMS, WhatsApp, Voice, Email, and RCS."
+              "text": "Pronto's division segmentation allows financial groups to operate retail banking, wealth management, insurance, and broker brands from a single platform instance, while keeping each division's data, templates, and contacts entirely separate. Role-based access controls mean an agent in one division cannot see another's data. Central compliance teams have cross-division oversight with full audit capability."
             }
           },
           {
             "@type": "Question",
-            "name": "How does Kaptea integrate with EHR and patient management systems?",
+            "name": "Does Kaptea integrate with banking CRM systems?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pronto integrates via REST API and pre-built connectors with major healthcare and CRM platforms (including Salesforce Health Cloud, Microsoft Dynamics 365, and specialist EHR systems). Appointment bookings, care pathway milestones, or clinical events in your source system can trigger automated messages directly, with no manual campaign setup required. Kaptea's implementation team handles integration design and build as part of the standard deployment."
+              "text": "Kaptea integrates natively with Salesforce Financial Services Cloud, Microsoft Dynamics 365, HubSpot, Zoho CRM, and SAP. CRM events can trigger automated message sends (account activity alerts, statement notifications, or fraud flags) without manual intervention. Delivery outcomes, conversation history, and agent notes are written back to the CRM record after every interaction."
             }
           },
           {
             "@type": "Question",
-            "name": "Does Kaptea support multi-site governance for NHS Trusts or private healthcare groups?",
+            "name": "What security certifications does Kaptea hold?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Pronto's division and role-based access framework is designed for multi-site organisations. Each hospital, clinic, or regional team operates within its own division (with its own templates, contacts, and reporting) while central governance teams maintain oversight, template approval authority, and audit access across the whole estate. This prevents brand or compliance divergence without restricting operational teams."
+              "text": "Kaptea holds ISO 27001:2022 certification, CREST-certified penetration testing, and Cyber Essentials certification. Each customer deployment is a dedicated instance (no shared tenancy) with EU, UK or US data residency depending on regulatory jurisdiction. Twilio's underlying infrastructure additionally holds SOC 2 Type II, PCI DSS, and HIPAA certifications."
             }
           },
           {
             "@type": "Question",
-            "name": "How quickly can Kaptea be deployed for a healthcare organisation?",
+            "name": "How quickly can Kaptea be deployed for a financial services organisation?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A dedicated Pronto instance, configured for your channels, EHR or CRM integrations, appointment reminder workflows, and compliance requirements, can be live in days. Healthcare deployments typically include appointment communication automation, care pathway notification setup, two-way messaging configuration, and audit trail reporting. Kaptea provides structured implementation with dedicated support through go-live and beyond."
+              "text": "A dedicated Pronto instance, configured for your channels, CRM integrations, and compliance requirements, can be live in days. Financial services deployments typically include channel activation (SMS, WhatsApp, Email), CRM connector setup, template library migration, role and division configuration, and compliance audit trail enablement. Kaptea provides a structured implementation with dedicated support through go-live."
             }
           }
         ]
@@ -110,7 +110,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
 
   <style>
 
@@ -563,7 +563,7 @@
 
 <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:var(--kaptea-red);color: var(--kaptea-white);font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
 
-<script src="nav.js"></script>
+<script src="/nav.js"></script>
 
 <main id="main-content">
 
@@ -576,40 +576,40 @@
       <div class="hero-breadcrumb">
         <a href="/">Solutions</a>
         <span class="bc-sep">→</span>
-        <span>Healthcare</span>
+        <span>Financial Services</span>
       </div>
-      <h1>When patient communications fall short, <span>the consequences go further than inconvenience.</span></h1>
-      <p class="hero-sub">Appointment management, secure two-way patient messaging, and emergency public health alerts at national scale, for healthcare organisations where getting communications right is a clinical and regulatory obligation, not just a best practice.</p>
+      <h1>When a message fails in financial services, <span>trust fails with it.</span></h1>
+      <p class="hero-sub">Fraud alerts, authentication codes, regulatory notices: your customers expect them instantly. Every dropped message is a compliance risk, a support call, and an erosion of the trust you've spent years building.</p>
       <div class="hero-pills">
         <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Appointment &amp; Patient Messaging
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Fraud Alerts
         </span>
         <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          Secure Two-Way Communications
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          OTP &amp; Verify
         </span>
         <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Emergency Public Health Alerts
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Compliance Evidence
+        </span>
+        <span class="hero-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Multi-Division Governance
         </span>
         <span class="hero-pill">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          Care Pathway Notifications
-        </span>
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Compliance &amp; Audit Trails
+          Cross-Channel Failover
         </span>
       </div>
       <div class="hero-ctas">
-        <a href="demo" class="btn-primary">Book a Demo</a>
-        <a href="secure-video" class="btn-ghost-light">Explore Secure Video</a>
+        <a href="/demo" class="btn-primary">Book a Demo</a>
+        <a href="/omni-channel-communications" class="btn-ghost-light">See How It Works</a>
       </div>
     </div>
     <div class="hero-visual">
       <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:32px;">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         <span style="font-size:11px;color:rgba(255,255,255,0.25);letter-spacing:0.06em;text-transform:uppercase;text-align:center;">Screenshot to be supplied</span>
       </div>
     </div>
@@ -618,42 +618,43 @@
 
 
 <!-- ═══════════════════════════════
-     CHALLENGE
+     THE CHALLENGE
 ═══════════════════════════════ -->
 <section class="challenge">
   <div class="challenge-inner">
-    <h2>The communications challenges healthcare organisations face at scale</h2>
+    <div class="section-label">The challenge</div>
+    <h2>Financial services communications are high-stakes, high-regulation, and high-volume, all at once.</h2>
     <div class="challenge-grid">
 
       <div class="challenge-card">
         <div class="challenge-num">01</div>
         <div>
-          <h3>DNA rates that drain capacity and revenue</h3>
-          <p>Did-not-attend rates of 5–15% are common across NHS Trusts and private healthcare providers. Most are preventable with the right reminder sequence. Phone-based outreach is too labour-intensive to scale; a single poorly-timed reminder message rarely changes behaviour, particularly without the ability for patients to confirm, cancel, or reschedule in the same channel.</p>
+          <h3>Fraud alerts that arrive too late</h3>
+          <p>Seconds matter in fraud prevention. When an SMS fails or queues behind a marketing batch, the window to protect the customer closes, and liability opens. Most messaging platforms treat fraud alerts the same as promotional sends.</p>
         </div>
       </div>
 
       <div class="challenge-card">
         <div class="challenge-num">02</div>
         <div>
-          <h3>Patient messaging that has to be both personal and compliant</h3>
-          <p>Patient communications carry sensitive personal data subject to GDPR, NHS DSPT, and ICO requirements. Yet most messaging platforms treat healthcare organisations like marketing teams, with no data isolation, no audit trail, no control over where patient data is stored. Compliance teams are left retrofitting governance onto tools never designed for a regulated clinical environment.</p>
+          <h3>OTP and authentication messages filtered as spam</h3>
+          <p>2FA and OTP messages are increasingly carrier-filtered in both directions. Failed verification means failed transactions, abandoned onboarding, and support queues that cost real money, with no automatic retry or channel fallback.</p>
         </div>
       </div>
 
       <div class="challenge-card">
         <div class="challenge-num">03</div>
         <div>
-          <h3>Emergency alerts that need to reach everyone, fast</h3>
-          <p>Public health events (pandemic notifications, urgent patient recalls, clinical safety alerts) demand the ability to reach large populations across multiple channels simultaneously. Most organisations discover the limits of their communications infrastructure at exactly the moment they need it to perform without fail.</p>
+          <h3>Regulatory notices without proof of delivery</h3>
+          <p>FCA, PRA, MiFID II, and GDPR mandate that certain communications are delivered and evidenced. Batch delivery reports don't satisfy regulators. Without per-message audit trails, compliance becomes a hope rather than a guarantee.</p>
         </div>
       </div>
 
       <div class="challenge-card">
         <div class="challenge-num">04</div>
         <div>
-          <h3>Multi-site governance with no central visibility</h3>
-          <p>NHS Trusts, integrated care systems, and private healthcare groups operate across dozens of sites, each running patient communications independently. Template versions drift. Consent handling varies. There's no way to enforce brand-safe, clinically-accurate messaging across the estate without restricting each site's ability to communicate with their own patients.</p>
+          <h3>Multiple divisions running separate tools</h3>
+          <p>Retail banking, wealth management, insurance, and broker arms each run their own messaging stack. Customers receive duplicated or contradictory messages, brand controls break down, and no one has the full picture of what's been sent.</p>
         </div>
       </div>
 
@@ -663,85 +664,90 @@
 
 
 <!-- ═══════════════════════════════
-     SOLUTIONS
+     HOW KAPTEA SOLVES IT
 ═══════════════════════════════ -->
 <section class="solutions">
   <div class="solutions-inner">
-    <h2>How Kaptea Pronto solves it</h2>
+    <div class="section-label">How Kaptea solves it</div>
+    <h2>Purpose-built for the messaging challenges financial services actually face.</h2>
 
-    <!-- BLOCK 1 -->
+    <!-- Solution 1: Priority routing and failover -->
     <div class="solution-block">
       <div class="solution-pain">
-        <div class="solution-pain-label">The problem</div>
-        <p>"We send one reminder letter and hope for the best. Our DNA rate is 12%. We know most of those appointments could be saved with better communications. We just don't have the infrastructure to do it at this scale."</p>
+        <div class="solution-pain-label">The pain</div>
+        <p>"Our fraud alerts go through the same queue as marketing. When we send a batch campaign, time-critical authentication messages get delayed, and customers lose money in the gap."</p>
       </div>
       <div class="solution-answer">
-        <h3>Automated appointment reminders with two-way confirmation</h3>
-        <p>Pronto automates the full appointment communication cycle, triggered directly from your booking or patient management system. Confirmation at point of booking, reminder sequences in the days and hours before, and a check-in message on the day of attendance. Two-way SMS and WhatsApp allow patients to confirm, cancel, or request rescheduling in the same channel, without calling in. Every reply updates your booking system automatically.</p>
+        <h3>Priority routing with automatic cross-channel failover</h3>
+        <p>Pronto separates transactional and marketing queues with independent routing priorities, so fraud alerts, OTPs, and critical notices are never delayed by batch sends. When a channel fails to deliver, the platform automatically cascades: SMS → WhatsApp → Email, within seconds.</p>
         <ul>
-          <li>EHR and booking system triggered with no manual campaign setup</li>
-          <li>Configurable reminder sequences across SMS, WhatsApp, and Email</li>
-          <li>Two-way reply handling: confirm, cancel, or reschedule in-channel</li>
-          <li>Automatic follow-up for non-responders on a secondary channel</li>
+          <li>Priority queue separation: transactional vs. promotional traffic</li>
+          <li>Automatic failover cascade across SMS, WhatsApp, and Email</li>
+          <li>Real-time per-message delivery diagnostics</li>
+          <li>Event streaming to PagerDuty or Slack on critical message failure</li>
+          <li>Surge-proof routing: volume spikes don't degrade priority sends</li>
         </ul>
-        <a href="omni-channel-communications" class="feature-link">See Omni-Channel Communications →</a>
+        <a href="/delivery-resilience" class="feature-link">Explore Delivery &amp; Resilience →</a>
       </div>
     </div>
 
-    <!-- BLOCK 2 -->
+    <!-- Solution 2: Compliance evidence -->
     <div class="solution-block reverse">
       <div class="solution-pain">
-        <div class="solution-pain-label">The problem</div>
-        <p>"We need to communicate with patients in a two-way, personal way, but every platform we look at either can't evidence GDPR compliance or isn't set up for healthcare. We've had to stop messaging patients about certain things because we can't prove the data is handled correctly."</p>
+        <div class="solution-pain-label">The pain</div>
+        <p>"We can't demonstrate to the regulator that a notice was delivered. Our SMS provider gives us batch reports, not per-message evidence we can put in front of the FCA."</p>
       </div>
       <div class="solution-answer">
-        <h3>GDPR-compliant secure messaging with a full audit trail</h3>
-        <p>Pronto is deployed as a dedicated instance, with no shared infrastructure and no data co-mingling with other organisations. EU data residency keeps patient data within UK and European borders. Every message carries a full audit record: timestamp, channel, delivery status, and template version. Two-way secure video extends patient communications to telehealth consultations on the same platform, without routing calls through a consumer video provider.</p>
+        <h3>Per-message audit trail built for regulatory evidence</h3>
+        <p>Every message sent through Pronto has a complete, immutable audit trail: from template approval through delivery confirmation to recipient engagement. Template change requests record every approval, rejection, and comment. Audit logs export as CSV for regulatory submission.</p>
         <ul>
-          <li>Dedicated isolated instance: your data never touches shared infrastructure</li>
-          <li>EU and UK data residency for GDPR and NHS DSPT alignment</li>
-          <li>Per-message audit trail exportable for ICO and CQC submissions</li>
-          <li>Secure video for telehealth, built into the same platform</li>
+          <li>Full request log of every send, edit, and API mutation</li>
+          <li>Template change workflow with approval, rejection, and comment history</li>
+          <li>Audit log exportable as CSV: per message, per campaign, per division</li>
+          <li>Division-scoped access control for multi-entity financial groups</li>
+          <li>Twilio-backed delivery receipts with timestamp precision</li>
         </ul>
-        <a href="secure-video" class="feature-link">Explore Secure Video →</a>
+        <a href="/control-governance" class="feature-link">Explore Control &amp; Governance →</a>
       </div>
     </div>
 
-    <!-- BLOCK 3 -->
+    <!-- Solution 3: Multi-channel notifications -->
     <div class="solution-block">
       <div class="solution-pain">
-        <div class="solution-pain-label">The problem</div>
-        <p>"During COVID we had to stand up a national contact tracing communications system in days. Our existing platforms couldn't cope with the volume or the complexity of the IVR flows we needed. We were building on the fly with no headroom."</p>
+        <div class="solution-pain-label">The pain</div>
+        <p>"We send balance alerts by SMS, statement notifications by email, and rate change notices by post. Half of them don't arrive, and we can't prove any of them did."</p>
       </div>
       <div class="solution-answer">
-        <h3>Emergency public health alerts at national scale</h3>
-        <p>Pronto's infrastructure is built for exactly this scenario. During the COVID-19 pandemic, Kaptea's platform was deployed by the HSE (Ireland's Health Service Executive) to manage contact tracing communications and IVR orchestration at national scale. High-volume outbound notification and complex IVR flows ran simultaneously without degradation. For public health events requiring mass notification, the platform scales elastically with demand across SMS, WhatsApp, Voice, Email, and RCS.</p>
+        <h3>Multi-channel customer notifications with delivery proof</h3>
+        <p>Pronto orchestrates proactive customer notifications across SMS, WhatsApp, Email, and RCS from a single workflow, with per-message delivery confirmation and automatic failover when a channel fails. CRM events trigger sends automatically, and delivery outcomes write back to the CRM record.</p>
         <ul>
-          <li>Carrier-grade throughput for national-scale health notifications</li>
-          <li>Complex IVR orchestration: contact tracing, triage, callback management</li>
-          <li>Multi-channel simultaneous dispatch with automatic failover</li>
-          <li>Deployable in days, not a months-long infrastructure project</li>
+          <li>Balance alerts, statement reminders, and rate change notifications</li>
+          <li>CRM-triggered sends from Salesforce, Dynamics 365, or HubSpot events</li>
+          <li>Per-contact delivery status: exportable compliance evidence</li>
+          <li>Scheduled or event-driven sends with batch processing for volume</li>
+          <li>RCS rich messaging for branded, interactive account notifications</li>
         </ul>
-        <a href="voice-ivr" class="feature-link">See Voice &amp; IVR Orchestration →</a>
+        <a href="/omni-channel-communications" class="feature-link">Explore Omni-Channel Communications →</a>
       </div>
     </div>
 
-    <!-- BLOCK 4 -->
+    <!-- Solution 4: Multi-division governance -->
     <div class="solution-block reverse">
       <div class="solution-pain">
-        <div class="solution-pain-label">The problem</div>
-        <p>"We have 14 hospitals and clinics all sending patient messages independently. Templates drift. Some sites send things they shouldn't. We have no central view of what's going out and no way to enforce standards without taking control away from clinical teams."</p>
+        <div class="solution-pain-label">The pain</div>
+        <p>"Each division bought their own tools. We've got four SMS vendors, two email platforms, and our contact centre has no visibility of what marketing already sent the customer this week."</p>
       </div>
       <div class="solution-answer">
-        <h3>Multi-site governance without restricting clinical teams</h3>
-        <p>Pronto's division and role-based access framework separates each hospital, clinic, or regional team into its own managed environment (with its own templates, contacts, and send permissions) while central governance maintains oversight, approves template changes, and holds full audit visibility across the estate. Clinical teams operate freely within approved guardrails; compliance teams never lose control of what's going out under the organisation's name.</p>
+        <h3>One platform. Every division. Full governance.</h3>
+        <p>Pronto's division segmentation allows financial groups to run retail banking, wealth management, insurance, and broker brands from a single instance, with each division's data, templates, and contacts fully isolated. Central compliance teams retain cross-division oversight without disrupting divisional autonomy.</p>
         <ul>
-          <li>Division segmentation for multi-site estates: each site in its own lane</li>
-          <li>Central template governance with approval workflows</li>
-          <li>Role-based access: clinical staff, comms managers, and compliance teams each see what's relevant</li>
-          <li>Estate-wide audit visibility from a single admin view</li>
+          <li>Division-level data isolation: agents only access their own business unit</li>
+          <li>Centralised template library with per-division customisation rights</li>
+          <li>Role-based access: creator, approver, admin, read-only</li>
+          <li>Contact suppression lists enforced across all divisions automatically</li>
+          <li>Unified reporting dashboard for compliance and operations leadership</li>
         </ul>
-        <a href="control-governance" class="feature-link">See Control &amp; Governance →</a>
+        <a href="/control-governance" class="feature-link">Explore Control &amp; Governance →</a>
       </div>
     </div>
 
@@ -752,23 +758,23 @@
 <!-- ═══════════════════════════════
      METRICS
 ═══════════════════════════════ -->
-<section class="numbers-strip" aria-label="Key metrics">
+<section class="numbers-strip">
   <div class="numbers-inner">
     <div class="number-item">
-      <h3>National</h3>
-      <p>Scale: deployed by HSE Ireland for COVID-19 contact tracing IVR and notifications</p>
+      <h3>Days</h3>
+      <p>To deploy a dedicated Pronto instance, from contract to production</p>
     </div>
     <div class="number-item">
-      <h3>Days</h3>
-      <p>To a fully configured, live Pronto instance, even for complex multi-site healthcare deployments</p>
+      <h3>180+</h3>
+      <p>Countries reached on Twilio's carrier-grade messaging network</p>
     </div>
     <div class="number-item">
       <h3>ISO 27001</h3>
-      <p>Independently certified information security, audited annually, covering all patient data handling</p>
+      <p>Certified information security, with dedicated instance, no shared tenancy</p>
     </div>
     <div class="number-item">
-      <h3>100%</h3>
-      <p>Audit trail coverage: every patient message logged with timestamp, channel, and delivery evidence</p>
+      <h3>99.5%+</h3>
+      <p>Transactional message delivery rate with failover across SMS, WhatsApp, and Email</p>
     </div>
   </div>
 </section>
@@ -780,26 +786,31 @@
 <section class="featured-customer">
   <div class="featured-inner">
     <div>
-      <div class="section-label" style="margin-bottom:16px;">Customer story</div>
-      <p class="featured-quote">"We needed a platform that could handle national-scale contact tracing communications: complex IVR flows, high-volume outbound, and rapid deployment. Kaptea stood it up in days. The infrastructure didn't flinch under the volume. It just worked."</p>
-      <p class="featured-attribution"><strong>Technology Lead</strong><br>National public health service, Republic of Ireland</p>
+      <div class="section-label">Customer story</div>
+      <blockquote class="featured-quote">
+        "Our trading notifications and authentication messages needed to arrive in under three seconds, consistently, regardless of volume. Pronto's priority routing and failover gave us that guarantee without requiring us to build or maintain the infrastructure ourselves."
+      </blockquote>
+      <div class="featured-attribution">
+        <strong>Head of Technology Operations</strong><br>
+        European Regulated Trading Platform, Financial Services
+      </div>
     </div>
     <div class="featured-metrics">
       <div class="featured-metric">
-        <h4>Days</h4>
-        <p>From brief to live national contact tracing communications deployment</p>
-      </div>
-      <div class="featured-metric">
-        <h4>National</h4>
-        <p>Scale: contact tracing notifications reaching the entire Irish population</p>
+        <h4>&lt;3s</h4>
+        <p>Authentication message delivery, peak trading hours</p>
       </div>
       <div class="featured-metric">
         <h4>Zero</h4>
-        <p>Platform failures during peak COVID-19 contact tracing demand</p>
+        <p>Internal engineers required to operate the platform</p>
       </div>
       <div class="featured-metric">
-        <h4>Multi-channel</h4>
-        <p>SMS, Voice IVR, and automated outbound working in parallel</p>
+        <h4>100%</h4>
+        <p>Regulatory audit trail coverage across all sent messages</p>
+      </div>
+      <div class="featured-metric">
+        <h4>Days</h4>
+        <p>From contract to live production environment</p>
       </div>
     </div>
   </div>
@@ -807,44 +818,45 @@
 
 
 <!-- ═══════════════════════════════
-     TRUST
+     TRUST & COMPLIANCE
 ═══════════════════════════════ -->
 <section class="trust-section">
   <div class="trust-inner">
-    <h2>The security and compliance foundation healthcare demands</h2>
-    <p>Patient data handled under an enterprise security framework, with the certifications, data residency options, and audit infrastructure that regulated healthcare organisations need.</p>
+    <div class="section-label">Security &amp; compliance</div>
+    <h2>Built for regulated environments</h2>
+    <p>Kaptea's security posture is designed for industries where trust isn't optional, and where regulators expect evidence, not assurance.</p>
     <div class="trust-grid">
 
       <div class="trust-card">
-        <div class="trust-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3>ISO 27001:2022</h3>
-        <p>Independently certified information security management, audited annually.</p>
+        <p>Certified information security management across all operations and infrastructure</p>
       </div>
 
       <div class="trust-card">
-        <div class="trust-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
         <h3>CREST Certified</h3>
-        <p>Independent penetration testing and vulnerability assessment to CREST standards.</p>
+        <p>Independent penetration testing to the highest UK standard for regulated environments</p>
       </div>
 
       <div class="trust-card">
-        <div class="trust-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
-        <h3>Dedicated Instance</h3>
-        <p>Fully isolated infrastructure, with no shared environment and no data co-mingling with other organisations.</p>
+        <h3>Cyber Essentials</h3>
+        <p>UK government-backed cyber security certification, baseline requirement for financial services procurement</p>
       </div>
 
       <div class="trust-card">
-        <div class="trust-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
-        <h3>EU &amp; UK Data Residency</h3>
-        <p>Choose where patient data is stored (UK or EU) for GDPR and NHS DSPT alignment.</p>
+        <h3>Data Residency</h3>
+        <p>EU, UK or US data residency. Dedicated private cloud infrastructure in Dublin, London, or Amsterdam</p>
       </div>
 
     </div>
@@ -859,56 +871,68 @@
   <div class="faq-inner">
     <div class="section-header">
       <div class="section-label">Common questions</div>
-      <h2>Frequently asked questions</h2>
+      <h2>Financial services: what you need to know</h2>
     </div>
     <div class="faq-list">
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a1">
-          How does Kaptea help reduce appointment DNA rates?
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+          How does Kaptea ensure fraud alerts are delivered instantly?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a1" hidden>Pronto automates the full appointment communication cycle: confirmation at booking, reminder sequences in the days and hours before, and a final check-in on the day. Two-way SMS and WhatsApp allow patients to confirm, cancel, or request a reschedule directly from the message, without calling the practice or hospital. Each interaction updates your booking or CRM system automatically. Organisations typically see significant reductions in did-not-attend rates within weeks of deployment.</div>
+        <div class="faq-a" id="faq1" hidden>
+          Pronto uses priority queue separation to ensure transactional messages (fraud alerts, OTP codes, and compliance notices) are never delayed by marketing batch sends. When SMS delivery fails, the platform automatically cascades to WhatsApp or email within seconds. Real-time delivery diagnostics give operations teams per-message visibility, with event streaming to PagerDuty or Slack when a critical message fails to land.
+        </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a2">
-          Is Kaptea compliant with NHS DSPT and GDPR requirements for patient messaging?
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+          Can Kaptea provide compliance evidence for FCA, PRA, and GDPR?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a2" hidden>Yes. Pronto is built for regulated environments. Data is held in an isolated dedicated instance, with no shared infrastructure with other organisations. EU and UK data residency is available for healthcare providers operating under NHS DSPT and GDPR requirements. Every message carries a complete audit trail (timestamp, delivery status, content version) supporting ICO and CQC requirements. Kaptea holds ISO 27001:2022 certification and CREST accreditation.</div>
+        <div class="faq-a" id="faq2" hidden>
+          Yes. Every message sent through Pronto has a complete, immutable audit trail: from template approval through to delivery confirmation and recipient engagement. Template change request workflows record every approval, rejection, and comment. Audit logs are exportable as CSV for regulatory submission. For MiFID II and GDPR obligations, per-message delivery proof means compliance is demonstrable, not assumed.
+        </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a3">
-          Can Kaptea handle high-volume emergency public health alerts?
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+          How does Kaptea handle multi-division governance for financial groups?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a3" hidden>Yes. Pronto's infrastructure is designed for exactly this scenario. During the COVID-19 pandemic, Kaptea's platform was deployed by the HSE (Ireland's Health Service Executive) to manage contact tracing communications and IVR orchestration at national scale. The platform handled high-volume outbound notification and complex IVR flows simultaneously, without degradation. For public health events requiring mass notification, Pronto scales elastically with demand across SMS, WhatsApp, Voice, Email, and RCS.</div>
+        <div class="faq-a" id="faq3" hidden>
+          Pronto's division segmentation allows financial groups to run retail banking, wealth management, insurance, and broker arms from a single platform instance, with each division's data, templates, and contacts fully isolated. Role-based access controls mean an agent in one division cannot see another's data. Central compliance teams retain cross-division oversight and full audit capability without disrupting divisional autonomy.
+        </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a4">
-          How does Kaptea integrate with EHR and patient management systems?
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4">
+          Does Kaptea integrate with banking CRM systems?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a4" hidden>Pronto integrates via REST API and pre-built connectors with major healthcare and CRM platforms (including Salesforce Health Cloud, Microsoft Dynamics 365, and specialist EHR systems). Appointment bookings, care pathway milestones, or clinical events in your source system can trigger automated messages directly, with no manual campaign setup required. Kaptea's implementation team handles integration design and build as part of the standard deployment.</div>
+        <div class="faq-a" id="faq4" hidden>
+          Kaptea integrates natively with Salesforce Financial Services Cloud, Microsoft Dynamics 365, HubSpot, Zoho CRM, and SAP. CRM events can trigger automated message sends (account activity alerts, statement notifications, or fraud flags) without manual intervention. Delivery outcomes, conversation history, and agent notes are written back to the CRM record after every interaction.
+        </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a5">
-          Does Kaptea support multi-site governance for NHS Trusts or private healthcare groups?
+        <button class="faq-q" aria-expanded="false" aria-controls="faq5">
+          What security certifications does Kaptea hold?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a5" hidden>Yes. Pronto's division and role-based access framework is designed for multi-site organisations. Each hospital, clinic, or regional team operates within its own division (with its own templates, contacts, and reporting) while central governance teams maintain oversight, template approval authority, and audit access across the whole estate. This prevents brand or compliance divergence without restricting clinical teams.</div>
+        <div class="faq-a" id="faq5" hidden>
+          Kaptea holds ISO 27001:2022 certification, CREST-certified penetration testing, and Cyber Essentials certification. Each customer deployment is a dedicated instance (no shared tenancy) with EU, UK or US data residency. Twilio's underlying infrastructure additionally holds SOC 2 Type II, PCI DSS, and HIPAA certifications, and operates across 180+ countries on carrier-grade infrastructure.
+        </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a6">
-          How quickly can Kaptea be deployed for a healthcare organisation?
+        <button class="faq-q" aria-expanded="false" aria-controls="faq6">
+          How quickly can Kaptea be deployed for a financial services organisation?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
-        <div class="faq-a" id="faq-a6" hidden>A dedicated Pronto instance, configured for your channels, EHR or CRM integrations, appointment reminder workflows, and compliance requirements, can be live in days. Healthcare deployments typically include appointment communication automation, care pathway notification setup, two-way messaging configuration, and audit trail reporting. Kaptea provides structured implementation with dedicated support through go-live and beyond.</div>
+        <div class="faq-a" id="faq6" hidden>
+          A dedicated Pronto instance, configured for your channels, CRM integrations, division structure, and compliance requirements, can be live in days. Financial services deployments typically include channel activation (SMS, WhatsApp, Email), CRM connector setup, template library migration, role and division configuration, and compliance audit trail enablement. Kaptea provides structured implementation with dedicated support through go-live.
+        </div>
       </div>
 
     </div>
@@ -921,25 +945,25 @@
 ═══════════════════════════════ -->
 <section class="related-section" style="background:var(--kaptea-white);">
   <div class="related-inner">
-    <div class="section-label">How healthcare uses Pronto</div>
+    <div class="section-label">How financial services uses Pronto</div>
     <h2>Three use cases. One platform.</h2>
     <div class="related-grid">
 
-      <a href="customer-journey-orchestration" class="related-card">
+      <a href="/customer-journey-orchestration" class="related-card">
         <h3>Customer Journey Orchestration</h3>
-        <p>Patient pathway journeys with sentiment-aware escalation to a clinician when a conversation needs human attention.</p>
+        <p>Cross-channel journeys from fraud event to live agent intervention, with conversation intelligence and full audit trail at every step.</p>
         <span class="related-arrow">Learn more →</span>
       </a>
 
-      <a href="emergency-surge-communications" class="related-card">
+      <a href="/emergency-surge-communications" class="related-card">
         <h3>Urgent Messaging &amp; Recall</h3>
-        <p>Drug recall and public health emergency dispatch with regulator-ready audit, suitable for MHRA, EMA, and FDA contexts.</p>
+        <p>Regulatory urgent comms, breach notifications, and customer alerts. Email to SMS to branded-call escalation with regulator-ready audit per recipient.</p>
         <span class="related-arrow">Learn more →</span>
       </a>
 
-      <a href="enterprise-transactional-messaging" class="related-card">
+      <a href="/enterprise-transactional-messaging" class="related-card">
         <h3>Transactional Communication</h3>
-        <p>Appointment reminders, prescription notices, and secure messaging on top of your existing patient comms infrastructure.</p>
+        <p>Layer over your existing transactional stack. Add multi-channel campaigns, drag-and-drop templates, and per-entity sub-account billing for group finance.</p>
         <span class="related-arrow">Learn more →</span>
       </a>
 
@@ -949,7 +973,7 @@
 
 
 <!-- ═══════════════════════════════
-     RELATED
+     RELATED SOLUTIONS
 ═══════════════════════════════ -->
 <section class="related-section">
   <div class="related-inner">
@@ -957,21 +981,21 @@
     <h2>Other industries we serve</h2>
     <div class="related-grid">
 
-      <a href="public-sector" class="related-card">
+      <a href="/industries/utilities" class="related-card">
+        <h3>Utilities &amp; Energy</h3>
+        <p>Storm alerts, 750× surge IVR orchestration, and cross-channel failover for millions of customers during critical events.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="/industries/healthcare" class="related-card">
+        <h3>Healthcare</h3>
+        <p>Appointment messaging, secure two-way communications, and compliance-driven workflows for patient engagement at scale.</p>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+
+      <a href="/industries/public-sector" class="related-card">
         <h3>Public Sector</h3>
         <p>Citizen notifications, emergency alerts, and regulated audit-ready messaging, at the scale national organisations demand.</p>
-        <span class="related-arrow">Learn more →</span>
-      </a>
-
-      <a href="financial-services" class="related-card">
-        <h3>Financial Services</h3>
-        <p>Fraud alerts, OTP delivery, regulatory compliance evidence, and multi-division governance for regulated financial institutions.</p>
-        <span class="related-arrow">Learn more →</span>
-      </a>
-
-      <a href="utilities-energy" class="related-card">
-        <h3>Utilities &amp; Energy</h3>
-        <p>Storm alerts, 750× surge IVR orchestration, and cross-channel failover for millions of customers during critical outage events.</p>
         <span class="related-arrow">Learn more →</span>
       </a>
 
@@ -984,30 +1008,35 @@
      CTA CLOSE
 ═══════════════════════════════ -->
 <section class="cta-close">
-  <h2>Built for the organisations where getting it right matters most.</h2>
-  <p>See how Kaptea Pronto gives healthcare organisations the communications infrastructure to manage patient engagement, clinical governance, and public health alerting, all from one platform.</p>
-  <a href="demo" class="btn-primary">Book a Demo</a>
+  <h2>Protect your customers' trust at every touchpoint</h2>
+  <p>See how Pronto delivers critical financial services communications, with failover, compliance evidence, and multi-division governance. Live in days.</p>
+  <a href="/demo" class="btn-primary">Book a Demo</a>
   <div class="reassurance">
-    <span>Live in days</span>
-    <span>Dedicated instance: your data, isolated</span>
-    <span>ISO 27001:2022 certified</span>
+    <span>No commitment required</span>
+    <span>Tailored to financial services</span>
+    <span>ISO 27001 certified</span>
   </div>
 </section>
 
 </main>
 
-<script src="footer.js"></script>
+<script src="/footer.js"></script>
 
 <script>
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var expanded = btn.getAttribute('aria-expanded') === 'true';
-      var answerId = btn.getAttribute('aria-controls');
-      var answer = document.getElementById(answerId);
-      btn.setAttribute('aria-expanded', !expanded);
-      if (expanded) { answer.setAttribute('hidden', ''); }
-      else { answer.removeAttribute('hidden'); }
+      document.querySelectorAll('.faq-q').forEach(function(b) {
+        b.setAttribute('aria-expanded', 'false');
+        var ans = document.getElementById(b.getAttribute('aria-controls'));
+        if (ans) ans.hidden = true;
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        var answer = document.getElementById(btn.getAttribute('aria-controls'));
+        if (answer) answer.hidden = false;
+      }
     });
   });
 </script>

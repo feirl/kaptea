@@ -174,7 +174,7 @@
             <div class="mega-industry-grid">
 
               <div class="industry-block">
-                <div class="industry-title"><a href="financial-services">Financial Services</a></div>
+                <div class="industry-title"><a href="/industries/finance">Financial Services</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Fraud event journeys</li>
                   <li class="mega-detail">Urgent regulatory comms</li>
@@ -185,7 +185,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="utilities-energy">Utilities &amp; Energy</a></div>
+                <div class="industry-title"><a href="/industries/utilities">Utilities &amp; Energy</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Outage journey orchestration</li>
                   <li class="mega-detail">Storm &amp; outage dispatch</li>
@@ -196,7 +196,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="healthcare">Healthcare</a></div>
+                <div class="industry-title"><a href="/industries/healthcare">Healthcare</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Patient pathway journeys</li>
                   <li class="mega-detail">Drug recall dispatch</li>
@@ -207,7 +207,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="travel-transport">Travel &amp; Transport</a></div>
+                <div class="industry-title"><a href="/industries/travel-transport">Travel &amp; Transport</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Disruption rebook journeys</li>
                   <li class="mega-detail">Mass disruption alerts</li>
@@ -218,7 +218,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="public-sector">Public Sector</a></div>
+                <div class="industry-title"><a href="/industries/public-sector">Public Sector</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Citizen service journeys</li>
                   <li class="mega-detail">Emergency public alerts</li>
@@ -229,7 +229,7 @@
               </div>
 
               <div class="industry-block">
-                <div class="industry-title"><a href="retail-ecommerce">Retail, Ecommerce &amp; Automotive</a></div>
+                <div class="industry-title"><a href="/industries/retail-ecommerce">Retail, Ecommerce &amp; Automotive</a></div>
                 <ul class="mega-links">
                   <li class="mega-detail">Browse-to-delivery journeys</li>
                   <li class="mega-detail">Warranty &amp; recall dispatch</li>
