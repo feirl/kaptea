@@ -4,5 +4,11 @@ Disallow: /_skeleton-solution
 Disallow: /_skeleton-feature
 Disallow: /_skeleton-solution.html
 Disallow: /_skeleton-feature.html
+Disallow: /proposal/
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-json/
+Disallow: /admin
+Disallow: /login
 
 Sitemap: https://kaptea.vercel.app/sitemap.xml

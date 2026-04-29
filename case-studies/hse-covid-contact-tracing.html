@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Kaptea built Ireland's HSE COVID-19 contact tracing communications system | Kaptea</title>
+  <meta name="description" content="How Kaptea designed, built, and operated the HSE's COVID-19 contact tracing communications system at national scale, delivering 6.9 million messages across 16 SMS notification flows on Twilio integrated with Microsoft Dynamics 365." />
+  <link rel="canonical" href="https://kaptea.vercel.app/case-studies/hse-covid-contact-tracing" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How Kaptea built Ireland's HSE COVID-19 contact tracing communications system | Kaptea" />
+  <meta property="og:description" content="How Kaptea designed, built, and operated the HSE's COVID-19 contact tracing communications system at national scale, delivering 6.9 million messages across 16 SMS notification flows on Twilio integrated with Microsoft Dynamics 365." />
+  <meta property="og:url" content="https://kaptea.vercel.app/case-studies/hse-covid-contact-tracing" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+
+    /* ─── CASE STUDY TEMPLATE STYLES ─────────────────────────────── */
+
+    /* Hero */
+    .cs-hero {
+      background: var(--kaptea-charcoal);
+      color: var(--kaptea-white);
+      padding: 64px 40px 80px;
+    }
+    .cs-hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .cs-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 80px;
+      align-items: start;
+    }
+    .cs-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .cs-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
+    }
+    .cs-tag-red {
+      background: rgba(220,39,39,0.15);
+      border-color: rgba(220,39,39,0.3);
+      color: #f87171;
+    }
+    .cs-hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: var(--kaptea-white);
+    }
+    .cs-hero h1 em { color: var(--kaptea-red); font-style: normal; }
+    .cs-hero-sub {
+      font-size: 17px;
+      color: var(--kaptea-neutral-grey);
+      line-height: 1.65;
+      max-width: 580px;
+      margin-bottom: 36px;
+    }
+    .cs-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--kaptea-red);
+      color: var(--kaptea-white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cs-hero-cta:hover { background: #b91c1c; }
+
+    /* Sidebar card */
+    .cs-sidebar {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 8px;
+    }
+    .cs-sidebar-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--kaptea-white);
+      border-radius: 8px;
+      padding: 18px 24px;
+      margin-bottom: 24px;
+    }
+    .cs-sidebar-logo span {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      letter-spacing: -0.5px;
+    }
+    .cs-sidebar-logo span em {
+      color: var(--kaptea-red);
+      font-style: normal;
+    }
+    .cs-meta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cs-meta-item label {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--kaptea-tagline-grey);
+      margin-bottom: 4px;
+    }
+    .cs-meta-item p {
+      font-size: 14px;
+      color: var(--kaptea-border);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Stats bar */
+    .cs-stats {
+      background: var(--kaptea-white);
+      border-bottom: 1px solid var(--kaptea-border);
+    }
+    .cs-stats-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .cs-stat {
+      padding: 40px 32px;
+      border-right: 1px solid var(--kaptea-border);
+    }
+    .cs-stat:first-child { padding-left: 0; }
+    .cs-stat:last-child { border-right: none; padding-right: 0; }
+    .cs-stat-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--kaptea-red);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .cs-stat-label {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Body */
+    .cs-body {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 72px 40px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 80px;
+      align-items: start;
+    }
+    .cs-content { min-width: 0; }
+    .cs-content section { margin-bottom: 56px; }
+    .cs-content section:last-child { margin-bottom: 0; }
+    .cs-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--kaptea-red);
+      margin-bottom: 12px;
+    }
+    .cs-content h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .cs-content p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .cs-content p:last-child { margin-bottom: 0; }
+
+    /* Requirement list */
+    .cs-req-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .cs-req-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+    .cs-req-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .cs-req-icon svg { display: block; }
+
+    /* Solution cards */
+    .cs-solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .cs-solution-card {
+      background: var(--kaptea-surface-muted);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .cs-solution-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 6px;
+    }
+    .cs-solution-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Results */
+    .cs-results-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .cs-results-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .cs-result-check {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: #16a34a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .cs-result-body { min-width: 0; }
+    .cs-result-body strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 3px;
+    }
+    .cs-result-body p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Pull quote */
+    .cs-quote-section {
+      background: var(--kaptea-charcoal);
+      padding: 72px 40px;
+    }
+    .cs-quote-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cs-quote-mark {
+      font-size: 80px;
+      line-height: 1;
+      color: var(--kaptea-red);
+      font-family: Georgia, serif;
+      margin-bottom: -12px;
+      display: block;
+    }
+    .cs-quote-text {
+      font-family: 'Manrope', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--kaptea-white);
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .cs-quote-attr {
+      font-size: 14px;
+      color: var(--kaptea-neutral-grey);
+    }
+    .cs-quote-attr strong { color: var(--kaptea-white); font-weight: 600; }
+
+    /* Sidebar sticky */
+    .cs-aside {
+      position: sticky;
+      top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cs-aside-card {
+      background: var(--kaptea-surface-muted);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .cs-aside-card h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--kaptea-neutral-grey);
+      margin-bottom: 14px;
+    }
+    .cs-aside-tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .cs-aside-tag {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
+      color: #444;
+    }
+    .cs-aside-metric {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--kaptea-border);
+      font-size: 13px;
+    }
+    .cs-aside-metric:last-child { border-bottom: none; padding-bottom: 0; }
+    .cs-aside-metric span:first-child { color: #777; }
+    .cs-aside-metric span:last-child { font-weight: 600; color: var(--kaptea-charcoal); }
+
+    /* CTA close */
+    .cs-cta {
+      background: var(--kaptea-red);
+      padding: 72px 40px;
+      text-align: center;
+      color: var(--kaptea-white);
+    }
+    .cs-cta-inner { max-width: 600px; margin: 0 auto; }
+    .cs-cta h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cs-cta p { font-size: 17px; color: rgba(255,255,255,0.8); margin-bottom: 32px; line-height: 1.6; }
+    .cs-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: var(--kaptea-white);
+      color: var(--kaptea-red);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+    .btn-outline-white {
+      border: 2px solid rgba(255,255,255,0.4);
+      color: var(--kaptea-white);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s;
+    }
+    .btn-outline-white:hover { border-color: var(--kaptea-white); }
+
+    /* More case studies */
+    .cs-more {
+      background: var(--kaptea-surface-muted);
+      padding: 72px 40px;
+      border-top: 1px solid var(--kaptea-border);
+    }
+    .cs-more-inner { max-width: 1080px; margin: 0 auto; }
+    .cs-more h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 32px;
+    }
+    .cs-more-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .cs-more-card {
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 10px;
+      padding: 24px;
+      text-decoration: none;
+      display: block;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .cs-more-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); border-color: var(--kaptea-border); }
+    .cs-more-card-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--kaptea-red);
+      margin-bottom: 10px;
+    }
+    .cs-more-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .cs-more-card p {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .cs-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .cs-sidebar { margin-top: 0; }
+      .cs-stats-inner { grid-template-columns: 1fr; }
+      .cs-stat { border-right: none; border-bottom: 1px solid var(--kaptea-border); padding: 32px 0; }
+      .cs-stat:last-child { border-bottom: none; }
+      .cs-body { grid-template-columns: 1fr; gap: 48px; }
+      .cs-aside { position: static; }
+      .cs-req-grid { grid-template-columns: 1fr; }
+      .cs-solution-grid { grid-template-columns: 1fr; }
+      .cs-more-grid { grid-template-columns: 1fr; }
+      .cs-hero h1 { font-size: 32px; }
+      .cs-quote-text { font-size: 20px; }
+    }
+    @media (max-width: 600px) {
+      .cs-hero { padding: 48px 20px 56px; }
+      .cs-stats-inner { padding: 0 20px; }
+      .cs-body { padding: 48px 20px; }
+      .cs-quote-section { padding: 56px 20px; }
+      .cs-cta { padding: 56px 20px; }
+      .cs-more { padding: 56px 20px; }
+    }
+
+  </style>
+
+  <!-- ANALYTICS & MARKETING — managed by cookie-consent.js
+       Replace G-XXXXXXXXXX with the real GA4 Measurement ID
+       Replace LI-XXXXXXX  with the real LinkedIn Partner ID -->
+  <script type="text/plain" data-consent="analytics" async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+  <script type="text/plain" data-consent="marketing">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="marketing" async
+    src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+</head>
+<body>
+
+<script src="/nav.js"></script>
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="cs-hero">
+  <div class="cs-hero-inner">
+
+    <div class="cs-hero-grid">
+
+      <div class="cs-hero-content">
+        <div class="cs-tag-row">
+          <span class="cs-tag cs-tag-red">Case Study</span>
+          <span class="cs-tag">Public Sector</span>
+          <span class="cs-tag">Healthcare</span>
+          <span class="cs-tag">Programmable SMS</span>
+          <span class="cs-tag">Microsoft Dynamics 365</span>
+        </div>
+        <h1>How Kaptea built Ireland's <em>COVID-19 contact tracing</em> communications</h1>
+        <p class="cs-hero-sub">When the HSE needed to reach every person in Ireland who had been in contact with a confirmed COVID-19 case, the system had to work at national scale, immediately, and with full data compliance under Irish and EU regulations. Kaptea designed, built, and operated that platform: 16 SMS notification flows, 6.9 million messages, Microsoft Dynamics 365 CRM integration, on Twilio, with no margin for error.</p>
+        <a href="/demo" class="cs-hero-cta">
+          Book a Demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <aside class="cs-sidebar" aria-label="Case study details">
+        <div class="cs-sidebar-logo" aria-label="Quandoo logo">
+          <span>HSE <em>COVID Contact Tracing</em></span>
+        </div>
+        <div class="cs-meta-row">
+          <div class="cs-meta-item">
+            <label>Sector</label>
+            <p>Public Sector / Healthcare</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Location</label>
+            <p>Ireland</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Channels</label>
+            <p>SMS, Voice, IVR</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Platform</label>
+            <p>Twilio + Microsoft Dynamics 365</p>
+          </div>
+          <div class="cs-meta-item">
+            <label>Outcome</label>
+            <p>6.9M messages delivered</p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     STATS BAR
+═══════════════════════════════ -->
+<div class="cs-stats" role="region" aria-label="Key outcomes">
+  <div class="cs-stats-inner">
+    <div class="cs-stat">
+      <div class="cs-stat-num">6.9M</div>
+      <div class="cs-stat-label">Text messages delivered to the population of Ireland</div>
+    </div>
+    <div class="cs-stat">
+      <div class="cs-stat-num">16</div>
+      <div class="cs-stat-label">SMS notification flows built across the contact tracing programme</div>
+    </div>
+    <div class="cs-stat">
+      <div class="cs-stat-num">National</div>
+      <div class="cs-stat-label">Scale across the population of Ireland during the pandemic</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     BODY
+═══════════════════════════════ -->
+<div class="cs-body">
+  <main class="cs-content" id="main-content">
+
+    <!-- Background -->
+    <section>
+      <p class="cs-section-label">Background</p>
+      <h2>A national health emergency that needed communications infrastructure, fast</h2>
+      <p>In early 2020, Ireland's Health Service Executive faced a public health emergency unlike anything the country had encountered in modern memory. The HSE needed to identify, notify, and follow up with every person who had been in contact with a confirmed COVID-19 case, in real time, at national scale, under full GDPR and Irish data protection compliance.</p>
+      <p>The contact tracing programme was being designed and operationalised in parallel with the technology that would carry its messages. Notifications had to reach test recipients, close contacts, and follow-up groups within hours of a confirmed case. Inbound queries had to route to trained tracers. Every interaction had to be logged, auditable, and resilient under volumes nobody had ever planned for.</p>
+    </section>
+
+    <!-- Challenge -->
+    <section>
+      <p class="cs-section-label">The Challenge</p>
+      <h2>Build it, scale it, change it daily, and never let it fail</h2>
+      <p>Existing telephony and CRM systems were not built for this. The HSE needed a programmable communications layer that could be configured by health policy decisions, not by procurement cycles. When test result protocols changed, the IVR flows and SMS scripts had to update within hours. When case volumes surged, the platform had to scale without operational intervention. When clinicians needed to follow up with vulnerable contacts, the workflow had to route into a CRM that was already part of the wider HSE estate.</p>
+      <p>And the stakes were clinical, not commercial. A failed message wasn't a missed marketing opportunity; it was a person who didn't know they had been exposed.</p>
+      <div class="cs-req-grid" role="list">
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Programmable SMS at national scale
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          16 distinct notification flows for different contact scenarios
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Microsoft Dynamics 365 CRM integration
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Daily configurability of IVR flows and message scripts
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Inbound IVR for tracer-supported follow-up
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          GDPR and Irish data protection compliance
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Full audit trail of every notification sent
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Real-time scaling under unpredictable surge
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Support for clinicians and contact tracers, not just patients
+        </div>
+        <div class="cs-req-item" role="listitem">
+          <span class="cs-req-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          No margin for error during a public health emergency
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section>
+      <p class="cs-section-label">The Solution</p>
+      <h2>Twilio programmable messaging, Microsoft Dynamics 365, and a system that adapted to every protocol change</h2>
+      <p>Kaptea designed and deployed a Twilio-powered communications platform integrated with Microsoft Dynamics 365 as the case management CRM. The platform handled outbound notification, inbound response management, and agent-supported follow-up conversations across SMS, voice, and IVR.</p>
+      <p>16 distinct SMS notification flows covered the full contact tracing journey: test result delivery, close-contact notifications, isolation reminders, follow-up check-ins, escalation paths to a clinical team, and protocol-specific variants as guidance evolved. When the HSE updated guidance, the corresponding flow was updated and back in production within hours, without taking the rest of the platform offline.</p>
+      <div class="cs-solution-grid">
+        <div class="cs-solution-card">
+          <h4>16 SMS notification flows on Twilio</h4>
+          <p>From test result delivery to close-contact notification to isolation follow-up, each flow built on Twilio's programmable messaging APIs. Templates, variables, and routing logic were configurable without rebuilding the platform.</p>
+        </div>
+        <div class="cs-solution-card">
+          <h4>Microsoft Dynamics 365 CRM integration</h4>
+          <p>Outbound notifications and inbound responses both wrote into Microsoft Dynamics 365, giving the HSE's case-management teams a single source of truth for every contact. Tracers worked from one system, not many.</p>
+        </div>
+        <div class="cs-solution-card">
+          <h4>IVR for tracer-supported follow-up</h4>
+          <p>Inbound calls routed through an IVR layer that handed callers to the right tracing team based on their stage in the journey. The IVR flows changed daily as protocols evolved; the system kept up.</p>
+        </div>
+        <div class="cs-solution-card">
+          <h4>National-scale resilience</h4>
+          <p>Built and operated on Twilio's carrier-grade infrastructure with cross-channel failover, the platform scaled with case volume rather than capping it. Audit logs and message-level evidence available throughout for regulatory review.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section>
+      <p class="cs-section-label">Results</p>
+      <h2>6.9 million messages, delivered without breaking</h2>
+      <p>Across the duration of the contact tracing programme, Kaptea's platform delivered 6,923,928 text messages to the population of Ireland. Test results, close-contact notifications, isolation reminders, follow-up check-ins, all dispatched through 16 distinct SMS flows, integrated with the Microsoft Dynamics 365 case-management estate, supporting clinicians and contact tracers in real time.</p>
+      <ul class="cs-results-list">
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>6,923,928 text messages delivered</strong>
+            <p>Across the contact tracing programme, the platform processed nearly 7 million SMS notifications to the population of Ireland, every one of them logged, auditable, and delivered to a clinical timeline.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>16 SMS notification flows in production</strong>
+            <p>Test results, close-contact notifications, isolation reminders, follow-up check-ins, escalation paths, all live and updateable as protocols evolved. The platform changed daily; the customer never noticed.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Microsoft Dynamics 365 unified the case-management view</strong>
+            <p>Tracers worked from a single CRM that captured every outbound notification and every inbound response. No reconciling between telephony logs and case files. One source of truth.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Daily protocol changes shipped within hours</strong>
+            <p>When health policy guidance updated, the corresponding flow was rebuilt and back in production within hours, without disturbing the rest of the platform. Clinical decisions drove the technology, not the other way around.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cs-result-check" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div class="cs-result-body">
+            <strong>Built under conditions that allowed no margin for error</strong>
+            <p>Clinical-grade reliability set the bar for every Kaptea engagement that followed. The HSE programme is the reason regulated industries trust Pronto today.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="cs-aside" aria-label="Case study quick facts">
+    <div class="cs-aside-card">
+      <h4>Channels used</h4>
+      <div class="cs-aside-tag-list">
+        <span class="cs-aside-tag">SMS</span>
+        <span class="cs-aside-tag">Voice</span>
+        <span class="cs-aside-tag">IVR</span>
+      </div>
+    </div>
+    <div class="cs-aside-card">
+      <h4>Platform features</h4>
+      <div class="cs-aside-tag-list">
+        <span class="cs-aside-tag">Twilio Programmable SMS</span>
+        <span class="cs-aside-tag">Microsoft Dynamics 365</span>
+        <span class="cs-aside-tag">16 notification flows</span>
+        <span class="cs-aside-tag">Inbound IVR routing</span>
+        <span class="cs-aside-tag">Daily-change configuration</span>
+        <span class="cs-aside-tag">National-scale resilience</span>
+      </div>
+    </div>
+    <div class="cs-aside-card">
+      <h4>At a glance</h4>
+      <div class="cs-aside-metric">
+        <span>Industry</span>
+        <span>Public Sector / Healthcare</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>Region</span>
+        <span>Ireland</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>Channel</span>
+        <span>SMS, Voice, IVR</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>Messages</span>
+        <span>6.9 million</span>
+      </div>
+      <div class="cs-aside-metric">
+        <span>SMS flows</span>
+        <span>16 in production</span>
+      </div>
+    </div>
+    <div class="cs-aside-card">
+      <h4>Related pages</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+        <a href="/voice-ivr" style="font-size:13px;color:var(--kaptea-red);text-decoration:none;font-weight:500;">Voice &amp; IVR →</a>
+        <a href="/customer-journey-orchestration" style="font-size:13px;color:var(--kaptea-red);text-decoration:none;font-weight:500;">Customer Journey Orchestration →</a>
+        <a href="/twilio-partner" style="font-size:13px;color:var(--kaptea-red);text-decoration:none;font-weight:500;">Twilio Partner →</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- ═══════════════════════════════
+     PULL QUOTE
+═══════════════════════════════ -->
+<section class="cs-quote-section" aria-label="Client testimonial">
+  <div class="cs-quote-inner">
+    <span class="cs-quote-mark" aria-hidden="true">"</span>
+    <p class="cs-quote-text">We do not build things that look good in demos and fail in production. The HSE project, the counselling platform, every regulated-industry engagement we have completed: all of them were built with the same principle. Promises made must be kept.</p>
+    <p class="cs-quote-attr"><strong>Alan McNab</strong> · CEO &amp; Co-Founder, Kaptea</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     MORE CASE STUDIES
+═══════════════════════════════ -->
+<section class="cs-more">
+  <div class="cs-more-inner">
+    <h3>More customer stories</h3>
+    <div class="cs-more-grid">
+      <a href="/case-studies/hotbox" class="cs-more-card" aria-label="The Hot Box Sauna case study">
+        <p class="cs-more-card-tag">Hospitality</p>
+        <h4>The Hot Box Sauna</h4>
+        <p>How a fast-growing Irish wellness brand cut call abandonment from 60% to under 7% with Twilio Flex.</p>
+      </a>
+      <a href="/case-studies/caledonian-sleeper" class="cs-more-card" aria-label="Caledonian Sleeper case study">
+        <p class="cs-more-card-tag">Travel &amp; Transport</p>
+        <h4>Caledonian Sleeper</h4>
+        <p>Mission-critical passenger communications at the push of a button, even at 3am.</p>
+      </a>
+      <a href="/demo" class="cs-more-card" aria-label="Book a demo">
+        <p class="cs-more-card-tag">Your organisation</p>
+        <h4>Could be next</h4>
+        <p>See how Kaptea handles your specific voice, IVR and telephony requirements in a personalised demo.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     CTA CLOSE
+═══════════════════════════════ -->
+<section class="cs-cta" aria-labelledby="cta-heading">
+  <div class="cs-cta-inner">
+    <h2 id="cta-heading">See what Kaptea can do for your organisation</h2>
+    <p>One platform. Every channel. Full control, without waiting on engineering.</p>
+    <div class="cs-cta-btns">
+      <a href="/demo" class="btn-white">Book a Demo</a>
+      <a href="/pronto" class="btn-outline-white">Explore Pronto</a>
+    </div>
+  </div>
+</section>
+
+<script src="/footer.js"></script>
+</body>
+</html>

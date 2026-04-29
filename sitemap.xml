@@ -54,6 +54,7 @@
   <url><loc>https://kaptea.vercel.app/case-studies/attrix-ivr-with-zendesk</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://kaptea.vercel.app/case-studies/kaptea-foodcloud-flex</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://kaptea.vercel.app/case-studies/tomo-flex-with-hubspot</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.vercel.app/case-studies/hse-covid-contact-tracing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Company -->
   <url><loc>https://kaptea.vercel.app/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
