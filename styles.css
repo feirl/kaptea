@@ -16,6 +16,7 @@
   --kaptea-surface-muted: color-mix(in srgb, var(--kaptea-neutral-grey) 8%, var(--kaptea-white));
   --kaptea-card-border-hover: color-mix(in srgb, var(--kaptea-neutral-grey) 52%, var(--kaptea-white));
   /* Dark footer / dark UI (charcoal base + white opacity) */
+  --kaptea-dark: #131521;
   --kaptea-bg-dark: #131521;
   --kaptea-on-dark: rgba(255, 255, 255, 0.9);
   --kaptea-on-dark-secondary: rgba(255, 255, 255, 0.62);
