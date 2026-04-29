@@ -1,0 +1,20 @@
+name: Deploy staging site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ie1-c8-1.anuhosting.net
+          username: kaptea-staging@kaptea.io
+          password: ${{ secrets.STAGING_SITE_FTP_PASSWORD }}
+          server-dir: ./
