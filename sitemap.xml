@@ -2,88 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Core -->
-  <url><loc>https://kaptea.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://kaptea.vercel.app/pricing</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://kaptea.vercel.app/demo</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kaptea.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://kaptea.io/pricing</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kaptea.io/demo</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- Platform -->
-  <url><loc>https://kaptea.vercel.app/pronto</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/omni-channel-communications</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/sms-rcs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/whatsapp</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/voice-ivr</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/email</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/secure-video</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/social-messaging</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/control-governance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/delivery-resilience</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/integration-api-framework</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/deployment-infrastructure</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/conversational-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/automations-workflow</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/twilio-partner</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/pronto</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/omni-channel-communications</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/sms-rcs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/whatsapp</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/voice-ivr</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/email</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/secure-video</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/social-messaging</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/control-governance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/delivery-resilience</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/integration-api-framework</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/deployment-infrastructure</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/conversational-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/automations-workflow</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/twilio-partner</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Use Cases -->
-  <url><loc>https://kaptea.vercel.app/customer-journey-orchestration</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://kaptea.vercel.app/emergency-surge-communications</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://kaptea.vercel.app/enterprise-transactional-messaging</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kaptea.io/customer-journey-orchestration</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kaptea.io/emergency-surge-communications</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kaptea.io/enterprise-transactional-messaging</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- Industries -->
-  <url><loc>https://kaptea.vercel.app/industries/finance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/industries/utilities</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/industries/healthcare</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/industries/travel-transport</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/industries/public-sector</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/industries/retail-ecommerce</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/industries/finance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/industries/utilities</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/industries/healthcare</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/industries/travel-transport</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/industries/public-sector</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/industries/retail-ecommerce</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Trust & Credentials -->
-  <url><loc>https://kaptea.vercel.app/why-kaptea</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/security-compliance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/certification</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/implementation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/why-kaptea</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/security-compliance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/certification</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/implementation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Case Studies -->
-  <url><loc>https://kaptea.vercel.app/case-studies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/an-post</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/an-post-whatsapp</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/caledonian-sleeper</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/eflow</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/hotbox</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/quandoo</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/tickmill</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/teaching-council</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/attrix-ivr-with-zendesk</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/kaptea-foodcloud-flex</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/tomo-flex-with-hubspot</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/case-studies/hse-covid-contact-tracing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/case-studies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/case-studies/an-post</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/an-post-whatsapp</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/caledonian-sleeper</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/eflow</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/hotbox</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/quandoo</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/tickmill</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/teaching-council</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/attrix-ivr-with-zendesk</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/kaptea-foodcloud-flex</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/tomo-flex-with-hubspot</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/case-studies/hse-covid-contact-tracing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Company -->
-  <url><loc>https://kaptea.vercel.app/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/meet-the-team</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/careers</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kaptea.io/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/meet-the-team</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/careers</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- Legal -->
-  <url><loc>https://kaptea.vercel.app/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://kaptea.vercel.app/cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://kaptea.vercel.app/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://kaptea.io/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://kaptea.io/cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://kaptea.io/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
   <!-- Blog -->
-  <url><loc>https://kaptea.vercel.app/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/trust-not-a-kpi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/dedicated-instance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/whatsapp-compliance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/kaptea-certified-gold-status-twilio-consulting-partner</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/best-omnichannel-crm</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/call-center-sms-solutions</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/optimising-your-communication-through-twilios-sms-with-ms-dynamics-integration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/9-personalized-customer-support-strategies-to-improve-cx</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/how-twilio-flex-integration-can-transform-contact-centre-performance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/how-to-use-sms-messaging-to-improve-customer-experience</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/integrated-crm-solutions</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/unlocking-the-power-of-sms-messaging-through-twilio</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/tips-for-hiring-and-retaining-contact-centre-agents</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kaptea.vercel.app/blog/omnichannel-marketing-plan-template</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/blog/trust-not-a-kpi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/blog/dedicated-instance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog/whatsapp-compliance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog/kaptea-certified-gold-status-twilio-consulting-partner</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog/best-omnichannel-crm</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaptea.io/blog/call-center-sms-solutions</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/blog/optimising-your-communication-through-twilios-sms-with-ms-dynamics-integration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaptea.io/blog/9-personalized-customer-support-strategies-to-improve-cx</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog/how-twilio-flex-integration-can-transform-contact-centre-performance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog/how-to-use-sms-messaging-to-improve-customer-experience</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog/integrated-crm-solutions</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog/unlocking-the-power-of-sms-messaging-through-twilio</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog/tips-for-hiring-and-retaining-contact-centre-agents</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kaptea.io/blog/omnichannel-marketing-plan-template</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
 </urlset>

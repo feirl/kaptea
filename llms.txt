@@ -8,76 +8,76 @@ Key credentials: ISO 27001 certified, Cyber Essentials Plus certified, CREST acc
 
 ## Platform
 
-- [Pronto Platform](https://kaptea.vercel.app/pronto): Kaptea's unified omnichannel communications platform for regulated enterprises
-- [Conversational AI](https://kaptea.vercel.app/conversational-ai): Pronto's AI Assistant builder for regulated enterprises. Master-prompt-governed voice agent configured from a single console: Agent (master prompt, model, temperature), Voice (ElevenLabs/Google/Polly TTS, Deepgram Nova-3 STT, interruption rules), Tools (function calling into Pronto/CRM/webhooks), Data Capture (structured field extraction), Knowledge (RAG from URLs/docs/markdown), Escalation (sentiment threshold + trigger keywords routing into a Pronto agent inbox), Phone Number assignment, Conversation Intelligence (sentiment, summary, escalation detection, PII auto-redact, plus prebuilt and custom operators), Conversations (transcripts, summaries, event timelines). Five pre-built templates: Appointment Scheduling, Customer Service & Support, Information Collector, Lead Qualifier, Surveys & Feedback. Designed for regulated industries.
-- [Automations & Workflow](https://kaptea.vercel.app/automations-workflow): Visual workflow builder, event triggers from any system, conditional branching, and end-to-end journey orchestration. Multi-step automation with approval gates and human-in-the-loop checkpoints. Marketing, ops, and engineering all build on the same canvas.
-- [SMS & RCS](https://kaptea.vercel.app/sms-rcs): Enterprise SMS and RCS messaging with 99.5% delivery, compliance archiving, and intelligent routing
-- [WhatsApp Business](https://kaptea.vercel.app/whatsapp): Compliant WhatsApp integration for contact centres, with archiving and monitoring for regulated industries
-- [Voice & IVR](https://kaptea.vercel.app/voice-ivr): Fully customisable IVR and voice orchestration built for surge and regulated environments
-- [Email](https://kaptea.vercel.app/email): Transactional and campaign email infrastructure with full compliance controls
-- [Social Messaging](https://kaptea.vercel.app/social-messaging): Managed social channel communications with monitoring and archiving
-- [Omnichannel Communications](https://kaptea.vercel.app/omni-channel-communications): Unified contact centre platform connecting all channels in a single agent interface
-- [Control & Governance](https://kaptea.vercel.app/control-governance): Role-based access, audit logs, and compliance controls across all channels
-- [Delivery Resilience](https://kaptea.vercel.app/delivery-resilience): Multi-carrier failover, load balancing, and 99.5% SLA infrastructure
+- [Pronto Platform](https://kaptea.io/pronto): Kaptea's unified omnichannel communications platform for regulated enterprises
+- [Conversational AI](https://kaptea.io/conversational-ai): Pronto's AI Assistant builder for regulated enterprises. Master-prompt-governed voice agent configured from a single console: Agent (master prompt, model, temperature), Voice (ElevenLabs/Google/Polly TTS, Deepgram Nova-3 STT, interruption rules), Tools (function calling into Pronto/CRM/webhooks), Data Capture (structured field extraction), Knowledge (RAG from URLs/docs/markdown), Escalation (sentiment threshold + trigger keywords routing into a Pronto agent inbox), Phone Number assignment, Conversation Intelligence (sentiment, summary, escalation detection, PII auto-redact, plus prebuilt and custom operators), Conversations (transcripts, summaries, event timelines). Five pre-built templates: Appointment Scheduling, Customer Service & Support, Information Collector, Lead Qualifier, Surveys & Feedback. Designed for regulated industries.
+- [Automations & Workflow](https://kaptea.io/automations-workflow): Visual workflow builder, event triggers from any system, conditional branching, and end-to-end journey orchestration. Multi-step automation with approval gates and human-in-the-loop checkpoints. Marketing, ops, and engineering all build on the same canvas.
+- [SMS & RCS](https://kaptea.io/sms-rcs): Enterprise SMS and RCS messaging with 99.5% delivery, compliance archiving, and intelligent routing
+- [WhatsApp Business](https://kaptea.io/whatsapp): Compliant WhatsApp integration for contact centres, with archiving and monitoring for regulated industries
+- [Voice & IVR](https://kaptea.io/voice-ivr): Fully customisable IVR and voice orchestration built for surge and regulated environments
+- [Email](https://kaptea.io/email): Transactional and campaign email infrastructure with full compliance controls
+- [Social Messaging](https://kaptea.io/social-messaging): Managed social channel communications with monitoring and archiving
+- [Omnichannel Communications](https://kaptea.io/omni-channel-communications): Unified contact centre platform connecting all channels in a single agent interface
+- [Control & Governance](https://kaptea.io/control-governance): Role-based access, audit logs, and compliance controls across all channels
+- [Delivery Resilience](https://kaptea.io/delivery-resilience): Multi-carrier failover, load balancing, and 99.5% SLA infrastructure
 
 ## Solutions by Use Case
 
-- [Customer Journey Orchestration](https://kaptea.vercel.app/customer-journey-orchestration): End-to-end customer journeys on one platform. Workflows, dual-payload API enrichment, centralised template management, multi-channel dispatch, and live conversation intelligence with agent escalation. Compliance-first alternative to Airship and Braze for regulated industries.
-- [Urgent Messaging & Recall](https://kaptea.vercel.app/emergency-surge-communications): CSV-driven mass dispatch with multi-channel escalation (email to SMS to branded call) and regulator-ready audit. Built for warranty recalls, drug recalls, and time-critical regulatory communications. Branded calling lifts pickup rates by 30 to 50 percent.
-- [Transactional Communication](https://kaptea.vercel.app/enterprise-transactional-messaging): Layer Pronto on top of an existing transactional infrastructure (Twilio, SendGrid, equivalent). Adds drag-and-drop template management, ad-hoc multi-channel campaigns, sub-account billing granularity, and centralised compliance with distributed local execution.
+- [Customer Journey Orchestration](https://kaptea.io/customer-journey-orchestration): End-to-end customer journeys on one platform. Workflows, dual-payload API enrichment, centralised template management, multi-channel dispatch, and live conversation intelligence with agent escalation. Compliance-first alternative to Airship and Braze for regulated industries.
+- [Urgent Messaging & Recall](https://kaptea.io/emergency-surge-communications): CSV-driven mass dispatch with multi-channel escalation (email to SMS to branded call) and regulator-ready audit. Built for warranty recalls, drug recalls, and time-critical regulatory communications. Branded calling lifts pickup rates by 30 to 50 percent.
+- [Transactional Communication](https://kaptea.io/enterprise-transactional-messaging): Layer Pronto on top of an existing transactional infrastructure (Twilio, SendGrid, equivalent). Adds drag-and-drop template management, ad-hoc multi-channel campaigns, sub-account billing granularity, and centralised compliance with distributed local execution.
 
 ## Industries
 
-- [Financial Services](https://kaptea.vercel.app/industries/finance): MiFID II and FCA-compliant communications for banks, insurers, and investment firms
-- [Healthcare](https://kaptea.vercel.app/industries/healthcare): GDPR-compliant patient communications for HSE, NHS, and private healthcare providers
-- [Utilities & Energy](https://kaptea.vercel.app/industries/utilities): Surge-capable communications for outage management, CRU compliance, and customer service
-- [Public Sector](https://kaptea.vercel.app/industries/public-sector): Secure citizen communications for government and public bodies
-- [Travel & Transport](https://kaptea.vercel.app/industries/travel-transport): Real-time passenger communications and disruption management
-- [Retail, Ecommerce & Automotive](https://kaptea.vercel.app/industries/retail-ecommerce): Order and dispatch comms, peak surge messaging, distributed store and dealer governance, vehicle warranty and product recall workflows. Built for centralised and distributed retail networks and motoring operators.
+- [Financial Services](https://kaptea.io/industries/finance): MiFID II and FCA-compliant communications for banks, insurers, and investment firms
+- [Healthcare](https://kaptea.io/industries/healthcare): GDPR-compliant patient communications for HSE, NHS, and private healthcare providers
+- [Utilities & Energy](https://kaptea.io/industries/utilities): Surge-capable communications for outage management, CRU compliance, and customer service
+- [Public Sector](https://kaptea.io/industries/public-sector): Secure citizen communications for government and public bodies
+- [Travel & Transport](https://kaptea.io/industries/travel-transport): Real-time passenger communications and disruption management
+- [Retail, Ecommerce & Automotive](https://kaptea.io/industries/retail-ecommerce): Order and dispatch comms, peak surge messaging, distributed store and dealer governance, vehicle warranty and product recall workflows. Built for centralised and distributed retail networks and motoring operators.
 
 ## Trust & Credentials
 
-- [About Kaptea](https://kaptea.vercel.app/about): Company story, founding principles, leadership team, and Dublin HQ. Kaptea is a Twilio Gold Consulting Partner and Twilio AI Partner.
-- [Why Kaptea](https://kaptea.vercel.app/why-kaptea): Company positioning, philosophy, and the "promises made, promises kept" approach
-- [Security & Compliance](https://kaptea.vercel.app/security-compliance): Overview of Kaptea's security posture and compliance certifications
-- [Certifications](https://kaptea.vercel.app/certification): ISO 27001, Cyber Essentials Plus, and CREST accreditation details with verifiable links
-- [Meet the Team](https://kaptea.vercel.app/meet-the-team): Founding team bios, career backgrounds, and company philosophy
-- [Careers](https://kaptea.vercel.app/careers): How Kaptea hires, the disciplines we typically recruit for (engineering, customer success, solutions, sales, devops), and how to send a CV. No public job board; selective hiring.
+- [About Kaptea](https://kaptea.io/about): Company story, founding principles, leadership team, and Dublin HQ. Kaptea is a Twilio Gold Consulting Partner and Twilio AI Partner.
+- [Why Kaptea](https://kaptea.io/why-kaptea): Company positioning, philosophy, and the "promises made, promises kept" approach
+- [Security & Compliance](https://kaptea.io/security-compliance): Overview of Kaptea's security posture and compliance certifications
+- [Certifications](https://kaptea.io/certification): ISO 27001, Cyber Essentials Plus, and CREST accreditation details with verifiable links
+- [Meet the Team](https://kaptea.io/meet-the-team): Founding team bios, career backgrounds, and company philosophy
+- [Careers](https://kaptea.io/careers): How Kaptea hires, the disciplines we typically recruit for (engineering, customer success, solutions, sales, devops), and how to send a CV. No public job board; selective hiring.
 
 ## Case Studies
 
-- [Case Studies](https://kaptea.vercel.app/case-studies): Overview of Kaptea client deployments across regulated industries
-- [An Post](https://kaptea.vercel.app/case-studies/an-post): National postal service SMS and customer notification infrastructure
-- [An Post WhatsApp](https://kaptea.vercel.app/case-studies/an-post-whatsapp): WhatsApp Business integration for parcel delivery notifications
-- [eFlow](https://kaptea.vercel.app/case-studies/eflow): Tolling authority automated billing and customer communications
-- [Hotbox](https://kaptea.vercel.app/case-studies/hotbox): Hospitality and events SMS communications platform
-- [Caledonian Sleeper](https://kaptea.vercel.app/case-studies/caledonian-sleeper): Mission-critical passenger communications for the Scottish overnight rail service. Disruption alerts, booking confirmations, and 3am-grade reliability.
-- [Teaching Council](https://kaptea.vercel.app/case-studies/teaching-council): Public sector communications deployment for the Teaching Council of Ireland.
-- [Tickmill](https://kaptea.vercel.app/case-studies/tickmill): Twilio Flex contact centre for a global online trading platform, achieving 100% call-recording compliance after replacing CloudTalk.
-- [Quandoo](https://kaptea.vercel.app/case-studies/quandoo): Restaurant reservation IVR deployed globally for over five years with 10/10 NPS from the commercial director.
-- [Attrix IVR + Zendesk](https://kaptea.vercel.app/case-studies/attrix-ivr-with-zendesk): Custom Twilio Studio IVR integrated directly with Zendesk for fleet and telematics operations. 14,000 monthly calls processed with 53s reduction in average handle time across 28 advisors.
-- [FoodCloud Twilio Flex](https://kaptea.vercel.app/case-studies/kaptea-foodcloud-flex): Cloud contact centre deployed during the pandemic for an Irish food redistribution charity, with custom dual-CRM API spanning legacy and Salesforce systems. 8,000+ tonnes of surplus food and 19.2M meals enabled.
-- [Tomo Networks Flex](https://kaptea.vercel.app/case-studies/tomo-flex-with-hubspot): US mortgage startup contact centre on Twilio Flex, four channels (voice, SMS, email, webchat) deployed in 8 weeks, scaled to 35 agents reaching over a quarter of the US market.
-- [HSE COVID-19 Contact Tracing](https://kaptea.vercel.app/case-studies/hse-covid-contact-tracing): National-scale communications platform for Ireland's Health Service Executive during the COVID-19 pandemic. 16 distinct SMS notification flows on Twilio integrated with Microsoft Dynamics 365 case management, 6.9 million messages delivered to the population of Ireland, daily protocol changes shipped within hours.
+- [Case Studies](https://kaptea.io/case-studies): Overview of Kaptea client deployments across regulated industries
+- [An Post](https://kaptea.io/case-studies/an-post): National postal service SMS and customer notification infrastructure
+- [An Post WhatsApp](https://kaptea.io/case-studies/an-post-whatsapp): WhatsApp Business integration for parcel delivery notifications
+- [eFlow](https://kaptea.io/case-studies/eflow): Tolling authority automated billing and customer communications
+- [Hotbox](https://kaptea.io/case-studies/hotbox): Hospitality and events SMS communications platform
+- [Caledonian Sleeper](https://kaptea.io/case-studies/caledonian-sleeper): Mission-critical passenger communications for the Scottish overnight rail service. Disruption alerts, booking confirmations, and 3am-grade reliability.
+- [Teaching Council](https://kaptea.io/case-studies/teaching-council): Public sector communications deployment for the Teaching Council of Ireland.
+- [Tickmill](https://kaptea.io/case-studies/tickmill): Twilio Flex contact centre for a global online trading platform, achieving 100% call-recording compliance after replacing CloudTalk.
+- [Quandoo](https://kaptea.io/case-studies/quandoo): Restaurant reservation IVR deployed globally for over five years with 10/10 NPS from the commercial director.
+- [Attrix IVR + Zendesk](https://kaptea.io/case-studies/attrix-ivr-with-zendesk): Custom Twilio Studio IVR integrated directly with Zendesk for fleet and telematics operations. 14,000 monthly calls processed with 53s reduction in average handle time across 28 advisors.
+- [FoodCloud Twilio Flex](https://kaptea.io/case-studies/kaptea-foodcloud-flex): Cloud contact centre deployed during the pandemic for an Irish food redistribution charity, with custom dual-CRM API spanning legacy and Salesforce systems. 8,000+ tonnes of surplus food and 19.2M meals enabled.
+- [Tomo Networks Flex](https://kaptea.io/case-studies/tomo-flex-with-hubspot): US mortgage startup contact centre on Twilio Flex, four channels (voice, SMS, email, webchat) deployed in 8 weeks, scaled to 35 agents reaching over a quarter of the US market.
+- [HSE COVID-19 Contact Tracing](https://kaptea.io/case-studies/hse-covid-contact-tracing): National-scale communications platform for Ireland's Health Service Executive during the COVID-19 pandemic. 16 distinct SMS notification flows on Twilio integrated with Microsoft Dynamics 365 case management, 6.9 million messages delivered to the population of Ireland, daily protocol changes shipped within hours.
 
 ## Blog & Insights
 
-- [Blog](https://kaptea.vercel.app/blog): Kaptea's editorial hub covering compliance, omnichannel strategy, and enterprise communications
-- [The problem isn't your technology. It's your promises.](https://kaptea.vercel.app/blog/trust-not-a-kpi): CEO Alan McNab on why enterprises fail at customer trust despite heavy technology investment, and why promises are the atomic unit of service delivery
-- [WhatsApp in your contact centre: what compliance actually requires](https://kaptea.vercel.app/blog/whatsapp-compliance): Compliance obligations for regulated industries using WhatsApp, covering archiving, monitoring, GDPR, and FCA requirements
-- [Multichannel vs omnichannel: why the difference matters more than you think](https://kaptea.vercel.app/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement): Clear distinction between multichannel and omnichannel strategies, with 89% vs 33% retention data and operational guidance
-- [What is a dedicated communications instance? The enterprise buyer's guide](https://kaptea.vercel.app/blog/dedicated-instance): Enterprise buyers guide to dedicated vs shared communications infrastructure, data residency, and compliance evidence
-- [Kaptea achieves Twilio Gold Partner status](https://kaptea.vercel.app/blog/kaptea-certified-gold-status-twilio-consulting-partner): Milestone announcement covering 7M+ messages delivered, HSE COVID-19 contact tracing deployment, and counselling platform scaled to 120+ agents
-- [Best omnichannel CRM platforms in 2026: a buyer's guide](https://kaptea.vercel.app/blog/best-omnichannel-crm): Comprehensive comparison of Salesforce, HubSpot, Freshworks, Zendesk Sell, ActiveCampaign, Klaviyo, and Omnisend. Pricing, strengths, weaknesses, and how to choose. Positions Kaptea Pronto as the operational layer that sits between any of these CRMs and the communications carrier (SMS, WhatsApp, voice, email).
-- [Call centre SMS solutions: what enterprise teams should look for in 2026](https://kaptea.vercel.app/blog/call-center-sms-solutions): What to look for in an enterprise SMS solution for the contact centre: CRM integration, two-way conversation handling, template governance, audit, branded sender, and channel failover. Twilio versus direct carrier connections.
-- [SMS in Microsoft Dynamics 365: connecting Twilio SMS to your CRM](https://kaptea.vercel.app/blog/optimising-your-communication-through-twilios-sms-with-ms-dynamics-integration): Three approaches to integrating Twilio SMS with Microsoft Dynamics 365 (Power Automate, AppSource, purpose-built platform). What a good integration actually does. References the HSE COVID-19 deployment as the reference architecture.
-- [9 personalised customer support strategies that actually improve CX](https://kaptea.vercel.app/blog/9-personalized-customer-support-strategies-to-improve-cx): Practical strategies for personalising customer support in regulated industries. Unified customer record, context handover across channels, routing based on customer profile, compliance-respecting personalisation.
-- [How Twilio Flex transforms contact centre performance](https://kaptea.vercel.app/blog/how-twilio-flex-integration-can-transform-contact-centre-performance): What Twilio Flex actually delivers (multi-channel queue, CRM integration, programmable IVR, real-time supervision). Where deployments fail. Real deployment examples (Tomo Networks, FoodCloud, Hot Box).
-- [How to use SMS messaging to actually improve customer experience](https://kaptea.vercel.app/blog/how-to-use-sms-messaging-to-improve-customer-experience): When SMS improves CX (confirmations, reminders, time-sensitive alerts) versus when it damages CX (marketing without consent, generic broadcasts). Tone, frequency, consent, and measurement.
-- [Integrated CRM solutions: what "integration" actually means in 2026](https://kaptea.vercel.app/blog/integrated-crm-solutions): The three levels of CRM integration (data-export, API, event-driven bidirectional). What real integration looks like in production. Where integrations go wrong. How Kaptea Pronto fits as the communications layer.
-- [Unlocking the power of SMS messaging through Twilio](https://kaptea.vercel.app/blog/unlocking-the-power-of-sms-messaging-through-twilio): What Twilio Programmable SMS offers, where it wins, why most enterprise teams build a platform layer on top rather than directly against the API.
-- [Hiring and retaining contact centre agents: what actually works](https://kaptea.vercel.app/blog/tips-for-hiring-and-retaining-contact-centre-agents): Patterns from contact centres with low attrition: better tools, clear career paths, meaningful autonomy, coaching not surveillance. Why technology choices are themselves a retention strategy.
-- [Omnichannel marketing plan template: a practical structure for B2B and regulated brands](https://kaptea.vercel.app/blog/omnichannel-marketing-plan-template): Six-section plan structure: customer segments, channel mix, content principles, governance and compliance, integration and data flow, measurement. The integration and compliance sections that generic templates skip.
+- [Blog](https://kaptea.io/blog): Kaptea's editorial hub covering compliance, omnichannel strategy, and enterprise communications
+- [The problem isn't your technology. It's your promises.](https://kaptea.io/blog/trust-not-a-kpi): CEO Alan McNab on why enterprises fail at customer trust despite heavy technology investment, and why promises are the atomic unit of service delivery
+- [WhatsApp in your contact centre: what compliance actually requires](https://kaptea.io/blog/whatsapp-compliance): Compliance obligations for regulated industries using WhatsApp, covering archiving, monitoring, GDPR, and FCA requirements
+- [Multichannel vs omnichannel: why the difference matters more than you think](https://kaptea.io/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement): Clear distinction between multichannel and omnichannel strategies, with 89% vs 33% retention data and operational guidance
+- [What is a dedicated communications instance? The enterprise buyer's guide](https://kaptea.io/blog/dedicated-instance): Enterprise buyers guide to dedicated vs shared communications infrastructure, data residency, and compliance evidence
+- [Kaptea achieves Twilio Gold Partner status](https://kaptea.io/blog/kaptea-certified-gold-status-twilio-consulting-partner): Milestone announcement covering 7M+ messages delivered, HSE COVID-19 contact tracing deployment, and counselling platform scaled to 120+ agents
+- [Best omnichannel CRM platforms in 2026: a buyer's guide](https://kaptea.io/blog/best-omnichannel-crm): Comprehensive comparison of Salesforce, HubSpot, Freshworks, Zendesk Sell, ActiveCampaign, Klaviyo, and Omnisend. Pricing, strengths, weaknesses, and how to choose. Positions Kaptea Pronto as the operational layer that sits between any of these CRMs and the communications carrier (SMS, WhatsApp, voice, email).
+- [Call centre SMS solutions: what enterprise teams should look for in 2026](https://kaptea.io/blog/call-center-sms-solutions): What to look for in an enterprise SMS solution for the contact centre: CRM integration, two-way conversation handling, template governance, audit, branded sender, and channel failover. Twilio versus direct carrier connections.
+- [SMS in Microsoft Dynamics 365: connecting Twilio SMS to your CRM](https://kaptea.io/blog/optimising-your-communication-through-twilios-sms-with-ms-dynamics-integration): Three approaches to integrating Twilio SMS with Microsoft Dynamics 365 (Power Automate, AppSource, purpose-built platform). What a good integration actually does. References the HSE COVID-19 deployment as the reference architecture.
+- [9 personalised customer support strategies that actually improve CX](https://kaptea.io/blog/9-personalized-customer-support-strategies-to-improve-cx): Practical strategies for personalising customer support in regulated industries. Unified customer record, context handover across channels, routing based on customer profile, compliance-respecting personalisation.
+- [How Twilio Flex transforms contact centre performance](https://kaptea.io/blog/how-twilio-flex-integration-can-transform-contact-centre-performance): What Twilio Flex actually delivers (multi-channel queue, CRM integration, programmable IVR, real-time supervision). Where deployments fail. Real deployment examples (Tomo Networks, FoodCloud, Hot Box).
+- [How to use SMS messaging to actually improve customer experience](https://kaptea.io/blog/how-to-use-sms-messaging-to-improve-customer-experience): When SMS improves CX (confirmations, reminders, time-sensitive alerts) versus when it damages CX (marketing without consent, generic broadcasts). Tone, frequency, consent, and measurement.
+- [Integrated CRM solutions: what "integration" actually means in 2026](https://kaptea.io/blog/integrated-crm-solutions): The three levels of CRM integration (data-export, API, event-driven bidirectional). What real integration looks like in production. Where integrations go wrong. How Kaptea Pronto fits as the communications layer.
+- [Unlocking the power of SMS messaging through Twilio](https://kaptea.io/blog/unlocking-the-power-of-sms-messaging-through-twilio): What Twilio Programmable SMS offers, where it wins, why most enterprise teams build a platform layer on top rather than directly against the API.
+- [Hiring and retaining contact centre agents: what actually works](https://kaptea.io/blog/tips-for-hiring-and-retaining-contact-centre-agents): Patterns from contact centres with low attrition: better tools, clear career paths, meaningful autonomy, coaching not surveillance. Why technology choices are themselves a retention strategy.
+- [Omnichannel marketing plan template: a practical structure for B2B and regulated brands](https://kaptea.io/blog/omnichannel-marketing-plan-template): Six-section plan structure: customer segments, channel mix, content principles, governance and compliance, integration and data flow, measurement. The integration and compliance sections that generic templates skip.
 
 ## Developers
 
@@ -85,11 +85,11 @@ Key credentials: ISO 27001 certified, Cyber Essentials Plus certified, CREST acc
 
 ## Contact & Conversion
 
-- [Book a Demo](https://kaptea.vercel.app/demo): Schedule a 30-minute session with Alan or Robert to discuss your communications infrastructure
-- [Contact](https://kaptea.vercel.app/contact): Direct contact information for the Kaptea team
+- [Book a Demo](https://kaptea.io/demo): Schedule a 30-minute session with Alan or Robert to discuss your communications infrastructure
+- [Contact](https://kaptea.io/contact): Direct contact information for the Kaptea team
 
 ## Legal
 
-- [Privacy Policy](https://kaptea.vercel.app/privacy-policy): GDPR-compliant data handling, retention, and your rights as a data subject
-- [Cookie Policy](https://kaptea.vercel.app/cookies): Cookie categories, third-party disclosures, and opt-out options
-- [Terms of Service](https://kaptea.vercel.app/terms): B2B SaaS terms governing Kaptea platform access and service delivery
+- [Privacy Policy](https://kaptea.io/privacy-policy): GDPR-compliant data handling, retention, and your rights as a data subject
+- [Cookie Policy](https://kaptea.io/cookies): Cookie categories, third-party disclosures, and opt-out options
+- [Terms of Service](https://kaptea.io/terms): B2B SaaS terms governing Kaptea platform access and service delivery
