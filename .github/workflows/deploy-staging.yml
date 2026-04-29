@@ -12,9 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ie1-c8-1.anuhosting.net
           username: kaptea-staging@kaptea.io
           password: ${{ secrets.STAGING_SITE_FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
           server-dir: ./
+          dangerous-clean-slate: true
