@@ -4,6 +4,9 @@
    Colours aligned to Kaptea Brand Guidelines v2 (Figma).
    ───────────────────────────────────────────────────────────────────────── */
 
+/* Self-hosted fonts — no Google Fonts CDN, works behind corporate firewalls */
+@import url('/fonts/fonts.css');
+
 :root {
   --kaptea-red: #dc2727;
   --kaptea-red-hover: #c02222;
