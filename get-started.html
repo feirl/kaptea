@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started | Kaptea</title>
+  <meta name="description" content="Set up your Kaptea account in minutes. Tell us about your requirements and we will have your environment ready within hours." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://kaptea.io/get-started" />
+  <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    /* ─────────────────────────────────────────
+       Get Started — page-specific styles
+       Fonts and base resets from styles.css
+    ───────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #131521;
+      background: #fff;
+    }
+
+    /* ── Two-panel layout ── */
+    .gs-layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ── Left sidebar ── */
+    .gs-sidebar {
+      width: 360px;
+      min-width: 360px;
+      background: #131521;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 40px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    .gs-sidebar-logo {
+      display: block;
+      margin-bottom: 52px;
+    }
+
+    .gs-sidebar-logo img {
+      height: 30px;
+      width: auto;
+    }
+
+    .gs-sidebar-headline {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1.3;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .gs-sidebar-sub {
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      margin-bottom: 40px;
+    }
+
+    .gs-sidebar-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      flex: 1;
+    }
+
+    .gs-sidebar-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+    }
+
+    .gs-check-dot {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      background: rgba(220,39,39,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .gs-check-dot svg {
+      width: 10px;
+      height: 10px;
+      color: #dc2727;
+    }
+
+    .gs-sidebar-certs {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 36px;
+    }
+
+    .gs-sidebar-certs img {
+      height: 28px;
+      width: auto;
+      opacity: 0.5;
+      filter: brightness(0) invert(1);
+    }
+
+    /* ── Mobile logo bar ── */
+    .gs-topbar {
+      display: none;
+      padding: 18px 24px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .gs-topbar img {
+      height: 26px;
+      width: auto;
+    }
+
+    /* ── Main content area ── */
+    .gs-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ── Progress bar ── */
+    .gs-progress {
+      padding: 36px 64px 0;
+    }
+
+    .gs-progress-track {
+      height: 4px;
+      background: #f1f5f9;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .gs-progress-fill {
+      height: 100%;
+      background: #dc2727;
+      border-radius: 2px;
+      transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 12.5%;
+    }
+
+    .gs-progress-label {
+      margin-top: 10px;
+      font-size: 0.8125rem;
+      color: #94a3b8;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── Steps wrapper ── */
+    .gs-steps {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 64px 24px;
+      overflow: hidden;
+    }
+
+    /* ── Individual step ── */
+    .gs-step {
+      display: none;
+    }
+
+    .gs-step.active {
+      display: block;
+    }
+
+    .gs-step-question {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 1.875rem;
+      color: #131521;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .gs-step-hint {
+      font-size: 0.9375rem;
+      color: #64748b;
+      line-height: 1.55;
+      margin-bottom: 30px;
+    }
+
+    /* ── Error banner ── */
+    .gs-error-banner {
+      display: none;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-size: 0.875rem;
+      color: #dc2626;
+      margin-bottom: 18px;
+      max-width: 520px;
+    }
+
+    .gs-error-banner.show {
+      display: block;
+    }
+
+    /* ── Text field inputs ── */
+    .gs-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 480px;
+    }
+
+    .gs-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .gs-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .gs-field label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #374151;
+    }
+
+    .gs-field input {
+      padding: 13px 16px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      color: #131521;
+      background: #fff;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      outline: none;
+      width: 100%;
+      -webkit-appearance: none;
+    }
+
+    .gs-field input:focus {
+      border-color: #dc2727;
+      box-shadow: 0 0 0 3px rgba(220,39,39,0.1);
+    }
+
+    .gs-field input.has-error {
+      border-color: #ef4444;
+    }
+
+    .gs-field-error {
+      font-size: 0.8125rem;
+      color: #ef4444;
+      display: none;
+    }
+
+    .gs-field-error.show {
+      display: block;
+    }
+
+    /* ── Choice cards ── */
+    .gs-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      max-width: 540px;
+    }
+
+    .gs-cards.cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gs-cards.full-width {
+      max-width: 100%;
+    }
+
+    .gs-card {
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 15px 16px;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+      user-select: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      position: relative;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .gs-card:hover {
+      border-color: #dc2727;
+      background: rgba(220,39,39,0.02);
+    }
+
+    .gs-card.selected {
+      border-color: #dc2727;
+      background: rgba(220,39,39,0.04);
+    }
+
+    .gs-card-tick {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border-radius: 4px;
+      border: 1.5px solid #cbd5e1;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .gs-card.radio .gs-card-tick {
+      border-radius: 50%;
+    }
+
+    .gs-card.selected .gs-card-tick {
+      background: #dc2727;
+      border-color: #dc2727;
+    }
+
+    .gs-card-tick svg {
+      width: 10px;
+      height: 10px;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    .gs-card.selected .gs-card-tick svg {
+      opacity: 1;
+    }
+
+    .gs-card-body {
+      flex: 1;
+    }
+
+    .gs-card-label {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #131521;
+      line-height: 1.3;
+    }
+
+    .gs-card-desc {
+      font-size: 0.8125rem;
+      color: #64748b;
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+
+    /* Yes / No large cards */
+    .gs-cards.yesno {
+      grid-template-columns: 1fr 1fr;
+      max-width: 360px;
+    }
+
+    .gs-cards.yesno .gs-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 28px 20px;
+      gap: 10px;
+    }
+
+    .gs-cards.yesno .gs-card-tick {
+      display: none;
+    }
+
+    .gs-cards.yesno .gs-card-icon {
+      font-size: 1.75rem;
+      line-height: 1;
+    }
+
+    .gs-cards.yesno .gs-card-label {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    /* ── Navigation buttons ── */
+    .gs-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 64px 40px;
+    }
+
+    .gs-btn-back {
+      background: none;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      color: #94a3b8;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.15s;
+    }
+
+    .gs-btn-back:hover {
+      color: #64748b;
+    }
+
+    .gs-btn-back svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .gs-btn-back.hidden {
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .gs-btn-continue {
+      background: #dc2727;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s, transform 0.1s;
+      white-space: nowrap;
+    }
+
+    .gs-btn-continue:hover:not(:disabled) {
+      background: #b91c1c;
+    }
+
+    .gs-btn-continue:active:not(:disabled) {
+      transform: scale(0.98);
+    }
+
+    .gs-btn-continue svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    /* ── Confirmation screen ── */
+    .gs-confirm {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 64px;
+      flex: 1;
+    }
+
+    .gs-confirm.active {
+      display: flex;
+    }
+
+    .gs-confirm-ring {
+      width: 84px;
+      height: 84px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .gs-confirm-ring svg {
+      width: 42px;
+      height: 42px;
+      color: #dc2727;
+    }
+
+    .gs-confirm h1 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #131521;
+      margin-bottom: 14px;
+    }
+
+    .gs-confirm-body {
+      max-width: 440px;
+    }
+
+    .gs-confirm-body p {
+      font-size: 1rem;
+      color: #64748b;
+      line-height: 1.65;
+      margin-bottom: 6px;
+    }
+
+    .gs-confirm-body strong {
+      color: #131521;
+      font-weight: 500;
+    }
+
+    .gs-confirm-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .gs-confirm-cta {
+      background: #dc2727;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.15s;
+      display: inline-block;
+    }
+
+    .gs-confirm-cta:hover {
+      background: #b91c1c;
+    }
+
+    .gs-confirm-back-link {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .gs-confirm-back-link:hover {
+      color: #64748b;
+    }
+
+    /* ── Footer ── */
+    .gs-footer {
+      padding: 20px 64px;
+      border-top: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .gs-footer-copy {
+      font-size: 0.8125rem;
+      color: #cbd5e1;
+    }
+
+    .gs-footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .gs-footer-links a {
+      font-size: 0.8125rem;
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .gs-footer-links a:hover {
+      color: #64748b;
+    }
+
+    /* ── Mobile responsive ── */
+    @media (max-width: 960px) {
+      .gs-sidebar { display: none; }
+      .gs-topbar { display: flex; align-items: center; }
+
+      .gs-progress,
+      .gs-steps,
+      .gs-nav,
+      .gs-footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .gs-progress { padding-top: 24px; }
+      .gs-steps { padding-top: 36px; padding-bottom: 16px; }
+      .gs-nav { padding-bottom: 24px; }
+      .gs-step-question { font-size: 1.5rem; }
+      .gs-confirm { padding: 48px 24px; }
+      .gs-footer { flex-direction: column; gap: 8px; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      .gs-cards { grid-template-columns: 1fr; max-width: 100%; }
+      .gs-cards.yesno { grid-template-columns: 1fr 1fr; max-width: 100%; }
+      .gs-cards.cols-3 { grid-template-columns: 1fr 1fr; }
+      .gs-row { grid-template-columns: 1fr; }
+      .gs-step-question { font-size: 1.375rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="gs-layout">
+
+  <!-- ── Left sidebar ── -->
+  <aside class="gs-sidebar" aria-hidden="true">
+    <a href="/" class="gs-sidebar-logo">
+      <img src="/img/brand/kaptea-logo-white.svg" alt="Kaptea" />
+    </a>
+
+    <h2 class="gs-sidebar-headline">Enterprise communications, live within hours.</h2>
+    <p class="gs-sidebar-sub">Tell us what you need and we will have your Kaptea environment configured and ready to go.</p>
+
+    <ul class="gs-sidebar-features">
+      <li>
+        <span class="gs-check-dot">
+          <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg>
+        </span>
+        Compliant across 40+ regulated industries
+      </li>
+      <li>
+        <span class="gs-check-dot">
+          <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg>
+        </span>
+        99.99% uptime SLA with multi-carrier resilience
+      </li>
+      <li>
+        <span class="gs-check-dot">
+          <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg>
+        </span>
+        Dedicated infrastructure in EU, UK and US
+      </li>
+      <li>
+        <span class="gs-check-dot">
+          <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg>
+        </span>
+        ISO 27001 and Cyber Essentials Plus certified
+      </li>
+      <li>
+        <span class="gs-check-dot">
+          <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg>
+        </span>
+        Built on Twilio and Telnyx carrier infrastructure
+      </li>
+    </ul>
+
+    <div class="gs-sidebar-certs">
+      <img src="/img/certs/iso-27001.png" alt="ISO 27001" />
+      <img src="/img/certs/cyber-essentials-plus.png" alt="Cyber Essentials Plus" />
+      <img src="/img/certs/crest.png" alt="CREST" />
+    </div>
+  </aside>
+
+  <!-- ── Main panel ── -->
+  <main class="gs-main">
+
+    <!-- Mobile logo bar -->
+    <div class="gs-topbar">
+      <a href="/"><img src="/img/brand/kaptea-logo.svg" alt="Kaptea" /></a>
+    </div>
+
+    <!-- Progress -->
+    <div class="gs-progress" id="gsProgress">
+      <div class="gs-progress-track">
+        <div class="gs-progress-fill" id="progressFill"></div>
+      </div>
+      <p class="gs-progress-label" id="progressLabel">Step 1 of 8</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="gs-steps" id="gsSteps">
+
+      <!-- Step 1: Personal info -->
+      <div class="gs-step active" id="step-0">
+        <h1 class="gs-step-question">Let's start with the basics</h1>
+        <p class="gs-step-hint">We'll use these details to configure your account and send you setup information.</p>
+        <div class="gs-error-banner" id="err-0"></div>
+        <div class="gs-fields">
+          <div class="gs-row">
+            <div class="gs-field">
+              <label for="gs-firstname">First name</label>
+              <input type="text" id="gs-firstname" name="firstname" placeholder="Jane" autocomplete="given-name" />
+              <span class="gs-field-error" id="err-firstname">Please enter your first name.</span>
+            </div>
+            <div class="gs-field">
+              <label for="gs-lastname">Last name</label>
+              <input type="text" id="gs-lastname" name="lastname" placeholder="Smith" autocomplete="family-name" />
+              <span class="gs-field-error" id="err-lastname">Please enter your last name.</span>
+            </div>
+          </div>
+          <div class="gs-field">
+            <label for="gs-email">Work email</label>
+            <input type="email" id="gs-email" name="email" placeholder="jane@company.com" autocomplete="email" />
+            <span class="gs-field-error" id="err-email">Please enter a valid work email address.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Why signing up -->
+      <div class="gs-step" id="step-1">
+        <h1 class="gs-step-question">Why are you signing up?</h1>
+        <p class="gs-step-hint">This helps us tailor your experience from day one.</p>
+        <div class="gs-error-banner" id="err-1"></div>
+        <div class="gs-cards" role="radiogroup" aria-label="Reason for signing up">
+          <div class="gs-card radio" data-group="reason" data-value="company-considering" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">My company is considering Kaptea</span>
+              <span class="gs-card-desc">Evaluating for an enterprise rollout</span>
+            </span>
+          </div>
+          <div class="gs-card radio" data-group="reason" data-value="training-certification" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Training or certification</span>
+              <span class="gs-card-desc">For a role or professional qualification</span>
+            </span>
+          </div>
+          <div class="gs-card radio" data-group="reason" data-value="personal-learning" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Personal learning</span>
+              <span class="gs-card-desc">Exploring the platform independently</span>
+            </span>
+          </div>
+          <div class="gs-card radio" data-group="reason" data-value="student" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">I'm a student</span>
+              <span class="gs-card-desc">Academic or research purposes</span>
+            </span>
+          </div>
+          <div class="gs-card radio" data-group="reason" data-value="other" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Other</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Company info -->
+      <div class="gs-step" id="step-2">
+        <h1 class="gs-step-question">Tell us about your organisation</h1>
+        <p class="gs-step-hint">This helps us route your account to the right team.</p>
+        <div class="gs-error-banner" id="err-2"></div>
+        <div class="gs-fields">
+          <div class="gs-field">
+            <label for="gs-company">Company name</label>
+            <input type="text" id="gs-company" name="company" placeholder="Acme Financial Group" autocomplete="organization" />
+            <span class="gs-field-error" id="err-company">Please enter your company name.</span>
+          </div>
+          <div class="gs-field">
+            <label for="gs-jobtitle">Job title</label>
+            <input type="text" id="gs-jobtitle" name="jobtitle" placeholder="Head of Digital" autocomplete="organization-title" />
+            <span class="gs-field-error" id="err-jobtitle">Please enter your job title.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Channels -->
+      <div class="gs-step" id="step-3">
+        <h1 class="gs-step-question">Which channels do you require?</h1>
+        <p class="gs-step-hint">Select all that apply. You can always add more later.</p>
+        <div class="gs-error-banner" id="err-3"></div>
+        <div class="gs-cards cols-3 full-width" role="group" aria-label="Required channels">
+          <div class="gs-card" data-group="channels" data-value="sms-rcs" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">SMS / RCS</span>
+              <span class="gs-card-desc">Text and rich messaging</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="channels" data-value="email" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Email</span>
+              <span class="gs-card-desc">Transactional and marketing</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="channels" data-value="voice-ivr" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Voice / IVR</span>
+              <span class="gs-card-desc">Inbound and outbound calls</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="channels" data-value="whatsapp" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">WhatsApp</span>
+              <span class="gs-card-desc">Verified business messaging</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="channels" data-value="social-messaging" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Social Messaging</span>
+              <span class="gs-card-desc">Instagram, Messenger, X</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="channels" data-value="secure-video" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Secure Video</span>
+              <span class="gs-card-desc">Encrypted enterprise meetings</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5: Agentic AI -->
+      <div class="gs-step" id="step-4">
+        <h1 class="gs-step-question">Do you require Agentic Conversational AI?</h1>
+        <p class="gs-step-hint">Kaptea can orchestrate AI agents across your communication channels.</p>
+        <div class="gs-error-banner" id="err-4"></div>
+        <div class="gs-cards yesno" role="radiogroup" aria-label="Agentic AI requirement">
+          <div class="gs-card radio" data-group="ai_required" data-value="yes" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-icon">🤖</span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Yes</span>
+            </span>
+          </div>
+          <div class="gs-card radio" data-group="ai_required" data-value="no" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-icon">💬</span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Not right now</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6: Regions -->
+      <div class="gs-step" id="step-5">
+        <h1 class="gs-step-question">Where do you need a dedicated server instance?</h1>
+        <p class="gs-step-hint">Select all regions. Data stays within your chosen boundary.</p>
+        <div class="gs-error-banner" id="err-5"></div>
+        <div class="gs-cards" role="group" aria-label="Server regions">
+          <div class="gs-card" data-group="regions" data-value="eu" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">European Union</span>
+              <span class="gs-card-desc">GDPR-compliant EU hosting</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="regions" data-value="uk" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">United Kingdom</span>
+              <span class="gs-card-desc">UK GDPR and FCA-ready</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="regions" data-value="us" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">United States</span>
+              <span class="gs-card-desc">SOC 2-aligned US hosting</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="regions" data-value="other" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Other region</span>
+              <span class="gs-card-desc">We'll discuss options with you</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7: Use cases -->
+      <div class="gs-step" id="step-6">
+        <h1 class="gs-step-question">What will you use Kaptea for?</h1>
+        <p class="gs-step-hint">Select all that apply. This shapes how we configure your environment.</p>
+        <div class="gs-error-banner" id="err-6"></div>
+        <div class="gs-cards cols-3 full-width" role="group" aria-label="Use cases">
+          <div class="gs-card" data-group="usecases" data-value="customer-journey" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Customer journey orchestration</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="usecases" data-value="bulk-messaging" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Urgent bulk messaging</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="usecases" data-value="transactional" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Transactional communication</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="usecases" data-value="marketing" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Marketing messaging</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="usecases" data-value="contact-centre" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Contact centre workflows</span>
+            </span>
+          </div>
+          <div class="gs-card" data-group="usecases" data-value="other" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Other</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 8: CPaaS provider -->
+      <div class="gs-step" id="step-7">
+        <h1 class="gs-step-question">Who is your current CPaaS provider?</h1>
+        <p class="gs-step-hint">This helps us estimate your migration timeline and plan accordingly.</p>
+        <div class="gs-error-banner" id="err-7"></div>
+        <div class="gs-cards" role="radiogroup" aria-label="CPaaS provider">
+          <div class="gs-card radio" data-group="cpaas" data-value="twilio" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Twilio</span>
+            </span>
+          </div>
+          <div class="gs-card radio" data-group="cpaas" data-value="telnyx" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Telnyx</span>
+            </span>
+          </div>
+          <div class="gs-card radio" data-group="cpaas" data-value="other" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Other provider</span>
+            </span>
+          </div>
+          <div class="gs-card radio" data-group="cpaas" data-value="help-me-decide" tabindex="0" role="radio" aria-checked="false">
+            <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
+            <span class="gs-card-body">
+              <span class="gs-card-label">Help me decide</span>
+              <span class="gs-card-desc">Our team will walk you through the options</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /gs-steps -->
+
+    <!-- Confirmation screen -->
+    <div class="gs-confirm" id="gsConfirm">
+      <div class="gs-confirm-ring">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h1 id="confirmHeading">You're in.</h1>
+      <div class="gs-confirm-body">
+        <p>Your Kaptea environment is being configured now. Setup details will arrive at <strong id="confirmEmail"></strong> within hours.</p>
+        <p>A member of our team will also be in touch by phone shortly to walk you through your dashboard and answer any questions.</p>
+      </div>
+      <div class="gs-confirm-actions">
+        <a href="/demo" class="gs-confirm-cta">Schedule an intro call</a>
+        <a href="/" class="gs-confirm-back-link">Return to kaptea.io</a>
+      </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="gs-nav" id="gsNav">
+      <button class="gs-btn-back hidden" id="btnBack" type="button" onclick="goBack()">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="10 3 5 8 10 13"/>
+        </svg>
+        Back
+      </button>
+      <button class="gs-btn-continue" id="btnContinue" type="button" onclick="goForward()">
+        Continue
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 3 11 8 6 13"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gs-footer">
+      <span class="gs-footer-copy">&copy; 2025 Kaptea. All rights reserved.</span>
+      <nav class="gs-footer-links" aria-label="Legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/cookie-policy">Cookie Policy</a>
+      </nav>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  /* ─────────────────────────────────────────────────────────────────
+     Kaptea Get Started flow
+     ─────────────────────────────────────────────────────────────────
+     HubSpot configuration — fill these in once you have created
+     the form in HubSpot (Settings > Marketing > Forms > New form).
+     The submission will also work without them (graceful fallback).
+  ───────────────────────────────────────────────────────────────── */
+  const HUBSPOT_PORTAL_ID = '';   // TODO: your HubSpot portal ID e.g. '12345678'
+  const HUBSPOT_FORM_GUID  = '';  // TODO: your HubSpot form GUID  e.g. 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+
+  /* ── State ── */
+  const TOTAL_STEPS = 8;
+  let currentStep = 0;
+  let isAnimating  = false;
+  const formData   = {};
+
+  /* ── Step validation config ── */
+  const STEP_VALIDATORS = [
+    validatePersonal,       // 0
+    validateSingleChoice,   // 1
+    validateCompany,        // 2
+    validateMultiChoice,    // 3
+    validateSingleChoice,   // 4
+    validateMultiChoice,    // 5
+    validateMultiChoice,    // 6
+    validateSingleChoice,   // 7
+  ];
+
+  /* ── On load ── */
+  updateProgress();
+  bindCardClicks();
+  bindKeyboardNav();
+
+  /* ─── Card interaction ─── */
+  function bindCardClicks() {
+    document.querySelectorAll('.gs-card').forEach(function(card) {
+      card.addEventListener('click', function() { toggleCard(card); });
+    });
+  }
+
+  function toggleCard(card) {
+    var group = card.dataset.group;
+    var isRadio = card.classList.contains('radio');
+
+    if (isRadio) {
+      // Deselect all in group
+      document.querySelectorAll('[data-group="' + group + '"]').forEach(function(c) {
+        c.classList.remove('selected');
+        c.setAttribute('aria-checked', 'false');
+      });
+      // Select this one
+      card.classList.add('selected');
+      card.setAttribute('aria-checked', 'true');
+      // Store value
+      formData[group] = card.dataset.value;
+    } else {
+      // Toggle this card
+      var wasSelected = card.classList.contains('selected');
+      card.classList.toggle('selected', !wasSelected);
+      card.setAttribute('aria-checked', String(!wasSelected));
+
+      // Collect all selected in group into array
+      var selected = [];
+      document.querySelectorAll('[data-group="' + group + '"].selected').forEach(function(c) {
+        selected.push(c.dataset.value);
+      });
+      formData[group] = selected;
+    }
+
+    // Clear error banner when a selection is made
+    hideError(currentStep);
+  }
+
+  /* ── Keyboard navigation for cards ── */
+  function bindKeyboardNav() {
+    document.querySelectorAll('.gs-card').forEach(function(card) {
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleCard(card);
+        }
+      });
+    });
+  }
+
+  /* ─── Navigation ─── */
+  function goForward() {
+    if (isAnimating) return;
+    if (!validateStep(currentStep)) return;
+    collectTextInputs(currentStep);
+
+    if (currentStep === TOTAL_STEPS - 1) {
+      submitForm();
+      return;
+    }
+    animateTo(currentStep + 1, 'forward');
+  }
+
+  function goBack() {
+    if (isAnimating || currentStep === 0) return;
+    animateTo(currentStep - 1, 'back');
+  }
+
+  function animateTo(newStep, direction) {
+    isAnimating = true;
+
+    var fromEl = document.getElementById('step-' + currentStep);
+    var toEl   = document.getElementById('step-' + newStep);
+
+    var exitX   = direction === 'forward' ? '-24px' : '24px';
+    var enterX  = direction === 'forward' ?  '24px' : '-24px';
+
+    // Fade out current
+    fromEl.style.transition = 'opacity 0.22s ease, transform 0.22s ease';
+    fromEl.style.opacity    = '0';
+    fromEl.style.transform  = 'translateX(' + exitX + ')';
+
+    setTimeout(function() {
+      fromEl.classList.remove('active');
+      fromEl.style.transition = '';
+      fromEl.style.opacity    = '';
+      fromEl.style.transform  = '';
+
+      currentStep = newStep;
+      updateProgress();
+
+      // Position new step off-screen
+      toEl.style.transition = 'none';
+      toEl.style.opacity    = '0';
+      toEl.style.transform  = 'translateX(' + enterX + ')';
+      toEl.classList.add('active');
+
+      // Force reflow
+      void toEl.offsetWidth;
+
+      // Slide in
+      toEl.style.transition = 'opacity 0.28s ease, transform 0.28s ease';
+      toEl.style.opacity    = '1';
+      toEl.style.transform  = 'translateX(0)';
+
+      setTimeout(function() {
+        toEl.style.transition = '';
+        toEl.style.opacity    = '';
+        toEl.style.transform  = '';
+        isAnimating = false;
+
+        // Focus first interactive element in new step
+        var firstInput = toEl.querySelector('input, [tabindex="0"]');
+        if (firstInput) firstInput.focus();
+      }, 280);
+
+      // Update UI
+      document.getElementById('btnBack').classList.toggle('hidden', currentStep === 0);
+      document.getElementById('btnContinue').textContent = '';
+
+      if (currentStep === TOTAL_STEPS - 1) {
+        document.getElementById('btnContinue').innerHTML =
+          'Get started <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><polyline points="6 3 11 8 6 13"/></svg>';
+      } else {
+        document.getElementById('btnContinue').innerHTML =
+          'Continue <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><polyline points="6 3 11 8 6 13"/></svg>';
+      }
+
+    }, 220);
+  }
+
+  /* ─── Progress ─── */
+  function updateProgress() {
+    var pct = ((currentStep + 1) / TOTAL_STEPS) * 100;
+    document.getElementById('progressFill').style.width  = pct + '%';
+    document.getElementById('progressLabel').textContent = 'Step ' + (currentStep + 1) + ' of ' + TOTAL_STEPS;
+  }
+
+  /* ─── Data collection ─── */
+  function collectTextInputs(stepIndex) {
+    if (stepIndex === 0) {
+      formData.firstname = document.getElementById('gs-firstname').value.trim();
+      formData.lastname  = document.getElementById('gs-lastname').value.trim();
+      formData.email     = document.getElementById('gs-email').value.trim();
+    }
+    if (stepIndex === 2) {
+      formData.company  = document.getElementById('gs-company').value.trim();
+      formData.jobtitle = document.getElementById('gs-jobtitle').value.trim();
+    }
+  }
+
+  /* ─── Validation ─── */
+  function validateStep(idx) {
+    return STEP_VALIDATORS[idx](idx);
+  }
+
+  function validatePersonal(idx) {
+    var ok = true;
+    var firstname = document.getElementById('gs-firstname').value.trim();
+    var lastname  = document.getElementById('gs-lastname').value.trim();
+    var email     = document.getElementById('gs-email').value.trim();
+
+    setFieldError('gs-firstname', 'err-firstname', !firstname);
+    setFieldError('gs-lastname',  'err-lastname',  !lastname);
+
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    setFieldError('gs-email', 'err-email', !emailOk);
+
+    if (!firstname || !lastname || !emailOk) {
+      ok = false;
+    }
+
+    return ok;
+  }
+
+  function validateCompany(idx) {
+    var ok = true;
+    var company  = document.getElementById('gs-company').value.trim();
+    var jobtitle = document.getElementById('gs-jobtitle').value.trim();
+
+    setFieldError('gs-company',  'err-company',  !company);
+    setFieldError('gs-jobtitle', 'err-jobtitle', !jobtitle);
+
+    if (!company || !jobtitle) ok = false;
+    return ok;
+  }
+
+  function validateSingleChoice(idx) {
+    var groups = { 1: 'reason', 4: 'ai_required', 7: 'cpaas' };
+    var group  = groups[idx];
+    var value  = formData[group];
+
+    if (!value) {
+      showError(idx, 'Please select an option to continue.');
+      return false;
+    }
+    hideError(idx);
+    return true;
+  }
+
+  function validateMultiChoice(idx) {
+    var groups = { 3: 'channels', 5: 'regions', 6: 'usecases' };
+    var group  = groups[idx];
+    var value  = formData[group];
+
+    if (!value || value.length === 0) {
+      showError(idx, 'Please select at least one option to continue.');
+      return false;
+    }
+    hideError(idx);
+    return true;
+  }
+
+  function setFieldError(inputId, errId, hasError) {
+    document.getElementById(inputId).classList.toggle('has-error', hasError);
+    document.getElementById(errId).classList.toggle('show', hasError);
+  }
+
+  function showError(stepIdx, msg) {
+    var el = document.getElementById('err-' + stepIdx);
+    if (el) { el.textContent = msg; el.classList.add('show'); }
+  }
+
+  function hideError(stepIdx) {
+    var el = document.getElementById('err-' + stepIdx);
+    if (el) el.classList.remove('show');
+  }
+
+  /* ─── Submission ─── */
+  function submitForm() {
+    collectTextInputs(currentStep);
+
+    var btn = document.getElementById('btnContinue');
+    btn.disabled     = true;
+    btn.innerHTML    = 'Setting up your account...';
+
+    var payload = buildHubSpotPayload();
+
+    function showConfirmation() {
+      document.getElementById('gsProgress').style.display = 'none';
+      document.getElementById('gsSteps').style.display    = 'none';
+      document.getElementById('gsNav').style.display      = 'none';
+      document.getElementById('gsConfirm').classList.add('active');
+
+      var name = formData.firstname ? ', ' + formData.firstname : '';
+      document.getElementById('confirmHeading').textContent = 'You\'re in' + name + '.';
+      document.getElementById('confirmEmail').textContent   = formData.email || 'your inbox';
+    }
+
+    if (HUBSPOT_PORTAL_ID && HUBSPOT_FORM_GUID) {
+      var url = 'https://api.hsforms.com/submissions/v3/integration/submit/' +
+                HUBSPOT_PORTAL_ID + '/' + HUBSPOT_FORM_GUID;
+
+      fetch(url, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload)
+      })
+      .then(function(res) {
+        showConfirmation();
+      })
+      .catch(function(err) {
+        console.warn('HubSpot submission failed, showing confirmation anyway:', err);
+        showConfirmation();
+      });
+    } else {
+      // No HubSpot config yet — log and show confirmation
+      console.log('Form data collected:', formData);
+      showConfirmation();
+    }
+  }
+
+  function buildHubSpotPayload() {
+    var fields = [
+      { name: 'firstname', value: formData.firstname || '' },
+      { name: 'lastname',  value: formData.lastname  || '' },
+      { name: 'email',     value: formData.email     || '' },
+      { name: 'company',   value: formData.company   || '' },
+      { name: 'jobtitle',  value: formData.jobtitle  || '' },
+      { name: 'kaptea_signup_reason',   value: formData.reason       || '' },
+      { name: 'kaptea_channels',        value: arrayToString(formData.channels)  },
+      { name: 'kaptea_agentic_ai',      value: formData.ai_required  || '' },
+      { name: 'kaptea_server_regions',  value: arrayToString(formData.regions)   },
+      { name: 'kaptea_use_cases',       value: arrayToString(formData.usecases)  },
+      { name: 'kaptea_cpaas_provider',  value: formData.cpaas        || '' },
+    ];
+
+    return {
+      fields: fields,
+      context: {
+        pageUri:  'https://kaptea.io/get-started',
+        pageName: 'Get Started'
+      }
+    };
+  }
+
+  function arrayToString(arr) {
+    if (!arr) return '';
+    if (Array.isArray(arr)) return arr.join('; ');
+    return String(arr);
+  }
+
+  /* ── Clear field errors on typing ── */
+  ['gs-firstname','gs-lastname','gs-email','gs-company','gs-jobtitle'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('input', function() {
+        el.classList.remove('has-error');
+        var errId = 'err-' + id.replace('gs-', '');
+        var errEl = document.getElementById(errId);
+        if (errEl) errEl.classList.remove('show');
+      });
+      el.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') goForward();
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
