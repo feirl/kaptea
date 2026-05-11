@@ -723,6 +723,11 @@
             <input type="email" id="gs-email" name="email" placeholder="jane@company.com" autocomplete="email" />
             <span class="gs-field-error" id="err-email">Please enter a valid work email address.</span>
           </div>
+          <div class="gs-field">
+            <label for="gs-phone">Phone number</label>
+            <input type="tel" id="gs-phone" name="phone" placeholder="+44 7700 900000" autocomplete="tel" />
+            <span class="gs-field-error" id="err-phone">Please enter your phone number.</span>
+          </div>
         </div>
       </div>
 
@@ -847,14 +852,12 @@
         <div class="gs-cards yesno" role="radiogroup" aria-label="Agentic AI requirement">
           <div class="gs-card radio" data-group="ai_required" data-value="yes" tabindex="0" role="radio" aria-checked="false">
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
-            <span class="gs-card-icon">🤖</span>
             <span class="gs-card-body">
               <span class="gs-card-label">Yes</span>
             </span>
           </div>
           <div class="gs-card radio" data-group="ai_required" data-value="no" tabindex="0" role="radio" aria-checked="false">
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
-            <span class="gs-card-icon">💬</span>
             <span class="gs-card-body">
               <span class="gs-card-label">Not right now</span>
             </span>
@@ -1207,6 +1210,7 @@
       formData.firstname = document.getElementById('gs-firstname').value.trim();
       formData.lastname  = document.getElementById('gs-lastname').value.trim();
       formData.email     = document.getElementById('gs-email').value.trim();
+      formData.phone     = document.getElementById('gs-phone').value.trim();
     }
     if (stepIndex === 2) {
       formData.company  = document.getElementById('gs-company').value.trim();
@@ -1224,6 +1228,7 @@
     var firstname = document.getElementById('gs-firstname').value.trim();
     var lastname  = document.getElementById('gs-lastname').value.trim();
     var email     = document.getElementById('gs-email').value.trim();
+    var phone     = document.getElementById('gs-phone').value.trim();
 
     setFieldError('gs-firstname', 'err-firstname', !firstname);
     setFieldError('gs-lastname',  'err-lastname',  !lastname);
@@ -1231,7 +1236,9 @@
     var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     setFieldError('gs-email', 'err-email', !emailOk);
 
-    if (!firstname || !lastname || !emailOk) {
+    setFieldError('gs-phone', 'err-phone', !phone);
+
+    if (!firstname || !lastname || !emailOk || !phone) {
       ok = false;
     }
 
@@ -1340,6 +1347,7 @@
       { name: 'firstname', value: formData.firstname || '' },
       { name: 'lastname',  value: formData.lastname  || '' },
       { name: 'email',     value: formData.email     || '' },
+      { name: 'phone',     value: formData.phone     || '' },
       { name: 'company',   value: formData.company   || '' },
       { name: 'jobtitle',  value: formData.jobtitle  || '' },
       { name: 'kaptea_signup_reason',   value: formData.reason       || '' },
@@ -1366,7 +1374,7 @@
   }
 
   /* ── Clear field errors on typing ── */
-  ['gs-firstname','gs-lastname','gs-email','gs-company','gs-jobtitle'].forEach(function(id) {
+  ['gs-firstname','gs-lastname','gs-email','gs-phone','gs-company','gs-jobtitle'].forEach(function(id) {
     var el = document.getElementById(id);
     if (el) {
       el.addEventListener('input', function() {
