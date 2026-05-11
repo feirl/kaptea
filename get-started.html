@@ -466,7 +466,7 @@
       box-shadow: 0 8px 28px rgba(15,23,42,0.12), 0 2px 8px rgba(15,23,42,0.06);
       max-height: 320px;
       overflow-y: auto;
-      z-index: 200;
+      z-index: 9999;
       display: none;
     }
 
@@ -1424,8 +1424,14 @@
     var panel   = document.getElementById('agentPanel');
     if (!trigger || !panel) return;
     var rect      = trigger.getBoundingClientRect();
-    var available = window.innerHeight - rect.bottom - 24;
-    panel.style.maxHeight = Math.max(180, Math.min(320, available)) + 'px';
+    var available = window.innerHeight - rect.bottom - 12;
+    // Use fixed positioning so the panel escapes any parent stacking context
+    panel.style.position  = 'fixed';
+    panel.style.top       = (rect.bottom + 4) + 'px';
+    panel.style.left      = rect.left + 'px';
+    panel.style.width     = rect.width + 'px';
+    panel.style.right     = '';
+    panel.style.maxHeight = Math.max(180, Math.min(340, available)) + 'px';
     trigger.classList.add('open');
     trigger.setAttribute('aria-expanded', 'true');
     panel.classList.add('open');
@@ -1438,6 +1444,7 @@
     trigger.classList.remove('open');
     trigger.setAttribute('aria-expanded', 'false');
     panel.classList.remove('open');
+    panel.style.position = panel.style.top = panel.style.left = panel.style.width = panel.style.maxHeight = '';
   }
 
   function toggleAgent(item) {
