@@ -190,10 +190,6 @@
       padding: 28px 60px 0;
     }
 
-    .gs-content.top-align {
-      justify-content: flex-start;
-      padding-top: 48px;
-    }
 
     /* ── Steps ── */
     .gs-step { display: none; }
@@ -381,7 +377,7 @@
     ══════════════════════════════════════ */
     .gs-ms {
       position: relative;
-      max-width: 520px;
+      width: 100%;
     }
 
     .gs-ms-trigger {
@@ -1184,8 +1180,7 @@
       }, 250);
 
       document.getElementById('btnBack').classList.toggle('hidden', currentStep === 0);
-      document.getElementById('gsNav').classList.toggle('fields-step', currentStep === TOTAL_STEPS - 1 || currentStep === 2);
-      document.getElementById('gsContent').classList.toggle('top-align', currentStep === 2);
+      document.getElementById('gsNav').classList.toggle('fields-step', currentStep === TOTAL_STEPS - 1);
 
       var btn = document.getElementById('btnContinue');
       btn.innerHTML = currentStep === TOTAL_STEPS - 1
