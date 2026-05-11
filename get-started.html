@@ -403,7 +403,7 @@
       align-items: center;
       justify-content: space-between;
       margin-top: 28px;
-      max-width: 680px;
+      width: 100%;
     }
 
     .gs-btn-back {
@@ -885,7 +885,6 @@
       <div class="gs-confirm-header">
         <h1 id="confirmHeading">You're in.</h1>
         <p>Your Kaptea environment is being configured. Book a 15-minute intro call and we'll walk you through your setup.</p>
-        <div class="gs-config-tags" id="confirmTags"></div>
       </div>
       <div class="gs-calendly-wrap">
         <iframe id="calendlyFrame" src="" title="Schedule an intro call" loading="lazy" allow="camera; microphone"></iframe>
@@ -1123,7 +1122,6 @@
       document.getElementById('gsConfirm').classList.add('active');
       var name = formData.firstname || '';
       document.getElementById('confirmHeading').textContent = name ? 'Book your onboarding, ' + name + '.' : 'Book your onboarding.';
-      buildTags();
       loadCalendly();
     }
 
