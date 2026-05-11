@@ -256,12 +256,11 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      max-width: 680px;
+      width: 100%;
     }
 
     .gs-cards.cols-2 {
       grid-template-columns: repeat(2, 1fr);
-      max-width: 460px;
     }
 
     .gs-card {
@@ -733,7 +732,7 @@
         <h1 class="gs-step-question">What will you use Kaptea for?</h1>
         <p class="gs-step-hint">Select all that apply. This shapes how we configure your environment.</p>
         <div class="gs-error-banner" id="err-1"></div>
-        <div class="gs-cards" role="group" aria-label="Use cases">
+        <div class="gs-cards cols-2" role="group" aria-label="Use cases">
           <div class="gs-card" data-group="usecases" data-value="Customer journey orchestration" tabindex="0" role="checkbox" aria-checked="false">
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
             <span class="gs-card-body"><span class="gs-card-label">Customer journey orchestration</span></span>
@@ -820,7 +819,6 @@
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
             <span class="gs-card-body">
               <span class="gs-card-label">Help me decide</span>
-              <span class="gs-card-desc">Our team will walk you through the options</span>
             </span>
           </div>
         </div>
@@ -828,7 +826,7 @@
 
       <!-- Step 5: Personal details -->
       <div class="gs-step" id="step-4">
-        <h1 class="gs-step-question">Almost there. Who should we set this up for?</h1>
+        <h1 class="gs-step-question">Your access details</h1>
         <p class="gs-step-hint">Your environment is being prepared. We just need to know where to send your access details.</p>
         <div class="gs-error-banner" id="err-4"></div>
         <div class="gs-fields">
@@ -853,7 +851,7 @@
             <div class="gs-field">
               <label for="gs-phone">Phone number</label>
               <input type="tel" id="gs-phone" placeholder="+44 7700 900000" autocomplete="tel" />
-              <span class="gs-field-error" id="err-phone">Please enter your phone number.</span>
+              <span class="gs-field-error" id="err-phone">Please enter a valid phone number.</span>
             </div>
           </div>
           <div class="gs-field">
@@ -1078,9 +1076,10 @@
     setFieldError('gs-lastname',  'err-lastname',  !ln);
     var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em);
     setFieldError('gs-email',   'err-email',   !emailOk);
-    setFieldError('gs-phone',   'err-phone',   !ph);
+    var phoneOk = ph.length >= 7 && /\d{5,}/.test(ph.replace(/[\s\-\+\(\)]/g, ''));
+    setFieldError('gs-phone',   'err-phone',   !phoneOk);
     setFieldError('gs-company', 'err-company', !co);
-    return !!(fn && ln && emailOk && ph && co);
+    return !!(fn && ln && emailOk && phoneOk && co);
   }
 
   function setFieldError(inputId, errId, hasError) {
@@ -1123,7 +1122,7 @@
       document.getElementById('gsContent').style.display  = 'none';
       document.getElementById('gsConfirm').classList.add('active');
       var name = formData.firstname || '';
-      document.getElementById('confirmHeading').textContent = name ? 'You\'re in, ' + name + '.' : 'You\'re in.';
+      document.getElementById('confirmHeading').textContent = name ? 'Book your onboarding, ' + name + '.' : 'Book your onboarding.';
       buildTags();
       loadCalendly();
     }
