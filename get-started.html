@@ -382,6 +382,10 @@
       width: 100%;
     }
 
+    .gs-nav.fields-step {
+      max-width: 520px;
+    }
+
     .gs-btn-back {
       background: none;
       border: none;
@@ -525,7 +529,12 @@
 
     .gs-footer-copy { font-size: 0.8rem; color: #b0bbc9; }
 
-    .gs-footer-links { display: flex; align-items: center; gap: 20px; }
+    .gs-footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #eef2f6;
+    }
 
     .gs-footer-links a {
       font-size: 0.8rem;
@@ -981,6 +990,7 @@
       }, 250);
 
       document.getElementById('btnBack').classList.toggle('hidden', currentStep === 0);
+      document.getElementById('gsNav').classList.toggle('fields-step', currentStep === TOTAL_STEPS - 1);
 
       var btn = document.getElementById('btnContinue');
       btn.innerHTML = currentStep === TOTAL_STEPS - 1
