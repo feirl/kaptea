@@ -1,0 +1,216 @@
+# Kaptea — Full LLM Context Document
+
+> Kaptea builds compliance-first enterprise communications infrastructure for regulated industries, serving financial services, healthcare, utilities, and public sector organisations across Ireland, the UK, and Europe.
+
+---
+
+## Company Overview
+
+**Full legal name:** Kaptea Limited
+**Headquarters:** Dublin, Ireland
+**Markets served:** Ireland, United Kingdom, European Union, United States
+**Founded:** 2017
+**Website:** https://kaptea.io
+**Developer docs:** https://developers.pronto-360.com
+
+Kaptea is a Twilio Gold Consulting Partner and Twilio AI Partner. The company designs, builds, and operates omnichannel communications infrastructure for regulated enterprises where reliability, security, and regulatory compliance are non-negotiable requirements.
+
+Key credentials:
+- ISO 27001 certified (annually audited)
+- Cyber Essentials Plus certified
+- CREST accredited
+- GDPR-compliant data processor with EU, UK, and US data residency options
+- SOC 2-compliant infrastructure
+
+---
+
+## Platform: Pronto
+
+Pronto is Kaptea's unified omnichannel communications platform. It is a dedicated-instance SaaS product, not a shared-tenancy system. Each enterprise customer receives their own isolated deployment, provisioned in days.
+
+### Channels
+
+| Channel | Features |
+|---------|----------|
+| SMS | Two-way messaging, 99.5% delivery SLA, compliance archiving, branded sender, template governance |
+| RCS | Rich card messaging, branded sender, read receipts, interactive buttons |
+| WhatsApp Business | Regulated-industry compliant, full archiving, conversation intelligence |
+| Voice & IVR | Programmable IVR, branded calling, live agent routing, surge-proof architecture |
+| Email | Transactional and campaign, compliance controls, delivery diagnostics |
+| Secure Video | Encrypted video sessions for regulated conversations |
+| Social Messaging | Facebook, Instagram, Twitter/X managed from a single agent interface |
+
+### Core Platform Capabilities
+
+**Omni-Channel Communications**
+Single agent interface connecting all channels. Full conversation history across SMS, WhatsApp, voice, email, and social. Real-time transfer between channels without losing context.
+
+**Conversational AI**
+AI assistant builder for regulated enterprises. Master-prompt-governed voice and messaging agents:
+- Agent configuration: master prompt, model, temperature controls
+- Voice: ElevenLabs, Google, or AWS Polly TTS; Deepgram Nova-3 STT; interruption rules
+- Tools: function calling into Pronto, CRM systems, or external webhooks
+- Data Capture: structured field extraction from conversations
+- Knowledge: RAG retrieval from URLs, documents, and markdown files
+- Escalation: sentiment threshold and keyword triggers routing to live agent inbox
+- Conversation Intelligence: sentiment scoring, auto-summary, PII auto-redaction, custom operators
+- Pre-built agent templates: Appointment Scheduling, Customer Service and Support, Information Collector, Lead Qualifier, Surveys and Feedback
+
+**Automations and Workflow**
+Visual workflow builder with event triggers from any external system, conditional branching, and end-to-end journey orchestration. Supports multi-step automation with approval gates, human-in-the-loop checkpoints, and time-based delays. Marketing, operations, and engineering teams share the same canvas.
+
+**Control and Governance**
+Role-based access control (RBAC) with SSO support. Division and template governance for multi-team and multi-brand deployments. Per-message audit trail with regulator-ready export. Data retention controls with configurable archiving.
+
+**Delivery and Resilience**
+Cross-channel failover (email to SMS to branded call). Real-time delivery diagnostics. Surge-proof routing for peak and emergency traffic. 99.5% message delivery SLA across all channels.
+
+**Integration and API Framework**
+Two-way CRM synchronisation (Salesforce, Microsoft Dynamics 365, HubSpot, Zendesk). Event-driven triggers from any system. Open REST APIs and webhook subscriptions. Dual-payload API enrichment for journey personalisation.
+
+**Deployment and Infrastructure**
+Dedicated instance per customer — no shared tenancy. Cloud-managed on AWS. Customer choice of EU (Dublin), UK (London), or US (Virginia) data residency. Provisioned in days.
+
+---
+
+## Carrier Partners
+
+**Twilio** (primary) — Kaptea is a Twilio Gold Consulting Partner and AI Partner. Pronto fully operationalises Twilio Programmable Messaging, Voice, Flex, Verify, and WhatsApp.
+
+**Telnyx** — Alternative carrier for customers requiring carrier diversity or specific routing requirements.
+
+Additional carriers available via the Integration and API Framework.
+
+---
+
+## Solutions by Use Case
+
+### Customer Journey Orchestration
+End-to-end workflow engine for customer journeys spanning multiple channels, teams, and systems. Dual-payload API enrichment for personalisation at scale. Centralised template management with divisional governance. Live conversation intelligence with sentiment monitoring and live agent escalation. Multi-channel dispatch: SMS, RCS, WhatsApp, Email, Voice.
+
+**Target buyer:** Head of Customer Experience, VP Operations, CTO at regulated enterprise (financial services, utilities, healthcare, public sector)
+
+### Urgent Messaging and Recall
+CSV-upload mass dispatch with automated multi-channel escalation (email to SMS to branded call). Branded calling lifts pickup rates 30 to 50 percent over unbranded numbers. Per-message regulator-ready audit trail. Built-in workflows for warranty recall, drug recall, and time-critical regulatory communications.
+
+**Regulatory coverage:** FCA, MHRA, EMA, FDA-aware compliance workflows
+
+### Transactional Communication
+Orchestration layer placed above existing transactional infrastructure (Twilio, SendGrid, equivalent). Adds: drag-and-drop template management, ad-hoc multi-channel campaigns, sub-account billing granularity, centralised compliance with distributed local execution, and single audit trail across all channels.
+
+---
+
+## Industries
+
+### Financial Services
+FCA and MiFID II compliant communications. Use cases: fraud event journeys, urgent regulatory notifications, transactional alerts, contact centre orchestration. Clients include banks, insurance companies, asset managers, and fintech platforms.
+
+### Healthcare
+GDPR-compliant patient communications for NHS, HSE, and private healthcare providers. Use cases: patient pathway journeys, drug recall dispatch, appointment and prescription communications, MHRA and FDA compliance workflows.
+
+### Utilities and Energy
+Surge-capable communications for outage management, CRU and Ofgem compliance, meter and billing notifications, IVR routing for peak demand. Public safety messaging capability.
+
+### Public Sector
+Secure citizen communications for central government, local authorities, and public bodies. Divisional governance for multi-department deployments. Audit-ready messaging with GDPR controls. Emergency alert capability.
+
+### Travel and Transport
+Real-time passenger communications and disruption management. Use cases: disruption rebook journeys, mass disruption alerts, booking and gate update notifications, logistics messaging.
+
+### Retail, Ecommerce and Automotive
+Order and dispatch communications, peak event surge handling, distributed store and dealer communications, vehicle warranty and product recall workflows.
+
+---
+
+## Pricing
+
+Kaptea Pronto is available from $1,500 per month (approximately 1,200 GBP per month).
+
+This covers:
+- Dedicated platform instance
+- Up to 1 million messages per month (channel-dependent)
+- All governance and compliance features
+- Implementation support
+
+Carrier usage (Twilio, Telnyx) is billed separately at standard carrier rates. Customers bring their own carrier account or Kaptea can help establish one.
+
+**Full pricing details:** https://kaptea.io/pricing
+
+---
+
+## Technical Integration
+
+- REST API: https://developers.pronto-360.com
+- Authentication: API key and OAuth 2.0
+- Webhooks: inbound and delivery event subscriptions
+- CRM connectors: Salesforce, Microsoft Dynamics 365, HubSpot, Zendesk (native)
+- Custom connectors: via webhook and API framework
+- Data formats: JSON
+- SLA: 99.5% message delivery, 99.9% platform uptime
+
+---
+
+## Notable Deployments
+
+**HSE COVID-19 Contact Tracing (Ireland)**
+National-scale communications platform for Ireland's Health Service Executive during the COVID-19 pandemic. 16 distinct SMS notification flows on Twilio integrated with Microsoft Dynamics 365 case management. 6.9 million messages delivered to the population of Ireland. Daily protocol changes shipped within hours.
+
+**An Post (Ireland's national postal service)**
+National postal service SMS and customer notification infrastructure, plus WhatsApp Business integration for parcel delivery notifications.
+
+**Caledonian Sleeper (Scotland's overnight rail service)**
+Mission-critical passenger communications requiring 3am-grade reliability. Disruption alerts, booking confirmations, and real-time passenger updates.
+
+**Tickmill (global online trading platform)**
+Twilio Flex contact centre deployment achieving 100% call-recording compliance after replacing CloudTalk. Full MiFID II audit capability.
+
+**Tomo Networks (US mortgage lender)**
+Contact centre on Twilio Flex with four channels (voice, SMS, email, webchat) deployed in 8 weeks, scaled to 35 agents serving over a quarter of the US market.
+
+**FoodCloud (Irish food redistribution charity)**
+Cloud contact centre deployed during the pandemic with custom dual-CRM API spanning legacy and Salesforce systems. Enables 8,000+ tonnes of surplus food redistribution.
+
+**Quandoo (global restaurant reservations)**
+Restaurant reservation IVR deployed globally for over five years. 10/10 NPS from the commercial director.
+
+**eFlow (Irish tolling authority)**
+Automated billing and customer communications for Ireland's motorway tolling system.
+
+**Counselling Platform (name redacted)**
+Contact centre scaled from 12 to 120+ agents across four countries under crisis conditions.
+
+---
+
+## Leadership
+
+**Alan McNab** — CEO and co-founder. Enterprise communications, SaaS, and regulated industries.
+**Robert Whelan** — CTO and co-founder. Platform architecture, Twilio partnerships, and enterprise delivery.
+
+Combined leadership experience: 40+ years in enterprise communications.
+
+---
+
+## Contact
+
+- **Demo booking:** https://kaptea.io/demo
+- **General contact:** https://kaptea.io/contact
+- **Email:** Available via https://kaptea.io/contact
+
+---
+
+## Links
+
+- Homepage: https://kaptea.io
+- Pronto platform: https://kaptea.io/pronto
+- Pricing: https://kaptea.io/pricing
+- API documentation: https://developers.pronto-360.com
+- Security and compliance: https://kaptea.io/security-compliance
+- Certifications: https://kaptea.io/certification
+- Case studies: https://kaptea.io/case-studies
+- Blog: https://kaptea.io/blog
+- Privacy policy: https://kaptea.io/privacy-policy
+- Terms of service: https://kaptea.io/terms
+- Cookie policy: https://kaptea.io/cookies
+- LinkedIn: https://www.linkedin.com/company/kaptea
+- Twitter/X: https://twitter.com/kaptea_io
+- GitHub: https://github.com/feirl

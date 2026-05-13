@@ -75,6 +75,145 @@
   }
   </script>
 
+  <!-- Organization Schema — entity identity for knowledge graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://kaptea.io/#organization",
+    "name": "Kaptea",
+    "legalName": "Kaptea Limited",
+    "url": "https://kaptea.io/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kaptea.io/img/brand/kaptea-logo.svg",
+      "width": 200,
+      "height": 40
+    },
+    "description": "Kaptea builds compliance-first enterprise communications infrastructure for regulated industries. Serving financial services, healthcare, utilities, and public sector organisations across Ireland, the UK, and Europe.",
+    "foundingDate": "2017",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dublin",
+      "addressCountry": "IE"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://kaptea.io/demo",
+        "areaServed": ["IE", "GB", "EU", "US"]
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "url": "https://kaptea.io/contact"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/kaptea",
+      "https://twitter.com/kaptea_io",
+      "https://github.com/feirl",
+      "https://developers.pronto-360.com"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "certification",
+        "name": "ISO 27001",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "British Standards Institution"
+        }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "certification",
+        "name": "Cyber Essentials Plus"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "accreditation",
+        "name": "CREST"
+      }
+    ],
+    "knowsAbout": [
+      "Enterprise Communications",
+      "Omnichannel Messaging",
+      "Conversational AI",
+      "Regulatory Compliance",
+      "CPaaS",
+      "Twilio",
+      "Contact Centre Technology",
+      "GDPR Compliance"
+    ]
+  }
+  </script>
+
+  <!-- Service Schema — broadens schema type coverage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://kaptea.io/#service",
+    "name": "Kaptea Pronto — Enterprise Communications Platform",
+    "serviceType": "Enterprise Omnichannel Communications Platform",
+    "description": "Pronto is a dedicated-instance omnichannel communications platform for regulated enterprises. Orchestrate SMS, RCS, WhatsApp, Voice, Email and Social with governance, compliance, and Conversational AI. Deploy in days on Twilio or Telnyx infrastructure.",
+    "provider": {
+      "@id": "https://kaptea.io/#organization"
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Ireland"
+      },
+      {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      {
+        "@type": "Country",
+        "name": "United States"
+      },
+      {
+        "@type": "Place",
+        "name": "European Union"
+      }
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Enterprise",
+      "description": "Regulated organisations in financial services, healthcare, utilities, public sector, travel, and retail"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "1500",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "1500",
+        "priceCurrency": "USD",
+        "unitText": "MONTH"
+      },
+      "description": "Dedicated platform instance from $1,500/month. Carrier usage billed separately."
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Pronto Platform Capabilities",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SMS and RCS Messaging" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "WhatsApp Business" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Voice and IVR" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conversational AI" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automations and Workflow" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Control and Governance" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Integration and API Framework" } }
+      ]
+    },
+    "url": "https://kaptea.io/pronto"
+  }
+  </script>
+
   <!-- FAQ Schema for rich snippets -->
   <script type="application/ld+json">
   {
@@ -122,6 +261,45 @@
         }
       }
     ]
+  }
+  </script>
+
+  <!-- WebPage + Speakable Schema — helps AI assistants cite and read key content -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://kaptea.io/#webpage",
+    "url": "https://kaptea.io/",
+    "name": "Kaptea | Enterprise Communications Platform for Regulated Organisations",
+    "description": "Kaptea is the omnichannel communications platform built for regulated organisations. Orchestrate SMS, RCS, WhatsApp, Voice, Video and Email on Twilio and Telnyx with enterprise governance, resilience and compliance.",
+    "isPartOf": {
+      "@id": "https://kaptea.io/#organization"
+    },
+    "about": {
+      "@id": "https://kaptea.io/#organization"
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [
+        "h1",
+        ".hero p",
+        ".section-title",
+        ".section-sub",
+        ".section-label"
+      ]
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kaptea.io/"
+        }
+      ]
+    }
   }
   </script>
 
@@ -1430,8 +1608,8 @@
   <p>Rapidly deploy the only compliance-first communications platform built for enterprise, on carrier-grade infrastructure.</p>
 
   <div class="hero-ctas">
-    <a href="/demo" class="btn-primary">Book a Demo</a>
-    <a href="/pronto" class="btn-ghost">Explore the Platform</a>
+    <a href="/get-started" class="btn-primary">Get Started</a>
+    <a href="/demo" class="btn-ghost">Book a Demo</a>
   </div>
 
 </section>

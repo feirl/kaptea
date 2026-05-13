@@ -190,6 +190,7 @@
       padding: 28px 60px 0;
     }
 
+
     /* ── Steps ── */
     .gs-step { display: none; }
     .gs-step.active { display: block; }
@@ -372,6 +373,177 @@
     .gs-field-error.show { display: block; }
 
     /* ══════════════════════════════════════
+       MULTI-SELECT DROPDOWN (step 3)
+    ══════════════════════════════════════ */
+    .gs-ms {
+      position: relative;
+      width: 100%;
+    }
+
+    .gs-ms-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 10px 14px 10px 16px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+      min-height: 50px;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+      user-select: none;
+    }
+
+    .gs-ms-trigger:focus,
+    .gs-ms-trigger.open {
+      border-color: #dc2727;
+      box-shadow: 0 0 0 3px rgba(220,39,39,0.10);
+      outline: none;
+    }
+
+    .gs-ms-value {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 5px;
+      min-height: 26px;
+    }
+
+    .gs-ms-placeholder {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      color: #94a3b8;
+    }
+
+    .gs-ms-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px 3px 10px;
+      background: rgba(220,39,39,0.07);
+      border: 1px solid rgba(220,39,39,0.18);
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #c41f1f;
+      white-space: nowrap;
+    }
+
+    .gs-ms-chip-x {
+      cursor: pointer;
+      line-height: 1;
+      color: rgba(196,31,31,0.55);
+      font-size: 0.85rem;
+      font-weight: 400;
+      padding: 0 1px;
+      transition: color 0.12s;
+    }
+
+    .gs-ms-chip-x:hover { color: #c41f1f; }
+
+    .gs-ms-chevron {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+      color: #94a3b8;
+    }
+
+    .gs-ms-trigger.open .gs-ms-chevron { transform: rotate(180deg); }
+
+    .gs-ms-panel {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      box-shadow: 0 8px 28px rgba(15,23,42,0.12), 0 2px 8px rgba(15,23,42,0.06);
+      max-height: 320px;
+      overflow-y: auto;
+      z-index: 9999;
+      display: none;
+    }
+
+    .gs-ms-panel.open { display: block; }
+
+    .gs-ms-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 11px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid #f1f5f9;
+      transition: background 0.1s;
+    }
+
+    .gs-ms-item:last-child { border-bottom: none; }
+    .gs-ms-item:hover { background: #f8fafc; }
+    .gs-ms-item.selected { background: rgba(220,39,39,0.025); }
+
+    .gs-ms-cb {
+      width: 18px;
+      height: 18px;
+      border: 1.5px solid #d1d9e0;
+      border-radius: 5px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .gs-ms-item.selected .gs-ms-cb {
+      background: #dc2727;
+      border-color: #dc2727;
+    }
+
+    .gs-ms-cb svg { display: none; }
+    .gs-ms-item.selected .gs-ms-cb svg { display: block; }
+
+    .gs-ms-item-body {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0;
+      line-height: 1.5;
+    }
+
+    .gs-ms-item-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .gs-ms-item-sep {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      color: #cbd5e1;
+      margin: 0 6px;
+      font-weight: 300;
+    }
+
+    .gs-ms-item-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8125rem;
+      color: #64748b;
+    }
+
+    .gs-ms-divider {
+      height: 1px;
+      background: #e8edf2;
+      margin: 2px 0;
+    }
+
+    /* ══════════════════════════════════════
        NAV BUTTONS (inside gs-content, flows with cards)
     ══════════════════════════════════════ */
     .gs-nav {
@@ -380,6 +552,10 @@
       justify-content: space-between;
       margin-top: 28px;
       width: 100%;
+    }
+
+    .gs-nav.fields-step {
+      max-width: 520px;
     }
 
     .gs-btn-back {
@@ -525,7 +701,12 @@
 
     .gs-footer-copy { font-size: 0.8rem; color: #b0bbc9; }
 
-    .gs-footer-links { display: flex; align-items: center; gap: 20px; }
+    .gs-footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #eef2f6;
+    }
 
     .gs-footer-links a {
       font-size: 0.8rem;
@@ -637,6 +818,7 @@
         <div class="gs-step-dot" data-dot="2"></div>
         <div class="gs-step-dot" data-dot="3"></div>
         <div class="gs-step-dot" data-dot="4"></div>
+        <div class="gs-step-dot" data-dot="5"></div>
       </div>
     </div>
 
@@ -727,11 +909,27 @@
         </div>
       </div>
 
-      <!-- Step 3: Regions -->
+      <!-- Step 3: AI Agents -->
       <div class="gs-step" id="step-2">
+        <h1 class="gs-step-question">Which AI agents are you planning to deploy?</h1>
+        <p class="gs-step-hint">Kaptea ships with pre-built conversational AI agents that are fully configurable. Select all that apply.</p>
+        <div class="gs-error-banner" id="err-2"></div>
+        <div class="gs-ms" id="agentSelect">
+          <div class="gs-ms-trigger" id="agentTrigger" tabindex="0" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select AI agents">
+            <div class="gs-ms-value" id="agentValue">
+              <span class="gs-ms-placeholder" id="agentPlaceholder">Select AI agents...</span>
+            </div>
+            <svg class="gs-ms-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>
+          </div>
+          <div class="gs-ms-panel" id="agentPanel" role="listbox" aria-multiselectable="true" aria-label="AI agents"></div>
+        </div>
+      </div>
+
+      <!-- Step 4: Regions -->
+      <div class="gs-step" id="step-3">
         <h1 class="gs-step-question">Where do you need a dedicated server instance?</h1>
         <p class="gs-step-hint">Select all regions. Your data stays within the boundaries you choose.</p>
-        <div class="gs-error-banner" id="err-2"></div>
+        <div class="gs-error-banner" id="err-3"></div>
         <div class="gs-cards cols-2" role="group" aria-label="Server regions">
           <div class="gs-card" data-group="regions" data-value="EU" tabindex="0" role="checkbox" aria-checked="false">
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
@@ -764,11 +962,11 @@
         </div>
       </div>
 
-      <!-- Step 4: CPaaS -->
-      <div class="gs-step" id="step-3">
+      <!-- Step 5: CPaaS -->
+      <div class="gs-step" id="step-4">
         <h1 class="gs-step-question">Who is your current CPaaS provider?</h1>
         <p class="gs-step-hint">This helps us estimate your migration timeline and plan your carrier setup.</p>
-        <div class="gs-error-banner" id="err-3"></div>
+        <div class="gs-error-banner" id="err-4"></div>
         <div class="gs-cards cols-2" role="radiogroup" aria-label="CPaaS provider">
           <div class="gs-card radio" data-group="cpaas" data-value="Twilio" tabindex="0" role="radio" aria-checked="false">
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
@@ -791,11 +989,11 @@
         </div>
       </div>
 
-      <!-- Step 5: Personal details -->
-      <div class="gs-step" id="step-4">
+      <!-- Step 6: Personal details -->
+      <div class="gs-step" id="step-5">
         <h1 class="gs-step-question">Your access details</h1>
         <p class="gs-step-hint">Your environment is being prepared. We just need to know where to send your access details.</p>
-        <div class="gs-error-banner" id="err-4"></div>
+        <div class="gs-error-banner" id="err-5"></div>
         <div class="gs-fields">
           <div class="gs-row">
             <div class="gs-field">
@@ -877,14 +1075,15 @@
   var CALENDLY_URL = 'https://calendly.com/atmcnab/introduction-to-kaptea';
 
   var STEPS = [
-    { id: 'channels', type: 'multi',  group: 'channels' },
-    { id: 'usecases', type: 'multi',  group: 'usecases' },
-    { id: 'regions',  type: 'multi',  group: 'regions'  },
-    { id: 'cpaas',    type: 'single', group: 'cpaas'    },
-    { id: 'personal', type: 'fields'                    },
+    { id: 'channels', type: 'multi',    group: 'channels'  },
+    { id: 'usecases', type: 'multi',    group: 'usecases'  },
+    { id: 'aiagents', type: 'dropdown', group: 'aiagents'  },
+    { id: 'regions',  type: 'multi',    group: 'regions'   },
+    { id: 'cpaas',    type: 'single',   group: 'cpaas'     },
+    { id: 'personal', type: 'fields'                       },
   ];
 
-  var STEP_LABELS = ['Your channels', 'Your use cases', 'Your regions', 'Your current setup', 'About you'];
+  var STEP_LABELS = ['Your channels', 'Your use cases', 'Your AI agents', 'Your regions', 'Your current setup', 'About you'];
   var TOTAL_STEPS = STEPS.length;
   var currentStep = 0;
   var isAnimating = false;
@@ -981,6 +1180,7 @@
       }, 250);
 
       document.getElementById('btnBack').classList.toggle('hidden', currentStep === 0);
+      document.getElementById('gsNav').classList.toggle('fields-step', currentStep === TOTAL_STEPS - 1);
 
       var btn = document.getElementById('btnContinue');
       btn.innerHTML = currentStep === TOTAL_STEPS - 1
@@ -1003,7 +1203,7 @@
 
   /* ── Field collection ── */
   function collectFields(idx) {
-    if (idx === 4) {
+    if (idx === 5) {
       formData.firstname = document.getElementById('gs-firstname').value.trim();
       formData.lastname  = document.getElementById('gs-lastname').value.trim();
       formData.email     = document.getElementById('gs-email').value.trim();
@@ -1015,10 +1215,15 @@
   /* ── Validation ── */
   function validateStep(idx) {
     var s = STEPS[idx];
-    if (s.type === 'multi')  return validateMulti(idx, s.group);
-    if (s.type === 'single') return validateSingle(idx, s.group);
-    if (s.type === 'fields') return validatePersonal(idx);
+    if (s.type === 'multi')    return validateMulti(idx, s.group);
+    if (s.type === 'single')   return validateSingle(idx, s.group);
+    if (s.type === 'dropdown') return validateDropdown(idx, s.group);
+    if (s.type === 'fields')   return validatePersonal(idx);
     return true;
+  }
+
+  function validateDropdown(idx, group) {
+    hideError(idx); return true;
   }
 
   function validateMulti(idx, group) {
@@ -1078,7 +1283,7 @@
 
   /* ── Submit ── */
   function submitForm() {
-    collectFields(4);
+    collectFields(5);
     var btn = document.getElementById('btnContinue');
     btn.disabled  = true;
     btn.innerHTML = 'Setting up your environment...';
@@ -1139,6 +1344,7 @@
         { name: 'company',               value: formData.company   || '' },
         { name: 'kaptea_channels',       value: toStr(formData.channels)  },
         { name: 'kaptea_use_cases',      value: toStr(formData.usecases)  },
+        { name: 'kaptea_ai_agents',      value: toStr(formData.aiagents)  },
         { name: 'kaptea_server_regions', value: toStr(formData.regions)   },
         { name: 'kaptea_cpaas_provider', value: formData.cpaas    || ''   },
       ],
@@ -1150,6 +1356,163 @@
   function esc(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
+
+  /* ── AI Agent multi-select ── */
+  var AI_AGENTS = [
+    { value: 'Appointment Scheduling',           desc: 'Books, reschedules, and cancels appointments automatically'                           },
+    { value: 'Customer Service & Support',       desc: 'Front-line triage with knowledge base answers and live escalation'                   },
+    { value: 'Information Collector',            desc: 'Systematically captures structured data during calls or conversations'               },
+    { value: 'Lead Qualifier',                   desc: 'Qualifies inbound B2B interest and books the next sales conversation'               },
+    { value: 'Surveys & Feedback',               desc: 'Collects NPS scores, ratings, and open-text responses at scale'                     },
+    { value: 'Urgent Communications Responder',  desc: 'Handles inbound queries triggered by critical or emergency communications'           },
+    { value: 'Fraud & Security Alert Handler',   desc: 'Real-time identity verification and suspicious activity response'                   },
+    { value: 'Payment & Billing Assistant',      desc: 'Resolves payment queries, confirms transactions, and handles billing disputes'       },
+    { value: 'Outbound Campaign Agent',          desc: 'Proactive outreach for re-engagement, follow-up, and promotional messaging'         },
+    { value: 'Compliance & Consent Manager',     desc: 'Manages opt-outs, GDPR requests, and consent renewals autonomously'                 },
+    { value: 'I need something different...',    desc: 'We will configure and build a custom agent for your use case'                       },
+    { value: 'Not currently planned',            desc: 'We will explore AI agents later'                                                    },
+  ];
+
+  var checkSvgMs = '<svg viewBox="0 0 10 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg>';
+
+  function initAgentSelect() {
+    var panel   = document.getElementById('agentPanel');
+    var trigger = document.getElementById('agentTrigger');
+    if (!panel || !trigger) return;
+
+    // Build list items
+    panel.innerHTML = AI_AGENTS.map(function(a, i) {
+      var divider = (i === AI_AGENTS.length - 1) ? '<div class="gs-ms-divider"></div>' : '';
+      return divider + '<div class="gs-ms-item" data-value="' + escAttr(a.value) + '" role="option" aria-selected="false" tabindex="-1">'
+        + '<span class="gs-ms-cb">' + checkSvgMs + '</span>'
+        + '<span class="gs-ms-item-body">'
+        + '<span class="gs-ms-item-label">' + esc(a.value) + '</span>'
+        + '<span class="gs-ms-item-sep">|</span>'
+        + '<span class="gs-ms-item-desc">' + esc(a.desc) + '</span>'
+        + '</span></div>';
+    }).join('');
+
+    // Item click
+    panel.querySelectorAll('.gs-ms-item').forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleAgent(item);
+      });
+    });
+
+    // Trigger click
+    trigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = trigger.classList.contains('open');
+      if (isOpen) { closeAgentPanel(); } else { openAgentPanel(); }
+    });
+
+    // Trigger keyboard
+    trigger.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger.click(); }
+      if (e.key === 'Escape') closeAgentPanel();
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function(e) {
+      if (!document.getElementById('agentSelect').contains(e.target)) closeAgentPanel();
+    });
+  }
+
+  function openAgentPanel() {
+    var trigger = document.getElementById('agentTrigger');
+    var panel   = document.getElementById('agentPanel');
+    if (!trigger || !panel) return;
+    var rect      = trigger.getBoundingClientRect();
+    var available = window.innerHeight - rect.bottom - 12;
+    // Use fixed positioning so the panel escapes any parent stacking context
+    panel.style.position  = 'fixed';
+    panel.style.top       = (rect.bottom + 4) + 'px';
+    panel.style.left      = rect.left + 'px';
+    panel.style.width     = rect.width + 'px';
+    panel.style.right     = '';
+    panel.style.maxHeight = Math.max(180, Math.min(340, available)) + 'px';
+    trigger.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+    panel.classList.add('open');
+  }
+
+  function closeAgentPanel() {
+    var trigger = document.getElementById('agentTrigger');
+    var panel   = document.getElementById('agentPanel');
+    if (!trigger || !panel) return;
+    trigger.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
+    panel.classList.remove('open');
+    panel.style.position = panel.style.top = panel.style.left = panel.style.width = panel.style.maxHeight = '';
+  }
+
+  function toggleAgent(item) {
+    var value      = item.dataset.value;
+    var isSelected = item.classList.contains('selected');
+    var notPlanned = 'Not currently planned';
+
+    if (value === notPlanned) {
+      // selecting "not planned" deselects everything else
+      document.getElementById('agentPanel').querySelectorAll('.gs-ms-item').forEach(function(el) {
+        el.classList.remove('selected');
+        el.setAttribute('aria-selected', 'false');
+      });
+      if (!isSelected) {
+        item.classList.add('selected');
+        item.setAttribute('aria-selected', 'true');
+      }
+    } else {
+      // selecting anything else deselects "not planned"
+      document.getElementById('agentPanel').querySelectorAll('.gs-ms-item[data-value="' + escAttr(notPlanned) + '"]').forEach(function(el) {
+        el.classList.remove('selected');
+        el.setAttribute('aria-selected', 'false');
+      });
+      item.classList.toggle('selected', !isSelected);
+      item.setAttribute('aria-selected', String(!isSelected));
+    }
+
+    syncAgentFormData();
+    hideError(2);
+  }
+
+  function syncAgentFormData() {
+    var selected = [];
+    document.getElementById('agentPanel').querySelectorAll('.gs-ms-item.selected').forEach(function(el) {
+      selected.push(el.dataset.value);
+    });
+    formData.aiagents = selected;
+
+    var placeholder = document.getElementById('agentPlaceholder');
+    var value       = document.getElementById('agentValue');
+
+    // Remove existing chips
+    value.querySelectorAll('.gs-ms-chip').forEach(function(c) { c.remove(); });
+
+    if (selected.length === 0) {
+      placeholder.style.display = '';
+    } else {
+      placeholder.style.display = 'none';
+      selected.forEach(function(v) {
+        var chip = document.createElement('span');
+        chip.className = 'gs-ms-chip';
+        chip.innerHTML = esc(v) + '<span class="gs-ms-chip-x" data-chip-value="' + escAttr(v) + '" title="Remove">&#215;</span>';
+        chip.querySelector('.gs-ms-chip-x').addEventListener('click', function(e) {
+          e.stopPropagation();
+          var itemEl = document.querySelector('#agentPanel .gs-ms-item[data-value="' + escAttr(v) + '"]');
+          if (itemEl) toggleAgent(itemEl);
+        });
+        value.appendChild(chip);
+      });
+    }
+  }
+
+  function escAttr(s) {
+    return String(s).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  // Initialise when page loads (the panel exists in DOM from the start)
+  initAgentSelect();
 </script>
 </body>
 </html>

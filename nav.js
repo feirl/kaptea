@@ -271,7 +271,8 @@
   </div>
 
   <div class="nav-cta-wrap">
-    <a href="/demo" class="nav-cta">Book a Demo</a>
+    <a href="/demo" class="nav-cta-ghost">Book a Demo</a>
+    <a href="/get-started" class="nav-cta">Get Started</a>
   </div>
 </nav>`;
 

@@ -182,7 +182,7 @@ nav {
 .nav-item.active > a { border-bottom: 2px solid var(--kaptea-red); }
 .nav-chevron { font-size: 10px; opacity: 0.6; transition: transform 0.2s; }
 .nav-item.active .nav-chevron { transform: rotate(180deg); }
-.nav-cta-wrap { display: flex; align-items: center; padding-left: 16px; }
+.nav-cta-wrap { display: flex; align-items: center; gap: 8px; padding-left: 16px; }
 .nav-cta {
   background: var(--kaptea-red);
   color: var(--kaptea-white) !important;
@@ -194,6 +194,19 @@ nav {
   white-space: nowrap;
 }
 .nav-cta:hover { background: var(--kaptea-red-hover); }
+.nav-cta-ghost {
+  background: transparent;
+  color: var(--kaptea-charcoal) !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1.5px solid #d1d9e0;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 0.15s;
+}
+.nav-cta-ghost:hover { border-color: #9aa5b4; }
 .hamburger { display: none; }
 
 /* ── MEGA MENU ── */
@@ -464,6 +477,7 @@ nav {
   }
   .nav-cta-wrap { padding-left: 8px; }
   .nav-cta { padding: 6px 14px; font-size: 13px; }
+  .nav-cta-ghost { padding: 6px 12px; font-size: 13px; }
 
   /* Hide all mega-menus on mobile by default */
   .mega, .mega-resources, .mega-platform, .mega-solutions {
