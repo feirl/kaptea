@@ -216,6 +216,15 @@
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=86400" }
       ]
+    },
+    {
+      "source": "/(index\\.html|)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://kaptea.io/llms.txt>; rel=\"describedby\"; type=\"text/plain\", <https://kaptea.io/llms-full.txt>; rel=\"describedby\"; type=\"text/plain\", <https://kaptea.io/.well-known/agent-card.json>; rel=\"agent-card\"; type=\"application/json\""
+        }
+      ]
     }
   ]
 }

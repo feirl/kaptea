@@ -83,6 +83,12 @@ Key credentials: ISO 27001 certified, Cyber Essentials Plus certified, CREST acc
 
 - [API Documentation](https://developers.pronto-360.com/): Pronto API reference, authentication, webhooks, and integration guides for developers building on the Kaptea platform. Hosted at developers.pronto-360.com
 
+## Full LLM Context
+
+- [llms-full.txt](https://kaptea.io/llms-full.txt): Extended machine-readable context for AI systems: full platform capabilities, carrier partners, deployment model, pricing, technical integration specs, and notable customer deployments
+- [Pricing (Markdown)](https://kaptea.io/pricing.md): Machine-readable pricing document with tier breakdown, carrier cost estimates, and FAQ
+- [Agent Card](https://kaptea.io/.well-known/agent-card.json): Structured JSON agent card for A2A protocol discovery and agentic integrations
+
 ## Contact & Conversion
 
 - [Book a Demo](https://kaptea.io/demo): Schedule a 30-minute session with Alan or Robert to discuss your communications infrastructure

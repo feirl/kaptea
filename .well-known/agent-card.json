@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "name": "Kaptea Pronto",
+  "description": "Enterprise omnichannel communications platform for regulated organisations. Orchestrate SMS, RCS, WhatsApp, Voice, Email and Social with governance, compliance, and Conversational AI — built on Twilio and Telnyx. Deploy a dedicated instance in days.",
+  "url": "https://kaptea.io",
+  "provider": {
+    "name": "Kaptea Limited",
+    "url": "https://kaptea.io",
+    "contact_url": "https://kaptea.io/contact",
+    "privacy_policy_url": "https://kaptea.io/privacy-policy",
+    "terms_url": "https://kaptea.io/terms"
+  },
+  "capabilities": [
+    "omnichannel-messaging",
+    "conversational-ai",
+    "workflow-automation",
+    "voice-ivr",
+    "sms",
+    "rcs",
+    "whatsapp",
+    "email",
+    "secure-video",
+    "social-messaging",
+    "compliance-governance",
+    "enterprise-deployment"
+  ],
+  "channels": [
+    "SMS",
+    "RCS",
+    "WhatsApp",
+    "Voice",
+    "IVR",
+    "Email",
+    "Secure Video",
+    "Social Messaging"
+  ],
+  "industries": [
+    "Financial Services",
+    "Healthcare",
+    "Utilities and Energy",
+    "Public Sector",
+    "Travel and Transport",
+    "Retail and Ecommerce"
+  ],
+  "certifications": [
+    "ISO 27001",
+    "Cyber Essentials Plus",
+    "CREST"
+  ],
+  "carrier_partners": [
+    "Twilio",
+    "Telnyx"
+  ],
+  "api": {
+    "documentation_url": "https://developers.pronto-360.com",
+    "type": "REST",
+    "authentication": ["api-key", "oauth2"]
+  },
+  "deployment": {
+    "model": "dedicated-instance",
+    "regions": ["EU", "UK", "US"],
+    "provisioning_time_days": 1
+  },
+  "pricing": {
+    "starting_from": "$1500/month",
+    "details_url": "https://kaptea.io/pricing",
+    "machine_readable_url": "https://kaptea.io/pricing.md"
+  },
+  "content_urls": {
+    "llms_txt": "https://kaptea.io/llms.txt",
+    "llms_full_txt": "https://kaptea.io/llms-full.txt",
+    "sitemap": "https://kaptea.io/sitemap.xml"
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/kaptea",
+    "twitter": "https://twitter.com/kaptea_io"
+  }
+}
