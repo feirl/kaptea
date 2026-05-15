@@ -240,18 +240,38 @@
       padding: 32px 36px;
       margin: 40px 0;
     }
-    .post-manifesto p {
-      font-family: 'Manrope', sans-serif;
-      font-size: 17px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.9);
-      line-height: 1.5;
-      margin: 0 0 10px;
+    .post-manifesto-layer {
+      margin: 0 0 24px;
     }
-    .post-manifesto p:last-child { margin: 0; }
-    .post-manifesto p em {
+    .post-manifesto-layer:last-child { margin: 0; }
+    .post-manifesto-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
       color: #dc2727;
-      font-style: normal;
+      margin: 0 0 6px;
+    }
+    .post-manifesto-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .post-manifesto-text a { color: #dc2727; text-decoration: none; }
+
+    .post-lede {
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.5;
+      margin: 0 0 32px;
+      padding-bottom: 32px;
+      border-bottom: 2px solid #f0f0f5;
     }
 
     .post-author-bio {
@@ -385,10 +405,7 @@
 <div class="post-body-wrap">
   <article class="post-body">
 
-    <div class="post-answer-box" role="note">
-      <div class="post-answer-box-label">The core argument</div>
-      <p>The infrastructure for AI-driven customer engagement is now production-ready. What has not been solved is the design problem: who has thought carefully about what a kept promise actually looks like for each customer, across every channel, at scale. That is the layer Kaptea is built to provide.</p>
-    </div>
+    <p class="post-lede">The infrastructure for AI-driven customer engagement is now production-ready. What has not been solved is the design problem: who has thought carefully about what a kept promise actually looks like for each customer, across every channel, at scale.</p>
 
     <div class="post-toc">
       <div class="post-toc-label">In this article</div>
@@ -433,6 +450,10 @@
 
     <p>We call our application of this framework the Loop. Four quadrants: Listening, Co-Design, Getting It Done, and Ensuring Satisfaction. Each one corresponds to a stage in the promise cycle. Each one now has a direct technical counterpart in what Twilio launched at Signal.</p>
 
+    <figure style="margin: 36px 0;">
+      <img src="/img/illustrations/the-loop-quadrants.svg" alt="The Loop: four quadrants — Listening, Co-Design, Getting It Done, Ensuring Satisfaction — with clockwise arrows showing the promise cycle" style="width:100%; border-radius:10px; display:block;" loading="lazy">
+    </figure>
+
     <p>This is the foundation of <a href="/customer-journey-orchestration">how we approach customer journey orchestration</a>: not as a routing problem, but as a trust architecture problem.</p>
 
     <h2 id="three-layers">The three layers</h2>
@@ -440,9 +461,18 @@
     <p>Here is how I now think about the architecture of AI-driven customer engagement:</p>
 
     <div class="post-manifesto">
-      <p><em>Layer 1: The infrastructure.</em> Twilio's conversational primitives. Memory, Orchestrator, Intelligence, Agent Connect. These are the instruments. World-class, production-ready, and deliberately neutral.</p>
-      <p><em>Layer 2: The orchestration operating system.</em> What our team has built inside <a href="/pronto" style="color:#dc2727;">Pronto</a>. Multi-agent routing. Version-controlled AI deployments. Runtime snapshots and rollback. Shared memory continuity across every agent and every handoff. This is the layer that makes the infrastructure manageable, observable, and enterprise-grade.</p>
-      <p><em>Layer 3: The methodology.</em> The Flores Loop. This is the layer that determines how the orchestrations behave. What signals the system listens for. When an AI agent escalates to a human. What "resolved" means for this customer in this context. How trust is built, not just assumed.</p>
+      <div class="post-manifesto-layer">
+        <div class="post-manifesto-label">Layer 1: The infrastructure</div>
+        <p class="post-manifesto-text">Conversational primitives: persistent memory across every channel and interaction, an orchestration spine that treats the conversation as the system of record, real-time intelligence, and an abstraction layer for any AI agent from any provider. World-class, production-ready, and deliberately neutral.</p>
+      </div>
+      <div class="post-manifesto-layer">
+        <div class="post-manifesto-label">Layer 2: The orchestration operating system</div>
+        <p class="post-manifesto-text">What our team has built inside <a href="/pronto">Pronto</a>. Multi-agent routing. Version-controlled AI deployments. Runtime snapshots and rollback. Shared memory continuity across every agent and every handoff. The layer that makes the infrastructure manageable, observable, and enterprise-grade.</p>
+      </div>
+      <div class="post-manifesto-layer">
+        <div class="post-manifesto-label">Layer 3: The methodology</div>
+        <p class="post-manifesto-text">The Flores Loop. This is the layer that determines how the orchestrations behave: what signals the system listens for, when an AI agent escalates to a human, what "resolved" means for this customer in this context, how trust is built rather than assumed.</p>
+      </div>
     </div>
 
     <p>Most vendors competing in this space are selling Layer 1 or Layer 2. Nobody else is explicitly designing Layer 3.</p>
@@ -467,7 +497,7 @@
 
     <p>If you are thinking about AI in customer engagement and you are concerned about the moment it fails, the escalation it missed, the context it lost, the promise it could not keep, I would like to show you what we have built.</p>
 
-    <p><a href="/demo">Book a session with me or Robert</a>. We run every demo ourselves.</p>
+    <p><a href="/demo">Let's connect.</a></p>
 
     <address class="post-author-bio" rel="author">
       <div class="post-author-avatar">
