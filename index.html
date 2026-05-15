@@ -353,6 +353,36 @@
     .cert-item:hover svg { color: var(--kaptea-red); }
     .cert-item svg { color: #999999; transition: color 0.15s ease; }
     .cert-divider { width: 1px; height: 16px; background: var(--kaptea-border); }
+    .hero-partner-pills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 0 auto 24px;
+    }
+    .hero-partner-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--kaptea-charcoal);
+      letter-spacing: 0.01em;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .hero-partner-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--kaptea-red);
+      flex-shrink: 0;
+    }
     .hero h1 {
       font-size: 52px;
       font-family: 'Manrope', sans-serif; font-weight: 700;
@@ -364,12 +394,7 @@
     .hero h1 .hero-h1-line1 {
       display: block;
     }
-    /* Keep headline to 2 lines on large screens: line 1 = full clause, line 2 = em (nowrap needs ~1100px+ at 52px) */
-    @media (min-width: 1100px) {
-      .hero h1 .hero-h1-line1 {
-        white-space: nowrap;
-      }
-    }
+    /* Headline wraps naturally: line 1 is now longer ("Conversational AI for regulated enterprise") */
     .hero h1 em { color: var(--kaptea-red); font-style: normal; }
     .hero p {
       font-size: 19px;
@@ -1466,7 +1491,7 @@
       align-items: center;
       gap: 7px;
       padding: 0 24px;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 500;
       color: rgba(255,255,255,0.9);
       font-family: 'Inter', sans-serif;
@@ -1603,9 +1628,20 @@
 <main id="main-content">
 <section class="hero" role="banner">
 
-  <h1><span class="hero-h1-line1">AI customer engagement</span><em>that keeps its promises.</em></h1>
+  <div class="hero-partner-pills" aria-label="Partner credentials">
+    <span class="hero-partner-pill">
+      <span class="hero-partner-pill-dot" aria-hidden="true"></span>
+      Twilio Gold Partner
+    </span>
+    <span class="hero-partner-pill">
+      <span class="hero-partner-pill-dot" aria-hidden="true"></span>
+      Twilio AI-Certified
+    </span>
+  </div>
 
-  <p>Kaptea is the orchestration layer that unifies every conversation across every channel: designed for trust, built for regulated enterprise.</p>
+  <h1><span class="hero-h1-line1">Conversational AI for regulated enterprise</span><em>that keeps its promises.</em></h1>
+
+  <p>Orchestrate every customer journey across AI agents, human teams and every channel, SMS, WhatsApp, Voice, Email, carrying full context from one interaction to the next. Built for critical communications in financial services, healthcare and regulated enterprise.</p>
 
   <div class="hero-ctas">
     <a href="/get-started" class="btn-primary">Get Started</a>
@@ -1617,73 +1653,52 @@
 <!-- Platform Preview (icon tabs → sliding screenshots, inspired by https://www.superchat.de/ product strip) -->
 <div class="platform-preview" role="complementary" aria-label="Pronto product preview">
   <div class="platform-preview-inner">
-    <div class="hero-showcase" data-hero-showcase style="--hs-count: 9;">
+    <div class="hero-showcase" data-hero-showcase style="--hs-count: 6;">
       <div class="hero-showcase-tabs" role="tablist" aria-label="Pronto product stories">
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="true" id="hs-tab-0" aria-controls="hs-panel-0" aria-label="Inbox: core experience" data-slide="0">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
-          Inbox
-        </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-1" aria-controls="hs-panel-1" aria-label="Campaigns: outbound power" data-slide="1">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          Campaigns
-        </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-2" aria-controls="hs-panel-2" aria-label="Channels: omni-channel story" data-slide="2">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="true" id="hs-tab-0" aria-controls="hs-panel-0" aria-label="Omni-Channel: SMS, WhatsApp, Voice, Email in one thread" data-slide="0">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7"/><path d="M17 12H7"/></svg>
-          Channels
+          Omni-Channel
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-3" aria-controls="hs-panel-3" aria-label="Automate: flows and automation" data-slide="3">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          Automate
-        </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-4" aria-controls="hs-panel-4" aria-label="AI: assisted drafting and intelligence" data-slide="4">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-1" aria-controls="hs-panel-1" aria-label="Conversational AI with human escalation" data-slide="1">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 6V2"/><path d="M12 22v-4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M22 12h-4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
-          AI
+          Conversational AI
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-5" aria-controls="hs-panel-5" aria-label="Analytics: insight" data-slide="5">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-          Analytics
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-2" aria-controls="hs-panel-2" aria-label="Visual workflow builder for end-to-end journey orchestration" data-slide="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Visual Workflows
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-6" aria-controls="hs-panel-6" aria-label="Delivery: reliability and zero dropped messages" data-slide="6">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-3" aria-controls="hs-panel-3" aria-label="Governance: per-message audit trail and role-based access" data-slide="3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Governance
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-4" aria-controls="hs-panel-4" aria-label="Resilience: cross-channel failover and surge-proof routing" data-slide="4">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
-          Delivery
+          Resilience
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-7" aria-controls="hs-panel-7" aria-label="Integrations: ecosystem" data-slide="7">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51 8.59 10.49"/></svg>
-          Integrations
-        </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-8" aria-controls="hs-panel-8" aria-label="Team: people and collaboration in Pronto" data-slide="8">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Team
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-5" aria-controls="hs-panel-5" aria-label="Data Residency: EU, UK or US cloud-managed deployment" data-slide="5">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Data Residency
         </button>
       </div>
       <div class="hero-showcase-viewport" aria-live="polite">
         <div class="hero-showcase-track" style="--hs-slide: 0;">
           <figure class="hero-showcase-slide" id="hs-panel-0" role="tabpanel" aria-labelledby="hs-tab-0" aria-hidden="false">
-            <img src="img/illustrations/HomeScreen.png" width="1024" height="642" alt="Pronto inbox: core experience, unified conversations and contacts" fetchpriority="high" decoding="async">
+            <img src="img/illustrations/Inbox-CloseUp.png" width="1920" height="1440" alt="Omni-channel conversations across SMS, WhatsApp, Voice and Email in one Pronto thread" fetchpriority="high" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-1" role="tabpanel" aria-labelledby="hs-tab-1" aria-hidden="true">
-            <img src="img/illustrations/EmailDetailsScreen.png" width="3456" height="2168" alt="Outbound campaigns: email details, content, and sends in Pronto" loading="lazy" decoding="async">
+            <img src="img/illustrations/AI-CloseUp.png" width="1920" height="1440" alt="Conversational AI with master prompts, guardrails and live agent escalation in Pronto" loading="lazy" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-2" role="tabpanel" aria-labelledby="hs-tab-2" aria-hidden="true">
-            <img src="img/illustrations/Inbox-CloseUp.png" width="1920" height="1440" alt="Omni-channel conversations across SMS, chat, and voice in one thread" loading="lazy" decoding="async">
+            <img src="img/illustrations/Worflows.png" width="3456" height="2168" alt="Visual workflow builder: end-to-end customer journey orchestration in Pronto" loading="lazy" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-3" role="tabpanel" aria-labelledby="hs-tab-3" aria-hidden="true">
-            <img src="img/illustrations/Worflows.png" width="3456" height="2168" alt="Automate: workflows, triggers, and automation in Pronto" loading="lazy" decoding="async">
+            <img src="img/illustrations/Logs-CloseUp.png" width="1920" height="1440" alt="Per-message audit trail and governance logs in Pronto" loading="lazy" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-4" role="tabpanel" aria-labelledby="hs-tab-4" aria-hidden="true">
-            <img src="img/illustrations/AI-CloseUp.png" width="1920" height="1440" alt="AI-assisted drafting and intelligence in Pronto" loading="lazy" decoding="async">
+            <img src="img/illustrations/Failover.png" width="1920" height="1440" alt="Cross-channel failover and surge-proof routing for resilient delivery in Pronto" loading="lazy" decoding="async">
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-5" role="tabpanel" aria-labelledby="hs-tab-5" aria-hidden="true">
-            <img src="img/illustrations/Analytics.png" width="3456" height="2168" alt="Analytics dashboards and insight in Pronto" loading="lazy" decoding="async">
-          </figure>
-          <figure class="hero-showcase-slide" id="hs-panel-6" role="tabpanel" aria-labelledby="hs-tab-6" aria-hidden="true">
-            <img src="img/illustrations/deliveryrates.png" width="722" height="378" alt="Delivery rates and reliability: visibility into sends, failures, and zero dropped messages" loading="lazy" decoding="async">
-          </figure>
-          <figure class="hero-showcase-slide" id="hs-panel-7" role="tabpanel" aria-labelledby="hs-tab-7" aria-hidden="true">
-            <img src="img/illustrations/Integration-CloseUp.png" width="1920" height="1440" alt="Integrations: CRM and ecosystem connectors in Pronto" loading="lazy" decoding="async">
-          </figure>
-          <figure class="hero-showcase-slide" id="hs-panel-8" role="tabpanel" aria-labelledby="hs-tab-8" aria-hidden="true">
-            <img src="img/illustrations/TeamV2.png" width="3456" height="2168" alt="Teams using Pronto: collaboration, roles, and workspace" loading="lazy" decoding="async">
+            <img src="img/illustrations/Deployment-CloseUp.png" width="1920" height="1440" alt="EU, UK or US data residency: cloud-managed Pronto deployment" loading="lazy" decoding="async">
           </figure>
         </div>
       </div>
@@ -1700,14 +1715,6 @@
       <div class="platform-cert-item" role="listitem">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         CREST Accredited
-      </div>
-      <div class="platform-cert-item" role="listitem">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        Twilio Gold &amp; AI Partner
-      </div>
-      <div class="platform-cert-item" role="listitem">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        Telnyx Partner
       </div>
     </div>
   </div>
