@@ -450,8 +450,66 @@
 
     <p>We call our application of this framework the Loop. Four quadrants: Listening, Co-Design, Getting It Done, and Ensuring Satisfaction. Each one corresponds to a stage in the promise cycle. Each one now has a direct technical counterpart in what Twilio launched at Signal.</p>
 
-    <figure style="margin: 36px 0;">
-      <img src="/img/illustrations/the-loop-quadrants.svg" alt="The Loop: four quadrants — Listening, Co-Design, Getting It Done, Ensuring Satisfaction — with clockwise arrows showing the promise cycle" style="width:100%; border-radius:10px; display:block;" loading="lazy">
+    <figure style="margin: 36px 0;" aria-label="The Loop: four quadrants — Listening, Co-Design, Getting It Done, Ensuring Satisfaction — with clockwise arrows showing the promise cycle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" style="width:100%;border-radius:10px;display:block;" role="img" aria-hidden="true">
+        <defs>
+          <clipPath id="circle-clip">
+            <circle cx="300" cy="300" r="245"/>
+          </clipPath>
+        </defs>
+        <rect width="600" height="600" fill="#131521"/>
+        <!-- Q1: LISTENING NW -->
+        <rect x="55" y="55" width="245" height="245" fill="#1d2542" clip-path="url(#circle-clip)"/>
+        <!-- Q2: CO-DESIGN NE -->
+        <rect x="300" y="55" width="245" height="245" fill="#19203d" clip-path="url(#circle-clip)"/>
+        <!-- Q3: GETTING IT DONE SE -->
+        <rect x="300" y="300" width="245" height="245" fill="#1d2542" clip-path="url(#circle-clip)"/>
+        <!-- Q4: ENSURING SATISFACTION SW -->
+        <rect x="55" y="300" width="245" height="245" fill="#19203d" clip-path="url(#circle-clip)"/>
+        <!-- Dividing lines -->
+        <line x1="55" y1="300" x2="545" y2="300" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <line x1="300" y1="55" x2="300" y2="545" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <!-- Outer circle border -->
+        <circle cx="300" cy="300" r="245" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+        <!-- Clockwise arrows at boundary points -->
+        <polygon points="314,51 301,43 301,59" fill="#dc2727"/>
+        <polygon points="549,314 557,301 541,301" fill="#dc2727"/>
+        <polygon points="286,549 299,557 299,541" fill="#dc2727"/>
+        <polygon points="51,286 43,299 59,299" fill="#dc2727"/>
+        <!-- Centre circle -->
+        <circle cx="300" cy="300" r="60" fill="#131521" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <text x="300" y="296" font-family="Manrope,sans-serif" font-size="9.5" font-weight="800" fill="rgba(255,255,255,0.35)" text-anchor="middle" letter-spacing="2.5">THE</text>
+        <text x="300" y="312" font-family="Manrope,sans-serif" font-size="9.5" font-weight="800" fill="rgba(255,255,255,0.35)" text-anchor="middle" letter-spacing="2.5">LOOP</text>
+        <!-- Q1: LISTENING -->
+        <text x="192" y="135" font-family="Manrope,sans-serif" font-size="10" font-weight="800" fill="#dc2727" text-anchor="middle" letter-spacing="2">01</text>
+        <text x="192" y="158" font-family="Manrope,sans-serif" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">LISTENING</text>
+        <text x="192" y="178" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.38)" text-anchor="middle" letter-spacing="1.5">Request</text>
+        <text x="192" y="206" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">We receive the customer&#39;s</text>
+        <text x="192" y="223" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">request fully: the words,</text>
+        <text x="192" y="240" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">the concern behind them.</text>
+        <!-- Q2: CO-DESIGN -->
+        <text x="408" y="135" font-family="Manrope,sans-serif" font-size="10" font-weight="800" fill="#dc2727" text-anchor="middle" letter-spacing="2">02</text>
+        <text x="408" y="158" font-family="Manrope,sans-serif" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">CO-DESIGN</text>
+        <text x="408" y="178" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.38)" text-anchor="middle" letter-spacing="1.5">Promise</text>
+        <text x="408" y="206" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">We shape a commitment</text>
+        <text x="408" y="223" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">grounded in what is actually</text>
+        <text x="408" y="240" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">deliverable for this customer.</text>
+        <!-- Q3: GETTING IT DONE -->
+        <text x="408" y="352" font-family="Manrope,sans-serif" font-size="10" font-weight="800" fill="#dc2727" text-anchor="middle" letter-spacing="2">03</text>
+        <text x="408" y="375" font-family="Manrope,sans-serif" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">GETTING IT DONE</text>
+        <text x="408" y="395" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.38)" text-anchor="middle" letter-spacing="1.5">Performance</text>
+        <text x="408" y="423" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">The promise is executed.</text>
+        <text x="408" y="440" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">Handoffs happen with full</text>
+        <text x="408" y="457" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">shared context intact.</text>
+        <!-- Q4: ENSURING SATISFACTION -->
+        <text x="192" y="352" font-family="Manrope,sans-serif" font-size="10" font-weight="800" fill="#dc2727" text-anchor="middle" letter-spacing="2">04</text>
+        <text x="192" y="375" font-family="Manrope,sans-serif" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">ENSURING</text>
+        <text x="192" y="393" font-family="Manrope,sans-serif" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">SATISFACTION</text>
+        <text x="192" y="413" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.38)" text-anchor="middle" letter-spacing="1.5">Completion</text>
+        <text x="192" y="439" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">The loop closes. Outcomes</text>
+        <text x="192" y="456" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">feed back. The next call</text>
+        <text x="192" y="473" font-family="Inter,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.7)" text-anchor="middle">begins better.</text>
+      </svg>
     </figure>
 
     <p>This is the foundation of <a href="/customer-journey-orchestration">how we approach customer journey orchestration</a>: not as a routing problem, but as a trust architecture problem.</p>
