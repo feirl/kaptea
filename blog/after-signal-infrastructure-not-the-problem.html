@@ -106,7 +106,8 @@
       padding: 3px 10px;
       border-radius: 100px;
     }
-    .blog-cat--company { background: #fef3c7; color: #b45309; }
+    .blog-cat--company   { background: #fef3c7; color: #b45309; }
+    .blog-cat--strategy  { background: #cffafe; color: #0e7490; }
 
     .post-cat-wrap { margin-bottom: 20px; }
 
@@ -199,7 +200,7 @@
       line-height: 1.25;
       scroll-margin-top: 80px;
     }
-    .post-body p {
+    .post-body > p:not(.post-lede) {
       font-size: 16px;
       color: var(--kaptea-charcoal);
       line-height: 1.8;
@@ -389,7 +390,7 @@
 <header class="post-header" id="post-header">
   <div class="post-header-inner">
     <div class="post-cat-wrap">
-      <span class="blog-cat blog-cat--company">Founder's View</span>
+      <span class="blog-cat blog-cat--strategy">Strategy</span>
     </div>
     <h1>After Signal: Why the Infrastructure Was Never the Problem</h1>
     <div class="post-meta">
