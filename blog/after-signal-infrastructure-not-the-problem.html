@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
+
+  <title>After Signal: Why the Infrastructure Was Never the Problem | Alan McNab, Kaptea</title>
+  <meta name="description" content="Twilio just shipped the largest product release in its history. The infrastructure for AI-driven customer engagement is ready. The design problem — the trust layer — is not. That is where Kaptea operates." />
+  <link rel="canonical" href="https://kaptea.io/blog/after-signal-infrastructure-not-the-problem" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="After Signal: Why the Infrastructure Was Never the Problem" />
+  <meta property="og:description" content="Twilio just shipped the largest product release in its history. The infrastructure for AI-driven customer engagement is ready. The design problem — the trust layer — is not. That is where Kaptea operates." />
+  <meta property="og:url" content="https://kaptea.io/blog/after-signal-infrastructure-not-the-problem" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta property="og:image" content="https://kaptea.io/img/illustrations/HomeScreen.png" />
+  <meta property="article:published_time" content="2026-05-14T09:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-05-14T09:00:00+00:00" />
+  <meta property="article:section" content="Thought Leadership" />
+  <meta property="article:tag" content="AI, conversational AI, orchestration, trust, enterprise communications, Twilio Signal" />
+  <meta property="article:author" content="Alan McNab" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaptea.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog & Insights", "item": "https://kaptea.io/blog" },
+      { "@type": "ListItem", "position": 3, "name": "After Signal: Why the Infrastructure Was Never the Problem", "item": "https://kaptea.io/blog/after-signal-infrastructure-not-the-problem" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "After Signal: Why the Infrastructure Was Never the Problem",
+    "description": "Twilio just shipped the largest product release in its history. The infrastructure for AI-driven customer engagement is ready. The design problem is not. That is where Kaptea operates.",
+    "datePublished": "2026-05-14T09:00:00+00:00",
+    "dateModified": "2026-05-14T09:00:00+00:00",
+    "author": {
+      "@type": "Person",
+      "name": "Alan McNab",
+      "jobTitle": "CEO & Co-Founder",
+      "worksFor": { "@type": "Organization", "name": "Kaptea" },
+      "url": "https://kaptea.io/meet-the-team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" }
+    },
+    "url": "https://kaptea.io/blog/after-signal-infrastructure-not-the-problem",
+    "mainEntityOfPage": "https://kaptea.io/blog/after-signal-infrastructure-not-the-problem",
+    "articleSection": "Thought Leadership",
+    "keywords": "conversational AI, AI orchestration, trust architecture, enterprise communications, Twilio Signal, agentic AI, regulated industries",
+    "wordCount": "950",
+    "timeRequired": "PT5M"
+  }
+  </script>
+
+  <style>
+    .post-breadcrumb {
+      background: #f7f8fc;
+      border-bottom: 1px solid #e8eaf0;
+      padding: 12px 40px;
+    }
+    .post-breadcrumb-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--kaptea-neutral-grey);
+    }
+    .post-breadcrumb a {
+      color: var(--kaptea-tagline-grey);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .post-breadcrumb a:hover { color: var(--kaptea-red); }
+    .post-breadcrumb svg { flex-shrink: 0; opacity: 0.4; }
+
+    .post-header {
+      background: var(--kaptea-white);
+      padding: 56px 40px 0;
+      border-bottom: 1px solid #e8eaf0;
+    }
+    .post-header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .blog-cat {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .blog-cat--company { background: #fef3c7; color: #b45309; }
+
+    .post-cat-wrap { margin-bottom: 20px; }
+
+    .post-header h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      line-height: 1.15;
+      margin: 0 0 20px;
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      color: var(--kaptea-neutral-grey);
+      padding-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .post-meta time     { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .post-author { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .sep     { opacity: 0.4; }
+
+    .post-body-wrap {
+      background: var(--kaptea-white);
+      padding: 0 40px 80px;
+    }
+    .post-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-top: 48px;
+    }
+
+    .post-answer-box {
+      background: #f0f9ff;
+      border-left: 4px solid var(--kaptea-red);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-answer-box-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--kaptea-red);
+      margin-bottom: 8px;
+    }
+    .post-answer-box p {
+      font-size: 15px;
+      color: #1e3a5f;
+      line-height: 1.7;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .post-toc {
+      background: #f7f8fc;
+      border: 1px solid #e8eaf0;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-toc-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--kaptea-neutral-grey);
+      margin-bottom: 12px;
+    }
+    .post-toc ol { margin: 0; padding-left: 20px; }
+    .post-toc li { margin-bottom: 6px; }
+    .post-body .post-toc a {
+      font-size: 13px;
+      color: var(--kaptea-charcoal);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .post-body .post-toc a:hover { color: var(--kaptea-red); }
+
+    .post-body h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 52px 0 16px;
+      line-height: 1.25;
+      scroll-margin-top: 80px;
+    }
+    .post-body p {
+      font-size: 16px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.8;
+      margin: 0 0 20px;
+    }
+    .post-body ul, .post-body ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+    }
+    .post-body li {
+      font-size: 16px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .post-body strong { color: var(--kaptea-charcoal); font-weight: 700; }
+    .post-body a { color: var(--kaptea-red); text-decoration: underline; text-underline-offset: 2px; }
+    .post-body a:hover { text-decoration: none; }
+
+    .post-pullquote {
+      border-left: 3px solid var(--kaptea-red);
+      margin: 40px 0;
+      padding: 4px 0 4px 28px;
+    }
+    .post-pullquote blockquote {
+      font-family: 'Manrope', sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.4;
+      margin: 0;
+      font-style: normal;
+    }
+
+    .post-manifesto {
+      background: #131521;
+      border-radius: 10px;
+      padding: 32px 36px;
+      margin: 40px 0;
+    }
+    .post-manifesto p {
+      font-family: 'Manrope', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+      margin: 0 0 10px;
+    }
+    .post-manifesto p:last-child { margin: 0; }
+    .post-manifesto p em {
+      color: #dc2727;
+      font-style: normal;
+    }
+
+    .post-author-bio {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 28px 0;
+      border-top: 1px solid #e8eaf0;
+      border-bottom: 1px solid #e8eaf0;
+      margin: 44px 0 0;
+    }
+    .post-author-avatar {
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .post-author-avatar img {
+      width: 116%;
+      height: 116%;
+      margin: -8%;
+      display: block;
+      object-fit: cover;
+    }
+    .post-author-name  { font-size: 14px; font-weight: 700; color: var(--kaptea-charcoal); }
+    .post-author-role  { font-size: 12px; color: var(--kaptea-neutral-grey); margin-top: 2px; }
+    .post-author-bio-text {
+      font-size: 13px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+    .post-author-bio-text a { color: var(--kaptea-red); text-decoration: none; }
+
+    .post-related {
+      background: #f7f8fc;
+      padding: 48px 40px 64px;
+      border-top: 1px solid #e8eaf0;
+    }
+    .post-related-inner { max-width: 780px; margin: 0 auto; }
+    .post-related-heading {
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 0 0 24px;
+    }
+    .post-related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .post-related-card {
+      background: var(--kaptea-white);
+      border-radius: 8px;
+      padding: 18px 18px 16px;
+      text-decoration: none;
+      display: block;
+      border: 1px solid #e8eaf0;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .post-related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-1px); }
+    .post-related-card .blog-cat { margin-bottom: 10px; }
+    .post-related-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.35;
+      margin: 0 0 10px;
+    }
+    .post-related-meta { font-size: 11px; color: var(--kaptea-neutral-grey); font-weight: 500; }
+
+    @media (max-width: 768px) {
+      .post-breadcrumb { padding: 12px 20px; }
+      .post-header { padding: 40px 20px 0; }
+      .post-body-wrap { padding: 0 20px 60px; }
+      .post-body { padding-top: 32px; }
+      .post-related { padding: 40px 20px 48px; }
+      .post-related-grid { grid-template-columns: 1fr; }
+      .post-manifesto { padding: 24px 20px; }
+    }
+  </style>
+
+  <script type="text/plain" data-consent="analytics" async
+    src="https://www.googletagmanager.com/gtag/js?id=G-JKZ4JHK73L"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKZ4JHK73L', { anonymize_ip: true });
+  </script>
+  <script type="text/plain" data-consent="marketing">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="marketing" async
+    src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+</head>
+<body>
+<script src="/nav.js"></script>
+
+<nav class="post-breadcrumb" aria-label="Breadcrumb">
+  <div class="post-breadcrumb-inner">
+    <a href="/">Home</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <a href="/blog">Blog &amp; Insights</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <span>After Signal</span>
+  </div>
+</nav>
+
+<header class="post-header" id="post-header">
+  <div class="post-header-inner">
+    <div class="post-cat-wrap">
+      <span class="blog-cat blog-cat--company">Founder's View</span>
+    </div>
+    <h1>After Signal: Why the Infrastructure Was Never the Problem</h1>
+    <div class="post-meta">
+      <time datetime="2026-05-14">14 May 2026</time>
+      <span class="sep">·</span>
+      <span>5 min read</span>
+      <span class="sep">·</span>
+      <span class="post-author">By Alan McNab, CEO &amp; Co-Founder</span>
+    </div>
+  </div>
+</header>
+
+<div class="post-body-wrap">
+  <article class="post-body">
+
+    <div class="post-answer-box" role="note">
+      <div class="post-answer-box-label">The core argument</div>
+      <p>The infrastructure for AI-driven customer engagement is now production-ready. What has not been solved is the design problem: who has thought carefully about what a kept promise actually looks like for each customer, across every channel, at scale. That is the layer Kaptea is built to provide.</p>
+    </div>
+
+    <div class="post-toc">
+      <div class="post-toc-label">In this article</div>
+      <ol>
+        <li><a href="#efficiency-trap">The efficiency trap</a></li>
+        <li><a href="#what-we-built-toward">What we have been building toward</a></li>
+        <li><a href="#three-layers">The three layers</a></li>
+        <li><a href="#what-twilio-left-blank">What Twilio left blank on purpose</a></li>
+        <li><a href="#why-this-matters-now">Why this matters now</a></li>
+      </ol>
+    </div>
+
+    <p>I was at Twilio's Signal conference last week. And I want to be direct about what I saw: the infrastructure layer for AI-driven customer engagement has now been built. It is production-ready, it is generally available, and it is genuinely impressive.</p>
+
+    <p>Twilio described it as the largest product release in the company's history. Conversation Memory that persists across every channel and every interaction. A Conversation Orchestrator that treats the conversation, not the session or the ticket, as the system of record. A real-time Conversation Intelligence layer that listens, scores, and surfaces signals as a conversation is happening. And Agent Connect, an abstraction layer that lets any AI agent from any provider plug into all of it.</p>
+
+    <div class="post-pullquote">
+      <blockquote>"Intelligence without context is guesswork, and intelligence without orchestration is noise."</blockquote>
+    </div>
+
+    <p>That was Twilio CEO Khozema Shipchandler at Signal. It is a precise diagnosis of what most AI implementations in customer engagement are today: fast, capable, but fundamentally disconnected from what the customer actually needs.</p>
+
+    <p>So the infrastructure problem has been solved. What has not been solved is the design problem.</p>
+
+    <h2 id="efficiency-trap">The efficiency trap</h2>
+
+    <p>Most AI deployments in customer engagement have been built around a single objective: contain the interaction. Route the customer away from a human. Answer the most common questions. Reduce handle time. The KPIs are efficiency metrics: containment rate, automation rate, cost per contact.</p>
+
+    <p>These are not wrong objectives. But they produce a specific class of failure: the experience where something went wrong and the system had no architecture for what happened next. The AI said it was resolved. The customer knew it was not. Nobody closed the loop. The next interaction started from zero.</p>
+
+    <p>This failure is not a technology failure. It is a design failure. The system was never asked what a kept promise looks like for this customer. It was never designed to carry forward the knowledge that the last three interactions on this issue were unsatisfactory. It was never built to ensure satisfaction, only to reach a status of "resolved."</p>
+
+    <p>And with the infrastructure Twilio has now made available, those design decisions are no longer constrained by what the platform can do. The platform can do all of it. The question is whether someone has thought carefully about what "resolved" actually means.</p>
+
+    <h2 id="what-we-built-toward">What we have been building toward</h2>
+
+    <p>At Kaptea, we have spent years working with a framework developed by Fernando Flores, a philosopher and organisational theorist who, forty-five years ago, identified something that turns out to be more relevant today than when he wrote it.</p>
+
+    <p>His insight was this: every meaningful interaction between a customer and a business is a promise cycle. The customer makes a request. The business shapes a response, a commitment to do something specific. That commitment is either kept or it is not. If it is not kept, and nothing happens to acknowledge and repair that, trust erodes. Not slowly. Structurally.</p>
+
+    <p>What Flores understood, and what the Harvard Business Review validated in their research on Promise-Based Management in 2007, is that most execution failures in organisations are not resource failures or technology failures. They are commitment failures. Promises made without the context to keep them. Promises technically "closed" but never actually fulfilled in the customer's experience.</p>
+
+    <p>We call our application of this framework the Loop. Four quadrants: Listening, Co-Design, Getting It Done, and Ensuring Satisfaction. Each one corresponds to a stage in the promise cycle. Each one now has a direct technical counterpart in what Twilio launched at Signal.</p>
+
+    <p>This is the foundation of <a href="/customer-journey-orchestration">how we approach customer journey orchestration</a>: not as a routing problem, but as a trust architecture problem.</p>
+
+    <h2 id="three-layers">The three layers</h2>
+
+    <p>Here is how I now think about the architecture of AI-driven customer engagement:</p>
+
+    <div class="post-manifesto">
+      <p><em>Layer 1: The infrastructure.</em> Twilio's conversational primitives. Memory, Orchestrator, Intelligence, Agent Connect. These are the instruments. World-class, production-ready, and deliberately neutral.</p>
+      <p><em>Layer 2: The orchestration operating system.</em> What our team has built inside <a href="/pronto" style="color:#dc2727;">Pronto</a>. Multi-agent routing. Version-controlled AI deployments. Runtime snapshots and rollback. Shared memory continuity across every agent and every handoff. This is the layer that makes the infrastructure manageable, observable, and enterprise-grade.</p>
+      <p><em>Layer 3: The methodology.</em> The Flores Loop. This is the layer that determines how the orchestrations behave. What signals the system listens for. When an AI agent escalates to a human. What "resolved" means for this customer in this context. How trust is built, not just assumed.</p>
+    </div>
+
+    <p>Most vendors competing in this space are selling Layer 1 or Layer 2. Nobody else is explicitly designing Layer 3.</p>
+
+    <h2 id="what-twilio-left-blank">What Twilio left blank on purpose</h2>
+
+    <p>At Signal, a Twilio executive said directly: "We are not here to prescribe a model, framework, or data strategy."</p>
+
+    <p>That is not modesty. That is their business model. Twilio serves everyone from startups to the world's largest enterprises. They cannot and will not prescribe how the orchestration layer should behave. They will build the best possible infrastructure and leave the design methodology open.</p>
+
+    <p>Every other Twilio partner will configure these tools for efficiency. Faster routing. Higher containment. Lower handle time. That is a legitimate use of the infrastructure. It will produce better chatbots.</p>
+
+    <p>Kaptea configures them for trust. The Language Operators we design are not general-purpose: they are built to detect whether a promise made earlier in the conversation is at risk, whether a customer's confidence is wavering, or whether an interaction is heading toward the same failure it has produced before. The handoff conditions we design are grounded in what a kept promise looks like, not just a threshold metric. The post-interaction workflows we build close the loop genuinely, not performatively.</p>
+
+    <h2 id="why-this-matters-now">Why this matters now</h2>
+
+    <p>44% of enterprise AI leaders have only moderate confidence that AI agents can act autonomously without human intervention. That is not a technology readiness problem. The technology is ready. It is a trust architecture problem. Nobody has designed the layer that makes AI in customer engagement trustworthy.</p>
+
+    <p>The infrastructure is ready. The orchestration is ready. The question is whether the design intelligence has been thought through carefully enough to make it work: not just quickly, but reliably, and in a way that builds trust with each interaction rather than eroding it.</p>
+
+    <p>That is the problem <a href="/why-kaptea">we are built to solve</a>. And for the first time, the infrastructure layer is good enough to solve it at scale.</p>
+
+    <p>If you are thinking about AI in customer engagement and you are concerned about the moment it fails, the escalation it missed, the context it lost, the promise it could not keep, I would like to show you what we have built.</p>
+
+    <p><a href="/demo">Book a session with me or Robert</a>. We run every demo ourselves.</p>
+
+    <address class="post-author-bio" rel="author">
+      <div class="post-author-avatar">
+        <img src="/img/alan-mcnab.webp" alt="Alan McNab, CEO and Co-Founder of Kaptea">
+      </div>
+      <div>
+        <div class="post-author-name">Alan McNab</div>
+        <div class="post-author-role">CEO &amp; Co-Founder, Kaptea</div>
+        <div class="post-author-bio-text">Former HP, Cisco, NCR, Arista Networks. BSEE from Santa Clara University, MBA from Trinity College Dublin. Alan co-founded Kaptea to build the trust infrastructure he spent thirty years wishing existed. <a href="/meet-the-team">About Alan →</a></div>
+      </div>
+    </address>
+
+  </article>
+</div>
+
+<section class="post-related">
+  <div class="post-related-inner">
+    <h2 class="post-related-heading">Related reading</h2>
+    <div class="post-related-grid">
+      <a href="/blog/trust-not-a-kpi" class="post-related-card">
+        <span class="blog-cat blog-cat--company">Founder's View</span>
+        <h4>The problem isn't your technology. It's your promises.</h4>
+        <div class="post-related-meta">Alan McNab, Jan 2026</div>
+      </a>
+      <a href="/customer-journey-orchestration" class="post-related-card">
+        <span class="blog-cat blog-cat--company">Platform</span>
+        <h4>Customer journey orchestration: how we think about the trust layer</h4>
+        <div class="post-related-meta">Platform overview</div>
+      </a>
+      <a href="/conversational-ai" class="post-related-card">
+        <span class="blog-cat blog-cat--company">Platform</span>
+        <h4>Conversational AI in Pronto: built for regulated enterprise</h4>
+        <div class="post-related-meta">Product detail</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="blog-newsletter">
+  <div class="blog-newsletter-inner">
+    <h2>Insight in your inbox</h2>
+    <p>New articles on AI, orchestration, and enterprise communications. No marketing noise.</p>
+    <form class="blog-newsletter-form" onsubmit="return false;" novalidate>
+      <input type="email" placeholder="your@organisation.com" autocomplete="email" aria-label="Email address" />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="blog-newsletter-note">No spam. Unsubscribe any time. GDPR compliant.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">Ready to make trust inevitable?</h2>
+    <p class="cta-sub">Book a session directly with Alan or Robert. No pre-sales filter. A straight conversation about your AI communications architecture and whether Kaptea can help.</p>
+    <a href="/demo" class="btn btn-white">Book a Demo</a>
+  </div>
+</section>
+
+<script src="/footer.js"></script>
+<script src="/cookie-consent.js"></script>
+</body>
+</html>
