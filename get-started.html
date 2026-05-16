@@ -319,7 +319,93 @@
     }
 
     /* ══════════════════════════════════════
-       TEXT FIELDS (step 5)
+       SLIDERS (step 5 — volume)
+    ══════════════════════════════════════ */
+    .gs-sliders {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      max-width: 560px;
+      margin-top: 8px;
+    }
+    .gs-slider-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 14px;
+      gap: 12px;
+    }
+    .gs-slider-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--kaptea-charcoal, #131521);
+    }
+    .gs-slider-value {
+      font-family: 'Manrope', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--kaptea-red, #dc2727);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    .gs-slider {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      margin: 0;
+      padding: 8px 0;
+      cursor: pointer;
+    }
+    .gs-slider:focus { outline: none; }
+    .gs-slider::-webkit-slider-runnable-track {
+      height: 6px;
+      background: #e8eaf0;
+      border-radius: 3px;
+    }
+    .gs-slider::-moz-range-track {
+      height: 6px;
+      background: #e8eaf0;
+      border-radius: 3px;
+    }
+    .gs-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      background: var(--kaptea-red, #dc2727);
+      border: 3px solid #fff;
+      border-radius: 50%;
+      margin-top: -8px;
+      box-shadow: 0 2px 8px rgba(220,39,39,0.3);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .gs-slider::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      background: var(--kaptea-red, #dc2727);
+      border: 3px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(220,39,39,0.3);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .gs-slider:hover::-webkit-slider-thumb { transform: scale(1.1); }
+    .gs-slider:hover::-moz-range-thumb { transform: scale(1.1); }
+    .gs-slider:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 4px rgba(220,39,39,0.25); }
+    .gs-slider:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 4px rgba(220,39,39,0.25); }
+    .gs-slider-stops {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+      font-size: 11px;
+      color: var(--kaptea-tagline-grey, #7d8289);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ══════════════════════════════════════
+       TEXT FIELDS (step 6)
     ══════════════════════════════════════ */
     .gs-fields {
       display: flex;
@@ -810,7 +896,7 @@
     <div class="gs-progress" id="gsProgress">
       <div class="gs-progress-header">
         <span class="gs-progress-label" id="progressLabel">Your channels</span>
-        <span class="gs-progress-count" id="progressCount">1 of 5</span>
+        <span class="gs-progress-count" id="progressCount">1 of 7</span>
       </div>
       <div class="gs-step-dots" id="stepDots">
         <div class="gs-step-dot active" data-dot="0"></div>
@@ -819,6 +905,7 @@
         <div class="gs-step-dot" data-dot="3"></div>
         <div class="gs-step-dot" data-dot="4"></div>
         <div class="gs-step-dot" data-dot="5"></div>
+        <div class="gs-step-dot" data-dot="6"></div>
       </div>
     </div>
 
@@ -989,11 +1076,40 @@
         </div>
       </div>
 
-      <!-- Step 6: Personal details -->
+      <!-- Step 6: Volume -->
       <div class="gs-step" id="step-5">
+        <h1 class="gs-step-question">What volume do you need to support?</h1>
+        <p class="gs-step-hint">Help us right-size your environment. You can adjust these later.</p>
+        <div class="gs-error-banner" id="err-5"></div>
+        <div class="gs-sliders">
+          <div class="gs-slider-group">
+            <div class="gs-slider-header">
+              <label class="gs-slider-label" for="gs-vol-typical">Typical monthly conversations</label>
+              <span class="gs-slider-value" id="gs-vol-typical-val">500K</span>
+            </div>
+            <input type="range" id="gs-vol-typical" min="0" max="5" step="1" value="2" class="gs-slider" aria-valuetext="500K">
+            <div class="gs-slider-stops" aria-hidden="true">
+              <span>100K</span><span>250K</span><span>500K</span><span>1M</span><span>5M</span><span>10M+</span>
+            </div>
+          </div>
+          <div class="gs-slider-group">
+            <div class="gs-slider-header">
+              <label class="gs-slider-label" for="gs-vol-surge">Surge capacity requirement</label>
+              <span class="gs-slider-value" id="gs-vol-surge-val">5M</span>
+            </div>
+            <input type="range" id="gs-vol-surge" min="0" max="5" step="1" value="4" class="gs-slider" aria-valuetext="5M">
+            <div class="gs-slider-stops" aria-hidden="true">
+              <span>100K</span><span>250K</span><span>500K</span><span>1M</span><span>5M</span><span>10M+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7: Personal details -->
+      <div class="gs-step" id="step-6">
         <h1 class="gs-step-question">Your access details</h1>
         <p class="gs-step-hint">Your environment is being prepared. We just need to know where to send your access details.</p>
-        <div class="gs-error-banner" id="err-5"></div>
+        <div class="gs-error-banner" id="err-6"></div>
         <div class="gs-fields">
           <div class="gs-row">
             <div class="gs-field">
@@ -1080,10 +1196,20 @@
     { id: 'aiagents', type: 'dropdown', group: 'aiagents'  },
     { id: 'regions',  type: 'multi',    group: 'regions'   },
     { id: 'cpaas',    type: 'single',   group: 'cpaas'     },
+    { id: 'volume',   type: 'sliders'                      },
     { id: 'personal', type: 'fields'                       },
   ];
 
-  var STEP_LABELS = ['Your channels', 'Your use cases', 'Your AI agents', 'Your regions', 'Your current setup', 'About you'];
+  var STEP_LABELS = ['Your channels', 'Your use cases', 'Your AI agents', 'Your regions', 'Your current setup', 'Your volume', 'About you'];
+
+  var VOLUME_STOPS = [
+    { val: 100000,   label: '100K'  },
+    { val: 250000,   label: '250K'  },
+    { val: 500000,   label: '500K'  },
+    { val: 1000000,  label: '1M'    },
+    { val: 5000000,  label: '5M'    },
+    { val: 10000000, label: '10M+'  },
+  ];
   var TOTAL_STEPS = STEPS.length;
   var currentStep = 0;
   var isAnimating = false;
@@ -1092,6 +1218,7 @@
   bindCardClicks();
   bindKeyboardNav();
   bindFieldListeners();
+  bindSliderListeners();
 
   /* ── Cards ── */
   function bindCardClicks() {
@@ -1204,6 +1331,14 @@
   /* ── Field collection ── */
   function collectFields(idx) {
     if (idx === 5) {
+      var ti = parseInt(document.getElementById('gs-vol-typical').value, 10);
+      var si = parseInt(document.getElementById('gs-vol-surge').value, 10);
+      formData.volume_typical_label = VOLUME_STOPS[ti].label;
+      formData.volume_typical_value = VOLUME_STOPS[ti].val;
+      formData.volume_surge_label   = VOLUME_STOPS[si].label;
+      formData.volume_surge_value   = VOLUME_STOPS[si].val;
+    }
+    if (idx === 6) {
       formData.firstname = document.getElementById('gs-firstname').value.trim();
       formData.lastname  = document.getElementById('gs-lastname').value.trim();
       formData.email     = document.getElementById('gs-email').value.trim();
@@ -1218,6 +1353,7 @@
     if (s.type === 'multi')    return validateMulti(idx, s.group);
     if (s.type === 'single')   return validateSingle(idx, s.group);
     if (s.type === 'dropdown') return validateDropdown(idx, s.group);
+    if (s.type === 'sliders')  { hideError(idx); return true; }
     if (s.type === 'fields')   return validatePersonal(idx);
     return true;
   }
@@ -1268,6 +1404,24 @@
     if (el) el.classList.remove('show');
   }
 
+  function bindSliderListeners() {
+    var pairs = [
+      { slider: 'gs-vol-typical', value: 'gs-vol-typical-val' },
+      { slider: 'gs-vol-surge',   value: 'gs-vol-surge-val'   }
+    ];
+    pairs.forEach(function(p) {
+      var s = document.getElementById(p.slider);
+      var v = document.getElementById(p.value);
+      if (!s || !v) return;
+      s.addEventListener('input', function() {
+        var idx = parseInt(s.value, 10);
+        var label = VOLUME_STOPS[idx].label;
+        v.textContent = label;
+        s.setAttribute('aria-valuetext', label);
+      });
+    });
+  }
+
   function bindFieldListeners() {
     ['gs-firstname','gs-lastname','gs-email','gs-phone','gs-company'].forEach(function(id) {
       var el = document.getElementById(id);
@@ -1284,6 +1438,7 @@
   /* ── Submit ── */
   function submitForm() {
     collectFields(5);
+    collectFields(6);
     var btn = document.getElementById('btnContinue');
     btn.disabled  = true;
     btn.innerHTML = 'Setting up your environment...';
@@ -1347,6 +1502,8 @@
         { name: 'kaptea_ai_agents',      value: toStr(formData.aiagents)  },
         { name: 'kaptea_server_regions', value: toStr(formData.regions)   },
         { name: 'kaptea_cpaas_provider', value: formData.cpaas    || ''   },
+        { name: 'kaptea_volume_typical', value: formData.volume_typical_label || '' },
+        { name: 'kaptea_volume_surge',   value: formData.volume_surge_label   || '' },
       ],
       context: { pageUri: 'https://kaptea.io/get-started', pageName: 'Get Started' },
     };
@@ -1359,19 +1516,22 @@
 
   /* ── AI Agent multi-select ── */
   var AI_AGENTS = [
+    /* Critical communications and regulated comms agents first */
+    { value: 'Urgent Communications Responder',  desc: 'Handles inbound queries triggered by critical or emergency communications'                          },
+    { value: 'Fraud & Security Alert Handler',   desc: 'Real-time identity verification and suspicious activity response'                                   },
+    { value: 'Financial Account Assistant',      desc: 'Handles account queries, balance checks, and fraud alerts with identity verification and escalation' },
+    { value: 'Compliance & Consent Manager',     desc: 'Manages opt-outs, GDPR requests, and consent renewals autonomously'                                },
+    { value: 'Outbound Campaign Agent',          desc: 'Proactive outreach for re-engagement, follow-up, and promotional messaging'                        },
+    { value: 'Payment & Billing Assistant',      desc: 'Resolves payment queries, confirms transactions, and handles billing disputes'                      },
+    { value: 'Customer Survey Assistant',        desc: 'Outbound agent that runs structured surveys by phone or messaging at the moment that matters'        },
+    /* General CX and inbound agents */
     { value: 'Customer Service & Support',       desc: 'Front-line support that triages, troubleshoots, and escalates to a live agent when needed'          },
     { value: 'Appointment Scheduling',           desc: 'Books, reschedules, and cancels appointments while confirming dates and times with the caller'       },
     { value: 'Information Collector',            desc: 'Walks the caller through collecting required fields and confirms each answer before progressing'     },
     { value: 'Lead Qualifier',                   desc: 'Qualifies inbound leads with a consultative, BANT-style B2B conversation'                           },
     { value: 'Surveys & Feedback',               desc: 'Runs structured feedback surveys with ratings, NPS scoring, and open comments'                      },
     { value: 'Virtual Assistant',                desc: 'Concierge-style agent that triages sales, support, and booking queries and routes to the right outcome' },
-    { value: 'Financial Account Assistant',      desc: 'Handles account queries, balance checks, and fraud alerts with identity verification and escalation' },
-    { value: 'Customer Survey Assistant',        desc: 'Outbound agent that runs structured surveys by phone or messaging at the moment that matters'        },
-    { value: 'Urgent Communications Responder',  desc: 'Handles inbound queries triggered by critical or emergency communications'                          },
-    { value: 'Fraud & Security Alert Handler',   desc: 'Real-time identity verification and suspicious activity response'                                   },
-    { value: 'Payment & Billing Assistant',      desc: 'Resolves payment queries, confirms transactions, and handles billing disputes'                      },
-    { value: 'Outbound Campaign Agent',          desc: 'Proactive outreach for re-engagement, follow-up, and promotional messaging'                        },
-    { value: 'Compliance & Consent Manager',     desc: 'Manages opt-outs, GDPR requests, and consent renewals autonomously'                                },
+    /* Fallback options */
     { value: 'I need something different...',    desc: 'We will configure and build a custom agent for your use case'                                      },
     { value: 'Not currently planned',            desc: 'We will explore AI agents later'                                                                   },
   ];
