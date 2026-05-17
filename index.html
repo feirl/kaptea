@@ -1318,13 +1318,17 @@
     }
     .hero-showcase-tabs {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: center;
       gap: 8px;
       margin: 0 auto 20px;
       max-width: 100%;
       padding: 0 4px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
     }
+    .hero-showcase-tab { flex-shrink: 0; }
     .hero-showcase-tab {
       display: inline-flex;
       align-items: center;
