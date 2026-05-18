@@ -61,6 +61,14 @@
 
     /* Sticky sidebar TOC */
     .legal-toc {
+      /* Reset the global `nav { }` rule from styles.css so this TOC
+         is not collapsed into a 64px sticky flex bar */
+      display: block;
+      height: auto;
+      background: transparent;
+      padding: 0;
+      border: none;
+      z-index: auto;
       position: sticky;
       top: 88px;
     }
