@@ -1272,8 +1272,6 @@
 </div>
 
 <script>
-  var HUBSPOT_PORTAL_ID = '';
-  var HUBSPOT_FORM_GUID  = '';
   var CALENDLY_URL = 'https://calendly.com/atmcnab/introduction-to-kaptea';
 
   var STEPS = [
@@ -1529,25 +1527,21 @@
     btn.disabled  = true;
     btn.innerHTML = 'Setting up your environment...';
 
-    function show() {
-      document.getElementById('gsProgress').style.display = 'none';
-      document.getElementById('gsContent').style.display  = 'none';
-      document.getElementById('gsConfirm').classList.add('active');
-      var name = formData.firstname || '';
-      document.getElementById('confirmHeading').textContent = name ? 'Book your onboarding, ' + name + '.' : 'Book your onboarding.';
-      loadCalendly();
-    }
+    // Send the submission to Zoho CRM via the serverless function.
+    // Fire-and-forget: the confirmation screen shows immediately so the
+    // user is never blocked on the CRM call.
+    fetch('/api/zoho-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    }).catch(function(e) { console.warn('Lead submission failed:', e); });
 
-    if (HUBSPOT_PORTAL_ID && HUBSPOT_FORM_GUID) {
-      fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HUBSPOT_PORTAL_ID + '/' + HUBSPOT_FORM_GUID, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(buildPayload()),
-      }).then(show).catch(function(e) { console.warn('HubSpot failed:', e); show(); });
-    } else {
-      console.log('Form data:', formData);
-      show();
-    }
+    document.getElementById('gsProgress').style.display = 'none';
+    document.getElementById('gsContent').style.display  = 'none';
+    document.getElementById('gsConfirm').classList.add('active');
+    var name = formData.firstname || '';
+    document.getElementById('confirmHeading').textContent = name ? 'Book your onboarding, ' + name + '.' : 'Book your onboarding.';
+    loadCalendly();
   }
 
   function buildTags() {
@@ -1575,27 +1569,6 @@
       CALENDLY_URL + '?hide_gdpr_banner=1&name=' + n + '&email=' + e;
   }
 
-  function buildPayload() {
-    return {
-      fields: [
-        { name: 'firstname',             value: formData.firstname || '' },
-        { name: 'lastname',              value: formData.lastname  || '' },
-        { name: 'email',                 value: formData.email     || '' },
-        { name: 'phone',                 value: formData.phone     || '' },
-        { name: 'company',               value: formData.company   || '' },
-        { name: 'kaptea_channels',       value: toStr(formData.channels)  },
-        { name: 'kaptea_use_cases',      value: toStr(formData.usecases)  },
-        { name: 'kaptea_ai_agents',      value: toStr(formData.aiagents)  },
-        { name: 'kaptea_server_regions', value: toStr(formData.regions)   },
-        { name: 'kaptea_cpaas_provider', value: formData.cpaas    || ''   },
-        { name: 'kaptea_volume_typical', value: formData.volume_typical_label || '' },
-        { name: 'kaptea_volume_surge',   value: formData.volume_surge_label   || '' },
-      ],
-      context: { pageUri: 'https://kaptea.io/get-started', pageName: 'Get Started' },
-    };
-  }
-
-  function toStr(a) { return Array.isArray(a) ? a.join('; ') : (a || ''); }
   function esc(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
