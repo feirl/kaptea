@@ -626,3 +626,34 @@ nav {
   .blog-newsletter { padding: 48px 20px; }
   .blog-newsletter-form { flex-direction: column; }
 }
+
+/* ── DESKTOP MARGINS (brand guide: 80px on desktop, 40px on tablet) ──
+   At >=1440px viewports, bump horizontal padding on all major section
+   containers from 40px to 80px to match the brand layout spec.
+   Tablet (768-1440px) and mobile breakpoints stay unchanged.
+   !important is required because inline <style> blocks on each page
+   load after styles.css and would otherwise win the cascade. */
+@media (min-width: 1440px) {
+  .section,
+  .hero,
+  .logo-bar,
+  .cert-strip,
+  .platform-preview,
+  .closing-cta,
+  .challenge,
+  .solutions,
+  .numbers-strip,
+  .featured-customer,
+  .trust-section,
+  .faq-section,
+  .related-section,
+  .cta-close,
+  .cta-section,
+  .voc-band,
+  .integrations-band,
+  .pricing-section,
+  .blog-newsletter {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+}
