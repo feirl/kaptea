@@ -7,7 +7,7 @@
   <title>Kaptea | Enterprise Communications Platform for Regulated Organisations</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Critical communications for enterprises that keep their promises. When failure to communicate is not an option, Kaptea rapidly orchestrates the full customer journey, from omni-channel alerts and conversational AI to intelligent human escalation and confirmed closure on every contact. Built on Twilio." />
+  <meta name="description" content="Critical communications for enterprises that keep their promises. When communication failure is not an option, Kaptea rapidly orchestrates the entire customer journey: from omni-channel messaging, context-aware AI conversations and human escalations through to customer-confirmed closure. Built on Twilio." />
   <meta name="keywords" content="enterprise communications platform, omnichannel messaging, Twilio partner, Telnyx partner, regulated communications, CPaaS governance, IVR orchestration, SMS platform, WhatsApp business, enterprise voice" />
   <link rel="canonical" href="https://kaptea.io/" />
   <meta name="robots" content="index, follow" />
@@ -15,7 +15,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Kaptea | Enterprise Communications Platform for Regulated Organisations" />
-  <meta property="og:description" content="Critical communications for enterprises that keep their promises. When failure to communicate is not an option, Kaptea rapidly orchestrates the full customer journey, from omni-channel alerts and conversational AI to intelligent human escalation and confirmed closure. Built on Twilio." />
+  <meta property="og:description" content="Critical communications for enterprises that keep their promises. When communication failure is not an option, Kaptea rapidly orchestrates the entire customer journey, from omni-channel messaging and conversational AI through to customer-confirmed closure. Built on Twilio." />
   <meta property="og:url" content="https://kaptea.io/" />
   <meta property="og:image" content="https://kaptea.io/img/illustrations/HomeScreen.png" />
   <meta property="og:image:width" content="1024" />
@@ -222,10 +222,10 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What channels does Kaptea support?",
+        "name": "What happens when our volumes spike?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Kaptea supports SMS, RCS, WhatsApp, Voice & IVR, Secure Video, and Email - all managed through a single governed platform called Pronto. Every channel runs on dedicated carrier infrastructure, not shared pools."
+          "text": "When a critical event fires, Kaptea pushes mass outbound across SMS, RCS, voice and email in parallel, then absorbs the inbound surge with context-aware conversational AI. Cross-channel failover and surge-proof routing keep delivery above 99.5% at peak. A storm or a recall that takes volumes 100x overnight is treated as a normal Tuesday."
         }
       },
       {
@@ -233,15 +233,31 @@
         "name": "How quickly can Kaptea be deployed?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Kaptea deploys dedicated instances in days, not months. No heavy engineering lift required. Connect your Twilio or Telnyx account and configure through a single interface. Most customers are live within a week of contract signature."
+          "text": "Hours, not weeks. Kaptea ships a dedicated instance ready to configure, with no heavy engineering lift. Connect your Twilio or Telnyx account, set your workflows and templates, and your first critical event can run within days of contract signature."
         }
       },
       {
         "@type": "Question",
-        "name": "What security certifications does Kaptea hold?",
+        "name": "How does the AI know when to escalate to a human?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Kaptea holds ISO 27001 certification, Cyber Essentials Plus, and CREST accreditation. We offer GDPR Data Processor Agreements with EU, UK and US data residency options, and operate on SOC 2-compliant infrastructure."
+          "text": "Master prompts and guardrails define what the conversational AI is allowed to handle and what must always be sent to a person. The moment a conversation exceeds those bounds (sentiment shift, regulatory question, a complaint that needs a real response) the customer is routed to a live agent with the full conversation context already in front of them. No re-explaining, no handoff dead-zone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we prove every customer was reached and every case closed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every message carries a per-message audit trail. Customer-confirmed closure is recorded on each case, so the question 'did everyone affected get the message and respond?' has a single-export answer. Regulator-ready by default, not as a build-out."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What security and compliance certifications does Kaptea hold?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ISO 27001 certified, Cyber Essentials Plus, CREST accredited. Twilio Gold Partner with AI Certification. GDPR Data Processor Agreements with EU, UK or US data residency. Every deployment is a dedicated instance, not shared tenancy. Built for utilities, financial services, healthcare and transport from the ground up."
         }
       },
       {
@@ -249,15 +265,7 @@
         "name": "Does Kaptea replace our existing carrier relationship?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Kaptea sits as an orchestration and governance layer above your existing carrier relationships. You bring your own Twilio or Telnyx account, or we can help you establish one. Your carrier rates and relationships remain yours."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is Kaptea suitable for regulated industries?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Kaptea was purpose-built for regulated organisations. Every deployment is a dedicated instance - no shared tenancy. Built-in audit trails, GDPR-compliant consent management, role-based access controls, and automated compliance reporting are included in every plan."
+          "text": "No. Kaptea sits as the orchestration and governance layer above your existing carriers. Bring your own Twilio or Telnyx account, or we will help you stand one up. Your carrier rates and relationships stay yours."
         }
       }
     ]
@@ -272,7 +280,7 @@
     "@id": "https://kaptea.io/#webpage",
     "url": "https://kaptea.io/",
     "name": "Kaptea | Enterprise Communications Platform for Regulated Organisations",
-    "description": "Critical communications for enterprises that keep their promises. When failure to communicate is not an option, Kaptea rapidly orchestrates the full customer journey, from omni-channel alerts and conversational AI to intelligent human escalation and confirmed closure on every contact.",
+    "description": "Critical communications for enterprises that keep their promises. When communication failure is not an option, Kaptea rapidly orchestrates the entire customer journey: from omni-channel messaging, context-aware AI conversations and human escalations through to customer-confirmed closure.",
     "isPartOf": {
       "@id": "https://kaptea.io/#organization"
     },
@@ -485,49 +493,54 @@
     }
     .section-sub-light { color: var(--kaptea-tagline-grey); }
 
-    /* ── PROBLEM SECTION ── */
-    .problem-grid {
+    /* ── SCENARIO SECTION (critical comms, in action) ── */
+    .scenario-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-bottom: 48px;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
     }
-    .problem-card {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 28px;
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
-    }
-    .problem-card:hover {
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      transform: translateY(-2px);
-    }
-    .problem-icon {
-      width: 40px;
-      height: 40px;
-      background: color-mix(in srgb, var(--kaptea-red) 10%, var(--kaptea-white));
-      border-radius: 8px;
+    .scenario-card {
+      background: #131521;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 28px 28px 24px;
+      color: rgba(255,255,255,0.78);
       display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .scenario-tag {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: var(--kaptea-red);
-      font-size: 20px;
     }
-    .problem-card h3 { font-size: 17px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 8px; line-height: 1.3; }
-    .problem-card p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.65; }
-    .problem-bridge {
-      text-align: center;
-      font-size: 18px;
+    .scenario-stat {
+      font-family: 'Manrope', sans-serif;
+      font-size: 24px;
       font-weight: 700;
-      color: var(--kaptea-charcoal);
-      padding: 24px;
-      background: color-mix(in srgb, var(--kaptea-red) 10%, var(--kaptea-white));
-      border-radius: 10px;
-      border: 1px solid #fdb5b4;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+      line-height: 1.2;
+      margin: 4px 0 4px;
     }
-    .problem-bridge span { color: var(--kaptea-red); }
+    .scenario-block { display: flex; flex-direction: column; gap: 4px; }
+    .scenario-block-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .scenario-block p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.78);
+      margin: 0;
+    }
+    .scenario-block--response p { color: #ffffff; }
 
     /* ── PLATFORM OVERVIEW ── */
     .arch-diagram {
@@ -1144,7 +1157,8 @@
 
     @media (max-width: 900px) {
       .hero h1 { font-size: 36px; }
-      .problem-grid, .capabilities-grid, .diff-grid, .steps-grid, .integration-grid { grid-template-columns: 1fr; }
+      .capabilities-grid, .diff-grid, .steps-grid, .integration-grid { grid-template-columns: 1fr; }
+      .scenario-grid { grid-template-columns: 1fr; }
       .case-study-block { grid-template-columns: 1fr; }
       .steps-grid::before { display: none; }
     }
@@ -1154,7 +1168,7 @@
       .hero { padding: 64px 24px 195px; }
       .hero h1 { font-size: 36px; }
       .section, .section-alt, .section-dark { padding: 56px 24px; }
-      .problem-grid, .capabilities-grid { grid-template-columns: 1fr 1fr; }
+      .capabilities-grid { grid-template-columns: 1fr 1fr; }
       .diff-grid { grid-template-columns: 1fr 1fr; }
       .integration-grid { grid-template-columns: repeat(3, 1fr); }
       .steps-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -1230,7 +1244,8 @@
       .section-sub { font-size: 14px; }
 
       /* Grids → single column */
-      .problem-grid, .capabilities-grid, .diff-grid, .steps-grid, .integration-grid { grid-template-columns: 1fr; }
+      .capabilities-grid, .diff-grid, .steps-grid, .integration-grid { grid-template-columns: 1fr; }
+      .scenario-grid { grid-template-columns: 1fr; }
       .cs-stats { grid-template-columns: 1fr; }
 
       /* Compliance */
@@ -1617,7 +1632,7 @@
 
   <h1><span class="hero-h1-line1">Critical communications for enterprises</span><em>that keep their promises.</em></h1>
 
-  <p>When failure to communicate is not an option, rapidly orchestrate the full customer journey, from omni-channel alerts and conversational AI to intelligent human escalation and confirmed closure on every contact.</p>
+  <p>When communication failure is not an option, rapidly orchestrate the entire customer journey: from omni-channel messaging, context-aware AI conversations and human escalations through to customer-confirmed closure.</p>
 
   <div class="hero-ctas">
     <a href="/get-started" class="btn-primary">Get Started</a>
@@ -1714,33 +1729,64 @@
 
 <section class="section">
   <div class="inner">
-    <div class="section-label">Why it matters</div>
-    <div class="section-title" style="margin-bottom:48px;">Enterprise communications break<br>at the worst possible moment.</div>
+    <div class="section-label">When the moment matters</div>
+    <div class="section-title">Critical communications, <em style="color:var(--kaptea-red); font-style:normal;">in action.</em></div>
+    <div class="section-sub" style="margin-bottom:48px;">Real scenarios. Real risks. The Pronto response, end to end. Instant outbound, context-aware AI, smart human escalation, customer-confirmed closure. Out of the box.</div>
 
-    <div class="problem-grid">
+    <div class="scenario-grid">
 
-      <div class="problem-card">
-        <div class="problem-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>"When a storm hits, your IVR can't go with it."</h3>
-        <p>Surge events, storms, outages, public emergencies, drive call volumes up 750x overnight. Legacy IVR infrastructure wasn't built for it. Kaptea was.</p>
-      </div>
+      <article class="scenario-card">
+        <div class="scenario-tag">Utility outage</div>
+        <div class="scenario-stat">400,000 customers without power.</div>
+        <div class="scenario-block">
+          <div class="scenario-block-label">Risk of failure</div>
+          <p>The wrong customer told the lights are back. Inbound overwhelms the contact centre. Restoration timelines slip behind regulatory promises.</p>
+        </div>
+        <div class="scenario-block scenario-block--response">
+          <div class="scenario-block-label">Pronto response</div>
+          <p>Instant outbound across SMS, RCS, voice and email. Context-aware AI handles inbound at scale. Smart escalation to a live agent the moment it matters. Customer-confirmed closure on every case, full per-message audit trail.</p>
+        </div>
+      </article>
 
-      <div class="problem-card">
-        <div class="problem-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg></div>
-        <h3>"1,000 locations. No governance. No visibility."</h3>
-        <p>Distributed teams send what they want, when they want. Templates drift. Brand breaks. Compliance audits become nightmares. Kaptea puts a governance layer across all of it.</p>
-      </div>
+      <article class="scenario-card">
+        <div class="scenario-tag">Transport disruption</div>
+        <div class="scenario-stat">Real-time rebooking at scale.</div>
+        <div class="scenario-block">
+          <div class="scenario-block-label">Risk of failure</div>
+          <p>Passengers in transit without next-step information. Refund disputes pile up. Brand trust erodes in real time.</p>
+        </div>
+        <div class="scenario-block scenario-block--response">
+          <div class="scenario-block-label">Pronto response</div>
+          <p>Multi-channel status updates the moment a service changes. Conversational AI handles the predictable rebookings; live agents pick up the complexity. Automated follow-through when lines reopen, every exchange linked to the passenger record.</p>
+        </div>
+      </article>
 
-      <div class="problem-card">
-        <div class="problem-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>"We have carrier infrastructure. But no-one to run it."</h3>
-        <p>Building on Twilio or Telnyx gives you the pipes, not the platform. Without orchestration, governance and ops tooling on top, your team is still raising tickets for every change. Kaptea is the operational layer that makes carrier-grade infrastructure work for enterprise.</p>
-      </div>
+      <article class="scenario-card">
+        <div class="scenario-tag">Cyber incident</div>
+        <div class="scenario-stat">Inside the regulatory window.</div>
+        <div class="scenario-block">
+          <div class="scenario-block-label">Risk of failure</div>
+          <p>Miss the reporting deadline. Inconsistent messages reach the press before affected customers. Audit trail full of gaps.</p>
+        </div>
+        <div class="scenario-block scenario-block--response">
+          <div class="scenario-block-label">Pronto response</div>
+          <p>Coordinated outbound within the reporting window. Two-way response handling at scale. AI triage routes complexity straight to human agents with full conversation context. Every interaction logged for the regulator.</p>
+        </div>
+      </article>
 
-    </div>
+      <article class="scenario-card">
+        <div class="scenario-tag">Product recall</div>
+        <div class="scenario-stat">Every product owner. Every reply.</div>
+        <div class="scenario-block">
+          <div class="scenario-block-label">Risk of failure</div>
+          <p>A customer who isn't reached is a customer at risk. A case that isn't closed is a regulator finding.</p>
+        </div>
+        <div class="scenario-block scenario-block--response">
+          <div class="scenario-block-label">Pronto response</div>
+          <p>High-volume outbound to every owner. Two-way reply handling absorbed by AI, escalated to humans where it counts. Customer-confirmed closure recorded per case. Full audit trail submitted to the regulator on demand.</p>
+        </div>
+      </article>
 
-    <div class="problem-bridge">
-      <span>Kaptea solves for all three.</span> One platform. Deployed in days. Built for regulated, mission-critical organisations.
     </div>
   </div>
 </section>
@@ -1782,32 +1828,32 @@
 <section class="section">
   <div class="inner">
     <div class="section-label">What we solve</div>
-    <div class="section-title">Built for the communications<br>challenges that matter most.</div>
-    <div class="section-sub">Three core use cases, each backed by real deployments and mapped to specific enterprise communication challenges.</div>
+    <div class="section-title">Three use cases.<br>One operating loop.</div>
+    <div class="section-sub">Instant outbound. Context-aware AI. Smart human escalation. Customer-confirmed closure. The Pronto loop runs the same way across every use case below, out of the box, in hours not weeks.</div>
 
     <div class="capabilities-grid">
 
       <div class="capability-card">
         <div class="cap-number">Orchestration</div>
         <h3>Customer Journey Orchestration</h3>
-        <div class="stat">From commerce trigger to live agent escalation.</div>
-        <p>End-to-end journeys on one platform. Workflows, templates, multi-channel dispatch, and live conversation intelligence with agent escalation, for organisations that have outgrown point tools and want one stack from event to outcome.</p>
+        <div class="stat">Agent-powered. Out of the box. Live in hours, not weeks.</div>
+        <p>Pronto runs the full loop from the first commerce trigger through to customer-confirmed closure. Instant outbound across every channel, context-aware AI conversations, smart human escalation when complexity exceeds the AI's bounds. One platform, no point tools to stitch.</p>
         <a href="/customer-journey-orchestration">See how it works →</a>
       </div>
 
       <div class="capability-card">
         <div class="cap-number">Urgent</div>
-        <h3>Urgent Messaging &amp; Recall</h3>
-        <div class="stat">50,000 customers. The next hour.</div>
-        <p>CSV in, escalation out. Email to SMS to branded call, with a regulator-ready audit at every step. Built for warranty recalls, drug recalls, and time-critical regulatory communications where the window is hours, not days.</p>
+        <h3>Urgent and Critical Messaging</h3>
+        <div class="stat">CSV upload. Compliant workflows. Replies handled automatically.</div>
+        <p>For warranty recalls, drug recalls and time-critical regulatory comms where the window is hours, not days. Mass outbound the moment the event fires, AI absorbs the predictable replies, live agents handle the rest, every case closed with a confirmed customer response. Regulator-ready audit at every step.</p>
         <a href="/emergency-surge-communications">See how it works →</a>
       </div>
 
       <div class="capability-card">
         <div class="cap-number">Transactional</div>
-        <h3>Transactional Communication</h3>
-        <div class="stat">Layer over what already works.</div>
-        <p>Sit Pronto on top of your existing transactional infrastructure. Add drag-and-drop templates, ad-hoc multi-channel campaigns, and per-entity sub-account billing, without disturbing the secure compliant backbone underneath.</p>
+        <h3>Transactional Communications</h3>
+        <div class="stat">Omnichannel. Governed. Always delivered.</div>
+        <p>Layer Pronto over your existing transactional stack to add governed multi-channel dispatch, drag-and-drop templates and per-entity sub-account billing. Cross-channel failover keeps essential messages delivered. AI handles inbound replies; humans pick up where they're needed. The regulated backbone underneath stays untouched.</p>
         <a href="/enterprise-transactional-messaging">See how it works →</a>
       </div>
 
@@ -2183,11 +2229,11 @@
 
     <div class="faq-item" role="listitem">
       <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
-        What channels does Kaptea support?
+        What happens when our volumes spike?
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a" id="faq-a-1" hidden>
-        Kaptea supports SMS, RCS, WhatsApp, Voice &amp; IVR, Secure Video, and Email - all managed through a single governed platform called Pronto. Every channel runs on dedicated carrier infrastructure, not shared pools.
+        When a critical event fires, Kaptea pushes mass outbound across SMS, RCS, voice and email in parallel, then absorbs the inbound surge with context-aware conversational AI. Cross-channel failover and surge-proof routing keep delivery above 99.5% at peak. A storm or a recall that takes volumes 100x overnight is treated as a normal Tuesday.
       </div>
     </div>
 
@@ -2197,37 +2243,47 @@
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a" id="faq-a-2" hidden>
-        Kaptea deploys dedicated instances in days, not months. No heavy engineering lift required. Connect your Twilio or Telnyx account and configure through a single interface. Most customers are live within a week of contract signature.
+        Hours, not weeks. Kaptea ships a dedicated instance ready to configure, with no heavy engineering lift. Connect your Twilio or Telnyx account, set your workflows and templates, and your first critical event can run within days of contract signature.
       </div>
     </div>
 
     <div class="faq-item" role="listitem">
       <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
-        What security certifications does Kaptea hold?
+        How does the AI know when to escalate to a human?
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a" id="faq-a-3" hidden>
-        Kaptea holds ISO 27001 certification, Cyber Essentials Plus, and CREST accreditation. We offer GDPR Data Processor Agreements with EU, UK and US data residency options, and operate on SOC 2-compliant infrastructure.
+        Master prompts and guardrails define what the conversational AI is allowed to handle and what must always be sent to a person. The moment a conversation exceeds those bounds, sentiment shift, regulatory question, a complaint that needs a real response, the customer is routed to a live agent with the full conversation context already in front of them. No re-explaining, no handoff dead-zone.
       </div>
     </div>
 
     <div class="faq-item" role="listitem">
       <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
-        Does Kaptea replace our existing carrier relationship?
+        Can we prove every customer was reached and every case closed?
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a" id="faq-a-4" hidden>
-        No. Kaptea sits as an orchestration and governance layer above your existing carrier relationships. You bring your own Twilio or Telnyx account, or we can help you establish one. Your carrier rates and relationships remain yours.
+        Yes. Every message carries a per-message audit trail. Customer-confirmed closure is recorded on each case, so the question 'did everyone affected get the message and respond?' has a single-export answer. Regulator-ready by default, not as a build-out.
       </div>
     </div>
 
     <div class="faq-item" role="listitem">
       <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5">
-        Is Kaptea suitable for regulated industries?
+        What security and compliance certifications does Kaptea hold?
         <span class="faq-icon" aria-hidden="true"></span>
       </button>
       <div class="faq-a" id="faq-a-5" hidden>
-        Kaptea was purpose-built for regulated organisations. Every deployment is a dedicated instance - no shared tenancy. Built-in audit trails, GDPR-compliant consent management, role-based access controls, and automated compliance reporting are included in every plan.
+        ISO 27001 certified, Cyber Essentials Plus, CREST accredited. Twilio Gold Partner with AI Certification. GDPR Data Processor Agreements with EU, UK or US data residency. Every deployment is a dedicated instance, not shared tenancy. Built for utilities, financial services, healthcare and transport from the ground up.
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6">
+        Does Kaptea replace our existing carrier relationship?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="faq-a-6" hidden>
+        No. Kaptea sits as the orchestration and governance layer above your existing carriers. Bring your own Twilio or Telnyx account, or we'll help you stand one up. Your carrier rates and relationships stay yours.
       </div>
     </div>
 
