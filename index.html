@@ -403,14 +403,7 @@
       display: block;
     }
     /* Headline wraps naturally: line 1 is "Critical communications for enterprises" */
-    .hero h1 em {
-      color: var(--kaptea-red);
-      font-style: normal;
-      /* Soft warm glow around the red accent phrase. Effect sits
-         around the brand colour, not on it - keeps the colour itself
-         flat #dc2727, so the no-gradient brand rule isn't broken. */
-      text-shadow: 0 0 32px rgba(220, 39, 39, 0.45);
-    }
+    .hero h1 em { color: var(--kaptea-red); font-style: normal; }
     .hero p {
       font-size: 19px;
       color: rgba(255, 255, 255, 0.62);
@@ -490,7 +483,26 @@
     .integrations-band .section-title {
       text-align: center;
     }
-    .section-dark { background: var(--kaptea-surface-muted); color: var(--kaptea-charcoal); }
+    /* Truly-dark section variant. Currently used only by the
+       'Why Kaptea / Built differently' section. */
+    .section-dark { background: var(--kaptea-charcoal); color: var(--kaptea-white); }
+    .section-dark .section-title-light { color: var(--kaptea-white); }
+    .section-dark .section-sub-light { color: rgba(255, 255, 255, 0.6); }
+    .section-dark .diff-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .section-dark .diff-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      transform: translateY(-2px);
+    }
+    .section-dark .diff-card h3 { color: var(--kaptea-white); }
+    .section-dark .diff-card p { color: rgba(255, 255, 255, 0.6); }
+    .section-dark .diff-icon {
+      background: rgba(220, 39, 39, 0.15);
+      color: var(--kaptea-red);
+    }
     .inner { max-width: 1160px; margin: 0 auto; }
 .section-label-light { color: var(--kaptea-red); }
     .section-title {
@@ -1864,10 +1876,10 @@
 
       <div class="diff-card">
         <div class="diff-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
         </div>
-        <h3>99.5% average delivery rate</h3>
-        <p>Outcome-based pricing. You pay for messages delivered, not infrastructure managed. Transparent, verifiable, and backed by real delivery data across all customers.</p>
+        <h3>AI and humans, closing every loop.</h3>
+        <p>Conversational AI absorbs the inbound. Smart escalation to a live agent the moment it matters. Customer-confirmed closure on every case. Full audit trail, end to end.</p>
       </div>
 
       <div class="diff-card">
