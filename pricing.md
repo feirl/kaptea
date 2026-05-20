@@ -48,7 +48,7 @@ Conversational AI (agent builder, conversation intelligence, sentiment analysis)
 Kaptea does not offer a self-serve free trial. We run scoped proof-of-concept deployments with qualified enterprise buyers. Book a demo to discuss.
 
 **How quickly can we go live?**
-Most customers are live within a week of contract signature. Dedicated instance provisioning takes hours; configuration and testing typically takes 2-5 days.
+Most customers are live within hours of contract signature. Dedicated instance provisioning takes hours, with configuration and testing layered on from there.
 
 ## Book a Demo
 

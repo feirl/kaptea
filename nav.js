@@ -78,7 +78,7 @@
             <div class="mega-section">
               <div class="mega-section-title"><a href="/deployment-infrastructure">Deployment &amp; Infrastructure</a></div>
               <ul class="mega-links">
-                <li class="mega-detail">Dedicated instance in days</li>
+                <li class="mega-detail">Dedicated instance in hours</li>
                 <li class="mega-detail">Cloud-managed infrastructure</li>
                 <li class="mega-detail">EU, UK or US data residency</li>
               </ul>
