@@ -505,6 +505,9 @@
     }
     .inner { max-width: 1160px; margin: 0 auto; }
 .section-label-light { color: var(--kaptea-red); }
+    /* Default section headings: centered, with text-wrap balance so
+       multi-line titles distribute evenly instead of orphaning. */
+    .section-label { text-align: center; }
     .section-title {
       font-size: 36px;
       font-family: 'Manrope', sans-serif; font-weight: 700;
@@ -512,16 +515,34 @@
       color: var(--kaptea-charcoal);
       margin-bottom: 16px;
       letter-spacing: -0.02em;
+      text-align: center;
+      text-wrap: balance;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .section-title-light { color: var(--kaptea-charcoal); }
     .section-sub {
       font-size: 17px;
       color: var(--kaptea-tagline-grey);
-      max-width: 600px;
+      max-width: 720px;
       line-height: 1.65;
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 56px;
+      text-align: center;
     }
     .section-sub-light { color: var(--kaptea-tagline-grey); }
+
+    /* Why Kaptea is the one editorial / manifesto section: left-anchor
+       the heading block instead of centering it. */
+    .section-dark .section-label,
+    .section-dark .section-title,
+    .section-dark .section-sub {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     /* ── SCENARIO SECTION (critical comms, in action) ── */
     .scenario-grid {
@@ -1786,7 +1807,7 @@
 <section class="section section-alt platform-overview-dark">
   <div class="inner">
     <div class="section-label">The platform</div>
-    <div class="section-title">The orchestration layer your<br>communications stack was missing.</div>
+    <div class="section-title">The orchestration layer your communications stack was missing.</div>
     <div class="section-sub">Kaptea sits between your carrier infrastructure and your organisation, adding governance, resilience and control without replacing what you've already built.</div>
 
     <div class="arch-diagram">
@@ -1820,7 +1841,7 @@
 <section class="section">
   <div class="inner">
     <div class="section-label">What we solve</div>
-    <div class="section-title">Three use cases.<br>One operating loop.</div>
+    <div class="section-title">Three use cases. One operating loop.</div>
     <div class="section-sub">Instant outbound. Context-aware AI. Smart human escalation. Customer-confirmed closure. The Pronto loop runs the same way across every use case below, out of the box, in hours not weeks.</div>
 
     <div class="capabilities-grid">
@@ -2058,7 +2079,7 @@
 <section class="section section-alt integrations-band">
   <div class="inner">
     <div class="section-label">Integrations</div>
-    <div class="section-title">Works with the systems<br>you already run.</div>
+    <div class="section-title">Works with the systems you already run.</div>
     <div class="section-sub integration-section-sub">
       <img src="img/integrations/webhook.svg" alt="" width="28" height="28" loading="lazy" decoding="async">
       <span>Open APIs, event-driven webhooks and native CRM sync, built for enterprise integration complexity. No rip-and-replace required.</span>
