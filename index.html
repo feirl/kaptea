@@ -317,18 +317,19 @@
   <style>
 
 
-    /* ── HERO ── */
+    /* ── HERO (dark variant for /index2 comparison) ── */
     .hero {
       background:
-        radial-gradient(ellipse 1100px 550px at 50% 10%, rgba(220,39,39,0.06) 0%, transparent 65%),
-        var(--kaptea-surface-muted);
-      color: var(--kaptea-charcoal);
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.18) 0%, transparent 65%),
+        var(--kaptea-charcoal);
+      color: var(--kaptea-white);
       text-align: center;
       padding: 80px 24px 195px;
       position: relative;
       z-index: 1;
       overflow: visible;
     }
+    .hero h1 { color: var(--kaptea-white); }
     /* Certification strip below logo bar */
     .cert-strip {
       background: var(--kaptea-white);
@@ -405,7 +406,7 @@
     .hero h1 em { color: var(--kaptea-red); font-style: normal; }
     .hero p {
       font-size: 19px;
-      color: var(--kaptea-tagline-grey);
+      color: rgba(255, 255, 255, 0.62);
       max-width: 880px;
       margin: 0 auto 44px;
       line-height: 1.6;
@@ -425,6 +426,16 @@
       transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
     }
     .btn-ghost:hover { border-color: #888888; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
+    /* On dark hero, ghost button needs white text + light border */
+    .hero .btn-ghost {
+      color: var(--kaptea-white);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+    .hero .btn-ghost:hover {
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: none;
+    }
     /* ── LOGO BAR ── */
     .logo-bar {
       background: var(--kaptea-white);
@@ -1233,7 +1244,7 @@
   <style>
     /* ── Platform Preview ───────────────────────────────────────────── */
     .platform-preview {
-      background: linear-gradient(180deg, var(--kaptea-surface-muted) 0%, var(--kaptea-surface-muted) 26%, #1a1d2e 58%, #0d0f1a 100%);
+      background: linear-gradient(180deg, var(--kaptea-charcoal) 0%, #1a1d2e 50%, #0d0f1a 100%);
       padding: 0 40px 0;
       margin-top: -120px;
       position: relative;
