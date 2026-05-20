@@ -26,7 +26,7 @@ Key credentials:
 
 ## Platform: Pronto
 
-Pronto is Kaptea's unified omnichannel communications platform. It is a dedicated-instance SaaS product, not a shared-tenancy system. Each enterprise customer receives their own isolated deployment, provisioned in days.
+Pronto is Kaptea's unified omnichannel communications platform. It is a dedicated-instance SaaS product, not a shared-tenancy system. Each enterprise customer receives their own isolated deployment, provisioned in hours.
 
 ### Channels
 
@@ -69,7 +69,7 @@ Cross-channel failover (email to SMS to branded call). Real-time delivery diagno
 Two-way CRM synchronisation (Salesforce, Microsoft Dynamics 365, HubSpot, Zendesk). Event-driven triggers from any system. Open REST APIs and webhook subscriptions. Dual-payload API enrichment for journey personalisation.
 
 **Deployment and Infrastructure**
-Dedicated instance per customer — no shared tenancy. Cloud-managed on AWS. Customer choice of EU (Dublin), UK (London), or US (Virginia) data residency. Provisioned in days.
+Dedicated instance per customer, no shared tenancy. Cloud-managed on AWS. Customer choice of EU (Dublin), UK (London), or US (Virginia) data residency. Provisioned in hours.
 
 ---
 
