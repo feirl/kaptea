@@ -2,7 +2,7 @@
 // Edit this file once to update the nav across all pages.
 (function () {
   const html = `<nav role="navigation" aria-label="Main navigation">
-  <a href="/" class="nav-logo"><img src="/img/brand/kaptea-logo.svg" alt="Kaptea" height="38" style="display:block;" /></a>
+  <a href="/" class="nav-logo"><img src="/img/brand/kaptea-logo.svg" alt="Kaptea" height="43" style="display:block;" /></a>
 
   <div class="nav-links">
 
