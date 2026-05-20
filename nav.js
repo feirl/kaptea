@@ -2,7 +2,10 @@
 // Edit this file once to update the nav across all pages.
 (function () {
   const html = `<nav role="navigation" aria-label="Main navigation">
-  <a href="/" class="nav-logo"><img src="/img/brand/kaptea-logo.svg" alt="Kaptea" height="43" style="display:block;" /></a>
+  <a href="/" class="nav-logo">
+    <img class="nav-logo-img nav-logo-img--dark" src="/img/brand/kaptea-logo.svg" alt="Kaptea" height="43" />
+    <img class="nav-logo-img nav-logo-img--light" src="/img/brand/kaptea-logo-white.svg" alt="" aria-hidden="true" height="43" />
+  </a>
 
   <div class="nav-links">
 
@@ -333,6 +336,24 @@
           document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('mobile-open'));
         }
       });
+    }
+
+    // Dark-on-top nav: nav stays dark while at the top of the page,
+    // flips to its default white once the user scrolls past the
+    // threshold. Threshold ~60px = roughly one nav height down.
+    const nav = document.querySelector('nav[role="navigation"]');
+    if (nav) {
+      const THRESHOLD = 60;
+      let isAtTop = null;
+      const update = () => {
+        const atTop = window.scrollY < THRESHOLD;
+        if (atTop !== isAtTop) {
+          isAtTop = atTop;
+          nav.classList.toggle('nav--top', atTop);
+        }
+      };
+      update();
+      window.addEventListener('scroll', update, { passive: true });
     }
   }
 

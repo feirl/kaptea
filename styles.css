@@ -161,8 +161,34 @@ nav {
   z-index: 200;
   overflow: visible;
   border-bottom: 1px solid var(--kaptea-border);
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
-.nav-logo { text-decoration: none; display: flex; align-items: center; }
+.nav-logo { text-decoration: none; display: flex; align-items: center; position: relative; }
+/* Dual logo: the dark-on-light logo is the default; the white logo
+   only shows when the nav is in dark .nav--top state */
+.nav-logo-img { display: block; transition: opacity 0.2s ease; }
+.nav-logo-img--light { display: none; }
+nav.nav--top .nav-logo-img--dark { display: none; }
+nav.nav--top .nav-logo-img--light { display: block; }
+
+/* ── DARK-ON-TOP NAV ──
+   While the user is at the top of the page (before scrolling past
+   ~60px), the nav switches to charcoal so it blends with the dark
+   hero on landing pages, and acts as a confident contrasting frame
+   on light-hero pages. The bottom-centred red radial glow mirrors
+   the hero's top-centred red glow so the two meet seamlessly at
+   the seam between nav and hero. */
+nav.nav--top {
+  background-color: var(--kaptea-charcoal) !important;
+  background-image: radial-gradient(ellipse 1100px 120px at 50% 100%, rgba(220, 39, 39, 0.20) 0%, transparent 75%);
+  border-bottom-color: transparent;
+  color: var(--kaptea-white);
+}
+nav.nav--top a,
+nav.nav--top .nav-item > a {
+  color: var(--kaptea-white);
+}
+nav.nav--top .nav-chevron { color: rgba(255, 255, 255, 0.6); }
 .nav-links { display: flex; gap: 0; align-items: stretch; height: 64px; }
 .nav-item { position: static; display: flex; align-items: center; }
 .nav-item > a {
