@@ -189,6 +189,13 @@ nav.nav--top .nav-item > a {
   color: var(--kaptea-white);
 }
 nav.nav--top .nav-chevron { color: rgba(255, 255, 255, 0.6); }
+
+/* Mega menu sits on its own white background — its internal links
+   must NOT inherit the dark-nav white text colour. Restore them. */
+nav.nav--top .mega,
+nav.nav--top .mega a {
+  color: var(--kaptea-charcoal);
+}
 .nav-links { display: flex; gap: 0; align-items: stretch; height: 64px; }
 .nav-item { position: static; display: flex; align-items: center; }
 .nav-item > a {
