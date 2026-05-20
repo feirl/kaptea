@@ -403,7 +403,14 @@
       display: block;
     }
     /* Headline wraps naturally: line 1 is "Critical communications for enterprises" */
-    .hero h1 em { color: var(--kaptea-red); font-style: normal; }
+    .hero h1 em {
+      color: var(--kaptea-red);
+      font-style: normal;
+      /* Soft warm glow around the red accent phrase. Effect sits
+         around the brand colour, not on it - keeps the colour itself
+         flat #dc2727, so the no-gradient brand rule isn't broken. */
+      text-shadow: 0 0 32px rgba(220, 39, 39, 0.45);
+    }
     .hero p {
       font-size: 19px;
       color: rgba(255, 255, 255, 0.62);
