@@ -734,29 +734,32 @@
     .steps-grid::before {
       content: '';
       position: absolute;
-      top: 28px;
-      left: calc(16.66% + 20px);
-      right: calc(16.66% + 20px);
-      height: 2px;
-      background: #e5e7eb;
+      top: 30px;
+      left: calc(16.66% + 30px);
+      right: calc(16.66% + 30px);
+      height: 1px;
+      background: var(--kaptea-border);
       z-index: 0;
     }
     .step { text-align: center; padding: 0 32px; position: relative; z-index: 1; }
     .step-number {
-      width: 56px;
-      height: 56px;
+      width: 60px;
+      height: 60px;
       background: var(--kaptea-red);
       color: white;
-      border-radius: 50%;
-      font-size: 20px;
+      border-radius: 14px;
+      font-size: 18px;
       font-weight: 700;
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: 0.02em;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 20px;
+      margin: 0 auto 24px;
+      box-shadow: 0 6px 18px rgba(220, 39, 39, 0.28);
     }
-    .step h3 { font-size: 18px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 10px; }
-    .step p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.65; }
+    .step h3 { font-size: 20px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 12px; letter-spacing: -0.01em; }
+    .step p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.7; }
     .steps-cta { text-align: center; }
 
     /* ── TESTIMONIALS WALL ── */
@@ -1903,20 +1906,20 @@
     <div class="steps-grid">
 
       <div class="step">
-        <div class="step-number">1</div>
+        <div class="step-number">01</div>
         <h3>Connect</h3>
         <p>Link your Twilio or Telnyx account. Your carriers, your costs. Kaptea just makes them enterprise-ready. Bring your existing Twilio token and you're already halfway there.</p>
       </div>
 
       <div class="step">
-        <div class="step-number">2</div>
+        <div class="step-number">02</div>
         <h3>Configure</h3>
         <p>Set up your channels, workflows, governance rules and CRM integrations through a single interface. No code required for most configurations. Complex logic handled by our team.</p>
       </div>
 
       <div class="step">
-        <div class="step-number">3</div>
-        <h3>Go live</h3>
+        <div class="step-number">03</div>
+        <h3>Go-Live</h3>
         <p>Your dedicated instance is deployed in hours. Your team is onboarded. Kaptea manages Twilio tickets, monitors delivery, and escalates issues before you even see them.</p>
       </div>
 
