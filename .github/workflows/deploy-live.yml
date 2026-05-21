@@ -18,4 +18,6 @@ jobs:
           protocol: ftps
           port: 21
           server-dir: ./
-          dangerous-clean-slate: true
+          exclude: |
+            .git*
+            api/zoho-config.php

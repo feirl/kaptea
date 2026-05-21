@@ -1,0 +1,15 @@
+<?php
+/**
+ * zoho-config.php — Zoho CRM credentials
+ *
+ * HOW TO USE:
+ * 1. Copy this file to api/zoho-config.php on the SERVER (via cPanel File Manager).
+ * 2. Fill in the three values below with the real credentials.
+ * 3. Never commit zoho-config.php to git. It is in .gitignore.
+ *
+ * To regenerate the refresh token, follow Step 1 of the Zoho integration brief.
+ */
+
+define('ZOHO_CLIENT_ID',     'your-client-id-here');
+define('ZOHO_CLIENT_SECRET', 'your-client-secret-here');
+define('ZOHO_REFRESH_TOKEN', 'your-refresh-token-here');

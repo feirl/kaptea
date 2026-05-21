@@ -1,1 +1,5 @@
 BRIEFING.md
+
+# Zoho credentials — create this file on the server via cPanel File Manager
+# Never commit the real zoho-config.php
+api/zoho-config.php
