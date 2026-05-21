@@ -88,7 +88,7 @@
             </div>
 
             <div class="mega-pronto-cta">
-              <a href="/pronto">See Pronto in Action →</a>
+              <a href="/get-started">See Pronto in Action →</a>
             </div>
 
           </div>
