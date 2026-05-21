@@ -901,6 +901,38 @@
       .gs-step-question { font-size: 1.375rem; }
     }
   </style>
+
+  <!-- Analytics (consent-gated via cookie manager) -->
+  <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-JKZ4JHK73L"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKZ4JHK73L', { anonymize_ip: true });
+  </script>
+  <script type="text/plain" data-consent="marketing">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="marketing" async src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Get Started with Kaptea",
+    "url": "https://kaptea.io/get-started",
+    "description": "Start your Kaptea onboarding. Answer a few questions about your communications needs and we will configure your dedicated Pronto instance.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaptea.io/"},
+        {"@type": "ListItem", "position": 2, "name": "Get Started", "item": "https://kaptea.io/get-started"}
+      ]
+    },
+    "isPartOf": {"@id": "https://kaptea.io/#organization"}
+  }
+  </script>
 </head>
 <body>
 
