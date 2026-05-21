@@ -173,6 +173,11 @@
 
           <!-- RIGHT: Industries -->
           <div class="mega-right">
+            <div class="mega-panel-label" style="color: var(--kaptea-red);">Our Offering</div>
+            <ul class="mega-links" style="margin-bottom: 28px;">
+              <li><a href="/pronto">Pronto Platform</a></li>
+              <li><a href="/professional-services">Professional Services</a></li>
+            </ul>
             <div class="mega-panel-label">Industries</div>
             <div class="mega-industry-grid">
 
@@ -250,7 +255,6 @@
     </div>
 
     <div class="nav-item"><a href="/pricing">Pricing</a></div>
-    <div class="nav-item"><a href="/professional-services">Services</a></div>
     <div class="nav-item" id="nav-resources">
       <a href="#">Resources <span class="nav-chevron">▾</span></a>
       <div class="mega mega-resources">
