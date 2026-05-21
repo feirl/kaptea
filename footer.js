@@ -423,6 +423,16 @@
         </ul>
       </div>
 
+      <!-- Services -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/professional-services">Professional Services</a></li>
+          <li><a href="/implementation">Implementation</a></li>
+          <li><a href="/support">Support</a></li>
+        </ul>
+      </div>
+
       <!-- Resources -->
       <div class="footer-col">
         <h4>Resources</h4>
@@ -435,18 +445,8 @@
         </ul>
       </div>
 
-      <!-- Services -->
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="/professional-services">Professional Services</a></li>
-          <li><a href="/implementation">Implementation</a></li>
-          <li><a href="/support">Support</a></li>
-        </ul>
-      </div>
-
       <!-- Company -->
-      <div class="footer-col">
+      <div class="footer-col" style="grid-column: 6;">
         <h4>Company</h4>
         <ul>
           <li><a href="/about">About</a></li>
