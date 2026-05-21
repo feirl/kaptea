@@ -42,8 +42,10 @@ img { max-width: 100%; display: block; }
     
     /* ── HERO ── */
     .hero {
-      background: var(--kaptea-surface-muted);
-      color: var(--kaptea-charcoal);
+      background:
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220, 39, 39, 0.18) 0%, transparent 65%),
+        var(--kaptea-charcoal);
+      color: var(--kaptea-white);
       text-align: left;
       padding: 80px 40px 72px;
     }
@@ -69,18 +71,19 @@ img { max-width: 100%; display: block; }
     .hero-breadcrumb a { color: var(--kaptea-red); text-decoration: none; }
     .hero-breadcrumb a:hover { text-decoration: underline; }
     .hero-breadcrumb .bc-sep { color: var(--kaptea-border); }
-    .hero-breadcrumb .bc-current { color: var(--kaptea-charcoal); }
+    .hero-breadcrumb { color: rgba(255,255,255,0.5); }
+    .hero-breadcrumb .bc-current { color: rgba(255,255,255,0.75); }
     .hero h1 {
       font-size: 44px;
       font-family: 'Manrope', sans-serif; font-weight: 700;
       line-height: 1.15;
       margin-bottom: 20px;
-      color: var(--kaptea-charcoal);
+      color: var(--kaptea-white);
     }
     .hero h1 span { color: var(--kaptea-red); }
     .hero .hero-sub {
       font-size: 17px;
-      color: var(--kaptea-tagline-grey);
+      color: rgba(255,255,255,0.62);
       line-height: 1.65;
       margin-bottom: 32px;
       max-width: 480px;
@@ -95,39 +98,39 @@ img { max-width: 100%; display: block; }
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: var(--kaptea-white);
-      border: 1px solid var(--kaptea-border);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.18);
       border-radius: 99px;
       padding: 4px 12px;
       font-size: 12px;
       font-weight: 600;
-      color: var(--kaptea-charcoal);
+      color: var(--kaptea-white);
     }
     .channel-pill svg { color: var(--kaptea-red); flex-shrink: 0; }
     .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn-primary:hover { background: var(--kaptea-red-hover); box-shadow: 0 4px 12px rgba(220,39,39,0.3); transform: translateY(-1px); }
     .btn-ghost {
-      color: var(--kaptea-charcoal);
+      color: var(--kaptea-white);
       padding: 12px 28px;
       border-radius: 6px;
       font-weight: 600;
       font-size: 15px;
       text-decoration: none;
-      border: 1px solid var(--kaptea-border);
+      border: 1px solid rgba(255,255,255,0.25);
       display: inline-flex;
       align-items: center;
       gap: 8px;
       transition: border-color 0.15s ease, color 0.15s ease;
     }
-    .btn-ghost:hover { border-color: var(--kaptea-charcoal); color: var(--kaptea-charcoal); }
+    .btn-ghost:hover { border-color: var(--kaptea-white); color: var(--kaptea-white); }
     .hero-visual {
-      background: var(--kaptea-surface-muted);
+      background: rgba(255,255,255,0.04);
       border-radius: 12px;
       min-height: 340px;
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      border: 1px solid var(--kaptea-border);
+      border: 1px solid rgba(255,255,255,0.12);
       overflow: hidden;
       padding: 0;
     }

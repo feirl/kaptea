@@ -4,7 +4,7 @@
   const html = `<nav role="navigation" aria-label="Main navigation">
   <a href="/" class="nav-logo">
     <img class="nav-logo-img nav-logo-img--dark" src="/img/brand/kaptea-logo.svg" alt="Kaptea" height="43" />
-    <img class="nav-logo-img nav-logo-img--light" src="/img/brand/kaptea-logo-white.svg" alt="" aria-hidden="true" height="43" />
+    <img class="nav-logo-img nav-logo-img--light" src="/img/brand/kaptea-logo-dark-bg.svg" alt="" aria-hidden="true" height="43" />
   </a>
 
   <div class="nav-links">

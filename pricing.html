@@ -34,16 +34,18 @@
   <style>
 /* ── HERO ── */
     .hero {
-      background: var(--kaptea-surface-muted);
-      color: var(--kaptea-charcoal);
+      background:
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220, 39, 39, 0.18) 0%, transparent 65%),
+        var(--kaptea-charcoal);
+      color: var(--kaptea-white);
       text-align: center;
       padding: 72px 24px 56px;
     }
     .hero-label {
       display: inline-block;
-      background: rgba(220,39,39,0.08);
+      background: rgba(220,39,39,0.16);
       color: var(--kaptea-red);
-      border: 1px solid rgba(220,39,39,0.2);
+      border: 1px solid rgba(220,39,39,0.35);
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -58,11 +60,12 @@
       line-height: 1.15;
       max-width: 680px;
       margin: 0 auto 16px;
+      color: var(--kaptea-white);
     }
     .hero h1 span { color: var(--kaptea-red); }
     .hero p {
       font-size: 17px;
-      color: var(--kaptea-tagline-grey);
+      color: rgba(255, 255, 255, 0.62);
       max-width: 520px;
       margin: 0 auto 32px;
       line-height: 1.6;

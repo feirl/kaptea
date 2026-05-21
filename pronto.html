@@ -68,18 +68,20 @@
 
     /* ── HERO ── */
     .hero {
-      background: var(--kaptea-surface-muted);
-      color: var(--kaptea-charcoal);
+      background:
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220, 39, 39, 0.18) 0%, transparent 65%),
+        var(--kaptea-charcoal);
+      color: var(--kaptea-white);
       text-align: center;
       padding: 80px 24px 160px;
     }
     .hero-inner { max-width: 800px; margin: 0 auto; }
     .hero-breadcrumb {
       font-size: 13px;
-      color: #888888;
+      color: rgba(255, 255, 255, 0.5);
       margin-bottom: 24px;
     }
-    .hero-breadcrumb a { color: #888888; text-decoration: none; }
+    .hero-breadcrumb a { color: rgba(255, 255, 255, 0.5); text-decoration: none; }
     .hero-breadcrumb a:hover { color: var(--kaptea-red); }
     .hero-breadcrumb span { margin: 0 6px; }
     .hero-logo { height: 40px; margin-bottom: 24px; }
@@ -89,16 +91,29 @@
       line-height: 1.1;
       margin-bottom: 20px;
       letter-spacing: -0.02em;
+      color: var(--kaptea-white);
     }
     .hero h1 em { color: var(--kaptea-red); font-style: normal; }
     .hero-sub {
       font-size: 18px;
-      color: var(--kaptea-tagline-grey);
+      color: rgba(255, 255, 255, 0.62);
       max-width: 620px;
       margin: 0 auto 40px;
       line-height: 1.65;
     }
     .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    /* Ghost button on dark hero */
+    .hero .btn-ghost,
+    .hero .btn-secondary {
+      color: var(--kaptea-white);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+    .hero .btn-ghost:hover,
+    .hero .btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: none;
+    }
 
     /* ── BUTTONS ── */
 .btn-primary:hover { background: var(--kaptea-red-hover); box-shadow: 0 4px 12px rgba(220,39,39,0.3); transform: translateY(-1px); }
@@ -514,7 +529,7 @@
 
     /* ── PLATFORM PREVIEW ── */
     .platform-preview {
-      background: linear-gradient(180deg, var(--kaptea-surface-muted) 0%, var(--kaptea-surface-muted) 26%, #1a1d2e 58%, #0d0f1a 100%);
+      background: linear-gradient(180deg, var(--kaptea-charcoal) 0%, #1a1d2e 50%, #0d0f1a 100%);
       padding: 0 40px 0;
       margin-top: -120px;
       position: relative;
@@ -523,14 +538,9 @@
       overflow: visible;
     }
     .platform-preview-inner {
-      max-width: 1060px;
+      max-width: 1000px;
       margin: 0 auto;
       padding-top: 0;
-    }
-    @media (min-width: 1440px) {
-      .platform-preview-inner {
-        max-width: 1230px;
-      }
     }
     .platform-preview-inner > img {
       display: block;
