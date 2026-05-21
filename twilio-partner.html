@@ -329,14 +329,14 @@
       align-items: flex-start;
       gap: 14px;
       padding: 14px 0;
-      border-bottom: 1px solid var(--kaptea-border);
+      border-bottom: 1px solid rgba(255,255,255,0.09);
     }
     .impl-step:last-child { border-bottom: none; }
     .impl-num {
       width: 26px;
       height: 26px;
       border-radius: 50%;
-      background: rgba(220,39,39,0.1);
+      background: rgba(220,39,39,0.18);
       color: var(--kaptea-red);
       font-size: 11px;
       font-weight: 700;
@@ -346,8 +346,8 @@
       flex-shrink: 0;
       margin-top: 1px;
     }
-    .impl-step-text { font-size: 13px; color: var(--kaptea-charcoal); line-height: 1.5; }
-    .impl-step-text strong { color: var(--kaptea-charcoal); font-weight: 600; }
+    .impl-step-text { font-size: 13px; color: rgba(255,255,255,0.72); line-height: 1.55; }
+    .impl-step-text strong { color: rgba(255,255,255,0.95); font-weight: 600; display: block; margin-bottom: 2px; }
 
     /* Twilio product grid */
     .twilio-product-grid {
@@ -482,14 +482,270 @@
     .reassurance span { font-size: 12px; color: var(--kaptea-tagline-grey); display: flex; align-items: center; gap: 6px; }
     .reassurance span::before { content: '✓'; color: var(--kaptea-red); font-weight: 700; }
 
+    /* ── PARTNER CREDENTIALS STRIP ── */
+    .partner-strip {
+      background: var(--kaptea-charcoal);
+      padding: 40px 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .partner-strip-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .partner-credential {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .partner-credential-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(220,39,39,0.12);
+      border: 1px solid rgba(220,39,39,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--kaptea-red);
+    }
+    .partner-credential-text strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 3px;
+      font-family: 'Manrope', sans-serif;
+    }
+    .partner-credential-text span {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.5;
+    }
+
+    /* ── GOLD PARTNER SECTION ── */
+    .gold-section {
+      padding: 80px 40px;
+      background: var(--kaptea-white);
+      border-top: 1px solid var(--kaptea-border);
+    }
+    .gold-inner { max-width: 1080px; margin: 0 auto; }
+    .gold-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+    .gold-header h2 {
+      font-size: 32px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.25;
+    }
+    .gold-header h2 span { color: var(--kaptea-red); }
+    .gold-header-right p {
+      font-size: 15px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .gold-badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .gold-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(220,39,39,0.06);
+      border: 1px solid rgba(220,39,39,0.18);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--kaptea-red);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .gold-benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .gold-benefit {
+      padding: 28px;
+      border: 1px solid var(--kaptea-border);
+      border-radius: 8px;
+      background: var(--kaptea-surface-muted);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .gold-benefit:hover { border-color: rgba(220,39,39,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+    .gold-benefit-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(220,39,39,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--kaptea-red);
+      margin-bottom: 14px;
+    }
+    .gold-benefit h3 {
+      font-size: 14px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 8px;
+    }
+    .gold-benefit p {
+      font-size: 13px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.6;
+    }
+
+    /* ── AI EXPERTISE SECTION ── */
+    .ai-section {
+      padding: 80px 40px;
+      background: var(--kaptea-charcoal);
+      color: var(--kaptea-white);
+    }
+    .ai-inner { max-width: 1080px; margin: 0 auto; }
+    .ai-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+    .ai-header h2 {
+      font-size: 32px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: var(--kaptea-white);
+      line-height: 1.25;
+    }
+    .ai-header h2 span { color: var(--kaptea-red); }
+    .ai-header-right p {
+      font-size: 15px;
+      color: var(--kaptea-neutral-grey);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .ai-partner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(220,39,39,0.12);
+      border: 1px solid rgba(220,39,39,0.25);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .ai-partner-badge svg { color: var(--kaptea-red); }
+    .ai-capabilities {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .ai-cap {
+      background: rgba(255,255,255,0.03);
+      padding: 28px;
+      transition: background 0.2s;
+    }
+    .ai-cap:hover { background: rgba(255,255,255,0.06); }
+    .ai-cap-icon {
+      width: 38px;
+      height: 38px;
+      background: rgba(220,39,39,0.12);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--kaptea-red);
+      margin-bottom: 14px;
+    }
+    .ai-cap h3 {
+      font-size: 14px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 8px;
+    }
+    .ai-cap p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+    .ai-products {
+      margin-top: 40px;
+      padding: 28px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .ai-products-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.3);
+      white-space: nowrap;
+    }
+    .ai-product-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .ai-product-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.75);
+    }
+    .ai-product-chip svg { color: var(--kaptea-red); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .hero { padding: 56px 24px 48px; }
       .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .partner-strip { padding: 32px 24px; }
+      .partner-strip-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
       .pain-strip { padding: 48px 24px; }
       .pain-grid { grid-template-columns: 1fr 1fr; }
       .how-section { padding: 56px 24px; }
       .how-block { gap: 40px; }
+      .gold-section { padding: 56px 24px; }
+      .gold-header { grid-template-columns: 1fr; gap: 28px; }
+      .gold-benefits { grid-template-columns: 1fr 1fr; }
+      .ai-section { padding: 56px 24px; }
+      .ai-header { grid-template-columns: 1fr; gap: 28px; }
+      .ai-capabilities { grid-template-columns: 1fr 1fr; }
+      .ai-products { grid-template-columns: 1fr; gap: 16px; }
       .metrics-inner { grid-template-columns: repeat(2, 1fr); }
       .proof-section { padding: 56px 24px; }
       .proof-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -503,6 +759,8 @@
       .hero-visual { min-height: 200px; }
       .hero-ctas { flex-direction: column; align-items: stretch; }
       .hero-ctas a { text-align: center; justify-content: center; }
+      .partner-strip { padding: 28px 20px; }
+      .partner-strip-inner { grid-template-columns: 1fr 1fr; gap: 20px; }
       .pain-strip { padding: 40px 20px; }
       .pain-strip h2 { font-size: 22px; }
       .pain-grid { grid-template-columns: 1fr; }
@@ -510,6 +768,12 @@
       .how-inner > h2 { font-size: 22px; }
       .how-block, .how-block.reverse { grid-template-columns: 1fr; gap: 24px; direction: ltr; }
       .how-block.reverse > * { direction: ltr; }
+      .gold-section { padding: 48px 20px; }
+      .gold-header h2 { font-size: 24px; }
+      .gold-benefits { grid-template-columns: 1fr; }
+      .ai-section { padding: 48px 20px; }
+      .ai-header h2 { font-size: 24px; }
+      .ai-capabilities { grid-template-columns: 1fr; }
       .metrics-strip { padding: 40px 20px; }
       .metrics-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
       .metric-item h3 { font-size: 28px; }
@@ -596,12 +860,68 @@
     <div class="hero-visual">
       <img src="img/brand/twilio-logo.png" alt="Twilio" class="hero-twilio-logo">
       <div class="hero-visual-divider"></div>
-      <div class="hero-partner-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <span>Certified Twilio</span> Implementation Partner
+      <div style="display:flex;flex-direction:column;gap:10px;width:100%;max-width:280px;">
+        <div class="hero-partner-badge" style="justify-content:center;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Gold Consulting Partner</span>
+        </div>
+        <div class="hero-partner-badge" style="justify-content:center;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          <span>AI Partner</span>
+        </div>
       </div>
-      <span style="font-size:11px;color:var(--kaptea-neutral-grey);letter-spacing:0.04em;text-align:center;max-width:200px;line-height:1.5;">Kaptea operationalises the full Twilio stack for regulated enterprises</span>
+      <span style="font-size:11px;color:var(--kaptea-neutral-grey);letter-spacing:0.04em;text-align:center;max-width:220px;line-height:1.5;">Kaptea operationalises the full Twilio stack for regulated enterprises</span>
     </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     PARTNER CREDENTIALS
+═══════════════════════════════ -->
+<section class="partner-strip">
+  <div class="partner-strip-inner">
+
+    <div class="partner-credential">
+      <div class="partner-credential-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div class="partner-credential-text">
+        <strong>Twilio Gold Consulting Partner</strong>
+        <span>Top-tier designation, awarded to fewer than 5% of Twilio's global partner network</span>
+      </div>
+    </div>
+
+    <div class="partner-credential">
+      <div class="partner-credential-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      </div>
+      <div class="partner-credential-text">
+        <strong>Twilio AI Partner</strong>
+        <span>Certified in Twilio AI products: voice intelligence, conversational AI, and intelligent routing</span>
+      </div>
+    </div>
+
+    <div class="partner-credential">
+      <div class="partner-credential-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="partner-credential-text">
+        <strong>ISO 27001 Certified</strong>
+        <span>End-to-end security controls: Kaptea and Twilio certifications stack for regulated industries</span>
+      </div>
+    </div>
+
+    <div class="partner-credential">
+      <div class="partner-credential-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="partner-credential-text">
+        <strong>10M+ messages annually</strong>
+        <span>Delivered for regulated enterprise customers across utilities, financial services, and healthcare</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -758,6 +1078,189 @@
           <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Cross-channel failover: automatic rerouting on delivery failure</span></div>
           <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Single governance framework across every Twilio product</span></div>
           <div class="feat-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2727" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>New Twilio products slot in without a separate build</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     GOLD PARTNERSHIP
+═══════════════════════════════ -->
+<section class="gold-section">
+  <div class="gold-inner">
+    <div class="section-label">Twilio Gold Consulting Partner</div>
+    <div class="gold-header">
+      <div>
+        <h2>The highest tier. What it means<br>for your <span>deployment.</span></h2>
+      </div>
+      <div class="gold-header-right">
+        <p>Twilio Gold Consulting Partner is the highest tier in Twilio's global partner programme. It is awarded annually, not granted permanently, and requires demonstrated delivery excellence across technical certifications, customer outcomes, and commercial volume. Fewer than 5% of Twilio's partner network hold it.</p>
+        <p>For customers, Gold status translates directly into better access, faster escalation, and commercial terms that a standard Twilio account cannot obtain.</p>
+        <div class="gold-badge-row">
+          <span class="gold-badge">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Gold Consulting Partner
+          </span>
+          <span class="gold-badge">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            AI Partner
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gold-benefits">
+
+      <div class="gold-benefit">
+        <div class="gold-benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Direct partner engineering access</h3>
+        <p>Gold Partners have a dedicated Twilio partner engineering contact. Escalations bypass standard support queues and go directly to Twilio's engineering team. For regulated enterprises where a platform issue has compliance implications, that direct line is not optional.</p>
+      </div>
+
+      <div class="gold-benefit">
+        <div class="gold-benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3>Roadmap access and early product briefings</h3>
+        <p>Kaptea receives regular briefings on Twilio's product roadmap, including features in development and planned API changes. That visibility means Pronto evolves in step with Twilio's platform, and customers are never caught off-guard by deprecations or breaking changes.</p>
+      </div>
+
+      <div class="gold-benefit">
+        <div class="gold-benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Commercial terms unavailable through direct Twilio</h3>
+        <p>Gold Partner status unlocks pricing structures and volume commitments that are not available on a standard Twilio account. Kaptea's customers benefit from those commercial terms as part of their Pronto deployment, without negotiating directly with Twilio's enterprise sales team.</p>
+      </div>
+
+      <div class="gold-benefit">
+        <div class="gold-benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Proven delivery track record</h3>
+        <p>Gold status requires a portfolio of successful, live Twilio implementations reviewed by Twilio directly. It is not self-declared. Every customer Kaptea deploys for benefits from an implementation team whose track record has been independently validated by Twilio at the highest partner tier.</p>
+      </div>
+
+      <div class="gold-benefit">
+        <div class="gold-benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Joint compliance and security support</h3>
+        <p>Gold Partners have access to Twilio's security and compliance team for joint customer engagements. When a regulated enterprise needs evidence for an auditor or a regulator, Kaptea can bring Twilio's compliance documentation directly into that process, alongside Kaptea's own ISO 27001 certification.</p>
+      </div>
+
+      <div class="gold-benefit">
+        <div class="gold-benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Named Twilio contacts throughout your deployment</h3>
+        <p>Gold Partners introduce named Twilio counterparts into customer engagements at the commercial and technical level. You are not dealing with a faceless support queue. There are named people at Twilio who know your account, your architecture, and your delivery timeline.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     AI EXPERTISE
+═══════════════════════════════ -->
+<section class="ai-section">
+  <div class="ai-inner">
+    <div class="section-label" style="color: var(--kaptea-red);">Twilio AI Partner</div>
+    <div class="ai-header">
+      <div>
+        <h2>AI that works inside<br>your communications layer,<br>not alongside it.</h2>
+      </div>
+      <div class="ai-header-right">
+        <p>Kaptea holds Twilio AI Partner certification, the designation for partners with demonstrated expertise in building and deploying Twilio's AI-powered products in production environments. That includes Voice Intelligence, ConversationalAI, intelligent contact routing in Twilio Flex, and AI-triggered escalation workflows.</p>
+        <p>In Pronto, AI is not a bolt-on. It sits inside the same governed platform, subject to the same compliance controls, with the same audit trail as every other channel. You do not need a separate AI system or a separate integration. It is already there.</p>
+        <div class="ai-partner-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          Certified Twilio AI Partner
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-capabilities">
+
+      <div class="ai-cap">
+        <div class="ai-cap-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Conversational AI and master prompts</h3>
+        <p>Deploy AI-powered conversations across SMS, WhatsApp, and voice. Define master prompts and guardrails through Pronto's governed interface. The AI handles triage, qualification, and information collection. Humans take over when it matters, with full context already captured.</p>
+      </div>
+
+      <div class="ai-cap">
+        <div class="ai-cap-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Voice Intelligence and call transcription</h3>
+        <p>Twilio Voice Intelligence transcribes and analyses every call in real time. Pronto surfaces those insights inside the same compliance dashboard as your messaging audit trail. Intent detection, sentiment scoring, and keyword alerts feed directly into escalation workflows.</p>
+      </div>
+
+      <div class="ai-cap">
+        <div class="ai-cap-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Intelligent routing and live escalation</h3>
+        <p>Route inbound contacts based on intent, sentiment, and conversation history, not just IVR keypresses. When the AI detects an escalation signal (distress, complexity, regulatory language), the call or message hands over to the right agent automatically, with the full transcript in view.</p>
+      </div>
+
+      <div class="ai-cap">
+        <div class="ai-cap-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>AI within compliance guardrails</h3>
+        <p>Every AI interaction in Pronto is subject to the same governance controls as a manually sent message. Template approval applies to AI response flows. The audit trail captures AI-initiated actions. Role-based access governs who can configure AI behaviour. Regulators see a complete, consistent record.</p>
+      </div>
+
+      <div class="ai-cap">
+        <div class="ai-cap-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </div>
+        <h3>Knowledge base and data capture</h3>
+        <p>Connect AI conversations to your existing knowledge base, so the AI draws on approved, version-controlled content. Structured data captured during AI interactions (contact details, issue category, intent confirmed) flows directly into your CRM without manual entry or post-processing.</p>
+      </div>
+
+      <div class="ai-cap">
+        <div class="ai-cap-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>AI implementation and configuration</h3>
+        <p>As a certified Twilio AI Partner, Kaptea designs, builds, and deploys AI-powered workflows for regulated enterprises. That includes prompt engineering, guardrail configuration, escalation logic, and CRM integration. You benefit from a team that has done this in production, not in a sandbox.</p>
+      </div>
+
+    </div>
+
+    <div class="ai-products">
+      <div class="ai-products-label">Twilio AI products</div>
+      <div class="ai-product-chips">
+        <span class="ai-product-chip">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          ConversationalAI
+        </span>
+        <span class="ai-product-chip">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Voice Intelligence
+        </span>
+        <span class="ai-product-chip">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          AI Messaging
+        </span>
+        <span class="ai-product-chip">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Flex AI Routing
+        </span>
+        <span class="ai-product-chip">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Verify AI
+        </span>
       </div>
     </div>
 
@@ -937,11 +1440,21 @@
 
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" aria-controls="faq6">
-          Is Kaptea an official Twilio partner?
+          Is Kaptea an official Twilio partner, and what does Gold status mean?
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-a" id="faq6" hidden>
-          Yes. Kaptea is a certified Twilio implementation partner with direct access to Twilio's partner engineering, commercial, and support teams. This means faster issue escalation, access to Twilio's product roadmap, and commercial terms that benefit Kaptea customers.
+          Yes. Kaptea holds Twilio Gold Consulting Partner status, the highest tier in Twilio's global partner programme. Gold is awarded to fewer than 5% of Twilio's partner network, based on technical certifications, a reviewed portfolio of live customer deployments, and commercial volume. It grants Kaptea direct access to Twilio's partner engineering team, access to product roadmap briefings, joint compliance support for regulated customer engagements, and commercial terms unavailable on a standard Twilio account.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq7">
+          What does Twilio AI Partner status mean in practice?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq7" hidden>
+          Twilio AI Partner is a separate designation from the consulting partnership, awarded to partners that have demonstrated expertise in building and deploying Twilio's AI products in live production environments. For Kaptea, that covers Twilio ConversationalAI (for automated inbound handling across SMS, WhatsApp, and voice), Twilio Voice Intelligence (real-time transcription and sentiment analysis), intelligent routing within Twilio Flex, and AI-triggered escalation workflows. In Pronto, AI capability is governed by the same compliance framework as every other channel, so regulated enterprises can deploy AI without creating a separate, ungoverned communication stream.
         </div>
       </div>
 
@@ -987,10 +1500,11 @@
 ═══════════════════════════════ -->
 <section class="cta-close">
   <h2>Ready to get Twilio working at enterprise scale?</h2>
-  <p>Book a 15-minute call with the Kaptea team. We'll show you exactly how Pronto works on top of Twilio, and what a deployment for your organisation would look like.</p>
+  <p>Book a 15-minute call with the Kaptea team. We'll show you exactly how Pronto works on top of Twilio and what a deployment for your organisation would look like.</p>
   <a href="/demo" class="btn-primary">Book a Demo</a>
   <div class="reassurance">
-    <span>Certified Twilio partner</span>
+    <span>Twilio Gold Consulting Partner</span>
+    <span>Twilio AI Partner</span>
     <span>Live in hours, not weeks</span>
     <span>Talk to the team who built it</span>
   </div>
