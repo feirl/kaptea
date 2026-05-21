@@ -250,6 +250,7 @@
     </div>
 
     <div class="nav-item"><a href="/pricing">Pricing</a></div>
+    <div class="nav-item"><a href="/professional-services">Services</a></div>
     <div class="nav-item" id="nav-resources">
       <a href="#">Resources <span class="nav-chevron">▾</span></a>
       <div class="mega mega-resources">
