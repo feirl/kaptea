@@ -196,6 +196,10 @@ nav.nav--top .mega,
 nav.nav--top .mega a {
   color: var(--kaptea-charcoal);
 }
+nav.nav--top .mega .mega-pronto-cta a,
+.mega .mega-pronto-cta a {
+  color: var(--kaptea-white) !important;
+}
 .nav-links { display: flex; gap: 0; align-items: stretch; height: 64px; }
 .nav-item { position: static; display: flex; align-items: center; }
 .nav-item > a {
