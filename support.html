@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Every Kaptea customer gets a dedicated technical account manager, guaranteed response times, and direct escalation - for your entire communications environment." />
+  <link rel="canonical" href="https://kaptea.io/support" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Support - Kaptea" />
+  <meta property="og:description" content="Named support. Guaranteed response. Full stack coverage. A dedicated TAM, guaranteed SLAs, and Twilio Gold Certified expertise across your full communications stack." />
+  <meta property="og:url" content="https://kaptea.io/support" />
+  <meta property="og:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- AI / LLM Crawler Optimisation -->
+  <meta name="ai-content-declaration" content="This page describes Kaptea's customer support offering. Key facts: dedicated technical account manager, 1-hour response SLA for business-critical issues, Twilio Gold Certified Partner, full platform and Twilio stack coverage, named contacts not a ticket queue." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Support",
+    "description": "Every Kaptea customer gets a dedicated technical account manager, guaranteed response times, and direct escalation for your entire communications environment.",
+    "url": "https://kaptea.io/support",
+    "provider": {
+      "@type": "Organization",
+      "name": "Kaptea",
+      "url": "https://kaptea.io/"
+    }
+  }
+  </script>
+
+  <title>Support - Kaptea</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* ── HERO ── */
+    .hero {
+      background:
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220, 39, 39, 0.18) 0%, transparent 65%),
+        var(--kaptea-charcoal);
+      color: var(--kaptea-white);
+      text-align: center;
+      padding: 96px 40px 80px;
+    }
+    .hero-inner { max-width: 760px; margin: 0 auto; }
+    .hero-breadcrumb {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    .hero-breadcrumb a:hover { color: var(--kaptea-white); }
+    .hero h1 {
+      font-size: 48px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: var(--kaptea-white);
+      letter-spacing: -0.02em;
+    }
+    .hero h1 em { color: var(--kaptea-red); font-style: normal; }
+    .hero .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.62);
+      line-height: 1.65;
+      margin-bottom: 36px;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .hero .btn-ghost {
+      color: var(--kaptea-white);
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.25);
+      display: inline-flex;
+      align-items: center;
+    }
+    .hero .btn-ghost:hover { border-color: var(--kaptea-white); }
+
+    /* ── OPENING STATEMENT ── */
+    .opening { padding: 80px 40px; }
+    .opening-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .opening h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); line-height: 1.3; margin-bottom: 0; }
+    .opening-body p { font-size: 16px; color: var(--kaptea-tagline-grey); line-height: 1.75; margin-bottom: 20px; }
+    .opening-body p:last-child { margin-bottom: 0; }
+
+    /* ── WHAT'S INCLUDED ── */
+    .included { padding: 72px 40px; background: var(--kaptea-surface-muted); border-top: 1px solid var(--kaptea-border); }
+    .included-inner { max-width: 1080px; margin: 0 auto; }
+    .included h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 40px; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .feature-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--kaptea-border);
+      align-items: baseline;
+    }
+    .feature-row:first-of-type { border-top: 1px solid var(--kaptea-border); }
+    .feature-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.4;
+    }
+    .feature-desc {
+      font-size: 14px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.6;
+    }
+
+    /* ── TWILIO COVERAGE ── */
+    .twilio { padding: 80px 40px; }
+    .twilio-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .twilio h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); line-height: 1.3; margin-bottom: 20px; }
+    .twilio-body p { font-size: 16px; color: var(--kaptea-tagline-grey); line-height: 1.75; margin-bottom: 20px; }
+    .twilio-body p:last-child { margin-bottom: 0; }
+    .twilio-badges { display: flex; flex-direction: column; gap: 16px; }
+    .twilio-badge {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--kaptea-surface-muted);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 10px;
+      padding: 20px 24px;
+    }
+    .twilio-badge-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: var(--kaptea-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--kaptea-white);
+    }
+    .twilio-badge-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      font-family: 'Manrope', sans-serif;
+      margin-bottom: 2px;
+    }
+    .twilio-badge-text span { font-size: 13px; color: var(--kaptea-tagline-grey); }
+
+    /* ── QUOTES ── */
+    .quotes { padding: 80px 40px; background: var(--kaptea-charcoal); }
+    .quotes-inner { max-width: 1080px; margin: 0 auto; }
+    .quotes h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-white); margin-bottom: 48px; }
+    .quotes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .quote-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 28px;
+    }
+    .quote-mark {
+      font-size: 48px;
+      line-height: 1;
+      color: var(--kaptea-red);
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .quote-card blockquote {
+      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      margin: 0 0 16px;
+      font-style: italic;
+    }
+    .quote-attribution {
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── SLA TABLE ── */
+    .sla { padding: 80px 40px; }
+    .sla-inner { max-width: 1080px; margin: 0 auto; }
+    .sla h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 12px; }
+    .sla-intro { font-size: 15px; color: var(--kaptea-tagline-grey); line-height: 1.65; margin-bottom: 36px; max-width: 560px; }
+    .sla-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .sla-table th { text-align: left; padding: 12px 20px; background: var(--kaptea-charcoal); color: var(--kaptea-white); font-weight: 600; font-size: 13px; }
+    .sla-table th:first-child { border-radius: 8px 0 0 0; }
+    .sla-table th:last-child { border-radius: 0 8px 0 0; }
+    .sla-table td { padding: 16px 20px; border-bottom: 1px solid var(--kaptea-border); color: var(--kaptea-charcoal); vertical-align: top; }
+    .sla-table tr:last-child td { border-bottom: none; }
+    .sla-table tr:nth-child(even) td { background: var(--kaptea-surface-muted); }
+    .sla-priority {
+      font-weight: 700;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+    }
+    .sla-priority.critical { color: var(--kaptea-red); }
+    .sla-priority.degraded { color: #d97706; }
+    .sla-priority.general { color: var(--kaptea-charcoal); }
+    .sla-footnote { font-size: 12px; color: var(--kaptea-neutral-grey); margin-top: 16px; line-height: 1.6; }
+
+    /* ── CREDENTIALS BAR ── */
+    .creds { padding: 48px 40px; background: var(--kaptea-surface-muted); border-top: 1px solid var(--kaptea-border); }
+    .creds-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
+    .creds-pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 16px; }
+    .creds-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--kaptea-white);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 99px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--kaptea-charcoal);
+    }
+    .creds-pill svg { color: var(--kaptea-red); }
+    .creds-note { font-size: 13px; color: var(--kaptea-neutral-grey); line-height: 1.6; }
+
+    /* ── CTA ── */
+    .cta-close { background: var(--kaptea-charcoal); color: white; text-align: center; padding: 80px 40px; }
+    .cta-close h2 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700; margin-bottom: 12px; }
+    .cta-close p { font-size: 17px; color: var(--kaptea-neutral-grey); margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero { padding: 72px 24px 64px; }
+      .opening-inner { grid-template-columns: 1fr; gap: 32px; }
+      .twilio-inner { grid-template-columns: 1fr; gap: 40px; }
+      .quotes-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 56px 24px 48px; }
+      .hero h1 { font-size: 34px; }
+      .hero .hero-sub { font-size: 16px; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .opening { padding: 56px 24px; }
+      .included { padding: 56px 24px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .feature-row { grid-template-columns: 1fr; gap: 4px; padding: 16px 0; }
+      .twilio { padding: 56px 24px; }
+      .quotes { padding: 56px 24px; }
+      .quotes-grid { grid-template-columns: 1fr; }
+      .sla { padding: 56px 24px; }
+      .sla-table { font-size: 13px; display: block; overflow-x: auto; }
+      .creds { padding: 40px 24px; }
+      .cta-close { padding: 56px 24px; }
+      .cta-close h2 { font-size: 26px; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+
+  <!-- ANALYTICS & MARKETING -->
+  <script type="text/plain" data-consent="analytics" async
+    src="https://www.googletagmanager.com/gtag/js?id=G-JKZ4JHK73L"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKZ4JHK73L', { anonymize_ip: true });
+  </script>
+  <script type="text/plain" data-consent="marketing">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="marketing" async
+    src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:var(--kaptea-red);color:var(--kaptea-white);font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<script src="nav.js"></script>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-breadcrumb">
+      <a href="/blog">Resources</a>
+      <span>&#8250;</span>
+      <span>Support</span>
+    </div>
+    <h1>Named support. <em>Guaranteed response.</em> Full stack coverage.</h1>
+    <p class="hero-sub">Every Kaptea customer gets a dedicated technical account manager, guaranteed response times, and direct escalation - for your entire communications environment.</p>
+    <div class="hero-ctas">
+      <a href="/get-started" class="btn-primary">Get Started</a>
+      <a href="/book-a-demo" class="btn-ghost">Talk to Sales</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- OPENING STATEMENT -->
+<section class="opening">
+  <div class="opening-inner">
+    <div>
+      <div class="section-label">How we support you</div>
+      <h2>Support built for mission-critical operations.</h2>
+    </div>
+    <div class="opening-body">
+      <p>When you are running enterprise communications at scale, the quality of support is not a secondary consideration. Response time matters. Context matters. Having a named person who already knows your configuration - before an incident starts - matters.</p>
+      <p>Kaptea provides enterprise-grade support with guaranteed SLAs, a dedicated technical account manager, and a direct escalation line. As a Twilio Gold Certified Partner, our support capability extends across your full communications stack.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT'S INCLUDED -->
+<section class="included">
+  <div class="included-inner">
+    <div class="section-label">Coverage</div>
+    <h2>What's included</h2>
+
+    <div class="feature-grid">
+      <div class="feature-row">
+        <div class="feature-name">Web, phone, and live chat support</div>
+        <div class="feature-desc">Raise and track issues the way that works for your team</div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-name">Guaranteed response times</div>
+        <div class="feature-desc">Business-critical issues: 1-hour response SLA</div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-name">Dedicated Technical Account Manager</div>
+        <div class="feature-desc">A named TAM with full knowledge of your setup and history</div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-name">Direct escalation line</div>
+        <div class="feature-desc">Reach the right person immediately when it matters</div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-name">Full platform support</div>
+        <div class="feature-desc">Workflows, templates, integrations, channel configuration</div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-name">Twilio stack support</div>
+        <div class="feature-desc">As a Twilio Gold Certified Partner, we handle technical escalations across your full Twilio infrastructure</div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-name">Root cause analysis</div>
+        <div class="feature-desc">Every resolved incident closed with a clear account of what happened and what changed</div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-name">Periodic platform reviews</div>
+        <div class="feature-desc">Scheduled sessions to review performance, usage, and forward planning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TWILIO COVERAGE -->
+<section class="twilio">
+  <div class="twilio-inner">
+    <div class="twilio-body">
+      <div class="section-label">Partner accreditation</div>
+      <h2>Gold Certified. AI Partner. Your full stack, covered.</h2>
+      <p>Kaptea is a Twilio Gold Certified Partner and Twilio AI Partner. That accreditation reflects both technical depth and a direct working relationship within the Twilio partner programme.</p>
+      <p>For our customers, it means: when a technical issue arises anywhere in your communications stack, you have one team with the access and expertise to resolve it. Your Kaptea account manager owns the issue end-to-end.</p>
+    </div>
+    <div class="twilio-badges">
+      <div class="twilio-badge">
+        <div class="twilio-badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="twilio-badge-text">
+          <strong>Twilio Gold Certified Partner</strong>
+          <span>Verified technical depth across the full Twilio platform</span>
+        </div>
+      </div>
+      <div class="twilio-badge">
+        <div class="twilio-badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="twilio-badge-text">
+          <strong>Twilio AI Partner</strong>
+          <span>Accredited for AI-powered communications solutions</span>
+        </div>
+      </div>
+      <div class="twilio-badge">
+        <div class="twilio-badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="twilio-badge-text">
+          <strong>Direct partner escalation</strong>
+          <span>Issues raised inside the Twilio partner programme, not through standard support</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CUSTOMER QUOTES -->
+<section class="quotes">
+  <div class="quotes-inner">
+    <div class="section-label" style="color:rgba(255,255,255,0.5);">Voice of the customer</div>
+    <h2>What our customers say</h2>
+    <div class="quotes-grid">
+
+      <div class="quote-card">
+        <span class="quote-mark">"</span>
+        <blockquote>What separates them from some of our other suppliers is they always get to the bottom of it fairly quickly and come back to us with what actually happened.</blockquote>
+        <div class="quote-attribution">National Postal Network</div>
+      </div>
+
+      <div class="quote-card">
+        <span class="quote-mark">"</span>
+        <blockquote>The responsiveness and the time to respond and fix an issue is always really, really quick. We have very little downtime.</blockquote>
+        <div class="quote-attribution">Overnight Rail Operator</div>
+      </div>
+
+      <div class="quote-card">
+        <span class="quote-mark">"</span>
+        <blockquote>If there's an issue, it's not something you can park for a day or two. You need someone in front of you saying: I have this, I'm going to do this now.</blockquote>
+        <div class="quote-attribution">National Postal Network (WhatsApp)</div>
+      </div>
+
+      <div class="quote-card">
+        <span class="quote-mark">"</span>
+        <blockquote>Within hours, he identified the issue. That is one of the key reasons I respect the team.</blockquote>
+        <div class="quote-attribution">Global Expert Network Firm</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SLA TABLE -->
+<section class="sla">
+  <div class="sla-inner">
+    <div class="section-label">Response times</div>
+    <h2>Guaranteed response times</h2>
+    <p class="sla-intro">Clear commitments, not best-effort targets. Your support tier is agreed at contract stage and applies from day one.</p>
+
+    <table class="sla-table" role="table" aria-label="Support response SLAs">
+      <thead>
+        <tr>
+          <th scope="col">Priority</th>
+          <th scope="col">What it covers</th>
+          <th scope="col">Response SLA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="sla-priority critical">Business Critical</span></td>
+          <td>Live operational impact or platform down</td>
+          <td><strong>1 hour</strong></td>
+        </tr>
+        <tr>
+          <td><span class="sla-priority degraded">Degraded Service</span></td>
+          <td>Significant performance degradation or partial loss of function</td>
+          <td><strong>2 business hours</strong></td>
+        </tr>
+        <tr>
+          <td><span class="sla-priority general">General</span></td>
+          <td>Configuration, feature queries, non-urgent issues</td>
+          <td><strong>3 business hours</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="sla-footnote">Response times apply during standard business hours. Enterprise customers requiring extended coverage: talk to us.</p>
+  </div>
+</section>
+
+
+<!-- CREDENTIALS BAR -->
+<section class="creds">
+  <div class="creds-inner">
+    <div class="creds-pills">
+      <span class="creds-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        ISO 27001 Certified
+      </span>
+      <span class="creds-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Cyber Essentials Plus
+      </span>
+      <span class="creds-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        CREST Accredited
+      </span>
+      <span class="creds-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Twilio Gold Certified
+      </span>
+      <span class="creds-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        Twilio AI Partner
+      </span>
+    </div>
+    <p class="creds-note">All support operates within our ISO 27001-certified incident management framework.</p>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-close">
+  <h2>Support that starts before you need it.</h2>
+  <p>Your technical account manager is briefed on your setup from day one. When something needs attention, the context is already there.</p>
+  <div class="cta-buttons">
+    <a href="/get-started" class="btn-primary" style="font-size:16px;padding:14px 32px;">Get Started</a>
+    <a href="/book-a-demo" class="btn-secondary" style="color:var(--kaptea-white);padding:14px 28px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;border:1px solid rgba(255,255,255,0.25);display:inline-flex;align-items:center;">Talk to Sales</a>
+  </div>
+</section>
+
+
+</main>
+
+<script src="footer.js"></script>
+
+</body>
+</html>
