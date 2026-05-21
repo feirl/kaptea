@@ -178,17 +178,17 @@
               <div class="industry-block">
                 <div class="industry-title"><a href="/pronto">Pronto Platform</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Dedicated instance, your data residency</li>
-                  <li class="mega-detail">Multi-channel from one compliance layer</li>
-                  <li class="mega-detail">AI orchestration &amp; live agent escalation</li>
+                  <li class="mega-detail">Your dedicated instance</li>
+                  <li class="mega-detail">One compliance layer</li>
+                  <li class="mega-detail">AI &amp; agent escalation</li>
                 </ul>
               </div>
               <div class="industry-block">
                 <div class="industry-title"><a href="/professional-services">Professional Services</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Twilio Gold Certified delivery</li>
-                  <li class="mega-detail">Build and Handover or Build and Support</li>
-                  <li class="mega-detail">Named team from day one</li>
+                  <li class="mega-detail">Twilio Gold Certified</li>
+                  <li class="mega-detail">Handover or ongoing support</li>
+                  <li class="mega-detail">Named team, always</li>
                 </ul>
               </div>
             </div>
