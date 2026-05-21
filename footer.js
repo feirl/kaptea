@@ -18,8 +18,8 @@
     }
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1fr;
-      gap: 40px;
+      grid-template-columns: 2fr repeat(6, 1fr);
+      gap: 32px;
       padding-bottom: 48px;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
@@ -99,19 +99,26 @@
     }
     .footer-legal a:hover { color: rgba(255,255,255,0.6); }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       .footer-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 32px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 28px;
       }
       .footer-brand { grid-column: 1 / -1; }
       .footer-brand p { max-width: 100%; }
+    }
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 28px;
+      }
+      .footer-brand { grid-column: 1 / -1; }
     }
     @media (max-width: 640px) {
       footer { padding: 48px 20px 28px; }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 28px;
+        gap: 24px;
       }
       .footer-brand { grid-column: 1 / -1; }
       .footer-bottom {
@@ -446,7 +453,7 @@
       </div>
 
       <!-- Company -->
-      <div class="footer-col" style="grid-column: 6;">
+      <div class="footer-col">
         <h4>Company</h4>
         <ul>
           <li><a href="/about">About</a></li>
