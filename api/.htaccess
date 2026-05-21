@@ -1,0 +1,5 @@
+# Block direct HTTP access to the Zoho credentials file
+<Files "zoho-config.php">
+  Order allow,deny
+  Deny from all
+</Files>

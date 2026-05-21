@@ -104,7 +104,6 @@
       color: #dc2727;
     }
 
-
     /* ══════════════════════════════════════
        MOBILE TOPBAR
     ══════════════════════════════════════ */
@@ -181,7 +180,7 @@
       background: #dc2727;
     }
 
-    /* ── Content: wraps steps + nav, centers them vertically ── */
+    /* ── Content ── */
     .gs-content {
       flex: 1;
       display: flex;
@@ -226,7 +225,7 @@
     .gs-error-banner.show { display: block; }
 
     /* ══════════════════════════════════════
-       CARDS
+       CARDS (steps 1, 2, 4, 5)
     ══════════════════════════════════════ */
     .gs-cards {
       display: grid;
@@ -266,7 +265,6 @@
       box-shadow: 0 0 0 1px #dc2727, 0 2px 8px rgba(220,39,39,0.08);
     }
 
-    /* Tick / radio indicator */
     .gs-card-tick {
       width: 20px;
       height: 20px;
@@ -318,7 +316,190 @@
     }
 
     /* ══════════════════════════════════════
-       TEXT FIELDS (step 5)
+       AI AGENTS (step 3)
+    ══════════════════════════════════════ */
+    .gs-agents-wrap {
+      max-width: 640px;
+      background: #fff;
+      border: 1.5px solid #e8edf2;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+    }
+
+    .gs-agent-search-wrap {
+      padding: 12px 16px;
+      border-bottom: 1px solid #f0f3f7;
+    }
+
+    .gs-agent-search {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      color: #0f172a;
+      background: transparent;
+      caret-color: #dc2727;
+    }
+
+    .gs-agent-search::placeholder { color: #94a3b8; }
+
+    .gs-agent-list {
+      max-height: 340px;
+      overflow-y: auto;
+    }
+
+    .gs-agent-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      cursor: pointer;
+      transition: background 0.12s;
+      border-bottom: 1px solid #f8fafc;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .gs-agent-row:last-child { border-bottom: none; }
+    .gs-agent-row:hover { background: #f8fafc; }
+    .gs-agent-row.hidden { display: none; }
+
+    .gs-agent-cb {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border-radius: 4px;
+      border: 1.5px solid #d1d9e0;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s, border-color 0.15s;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .gs-agent-row.selected .gs-agent-cb {
+      background: #dc2727;
+      border-color: #dc2727;
+    }
+
+    .gs-agent-cb svg {
+      width: 10px;
+      height: 10px;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    .gs-agent-row.selected .gs-agent-cb svg { opacity: 1; }
+
+    .gs-agent-text { flex: 1; line-height: 1.4; }
+
+    .gs-agent-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .gs-agent-desc {
+      font-size: 0.8125rem;
+      color: #94a3b8;
+      margin-top: 2px;
+    }
+
+    .gs-agent-empty {
+      padding: 20px 16px;
+      font-size: 0.875rem;
+      color: #94a3b8;
+      display: none;
+    }
+
+    /* ══════════════════════════════════════
+       VOLUME SLIDERS (step 6)
+    ══════════════════════════════════════ */
+    .gs-volume-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 560px;
+    }
+
+    .gs-volume-row {}
+
+    .gs-volume-label-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .gs-volume-label {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .gs-volume-value {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #dc2727;
+      letter-spacing: -0.02em;
+    }
+
+    .gs-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: #e2e8f0;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .gs-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #dc2727;
+      box-shadow: 0 2px 8px rgba(220,39,39,0.35);
+      cursor: pointer;
+      transition: box-shadow 0.15s;
+    }
+
+    .gs-slider::-webkit-slider-thumb:hover {
+      box-shadow: 0 2px 12px rgba(220,39,39,0.5);
+    }
+
+    .gs-slider::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #dc2727;
+      border: none;
+      box-shadow: 0 2px 8px rgba(220,39,39,0.35);
+      cursor: pointer;
+    }
+
+    .gs-slider-ticks {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .gs-slider-ticks span {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    /* ══════════════════════════════════════
+       TEXT FIELDS (step 7)
     ══════════════════════════════════════ */
     .gs-fields {
       display: flex;
@@ -372,7 +553,7 @@
     .gs-field-error.show { display: block; }
 
     /* ══════════════════════════════════════
-       NAV BUTTONS (inside gs-content, flows with cards)
+       NAV BUTTONS
     ══════════════════════════════════════ */
     .gs-nav {
       display: flex;
@@ -397,7 +578,6 @@
     }
 
     .gs-btn-back:hover { color: #64748b; }
-
     .gs-btn-back svg { width: 14px; height: 14px; }
 
     .gs-btn-back.hidden {
@@ -464,38 +644,6 @@
       line-height: 1.6;
     }
 
-    .gs-config-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .gs-config-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 12px;
-      background: #f1f5f9;
-      border: 1px solid #e2e8f0;
-      border-radius: 20px;
-      font-size: 0.8125rem;
-      color: #475569;
-      font-weight: 500;
-    }
-
-    .gs-config-tag.red {
-      background: rgba(220,39,39,0.06);
-      border-color: rgba(220,39,39,0.2);
-      color: #dc2727;
-    }
-
-    .gs-config-tag svg {
-      width: 10px;
-      height: 10px;
-      flex-shrink: 0;
-    }
-
     .gs-calendly-wrap {
       flex: 1;
       min-height: 500px;
@@ -559,6 +707,8 @@
       .gs-cards.cols-2 { max-width: 100%; }
       .gs-nav { max-width: 100%; }
       .gs-footer { flex-direction: column; gap: 8px; text-align: center; }
+      .gs-agents-wrap { max-width: 100%; }
+      .gs-volume-wrap { max-width: 100%; }
     }
 
     @media (max-width: 580px) {
@@ -570,6 +720,11 @@
   </style>
 </head>
 <body>
+
+<!-- Honeypot: hidden from real users, bots fill it in -->
+<div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+  <input type="text" name="website" id="gs-honeypot" tabindex="-1" autocomplete="off" />
+</div>
 
 <div class="gs-layout">
 
@@ -629,7 +784,7 @@
     <div class="gs-progress" id="gsProgress">
       <div class="gs-progress-header">
         <span class="gs-progress-label" id="progressLabel">Your channels</span>
-        <span class="gs-progress-count" id="progressCount">1 of 5</span>
+        <span class="gs-progress-count" id="progressCount">1 of 7</span>
       </div>
       <div class="gs-step-dots" id="stepDots">
         <div class="gs-step-dot active" data-dot="0"></div>
@@ -637,10 +792,12 @@
         <div class="gs-step-dot" data-dot="2"></div>
         <div class="gs-step-dot" data-dot="3"></div>
         <div class="gs-step-dot" data-dot="4"></div>
+        <div class="gs-step-dot" data-dot="5"></div>
+        <div class="gs-step-dot" data-dot="6"></div>
       </div>
     </div>
 
-    <!-- ── Content: question + cards + nav all flow together ── -->
+    <!-- Content -->
     <div class="gs-content" id="gsContent">
 
       <!-- Step 1: Channels -->
@@ -727,11 +884,26 @@
         </div>
       </div>
 
-      <!-- Step 3: Regions -->
+      <!-- Step 3: AI Agents -->
       <div class="gs-step" id="step-2">
+        <h1 class="gs-step-question">Which AI agents are you planning to deploy?</h1>
+        <p class="gs-step-hint">Kaptea ships with pre-built conversational AI agents that are fully configurable. Select all that apply.</p>
+        <div class="gs-agents-wrap">
+          <div class="gs-agent-search-wrap">
+            <input type="text" id="agentSearch" class="gs-agent-search" placeholder="Select AI agents..." autocomplete="off" aria-label="Search AI agents" />
+          </div>
+          <div class="gs-agent-list" id="agentList" role="group" aria-label="AI agents">
+            <!-- rows injected by JS -->
+          </div>
+          <div class="gs-agent-empty" id="agentEmpty">No agents match your search.</div>
+        </div>
+      </div>
+
+      <!-- Step 4: Regions -->
+      <div class="gs-step" id="step-3">
         <h1 class="gs-step-question">Where do you need a dedicated server instance?</h1>
         <p class="gs-step-hint">Select all regions. Your data stays within the boundaries you choose.</p>
-        <div class="gs-error-banner" id="err-2"></div>
+        <div class="gs-error-banner" id="err-3"></div>
         <div class="gs-cards cols-2" role="group" aria-label="Server regions">
           <div class="gs-card" data-group="regions" data-value="EU" tabindex="0" role="checkbox" aria-checked="false">
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
@@ -764,11 +936,11 @@
         </div>
       </div>
 
-      <!-- Step 4: CPaaS -->
-      <div class="gs-step" id="step-3">
+      <!-- Step 5: CPaaS -->
+      <div class="gs-step" id="step-4">
         <h1 class="gs-step-question">Who is your current CPaaS provider?</h1>
         <p class="gs-step-hint">This helps us estimate your migration timeline and plan your carrier setup.</p>
-        <div class="gs-error-banner" id="err-3"></div>
+        <div class="gs-error-banner" id="err-4"></div>
         <div class="gs-cards cols-2" role="radiogroup" aria-label="CPaaS provider">
           <div class="gs-card radio" data-group="cpaas" data-value="Twilio" tabindex="0" role="radio" aria-checked="false">
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
@@ -784,18 +956,44 @@
           </div>
           <div class="gs-card radio" data-group="cpaas" data-value="Help me decide" tabindex="0" role="radio" aria-checked="false">
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
-            <span class="gs-card-body">
-              <span class="gs-card-label">Help me decide</span>
-            </span>
+            <span class="gs-card-body"><span class="gs-card-label">Help me decide</span></span>
           </div>
         </div>
       </div>
 
-      <!-- Step 5: Personal details -->
-      <div class="gs-step" id="step-4">
+      <!-- Step 6: Volume -->
+      <div class="gs-step" id="step-5">
+        <h1 class="gs-step-question">What volume do you need to support?</h1>
+        <p class="gs-step-hint">Help us right-size your environment. You can adjust these later.</p>
+        <div class="gs-volume-wrap">
+          <div class="gs-volume-row">
+            <div class="gs-volume-label-row">
+              <span class="gs-volume-label">Typical monthly conversations</span>
+              <span class="gs-volume-value" id="typicalValue">500K</span>
+            </div>
+            <input type="range" class="gs-slider" id="typicalSlider" min="0" max="5" step="1" value="2" aria-label="Typical monthly volume" />
+            <div class="gs-slider-ticks" aria-hidden="true">
+              <span>100K</span><span>250K</span><span>500K</span><span>1M</span><span>5M</span><span>10M+</span>
+            </div>
+          </div>
+          <div class="gs-volume-row">
+            <div class="gs-volume-label-row">
+              <span class="gs-volume-label">Surge capacity requirement</span>
+              <span class="gs-volume-value" id="surgeValue">5M</span>
+            </div>
+            <input type="range" class="gs-slider" id="surgeSlider" min="0" max="5" step="1" value="4" aria-label="Surge capacity requirement" />
+            <div class="gs-slider-ticks" aria-hidden="true">
+              <span>100K</span><span>250K</span><span>500K</span><span>1M</span><span>5M</span><span>10M+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7: Personal details -->
+      <div class="gs-step" id="step-6">
         <h1 class="gs-step-question">Your access details</h1>
         <p class="gs-step-hint">Your environment is being prepared. We just need to know where to send your access details.</p>
-        <div class="gs-error-banner" id="err-4"></div>
+        <div class="gs-error-banner" id="err-6"></div>
         <div class="gs-fields">
           <div class="gs-row">
             <div class="gs-field">
@@ -829,7 +1027,7 @@
         </div>
       </div>
 
-      <!-- Nav: sits inside gs-content, directly below the active step -->
+      <!-- Nav buttons -->
       <div class="gs-nav" id="gsNav">
         <button class="gs-btn-back hidden" id="btnBack" type="button" onclick="goBack()">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -850,7 +1048,7 @@
     <!-- Confirmation + Calendly -->
     <div class="gs-confirm" id="gsConfirm">
       <div class="gs-confirm-header">
-        <h1 id="confirmHeading">You're in.</h1>
+        <h1 id="confirmHeading">Book your onboarding.</h1>
         <p>Your Kaptea environment is being configured. Book a 15-minute intro call and we'll walk you through your setup.</p>
       </div>
       <div class="gs-calendly-wrap">
@@ -860,11 +1058,11 @@
 
     <!-- Footer -->
     <footer class="gs-footer">
-      <span class="gs-footer-copy">&copy; 2025 Kaptea. All rights reserved.</span>
+      <span class="gs-footer-copy">&copy; 2026 Kaptea. All rights reserved.</span>
       <nav class="gs-footer-links" aria-label="Legal">
         <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/terms-of-service">Terms of Service</a>
-        <a href="/cookie-policy">Cookie Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/cookies">Cookie Policy</a>
       </nav>
     </footer>
 
@@ -872,27 +1070,115 @@
 </div>
 
 <script>
-  var HUBSPOT_PORTAL_ID = '';
-  var HUBSPOT_FORM_GUID  = '';
-  var CALENDLY_URL = 'https://calendly.com/atmcnab/introduction-to-kaptea';
+  var ZOHO_ENDPOINT = '/api/zoho-lead.php';
+  var CALENDLY_URL  = 'https://calendly.com/atmcnab/introduction-to-kaptea';
+
+  var VOLUME_LABELS = ['100K', '250K', '500K', '1M', '5M', '10M+'];
+
+  var AI_AGENTS = [
+    { value: 'Urgent Communications Responder', desc: 'Handles inbound queries triggered by critical or emergency communications' },
+    { value: 'Fraud & Security Alert Handler',  desc: 'Real-time identity verification and suspicious activity response' },
+    { value: 'Financial Account Assistant',     desc: 'Handles account queries, balance checks, and fraud alerts with identity verification and escalation' },
+    { value: 'Compliance & Consent Manager',    desc: 'Manages opt-outs, GDPR requests, and consent renewals autonomously' },
+    { value: 'Outbound Campaign Agent',         desc: 'Proactive outreach for re-engagement, follow-up, and promotional messaging' },
+    { value: 'Payment & Billing Assistant',     desc: 'Resolves payment queries, confirms transactions, and handles billing disputes' },
+    { value: 'Customer Survey Assistant',       desc: 'Outbound agent that runs structured surveys by phone or messaging at the moment that matters' },
+    { value: 'Customer Service & Support',      desc: 'Front-line support that triages, troubleshoots, and escalates to a live agent when needed' },
+  ];
 
   var STEPS = [
     { id: 'channels', type: 'multi',  group: 'channels' },
     { id: 'usecases', type: 'multi',  group: 'usecases' },
+    { id: 'aiagents', type: 'agents'                    },
     { id: 'regions',  type: 'multi',  group: 'regions'  },
     { id: 'cpaas',    type: 'single', group: 'cpaas'    },
+    { id: 'volume',   type: 'volume'                    },
     { id: 'personal', type: 'fields'                    },
   ];
 
-  var STEP_LABELS = ['Your channels', 'Your use cases', 'Your regions', 'Your current setup', 'About you'];
-  var TOTAL_STEPS = STEPS.length;
-  var currentStep = 0;
-  var isAnimating = false;
-  var formData    = {};
+  var STEP_LABELS  = ['Your channels', 'Your use cases', 'Your AI agents', 'Your regions', 'Your current setup', 'Your volume', 'About you'];
+  var TOTAL_STEPS  = STEPS.length;
+  var currentStep  = 0;
+  var isAnimating  = false;
+  var formData     = {};
 
+  // ── Init ──────────────────────────────────────────────────────────────────
+  buildAgentList();
   bindCardClicks();
   bindKeyboardNav();
   bindFieldListeners();
+  initSliders();
+
+  /* ── Agent list ── */
+  function buildAgentList() {
+    var list = document.getElementById('agentList');
+    var tick = '<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg>';
+    AI_AGENTS.forEach(function(agent) {
+      var row = document.createElement('div');
+      row.className = 'gs-agent-row';
+      row.dataset.value = agent.value;
+      row.setAttribute('tabindex', '0');
+      row.setAttribute('role', 'checkbox');
+      row.setAttribute('aria-checked', 'false');
+      row.innerHTML =
+        '<span class="gs-agent-cb">' + tick + '</span>' +
+        '<span class="gs-agent-text">' +
+          '<span class="gs-agent-name">' + esc(agent.value) + '</span>' +
+          '<span class="gs-agent-desc">' + esc(agent.desc) + '</span>' +
+        '</span>';
+      row.addEventListener('click', function() { toggleAgent(row); });
+      row.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleAgent(row); }
+      });
+      list.appendChild(row);
+    });
+
+    document.getElementById('agentSearch').addEventListener('input', function() {
+      var q = this.value.toLowerCase();
+      var rows = list.querySelectorAll('.gs-agent-row');
+      var visible = 0;
+      rows.forEach(function(r) {
+        var match = r.dataset.value.toLowerCase().includes(q);
+        r.classList.toggle('hidden', !match);
+        if (match) visible++;
+      });
+      document.getElementById('agentEmpty').style.display = visible === 0 ? 'block' : 'none';
+    });
+  }
+
+  function toggleAgent(row) {
+    var was = row.classList.contains('selected');
+    row.classList.toggle('selected', !was);
+    row.setAttribute('aria-checked', String(!was));
+    collectAgents();
+  }
+
+  function collectAgents() {
+    var selected = [];
+    document.querySelectorAll('.gs-agent-row.selected').forEach(function(r) {
+      selected.push(r.dataset.value);
+    });
+    formData.aiagents = selected;
+  }
+
+  /* ── Volume sliders ── */
+  function initSliders() {
+    var typical = document.getElementById('typicalSlider');
+    var surge   = document.getElementById('surgeSlider');
+    formData.volume_typical_label = VOLUME_LABELS[typical.value];
+    formData.volume_surge_label   = VOLUME_LABELS[surge.value];
+
+    typical.addEventListener('input', function() {
+      var label = VOLUME_LABELS[this.value];
+      document.getElementById('typicalValue').textContent = label;
+      formData.volume_typical_label = label;
+    });
+    surge.addEventListener('input', function() {
+      var label = VOLUME_LABELS[this.value];
+      document.getElementById('surgeValue').textContent = label;
+      formData.volume_surge_label = label;
+    });
+  }
 
   /* ── Cards ── */
   function bindCardClicks() {
@@ -904,7 +1190,6 @@
   function toggleCard(card) {
     var group   = card.dataset.group;
     var isRadio = card.classList.contains('radio');
-
     if (isRadio) {
       document.querySelectorAll('[data-group="' + group + '"]').forEach(function(c) {
         c.classList.remove('selected');
@@ -938,7 +1223,6 @@
   function goForward() {
     if (isAnimating) return;
     if (!validateStep(currentStep)) return;
-    collectFields(currentStep);
     if (currentStep === TOTAL_STEPS - 1) { submitForm(); return; }
     animateTo(currentStep + 1, 'forward');
   }
@@ -976,7 +1260,7 @@
       setTimeout(function() {
         toEl.style.cssText = '';
         isAnimating = false;
-        var first = toEl.querySelector('input, [tabindex="0"]');
+        var first = toEl.querySelector('input:not([type="range"]), [tabindex="0"]');
         if (first) first.focus();
       }, 250);
 
@@ -1001,23 +1285,13 @@
     });
   }
 
-  /* ── Field collection ── */
-  function collectFields(idx) {
-    if (idx === 4) {
-      formData.firstname = document.getElementById('gs-firstname').value.trim();
-      formData.lastname  = document.getElementById('gs-lastname').value.trim();
-      formData.email     = document.getElementById('gs-email').value.trim();
-      formData.phone     = document.getElementById('gs-phone').value.trim();
-      formData.company   = document.getElementById('gs-company').value.trim();
-    }
-  }
-
   /* ── Validation ── */
   function validateStep(idx) {
     var s = STEPS[idx];
     if (s.type === 'multi')  return validateMulti(idx, s.group);
     if (s.type === 'single') return validateSingle(idx, s.group);
     if (s.type === 'fields') return validatePersonal(idx);
+    // agents and volume: always pass
     return true;
   }
 
@@ -1069,7 +1343,8 @@
       if (!el) return;
       el.addEventListener('input', function() {
         el.classList.remove('has-error');
-        var e2 = document.getElementById('err-' + id.replace('gs-', ''));
+        var errKey = id.replace('gs-', '');
+        var e2 = document.getElementById('err-' + errKey);
         if (e2) e2.classList.remove('show');
       });
       el.addEventListener('keydown', function(e) { if (e.key === 'Enter') goForward(); });
@@ -1078,48 +1353,40 @@
 
   /* ── Submit ── */
   function submitForm() {
-    collectFields(4);
+    // Collect personal fields
+    formData.firstname = document.getElementById('gs-firstname').value.trim();
+    formData.lastname  = document.getElementById('gs-lastname').value.trim();
+    formData.email     = document.getElementById('gs-email').value.trim();
+    formData.phone     = document.getElementById('gs-phone').value.trim();
+    formData.company   = document.getElementById('gs-company').value.trim();
+
+    // Honeypot
+    formData.website = document.getElementById('gs-honeypot').value;
+
     var btn = document.getElementById('btnContinue');
     btn.disabled  = true;
     btn.innerHTML = 'Setting up your environment...';
 
-    function show() {
+    function showConfirmation() {
       document.getElementById('gsProgress').style.display = 'none';
       document.getElementById('gsContent').style.display  = 'none';
       document.getElementById('gsConfirm').classList.add('active');
       var name = formData.firstname || '';
-      document.getElementById('confirmHeading').textContent = name ? 'Book your onboarding, ' + name + '.' : 'Book your onboarding.';
+      document.getElementById('confirmHeading').textContent =
+        name ? 'Book your onboarding, ' + name + '.' : 'Book your onboarding.';
       loadCalendly();
     }
 
-    if (HUBSPOT_PORTAL_ID && HUBSPOT_FORM_GUID) {
-      fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HUBSPOT_PORTAL_ID + '/' + HUBSPOT_FORM_GUID, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(buildPayload()),
-      }).then(show).catch(function(e) { console.warn('HubSpot failed:', e); show(); });
-    } else {
-      console.log('Form data:', formData);
-      show();
-    }
-  }
-
-  function buildTags() {
-    var el   = document.getElementById('confirmTags');
-    var html = '';
-    var checkSvg = '<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg>';
-    if (Array.isArray(formData.channels)) {
-      formData.channels.forEach(function(v) {
-        html += '<span class="gs-config-tag red">' + checkSvg + esc(v) + '</span>';
-      });
-    }
-    if (Array.isArray(formData.regions)) {
-      formData.regions.forEach(function(v) {
-        html += '<span class="gs-config-tag">' + esc(v) + '</span>';
-      });
-    }
-    if (formData.cpaas) html += '<span class="gs-config-tag">' + esc(formData.cpaas) + '</span>';
-    el.innerHTML = html;
+    fetch(ZOHO_ENDPOINT, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(formData),
+    })
+    .then(function() { showConfirmation(); })
+    .catch(function(e) {
+      console.warn('[kaptea] Lead submission failed:', e);
+      showConfirmation(); // never block the user
+    });
   }
 
   function loadCalendly() {
@@ -1129,26 +1396,12 @@
       CALENDLY_URL + '?hide_gdpr_banner=1&name=' + n + '&email=' + e;
   }
 
-  function buildPayload() {
-    return {
-      fields: [
-        { name: 'firstname',             value: formData.firstname || '' },
-        { name: 'lastname',              value: formData.lastname  || '' },
-        { name: 'email',                 value: formData.email     || '' },
-        { name: 'phone',                 value: formData.phone     || '' },
-        { name: 'company',               value: formData.company   || '' },
-        { name: 'kaptea_channels',       value: toStr(formData.channels)  },
-        { name: 'kaptea_use_cases',      value: toStr(formData.usecases)  },
-        { name: 'kaptea_server_regions', value: toStr(formData.regions)   },
-        { name: 'kaptea_cpaas_provider', value: formData.cpaas    || ''   },
-      ],
-      context: { pageUri: 'https://kaptea.io/get-started', pageName: 'Get Started' },
-    };
-  }
-
-  function toStr(a) { return Array.isArray(a) ? a.join('; ') : (a || ''); }
   function esc(s) {
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
   }
 </script>
 </body>
