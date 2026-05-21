@@ -432,7 +432,8 @@
           <li><a href="/certification">Certification</a></li>
           <li><a href="/security-compliance">Security &amp; Compliance</a></li>
           <li><a href="https://developers.pronto-360.com/" target="_blank" rel="noopener">API Documentation</a></li>
-          <li><a href="/implementation">Implementation &amp; Support</a></li>
+          <li><a href="/implementation">Implementation</a></li>
+          <li><a href="/support">Support</a></li>
         </ul>
       </div>
 
