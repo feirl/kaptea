@@ -49,41 +49,6 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    nav {
-      background: var(--kaptea-white);
-      padding: 0 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      border-bottom: 1px solid var(--kaptea-border);
-    }
-    .nav-links a {
-      color: var(--kaptea-tagline-grey);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 0 18px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-      transition: color 0.15s;
-    }
-    .nav-cta {
-      background: var(--kaptea-red);
-      color: white !important;
-      padding: 8px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 14px;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
     /* ── MAIN LAYOUT ── */
     .demo-wrapper {
       max-width: 1120px;
@@ -314,17 +279,7 @@
       flex-shrink: 0;
     }
 
-    /* ── HAMBURGER ── */
-
     @media (max-width: 768px) {
-      .nav-links {
-        display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
-        background: var(--kaptea-charcoal); flex-direction: column; padding: 24px; gap: 0; z-index: 300; overflow-y: auto;
-      }
-      .nav-links.open { display: flex; }
-      .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 301; }
-      .hamburger span { display: block; width: 22px; height: 2px; background: #111; }
-
       .demo-hero { padding: 40px 20px 48px; }
       .demo-hero h1 { font-size: 28px; }
       .reassurance-inner { flex-direction: column; gap: 16px; align-items: flex-start; }
