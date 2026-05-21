@@ -1,3 +1,8 @@
+# Route extensionless /api/zoho-lead to zoho-lead.php
+Options -Indexes
+RewriteEngine On
+RewriteRule ^zoho-lead$ zoho-lead.php [L]
+
 # Block direct HTTP access to the Zoho credentials file
 <Files "zoho-config.php">
   Order allow,deny

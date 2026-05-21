@@ -1530,7 +1530,7 @@
     // Send the submission to Zoho CRM via the serverless function.
     // Fire-and-forget: the confirmation screen shows immediately so the
     // user is never blocked on the CRM call.
-    fetch('/api/zoho-lead', {
+    fetch('/api/zoho-lead.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
