@@ -175,8 +175,22 @@
           <div class="mega-right">
             <div class="mega-panel-label" style="color: var(--kaptea-red);">Our Offering</div>
             <div class="mega-industry-grid" style="margin-bottom: 28px;">
-              <div class="industry-title"><a href="/pronto">Pronto Platform</a></div>
-              <div class="industry-title"><a href="/professional-services">Professional Services</a></div>
+              <div class="industry-block">
+                <div class="industry-title"><a href="/pronto">Pronto Platform</a></div>
+                <ul class="mega-links">
+                  <li class="mega-detail">Dedicated instance, your data residency</li>
+                  <li class="mega-detail">Multi-channel from one compliance layer</li>
+                  <li class="mega-detail">AI orchestration &amp; live agent escalation</li>
+                </ul>
+              </div>
+              <div class="industry-block">
+                <div class="industry-title"><a href="/professional-services">Professional Services</a></div>
+                <ul class="mega-links">
+                  <li class="mega-detail">Twilio Gold Certified delivery</li>
+                  <li class="mega-detail">Build and Handover or Build and Support</li>
+                  <li class="mega-detail">Named team from day one</li>
+                </ul>
+              </div>
             </div>
             <div class="mega-panel-label">Industries</div>
             <div class="mega-industry-grid">
@@ -184,11 +198,9 @@
               <div class="industry-block">
                 <div class="industry-title"><a href="/industries/finance">Financial Services</a></div>
                 <ul class="mega-links">
+                  <li class="mega-detail">FCA &amp; MiFID II audit trail</li>
                   <li class="mega-detail">Fraud event journeys</li>
                   <li class="mega-detail">Urgent regulatory comms</li>
-                  <li class="mega-detail">Transactional alerts</li>
-                  <li class="mega-detail">FCA &amp; MiFID II audit</li>
-                  <li class="mega-detail">Contact centre orchestration</li>
                 </ul>
               </div>
 
@@ -197,8 +209,6 @@
                 <ul class="mega-links">
                   <li class="mega-detail">Outage journey orchestration</li>
                   <li class="mega-detail">Storm &amp; outage dispatch</li>
-                  <li class="mega-detail">Meter &amp; billing notifications</li>
-                  <li class="mega-detail">Surge IVR routing</li>
                   <li class="mega-detail">Public safety messaging</li>
                 </ul>
               </div>
@@ -206,32 +216,26 @@
               <div class="industry-block">
                 <div class="industry-title"><a href="/industries/healthcare">Healthcare</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Patient pathway journeys</li>
                   <li class="mega-detail">Drug recall dispatch</li>
-                  <li class="mega-detail">Appointment &amp; prescription comms</li>
+                  <li class="mega-detail">Patient pathway journeys</li>
                   <li class="mega-detail">MHRA &amp; FDA compliance</li>
-                  <li class="mega-detail">Care pathway notifications</li>
                 </ul>
               </div>
 
               <div class="industry-block">
                 <div class="industry-title"><a href="/industries/travel-transport">Travel &amp; Transport</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Disruption rebook journeys</li>
                   <li class="mega-detail">Mass disruption alerts</li>
-                  <li class="mega-detail">Booking &amp; gate updates</li>
+                  <li class="mega-detail">Disruption rebook journeys</li>
                   <li class="mega-detail">Real-time passenger updates</li>
-                  <li class="mega-detail">Logistics messaging</li>
                 </ul>
               </div>
 
               <div class="industry-block">
                 <div class="industry-title"><a href="/industries/public-sector">Public Sector</a></div>
                 <ul class="mega-links">
-                  <li class="mega-detail">Citizen service journeys</li>
                   <li class="mega-detail">Emergency public alerts</li>
-                  <li class="mega-detail">Regulated notifications</li>
-                  <li class="mega-detail">Divisional governance</li>
+                  <li class="mega-detail">Citizen service journeys</li>
                   <li class="mega-detail">Audit-ready messaging</li>
                 </ul>
               </div>
@@ -241,9 +245,7 @@
                 <ul class="mega-links">
                   <li class="mega-detail">Browse-to-delivery journeys</li>
                   <li class="mega-detail">Warranty &amp; recall dispatch</li>
-                  <li class="mega-detail">Order &amp; dispatch comms</li>
                   <li class="mega-detail">Peak event surge</li>
-                  <li class="mega-detail">Store, depot &amp; dealer comms</li>
                 </ul>
               </div>
 
