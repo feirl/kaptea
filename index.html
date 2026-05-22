@@ -1584,6 +1584,11 @@
       panels.forEach(function (p, idx) {
         p.setAttribute('aria-hidden', idx === slide ? 'false' : 'true');
       });
+      // Scroll active pill into view (centred) so mobile swipers always see it
+      var activeTab = tabs[slide];
+      if (activeTab) {
+        activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
     }
 
     function next() { setSlide(slide + 1); }
@@ -1615,6 +1620,24 @@
         stopAuto();
         startAuto();
       });
+    }
+
+    // Touch swipe on the image viewport: swipe left = next, swipe right = prev
+    var viewport = root.querySelector('.hero-showcase-viewport');
+    if (viewport) {
+      var tsX = 0, tsY = 0;
+      viewport.addEventListener('touchstart', function (e) {
+        tsX = e.touches[0].clientX;
+        tsY = e.touches[0].clientY;
+      }, { passive: true });
+      viewport.addEventListener('touchend', function (e) {
+        var dx = e.changedTouches[0].clientX - tsX;
+        var dy = e.changedTouches[0].clientY - tsY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+          setSlide(dx < 0 ? slide + 1 : slide - 1);
+          stopAuto(); startAuto();
+        }
+      }, { passive: true });
     }
 
     root.addEventListener('mouseenter', stopAuto);
