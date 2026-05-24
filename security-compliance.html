@@ -11,6 +11,15 @@
   <meta property="og:title" content="Security &amp; Compliance | Kaptea" />
   <meta property="og:description" content="Dedicated instances, EU, UK or US data residency, GDPR-compliant by architecture. Not a configuration option bolted on later." />
   <meta property="og:url" content="https://kaptea.io/security-compliance" />
+  <meta property="og:image" content="https://kaptea.io/img/illustrations/HomeScreen.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="642" />
+  <meta property="og:image:alt" content="Kaptea enterprise communications platform" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@kaptea" />
+  <meta name="twitter:title" content="Security &amp; Compliance | Kaptea" />
+  <meta name="twitter:description" content="Dedicated instances, EU, UK or US data residency, GDPR-compliant by architecture. Not a configuration option bolted on later." />
+  <meta name="twitter:image" content="https://kaptea.io/img/illustrations/HomeScreen.png" />
   <meta name="robots" content="index, follow" />
   <link rel="stylesheet" href="styles.css">
 
@@ -744,6 +753,63 @@
         {"@type": "ListItem", "position": 2, "name": "Security & Compliance", "item": "https://kaptea.io/security-compliance"}
       ]
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://kaptea.io/security-compliance#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Kaptea ISO 27001 certified?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Kaptea holds ISO 27001 certification for information security management across all operations and infrastructure. The certification is independently audited on an annual basis. Full certification details and issuing body information are available on the Kaptea certifications page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Kaptea customer data stored?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Data residency is agreed at deployment and documented in the contract. Kaptea supports Ireland, United Kingdom, European Union, and United States residency options. For Irish deployments, data is processed in Ireland. For UK deployments, data is processed in the United Kingdom. Data does not move between jurisdictions without explicit contractual authorisation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Kaptea GDPR compliant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. GDPR compliance is built into the platform architecture, not added as a feature. Kaptea acts as data processor and provides a GDPR-compliant Data Processing Agreement with every deployment. The DPA documents roles, obligations, and sub-processor details. Configurable data retention periods are enforced automatically, right-to-erasure processes are documented, and customer data is never used for model training or third-party analytics. Kaptea also manages the data processing addendum with Twilio as a sub-processor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is CREST accreditation and does Kaptea hold it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CREST is an internationally recognised accreditation body for cybersecurity services, including penetration testing. CREST-accredited penetration testing is conducted to the highest UK standard for regulated environments. Kaptea holds CREST accreditation and conducts annual penetration testing to this standard. This gives procurement and InfoSec teams independently verified assurance of the security posture."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Kaptea run on dedicated or shared infrastructure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every Kaptea customer runs on a dedicated instance. Kaptea does not operate a shared multi-tenant environment. Each deployment is an isolated Pronto instance with its own infrastructure, its own configuration, and its own access controls. This means no data co-mingling with other customers, configuration locked to your governance standards, and incident scope contained to your environment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What encryption standards does Kaptea use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kaptea uses AES-256 encryption at rest across all data stores, and TLS 1.2 or higher in transit for all API connections and platform communications. SMS number obfuscation is also available for operators who must protect passenger or customer mobile numbers."
+        }
+      }
+    ]
   }
   </script>
 </head>

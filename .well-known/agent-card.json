@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "name": "Kaptea Pronto",
-  "description": "Enterprise omnichannel communications platform for regulated organisations. Orchestrate SMS, RCS, WhatsApp, Voice, Email and Social with governance, compliance, and Conversational AI — built on Twilio and Telnyx. Deploy a dedicated instance in days.",
+  "description": "Enterprise omnichannel communications platform for regulated organisations. Orchestrate SMS, RCS, WhatsApp, Voice, Email and Social with governance, compliance, and Conversational AI, built on Twilio and Telnyx. Deploy a dedicated instance in hours.",
   "url": "https://kaptea.io",
   "provider": {
     "name": "Kaptea Limited",
@@ -59,7 +59,7 @@
   "deployment": {
     "model": "dedicated-instance",
     "regions": ["EU", "UK", "US"],
-    "provisioning_time_days": 1
+    "provisioning_time_hours": 4
   },
   "pricing": {
     "starting_from": "$1500/month",

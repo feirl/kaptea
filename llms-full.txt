@@ -184,7 +184,7 @@ Contact centre scaled from 12 to 120+ agents across four countries under crisis 
 ## Leadership
 
 **Alan McNab** — CEO and co-founder. Enterprise communications, SaaS, and regulated industries.
-**Robert Whelan** — CTO and co-founder. Platform architecture, Twilio partnerships, and enterprise delivery.
+**Robert Norton** — CTO and co-founder. Platform architecture, Twilio partnerships, and enterprise delivery.
 
 Combined leadership experience: 40+ years in enterprise communications.
 
