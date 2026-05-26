@@ -1590,9 +1590,14 @@
         p.setAttribute('aria-hidden', idx === slide ? 'false' : 'true');
       });
       // Scroll active pill into view (centred) so mobile swipers always see it
+      // Only fire if the hero is currently visible — prevents auto-timer pulling
+      // the page back to the top when the user has scrolled down past the hero
       var activeTab = tabs[slide];
       if (activeTab) {
-        activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        var rootRect = root.getBoundingClientRect();
+        if (rootRect.top < window.innerHeight && rootRect.bottom > 0) {
+          activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
       }
     }
 
