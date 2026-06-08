@@ -234,7 +234,7 @@
       line-height: 1.4;
     }
 
-    /* ── RIGHT PANEL: CALENDLY ── */
+    /* ── RIGHT PANEL: CONTACT FORM ── */
     .contact-right {}
     .contact-right-label {
       font-size: 11px;
@@ -244,15 +244,146 @@
       color: var(--kaptea-neutral-grey);
       margin-bottom: 24px;
     }
-    .calendly-wrap {
+
+    /* Form layout */
+    .cf-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 560px) { .cf-row { grid-template-columns: 1fr; } }
+    .cf-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .cf-field:last-child { margin-bottom: 0; }
+    .cf-row .cf-field { margin-bottom: 0; }
+    .cf-field label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--kaptea-charcoal);
+    }
+    .cf-field input,
+    .cf-field textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--kaptea-border);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      color: var(--kaptea-charcoal);
+      background: var(--kaptea-white);
+      transition: border-color 0.15s, box-shadow 0.15s;
+      box-sizing: border-box;
+      outline: none;
+    }
+    .cf-field textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.6;
+    }
+    .cf-field input::placeholder,
+    .cf-field textarea::placeholder { color: #b0b8c8; }
+    .cf-field input:focus,
+    .cf-field textarea:focus {
+      border-color: var(--kaptea-red);
+      box-shadow: 0 0 0 3px rgba(220,39,39,0.08);
+    }
+    .cf-field input.cf-input-error,
+    .cf-field textarea.cf-input-error { border-color: #ef4444; }
+    .cf-field-error {
+      font-size: 12px;
+      color: #ef4444;
+      display: none;
+    }
+    .cf-field-error.show { display: block; }
+    .cf-submit-row {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .cf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--kaptea-red);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      padding: 13px 28px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .cf-btn:hover { background: #c41f1f; }
+    .cf-btn:active { transform: scale(0.98); }
+    .cf-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .cf-privacy {
+      font-size: 12px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.5;
+    }
+    .cf-privacy a { color: var(--kaptea-tagline-grey); text-decoration: underline; }
+    .cf-banner {
+      font-size: 13px;
+      color: #ef4444;
+      margin-top: 12px;
+      display: none;
+    }
+    .cf-banner.show { display: block; }
+
+    /* Confirmation state */
+    .contact-confirm {
+      display: none;
+      padding: 48px 32px;
+      background: var(--kaptea-surface-muted);
       border: 1px solid var(--kaptea-border);
       border-radius: 12px;
-      overflow: hidden;
-      background: var(--kaptea-white);
+      text-align: center;
     }
-    .calendly-wrap .calendly-inline-widget {
-      min-width: 100%;
+    .contact-confirm-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(220,39,39,0.08);
+      border: 1px solid rgba(220,39,39,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--kaptea-red);
     }
+    .contact-confirm h3 {
+      font-size: 22px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 12px;
+    }
+    .contact-confirm p {
+      font-size: 15px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.65;
+      max-width: 420px;
+      margin: 0 auto 28px;
+    }
+    .contact-confirm a.cf-confirm-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--kaptea-red);
+      text-decoration: none;
+    }
+    .contact-confirm a.cf-confirm-link:hover { text-decoration: underline; }
 
     /* ── MAP STRIP ── */
     .contact-map {
@@ -461,12 +592,66 @@
 
   </div>
 
-  <!-- RIGHT: Calendly -->
+  <!-- RIGHT: Contact form -->
   <div class="contact-right">
-    <div class="contact-right-label">Book a time that suits you</div>
-    <div class="calendly-wrap">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/atmcnab/introduction-to-kaptea?hide_gdpr_banner=1" style="min-width:100%;height:750px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <div class="contact-right-label">Send us a message</div>
+
+    <!-- Form -->
+    <div id="contactForm">
+      <div class="cf-row">
+        <div class="cf-field">
+          <label for="cf-firstname">First name</label>
+          <input type="text" id="cf-firstname" placeholder="Jane" autocomplete="given-name" />
+          <span class="cf-field-error" id="cf-err-firstname">Please enter your first name.</span>
+        </div>
+        <div class="cf-field">
+          <label for="cf-lastname">Last name</label>
+          <input type="text" id="cf-lastname" placeholder="Smith" autocomplete="family-name" />
+          <span class="cf-field-error" id="cf-err-lastname">Please enter your last name.</span>
+        </div>
+      </div>
+      <div class="cf-row">
+        <div class="cf-field">
+          <label for="cf-email">Work email</label>
+          <input type="email" id="cf-email" placeholder="jane@company.com" autocomplete="email" />
+          <span class="cf-field-error" id="cf-err-email">Please enter a valid work email.</span>
+        </div>
+        <div class="cf-field">
+          <label for="cf-phone">Phone number</label>
+          <input type="tel" id="cf-phone" placeholder="+44 7700 900000" autocomplete="tel" />
+          <span class="cf-field-error" id="cf-err-phone">Please enter a valid phone number.</span>
+        </div>
+      </div>
+      <div class="cf-field">
+        <label for="cf-company">Company name</label>
+        <input type="text" id="cf-company" placeholder="Acme Financial Group" autocomplete="organization" />
+        <span class="cf-field-error" id="cf-err-company">Please enter your company name.</span>
+      </div>
+      <div class="cf-field">
+        <label for="cf-message">Tell us about your needs</label>
+        <textarea id="cf-message" placeholder="What are you trying to solve? Which channels matter most? Any compliance or regulatory requirements we should know about?" rows="5"></textarea>
+      </div>
+      <div class="cf-banner" id="cf-banner">Something went wrong. Please try again or email us at hello@kaptea.io.</div>
+      <div class="cf-submit-row">
+        <button type="button" class="cf-btn" id="cf-submit" onclick="submitContactForm()">
+          Send message
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9 3 14 8 9 13"/></svg>
+        </button>
+        <p class="cf-privacy">We will never share your details. <a href="/privacy-policy">Privacy policy</a>.</p>
+      </div>
+    </div>
+
+    <!-- Confirmation -->
+    <div class="contact-confirm" id="contactConfirm">
+      <div class="contact-confirm-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>Message received.</h3>
+      <p>We will review your message and get in touch as soon as possible. No scripts, no runaround.</p>
+      <a href="/case-studies" class="cf-confirm-link">
+        See how we work with clients
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><polyline points="6 3 11 8 6 13"/></svg>
+      </a>
     </div>
   </div>
 
@@ -486,7 +671,7 @@
 <!-- Alternative contact routes -->
 <section class="contact-alt">
   <div class="contact-alt-inner">
-    <h2>Not quite ready to book?</h2>
+    <h2>Explore before we talk</h2>
     <div class="contact-alt-grid">
 
       <div class="contact-alt-card">
@@ -519,6 +704,89 @@
     </div>
   </div>
 </section>
+
+<script>
+  function submitContactForm() {
+    var firstname = document.getElementById('cf-firstname').value.trim();
+    var lastname  = document.getElementById('cf-lastname').value.trim();
+    var email     = document.getElementById('cf-email').value.trim();
+    var phone     = document.getElementById('cf-phone').value.trim();
+    var company   = document.getElementById('cf-company').value.trim();
+    var message   = document.getElementById('cf-message').value.trim();
+
+    var valid = true;
+
+    function setErr(inputId, errId, hasError) {
+      document.getElementById(inputId).classList.toggle('cf-input-error', hasError);
+      document.getElementById(errId).classList.toggle('show', hasError);
+      if (hasError) valid = false;
+    }
+
+    setErr('cf-firstname', 'cf-err-firstname', !firstname);
+    setErr('cf-lastname',  'cf-err-lastname',  !lastname);
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    setErr('cf-email',   'cf-err-email',   !emailOk);
+    var phoneOk = phone.length >= 7 && /\d{5,}/.test(phone.replace(/[\s\-\+\(\)]/g, ''));
+    setErr('cf-phone',   'cf-err-phone',   !phoneOk);
+    setErr('cf-company', 'cf-err-company', !company);
+
+    if (!valid) return;
+
+    var btn = document.getElementById('cf-submit');
+    btn.disabled = true;
+    btn.innerHTML = 'Sending...';
+
+    fetch('/api/zoho-lead.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        firstname:   firstname,
+        lastname:    lastname,
+        email:       email,
+        phone:       phone,
+        company:     company,
+        message:     message,
+        lead_source: 'Website - Contact',
+      }),
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (data.ok || data.note === 'duplicate') {
+        document.getElementById('contactForm').style.display    = 'none';
+        document.getElementById('contactConfirm').style.display = 'block';
+      } else {
+        showBanner();
+        resetBtn(btn);
+      }
+    })
+    .catch(function() {
+      showBanner();
+      resetBtn(btn);
+    });
+  }
+
+  function showBanner() {
+    document.getElementById('cf-banner').classList.add('show');
+  }
+
+  function resetBtn(btn) {
+    btn.disabled = false;
+    btn.innerHTML = 'Send message <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9 3 14 8 9 13"/></svg>';
+  }
+
+  /* Clear errors on input */
+  ['cf-firstname','cf-lastname','cf-email','cf-phone','cf-company'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('input', function() {
+      el.classList.remove('cf-input-error');
+      var errId = 'cf-err-' + id.replace('cf-', '');
+      var err = document.getElementById(errId);
+      if (err) err.classList.remove('show');
+    });
+    el.addEventListener('keydown', function(e) { if (e.key === 'Enter') submitContactForm(); });
+  });
+</script>
 
 <script src="footer.js"></script>
 </body>

@@ -120,6 +120,8 @@ $regions     = arr_field($d, 'regions');
 $cpaas       = str_field($d, 'cpaas');
 $vol_typical = str_field($d, 'volume_typical_label');
 $vol_surge   = str_field($d, 'volume_surge_label');
+$message     = str_field($d, 'message', 4000);
+$lead_source = str_field($d, 'lead_source') ?: 'Website - Get Started';
 
 // ── Validate required fields ──────────────────────────────────────────────────
 if (!$lastname || !$company) {
@@ -152,7 +154,9 @@ if (!$access_token) {
 // ── Build Description block ───────────────────────────────────────────────────
 // Only include config lines that have data (first call is contact-only, so
 // config fields are empty — we skip them to keep the record clean).
-$desc_lines = ['Submitted via the Get Started flow on kaptea.io.', ''];
+$source_label = ($lead_source === 'Website - Contact') ? 'contact form' : 'Get Started flow';
+$desc_lines = ['Submitted via the ' . $source_label . ' on kaptea.io.', ''];
+if ($message)     $desc_lines[] = 'Message: '                    . $message;
 if ($channels)    $desc_lines[] = 'Channels: '                   . fmt_arr($channels);
 if ($usecases)    $desc_lines[] = 'Use cases: '                  . fmt_arr($usecases);
 if ($aiagents)    $desc_lines[] = 'AI agents: '                  . fmt_arr($aiagents);
@@ -170,7 +174,7 @@ $payload = json_encode([
         'Email'       => $email,
         'Phone'       => $phone,
         'Company'     => $company,
-        'Lead_Source' => 'Website - Get Started',
+        'Lead_Source' => $lead_source,
         'Description' => mb_substr($description, 0, 4000),
     ]],
     'trigger' => ['workflow'],
