@@ -150,17 +150,17 @@ if (!$access_token) {
 }
 
 // ── Build Description block ───────────────────────────────────────────────────
-$description = implode("\n", [
-    'Submitted via the Get Started flow on kaptea.io.',
-    '',
-    'Channels: '                   . fmt_arr($channels),
-    'Use cases: '                  . fmt_arr($usecases),
-    'AI agents: '                  . fmt_arr($aiagents),
-    'Server regions: '             . fmt_arr($regions),
-    'Current CPaaS provider: '     . ($cpaas       ?: 'Not specified'),
-    'Typical monthly volume: '     . ($vol_typical  ?: 'Not specified'),
-    'Surge capacity requirement: ' . ($vol_surge     ?: 'Not specified'),
-]);
+// Only include config lines that have data (first call is contact-only, so
+// config fields are empty — we skip them to keep the record clean).
+$desc_lines = ['Submitted via the Get Started flow on kaptea.io.', ''];
+if ($channels)    $desc_lines[] = 'Channels: '                   . fmt_arr($channels);
+if ($usecases)    $desc_lines[] = 'Use cases: '                  . fmt_arr($usecases);
+if ($aiagents)    $desc_lines[] = 'AI agents: '                  . fmt_arr($aiagents);
+if ($regions)     $desc_lines[] = 'Server regions: '             . fmt_arr($regions);
+if ($cpaas)       $desc_lines[] = 'Current CPaaS provider: '     . $cpaas;
+if ($vol_typical) $desc_lines[] = 'Typical monthly volume: '     . $vol_typical;
+if ($vol_surge)   $desc_lines[] = 'Surge capacity requirement: ' . $vol_surge;
+$description = implode("\n", $desc_lines);
 
 // ── Create Zoho Lead ──────────────────────────────────────────────────────────
 $payload = json_encode([
@@ -195,8 +195,46 @@ if ($code === 'SUCCESS') {
 }
 
 if ($code === 'DUPLICATE_DATA') {
-    error_log('[zoho-lead] Duplicate lead: ' . $email);
-    // Not an error from the user's perspective
+    error_log('[zoho-lead] Duplicate lead: ' . $email . ' — attempting enrichment update');
+
+    // On the second call (full form completion) we enrich the existing lead
+    // with the config data (channels, use cases, AI agents, volume etc).
+    // Only bother if there is meaningful config data to write.
+    $has_config = $channels || $usecases || $aiagents || $regions || $cpaas || $vol_typical;
+
+    if ($has_config && $email) {
+        // Search for the existing lead by email
+        $search_url = 'https://www.zohoapis.com/crm/v8/Leads/search?criteria='
+            . urlencode('(Email:equals:' . $email . ')');
+        $search_res = zoho_curl($search_url, [
+            CURLOPT_HTTPHEADER => [
+                'Authorization: Zoho-oauthtoken ' . $access_token,
+            ],
+        ]);
+        $existing_id = $search_res['data'][0]['id'] ?? '';
+
+        if ($existing_id) {
+            $update_payload = json_encode([
+                'data' => [[
+                    'id'          => $existing_id,
+                    'Description' => mb_substr($description, 0, 4000),
+                ]],
+            ]);
+            $update_res = zoho_curl('https://www.zohoapis.com/crm/v8/Leads', [
+                CURLOPT_CUSTOMREQUEST => 'PUT',
+                CURLOPT_HTTPHEADER    => [
+                    'Authorization: Zoho-oauthtoken ' . $access_token,
+                    'Content-Type: application/json',
+                ],
+                CURLOPT_POSTFIELDS    => $update_payload,
+            ]);
+            $update_code = $update_res['data'][0]['code'] ?? '';
+            error_log('[zoho-lead] Enrichment update id=' . $existing_id . ' code=' . $update_code);
+        } else {
+            error_log('[zoho-lead] Could not find existing lead for email=' . $email);
+        }
+    }
+
     exit(json_encode(['ok' => true, 'note' => 'duplicate']));
 }
 

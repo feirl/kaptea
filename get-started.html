@@ -1032,6 +1032,44 @@
 
       <!-- Step 1: Channels -->
       <div class="gs-step active" id="step-0">
+        <h1 class="gs-step-question">Let's get you set up</h1>
+        <p class="gs-step-hint">We'll use these to personalise your Kaptea environment. Your details are captured immediately so we can follow up if you need any help.</p>
+        <div class="gs-error-banner" id="err-0"></div>
+        <div class="gs-fields">
+          <div class="gs-row">
+            <div class="gs-field">
+              <label for="gs-firstname">First name</label>
+              <input type="text" id="gs-firstname" placeholder="Jane" autocomplete="given-name" />
+              <span class="gs-field-error" id="err-firstname">Please enter your first name.</span>
+            </div>
+            <div class="gs-field">
+              <label for="gs-lastname">Last name</label>
+              <input type="text" id="gs-lastname" placeholder="Smith" autocomplete="family-name" />
+              <span class="gs-field-error" id="err-lastname">Please enter your last name.</span>
+            </div>
+          </div>
+          <div class="gs-row">
+            <div class="gs-field">
+              <label for="gs-email">Work email</label>
+              <input type="email" id="gs-email" placeholder="jane@company.com" autocomplete="email" />
+              <span class="gs-field-error" id="err-email">Please enter a valid work email address.</span>
+            </div>
+            <div class="gs-field">
+              <label for="gs-phone">Phone number</label>
+              <input type="tel" id="gs-phone" placeholder="+44 7700 900000" autocomplete="tel" />
+              <span class="gs-field-error" id="err-phone">Please enter a valid phone number.</span>
+            </div>
+          </div>
+          <div class="gs-field">
+            <label for="gs-company">Company name</label>
+            <input type="text" id="gs-company" placeholder="Acme Financial Group" autocomplete="organization" />
+            <span class="gs-field-error" id="err-company">Please enter your company name.</span>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="gs-step" id="step-1">
         <h1 class="gs-step-question">Which channels do you need?</h1>
         <p class="gs-step-hint">Select all that apply. You can add more channels at any time.</p>
         <div class="gs-error-banner" id="err-0"></div>
@@ -1082,7 +1120,7 @@
       </div>
 
       <!-- Step 2: Use cases -->
-      <div class="gs-step" id="step-1">
+      <div class="gs-step" id="step-2">
         <h1 class="gs-step-question">What will you use Kaptea for?</h1>
         <p class="gs-step-hint">Select all that apply. This shapes how we configure your environment.</p>
         <div class="gs-error-banner" id="err-1"></div>
@@ -1115,7 +1153,7 @@
       </div>
 
       <!-- Step 3: AI Agents -->
-      <div class="gs-step" id="step-2">
+      <div class="gs-step" id="step-3">
         <h1 class="gs-step-question">Which AI agents are you planning to deploy?</h1>
         <p class="gs-step-hint">Kaptea ships with pre-built conversational AI agents that are fully configurable. Select all that apply.</p>
         <div class="gs-error-banner" id="err-2"></div>
@@ -1131,7 +1169,7 @@
       </div>
 
       <!-- Step 4: Regions -->
-      <div class="gs-step" id="step-3">
+      <div class="gs-step" id="step-4">
         <h1 class="gs-step-question">Where do you need a dedicated server instance?</h1>
         <p class="gs-step-hint">Select all regions. Your data stays within the boundaries you choose.</p>
         <div class="gs-error-banner" id="err-3"></div>
@@ -1168,7 +1206,7 @@
       </div>
 
       <!-- Step 5: CPaaS -->
-      <div class="gs-step" id="step-4">
+      <div class="gs-step" id="step-5">
         <h1 class="gs-step-question">Who is your current CPaaS provider?</h1>
         <p class="gs-step-hint">This helps us estimate your migration timeline and plan your carrier setup.</p>
         <div class="gs-error-banner" id="err-4"></div>
@@ -1195,7 +1233,7 @@
       </div>
 
       <!-- Step 6: Volume -->
-      <div class="gs-step" id="step-5">
+      <div class="gs-step" id="step-6">
         <h1 class="gs-step-question">What volume do you need to support?</h1>
         <p class="gs-step-hint">Help us right-size your environment. You can adjust these later.</p>
         <div class="gs-error-banner" id="err-5"></div>
@@ -1224,45 +1262,8 @@
       </div>
 
       <!-- Step 7: Personal details -->
-      <div class="gs-step" id="step-6">
-        <h1 class="gs-step-question">Your access details</h1>
-        <p class="gs-step-hint">Your environment is being prepared. We just need to know where to send your access details.</p>
-        <div class="gs-error-banner" id="err-6"></div>
-        <div class="gs-fields">
-          <div class="gs-row">
-            <div class="gs-field">
-              <label for="gs-firstname">First name</label>
-              <input type="text" id="gs-firstname" placeholder="Jane" autocomplete="given-name" />
-              <span class="gs-field-error" id="err-firstname">Please enter your first name.</span>
-            </div>
-            <div class="gs-field">
-              <label for="gs-lastname">Last name</label>
-              <input type="text" id="gs-lastname" placeholder="Smith" autocomplete="family-name" />
-              <span class="gs-field-error" id="err-lastname">Please enter your last name.</span>
-            </div>
-          </div>
-          <div class="gs-row">
-            <div class="gs-field">
-              <label for="gs-email">Work email</label>
-              <input type="email" id="gs-email" placeholder="jane@company.com" autocomplete="email" />
-              <span class="gs-field-error" id="err-email">Please enter a valid work email address.</span>
-            </div>
-            <div class="gs-field">
-              <label for="gs-phone">Phone number</label>
-              <input type="tel" id="gs-phone" placeholder="+44 7700 900000" autocomplete="tel" />
-              <span class="gs-field-error" id="err-phone">Please enter a valid phone number.</span>
-            </div>
-          </div>
-          <div class="gs-field">
-            <label for="gs-company">Company name</label>
-            <input type="text" id="gs-company" placeholder="Acme Financial Group" autocomplete="organization" />
-            <span class="gs-field-error" id="err-company">Please enter your company name.</span>
-          </div>
-        </div>
-      </div>
-
       <!-- Nav: sits inside gs-content, directly below the active step -->
-      <div class="gs-nav" id="gsNav">
+      <div class="gs-nav fields-step" id="gsNav">
         <button class="gs-btn-back hidden" id="btnBack" type="button" onclick="goBack()">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="10 3 5 8 10 13"/>
@@ -1307,16 +1308,16 @@
   var CALENDLY_URL = 'https://calendly.com/atmcnab/introduction-to-kaptea';
 
   var STEPS = [
+    { id: 'personal', type: 'fields'                       },
     { id: 'channels', type: 'multi',    group: 'channels'  },
     { id: 'usecases', type: 'multi',    group: 'usecases'  },
     { id: 'aiagents', type: 'dropdown', group: 'aiagents'  },
     { id: 'regions',  type: 'multi',    group: 'regions'   },
     { id: 'cpaas',    type: 'single',   group: 'cpaas'     },
     { id: 'volume',   type: 'sliders'                      },
-    { id: 'personal', type: 'fields'                       },
   ];
 
-  var STEP_LABELS = ['Your channels', 'Your use cases', 'Your AI agents', 'Your regions', 'Your current setup', 'Your volume', 'About you'];
+  var STEP_LABELS = ['About you', 'Your channels', 'Your use cases', 'Your AI agents', 'Your regions', 'Your current setup', 'Your volume'];
 
   var VOLUME_STOPS = [
     { val: 100000,   label: '100K'  },
@@ -1381,6 +1382,7 @@
     if (isAnimating) return;
     if (!validateStep(currentStep)) return;
     collectFields(currentStep);
+    if (currentStep === 0) { submitContact(); }
     if (currentStep === TOTAL_STEPS - 1) { submitForm(); return; }
     animateTo(currentStep + 1, 'forward');
   }
@@ -1423,7 +1425,7 @@
       }, 250);
 
       document.getElementById('btnBack').classList.toggle('hidden', currentStep === 0);
-      document.getElementById('gsNav').classList.toggle('fields-step', currentStep === TOTAL_STEPS - 1);
+      document.getElementById('gsNav').classList.toggle('fields-step', currentStep === 0);
 
       var btn = document.getElementById('btnContinue');
       btn.innerHTML = currentStep === TOTAL_STEPS - 1
@@ -1446,7 +1448,7 @@
 
   /* ── Field collection ── */
   function collectFields(idx) {
-    if (idx === 5) {
+    if (idx === 6) {
       var ti = parseInt(document.getElementById('gs-vol-typical').value, 10);
       var si = parseInt(document.getElementById('gs-vol-surge').value, 10);
       formData.volume_typical_label = VOLUME_STOPS[ti].label;
@@ -1454,7 +1456,7 @@
       formData.volume_surge_label   = VOLUME_STOPS[si].label;
       formData.volume_surge_value   = VOLUME_STOPS[si].val;
     }
-    if (idx === 6) {
+    if (idx === 0) {
       formData.firstname = document.getElementById('gs-firstname').value.trim();
       formData.lastname  = document.getElementById('gs-lastname').value.trim();
       formData.email     = document.getElementById('gs-email').value.trim();
@@ -1551,10 +1553,28 @@
     });
   }
 
+
+  /* ── Early lead capture: fire on step 0 exit ── */
+  function submitContact() {
+    var payload = {
+      firstname: formData.firstname,
+      lastname:  formData.lastname,
+      email:     formData.email,
+      phone:     formData.phone,
+      company:   formData.company,
+      partial:   true,
+    };
+    fetch('/api/zoho-lead.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    }).catch(function(e) { console.warn('Contact submission failed:', e); });
+  }
+
   /* ── Submit ── */
   function submitForm() {
-    collectFields(5);
     collectFields(6);
+    collectFields(0);
     var btn = document.getElementById('btnContinue');
     btn.disabled  = true;
     btn.innerHTML = 'Setting up your environment...';
