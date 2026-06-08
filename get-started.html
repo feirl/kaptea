@@ -902,11 +902,26 @@
     }
   </style>
 
-  <!-- Analytics (consent-gated via cookie manager) -->
-  <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-JKZ4JHK73L"></script>
-  <script type="text/plain" data-consent="analytics">
+  <!-- GA4 with Consent Mode v2 (standalone page — no footer.js) -->
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('consent', 'default', {
+      analytics_storage: 'denied', ad_storage: 'denied',
+      ad_user_data: 'denied', ad_personalization: 'denied',
+      wait_for_update: 500
+    });
+    // Upgrade consent if user has already accepted on another page
+    try {
+      var kc = JSON.parse(localStorage.getItem('kaptea_consent') || 'null');
+      if (kc && kc.analytics) {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    } catch(e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKZ4JHK73L"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-JKZ4JHK73L', { anonymize_ip: true });
   </script>

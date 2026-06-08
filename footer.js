@@ -557,4 +557,19 @@
   consentScript.defer = true;
   document.body.appendChild(consentScript);
 
+  // GA4 with Consent Mode v2 — loads unconditionally so Google can receive
+  // consent state signals and model non-consenting traffic. In denied mode
+  // no cookies are set and no personal data leaves the browser.
+  (function () {
+    const ga = document.createElement('script');
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-JKZ4JHK73L';
+    ga.async = true;
+    document.head.appendChild(ga);
+  })();
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = window.gtag || gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-JKZ4JHK73L', { anonymize_ip: true });
+
 })();

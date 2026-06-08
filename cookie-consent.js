@@ -85,8 +85,19 @@
     document.body.style.overflow = '';
   }
 
+  function updateGAConsent(analytics, marketing) {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('consent', 'update', {
+      analytics_storage:  analytics  ? 'granted' : 'denied',
+      ad_storage:         marketing  ? 'granted' : 'denied',
+      ad_user_data:       marketing  ? 'granted' : 'denied',
+      ad_personalization: marketing  ? 'granted' : 'denied'
+    });
+  }
+
   function acceptAll() {
     var consent = saveConsent(true, true);
+    updateGAConsent(true, true);
     activateScripts(consent);
     hideBanner();
     closeModal();
@@ -98,6 +109,7 @@
     var analytics = aToggle ? aToggle.checked : false;
     var marketing = mToggle ? mToggle.checked : false;
     var consent = saveConsent(analytics, marketing);
+    updateGAConsent(analytics, marketing);
     activateScripts(consent);
     hideBanner();
     closeModal();
@@ -105,6 +117,7 @@
 
   function rejectNonEssential() {
     var consent = saveConsent(false, false);
+    updateGAConsent(false, false);
     activateScripts(consent);
     hideBanner();
     closeModal();
@@ -113,6 +126,8 @@
   function init() {
     var consent = getConsent();
     if (consent) {
+      // Returning visitor — upgrade GA consent immediately before GA fires
+      updateGAConsent(!!consent.analytics, !!consent.marketing);
       activateScripts(consent);
       hideBanner();
     } else {
