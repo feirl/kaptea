@@ -190,7 +190,7 @@
         <li><a href="#branded">Branded calling is live in the UK</a></li>
         <li><a href="#byoai">Bring your own AI, bring your own carrier</a></li>
         <li><a href="#pronto">What this unlocks in Pronto</a></li>
-        <li><a href="#partner">The partner motion is changing</a></li>
+        <li><a href="#conclusion">Why Kaptea and Pronto are built for this moment</a></li>
       </ol>
     </div>
 
@@ -198,36 +198,36 @@
 
     <h2 id="shift">The strategic shift: from builders to boardrooms</h2>
 
-    <p>For most of Twilio's history, the pitch was to developers. APIs, programmable SMS, Flex for contact centres. The buyer was technical, the conversation was about capabilities, and strategic positioning inside a customer was typically at the IT or engineering level.</p>
+    <p>For most of Twilio's history, the pitch was to developers. APIs, programmable SMS, <a href="/omni-channel-communications">Flex for contact centres</a>. The buyer was technical, the conversation was about capabilities, and strategic positioning inside a customer was typically at the IT or engineering level.</p>
 
-    <p>That has changed. Twilio's own leadership said it plainly in the room: the company has shifted from product-led to infrastructure platform, and the C-suite is now the target conversation. CEOs, CTOs, and CPOs are issuing directives to their teams to figure out their agentic strategy. Twilio wants to be in those rooms, and they need partners to help them get there.</p>
+    <p>That has changed. Twilio's own leadership said it plainly in the room: the company has shifted from product-led to infrastructure platform, and the C-suite is now the target conversation. CEOs, CTOs, and CPOs are issuing directives to their teams to figure out their agentic strategy. Twilio wants to be in those rooms, and as a <a href="/twilio-partner">Twilio Gold Consulting and AI Partner</a>, so do we.</p>
 
     <blockquote>
       <p>"You better believe that the C suite wants to understand what our agentic strategy is. I was hearing from VPs and line of business owners: I have this directive from my CEO, I need to go figure something out."</p>
       <cite>Twilio regional leadership, Partner Day London</cite>
     </blockquote>
 
-    <p>The inflection point is the combination of Twilio's communications infrastructure with the Segment CDP acquisition now fully integrated, and the conversations product suite that shipped at Signal in May. The platform argument is more coherent than it has been in years, and regulated enterprise buyers are the right audience for it.</p>
+    <p>The inflection point is the combination of Twilio's communications infrastructure with the Segment CDP acquisition now fully integrated, and the conversations product suite that shipped at Signal in May. The platform argument is more coherent than it has been in years, and <a href="/industries/finance">regulated enterprise buyers</a> are the right audience for it.</p>
 
     <h2 id="agents">80 to 100 million agents by 2029</h2>
 
     <p>IDC is predicting over one billion AI agents deployed across enterprise by 2029. Of those, IDC projects 80 to 100 million will be powered by Twilio. That is the opportunity on the table, and the primary task of those agents will be communicating with humans: voice, messaging, email.</p>
 
-    <p>The cost of running AI models is falling fast. Tokens are cheaper. But something else is rising: the cost of operationalising a specific use case. One Twilio product leader put the ratio at around 30x between a generic conversational chat token and the inference cost of a properly operationalised, domain-specific task. That is where the implementation and orchestration layer matters, and it is where Pronto sits.</p>
+    <p>The cost of running AI models is falling fast. Tokens are cheaper. But something else is rising: the cost of operationalising a specific use case. One Twilio product leader put the ratio at around 30x between a generic conversational chat token and the inference cost of a properly operationalised, domain-specific task. That is where the implementation and orchestration layer matters, and it is where <a href="/pronto">Pronto</a> sits.</p>
 
-    <p>Regulated industries are well positioned for this. Large customer bases, complex inbound volumes, compliance requirements that force investment in communications infrastructure, and executives who are actively being asked to show a return on AI. The combination of urgency and complexity is exactly where a compliance-first orchestration layer earns its keep.</p>
+    <p>Regulated industries are well positioned for this. Large customer bases, complex inbound volumes, compliance requirements that force investment in communications infrastructure, and executives who are actively being asked to show a return on AI. The combination of urgency and complexity is exactly where a <a href="/control-governance">compliance-first orchestration layer</a> earns its keep.</p>
 
     <h2 id="conversations">What shipped: the Conversations suite</h2>
 
-    <p>The most substantive product session covered the Conversations suite, which reached general availability at Signal. It is built around four pillars that will be familiar to anyone who has been following how Pronto approaches the same problem.</p>
+    <p>The most substantive product session covered the Conversations suite, which reached general availability at Signal. It is built around four pillars that will be familiar to anyone who has been following how <a href="/pronto">Pronto</a> approaches the same problem.</p>
 
-    <p><strong>Conversation Orchestration</strong> handles cross-channel coordination. The goal is to let a customer start on web chat, move to a phone call, and finish with an email, without any of it requiring custom glue code. Previously this took significant engineering effort. The orchestrator manages the state machine across channels as a platform primitive.</p>
+    <p><strong>Conversation Orchestration</strong> handles cross-channel coordination. The goal is to let a customer start on web chat, move to a phone call, and finish with an email, without any of it requiring custom glue code. Previously this took significant engineering effort. The orchestrator manages the state machine across channels as a platform primitive. This is the same problem <a href="/customer-journey-orchestration">Pronto's customer journey orchestration</a> solves for regulated enterprises today.</p>
 
-    <p><strong>Customer Memory</strong> addresses what Twilio called the "agent amnesia" problem. When a customer switches from SMS to a phone call, the agent on the call already knows what was discussed. Memory is co-located as a caching layer directly with the agent, which eliminates the latency of round-tripping to back-end systems during a live conversation. It is pre-populated from existing data warehouses and segment profiles, and it holds business context as well as customer context: policies, FAQs, procedures.</p>
+    <p><strong>Customer Memory</strong> addresses what Twilio called the "agent amnesia" problem. When a customer switches from <a href="/sms-rcs">SMS</a> to a phone call, the agent on the call already knows what was discussed. Memory is co-located as a caching layer directly with the agent, which eliminates the latency of round-tripping to back-end systems during a live conversation. It is pre-populated from existing data warehouses and segment profiles, and it holds business context as well as customer context: policies, FAQs, procedures.</p>
 
-    <p><strong>Agent Connect</strong> is the integration bridge between Twilio's infrastructure and whatever AI model or framework a customer is already using. The explicit positioning is bring-your-own: your cloud provider, your model, your existing AI investment. Agent Connect makes it interoperable.</p>
+    <p><strong>Agent Connect</strong> is the integration bridge between Twilio's infrastructure and whatever AI model or framework a customer is already using. The explicit positioning is bring-your-own: your cloud provider, your model, your existing AI investment. Agent Connect makes it interoperable. <a href="/conversational-ai">Pronto's conversational AI module</a> is built on exactly this principle.</p>
 
-    <p><strong>Conversation Intelligence</strong> has moved from post-call analysis to real time. Custom operators can be written in a prompt-first fashion and deployed inline, so that business-specific logic runs during a live conversation, not after it. Sentiment detection, escalation triggers, compliance flags: all configurable, all in real time.</p>
+    <p><strong>Conversation Intelligence</strong> has moved from post-call analysis to real time. Custom operators can be written in a prompt-first fashion and deployed inline, so that business-specific logic runs during a live conversation, not after it. Sentiment detection, escalation triggers, <a href="/control-governance">compliance flags</a>: all configurable, all in real time.</p>
 
     <p>The adoption model is iterative. A customer can start with messaging, add voice the following quarter, add email after that. No re-architecture required at each step. This is important for regulated environments where a rip-and-replace approach creates compliance risk.</p>
 
@@ -237,54 +237,51 @@
 
     <p>This matters considerably for regulated industries. A drug recall notice, a fraud alert, or an urgent account communication coming from an unrecognised number gets declined. The regulatory obligation does not disappear because the customer did not pick up. Branded calling significantly lifts answer rates, and Twilio cited a 30 to 50 percent pickup improvement in pilot data.</p>
 
-    <p>Pronto already incorporates branded calling as part of its multi-channel escalation cascade. Email first, SMS to non-openers, branded call to anyone still unreached. With UK availability moving toward GA, this becomes a standard capability for Kaptea deployments serving UK financial services, healthcare, and utilities clients.</p>
+    <p>Pronto already incorporates branded calling as part of its <a href="/delivery-resilience">multi-channel escalation cascade</a>. <a href="/email">Email</a> first, <a href="/sms-rcs">SMS</a> to non-openers, branded call to anyone still unreached. With UK availability moving toward GA, this becomes a standard capability for Kaptea deployments serving UK <a href="/industries/finance">financial services</a>, <a href="/industries/healthcare">healthcare</a>, and <a href="/industries/utilities">utilities</a> clients. It is especially significant for <a href="/emergency-surge-communications">product recall and urgent regulatory communications</a>, where a missed call is a missed legal obligation.</p>
 
     <h2 id="byoai">Bring your own AI, bring your own carrier</h2>
 
     <p>One shift in how Twilio is presenting itself is worth noting directly. The explicit message from the product sessions is that Twilio is not prescribing an AI strategy. Agent Connect is designed to work with whatever model or framework a customer has already invested in. OpenAI, Anthropic, Google Cloud, AWS, open source: the platform handles the integration, the customer owns the model choice.</p>
 
-    <p>A question from Kaptea in the session asked what use cases Twilio expects partners to lead on over the next 12 to 24 months. The answer centred on voice: what can you do now that you could not do before because of the cost of human capital? Contact centre AI agents, IVR replacement, and the broader challenge of helping customers expand AI use cases without losing control of them.</p>
+    <p>A question from Kaptea in the session asked what use cases Twilio expects partners to lead on over the next 12 to 24 months. The answer centred on voice: what can you do now that you could not do before because of the cost of human capital? <a href="/conversational-ai">Contact centre AI agents</a>, <a href="/voice-ivr">IVR replacement</a>, and the broader challenge of helping customers expand AI use cases without losing control of them.</p>
 
     <blockquote>
       <p>"Partners that are able to come in and have a point of view on what the next generation of voice interactions for a brand look like: that is where we see customers encountering friction today. How do you expand these use cases over time without letting them get out of control?"</p>
       <cite>Twilio product leadership, Partner Day London</cite>
     </blockquote>
 
-    <p>The "control plane" language used by Twilio leaders is the same language Kaptea uses. As AI agents multiply across a regulated organisation, governance, template management, approval workflows, and audit trails become the hard problem. The carrier moves the message. The orchestration layer manages what gets sent, to whom, in what sequence, with what evidence trail.</p>
+    <p>The "control plane" language used by Twilio leaders is the same language Kaptea uses. As AI agents multiply across a regulated organisation, <a href="/control-governance">governance, template management, approval workflows, and audit trails</a> become the hard problem. The carrier moves the message. The <a href="/automations-workflow">orchestration layer</a> manages what gets sent, to whom, in what sequence, with what evidence trail.</p>
 
-    <p>Conversation Relay, Twilio's voice AI foundation layer, is GA and growing fast. It handles speech-to-text, text-to-speech, and interruption detection for voice agents. Supported STT providers include Deepgram, AWS, and Google. TTS includes ElevenLabs. As these models improve, Twilio absorbs the procurement and integration work, and the capability is available through a configuration change. This directly benefits Pronto's conversational AI module, which runs on Conversation Relay via the Kaptea Twilio account.</p>
+    <p>Conversation Relay, Twilio's voice AI foundation layer, is GA and growing fast. It handles speech-to-text, text-to-speech, and interruption detection for voice agents. Supported STT providers include Deepgram, AWS, and Google. TTS includes ElevenLabs. As these models improve, Twilio absorbs the procurement and integration work, and the capability is available through a configuration change. This directly benefits <a href="/conversational-ai">Pronto's conversational AI module</a>, which runs on Conversation Relay via the Kaptea Twilio account.</p>
 
     <h2 id="pronto">What this unlocks in Pronto</h2>
 
-    <p>The Conversations product suite maps directly onto what Pronto already delivers as a managed platform layer. Customer memory is what Pronto calls context-aware escalation: a live agent receiving an inbound conversation already sees the full outbound history, the AI conversation, and the customer record before saying a word. Conversation orchestration is how Pronto manages the cascade from email through SMS to branded call, with per-recipient state tracking at each step. Custom operators are how Pronto's compliance controls fire in real time: suppression checks, consent validation, regulatory keyword detection.</p>
+    <p>The Conversations product suite maps directly onto what <a href="/pronto">Pronto</a> already delivers as a managed platform layer. Customer memory is what Pronto calls context-aware escalation: a live agent receiving an inbound conversation already sees the full outbound history, the AI conversation, and the customer record before saying a word. Conversation orchestration is how Pronto manages the cascade from email through SMS to branded call, with per-recipient state tracking at each step. Custom operators are how <a href="/control-governance">Pronto's compliance controls</a> fire in real time: suppression checks, consent validation, regulatory keyword detection.</p>
 
-    <p>The difference is that these capabilities are now available as Twilio platform primitives, which makes Pronto's integration deeper and the maintenance overhead lower. We are not building and maintaining custom glue; we are building governance, compliance, and workflow logic on top of a platform that has made the connectivity layer its core product.</p>
+    <p>The difference is that these capabilities are now available as Twilio platform primitives, which makes Pronto's integration deeper and the maintenance overhead lower. We are not building and maintaining custom glue; we are building <a href="/control-governance">governance, compliance, and workflow logic</a> on top of a platform that has made the connectivity layer its core product.</p>
 
     <p>Several near-term capabilities are directly relevant to Kaptea clients:</p>
 
     <ul>
-      <li><strong>IE1 data residency for SMS</strong> is moving toward general availability. This has been the outstanding gap for Irish and EU regulated clients who required full data residency across all channels. SMS is the highest volume channel for most utility and financial services deployments.</li>
+      <li><strong>IE1 data residency for SMS</strong> is moving toward general availability. This has been the outstanding gap for Irish and EU regulated clients who required full data residency across all channels. <a href="/sms-rcs">SMS</a> is the highest volume channel for most <a href="/industries/utilities">utility</a> and <a href="/industries/finance">financial services</a> deployments.</li>
       <li><strong>Flex SDK consumption-based pricing and sub-accounts</strong> opens a different commercial model for clients with distributed operations or multiple brands who need separate agent environments within a single contract.</li>
       <li><strong>Salesforce Service Cloud integration</strong> is now native. Clients running Salesforce CRM alongside Twilio-powered communications no longer require a custom connector; voice, transcriptions, and AI outputs flow directly into the Salesforce UI.</li>
-      <li><strong>RCS</strong> is growing. 78% of consumers have bought from text messaging, and the case for upgrading high-volume one-way notifications to two-way RCS conversations is straightforward for utilities, healthcare appointment systems, and financial services alerts.</li>
+      <li><strong><a href="/sms-rcs">RCS</a></strong> is growing. 78% of consumers have bought from text messaging, and the case for upgrading high-volume one-way notifications to two-way RCS conversations is straightforward for <a href="/industries/utilities">utilities</a>, <a href="/industries/healthcare">healthcare</a> appointment systems, and <a href="/industries/finance">financial services</a> alerts.</li>
     </ul>
 
-    <h2 id="partner">The partner motion is changing</h2>
+    <h2 id="conclusion">Why Kaptea and Pronto are built for this moment</h2>
 
-    <p>Twilio acknowledged directly that the partner-first motion is a work in progress inside their sales organisation. Some account executives understand it and lead with it. Others have historically sold without partners and are still adjusting. The leadership position is clear: this is not a nice-to-have. It is the model for complex, transformation-level deals.</p>
+    <p>Twilio's direction of travel is unambiguous: infrastructure platform, not product vendor. AI agents that communicate with humans at scale, across every channel, with the model and carrier of your choice. The orchestration, governance, and compliance layer is explicitly where partners are expected to add value.</p>
 
-    <p>What Twilio said they need from partners is subject matter expertise and proof. Not "we can build this" but "we have built this, for a customer in your sector, and here is what the outcome looked like." The concern voiced in the session is one we hear directly from enterprise buyers: 80% of AI pilots do not deliver measurable value. The partner's role is to be the assurance layer, the proof point that a project can show traction without betting the organisation on it.</p>
+    <p>That is not a new description of what Kaptea does. It is the original one. <a href="/pronto">Pronto</a> was designed to sit above the carrier layer, orchestrate the full communications loop, and generate the evidence that regulated enterprises need to operate with confidence. We built it for financial services, healthcare, utilities, and public sector organisations where the cost of a failed communication is not a frustrated customer but a regulatory finding.</p>
 
-    <blockquote>
-      <p>"I'm not looking for incremental 25% year on year growth in partner attach rate. I'm looking at how we 10x the impact of the partner motion within the region."</p>
-      <cite>Twilio regional leadership, Partner Day London</cite>
-    </blockquote>
+    <p>The four pillars of Twilio's Conversations suite — orchestration, memory, agent connect, real-time intelligence — describe the architecture of Pronto in different terminology. <a href="/omni-channel-communications">Cross-channel coordination</a>. <a href="/conversational-ai">Context-aware AI</a> that carries the conversation across channels without starting from scratch. <a href="/control-governance">Compliance controls</a> that fire in real time, not after the fact. <a href="/delivery-resilience">Multi-carrier failover</a> so the message arrives even when a single carrier fails. These are not features we are adding to align with Twilio's roadmap. They are the platform we have already built and deployed.</p>
 
-    <p>For Kaptea, this is a structural opportunity. Our deployments in regulated industries, with regulator-ready audit trails and documented compliance outcomes, are exactly the reference points that reduce the perceived risk of a transformational AI communications project. The cases we have built in utilities, financial services, and healthcare are the evidence that makes the difference between a pilot and a programme.</p>
+    <p>The bring-your-own-AI model that Twilio is now advocating is how Pronto has always worked. Clients bring their existing Twilio account. They bring their preferred LLM. <a href="/security-compliance">Their data stays within their chosen residency boundary</a>. Kaptea adds the orchestration, the governance layer, the workflow automation, and the audit trail that turns carrier-grade infrastructure into a compliant enterprise communications platform.</p>
 
-    <p>The model Twilio is moving toward is one where partners are in the room from the first technical discovery call, not brought in at contract signature to implement what was already sold. If that shift lands, it changes the economics of how we work together and when we get involved.</p>
+    <p>The deployments we have built across the <a href="/case-studies">case studies on this site</a> — from Ireland's HSE COVID-19 contact tracing system to vehicle recall communications to utility outage response — are the reference evidence that regulated enterprises need to move from pilot to programme. The concern in the room in London was that 80% of AI pilots do not deliver value. The answer to that concern is not a better slide deck. It is a partner with a track record of delivering in your sector under regulatory scrutiny.</p>
 
-    <p>We are at the early end of that shift. But the direction is clear, and the product investments backing it are serious. For regulated enterprises evaluating what their communications infrastructure should look like in two to three years, the combination of Twilio's platform capabilities and Pronto's orchestration and compliance layer is a credible answer to a question that was harder to answer cleanly twelve months ago.</p>
+    <p>For regulated enterprises evaluating their communications infrastructure over the next two to three years, the combination of Twilio's platform and <a href="/pronto">Pronto's orchestration and compliance layer</a> is a complete answer. The carrier is solved. The model is your choice. The orchestration, governance, and loop closure is what we deliver.</p>
 
     <div class="post-cta">
       <h3>Want to talk through what this means for your stack?</h3>
