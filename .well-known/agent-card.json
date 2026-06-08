@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "name": "Kaptea Pronto",
-  "description": "Enterprise omnichannel communications platform for regulated organisations. Orchestrate SMS, RCS, WhatsApp, Voice, Email and Social with governance, compliance, and Conversational AI, built on Twilio and Telnyx. Deploy a dedicated instance in hours.",
+  "description": "Compliance-First Communications Orchestration for regulated enterprises. Pronto orchestrates the full customer communications loop: mass outbound dispatch, conversational AI on inbound replies, human escalation, customer-confirmed closure, and regulator-ready audit trail. Channels: SMS, RCS, WhatsApp, Voice, IVR, Email, Social. Sits above carriers (Twilio, Telnyx, direct). Dedicated instance deployed in hours. ISO 27001 certified.",
   "url": "https://kaptea.io",
   "provider": {
     "name": "Kaptea Limited",
@@ -11,7 +11,11 @@
     "terms_url": "https://kaptea.io/terms"
   },
   "capabilities": [
+    "compliance-first-communications-orchestration",
     "omnichannel-messaging",
+    "mass-notification",
+    "urgent-messaging",
+    "product-recall-communications",
     "conversational-ai",
     "workflow-automation",
     "voice-ivr",
@@ -22,6 +26,7 @@
     "secure-video",
     "social-messaging",
     "compliance-governance",
+    "regulator-ready-audit-trail",
     "enterprise-deployment"
   ],
   "channels": [
@@ -40,7 +45,8 @@
     "Utilities and Energy",
     "Public Sector",
     "Travel and Transport",
-    "Retail and Ecommerce"
+    "Retail and Ecommerce",
+    "Automotive"
   ],
   "certifications": [
     "ISO 27001",
@@ -71,6 +77,11 @@
     "llms_full_txt": "https://kaptea.io/llms-full.txt",
     "sitemap": "https://kaptea.io/sitemap.xml"
   },
+  "offices": [
+    { "city": "Dublin", "country": "Ireland", "role": "Global HQ" },
+    { "city": "New York", "country": "United States" },
+    { "city": "San Francisco", "country": "United States" }
+  ],
   "social": {
     "linkedin": "https://www.linkedin.com/company/kaptea",
     "twitter": "https://twitter.com/kaptea_io"
