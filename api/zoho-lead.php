@@ -75,6 +75,13 @@ if (!is_array($d)) {
     exit(json_encode(['ok' => false, 'error' => 'Invalid JSON']));
 }
 
+// ── Spam guard: honeypot field ────────────────────────────────────────────────
+// The 'website' field is hidden from real users; bots typically fill it in.
+// Silently return ok=true so bots believe the submission succeeded.
+if (!empty($d['website'])) {
+    exit(json_encode(['ok' => true, 'note' => 'ok']));
+}
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function str_field(array $d, string $k, int $max = 200): string {
     return mb_substr(trim((string) ($d[$k] ?? '')), 0, $max);
