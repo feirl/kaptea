@@ -411,52 +411,6 @@
     }
     .cf-banner.show { display: block; }
 
-    /* Confirmation state */
-    .contact-confirm {
-      display: none;
-      padding: 48px 32px;
-      background: var(--kaptea-surface-muted);
-      border: 1px solid var(--kaptea-border);
-      border-radius: 12px;
-      text-align: center;
-    }
-    .contact-confirm-icon {
-      width: 56px;
-      height: 56px;
-      background: rgba(220,39,39,0.08);
-      border: 1px solid rgba(220,39,39,0.2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      color: var(--kaptea-red);
-    }
-    .contact-confirm h3 {
-      font-size: 22px;
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      color: var(--kaptea-charcoal);
-      margin-bottom: 12px;
-    }
-    .contact-confirm p {
-      font-size: 15px;
-      color: var(--kaptea-tagline-grey);
-      line-height: 1.65;
-      max-width: 420px;
-      margin: 0 auto 28px;
-    }
-    .contact-confirm a.cf-confirm-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--kaptea-red);
-      text-decoration: none;
-    }
-    .contact-confirm a.cf-confirm-link:hover { text-decoration: underline; }
-
     /* ── MAP STRIP ── */
     .contact-map {
       background: var(--kaptea-charcoal);
@@ -663,18 +617,6 @@
       </div>
     </div>
 
-    <!-- Confirmation -->
-    <div class="contact-confirm" id="contactConfirm">
-      <div class="contact-confirm-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
-      <h3>Message received.</h3>
-      <p>We will review your message and get in touch as soon as possible. No scripts, no runaround.</p>
-      <a href="/case-studies" class="cf-confirm-link">
-        See how we work with clients
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><polyline points="6 3 11 8 6 13"/></svg>
-      </a>
-    </div>
   </div>
 
   <!-- FULL WIDTH: What to expect -->
@@ -840,8 +782,7 @@
     .then(function(res) { return res.json(); })
     .then(function(data) {
       if (data.ok || data.note === 'duplicate') {
-        document.getElementById('contactForm').style.display    = 'none';
-        document.getElementById('contactConfirm').style.display = 'block';
+        window.location.href = '/contact-thank-you';
       } else {
         showBanner();
         resetBtn(btn);
