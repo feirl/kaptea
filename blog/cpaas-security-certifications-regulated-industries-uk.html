@@ -187,23 +187,17 @@
     .post-meta .sep { opacity: 0.4; }
 
     /* ── BODY ── */
-    .post-body {
-      background: #f7f8fc;
-      padding: 56px 40px 80px;
+    .post-body-wrap {
+      background: var(--kaptea-white);
+      padding: 0 40px 80px;
     }
-    .post-body-inner {
+    .post-body {
       max-width: 780px;
       margin: 0 auto;
+      padding-top: 48px;
     }
-
-    /* ── PROSE ── */
-    .post-prose {
-      font-size: 16px;
-      line-height: 1.75;
-      color: #374151;
-    }
-    .post-prose p { margin: 0 0 1.5em; }
-    .post-prose h2 {
+    .post-body p { margin: 0 0 1.5em; font-size: 16px; line-height: 1.75; color: #374151; }
+    .post-body h2 {
       font-family: 'Manrope', sans-serif;
       font-size: clamp(19px, 2.2vw, 24px);
       font-weight: 800;
@@ -211,49 +205,23 @@
       margin: 2.4em 0 0.7em;
       line-height: 1.25;
     }
-    .post-prose h3 {
+    .post-body h3 {
       font-family: 'Manrope', sans-serif;
       font-size: 18px;
       font-weight: 700;
       color: #131521;
       margin: 1.8em 0 0.5em;
     }
-    .post-prose ul, .post-prose ol {
-      margin: 0 0 1.5em 1.5em;
-      padding: 0;
-    }
-    .post-prose li { margin-bottom: 0.5em; }
-    .post-prose a {
-      color: #dc2727;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-    .post-prose a:hover { color: #b91c1c; }
-    .post-prose strong { color: #131521; font-weight: 700; }
+    .post-body ul, .post-body ol { margin: 0 0 1.5em 1.5em; padding: 0; }
+    .post-body li { margin-bottom: 0.5em; font-size: 16px; line-height: 1.75; color: #374151; }
+    .post-body a { color: #dc2727; text-decoration: underline; text-underline-offset: 2px; }
+    .post-body a:hover { color: #b91c1c; }
+    .post-body strong { color: #131521; font-weight: 700; }
 
     /* ── ANSWER BOX ── */
-    .post-answer-box {
-      background: #ffffff;
-      border: 1px solid #e8eaf0;
-      border-left: 4px solid #1d4ed8;
-      border-radius: 8px;
-      padding: 24px 28px;
-      margin: 0 0 2em;
-    }
-    .post-answer-box-label {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #1d4ed8;
-      margin-bottom: 10px;
-    }
-    .post-answer-box p {
-      margin: 0;
-      font-size: 15px;
-      line-height: 1.7;
-      color: #374151;
-    }
+    .post-answer-box { background: #f0f9ff; border-left: 4px solid var(--kaptea-red); border-radius: 0 8px 8px 0; padding: 20px 24px; margin-bottom: 40px; }
+    .post-answer-box-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--kaptea-red); margin-bottom: 8px; }
+    .post-answer-box p { font-size: 15px; color: #1e3a5f; line-height: 1.7; margin: 0; font-weight: 500; }
 
     /* ── CRITERIA TABLE ── */
     .post-table-wrap {
@@ -457,13 +425,13 @@
     @media (max-width: 768px) {
       .post-breadcrumb { padding: 12px 20px; }
       .post-header { padding: 40px 20px 0; }
-      .post-body { padding: 40px 24px 60px; }
+      .post-body-wrap { padding: 0 20px 60px; }
       .post-cta-box { padding: 28px 24px; }
       .post-cta-box-text h3 { font-size: 18px; }
       .post-table { font-size: 13px; }
     }
     @media (max-width: 480px) {
-      .post-body { padding: 32px 20px 48px; }
+      .post-body-wrap { padding: 0 16px 48px; }
     }
   </style>
 </head>
@@ -496,10 +464,8 @@
   </div>
 </header>
 
-<!-- Body -->
-<section class="post-body">
-  <div class="post-body-inner">
-    <article class="post-prose">
+<div class="post-body-wrap">
+  <article class="post-body">
 
       <p>Every enterprise procurement process for a CPaaS provider now includes a security questionnaire. Most are long. Very few are specific enough to catch the gaps that matter for regulated industries. The standard ISO checkbox is already ticked by everyone on the shortlist. The real work starts after that.</p>
 
@@ -732,8 +698,8 @@
       </div>
     </div>
 
-  </div>
-</section>
+  </article>
+</div>
 
 <div id="footer-placeholder"></div>
 <script src="/footer.js"></script>
