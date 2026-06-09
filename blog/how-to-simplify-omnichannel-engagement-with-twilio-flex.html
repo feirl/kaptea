@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
+
+  <title>How to Simplify Omnichannel Engagement with Twilio Flex | Kaptea Blog</title>
+  <meta name="description" content="How Twilio Flex handles omnichannel engagement, what it delivers natively, where you need a platform layer on top, and how to simplify the architecture without losing control or compliance." />
+  <link rel="canonical" href="https://kaptea.io/blog/how-to-simplify-omnichannel-engagement-with-twilio-flex" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Simplify Omnichannel Engagement with Twilio Flex" />
+  <meta property="og:description" content="How Twilio Flex handles omnichannel engagement, what it delivers natively, where you need a platform layer on top, and how to simplify without losing compliance." />
+  <meta property="og:url" content="https://kaptea.io/blog/how-to-simplify-omnichannel-engagement-with-twilio-flex" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta property="og:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@kaptea" />
+  <meta name="twitter:title" content="How to Simplify Omnichannel Engagement with Twilio Flex" />
+  <meta name="twitter:description" content="How Twilio Flex handles omnichannel engagement, what it delivers natively, where you need a platform layer on top, and how to simplify without losing compliance." />
+  <meta name="twitter:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="article:published_time" content="2026-06-09T12:00:00+00:00" />
+  <meta property="article:section" content="Strategy" />
+  <meta property="article:tag" content="Twilio Flex, omnichannel engagement, contact centre, CCaaS, omnichannel customer engagement, Twilio" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaptea.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog & Insights", "item": "https://kaptea.io/blog" },
+      { "@type": "ListItem", "position": 3, "name": "How to Simplify Omnichannel Engagement with Twilio Flex", "item": "https://kaptea.io/blog/how-to-simplify-omnichannel-engagement-with-twilio-flex" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Simplify Omnichannel Engagement with Twilio Flex",
+    "description": "How Twilio Flex handles omnichannel engagement, what it delivers natively, where you need a platform layer on top, and how to simplify the architecture without losing control or compliance.",
+    "datePublished": "2026-06-09T12:00:00+00:00",
+    "dateModified": "2026-06-09T12:00:00+00:00",
+    "author": {
+      "@type": "Person",
+      "@id": "https://kaptea.io/#robert-norton",
+      "name": "Robert Norton",
+      "jobTitle": "CTO & Co-Founder",
+      "worksFor": { "@id": "https://kaptea.io/#organization" },
+      "image": "https://kaptea.io/img/robert-norton.webp",
+      "url": "https://kaptea.io/about",
+      "sameAs": "https://www.linkedin.com/in/robertjnorton/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://kaptea.io/#organization",
+      "name": "Kaptea",
+      "url": "https://kaptea.io",
+      "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" },
+      "sameAs": [
+        "https://www.linkedin.com/company/kaptea",
+        "https://twitter.com/kaptea"
+      ]
+    },
+    "url": "https://kaptea.io/blog/how-to-simplify-omnichannel-engagement-with-twilio-flex",
+    "mainEntityOfPage": "https://kaptea.io/blog/how-to-simplify-omnichannel-engagement-with-twilio-flex",
+    "articleSection": "Strategy",
+    "keywords": "Twilio Flex omnichannel, omnichannel engagement Twilio Flex, Twilio Flex contact centre, simplify omnichannel, CCaaS omnichannel, Twilio Flex channels, Twilio Flex compliance",
+    "wordCount": "1500",
+    "timeRequired": "PT6M",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ".post-answer-box"
+    },
+    "about": [
+      { "@type": "SoftwareApplication", "name": "Twilio Flex" },
+      { "@type": "Thing", "name": "Omnichannel Customer Engagement" },
+      { "@type": "Service", "name": "Contact Centre as a Service" },
+      { "@type": "Service", "name": "Enterprise Communications Orchestration" }
+    ],
+    "mentions": [
+      { "@type": "Organization", "name": "Twilio" },
+      { "@type": "SoftwareApplication", "name": "Twilio TaskRouter" },
+      { "@type": "SoftwareApplication", "name": "Twilio Conversations" },
+      { "@type": "SoftwareApplication", "name": "WhatsApp Business API" },
+      { "@type": "SoftwareApplication", "name": "Salesforce" },
+      { "@type": "Thing", "name": "GDPR" },
+      { "@type": "Thing", "name": "FCA" },
+      { "@type": "SoftwareApplication", "name": "Kaptea Pronto" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Twilio Flex?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Twilio Flex is a fully programmable cloud contact centre platform that allows enterprises to build and customise agent experiences across voice, chat, SMS, WhatsApp, and email from a single interface. Unlike off-the-shelf CCaaS platforms, Flex is built on Twilio's API infrastructure, which means every element of the agent desktop, routing logic, and channel configuration can be modified via code. It uses Twilio TaskRouter for intelligent task distribution and Twilio Conversations to manage multi-channel messaging threads."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Twilio Flex support omnichannel engagement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Twilio Flex natively supports voice, SMS, chat, WhatsApp, and email in a unified agent desktop. Agents can handle contacts across all active channels from one interface. TaskRouter distributes tasks from any channel to the right agent based on skills, availability, and routing rules. However, omnichannel engagement in Flex requires configuration: channels do not simply activate themselves, and cross-channel customer history requires integration with a CRM or data store that maintains a unified customer record."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does Twilio Flex not include out of the box?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Twilio Flex does not include compliance archiving for regulated industries, WhatsApp template governance, AI-assisted conversation handling, proactive outbound campaign management, or deep CRM write-back as standard. These capabilities require either custom development on top of Flex or a platform layer — such as Kaptea Pronto — that adds orchestration, compliance controls, and AI on top of the Flex and Twilio infrastructure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Twilio Flex integrate with a CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Twilio Flex integrates with CRMs through its plugin architecture. Official plugins exist for Salesforce and other major CRMs, embedding CRM data directly in the Flex agent desktop. Custom integrations are built using the Flex Plugins SDK. The integration depth varies: a basic integration surfaces the customer record during the call; a deeper integration writes disposition codes, conversation notes, and outcome data back to the CRM automatically at the end of each interaction."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .post-breadcrumb { background: #f7f8fc; border-bottom: 1px solid #e8eaf0; padding: 12px 40px; }
+    .post-breadcrumb-inner { max-width: 820px; margin: 0 auto; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--kaptea-neutral-grey); }
+    .post-breadcrumb a { color: var(--kaptea-tagline-grey); text-decoration: none; transition: color 0.15s; }
+    .post-breadcrumb a:hover { color: var(--kaptea-red); }
+    .post-breadcrumb svg { flex-shrink: 0; opacity: 0.4; }
+
+    .post-header { background: var(--kaptea-white); padding: 56px 40px 0; border-bottom: 1px solid #e8eaf0; }
+    .post-header-inner { max-width: 820px; margin: 0 auto; }
+    .blog-cat { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 100px; }
+    .blog-cat--strategy { background: #cffafe; color: #0e7490; }
+    .post-cat-wrap { margin-bottom: 20px; }
+    .post-header h1 { font-family: 'Manrope', sans-serif; font-size: clamp(26px, 4vw, 40px); font-weight: 800; color: var(--kaptea-charcoal); line-height: 1.15; margin: 0 0 20px; }
+    .post-meta { display: flex; align-items: center; gap: 14px; font-size: 13px; color: var(--kaptea-neutral-grey); padding-bottom: 32px; flex-wrap: wrap; }
+    .post-meta time { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .post-author { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .sep { opacity: 0.4; }
+
+    .post-body-wrap { background: var(--kaptea-white); padding: 0 40px 80px; }
+    .post-body { max-width: 820px; margin: 0 auto; padding-top: 48px; }
+
+    .post-answer-box { background: #f0f9ff; border-left: 4px solid var(--kaptea-red); border-radius: 0 8px 8px 0; padding: 20px 24px; margin-bottom: 40px; }
+    .post-answer-box-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--kaptea-red); margin-bottom: 8px; }
+    .post-answer-box p { font-size: 15px; color: #1e3a5f; line-height: 1.7; margin: 0; font-weight: 500; }
+
+    .post-toc { background: #f7f8fc; border: 1px solid #e8eaf0; border-radius: 8px; padding: 20px 24px; margin-bottom: 40px; }
+    .post-toc-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--kaptea-neutral-grey); margin-bottom: 12px; }
+    .post-toc ul { margin: 0; padding-left: 20px; list-style: disc; }
+    .post-toc li { margin-bottom: 6px; }
+    .post-body .post-toc a { font-size: 13px; color: var(--kaptea-charcoal); text-decoration: none; font-weight: 500; transition: color 0.15s; }
+    .post-body .post-toc a:hover { color: var(--kaptea-red); }
+
+    .post-body h2 { font-family: 'Manrope', sans-serif; font-size: 24px; font-weight: 800; color: var(--kaptea-charcoal); margin: 56px 0 16px; line-height: 1.25; scroll-margin-top: 80px; }
+    .post-body h3 { font-size: 18px; font-weight: 700; color: var(--kaptea-charcoal); margin: 36px 0 12px; line-height: 1.3; scroll-margin-top: 80px; }
+    .post-body p { font-size: 16px; color: var(--kaptea-charcoal); line-height: 1.8; margin: 0 0 20px; }
+    .post-body ul, .post-body ol { margin: 0 0 20px; padding-left: 24px; }
+    .post-body li { font-size: 16px; color: var(--kaptea-charcoal); line-height: 1.7; margin-bottom: 8px; }
+    .post-body strong { color: var(--kaptea-charcoal); font-weight: 700; }
+    .post-body a { color: var(--kaptea-red); text-decoration: underline; text-underline-offset: 2px; }
+    .post-body a:hover { text-decoration: none; }
+
+    .post-pullquote { border-left: 3px solid var(--kaptea-red); margin: 40px 0; padding: 4px 0 4px 28px; }
+    .post-pullquote blockquote { font-family: 'Manrope', sans-serif; font-size: 21px; font-weight: 700; color: var(--kaptea-charcoal); line-height: 1.4; margin: 0; font-style: normal; }
+
+    .flex-capability-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0 40px; }
+    .flex-capability-col { border-radius: 10px; padding: 22px 24px; }
+    .flex-capability-col--native { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .flex-capability-col--needs-layer { background: #fff7ed; border: 1px solid #fed7aa; }
+    .flex-capability-col-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
+    .flex-capability-col--native .flex-capability-col-label { color: #15803d; }
+    .flex-capability-col--needs-layer .flex-capability-col-label { color: #c2410c; }
+    .flex-capability-col ul { margin: 0; padding-left: 18px; }
+    .flex-capability-col li { font-size: 14px; color: var(--kaptea-charcoal); line-height: 1.6; margin-bottom: 6px; }
+
+    .arch-layer { border: 1px solid #e8eaf0; border-radius: 10px; padding: 18px 22px; margin: 10px 0; display: flex; align-items: center; gap: 16px; }
+    .arch-layer-badge { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 4px 10px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; }
+    .arch-layer-badge--pronto { background: #fce7f3; color: #9d174d; }
+    .arch-layer-badge--flex { background: #ede9fe; color: #6d28d9; }
+    .arch-layer-badge--twilio { background: #dbeafe; color: #1d4ed8; }
+    .arch-layer-text { font-size: 14px; color: var(--kaptea-charcoal); line-height: 1.6; }
+    .arch-layer-text strong { display: block; font-size: 15px; margin-bottom: 2px; }
+    .arch-connector { text-align: center; font-size: 18px; color: #d1d5db; padding: 2px 0; }
+
+    .post-cta { background: var(--kaptea-charcoal); border-radius: 12px; padding: 36px 40px; margin: 56px 0 0; text-align: center; }
+    .post-cta h3 { font-family: 'Manrope', sans-serif; font-size: 22px; font-weight: 800; color: #fff; margin: 0 0 12px; }
+    .post-cta p { font-size: 15px; color: #b0b8c8; line-height: 1.6; margin: 0 0 24px; }
+    .post-cta a { display: inline-flex; align-items: center; gap: 8px; background: var(--kaptea-red); color: #fff; font-size: 15px; font-weight: 600; padding: 13px 28px; border-radius: 8px; text-decoration: none; transition: background 0.15s; }
+    .post-cta a:hover { background: #c41f1f; }
+
+    .post-author-bio { display: flex; align-items: flex-start; gap: 16px; padding: 28px 0; border-top: 1px solid #e8eaf0; border-bottom: 1px solid #e8eaf0; margin: 44px 0 0; }
+    .post-author-avatar { width: 52px; height: 52px; min-width: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+    .post-author-name { font-size: 14px; font-weight: 700; color: var(--kaptea-charcoal); }
+    .post-author-role { font-size: 12px; color: var(--kaptea-neutral-grey); margin-top: 2px; }
+    .post-author-bio-text { font-size: 13px; color: var(--kaptea-tagline-grey); line-height: 1.6; margin-top: 6px; }
+
+    .post-related { background: #f7f8fc; padding: 48px 40px 64px; border-top: 1px solid #e8eaf0; }
+    .post-related-inner { max-width: 820px; margin: 0 auto; }
+    .post-related-heading { font-family: 'Manrope', sans-serif; font-size: 20px; font-weight: 800; color: var(--kaptea-charcoal); margin: 0 0 24px; }
+    .post-related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .post-related-card { background: var(--kaptea-white); border-radius: 8px; padding: 18px 18px 16px; text-decoration: none; display: block; border: 1px solid #e8eaf0; transition: box-shadow 0.15s, transform 0.15s; }
+    .post-related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-1px); }
+    .post-related-card .blog-cat { margin-bottom: 10px; }
+    .post-related-card h4 { font-size: 14px; font-weight: 700; color: var(--kaptea-charcoal); line-height: 1.35; margin: 0 0 10px; }
+    .post-related-meta { font-size: 11px; color: var(--kaptea-neutral-grey); font-weight: 500; }
+
+    @media (max-width: 768px) {
+      .post-breadcrumb { padding: 12px 20px; }
+      .post-header { padding: 40px 20px 0; }
+      .post-body-wrap { padding: 0 20px 60px; }
+      .post-body { padding-top: 32px; }
+      .post-related { padding: 40px 20px 48px; }
+      .post-related-grid { grid-template-columns: 1fr; }
+      .post-cta { padding: 28px 24px; }
+      .flex-capability-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script type="text/plain" data-consent="marketing">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="marketing" async src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+</head>
+<body>
+<script src="/nav.js"></script>
+
+<nav class="post-breadcrumb" aria-label="Breadcrumb">
+  <div class="post-breadcrumb-inner">
+    <a href="/">Home</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <a href="/blog">Blog &amp; Insights</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <span>Simplify omnichannel engagement with Twilio Flex</span>
+  </div>
+</nav>
+
+<header class="post-header">
+  <div class="post-header-inner">
+    <div class="post-cat-wrap">
+      <span class="blog-cat blog-cat--strategy">Strategy</span>
+    </div>
+    <h1>How to Simplify Omnichannel Engagement with Twilio Flex</h1>
+    <div class="post-meta">
+      <span class="post-author">Robert Norton</span>
+      <span class="sep">·</span>
+      <time datetime="2026-06-09">9 June 2026</time>
+      <span class="sep">·</span>
+      <span>6 min read</span>
+    </div>
+  </div>
+</header>
+
+<div class="post-body-wrap">
+  <article class="post-body">
+
+    <div class="post-answer-box">
+      <div class="post-answer-box-label">The short answer</div>
+      <p>Twilio Flex is a programmable cloud contact centre platform that unifies voice, chat, SMS, WhatsApp, and email into a single agent desktop. It simplifies omnichannel engagement by routing every contact type through a single task queue and giving agents one interface regardless of channel. What it does not simplify on its own: compliance archiving, WhatsApp template governance, AI-assisted handling, and proactive outbound orchestration. Those require a platform layer on top of Flex.</p>
+    </div>
+
+    <div class="post-toc">
+      <div class="post-toc-label">In this article</div>
+      <ul>
+        <li><a href="#what-flex-does">What Twilio Flex actually does for omnichannel engagement</a></li>
+        <li><a href="#native-vs-layer">What Flex delivers natively vs what needs a layer on top</a></li>
+        <li><a href="#taskrouter">TaskRouter: how Flex handles omnichannel routing</a></li>
+        <li><a href="#crm">CRM integration in a Flex omnichannel setup</a></li>
+        <li><a href="#compliance">Compliance requirements Flex does not cover</a></li>
+        <li><a href="#architecture">The architecture that simplifies without losing control</a></li>
+      </ul>
+    </div>
+
+    <h2 id="what-flex-does">What Twilio Flex actually does for omnichannel engagement</h2>
+
+    <p>Twilio Flex is a programmable cloud contact centre built on Twilio's API infrastructure. Unlike traditional CCaaS platforms where the vendor controls the product roadmap and you configure within fixed options, Flex is a development platform: every element of the agent desktop, routing logic, and channel configuration can be changed via code using the Flex Plugins SDK.</p>
+
+    <p>For omnichannel engagement specifically, Flex does three things natively:</p>
+
+    <ul>
+      <li><strong>Unified agent desktop:</strong> agents handle voice calls, SMS threads, WhatsApp conversations, chat sessions, and email contacts from a single interface, without switching between systems</li>
+      <li><strong>Unified task queue:</strong> every inbound contact — regardless of channel — becomes a task in Twilio TaskRouter, which distributes it to the right agent based on skills, availability, and routing rules</li>
+      <li><strong>Unified conversation history:</strong> within a single channel, Flex maintains conversation threads so agents can see prior messages before responding</li>
+    </ul>
+
+    <p>The simplification Flex provides is real. Before Flex (or similar unified platforms), enterprise contact centres typically ran a voice system, a separate chat platform, an email ticketing tool, and often a WhatsApp interface — each with its own queue, its own reporting, and its own agent login. Supervisors looked at four dashboards. Agents switched between applications mid-interaction. Customers who moved from chat to phone were treated as new contacts with no history.</p>
+
+    <p>Flex collapses that into one. The complexity reduction is significant. But "simplified" is not the same as "complete," and what Flex does not include out of the box matters especially for regulated industries.</p>
+
+    <h2 id="native-vs-layer">What Flex delivers natively vs what needs a layer on top</h2>
+
+    <div class="flex-capability-grid">
+      <div class="flex-capability-col flex-capability-col--native">
+        <div class="flex-capability-col-label">Flex delivers natively</div>
+        <ul>
+          <li>Voice, SMS, chat, WhatsApp, email in one agent desktop</li>
+          <li>Skills-based routing via TaskRouter</li>
+          <li>Real-time and historical reporting</li>
+          <li>Supervisor monitoring and barge-in</li>
+          <li>Programmable IVR via Twilio Studio</li>
+          <li>CRM integration via plugin architecture</li>
+          <li>Warm and cold transfer between agents</li>
+          <li>Queue-based workforce management hooks</li>
+        </ul>
+      </div>
+      <div class="flex-capability-col flex-capability-col--needs-layer">
+        <div class="flex-capability-col-label">Needs a platform layer</div>
+        <ul>
+          <li>Compliance archiving with tamper-proof audit trail</li>
+          <li>WhatsApp template governance and approval workflow</li>
+          <li>AI-assisted conversation handling and summarisation</li>
+          <li>Proactive outbound campaign orchestration</li>
+          <li>Cross-channel customer identity resolution</li>
+          <li>Regulated industry controls (FCA, MiFID II, GDPR)</li>
+          <li>Channel failover (SMS backup when WhatsApp fails)</li>
+          <li>Deep CRM write-back with structured field extraction</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The distinction matters because many organisations deploy Flex expecting it to solve their entire omnichannel problem and discover six months in that the compliance, governance, and AI layers still need to be built. The question is whether to build those on top of Flex using custom development, or to use a pre-built platform layer that sits between Flex and the business logic.</p>
+
+    <h2 id="taskrouter">TaskRouter: how Flex handles omnichannel routing</h2>
+
+    <p>TaskRouter is the engine behind Flex's omnichannel routing. Every inbound contact — a voice call, an incoming WhatsApp message, a chat session — is wrapped as a task with attributes: channel, priority, customer identifier, intent (if IVR has captured it), and any customer properties available from CRM lookup at point of entry.</p>
+
+    <p>TaskRouter then evaluates workers (agents) against configurable routing rules:</p>
+
+    <ul>
+      <li><strong>Skills matching:</strong> a billing query routes to agents with the billing skill; a Spanish-language contact routes to bilingual agents</li>
+      <li><strong>Capacity limits:</strong> each worker has a channel-specific capacity — a voice agent might handle one call at a time, while a chat agent handles three simultaneous conversations</li>
+      <li><strong>Priority queues:</strong> high-value customers, escalations, and compliance-flagged contacts can be assigned higher priority and routed ahead of standard queue position</li>
+      <li><strong>Fallback routing:</strong> if no specialist is available, the task can age into a general queue after a defined wait period</li>
+    </ul>
+
+    <p>For regulated industries, TaskRouter can be configured to enforce routing rules that have compliance implications — for example, ensuring that certain complaint types always route to a qualified complaint handler, or that contacts flagged as vulnerable are never routed to an inexperienced agent. This configuration lives in TaskRouter workflows and can be modified without redeployment.</p>
+
+    <div class="post-pullquote">
+      <blockquote>The simplification Flex provides is real — but "simplified" is not the same as "complete." What Flex does not include out of the box matters most in regulated industries.</blockquote>
+    </div>
+
+    <h2 id="crm">CRM integration in a Flex omnichannel setup</h2>
+
+    <p>Flex integrates with CRMs through its plugin system. The Salesforce plugin is the most mature: it embeds a Salesforce panel in the Flex agent desktop, surfaces the matching contact record when a task is assigned, and can write disposition data back to Salesforce at task completion. Similar integrations exist for HubSpot, Zendesk, and Microsoft Dynamics, either via official plugins or custom builds using the Flex Plugins SDK.</p>
+
+    <p>The integration depth is configurable at three levels:</p>
+
+    <ul>
+      <li><strong>Surface-only:</strong> the CRM contact record is displayed in the agent desktop during the interaction, but no data is written back automatically</li>
+      <li><strong>Disposition write-back:</strong> at interaction end, outcome data (call result, disposition code, notes) is written to the CRM record automatically</li>
+      <li><strong>Bidirectional with structured extraction:</strong> the integration reads customer data from CRM to inform routing decisions (e.g., account tier determines priority), and writes structured field data — not just notes — back to CRM at the end of each interaction</li>
+    </ul>
+
+    <p>The third level is what most enterprise teams need but few achieve without a platform layer. Writing structured fields back to the CRM requires either an AI layer that extracts them from the conversation, or agent-facing forms that capture them during wrap-up. Without this, omnichannel engagement history lives in Flex but does not become structured CRM data — which means it cannot drive automation, segmentation, or reporting in the CRM.</p>
+
+    <h2 id="compliance">Compliance requirements Flex does not cover</h2>
+
+    <p>For contact centres operating in financial services, healthcare, utilities, or other regulated sectors, Flex's native capabilities are insufficient for compliance without additional architecture.</p>
+
+    <p>The gaps are specific:</p>
+
+    <ul>
+      <li><strong>Communications archiving:</strong> FCA and MiFID II require all customer communications — including WhatsApp and chat — to be recorded, stored, and retrievable. Flex does not provide a tamper-proof archive. Conversation data in Flex can be deleted. A separate archiving layer, with immutable storage and audit trail, is required.</li>
+      <li><strong>WhatsApp template governance:</strong> WhatsApp Business API requires that outbound message templates are pre-approved by Meta. In regulated industries, they also require internal approval before submission. Flex does not include a template approval workflow. Agents can send unapproved templates if there is no governance layer enforcing the process.</li>
+      <li><strong>Consent and opt-out management:</strong> GDPR and PECR require documented consent for digital communications and prompt processing of opt-outs across all channels. Flex does not maintain a consent ledger or enforce suppression across channels automatically.</li>
+      <li><strong>Vulnerable customer handling:</strong> FCA Consumer Duty rules require contact centres to identify and appropriately handle vulnerable customers. Flex can route flagged contacts differently, but the flagging, monitoring, and audit of vulnerable customer interactions requires additional logic.</li>
+    </ul>
+
+    <p>These are not edge cases — they are baseline requirements for most regulated contact centres. Addressing them through custom Flex development is possible but expensive and difficult to maintain as Twilio releases Flex updates. The alternative is a <a href="/control-governance">governance and compliance layer</a> that sits between the business logic and the Flex infrastructure, handling these requirements centrally rather than per-plugin.</p>
+
+    <h2 id="architecture">The architecture that simplifies without losing control</h2>
+
+    <p>The architecture that works in practice for regulated enterprise contact centres has three layers:</p>
+
+    <div style="margin: 32px 0;">
+      <div class="arch-layer">
+        <span class="arch-layer-badge arch-layer-badge--pronto">Orchestration layer</span>
+        <div class="arch-layer-text">
+          <strong>Kaptea Pronto</strong>
+          Compliance archiving, WhatsApp template governance, AI conversation handling, proactive outbound, cross-channel identity, CRM write-back with structured fields, channel failover logic
+        </div>
+      </div>
+      <div class="arch-connector">↕</div>
+      <div class="arch-layer">
+        <span class="arch-layer-badge arch-layer-badge--flex">Contact centre layer</span>
+        <div class="arch-layer-text">
+          <strong>Twilio Flex</strong>
+          Unified agent desktop, TaskRouter distribution, real-time supervision, IVR via Twilio Studio, agent capacity management
+        </div>
+      </div>
+      <div class="arch-connector">↕</div>
+      <div class="arch-layer">
+        <span class="arch-layer-badge arch-layer-badge--twilio">Carrier layer</span>
+        <div class="arch-layer-text">
+          <strong>Twilio (voice, SMS, WhatsApp, email)</strong>
+          Channel delivery, number management, BSP relationship with Meta, carrier connectivity
+        </div>
+      </div>
+    </div>
+
+    <p>In this architecture, Flex does what it does best: agent experience and task routing. The orchestration layer handles everything that Flex does not — compliance, governance, AI, outbound, and deep CRM integration. The carrier layer handles delivery.</p>
+
+    <p>The practical benefit of separating these layers is that each can evolve independently. When Twilio updates Flex, the orchestration layer does not need to be rebuilt. When compliance requirements change (as they do with increasing frequency in financial services), the governance configuration updates centrally rather than across every Flex plugin. When a new channel is added — RCS, for example, or branded calling — it enters at the carrier layer and the orchestration layer routes it, without requiring a new agent desktop integration.</p>
+
+    <p>This is the architecture we deploy for regulated enterprise contact centres. Kaptea Pronto sits above Flex and the Twilio carrier layer, handling <a href="/control-governance">compliance and governance</a>, <a href="/conversational-ai">AI-assisted conversation handling</a>, <a href="/whatsapp">WhatsApp template management</a>, <a href="/delivery-resilience">channel failover</a>, and structured CRM integration. Customers bring their own Twilio account and their own CRM. We operate the layer in between.</p>
+
+    <div class="post-cta">
+      <h3>Running Twilio Flex and want to close the compliance and AI gaps?</h3>
+      <p>We work with Flex-deployed contact centres across financial services, utilities, and healthcare to add the orchestration layer without rebuilding the agent experience. A 30-minute call scopes what's needed.</p>
+      <a href="/contact">
+        Talk to the team
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9 3 14 8 9 13"/></svg>
+      </a>
+    </div>
+
+    <div class="post-author-bio">
+      <div class="post-author-avatar">
+        <img src="/img/robert-norton.webp" alt="Robert Norton, CTO of Kaptea" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;" />
+      </div>
+      <div>
+        <div class="post-author-name">Robert Norton</div>
+        <div class="post-author-role">CTO &amp; Co-Founder, Kaptea</div>
+        <div class="post-author-bio-text">Robert leads Kaptea's technical architecture, specialising in enterprise communications platforms, Twilio integrations, compliance-first system design, and AI-assisted orchestration. <a href="/about">About Kaptea</a>.</div>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<section class="post-related">
+  <div class="post-related-inner">
+    <h2 class="post-related-heading">Related reading</h2>
+    <div class="post-related-grid">
+      <a href="/blog/how-twilio-flex-integration-can-transform-contact-centre-performance" class="post-related-card">
+        <span class="blog-cat blog-cat--strategy">Strategy</span>
+        <h4>How Twilio Flex transforms contact centre performance</h4>
+        <div class="post-related-meta">Robert Norton · Kaptea</div>
+      </a>
+      <a href="/blog/whatsapp-compliance" class="post-related-card">
+        <span class="blog-cat blog-cat--strategy">Strategy</span>
+        <h4>WhatsApp in your contact centre: what compliance actually requires</h4>
+        <div class="post-related-meta">Robert Norton · Kaptea</div>
+      </a>
+      <a href="/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement" class="post-related-card">
+        <span class="blog-cat blog-cat--strategy">Strategy</span>
+        <h4>Multichannel vs omnichannel: why the difference matters more than you think</h4>
+        <div class="post-related-meta">Alan McNab · Kaptea</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script src="/footer.js"></script>
+</body>
+</html>
