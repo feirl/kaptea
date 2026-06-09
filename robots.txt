@@ -11,7 +11,7 @@ Disallow: /wp-json/
 Disallow: /admin
 Disallow: /login
 
-# AI crawlers — explicitly allowed
+# AI crawlers: explicitly allowed
 User-agent: GPTBot
 Allow: /
 

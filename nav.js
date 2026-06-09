@@ -1,7 +1,7 @@
 // nav.js: Global navigation for Kaptea
 // Edit this file once to update the nav across all pages.
 
-// GA4 Consent Mode v2 — set defaults before any GA script loads.
+// GA4 Consent Mode v2: set defaults before any GA script loads.
 // In denied state GA sends only anonymised, cookieless pings (no user-level
 // data, GDPR-compliant). Google models/estimates non-consenting traffic.
 // Consent is upgraded to 'granted' by cookie-consent.js when the user accepts.

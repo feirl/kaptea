@@ -557,7 +557,7 @@
   consentScript.defer = true;
   document.body.appendChild(consentScript);
 
-  // GA4 with Consent Mode v2 — loads unconditionally so Google can receive
+  // GA4 with Consent Mode v2: loads unconditionally so Google can receive
   // consent state signals and model non-consenting traffic. In denied mode
   // no cookies are set and no personal data leaves the browser.
   (function () {

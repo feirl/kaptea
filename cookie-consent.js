@@ -126,7 +126,7 @@
   function init() {
     var consent = getConsent();
     if (consent) {
-      // Returning visitor — upgrade GA consent immediately before GA fires
+      // Returning visitor: upgrade GA consent immediately before GA fires
       updateGAConsent(!!consent.analytics, !!consent.marketing);
       activateScripts(consent);
       hideBanner();

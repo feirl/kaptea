@@ -1,6 +1,6 @@
 <?php
 /**
- * zoho-lead.php — Kaptea /get-started lead submission endpoint
+ * zoho-lead.php: Kaptea /get-started lead submission endpoint
  *
  * Accepts a JSON POST, refreshes a Zoho OAuth token, and creates a Lead.
  * Credentials must NOT be in this file or the repo.
@@ -160,7 +160,7 @@ if (!$access_token) {
 
 // ── Build Description block ───────────────────────────────────────────────────
 // Only include config lines that have data (first call is contact-only, so
-// config fields are empty — we skip them to keep the record clean).
+// config fields are empty: we skip them to keep the record clean).
 $source_label = ($lead_source === 'Website - Contact') ? 'contact form' : 'Get Started flow';
 $desc_lines = ['Submitted via the ' . $source_label . ' on kaptea.io.', ''];
 if ($message)     $desc_lines[] = 'Message: '                    . $message;
@@ -206,7 +206,7 @@ if ($code === 'SUCCESS') {
 }
 
 if ($code === 'DUPLICATE_DATA') {
-    error_log('[zoho-lead] Duplicate lead: ' . $email . ' — attempting enrichment update');
+    error_log('[zoho-lead] Duplicate lead: ' . $email . ': attempting enrichment update');
 
     // On the second call (full form completion) we enrich the existing lead
     // with the config data (channels, use cases, AI agents, volume etc).

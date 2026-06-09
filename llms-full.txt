@@ -1,4 +1,4 @@
-# Kaptea — Full LLM Context Document
+# Kaptea: Full LLM Context Document
 
 > Kaptea builds compliance-first enterprise communications infrastructure for regulated industries, serving financial services, healthcare, utilities, and public sector organisations across Ireland, the UK, and Europe.
 
@@ -75,9 +75,9 @@ Dedicated instance per customer, no shared tenancy. Cloud-managed on AWS. Custom
 
 ## Carrier Partners
 
-**Twilio** (primary) — Kaptea is a Twilio Gold Consulting Partner and AI Partner. Pronto fully operationalises Twilio Programmable Messaging, Voice, Flex, Verify, and WhatsApp.
+**Twilio** (primary): Kaptea is a Twilio Gold Consulting Partner and AI Partner. Pronto fully operationalises Twilio Programmable Messaging, Voice, Flex, Verify, and WhatsApp.
 
-**Telnyx** — Alternative carrier for customers requiring carrier diversity or specific routing requirements.
+**Telnyx**: Alternative carrier for customers requiring carrier diversity or specific routing requirements.
 
 Additional carriers available via the Integration and API Framework.
 
@@ -183,8 +183,8 @@ Contact centre scaled from 12 to 120+ agents across four countries under crisis 
 
 ## Leadership
 
-**Alan McNab** — CEO and co-founder. Enterprise communications, SaaS, and regulated industries.
-**Robert Norton** — CTO and co-founder. Platform architecture, Twilio partnerships, and enterprise delivery.
+**Alan McNab**: CEO and co-founder. Enterprise communications, SaaS, and regulated industries.
+**Robert Norton**: CTO and co-founder. Platform architecture, Twilio partnerships, and enterprise delivery.
 
 Combined leadership experience: 40+ years in enterprise communications.
 

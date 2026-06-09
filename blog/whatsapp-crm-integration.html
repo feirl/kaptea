@@ -354,7 +354,7 @@
       <li><strong>Round-robin within a team:</strong> even distribution across available agents with overflow to a queue</li>
     </ul>
 
-    <p>The routing logic lives in the platform, not the CRM. The CRM receives the output: a conversation record, an updated contact, a deal move. This is why a CRM connector alone is not sufficient — it has no routing capability. It can only log what arrives.</p>
+    <p>The routing logic lives in the platform, not the CRM. The CRM receives the output: a conversation record, an updated contact, a deal move. This is why a CRM connector alone is not sufficient: it has no routing capability. It can only log what arrives.</p>
 
     <p>For teams managing multiple products or brands from a single CRM, the routing requirement is especially sharp. A conversation about product A should create or update a deal in the product A pipeline. A conversation about product B should do the same in product B's pipeline. Without a platform layer applying that logic, everything lands in one undifferentiated queue.</p>
 
