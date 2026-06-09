@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
+
+  <title>WhatsApp for Financial Services: FCA, MiFID II, and GDPR Compliance | Kaptea Blog</title>
+  <meta name="description" content="What FCA COBS rules, MiFID II Article 16 archiving requirements, and GDPR consent obligations mean in practice for banks, insurers, and wealth managers wanting to use WhatsApp to communicate with clients." />
+  <link rel="canonical" href="https://kaptea.io/blog/whatsapp-for-financial-services-fca-mifid-ii-compliance" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="WhatsApp for Financial Services: FCA, MiFID II, and GDPR Compliance" />
+  <meta property="og:description" content="What FCA COBS rules, MiFID II Article 16 archiving requirements, and GDPR consent obligations mean in practice for banks, insurers, and wealth managers wanting to use WhatsApp to communicate with clients." />
+  <meta property="og:url" content="https://kaptea.io/blog/whatsapp-for-financial-services-fca-mifid-ii-compliance" />
+  <meta property="og:site_name" content="Kaptea" />
+  <meta property="og:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@kaptea" />
+  <meta name="twitter:title" content="WhatsApp for Financial Services: FCA, MiFID II, and GDPR Compliance" />
+  <meta name="twitter:description" content="What FCA COBS rules, MiFID II Article 16 archiving requirements, and GDPR consent obligations mean in practice for regulated financial services firms wanting to use WhatsApp." />
+  <meta name="twitter:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="article:published_time" content="2026-06-30T10:00:00+00:00" />
+  <meta property="article:section" content="Compliance" />
+  <meta property="article:tag" content="WhatsApp financial services, WhatsApp FCA compliance, WhatsApp MiFID II, WhatsApp GDPR financial services, WhatsApp banking compliance, WhatsApp wealth management, WhatsApp archiving regulated firms" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKZ4JHK73L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKZ4JHK73L');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaptea.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog & Insights", "item": "https://kaptea.io/blog" },
+      { "@type": "ListItem", "position": 3, "name": "WhatsApp for Financial Services: FCA, MiFID II, and GDPR Compliance", "item": "https://kaptea.io/blog/whatsapp-for-financial-services-fca-mifid-ii-compliance" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "WhatsApp for Financial Services: FCA, MiFID II, and GDPR Compliance",
+    "description": "What FCA COBS rules, MiFID II Article 16 archiving requirements, and GDPR consent obligations mean in practice for banks, insurers, and wealth managers wanting to use WhatsApp to communicate with clients.",
+    "datePublished": "2026-06-30T10:00:00+00:00",
+    "dateModified": "2026-06-30T10:00:00+00:00",
+    "author": {
+      "@type": "Person",
+      "@id": "https://kaptea.io/#robert-norton",
+      "name": "Robert Norton",
+      "jobTitle": "CTO & Co-Founder",
+      "worksFor": { "@id": "https://kaptea.io/#organization" },
+      "image": "https://kaptea.io/img/robert-norton.webp",
+      "url": "https://kaptea.io/about",
+      "sameAs": "https://www.linkedin.com/in/robertjnorton/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://kaptea.io/#organization",
+      "name": "Kaptea",
+      "url": "https://kaptea.io",
+      "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" },
+      "sameAs": [
+        "https://www.linkedin.com/company/kaptea",
+        "https://twitter.com/kaptea"
+      ]
+    },
+    "url": "https://kaptea.io/blog/whatsapp-for-financial-services-fca-mifid-ii-compliance",
+    "mainEntityOfPage": "https://kaptea.io/blog/whatsapp-for-financial-services-fca-mifid-ii-compliance",
+    "articleSection": "Compliance",
+    "keywords": "WhatsApp financial services, WhatsApp FCA compliance, WhatsApp MiFID II, WhatsApp GDPR financial services, WhatsApp banking compliance, WhatsApp wealth management, WhatsApp archiving regulated firms",
+    "wordCount": "1600",
+    "timeRequired": "PT8M",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ".post-answer-box"
+    },
+    "about": [
+      { "@type": "Thing", "name": "WhatsApp Business API" },
+      { "@type": "Organization", "name": "Financial Conduct Authority" },
+      { "@type": "Thing", "name": "MiFID II" },
+      { "@type": "Service", "name": "Financial Services Communications Compliance" }
+    ],
+    "mentions": [
+      { "@type": "Thing", "name": "FCA COBS 11.8" },
+      { "@type": "Thing", "name": "MiFID II Article 16" },
+      { "@type": "Thing", "name": "WORM Archiving" },
+      { "@type": "Thing", "name": "GDPR Article 17" },
+      { "@type": "Thing", "name": "Consumer Duty" },
+      { "@type": "Thing", "name": "Data Processing Agreement" },
+      { "@type": "Thing", "name": "UK GDPR" },
+      { "@type": "Thing", "name": "EEA Data Residency" },
+      { "@type": "Organization", "name": "Meta" },
+      { "@type": "Thing", "name": "Electronic Communications Recording" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is WhatsApp allowed for FCA-regulated customer communications?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WhatsApp can be used for FCA-regulated customer communications, but only under specific technical conditions. The FCA's COBS 11.8 requires firms to record and retain relevant electronic communications. The standard WhatsApp Business App does not meet this requirement: it does not provide WORM-compliant archiving, data is stored in Meta's global infrastructure outside EEA control, and there is no API access to retrieve conversation records for regulatory review. Firms using the WhatsApp Business API through a cloud communications platform can configure compliant archiving and data residency, making the channel viable for regulated use. Using standard WhatsApp without an archiving solution is a regulatory breach."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does MiFID II Article 16(7) require for WhatsApp communications?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MiFID II Article 16(7) requires investment firms to record all telephone conversations and electronic communications relating to the reception, transmission, and execution of client orders, and to retain them for a minimum of five years (up to seven years if the regulator requests it). This applies to WhatsApp and any other electronic messaging channel used for client-related communications. The record must be held in a format that is durable, accessible, and cannot be altered or deleted before the retention period expires (WORM: Write Once Read Many). A standard WhatsApp Business account does not meet any of these requirements. The obligation applies regardless of whether the communication was initiated by the client or the firm."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between WhatsApp Business App and WhatsApp Business API for regulated firms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WhatsApp Business App is the free mobile application designed for small businesses. It runs on a single device, has no archiving capability, provides no API access for compliance tooling, and stores data in Meta's global infrastructure. It is not suitable for FCA or MiFID II-regulated use. WhatsApp Business API is a programmatic interface that allows regulated firms to integrate WhatsApp into their communications infrastructure. Through an API deployment on a dedicated cloud communications platform, firms can configure WORM-compliant message archiving, EEA data residency, audit log export, Data Loss Prevention policies, and the Data Processing Agreement with Meta required under GDPR. The API is the only route to compliant deployment for regulated financial services firms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle the tension between GDPR right to erasure and MiFID II archiving requirements?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GDPR Article 17 gives individuals the right to request erasure of their personal data. MiFID II Article 16(7) requires firms to retain certain communications records for up to five years. Where these obligations conflict, UK GDPR and EU GDPR both contain exceptions for retention obligations imposed by law: firms are not required to erase records they are legally obligated to retain. The practical approach is to document the legal basis for retention (compliance with a legal obligation under Article 6(1)(c) UK GDPR), inform clients of this in the Privacy Notice at the time of onboarding, and implement a process to delete archived communications promptly at the end of the mandatory retention period. Do not retain records beyond the regulatory minimum."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .post-breadcrumb {
+      background: #f7f8fc;
+      border-bottom: 1px solid #e8eaf0;
+      padding: 12px 40px;
+    }
+    .post-breadcrumb-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--kaptea-neutral-grey);
+    }
+    .post-breadcrumb a {
+      color: var(--kaptea-tagline-grey);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .post-breadcrumb a:hover { color: var(--kaptea-red); }
+    .post-breadcrumb svg { flex-shrink: 0; opacity: 0.4; }
+
+    .post-header {
+      background: var(--kaptea-white);
+      padding: 56px 40px 0;
+      border-bottom: 1px solid #e8eaf0;
+    }
+    .post-header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .blog-cat {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .blog-cat--compliance { background: #dbeafe; color: #1d4ed8; }
+    .blog-cat--company { background: #fef3c7; color: #b45309; }
+    .blog-cat--thought-leadership { background: #f3e8ff; color: #7c3aed; }
+
+    .post-cat-wrap { margin-bottom: 20px; }
+
+    .post-header h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      line-height: 1.15;
+      margin: 0 0 20px;
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      color: var(--kaptea-neutral-grey);
+      padding-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .post-meta time     { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .post-author { font-weight: 600; color: var(--kaptea-tagline-grey); }
+    .post-meta .sep     { opacity: 0.4; }
+
+    .post-body-wrap {
+      background: var(--kaptea-white);
+      padding: 0 40px 80px;
+    }
+    .post-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-top: 48px;
+    }
+
+    .post-answer-box {
+      background: #f0f9ff;
+      border-left: 4px solid var(--kaptea-red);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-answer-box-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--kaptea-red);
+      margin-bottom: 8px;
+    }
+    .post-answer-box p {
+      font-size: 15px;
+      color: #1e3a5f;
+      line-height: 1.7;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .post-toc {
+      background: #f7f8fc;
+      border: 1px solid #e8eaf0;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-toc-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--kaptea-neutral-grey);
+      margin-bottom: 12px;
+    }
+    .post-toc ol { margin: 0; padding-left: 20px; }
+    .post-toc li { margin-bottom: 6px; }
+    .post-body .post-toc a {
+      font-size: 13px;
+      color: var(--kaptea-charcoal);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .post-body .post-toc a:hover { color: var(--kaptea-red); }
+
+    .post-body h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 52px 0 16px;
+      line-height: 1.25;
+      scroll-margin-top: 80px;
+    }
+    .post-body h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin: 32px 0 12px;
+      line-height: 1.3;
+    }
+    .post-body p {
+      font-size: 16px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.8;
+      margin: 0 0 20px;
+    }
+    .post-body ul, .post-body ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+    }
+    .post-body li {
+      font-size: 16px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .post-body strong { color: var(--kaptea-charcoal); font-weight: 700; }
+    .post-body a { color: var(--kaptea-red); text-decoration: underline; text-underline-offset: 2px; }
+    .post-body a:hover { text-decoration: none; }
+
+    .post-pullquote {
+      border-left: 3px solid var(--kaptea-red);
+      margin: 40px 0;
+      padding: 4px 0 4px 28px;
+    }
+    .post-pullquote blockquote {
+      font-family: 'Manrope', sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.4;
+      margin: 0;
+      font-style: normal;
+    }
+
+    .post-warning-box {
+      background: #fff7ed;
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .post-warning-box-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #b45309;
+      margin-bottom: 8px;
+    }
+    .post-warning-box p {
+      font-size: 15px;
+      color: #78350f;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .post-compliance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+      font-size: 14px;
+    }
+    .post-compliance-table th {
+      background: #f7f8fc;
+      border: 1px solid #e8eaf0;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      font-size: 13px;
+    }
+    .post-compliance-table td {
+      border: 1px solid #e8eaf0;
+      padding: 10px 14px;
+      color: var(--kaptea-charcoal);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .post-compliance-table tr:nth-child(even) td { background: #f7f8fc; }
+    .table-yes { color: #16a34a; font-weight: 700; }
+    .table-no  { color: #dc2626; font-weight: 700; }
+    .table-req { font-size: 12px; color: var(--kaptea-neutral-grey); }
+
+    .post-faq-section {
+      margin-top: 52px;
+      border-top: 1px solid #e8eaf0;
+      padding-top: 40px;
+    }
+    .post-faq-section h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 0 0 28px;
+      line-height: 1.25;
+    }
+    .post-faq-item {
+      border-bottom: 1px solid #e8eaf0;
+      padding: 20px 0;
+    }
+    .post-faq-item:last-child { border-bottom: none; }
+    .post-faq-q {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin: 0 0 10px;
+      line-height: 1.4;
+    }
+    .post-faq-a {
+      font-size: 15px;
+      color: var(--kaptea-charcoal);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .post-cta-box {
+      background: #f0f9ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 28px 28px 24px;
+      margin: 44px 0 0;
+      text-align: center;
+    }
+    .post-cta-box h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 0 0 10px;
+    }
+    .post-cta-box p {
+      font-size: 15px;
+      color: var(--kaptea-tagline-grey);
+      margin: 0 0 18px;
+      line-height: 1.6;
+    }
+    .post-cta-btn {
+      display: inline-block;
+      background: var(--kaptea-red);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .post-cta-btn:hover { opacity: 0.88; text-decoration: none; }
+
+    .post-author-bio {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 28px 0;
+      border-top: 1px solid #e8eaf0;
+      border-bottom: 1px solid #e8eaf0;
+      margin: 44px 0 0;
+    }
+    .post-author-avatar {
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #e8eaf0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .post-author-name  { font-size: 14px; font-weight: 700; color: var(--kaptea-charcoal); }
+    .post-author-role  { font-size: 12px; color: var(--kaptea-neutral-grey); margin-top: 2px; }
+    .post-author-bio-text {
+      font-size: 13px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+    .post-author-bio-text a { color: var(--kaptea-red); text-decoration: none; }
+
+    .post-related {
+      background: #f7f8fc;
+      padding: 48px 40px 64px;
+      border-top: 1px solid #e8eaf0;
+    }
+    .post-related-inner { max-width: 780px; margin: 0 auto; }
+    .post-related-heading {
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
+      margin: 0 0 24px;
+    }
+    .post-related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .post-related-card {
+      background: var(--kaptea-white);
+      border-radius: 8px;
+      padding: 18px 18px 16px;
+      text-decoration: none;
+      display: block;
+      border: 1px solid #e8eaf0;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .post-related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-1px); }
+    .post-related-card .blog-cat { margin-bottom: 10px; }
+    .post-related-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      line-height: 1.35;
+      margin: 0 0 10px;
+    }
+    .post-related-meta { font-size: 11px; color: var(--kaptea-neutral-grey); font-weight: 500; }
+
+    @media (max-width: 768px) {
+      .post-breadcrumb { padding: 12px 20px; }
+      .post-header { padding: 40px 20px 0; }
+      .post-body-wrap { padding: 0 20px 60px; }
+      .post-body { padding-top: 32px; }
+      .post-related { padding: 40px 20px 48px; }
+      .post-related-grid { grid-template-columns: 1fr; }
+      .post-compliance-table { font-size: 13px; }
+      .post-compliance-table th,
+      .post-compliance-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<script src="/nav.js"></script>
+
+<nav class="post-breadcrumb" aria-label="Breadcrumb">
+  <div class="post-breadcrumb-inner">
+    <a href="/">Home</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <a href="/blog">Blog &amp; Insights</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    <span>WhatsApp for Financial Services: FCA, MiFID II, and GDPR Compliance</span>
+  </div>
+</nav>
+
+<header class="post-header" id="post-header">
+  <div class="post-header-inner">
+    <div class="post-cat-wrap">
+      <span class="blog-cat blog-cat--compliance">Compliance</span>
+    </div>
+    <h1>WhatsApp for financial services: FCA, MiFID II, and GDPR compliance</h1>
+    <div class="post-meta">
+      <time datetime="2026-06-30">30 Jun 2026</time>
+      <span class="sep">·</span>
+      <span>8 min read</span>
+      <span class="sep">·</span>
+      <span class="post-author">Robert Norton</span>
+    </div>
+  </div>
+</header>
+
+<div class="post-body-wrap">
+  <article class="post-body">
+
+    <div class="post-answer-box" role="note">
+      <div class="post-answer-box-label">The short answer</div>
+      <p><strong>WhatsApp for financial services</strong> refers to the use of WhatsApp Business API by regulated firms (banks, insurers, wealth managers, lenders) to communicate with clients. Under FCA COBS 11.8 and MiFID II Article 16(7), firms are required to record and retain electronic communications relating to regulated services for a minimum of five years. Standard WhatsApp, including the WhatsApp Business App, does not provide compliant archiving, audit trails, or UK/EEA data residency. Regulated firms that want to use WhatsApp must do so through a dedicated API instance with WORM-compliant message archiving and a Data Processing Agreement with Meta.</p>
+    </div>
+
+    <div class="post-toc">
+      <div class="post-toc-label">In this article</div>
+      <ol>
+        <li><a href="#regulatory-framework">The regulatory framework in plain English</a></li>
+        <li><a href="#why-standard-fails">Why standard WhatsApp fails the compliance test</a></li>
+        <li><a href="#three-tiers">Three compliance tiers for WhatsApp in financial services</a></li>
+        <li><a href="#consumer-duty">What Consumer Duty adds to this</a></li>
+        <li><a href="#practical-steps">Practical steps to deploy WhatsApp compliantly</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </div>
+
+    <p>In 2022, US regulators fined sixteen banks a combined $1.8 billion for employees using WhatsApp and other messaging apps for business communications without archiving. The names involved were not small regional firms: JPMorgan, Goldman Sachs, Morgan Stanley, and a dozen more paid up. The FCA has made clear it expects equivalent standards from UK-regulated firms. WhatsApp is viable as a client communication channel in financial services, but only with the right infrastructure underneath it. The channel is not the problem. The absence of compliant archiving is.</p>
+
+    <p>This article sets out exactly what FCA COBS 11.8, MiFID II Article 16(7), and UK GDPR require in practice, where the standard WhatsApp Business App falls short, and what a genuinely compliant deployment looks like for banks, wealth managers, insurers, and lenders.</p>
+
+    <h2 id="regulatory-framework">The regulatory framework in plain English</h2>
+
+    <p>Three overlapping regulatory frameworks govern how financial services firms in the UK handle electronic communications with clients.</p>
+
+    <h3>FCA COBS 11.8: taping and recording rules</h3>
+
+    <p>The FCA's Conduct of Business Sourcebook (COBS) rule 11.8 requires investment firms to record and retain all relevant electronic communications. This covers any communication that relates to the reception, transmission, or execution of a client order, or to the provision of investment advice. The minimum retention period is five years. The record must be in a form that allows it to be reproduced on request, and it must be retrievable within a reasonable timeframe when a regulator or compliance team needs it.</p>
+
+    <p>The FCA does not specify which channels are permitted. It specifies what must happen with any channel a firm uses for regulated business. If WhatsApp is in use, it is in scope. There is no carve-out for messaging applications.</p>
+
+    <h3>MiFID II Article 16(7): the WORM requirement</h3>
+
+    <p>MiFID II Article 16(7) imposes the same core obligation and adds a technical requirement. Records must be held in a durable medium that cannot be modified or deleted before the retention period expires. This is the WORM standard: Write Once Read Many. In practice, it means archived communications must be stored in a system that prevents any user, including administrators, from altering or deleting messages during the retention window.</p>
+
+    <p>Post-Brexit, MiFID II is retained in UK law as UK MiFID via the Financial Services and Markets Act 2000 (Markets in Financial Instruments) Regulations 2017. The obligations apply in full to UK investment firms. The retention period is a minimum of five years and can extend to seven years at the FCA's request.</p>
+
+    <div class="post-warning-box">
+      <div class="post-warning-box-label">Key point on scope</div>
+      <p>Not all financial services firms are MiFID investment firms. Banks, insurers, and lenders operate under different frameworks (PRA rules, ICOBS, MCOB). However, the principle of recording and retention applies across most FCA-regulated sectors. If your firm communicates with clients about regulated products or services via WhatsApp, you almost certainly have a retention obligation. The precise retention period and format requirements vary by sector.</p>
+    </div>
+
+    <h3>Consumer Duty (since July 2023): evidencing outcomes</h3>
+
+    <p>The FCA's Consumer Duty, which came into force for existing products and services in July 2023, adds a further dimension. Firms must be able to demonstrate that clients received good outcomes. Communications records are a core part of that evidence base. A firm that cannot produce a complete, searchable record of what a client was told via WhatsApp before purchasing a product cannot demonstrate good outcomes in the way the Duty requires.</p>
+
+    <h2 id="why-standard-fails">Why standard WhatsApp fails the compliance test</h2>
+
+    <p>There are three specific ways in which the standard WhatsApp Business App fails to meet regulatory requirements for financial services firms.</p>
+
+    <p><strong>No WORM-compliant archiving.</strong> The WhatsApp Business App stores messages on the device and in the user's iCloud or Google Drive backup. There is no enterprise archive, no WORM protection, and no mechanism to export message records in a format a regulator could verify. Messages can be deleted by the user at any time.</p>
+
+    <p><strong>Data residency outside EEA/UK control.</strong> Standard WhatsApp processes data in Meta's global infrastructure. For regulated firms with UK GDPR obligations and, in some cases, sector-specific requirements for data to remain within the EEA or UK, this creates a structural problem. There is no mechanism to enforce or verify data residency with a standard Business App deployment.</p>
+
+    <p><strong>No tamper-evident audit trail.</strong> Regulators and compliance teams need to be able to verify that a message record is complete: that nothing has been deleted, edited, or selectively withheld. The WhatsApp Business App provides no audit log of message delivery, read receipts, deletion events, or session metadata in a format suitable for regulatory review.</p>
+
+    <table class="post-compliance-table" aria-label="Compliance feature comparison: WhatsApp Business App vs WhatsApp Business API">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>WhatsApp Business App</th>
+          <th>WhatsApp Business API (dedicated instance)</th>
+          <th>Regulatory requirement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>WORM message archiving</strong></td>
+          <td class="table-no">No</td>
+          <td class="table-yes">Yes (via platform)</td>
+          <td class="table-req">Required: MiFID II Article 16(7)</td>
+        </tr>
+        <tr>
+          <td><strong>EEA/UK data residency</strong></td>
+          <td class="table-no">No</td>
+          <td class="table-yes">Yes (configurable)</td>
+          <td class="table-req">Required: UK GDPR / DORA</td>
+        </tr>
+        <tr>
+          <td><strong>Audit log and export</strong></td>
+          <td class="table-no">No</td>
+          <td class="table-yes">Yes</td>
+          <td class="table-req">Required: FCA COBS 11.8 / MiFID II</td>
+        </tr>
+        <tr>
+          <td><strong>Data Processing Agreement with Meta</strong></td>
+          <td class="table-no">Limited (terms of service only)</td>
+          <td class="table-yes">Full enterprise DPA</td>
+          <td class="table-req">Required: UK GDPR Article 28</td>
+        </tr>
+        <tr>
+          <td><strong>Multi-agent shared inbox</strong></td>
+          <td class="table-no">No</td>
+          <td class="table-yes">Yes</td>
+          <td class="table-req">Needed for contact centre use</td>
+        </tr>
+        <tr>
+          <td><strong>Supervisory monitoring access</strong></td>
+          <td class="table-no">No</td>
+          <td class="table-yes">Yes</td>
+          <td class="table-req">Required: FCA SM&amp;CR / MiFID II supervision</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="three-tiers">Three compliance tiers for WhatsApp in financial services</h2>
+
+    <p>Not all WhatsApp deployments in financial services carry the same level of compliance risk. It helps to think in terms of three tiers.</p>
+
+    <h3>Tier 1: non-compliant</h3>
+
+    <p>The standard WhatsApp Business App, used by an employee on a personal or company device to communicate with clients. No archiving, no data residency control, no audit trail. This is the pattern that generated the $1.8 billion in US fines. It cannot be used for regulated client communications. If this is happening in your firm, it needs to stop and existing message histories need to be assessed for regulatory exposure.</p>
+
+    <h3>Tier 2: partially compliant</h3>
+
+    <p>A shared WhatsApp Business API account with a third-party archiving bolt-on. Archiving is present and WORM protection may be in place, but data residency and the enterprise DPA with Meta may still be unresolved. There is also a significant risk in shared infrastructure: your message data sits alongside other tenants on the platform, which creates data leakage risk and may not satisfy the data segregation requirements of some regulated firms. This tier is better than Tier 1 but unlikely to withstand a detailed FCA review.</p>
+
+    <h3>Tier 3: fully compliant</h3>
+
+    <p>A <a href="/blog/dedicated-instance">dedicated WhatsApp Business API instance</a> with WORM-compliant archiving enabled from day one, EEA/UK data residency, a full enterprise Data Processing Agreement with Meta, CRM integration for conversation record linkage, and supervisory monitoring access. This is what MiFID II-regulated firms need. It is also the only tier that provides adequate protection under Consumer Duty, because only at this tier can you generate the structured, searchable records that demonstrate client outcomes.</p>
+
+    <h2 id="consumer-duty">What Consumer Duty adds to this</h2>
+
+    <p>Consumer Duty shifts the compliance burden from process adherence to outcome demonstration. It is not sufficient to show that your firm followed a procedure for recording WhatsApp messages. You need to be able to show what clients were told, when they were told it, and whether the information was adequate given their circumstances.</p>
+
+    <p>This has a practical implication for archive design. Archive-only solutions that store messages in a flat, undifferentiated log are not sufficient for Consumer Duty purposes. Firms need to be able to extract conversations by client, by product, by date range, and by agent. They need to be able to search for specific terms within archived WhatsApp threads. They need to correlate WhatsApp conversations with CRM records, complaint logs, and product purchase data.</p>
+
+    <p>A message archive that cannot be queried is compliance theatre. The FCA's supervisory approach under Consumer Duty involves requesting specific evidence of client outcomes. If your WhatsApp archive cannot produce that evidence in a usable form, you have a problem regardless of whether WORM protection is technically in place.</p>
+
+    <p>The <a href="/control-governance">Kaptea control and governance platform</a> integrates WhatsApp message archives with CRM records and reporting tools so that compliance teams can query conversation data within defined timeframes. Archive and retrieval are designed together, not as separate problems.</p>
+
+    <h2 id="practical-steps">Practical steps to deploy WhatsApp compliantly</h2>
+
+    <p>For firms that have not yet deployed WhatsApp, or that are operating at Tier 1 or Tier 2 and need to remediate, the following sequence reflects what a properly governed deployment looks like.</p>
+
+    <p><strong>Step 1: Get FCA and compliance sign-off on channel use and archiving approach.</strong> Document the decision, including which client segments will use WhatsApp, which communication types are permitted, and what the archiving and monitoring controls will be. This documentation matters if you are ever subject to an FCA review.</p>
+
+    <p><strong>Step 2: Choose a cloud communications partner with a dedicated WhatsApp Business API instance and UK or EEA data residency.</strong> The partner must be able to provide evidence of WORM-compliant storage, data residency certification, and a full enterprise DPA with Meta. A shared-instance deployment at a platform provider that cannot demonstrate data segregation is not adequate for most regulated firms. See our guide to <a href="/whatsapp-business">Kaptea's WhatsApp Business capability</a> for detail on how we structure dedicated deployments.</p>
+
+    <p><strong>Step 3: Confirm WORM archiving is enabled from day one.</strong> Do not go live on WhatsApp and enable archiving later. There is no retroactive WORM protection for messages sent before archiving was active. Every message sent without archiving is a gap in your regulatory record.</p>
+
+    <p><strong>Step 4: Update your Privacy Notice.</strong> Your Privacy Notice must disclose that WhatsApp is used as a communication channel. It must also document the legal basis for retaining WhatsApp communications under MiFID II (a legal obligation under Article 6(1)(c) UK GDPR), and the retention period. Clients should be informed of this at onboarding. See the FAQ below on handling right-to-erasure requests against this retention obligation.</p>
+
+    <p><strong>Step 5: Train staff on appropriate use.</strong> WhatsApp is suitable for appointment reminders, document requests, status updates, and client service queries. It is not an appropriate channel for investment advice, off-channel deal discussion, or anything that a supervisor would not expect to appear in a compliance review. Set this out explicitly in your communications policy and require staff acknowledgement.</p>
+
+    <div class="post-pullquote">
+      <blockquote>The firms that get WhatsApp compliance right do not retrofit it. They design archiving, monitoring, and access controls into the infrastructure from the beginning, before a single message is sent.</blockquote>
+    </div>
+
+    <div class="post-faq-section">
+      <h2 id="faq">Frequently asked questions</h2>
+
+      <div class="post-faq-item">
+        <p class="post-faq-q">Is WhatsApp allowed for FCA-regulated customer communications?</p>
+        <p class="post-faq-a">WhatsApp can be used for FCA-regulated customer communications, but only under specific technical conditions. The FCA's COBS 11.8 requires firms to record and retain relevant electronic communications. The standard WhatsApp Business App does not meet this requirement: it does not provide WORM-compliant archiving, data is stored in Meta's global infrastructure outside EEA control, and there is no API access to retrieve conversation records for regulatory review. Firms using the WhatsApp Business API through a cloud communications platform can configure compliant archiving and data residency, making the channel viable for regulated use. Using standard WhatsApp without an archiving solution is a regulatory breach.</p>
+      </div>
+
+      <div class="post-faq-item">
+        <p class="post-faq-q">What does MiFID II Article 16(7) require for WhatsApp communications?</p>
+        <p class="post-faq-a">MiFID II Article 16(7) requires investment firms to record all telephone conversations and electronic communications relating to the reception, transmission, and execution of client orders, and to retain them for a minimum of five years (up to seven years if the regulator requests it). This applies to WhatsApp and any other electronic messaging channel used for client-related communications. The record must be held in a format that is durable, accessible, and cannot be altered or deleted before the retention period expires (WORM: Write Once Read Many). A standard WhatsApp Business account does not meet any of these requirements. The obligation applies regardless of whether the communication was initiated by the client or the firm.</p>
+      </div>
+
+      <div class="post-faq-item">
+        <p class="post-faq-q">What is the difference between WhatsApp Business App and WhatsApp Business API for regulated firms?</p>
+        <p class="post-faq-a">WhatsApp Business App is the free mobile application designed for small businesses. It runs on a single device, has no archiving capability, provides no API access for compliance tooling, and stores data in Meta's global infrastructure. It is not suitable for FCA or MiFID II-regulated use. WhatsApp Business API is a programmatic interface that allows regulated firms to integrate WhatsApp into their communications infrastructure. Through an API deployment on a dedicated cloud communications platform, firms can configure WORM-compliant message archiving, EEA data residency, audit log export, Data Loss Prevention policies, and the Data Processing Agreement with Meta required under GDPR. The API is the only route to compliant deployment for regulated financial services firms.</p>
+      </div>
+
+      <div class="post-faq-item">
+        <p class="post-faq-q">How do you handle the tension between GDPR right to erasure and MiFID II archiving requirements?</p>
+        <p class="post-faq-a">GDPR Article 17 gives individuals the right to request erasure of their personal data. MiFID II Article 16(7) requires firms to retain certain communications records for up to five years. Where these obligations conflict, UK GDPR and EU GDPR both contain exceptions for retention obligations imposed by law: firms are not required to erase records they are legally obligated to retain. The practical approach is to document the legal basis for retention (compliance with a legal obligation under Article 6(1)(c) UK GDPR), inform clients of this in the Privacy Notice at the time of onboarding, and implement a process to delete archived communications promptly at the end of the mandatory retention period. Do not retain records beyond the regulatory minimum.</p>
+      </div>
+    </div>
+
+    <div class="post-cta-box">
+      <h3>Talk to us about compliant WhatsApp for your firm</h3>
+      <p>Kaptea designs and deploys dedicated WhatsApp Business API instances for regulated financial services firms, with WORM archiving, UK/EEA data residency, and CRM integration built in from day one.</p>
+      <a href="/contact" class="post-cta-btn">Get in touch</a>
+    </div>
+
+    <div class="post-author-bio">
+      <div class="post-author-avatar">
+        <img src="/img/robert-norton.webp" alt="Robert Norton, CTO of Kaptea" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;" />
+      </div>
+      <div>
+        <div class="post-author-name">Robert Norton</div>
+        <div class="post-author-role">CTO &amp; Co-Founder, Kaptea</div>
+        <div class="post-author-bio-text">Robert leads Kaptea's technical architecture and platform integrations. He has spent over 15 years designing enterprise communications systems across financial services, utilities, and retail, with deep expertise in Twilio, contact centre infrastructure, and compliance-grade data handling.</div>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<section class="post-related">
+  <div class="post-related-inner">
+    <h2 class="post-related-heading">Keep reading</h2>
+    <div class="post-related-grid">
+      <a href="/blog/whatsapp-compliance" class="post-related-card">
+        <span class="blog-cat blog-cat--compliance">Compliance</span>
+        <h4>WhatsApp in your contact centre: what compliance actually requires</h4>
+        <div class="post-related-meta">Robert Norton &middot; 5 min read</div>
+      </a>
+      <a href="/blog/whatsapp-crm-integration" class="post-related-card">
+        <span class="blog-cat blog-cat--compliance">Integration</span>
+        <h4>WhatsApp CRM integration: connecting client conversations to your system of record</h4>
+        <div class="post-related-meta">Robert Norton &middot; 6 min read</div>
+      </a>
+      <a href="/blog/dedicated-instance" class="post-related-card">
+        <span class="blog-cat blog-cat--compliance">Infrastructure</span>
+        <h4>Why regulated firms need a dedicated Twilio instance, not a shared one</h4>
+        <div class="post-related-meta">Robert Norton &middot; 7 min read</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="blog-newsletter">
+  <div class="blog-newsletter-inner">
+    <h2>Insight in your inbox</h2>
+    <p>New articles on compliance, infrastructure and enterprise communications. No marketing noise.</p>
+    <form class="blog-newsletter-form" onsubmit="return false;" novalidate>
+      <input type="email" placeholder="your@organisation.com" autocomplete="email" aria-label="Email address" />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="blog-newsletter-note">No spam. Unsubscribe any time. GDPR compliant.</p>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="/footer.js"></script>
+</body>
+</html>
