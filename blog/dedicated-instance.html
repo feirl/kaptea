@@ -53,20 +53,56 @@
     "dateModified": "2026-04-14T09:00:00+01:00",
     "author": {
       "@type": "Person",
-      "name": "Kaptea Team",
-      "url": "https://kaptea.io/blog"
+      "@id": "https://kaptea.io/#robert-norton",
+      "name": "Robert Norton",
+      "jobTitle": "CTO & Co-Founder",
+      "worksFor": { "@id": "https://kaptea.io/#organization" },
+      "image": "https://kaptea.io/img/robert-norton.webp",
+      "url": "https://kaptea.io/about"
     },
     "publisher": {
       "@type": "Organization",
+      "@id": "https://kaptea.io/#organization",
       "name": "Kaptea",
-      "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" }
+      "url": "https://kaptea.io",
+      "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" },
+      "sameAs": [
+        "https://www.linkedin.com/company/kaptea",
+        "https://twitter.com/kaptea"
+      ]
     },
     "url": "https://kaptea.io/blog/dedicated-instance",
     "mainEntityOfPage": "https://kaptea.io/blog/dedicated-instance",
     "articleSection": "Infrastructure",
     "keywords": "dedicated communications instance, data residency, GDPR enterprise messaging, enterprise communications platform, multi-tenant vs dedicated",
     "wordCount": "1900",
-    "timeRequired": "PT8M"
+    "timeRequired": "PT8M",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ".post-answer-box"
+    },
+    "about": [
+      { "@type": "Thing", "name": "Dedicated Communications Instance" },
+      { "@type": "Thing", "name": "Data Residency" },
+      { "@type": "Thing", "name": "Enterprise Communications Platform" },
+      { "@type": "Thing", "name": "Multi-tenant vs Dedicated Architecture" }
+    ],
+    "mentions": [
+      { "@type": "Thing", "name": "GDPR" },
+      { "@type": "Thing", "name": "Data Processing Agreement" },
+      { "@type": "Organization", "name": "FCA" },
+      { "@type": "Organization", "name": "CBI" },
+      { "@type": "Thing", "name": "HIPAA" },
+      { "@type": "SoftwareApplication", "name": "AWS eu-west-1" },
+      { "@type": "SoftwareApplication", "name": "Azure UK South" },
+      { "@type": "Thing", "name": "Right to Erasure" }
+    ]
   }
   </script>
 
@@ -839,12 +875,12 @@
     <!-- Author bio — TEMPLATE: update initials, name, role and bio text -->
     <address class="post-author-bio" rel="author">
       <div class="post-author-avatar">
-        <img src="/img/brand/favicon.svg" alt="Kaptea" width="36" height="36">
+        <img src="/img/robert-norton.webp" alt="Robert Norton, CTO of Kaptea" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;" />
       </div>
       <div>
-        <div class="post-author-name">Kaptea Team</div>
-        <div class="post-author-role">Enterprise Communications Specialists</div>
-        <div class="post-author-bio-text">Written by the product and solutions team at Kaptea: the compliance-first communications platform built for regulated enterprise on carrier-grade infrastructure.</div>
+        <div class="post-author-name">Robert Norton</div>
+        <div class="post-author-role">CTO &amp; Co-Founder, Kaptea</div>
+        <div class="post-author-bio-text">Robert leads Kaptea's technical architecture, specialising in enterprise communications platforms, Twilio integrations, compliance-first system design, and AI-assisted orchestration. <a href="/about">About Kaptea</a>.</div>
       </div>
     </address>
 

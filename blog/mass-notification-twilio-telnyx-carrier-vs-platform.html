@@ -46,14 +46,58 @@
     "description": "Twilio and Telnyx are excellent at moving messages. They are not mass notification platforms. Here is what the orchestration gap looks like in practice, and what closing the loop actually requires.",
     "datePublished": "2026-05-24T09:00:00+00:00",
     "dateModified": "2026-05-24T09:00:00+00:00",
-    "author": { "@type": "Organization", "name": "Kaptea", "url": "https://kaptea.io" },
-    "publisher": { "@type": "Organization", "name": "Kaptea", "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" } },
+    "author": {
+      "@type": "Person",
+      "@id": "https://kaptea.io/#robert-norton",
+      "name": "Robert Norton",
+      "jobTitle": "CTO & Co-Founder",
+      "worksFor": { "@id": "https://kaptea.io/#organization" },
+      "image": "https://kaptea.io/img/robert-norton.webp",
+      "url": "https://kaptea.io/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://kaptea.io/#organization",
+      "name": "Kaptea",
+      "url": "https://kaptea.io",
+      "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" },
+      "sameAs": [
+        "https://www.linkedin.com/company/kaptea",
+        "https://twitter.com/kaptea"
+      ]
+    },
     "url": "https://kaptea.io/blog/mass-notification-twilio-telnyx-carrier-vs-platform",
     "mainEntityOfPage": "https://kaptea.io/blog/mass-notification-twilio-telnyx-carrier-vs-platform",
     "articleSection": "Strategy",
     "keywords": "mass notifications, emergency notifications, Twilio, Telnyx, CPaaS, mass notification platform, regulated industries",
     "wordCount": "2100",
-    "timeRequired": "PT10M"
+    "timeRequired": "PT10M",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ".post-answer-box"
+    },
+    "about": [
+      { "@type": "SoftwareApplication", "name": "Mass Notification Platform" },
+      { "@type": "Thing", "name": "Emergency Notification Orchestration" },
+      { "@type": "Service", "name": "Enterprise Communications" },
+      { "@type": "Thing", "name": "Regulatory Compliance Audit Trail" }
+    ],
+    "mentions": [
+      { "@type": "Organization", "name": "Twilio" },
+      { "@type": "Organization", "name": "Telnyx" },
+      { "@type": "Organization", "name": "MHRA" },
+      { "@type": "Organization", "name": "FCA" },
+      { "@type": "Organization", "name": "Ofgem" },
+      { "@type": "SoftwareApplication", "name": "WhatsApp Business API" },
+      { "@type": "Thing", "name": "A2P 10DLC" },
+      { "@type": "Thing", "name": "ISO 27001:2022" }
+    ]
   }
   </script>
 
@@ -214,7 +258,7 @@
 
     <div class="post-answer-box" role="note">
       <div class="post-answer-box-label">The short answer</div>
-      <p>Twilio, Telnyx, and direct carrier connections are excellent at moving messages from A to B at scale. That is not the problem enterprises face during a recall, an outage, or a regulatory deadline. The problems are orchestrating a cascade when the first channel fails, handling inbound replies at volume, routing complex cases to a live agent, and proving to the regulator that every affected customer was reached and resolved. None of those are carrier problems. They are orchestration and loop-closure problems.</p>
+      <p>A mass notification platform is a system that combines multi-channel outbound dispatch, inbound reply handling, escalation logic, and regulator-ready audit trails into a single governed workflow, going well beyond what a carrier API alone provides. That is not the problem enterprises face during a recall, an outage, or a regulatory deadline. The problems are orchestrating a cascade when the first channel fails, handling inbound replies at volume, routing complex cases to a live agent, and proving to the regulator that every affected customer was reached and resolved. None of those are carrier problems. They are orchestration and loop-closure problems.</p>
     </div>
 
     <div class="post-toc">
@@ -354,12 +398,12 @@
 
     <div class="post-author-bio">
       <div class="post-author-avatar">
-        <img src="/img/brand/favicon.svg" alt="Kaptea" width="36" height="36">
+        <img src="/img/robert-norton.webp" alt="Robert Norton, CTO of Kaptea" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;" />
       </div>
       <div>
-        <div class="post-author-name">Kaptea</div>
-        <div class="post-author-role">Kaptea</div>
-        <div class="post-author-bio-text">Kaptea builds compliance-first enterprise communications infrastructure for regulated industries. <a href="/meet-the-team">Meet the team.</a></div>
+        <div class="post-author-name">Robert Norton</div>
+        <div class="post-author-role">CTO &amp; Co-Founder, Kaptea</div>
+        <div class="post-author-bio-text">Robert leads Kaptea's technical architecture, specialising in enterprise communications platforms, Twilio integrations, compliance-first system design, and AI-assisted orchestration. <a href="/about">About Kaptea</a>.</div>
       </div>
     </div>
 

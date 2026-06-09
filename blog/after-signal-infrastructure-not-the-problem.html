@@ -50,22 +50,56 @@
     "dateModified": "2026-05-14T09:00:00+00:00",
     "author": {
       "@type": "Person",
+      "@id": "https://kaptea.io/#alan-mcnab",
       "name": "Alan McNab",
       "jobTitle": "CEO & Co-Founder",
-      "worksFor": { "@type": "Organization", "name": "Kaptea" },
-      "url": "https://kaptea.io/meet-the-team"
+      "worksFor": { "@id": "https://kaptea.io/#organization" },
+      "image": "https://kaptea.io/img/alan-mcnab.webp",
+      "url": "https://kaptea.io/about"
     },
     "publisher": {
       "@type": "Organization",
+      "@id": "https://kaptea.io/#organization",
       "name": "Kaptea",
-      "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" }
+      "url": "https://kaptea.io",
+      "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" },
+      "sameAs": [
+        "https://www.linkedin.com/company/kaptea",
+        "https://twitter.com/kaptea"
+      ]
     },
     "url": "https://kaptea.io/blog/after-signal-infrastructure-not-the-problem",
     "mainEntityOfPage": "https://kaptea.io/blog/after-signal-infrastructure-not-the-problem",
     "articleSection": "Thought Leadership",
     "keywords": "conversational AI, AI orchestration, trust architecture, enterprise communications, Twilio Signal, agentic AI, regulated industries",
     "wordCount": "950",
-    "timeRequired": "PT5M"
+    "timeRequired": "PT5M",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ".post-answer-box"
+    },
+    "about": [
+      { "@type": "Thing", "name": "Trust Architecture in Enterprise Communications" },
+      { "@type": "SoftwareApplication", "name": "Conversational AI Orchestration" },
+      { "@type": "Thing", "name": "Promise-Based Management" },
+      { "@type": "Service", "name": "AI-Driven Customer Engagement" }
+    ],
+    "mentions": [
+      { "@type": "Organization", "name": "Twilio" },
+      { "@type": "SoftwareApplication", "name": "Pronto" },
+      { "@type": "Person", "name": "Khozema Shipchandler" },
+      { "@type": "Person", "name": "Fernando Flores" },
+      { "@type": "Organization", "name": "Harvard Business Review" },
+      { "@type": "Thing", "name": "Agent Connect" },
+      { "@type": "Thing", "name": "Conversation Orchestrator" },
+      { "@type": "Thing", "name": "Conversation Memory" }
+    ]
   }
   </script>
 
@@ -556,16 +590,16 @@
 
     <p><a href="/demo">Let's connect.</a></p>
 
-    <address class="post-author-bio" rel="author">
+    <div class="post-author-bio">
       <div class="post-author-avatar">
-        <img src="/img/alan-mcnab.webp" alt="Alan McNab, CEO and Co-Founder of Kaptea">
+        <img src="/img/alan-mcnab.webp" alt="Alan McNab, CEO of Kaptea" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;" />
       </div>
       <div>
         <div class="post-author-name">Alan McNab</div>
         <div class="post-author-role">CEO &amp; Co-Founder, Kaptea</div>
-        <div class="post-author-bio-text">Former HP, Cisco, NCR, Arista Networks. BSEE from Santa Clara University, MBA from Trinity College Dublin. Alan co-founded Kaptea to build the trust infrastructure he spent thirty years wishing existed. <a href="/meet-the-team">About Alan →</a></div>
+        <div class="post-author-bio-text">Alan has spent over 20 years building and scaling enterprise communications businesses. Kaptea delivers compliance-first communications infrastructure for regulated industries across Ireland, the UK, and the US. <a href="/about">About Kaptea</a>.</div>
       </div>
-    </address>
+    </div>
 
   </article>
 </div>

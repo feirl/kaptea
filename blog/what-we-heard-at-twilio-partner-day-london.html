@@ -50,22 +50,56 @@
     "dateModified": "2026-06-08T09:00:00+01:00",
     "author": {
       "@type": "Person",
+      "@id": "https://kaptea.io/#alan-mcnab",
       "name": "Alan McNab",
       "jobTitle": "CEO & Co-Founder",
-      "worksFor": { "@type": "Organization", "name": "Kaptea" },
-      "url": "https://kaptea.io/meet-the-team"
+      "worksFor": { "@id": "https://kaptea.io/#organization" },
+      "image": "https://kaptea.io/img/alan-mcnab.webp",
+      "url": "https://kaptea.io/about"
     },
     "publisher": {
       "@type": "Organization",
+      "@id": "https://kaptea.io/#organization",
       "name": "Kaptea",
-      "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" }
+      "url": "https://kaptea.io",
+      "logo": { "@type": "ImageObject", "url": "https://kaptea.io/img/brand/kaptea-logo.svg" },
+      "sameAs": [
+        "https://www.linkedin.com/company/kaptea",
+        "https://twitter.com/kaptea"
+      ]
     },
     "url": "https://kaptea.io/blog/what-we-heard-at-twilio-partner-day-london",
     "mainEntityOfPage": "https://kaptea.io/blog/what-we-heard-at-twilio-partner-day-london",
     "articleSection": "Strategy",
     "keywords": "Twilio partner day, conversational AI, AI agents, branded calling UK, RCS enterprise, Pronto platform, enterprise communications orchestration",
     "wordCount": "1400",
-    "timeRequired": "PT7M"
+    "timeRequired": "PT7M",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ".post-answer-box"
+    },
+    "about": [
+      { "@type": "SoftwareApplication", "name": "Twilio Conversations" },
+      { "@type": "Service", "name": "Enterprise Communications Orchestration" },
+      { "@type": "SoftwareApplication", "name": "Pronto" },
+      { "@type": "Thing", "name": "AI Agent Infrastructure" }
+    ],
+    "mentions": [
+      { "@type": "Organization", "name": "Twilio" },
+      { "@type": "SoftwareApplication", "name": "Salesforce Service Cloud" },
+      { "@type": "SoftwareApplication", "name": "Twilio Flex" },
+      { "@type": "SoftwareApplication", "name": "Twilio Segment" },
+      { "@type": "Thing", "name": "RCS" },
+      { "@type": "Thing", "name": "Branded Calling" },
+      { "@type": "Organization", "name": "Deepgram" },
+      { "@type": "Organization", "name": "ElevenLabs" }
+    ]
   }
   </script>
 
@@ -178,7 +212,7 @@
 
     <div class="post-answer-box">
       <div class="post-answer-box-label">The short version</div>
-      <p>Twilio has made a decisive shift from CPaaS vendor to AI infrastructure platform. The C-suite is back at the table. New products shipped at Signal are directly relevant to how Pronto orchestrates regulated enterprise communications: conversation memory, multi-channel orchestration, bring-your-own AI, branded calling in the UK, and data residency expansion across the IE1 region. The window for partners who can prove value in six months is opening fast.</p>
+      <p>Twilio's AI infrastructure platform is a full-stack communications layer that combines programmable channels, conversation orchestration, and customer data for enterprise AI deployments. The C-suite is back at the table. New products shipped at Signal are directly relevant to how Pronto orchestrates regulated enterprise communications: conversation memory, multi-channel orchestration, bring-your-own AI, branded calling in the UK, and data residency expansion across the IE1 region. The window for partners who can prove value in six months is opening fast.</p>
     </div>
 
     <div class="post-toc">
@@ -303,6 +337,17 @@
           <h4>Carrier vs platform: why Twilio alone is not a mass notification solution</h4>
           <p>What the orchestration gap looks like in practice and how Pronto closes it.</p>
         </a>
+      </div>
+    </div>
+
+    <div class="post-author-bio">
+      <div class="post-author-avatar">
+        <img src="/img/alan-mcnab.webp" alt="Alan McNab, CEO of Kaptea" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;" />
+      </div>
+      <div>
+        <div class="post-author-name">Alan McNab</div>
+        <div class="post-author-role">CEO & Co-Founder, Kaptea</div>
+        <div class="post-author-bio-text">Alan has spent over 20 years building and scaling enterprise communications businesses. Kaptea delivers compliance-first communications infrastructure for regulated industries across Ireland, the UK, and the US. <a href="/about">About Kaptea</a>.</div>
       </div>
     </div>
 
