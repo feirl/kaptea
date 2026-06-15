@@ -46,6 +46,17 @@
     { "source": "/kaptea-news/how-to-improve-first-call-resolution-fcr-for-contact-centres", "destination": "/blog", "permanent": true },
     { "source": "/kaptea-news/kaptea-certified-gold-status-twilio-consulting-partner", "destination": "/blog/kaptea-certified-gold-status-twilio-consulting-partner", "permanent": true },
 
+    { "source": "/2021/02/25/how-to-destroy-trust-our-top-10", "destination": "/blog/trust-not-a-kpi", "permanent": true },
+    { "source": "/2021/02/25/how-to-destroy-trust-our-top-10/", "destination": "/blog/trust-not-a-kpi", "permanent": true },
+    { "source": "/2021/02/23/kaptea-certified-gold-twilio-consulting-partner", "destination": "/blog/kaptea-certified-gold-status-twilio-consulting-partner", "permanent": true },
+    { "source": "/2021/02/23/kaptea-certified-gold-twilio-consulting-partner/", "destination": "/blog/kaptea-certified-gold-status-twilio-consulting-partner", "permanent": true },
+    { "source": "/author/alan", "destination": "/about", "permanent": true },
+    { "source": "/author/alan/", "destination": "/about", "permanent": true },
+    { "source": "/category/blog", "destination": "/blog", "permanent": true },
+    { "source": "/category/blog/", "destination": "/blog", "permanent": true },
+    { "source": "/category/featured-blog-post", "destination": "/blog", "permanent": true },
+    { "source": "/category/featured-blog-post/", "destination": "/blog", "permanent": true },
+
     { "source": "/about-us", "destination": "/about", "permanent": true },
     { "source": "/about-us/", "destination": "/about", "permanent": true },
     { "source": "/about-kaptea", "destination": "/about", "permanent": true },
