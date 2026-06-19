@@ -109,6 +109,22 @@
               "@type": "Answer",
               "text": "A dedicated Pronto instance can be live in hours. The first journey (template, trigger source, channel selection, audit logging) is typically built in the first week of implementation. More complex journeys involving conversation intelligence, agent escalation, and multi-system data enrichment scale up from there with structured implementation support."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "We already run Genesys, Avaya or Cisco. Do we have to replace it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Kaptea orchestrates on top of your existing contact centre and carrier, adding governance, resolution and confirmed closure without replacing the backbone you already operate. You keep your existing infrastructure, carrier relationships and agent tooling. Kaptea adds the orchestration, compliance and resolution layer on top."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is this different from a contact centre automation or journey orchestration platform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most contact centre automation platforms are built around deflection: get the contact off the queue and into self-service. A deflected contact that fails comes back as a longer, angrier call. Pronto is built around resolution: the journey does not close until the customer has confirmed their need was met. That confirmation is captured, timestamped and stored as audit evidence. Deflection ends the call. Kaptea ends the problem."
+            }
           }
         ]
       }
@@ -906,6 +922,26 @@
         </button>
         <div class="faq-a" id="faq6" hidden>
           A dedicated Pronto instance can be live in hours. The first journey (template, trigger source, channel selection, audit logging) is typically built in the first week of implementation. More complex journeys involving conversation intelligence, agent escalation, and multi-system data enrichment scale up from there with structured implementation support.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq7">
+          We already run Genesys, Avaya or Cisco. Do we have to replace it?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq7" hidden>
+          No. Kaptea orchestrates on top of your existing contact centre and carrier, adding governance, resolution and confirmed closure without replacing the backbone you already operate. You keep your existing infrastructure, carrier relationships and agent tooling. Kaptea adds the orchestration, compliance and resolution layer on top.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq8">
+          How is this different from a contact centre automation or journey orchestration platform?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="faq8" hidden>
+          Most contact centre automation platforms are built around deflection: get the contact off the queue and into self-service. A deflected contact that fails comes back as a longer, angrier call. Pronto is built around resolution: the journey does not close until the customer has confirmed their need was met. That confirmation is captured, timestamped and stored as audit evidence. Deflection ends the call. Kaptea ends the problem.
         </div>
       </div>
 
