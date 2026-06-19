@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
+  <title>Contact Centre and Voice - Agentic Resolution | Kaptea</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Cut call abandonment from over 60% to under 7%. Kaptea replaces legacy IVR deflection with agentic voice that resolves, branded calling that gets picked up, and confirmed closure with a regulator-ready audit trail." />
+  <link rel="canonical" href="https://kaptea.io/contact-centre-voice" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Centre and Voice - Agentic Resolution | Kaptea" />
+  <meta property="og:description" content="Cut call abandonment from over 60% to under 7%. Agentic voice that resolves, not an IVR that deflects." />
+  <meta property="og:url" content="https://kaptea.io/contact-centre-voice" />
+  <meta property="og:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Centre and Voice - Agentic Resolution | Kaptea" />
+  <meta name="twitter:description" content="Cut call abandonment from over 60% to under 7%. Agentic voice that resolves, not an IVR that deflects." />
+  <meta name="twitter:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- AI / LLM Crawler Optimisation -->
+  <meta name="ai-content-declaration" content="Kaptea for contact centre and voice. Agentic voice resolution replacing legacy IVR deflection. Customer proof: call abandonment from 60% to under 7% after replacing a previous cloud contact-centre provider. Branded calling lifts pickup rates by 30 to 50 percent. Works on top of Genesys, Avaya, Cisco, Twilio or existing carrier. Live agent escalation with full context handover. Customer-confirmed closure with regulator-ready audit trail. ISO 27001 certified. Dedicated instance live in days." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Contact Centre and Voice - Agentic Resolution | Kaptea",
+        "url": "https://kaptea.io/contact-centre-voice",
+        "description": "Cut call abandonment from over 60% to under 7%. Kaptea replaces legacy IVR deflection with agentic voice that resolves, branded calling that gets picked up, and confirmed closure with a regulator-ready audit trail.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaptea.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://kaptea.io/pronto"},
+            {"@type": "ListItem", "position": 3, "name": "Contact Centre and Voice", "item": "https://kaptea.io/contact-centre-voice"}
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://kaptea.io/contact-centre-voice#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "We already run Genesys, Avaya or Cisco. Do we have to replace it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Kaptea orchestrates on top of your existing contact centre and carrier. You keep your current infrastructure, carrier relationships and agent tooling. Kaptea adds the agentic orchestration, governance and resolution layer on top, without replacing the backbone you already operate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is this different from a contact centre automation or journey orchestration platform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most contact centre automation platforms are built around deflection: get the contact off the queue and into self-service. A deflected contact that fails comes back as a longer, angrier call. Kaptea is built around resolution: the journey does not close until the customer has confirmed their need was met. That confirmation is captured, timestamped and stored as audit evidence. Deflection ends the call. Kaptea ends the problem."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What counts as a confirmed closure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Two closure types are recognised: explicit (the customer actively confirms resolution) and inferred (satisfaction is clear from evidence in the conversation thread). A contact that simply goes quiet is never counted as closed. No evidence, no closure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can we go live?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A dedicated Kaptea instance can be live in days. The first agentic voice journey, including IVR replacement, branded calling configuration and agent escalation routing, is typically built in the first week of implementation."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .hero {
+      background:
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.18) 0%, transparent 65%),
+        var(--kaptea-charcoal);
+      color: var(--kaptea-white);
+      padding: 80px 40px 72px;
+    }
+    .hero-inner { max-width: 860px; margin: 0 auto; }
+    .hero-breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 24px;
+    }
+    .hero-breadcrumb a { color: var(--kaptea-red); text-decoration: none; }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .hero h1 {
+      font-size: 44px; font-family: 'Manrope', sans-serif;
+      font-weight: 700; line-height: 1.15; margin-bottom: 20px; color: var(--kaptea-white);
+    }
+    .hero h1 span { color: var(--kaptea-red); }
+    .hero-stat {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(63,208,192,0.1); border: 1px solid rgba(63,208,192,0.3);
+      border-radius: 8px; padding: 10px 16px; margin-bottom: 20px;
+      font-size: 14px; color: rgba(255,255,255,0.88); line-height: 1.5;
+    }
+    .hero-stat strong { color: #3fd0c0; font-weight: 700; }
+    .hero .hero-sub {
+      font-size: 18px; color: rgba(255,255,255,0.68);
+      line-height: 1.65; margin-bottom: 32px; max-width: 720px;
+    }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 99px; padding: 5px 12px;
+      font-size: 12px; color: rgba(255,255,255,0.8); font-weight: 500;
+    }
+    .hero-pill svg { color: var(--kaptea-red); flex-shrink: 0; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* WEDGE */
+    .wedge-band { background: var(--kaptea-charcoal); padding: 64px 40px; text-align: center; }
+    .wedge-inner { max-width: 800px; margin: 0 auto; }
+    .wedge-eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); margin-bottom: 16px;
+    }
+    .wedge-line {
+      font-size: 30px; font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: var(--kaptea-white); line-height: 1.25; margin-bottom: 16px;
+    }
+    .wedge-line em { color: var(--kaptea-red); font-style: normal; }
+    .wedge-sub { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.65; margin-bottom: 40px; }
+    .wedge-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
+    .wedge-col { border-radius: 12px; padding: 24px 28px; }
+    .wedge-col.deflect { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); }
+    .wedge-col.resolve { background: rgba(63,208,192,0.08); border: 1px solid rgba(63,208,192,0.3); }
+    .wedge-col h4 {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .wedge-col.deflect h4 { color: rgba(255,255,255,0.4); }
+    .wedge-col.resolve h4 { color: #3fd0c0; }
+    .wedge-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .wedge-col li { font-size: 13.5px; line-height: 1.5; display: flex; align-items: flex-start; gap: 9px; }
+    .wedge-col.deflect li { color: rgba(255,255,255,0.5); }
+    .wedge-col.resolve li { color: rgba(255,255,255,0.82); }
+    .wedge-col.deflect li::before { content: "✕"; color: rgba(255,255,255,0.22); font-size: 11px; flex-shrink: 0; margin-top: 2px; }
+    .wedge-col.resolve li::before { content: "✓"; color: #3fd0c0; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+    /* PROBLEM */
+    .problem { padding: 72px 40px; background: var(--kaptea-surface-muted); }
+    .problem-inner { max-width: 1060px; margin: 0 auto; }
+    .problem h2 {
+      font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: var(--kaptea-charcoal); margin-bottom: 40px; line-height: 1.3; max-width: 680px;
+    }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .problem-card { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 12px; padding: 24px 28px; }
+    .problem-card h3 { font-size: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 8px; }
+    .problem-card p { font-size: 13.5px; color: var(--kaptea-tagline-grey); line-height: 1.6; margin: 0 0 10px; }
+    .problem-card .vs { font-size: 12px; font-weight: 600; color: var(--kaptea-red); padding-top: 10px; border-top: 1px solid var(--kaptea-border); }
+
+    /* SOLUTIONS */
+    .solutions { padding: 80px 40px; background: var(--kaptea-white); }
+    .solutions-inner { max-width: 1060px; margin: 0 auto; }
+    .solutions .section-header { margin-bottom: 56px; }
+    .solutions h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); line-height: 1.3; }
+    .solution-block { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-bottom: 64px; align-items: start; }
+    .solution-block.reverse { direction: rtl; }
+    .solution-block.reverse > * { direction: ltr; }
+    .solution-pain { background: var(--kaptea-surface-muted); border-radius: 12px; padding: 28px 32px; }
+    .solution-pain-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--kaptea-neutral-grey); margin-bottom: 12px; }
+    .solution-pain p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.7; margin: 0; font-style: italic; }
+    .solution-answer h3 { font-size: 20px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 12px; }
+    .solution-answer p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.7; margin-bottom: 16px; }
+    .solution-answer ul { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .solution-answer li { font-size: 13.5px; color: var(--kaptea-charcoal); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+    .solution-answer li::before { content: ""; flex-shrink: 0; width: 5px; height: 5px; background: var(--kaptea-red); border-radius: 50%; margin-top: 7px; }
+    .feature-link { font-size: 13px; color: var(--kaptea-red); font-weight: 600; text-decoration: none; }
+    .feature-link:hover { text-decoration: underline; }
+
+    /* NUMBERS */
+    .numbers-strip { background: var(--kaptea-charcoal); padding: 56px 40px; }
+    .numbers-inner { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    .number-item { text-align: center; }
+    .number-item h3 { font-size: 36px; font-family: 'Manrope', sans-serif; font-weight: 800; color: var(--kaptea-white); margin-bottom: 8px; line-height: 1.1; }
+    .number-item h3 span { color: var(--kaptea-red); }
+    .number-item p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; margin: 0; }
+
+    /* VOC */
+    .featured-customer { background: var(--kaptea-surface-muted); padding: 72px 40px; }
+    .featured-inner { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .featured-quote { font-size: 18px; font-family: 'Manrope', sans-serif; font-weight: 600; color: var(--kaptea-charcoal); line-height: 1.6; border-left: 3px solid var(--kaptea-red); padding-left: 20px; margin: 0 0 20px; }
+    .featured-attribution { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.6; }
+    .featured-attribution strong { color: var(--kaptea-charcoal); }
+    .featured-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .featured-metric { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 10px; padding: 20px 22px; }
+    .featured-metric h4 { font-size: 30px; font-family: 'Manrope', sans-serif; font-weight: 800; color: var(--kaptea-red); margin-bottom: 4px; line-height: 1; }
+    .featured-metric p { font-size: 12px; color: var(--kaptea-tagline-grey); line-height: 1.4; margin: 0; }
+
+    /* TRUST */
+    .trust-section { padding: 64px 40px; background: var(--kaptea-white); }
+    .trust-inner { max-width: 1060px; margin: 0 auto; }
+    .trust-inner h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 8px; }
+    .trust-inner .section-sub { font-size: 15px; color: var(--kaptea-tagline-grey); margin-bottom: 36px; line-height: 1.6; }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .trust-card { border: 1px solid var(--kaptea-border); border-radius: 10px; padding: 20px; }
+    .trust-icon { color: var(--kaptea-red); margin-bottom: 10px; }
+    .trust-card h3 { font-size: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 6px; }
+    .trust-card p { font-size: 12.5px; color: var(--kaptea-tagline-grey); line-height: 1.5; margin: 0; }
+
+    /* FAQ */
+    .faq-section { padding: 80px 40px; background: var(--kaptea-surface-muted); border-top: 1px solid var(--kaptea-border); }
+    .faq-inner { max-width: 720px; margin: 0 auto; }
+    .faq-inner .section-header { margin-bottom: 36px; }
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid var(--kaptea-border); }
+    .faq-item:first-child { border-top: 1px solid var(--kaptea-border); }
+    .faq-q { width: 100%; background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 20px 0; font-size: 16px; font-weight: 600; color: var(--kaptea-charcoal); text-align: left; gap: 16px; font-family: inherit; line-height: 1.4; }
+    .faq-q:hover { color: var(--kaptea-red); }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; color: var(--kaptea-red); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-a { padding-bottom: 20px; font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.7; }
+    .faq-a[hidden] { display: none; }
+
+    /* CTA CLOSE */
+    .cta-close { background: var(--kaptea-charcoal); padding: 80px 40px; text-align: center; }
+    .cta-close h2 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-white); margin-bottom: 12px; }
+    .cta-close p { font-size: 16px; color: rgba(255,255,255,0.6); margin-bottom: 32px; line-height: 1.6; max-width: 580px; margin-left: auto; margin-right: auto; }
+    .cta-close-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .reassurance { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.4); }
+
+    @media (max-width: 900px) {
+      .hero { padding: 56px 24px 48px; }
+      .hero h1 { font-size: 30px; }
+      .hero .hero-sub { font-size: 16px; }
+      .wedge-band { padding: 48px 24px; }
+      .wedge-cols { grid-template-columns: 1fr; }
+      .wedge-line { font-size: 24px; }
+      .problem { padding: 56px 24px; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .solutions { padding: 56px 24px; }
+      .solution-block, .solution-block.reverse { grid-template-columns: 1fr; direction: ltr; gap: 28px; }
+      .numbers-strip { padding: 48px 24px; }
+      .numbers-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .featured-customer { padding: 56px 24px; }
+      .featured-inner { grid-template-columns: 1fr; gap: 40px; }
+      .trust-section { padding: 48px 24px; }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .faq-section { padding: 56px 24px; }
+      .cta-close { padding: 64px 24px; }
+      .cta-close h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:var(--kaptea-red);color:var(--kaptea-white);font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<script src="nav.js"></script>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-breadcrumb">
+      <a href="/pronto">Solutions</a>
+      <span style="opacity:0.4;">&#8250;</span>
+      <span>Contact Centre and Voice</span>
+    </div>
+    <h1>Agentic voice that <span>resolves.</span><br>Not an IVR that deflects.</h1>
+    <div class="hero-stat">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <span>Customer result: call abandonment from <strong>60% to under 7%</strong> after replacing a previous cloud contact-centre provider with Kaptea</span>
+    </div>
+    <p class="hero-sub">Resolve customer needs in natural language, escalate to a live agent with full context, and confirm every case closed with a regulator-ready audit trail. Works on top of the contact centre and carrier you already run.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Agentic Voice
+      </span>
+      <span class="hero-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5z"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+        Branded Calling
+      </span>
+      <span class="hero-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Live Agent Escalation
+      </span>
+      <span class="hero-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Confirmed Closure
+      </span>
+      <span class="hero-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Audit Trail
+      </span>
+    </div>
+    <div class="hero-ctas">
+      <a href="/contact" class="btn-primary">Get in Touch</a>
+      <a href="/case-studies/hotbox" class="btn-ghost-light">Read the Hotbox Case Study</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- DEFLECTION VS RESOLUTION -->
+<section class="wedge-band">
+  <div class="wedge-inner">
+    <div class="wedge-eyebrow">The category difference</div>
+    <div class="wedge-line">Deflection ends the call.<br><em>Kaptea ends the problem.</em></div>
+    <p class="wedge-sub">Most contact centre automation platforms are built to move contacts off the queue. A deflected contact that fails comes back as a longer, angrier inbound call. Kaptea is built around resolution: the journey does not close until the customer confirms their need was met.</p>
+    <div class="wedge-cols">
+      <div class="wedge-col deflect">
+        <h4>Deflection-first platforms</h4>
+        <ul>
+          <li>Optimise to end the contact, not resolve the problem</li>
+          <li>Self-service that fails comes back as a more expensive repeat call</li>
+          <li>No confirmation the customer's need was actually met</li>
+          <li>A call that goes quiet counts as a successful deflection</li>
+          <li>Platform replaces your existing contact centre infrastructure</li>
+        </ul>
+      </div>
+      <div class="wedge-col resolve">
+        <h4>Kaptea: resolution-first</h4>
+        <ul>
+          <li>Journey stays open until the customer confirms resolution</li>
+          <li>Failed resolution triggers immediate live agent escalation</li>
+          <li>Every closure timestamped and stored as audit evidence</li>
+          <li>A contact that goes quiet is never counted as closed</li>
+          <li>Works on top of the contact centre you already run</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- THE PROBLEM -->
+<section class="problem">
+  <div class="problem-inner">
+    <div class="section-label">The problem</div>
+    <h2>Legacy IVR and deflection-first automation are costing more than the platform fee.</h2>
+    <div class="problem-grid">
+
+      <div class="problem-card">
+        <h3>Customers press 0 to escape, then abandon</h3>
+        <p>Industry-wide, IVR abandonment before reaching an agent runs at 30% to 60%. Customers have learned that menu-driven IVR does not resolve their issue, so they bypass it and wait for a human, or hang up and call back later angrier.</p>
+        <div class="vs">Kaptea: natural language agentic voice that resolves without menu trees</div>
+      </div>
+
+      <div class="problem-card">
+        <h3>Failed deflections cost more than first-contact resolution</h3>
+        <p>When self-service fails, the customer calls back more frustrated, with a longer expected handle time and a lower tolerance for further automation. The true cost of a failed deflection is higher than resolving it first time.</p>
+        <div class="vs">Kaptea: confirmed closure before the contact is marked resolved</div>
+      </div>
+
+      <div class="problem-card">
+        <h3>Agents start every escalation from zero</h3>
+        <p>The customer explains their situation to the IVR, then repeats it to the agent. No context is passed. The agent reconstructs history manually while the customer grows more frustrated and the average handle time climbs.</p>
+        <div class="vs">Kaptea: full conversation timeline and AI summary on screen before the agent picks up</div>
+      </div>
+
+      <div class="problem-card">
+        <h3>No evidence of what was resolved and when</h3>
+        <p>The regulator asks for evidence of customer contact and outcome. You have call recordings that need manual review and CRM notes that depend on agent discipline. Neither is searchable or exportable as compliance evidence.</p>
+        <div class="vs">Kaptea: every closure timestamped, evidenced and exportable</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SOLUTIONS -->
+<section class="solutions">
+  <div class="solutions-inner">
+    <div class="section-header">
+      <div class="section-label">How Kaptea solves it</div>
+      <h2>From the first ring to confirmed closure, on the infrastructure you already run.</h2>
+    </div>
+
+    <div class="solution-block">
+      <div class="solution-pain">
+        <div class="solution-pain-label">Contact centre director</div>
+        <p>"We spent 18 months trying to make our IVR work better. We added menu options, recorded clearer prompts, brought in a consultancy. Abandonment stayed at 58%. Then we replaced the IVR with Kaptea. Six weeks later it was under 7%."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Agentic voice that understands and resolves</h3>
+        <p>Kaptea replaces menu-driven IVR with an AI agent that understands natural language, accesses your live customer data, and resolves in conversation. Customers state their need once, in their own words. The agent handles it or escalates it, without deflecting it.</p>
+        <ul>
+          <li>Natural language understanding with live customer data enrichment</li>
+          <li>Resolves account queries, appointment changes, payment issues and more in conversation</li>
+          <li>No menu trees, no press-1 loops, no transfer chains</li>
+          <li>Escalates to a live agent the moment the situation requires it</li>
+          <li>Works on top of Genesys, Avaya, Cisco, Twilio or your existing telephony</li>
+        </ul>
+        <a href="/voice-ivr" class="feature-link">Explore Voice and IVR capabilities &#8250;</a>
+      </div>
+    </div>
+
+    <div class="solution-block reverse">
+      <div class="solution-pain">
+        <div class="solution-pain-label">Head of CX</div>
+        <p>"Our outbound pickup rate was 22%. Customers did not recognise our number and assumed it was spam. We had the right message at the right moment. Nobody was picking up to hear it."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Branded calling that gets answered</h3>
+        <p>Industry data shows branded calling lifts outbound pickup rates by 30 to 50 percent. Kaptea displays your verified company name and logo on the customer's screen before they answer. Trust is established before the conversation begins.</p>
+        <ul>
+          <li>Verified caller display: company name, logo and call reason on screen</li>
+          <li>30 to 50 percent uplift in outbound pickup rates</li>
+          <li>Reduces spam labelling and number blocking</li>
+          <li>Works alongside agentic voice and live agent outbound campaigns</li>
+          <li>Combines with SMS, WhatsApp or Email as the preferred fallback channel</li>
+        </ul>
+        <a href="/omni-channel-communications" class="feature-link">Explore channel capabilities &#8250;</a>
+      </div>
+    </div>
+
+    <div class="solution-block">
+      <div class="solution-pain">
+        <div class="solution-pain-label">Contact centre team lead</div>
+        <p>"When a call escalates to one of my agents, they spend the first two minutes asking the customer to repeat everything they already told the IVR. It is the worst possible start to a conversation that is already difficult."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Live agent escalation with full context already on screen</h3>
+        <p>When Kaptea detects frustration, an off-script intent or a defined trigger condition, it escalates to a live agent immediately. The agent sees the full conversation timeline, an AI-generated summary, and the customer's account data before picking up. The customer never repeats themselves.</p>
+        <ul>
+          <li>Frustration detection and sentiment analysis in real time</li>
+          <li>Full conversation timeline and AI summary on agent screen before pickup</li>
+          <li>Customer account data and case history surfaced automatically</li>
+          <li>Outcome captured back into the customer record after the call closes</li>
+          <li>Integrates with your existing agent tooling and CRM</li>
+        </ul>
+        <a href="/customer-journey-orchestration" class="feature-link">Explore conversation intelligence &#8250;</a>
+      </div>
+    </div>
+
+    <div class="solution-block reverse">
+      <div class="solution-pain">
+        <div class="solution-pain-label">Compliance officer</div>
+        <p>"The regulator asked us to demonstrate that customers had been contacted and their issue resolved. We had call recordings and CRM notes. Neither was searchable or exportable as evidence. It took three weeks to produce a report that should have been a button click."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Confirmed closure with a regulator-ready audit trail</h3>
+        <p>Every Kaptea journey closes with evidence: explicit confirmation from the customer, or inferred closure based on what happened in the conversation thread. A contact that goes quiet is never marked resolved. Every closure is timestamped, attributed and exportable as a compliance record.</p>
+        <ul>
+          <li>Explicit closure: customer confirms their need was met</li>
+          <li>Inferred closure: based on conversation evidence, never assumption</li>
+          <li>Every closure timestamped, attributed and stored per customer record</li>
+          <li>Exportable compliance reports for FCA, CMA and sector regulators</li>
+          <li>Per-contact audit trail: what was said, when, by whom, and the outcome</li>
+        </ul>
+        <a href="/control-governance" class="feature-link">Explore governance and compliance &#8250;</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- NUMBERS STRIP -->
+<section class="numbers-strip" aria-label="Key metrics">
+  <div class="numbers-inner">
+    <div class="number-item">
+      <h3><span>60%</span> to <span>&lt;7%</span></h3>
+      <p>Call abandonment, after replacing a previous cloud contact-centre provider with Kaptea</p>
+    </div>
+    <div class="number-item">
+      <h3>30-50%</h3>
+      <p>Pickup rate uplift from branded calling with verified caller display</p>
+    </div>
+    <div class="number-item">
+      <h3>Days</h3>
+      <p>From contract to first agentic voice journey in production</p>
+    </div>
+    <div class="number-item">
+      <h3>9.7/10</h3>
+      <p>Average customer NPS rating across the live Kaptea customer base</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- FEATURED VOC -->
+<section class="featured-customer">
+  <div class="featured-inner">
+    <div>
+      <div class="section-label">Voice of customer</div>
+      <blockquote class="featured-quote">We went from 60% of calls abandoned to under 7%. In comparison to six months ago, it's massive. The customer experience has been improved so much. It's actually an enjoyable experience now.</blockquote>
+      <p class="featured-attribution">
+        <strong>Head of Operations</strong><br>
+        The Hot Box Sauna<br>
+        <a href="/case-studies/hotbox" style="color:var(--kaptea-red);text-decoration:none;font-size:13px;font-weight:600;">Read the case study &#8250;</a>
+      </p>
+    </div>
+    <div class="featured-metrics">
+      <div class="featured-metric">
+        <h4>&lt;7%</h4>
+        <p>Call abandonment rate, down from 60%</p>
+      </div>
+      <div class="featured-metric">
+        <h4>6 wks</h4>
+        <p>From go-live to measurable abandonment reduction</p>
+      </div>
+      <div class="featured-metric">
+        <h4>Twilio</h4>
+        <p>Built on Twilio Flex with full Kaptea orchestration layer on top</p>
+      </div>
+      <div class="featured-metric">
+        <h4>Live</h4>
+        <p>Agent escalation with full conversation context on screen before pickup</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TRUST -->
+<section class="trust-section">
+  <div class="trust-inner">
+    <div class="section-label">Security and compliance</div>
+    <h2>Built for regulated contact centres</h2>
+    <p class="section-sub">Kaptea's security posture is designed for industries where customer contact is regulated and where regulators expect evidence, not assurance.</p>
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>ISO 27001:2022</h3>
+        <p>Certified information security management across all operations and infrastructure</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>CREST Certified</h3>
+        <p>Independent penetration testing to the highest UK standard for regulated environments</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Dedicated Instance</h3>
+        <p>Each customer runs on isolated infrastructure. No shared tenancy, no data commingling</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>EU, UK and US Residency</h3>
+        <p>Data residency options in all three jurisdictions. GDPR Data Processor Agreement included</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-header">
+      <div class="section-label">Common questions</div>
+      <h2 style="font-size:24px;font-family:'Manrope',sans-serif;font-weight:700;color:var(--kaptea-charcoal);line-height:1.3;margin-top:8px;">Contact centre and voice: what you need to know</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="ccfaq1">
+          We already run Genesys, Avaya or Cisco. Do we have to replace it?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="ccfaq1" hidden>
+          No. Kaptea orchestrates on top of your existing contact centre and carrier. You keep your current infrastructure, carrier relationships and agent tooling. Kaptea adds the agentic orchestration, governance and resolution layer on top, without replacing the backbone you already operate.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="ccfaq2">
+          How is this different from a contact centre automation or journey orchestration platform?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="ccfaq2" hidden>
+          Most contact centre automation platforms are built around deflection: get the contact off the queue and into self-service. A deflected contact that fails comes back as a longer, angrier call. Kaptea is built around resolution: the journey does not close until the customer has confirmed their need was met. That confirmation is captured, timestamped and stored as audit evidence. Deflection ends the call. Kaptea ends the problem.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="ccfaq3">
+          What counts as a confirmed closure?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="ccfaq3" hidden>
+          Two closure types are recognised: explicit (the customer actively confirms resolution) and inferred (satisfaction is clear from evidence in the conversation thread). A contact that simply goes quiet is never counted as closed. No evidence, no closure.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="ccfaq4">
+          How quickly can we go live?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="ccfaq4" hidden>
+          A dedicated Kaptea instance can be live in days. The first agentic voice journey, including IVR replacement, branded calling configuration and agent escalation routing, is typically built in the first week of implementation. More complex integrations with existing CRM and contact centre platforms are scoped as part of the implementation plan.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-close">
+  <h2>See what resolution looks like in your contact centre.</h2>
+  <p>Tell us about your current IVR, abandonment rate and contact volumes. We will show you exactly how Kaptea fits on top of what you already run.</p>
+  <div class="cta-close-btns">
+    <a href="/contact" class="btn-primary">Get in Touch</a>
+    <a href="/case-studies/hotbox" class="btn-ghost-light">Read the Hotbox Case Study</a>
+  </div>
+  <div class="reassurance">
+    <span>Works with Genesys, Avaya, Cisco, Twilio or your existing carrier</span>
+    <span>Dedicated instance live in days</span>
+    <span>ISO 27001 certified</span>
+  </div>
+</section>
+
+</main>
+
+<script src="footer.js"></script>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      var panel = document.getElementById(this.getAttribute('aria-controls'));
+      if (panel) panel.hidden = expanded;
+    });
+  });
+</script>
+
+</body>
+</html>
