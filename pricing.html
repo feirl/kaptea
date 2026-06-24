@@ -516,8 +516,10 @@
       color: var(--kaptea-charcoal);
       margin-bottom: 24px;
     }
+    .compare-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .compare-table {
       width: 100%;
+      min-width: 520px;
       border-collapse: collapse;
       font-size: 13.5px;
     }
@@ -906,6 +908,7 @@
 <!-- ── COMPARISON TABLE ── -->
 <div class="compare-section">
   <h2>Full capability comparison</h2>
+  <div class="compare-scroll">
   <table class="compare-table">
     <thead>
       <tr>
@@ -971,6 +974,7 @@
       <tr><td>Named dedicated engineer</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td></tr>
     </tbody>
   </table>
+  </div>
 </div>
 
 <!-- ── FOOTER NOTES ── -->
