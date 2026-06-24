@@ -1117,14 +1117,19 @@
         else document.getElementById('op-email').focus();
         return;
       }
+      // Mirror the get-started / get-a-quote payload shape so this slots into the
+      // same Zoho pipeline. The requested one-pager use case rides in usecases[]
+      // (which the lead function reads into the description); source/lead_source
+      // are there for tagging if the function maps them.
       var payload = {
-        email: email,
-        company: 'Twilio',
-        lastname: (email.split('@')[0] || 'Twilio contact'),
         firstname: '',
-        usecase: usecase,
-        partial: true,
-        source: 'Twilio LP one-pager request'
+        lastname: (email.split('@')[0] || 'one-pager request'),
+        email: email,
+        phone: '',
+        company: 'Twilio',
+        usecases: ['[Twilio co-sell one-pager] ' + usecase],
+        source: 'Twilio LP one-pager request',
+        lead_source: 'Twilio Co-Sell LP'
       };
       fetch('/api/zoho-lead.php', {
         method: 'POST',
