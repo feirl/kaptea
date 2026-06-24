@@ -904,12 +904,21 @@
     /* ══════════════════════════════════════
        WEBSITE CHROME (Get a Quote lead-gen layout)
     ══════════════════════════════════════ */
-    body { background: #fff; }
+    body { background: #131521; }
+    /* Minimal landing nav (no menus): logo + Get Started only */
+    .lp-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; background: transparent; transition: background 0.25s; }
+    .lp-nav.lp-nav--scrolled { background: #131521; box-shadow: 0 1px 0 rgba(255,255,255,0.08); }
+    .lp-nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .lp-nav-logo img { height: 36px; display: block; }
+    .lp-nav-cta { display: inline-flex; align-items: center; gap: 6px; background: var(--kaptea-red, #dc2727); color: #fff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; padding: 10px 22px; border-radius: 6px; text-decoration: none; transition: background 0.15s; }
+    .lp-nav-cta:hover { background: #b81f1f; }
+    @media (max-width: 640px) { .lp-nav { padding: 0 20px; } .lp-nav-logo img { height: 30px; } .lp-nav-cta { padding: 9px 16px; font-size: 13px; } }
     .quote-hero {
       background:
         radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.16) 0%, transparent 65%),
         #131521;
-      padding: 72px 40px 88px;
+      min-height: 100vh;
+      padding: 112px 40px 72px;
     }
     .quote-wrap {
       max-width: 1160px;
@@ -925,6 +934,7 @@
       border-radius: 16px;
       padding: 30px 34px 26px;
       box-shadow: 0 24px 64px rgba(0,0,0,0.30);
+      margin-top: 98px; /* align card top with the first paragraph on the left */
     }
     /* Neutralise app-shell spacing inside the website card */
     .quote-form-card .gs-progress { padding: 0; margin-bottom: 16px; }
@@ -935,6 +945,7 @@
     .quote-form-card .gs-cards { max-width: 100%; }
 
     /* Compact typography + spacing for the in-card form */
+    .quote-form-card .gs-progress-header { display: none; }
     .quote-form-card .gs-progress-count { display: none; }
     .quote-form-card .gs-step-question { font-size: 1.4rem; margin-bottom: 6px; }
     .quote-form-card .gs-step-hint { font-size: 0.8125rem; line-height: 1.55; margin-bottom: 18px; }
@@ -962,13 +973,32 @@
     @media (max-width: 900px) {
       .quote-hero { padding: 40px 20px 56px; }
       .quote-wrap { grid-template-columns: 1fr; gap: 32px; }
-      .quote-form-card { padding: 26px 22px 24px; }
+      .quote-form-card { padding: 26px 22px 24px; margin-top: 0; }
       .quote-form-card .gs-content { padding: 0; }
       .quote-form-card .gs-progress { padding: 0; }
     }
   </style>
 
-  <!-- GA4 consent defaults are set by nav.js; GA is injected by footer.js (standard site pattern) -->
+  <!-- GA4 with Consent Mode v2 (standalone landing page: no nav.js/footer.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('consent', 'default', {
+      analytics_storage: 'denied', ad_storage: 'denied',
+      ad_user_data: 'denied', ad_personalization: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      var kc = JSON.parse(localStorage.getItem('kaptea_consent') || 'null');
+      if (kc && kc.analytics) { gtag('consent', 'update', { analytics_storage: 'granted' }); }
+    } catch(e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKZ4JHK73L"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-JKZ4JHK73L', { anonymize_ip: true });
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -989,7 +1019,12 @@
 </head>
 <body>
 
-<script src="/nav.js"></script>
+<nav class="lp-nav" id="lp-nav" aria-label="Site header">
+  <a href="/" class="lp-nav-logo" aria-label="Kaptea home">
+    <img src="/img/brand/kaptea-logo-dark-bg.svg" alt="Kaptea" />
+  </a>
+  <a href="/get-started" class="lp-nav-cta">Get Started</a>
+</nav>
 
 <section class="quote-hero">
   <div class="quote-wrap">
@@ -1080,7 +1115,7 @@
 
       <!-- Step 1: Channels -->
       <div class="gs-step active" id="step-0">
-        <h1 class="gs-step-question">Let's get you a quote</h1>
+        <h1 class="gs-step-question">Get a Quote</h1>
         <p class="gs-step-hint">Tell us about your needs and we'll prepare a tailored quote.</p>
         <div class="gs-error-banner" id="err-0"></div>
         <div class="gs-fields">
@@ -1344,7 +1379,15 @@
   </div><!-- /quote-wrap -->
 </section>
 
-<script src="/footer.js"></script>
+<script>
+  (function () {
+    var nav = document.getElementById('lp-nav');
+    var THRESHOLD = 60;
+    function update() { nav.classList.toggle('lp-nav--scrolled', window.scrollY >= THRESHOLD); }
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+  })();
+</script>
 
 <script>
   var CALENDLY_URL = 'https://calendly.com/atmcnab/introduction-to-kaptea';
