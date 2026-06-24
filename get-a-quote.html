@@ -905,6 +905,7 @@
        WEBSITE CHROME (Get a Quote lead-gen layout)
     ══════════════════════════════════════ */
     body { background: #131521; }
+    footer[role="contentinfo"] { display: none !important; }
     /* Minimal landing nav (no menus): logo + Get Started only */
     .lp-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; background: transparent; border-bottom: none !important; box-shadow: none !important; transition: background 0.25s ease; }
     .lp-nav.lp-nav--scrolled { background: rgba(19,21,33,0.82); backdrop-filter: saturate(140%) blur(10px); -webkit-backdrop-filter: saturate(140%) blur(10px); }
@@ -931,7 +932,8 @@
       align-items: start;
     }
     .quote-message { color: #fff; padding-top: 6px; }
-    .quote-message .gs-sidebar-headline .hl-red { color: var(--kaptea-red, #dc2727); }
+    .quote-message .gs-sidebar-headline { font-size: clamp(1.95rem, 3.4vw, 2.45rem); line-height: 1.12; letter-spacing: -0.02em; }
+.quote-message .gs-sidebar-headline .hl-red { color: var(--kaptea-red, #dc2727); }
     .quote-form-card {
       background: #fff;
       border-radius: 22px;
@@ -1006,7 +1008,7 @@
     }
   </style>
 
-  <!-- GA4 with Consent Mode v2 (standalone landing page: no nav.js/footer.js) -->
+  <!-- GA4 with Consent Mode v2 (standalone landing page: footer.js adds the cookie banner + consent) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -1914,6 +1916,6 @@
   // Initialise when page loads (the panel exists in DOM from the start)
   initAgentSelect();
 </script>
-<script src="/cookie-consent.js"></script>
+<script src="/footer.js"></script>
 </body>
 </html>
