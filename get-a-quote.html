@@ -906,19 +906,21 @@
     ══════════════════════════════════════ */
     body { background: #131521; }
     /* Minimal landing nav (no menus): logo + Get Started only */
-    .lp-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; background: transparent; transition: background 0.25s; }
-    .lp-nav.lp-nav--scrolled { background: #131521; box-shadow: 0 1px 0 rgba(255,255,255,0.08); }
+    .lp-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; background: transparent; border-bottom: none !important; box-shadow: none !important; transition: background 0.25s ease; }
+    .lp-nav.lp-nav--scrolled { background: rgba(19,21,33,0.82); backdrop-filter: saturate(140%) blur(10px); -webkit-backdrop-filter: saturate(140%) blur(10px); }
     .lp-nav-logo { display: flex; align-items: center; text-decoration: none; }
     .lp-nav-logo img { height: 36px; display: block; }
     .lp-nav-cta { display: inline-flex; align-items: center; gap: 6px; background: var(--kaptea-red, #dc2727); color: #fff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; padding: 10px 22px; border-radius: 6px; text-decoration: none; transition: background 0.15s; }
     .lp-nav-cta:hover { background: #b81f1f; }
     @media (max-width: 640px) { .lp-nav { padding: 0 20px; } .lp-nav-logo img { height: 30px; } .lp-nav-cta { padding: 9px 16px; font-size: 13px; } }
     .quote-hero {
+      position: relative;
       background:
-        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.16) 0%, transparent 65%),
-        #131521;
+        radial-gradient(1200px 720px at 16% -8%, rgba(220,39,39,0.20) 0%, transparent 58%),
+        radial-gradient(1000px 700px at 105% 110%, rgba(63,208,192,0.07) 0%, transparent 55%),
+        linear-gradient(180deg, #181a2e 0%, #131521 55%, #0f1019 100%);
       min-height: 100vh;
-      padding: 112px 40px 72px;
+      padding: 128px 40px 96px;
     }
     .quote-wrap {
       max-width: 1160px;
@@ -931,44 +933,68 @@
     .quote-message { color: #fff; padding-top: 6px; }
     .quote-form-card {
       background: #fff;
-      border-radius: 16px;
-      padding: 30px 34px 26px;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.30);
+      border-radius: 22px;
+      padding: 42px 44px 34px;
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow:
+        0 1px 1px rgba(0,0,0,0.10),
+        0 8px 24px -8px rgba(0,0,0,0.30),
+        0 44px 90px -32px rgba(0,0,0,0.62);
       margin-top: 98px; /* align card top with the first paragraph on the left */
     }
     /* Neutralise app-shell spacing inside the website card */
-    .quote-form-card .gs-progress { padding: 0; margin-bottom: 16px; }
+    .quote-form-card .gs-progress { padding: 0; margin-bottom: 28px; }
     .quote-form-card .gs-content { padding: 0; display: block; }
     .quote-form-card .gs-confirm-header { padding: 0 0 18px; }
     .quote-form-card .gs-calendly-wrap { min-height: 520px; }
     .quote-form-card .gs-nav.fields-step { max-width: 100%; }
     .quote-form-card .gs-cards { max-width: 100%; }
 
-    /* Compact typography + spacing for the in-card form */
+    /* Refined typography + breathing room for the in-card form */
     .quote-form-card .gs-progress-header { display: none; }
     .quote-form-card .gs-progress-count { display: none; }
-    .quote-form-card .gs-step-question { font-size: 1.4rem; margin-bottom: 6px; }
-    .quote-form-card .gs-step-hint { font-size: 0.8125rem; line-height: 1.55; margin-bottom: 18px; }
-    .quote-form-card .gs-cards { gap: 8px; }
-    .quote-form-card .gs-card { padding: 12px 14px; gap: 10px; border-radius: 10px; }
+    .quote-form-card .gs-step-dots { gap: 7px; }
+    .quote-form-card .gs-step-dot { height: 4px; border-radius: 4px; }
+    .quote-form-card .gs-step-question { font-size: 1.45rem; margin-bottom: 8px; }
+    .quote-form-card .gs-step-hint { font-size: 0.84rem; line-height: 1.55; margin-bottom: 28px; }
+    .quote-form-card .gs-cards { gap: 10px; }
+    .quote-form-card .gs-card { padding: 14px 16px; gap: 11px; border-radius: 12px; }
     .quote-form-card .gs-card-tick { width: 18px; height: 18px; min-width: 18px; }
-    .quote-form-card .gs-card-label { font-size: 0.85rem; }
+    .quote-form-card .gs-card-label { font-size: 0.86rem; }
     .quote-form-card .gs-card-desc { font-size: 0.75rem; margin-top: 3px; }
-    .quote-form-card .gs-fields { gap: 11px; }
-    .quote-form-card .gs-field { gap: 5px; }
-    .quote-form-card .gs-field label { font-size: 0.75rem; }
-    .quote-form-card .gs-field input { padding: 9px 13px; font-size: 0.875rem; border-radius: 9px; }
-    .quote-form-card .gs-error-banner { font-size: 0.8125rem; padding: 8px 12px; }
-    .quote-form-card .gs-ms-trigger { min-height: 44px; padding: 8px 12px 8px 14px; }
-    .quote-form-card .gs-sliders { gap: 28px; margin-top: 2px; }
-    .quote-form-card .gs-slider-value { font-size: 21px; }
+    .quote-form-card .gs-fields { gap: 16px; }
+    .quote-form-card .gs-row { gap: 14px; }
+    .quote-form-card .gs-field { gap: 7px; }
+    .quote-form-card .gs-field label { font-size: 0.75rem; color: #475569; }
+    .quote-form-card .gs-field input {
+      padding: 12px 14px; font-size: 0.875rem; border-radius: 11px;
+      background: #f7f9fc; border-color: #eaeef3; box-shadow: none;
+    }
+    .quote-form-card .gs-field input:focus { background: #fff; }
+    .quote-form-card .gs-error-banner { font-size: 0.8125rem; padding: 9px 13px; }
+    .quote-form-card .gs-ms-trigger { min-height: 46px; padding: 9px 12px 9px 14px; border-radius: 11px; background: #f7f9fc; border-color: #eaeef3; box-shadow: none; }
+    .quote-form-card .gs-ms-trigger.open, .quote-form-card .gs-ms-trigger:focus { background: #fff; }
+    .quote-form-card .gs-sliders { gap: 32px; margin-top: 4px; }
+    .quote-form-card .gs-slider-value { font-size: 22px; }
     .quote-form-card .gs-slider-label { font-size: 13px; }
-    .quote-form-card .gs-slider-header { margin-bottom: 12px; }
-    .quote-form-card .gs-nav { margin-top: 20px; }
-    .quote-form-card .gs-btn-continue { padding: 11px 26px; font-size: 0.875rem; border-radius: 9px; }
+    .quote-form-card .gs-slider-header { margin-bottom: 14px; }
+    .quote-form-card .gs-nav { margin-top: 30px; }
+    .quote-form-card .gs-btn-continue { padding: 13px 30px; font-size: 0.9rem; border-radius: 11px; }
     .quote-form-card .gs-btn-back { font-size: 0.85rem; }
-    .quote-form-card .gs-confirm-header h1 { font-size: 1.4rem; }
+    .quote-form-card .gs-confirm-header h1 { font-size: 1.45rem; }
     .quote-form-card .gs-confirm-header p { font-size: 0.875rem; }
+
+    /* Subtle reassurance line under the form */
+    .quote-reassure {
+      display: flex; flex-wrap: wrap; gap: 8px 18px;
+      margin-top: 22px; padding-top: 18px;
+      border-top: 1px solid #f0f2f6;
+    }
+    .quote-reassure span {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.75rem; color: #94a3b8; line-height: 1.4;
+    }
+    .quote-reassure span svg { width: 13px; height: 13px; color: #dc2727; flex-shrink: 0; }
 
     @media (max-width: 900px) {
       .quote-hero { padding: 40px 20px 56px; }
@@ -1359,6 +1385,12 @@
             <polyline points="6 3 11 8 6 13"/>
           </svg>
         </button>
+      </div>
+
+      <div class="quote-reassure">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No obligation</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tailored to your needs</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>We reply within one business day</span>
       </div>
 
     </div><!-- /gs-content -->
