@@ -190,6 +190,25 @@
     .leader-card .leader-role { font-size: 13px; color: var(--kaptea-red); font-weight: 600; margin-bottom: 12px; }
     .leader-card p { font-size: 13px; color: var(--kaptea-tagline-grey); line-height: 1.65; text-align: left; }
 
+    /* Contact layout: founder cards (left) + one-pager download box (right) */
+    .contact-layout { display: grid; grid-template-columns: 1fr 340px; gap: 28px; align-items: stretch; }
+    .contact-layout .leader-grid { max-width: none; }
+    .contact-onepager { background: var(--kaptea-charcoal); border-radius: 8px; padding: 30px 28px; display: flex; flex-direction: column; }
+    .contact-onepager .op-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--kaptea-red); margin-bottom: 10px; }
+    .contact-onepager h3 { font-size: 19px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: 10px; }
+    .contact-onepager > p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 18px; }
+    .contact-onepager .onepager-form { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
+    .contact-onepager .onepager-form input, .contact-onepager .onepager-form select { width: 100%; min-width: 0; font-family: 'Inter', sans-serif; font-size: 14px; padding: 11px 13px; border-radius: 9px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.06); color: #fff; }
+    .contact-onepager .onepager-form input::placeholder { color: rgba(255,255,255,0.4); }
+    .contact-onepager .onepager-form select option { color: #131521; }
+    .contact-onepager .onepager-form input:focus, .contact-onepager .onepager-form select:focus { border-color: var(--kaptea-red); box-shadow: 0 0 0 3px rgba(220,39,39,0.25); outline: none; }
+    .contact-onepager .onepager-form button { width: 100%; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; padding: 12px 18px; border: none; border-radius: 9px; background: var(--kaptea-red); color: #fff; cursor: pointer; transition: background 0.15s; margin-top: 2px; }
+    .contact-onepager .onepager-form button:hover { background: #b81f1f; }
+    .contact-onepager .onepager-note { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 12px; line-height: 1.5; }
+    .contact-onepager .onepager-success { display: none; font-size: 14px; color: #fff; font-weight: 600; margin-top: 12px; }
+    .contact-onepager .onepager-success.show { display: block; }
+    @media (max-width: 860px) { .contact-layout { grid-template-columns: 1fr; } }
+
     /* ── CERTS ── */
     .certs { padding: 64px 40px; text-align: center; }
     .certs-inner { max-width: 1080px; margin: 0 auto; }
@@ -847,27 +866,51 @@
     <h2>Talk to Alan and Robert.</h2>
     <p>We co-sell directly with Twilio account teams. Reach out and we'll show you how Pronto helps you close faster and expand the account, especially for agentic-voice-led customer journey orchestration. You'll be talking to the founders, not a sales desk.</p>
 
-    <div class="leader-grid">
+    <div class="contact-layout">
 
-      <div class="leader-card">
-        <div class="leader-photo-wrap">
-          <img src="img/alan-mcnab.webp" alt="Alan McNab, CEO &amp; Co-Founder of Kaptea" class="leader-photo">
+      <div class="leader-grid">
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <img src="img/alan-mcnab.webp" alt="Alan McNab, CEO &amp; Co-Founder of Kaptea" class="leader-photo">
+          </div>
+          <h3>Alan McNab</h3>
+          <div class="leader-role">CEO &amp; Co-Founder</div>
+          <p>Former HP, Cisco, NCR, Arista Networks. Expertise in cloud architecture, high-availability systems, and customer service transformation. BSEE from Santa Clara University, MBA from Trinity College Dublin.</p>
+          <a class="leader-email" href="mailto:alan.mcnab@kaptea.io"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>alan.mcnab@kaptea.io</a>
         </div>
-        <h3>Alan McNab</h3>
-        <div class="leader-role">CEO &amp; Co-Founder</div>
-        <p>Former HP, Cisco, NCR, Arista Networks. Expertise in cloud architecture, high-availability systems, and customer service transformation. BSEE from Santa Clara University, MBA from Trinity College Dublin.</p>
-        <a class="leader-email" href="mailto:alan.mcnab@kaptea.io"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>alan.mcnab@kaptea.io</a>
+
+        <div class="leader-card">
+          <div class="leader-photo-wrap">
+            <img src="img/robert-norton.webp" alt="Robert Norton, CTO &amp; Co-Founder of Kaptea" class="leader-photo">
+          </div>
+          <h3>Robert Norton</h3>
+          <div class="leader-role">CTO &amp; Co-Founder</div>
+          <p>18+ years driving digital transformation at Ryanair, Bank of Ireland, HSE, and 123.ie. Led the design and delivery of secure, scalable platforms serving millions of users.</p>
+          <a class="leader-email" href="mailto:robert.norton@kaptea.io"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>robert.norton@kaptea.io</a>
+        </div>
+
       </div>
 
-      <div class="leader-card">
-        <div class="leader-photo-wrap">
-          <img src="img/robert-norton.webp" alt="Robert Norton, CTO &amp; Co-Founder of Kaptea" class="leader-photo">
-        </div>
-        <h3>Robert Norton</h3>
-        <div class="leader-role">CTO &amp; Co-Founder</div>
-        <p>18+ years driving digital transformation at Ryanair, Bank of Ireland, HSE, and 123.ie. Led the design and delivery of secure, scalable platforms serving millions of users.</p>
-        <a class="leader-email" href="mailto:robert.norton@kaptea.io"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>robert.norton@kaptea.io</a>
-      </div>
+      <aside class="contact-onepager" id="one-pager">
+        <div class="op-eyebrow">Use-case one-pager</div>
+        <h3>Get the one-pager for your deal.</h3>
+        <p>Pick the use case you're working and we'll send the co-sell one-pager to your Twilio inbox: the talk track, the proof points, and how Pronto fits on Twilio.</p>
+        <form class="onepager-form" id="onepagerForm" novalidate>
+          <input type="email" id="op-email" name="email" placeholder="you@twilio.com" autocomplete="email" required>
+          <select id="op-usecase" name="usecase" required aria-label="Use case">
+            <option value="" disabled selected>Select a use case</option>
+            <option>Customer Journey Orchestration</option>
+            <option>Reservation Experience Management</option>
+            <option>Urgent Messaging &amp; Recall</option>
+            <option>Transactional Communications</option>
+            <option>Contact Centre Workflows</option>
+          </select>
+          <button type="submit">Send me the one-pager</button>
+        </form>
+        <div class="onepager-note">For Twilio staff. We'll also let Alan and Robert know you're working a deal.</div>
+        <div class="onepager-success" id="onepagerSuccess">Thanks. Your one-pager is on its way, and Alan and Robert have been notified.</div>
+      </aside>
 
     </div>
   </div>
@@ -951,28 +994,6 @@
   </div>
 </section>
 
-<!-- SECONDARY CTA: USE-CASE ONE-PAGER -->
-<section class="onepager" id="one-pager">
-  <div class="onepager-inner">
-    <div class="section-label" style="color:var(--kaptea-red);text-transform:uppercase;letter-spacing:0.1em;font-size:11px;font-weight:700;margin-bottom:8px;">Use-case one-pager</div>
-    <h2>Get the one-pager for your deal.</h2>
-    <p>Pick the use case you're working and we'll send the co-sell one-pager to your Twilio inbox: the talk track, the proof points, and how Pronto fits on top of Twilio.</p>
-    <form class="onepager-form" id="onepagerForm" novalidate>
-      <input type="email" id="op-email" name="email" placeholder="you@twilio.com" autocomplete="email" required>
-      <select id="op-usecase" name="usecase" required aria-label="Use case">
-        <option value="" disabled selected>Select a use case</option>
-        <option>Customer Journey Orchestration</option>
-        <option>Reservation Experience Management</option>
-        <option>Urgent Messaging &amp; Recall</option>
-        <option>Transactional Communications</option>
-        <option>Contact Centre Workflows</option>
-      </select>
-      <button type="submit">Send me the one-pager</button>
-    </form>
-    <div class="onepager-note">For Twilio staff. We'll also let Alan and Robert know you're working a deal.</div>
-    <div class="onepager-success" id="onepagerSuccess">Thanks. Your one-pager is on its way, and Alan and Robert have been notified.</div>
-  </div>
-</section>
 
 <!-- CTA -->
 <section class="cta-close">
