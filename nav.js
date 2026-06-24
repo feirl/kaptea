@@ -156,35 +156,44 @@
               <div class="use-case-title"><span class="use-case-num">01</span><a href="/customer-journey-orchestration">Customer Journey Orchestration</a></div>
               <ul class="mega-links">
                 <li class="mega-detail">End-to-end workflow engine</li>
-                <li class="mega-detail">Dual-payload API enrichment</li>
-                <li class="mega-detail">Centralised template management</li>
                 <li class="mega-detail">Conversation intelligence &amp; live escalation</li>
-                <li class="mega-detail">Branded sender &amp; branded calling</li>
                 <li class="mega-detail">Multi-channel: SMS, RCS, WhatsApp, Email, Voice</li>
               </ul>
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">02</span><a href="/emergency-surge-communications">Urgent Messaging &amp; Recall</a></div>
+              <div class="use-case-title"><span class="use-case-num">02</span><a href="/reservation-experience-management">Reservation Experience Management</a></div>
               <ul class="mega-links">
-                <li class="mega-detail">CSV upload for mass dispatch</li>
-                <li class="mega-detail">Email to SMS to branded call escalation</li>
-                <li class="mega-detail">Branded calling, 30-50% pickup uplift</li>
-                <li class="mega-detail">Per-message regulator-ready audit</li>
-                <li class="mega-detail">Warranty recall &amp; drug recall workflows</li>
-                <li class="mega-detail">FCA, MHRA, EMA, FDA-aware compliance</li>
+                <li class="mega-detail">Pre-arrival, on-the-day &amp; follow-up journeys</li>
+                <li class="mega-detail">No-show reduction &amp; one-tap rebooking</li>
+                <li class="mega-detail">Promise tracked to customer-confirmed closure</li>
               </ul>
             </div>
 
             <div class="mega-use-case">
-              <div class="use-case-title"><span class="use-case-num">03</span><a href="/enterprise-transactional-messaging">Transactional Communication</a></div>
+              <div class="use-case-title"><span class="use-case-num">03</span><a href="/emergency-surge-communications">Urgent Messaging &amp; Recall</a></div>
               <ul class="mega-links">
-                <li class="mega-detail">Layer over existing transactional stack</li>
-                <li class="mega-detail">Drag-and-drop template management</li>
-                <li class="mega-detail">Sub-account billing granularity</li>
+                <li class="mega-detail">Mass dispatch with branded-call escalation</li>
+                <li class="mega-detail">Branded calling, 30-50% pickup uplift</li>
+                <li class="mega-detail">Per-message regulator-ready audit</li>
+              </ul>
+            </div>
+
+            <div class="mega-use-case">
+              <div class="use-case-title"><span class="use-case-num">04</span><a href="/enterprise-transactional-messaging">Transactional Communications</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Layer over your existing transactional stack</li>
                 <li class="mega-detail">Centralised compliance, distributed execution</li>
-                <li class="mega-detail">Ad-hoc multi-channel campaigns</li>
                 <li class="mega-detail">Single audit trail across channels</li>
+              </ul>
+            </div>
+
+            <div class="mega-use-case">
+              <div class="use-case-title"><span class="use-case-num">05</span><a href="/contact-centre-voice">Contact Centre Workflows</a></div>
+              <ul class="mega-links">
+                <li class="mega-detail">Agentic voice that resolves, not deflects</li>
+                <li class="mega-detail">Live agent escalation with full context</li>
+                <li class="mega-detail">Confirmed closure &amp; audit trail</li>
               </ul>
             </div>
           </div>
@@ -212,6 +221,15 @@
             </div>
             <div class="mega-panel-label">Industries</div>
             <div class="mega-industry-grid">
+
+              <div class="industry-block">
+                <div class="industry-title"><a href="/industries/hospitality-events">Hospitality &amp; Events</a></div>
+                <ul class="mega-links">
+                  <li class="mega-detail">Reservation experience management</li>
+                  <li class="mega-detail">No-show reduction &amp; rebooking</li>
+                  <li class="mega-detail">Agentic voice during service</li>
+                </ul>
+              </div>
 
               <div class="industry-block">
                 <div class="industry-title"><a href="/industries/finance">Financial Services</a></div>

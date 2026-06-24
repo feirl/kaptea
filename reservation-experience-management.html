@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
+  <title>Reservation Experience Management | Kaptea</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="The booking is a promise. Keeping it is the whole experience. Kaptea orchestrates every reminder, change, disruption and follow-up from the moment of booking to customer-confirmed closure, across SMS, WhatsApp, voice and email." />
+  <link rel="canonical" href="https://kaptea.io/reservation-experience-management" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Reservation Experience Management | Kaptea" />
+  <meta property="og:description" content="The booking engine market is saturated. What happens after the booking is not. Orchestrate the whole reserved experience to customer-confirmed closure." />
+  <meta property="og:url" content="https://kaptea.io/reservation-experience-management" />
+  <meta property="og:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reservation Experience Management | Kaptea" />
+  <meta name="twitter:description" content="The booking engine market is saturated. What happens after the booking is not. Orchestrate the whole reserved experience to customer-confirmed closure." />
+  <meta name="twitter:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
+  <meta property="og:site_name" content="Kaptea" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- AI / LLM Crawler Optimisation -->
+  <meta name="ai-content-declaration" content="Kaptea Reservation Experience Management. Orchestrates the customer journey after a booking: pre-arrival, on-the-day, disruption, change and follow-up communication for reservation-led and appointment-led operators in hospitality, restaurants, transport, healthcare, attractions and experiences. Two-way SMS, WhatsApp, agentic voice and email on one platform. No-show reduction and easy rebooking. Disruption handled at scale with AI triage and human escalation. Every promise tracked to customer-confirmed closure with an audit trail. Branded calling lifts pickup 30 to 50 percent. Built on Twilio. Dedicated instance live in days." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Reservation Experience Management | Kaptea",
+        "url": "https://kaptea.io/reservation-experience-management",
+        "description": "Kaptea orchestrates every reminder, change, disruption and follow-up from the moment of booking to customer-confirmed closure, across SMS, WhatsApp, voice and email.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaptea.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://kaptea.io/pronto"},
+            {"@type": "ListItem", "position": 3, "name": "Reservation Experience Management", "item": "https://kaptea.io/reservation-experience-management"}
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://kaptea.io/reservation-experience-management#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is reservation experience management?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Reservation experience management is everything that happens between the booking and the customer-confirmed end of the experience. When a customer reserves a table, a room, a berth, an appointment or a journey, you make a promise. Keeping that promise requires orchestrated, two-way communication through pre-arrival, change, disruption, the day itself and follow-up. Kaptea runs that whole layer on one platform."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We already have a booking system. How is this different?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Booking systems are built to capture the reservation. They stop at the confirmation. Reservation experience management is everything after that click: the pre-arrival journey, the reminder that prevents a no-show, the agentic voice line that answers when the phone rings during service, the disruption message sent at scale, and the follow-up that confirms the promise was kept. Kaptea layers on top of your existing booking or reservation system, it does not replace it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do we have to replace our reservation, PMS or appointment system?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Kaptea integrates with your existing reservation, property management or appointment system through its API and event triggers. Booking events flow into Kaptea and trigger the right journey automatically. You keep the system your team already knows, and add the orchestration, voice and follow-up layer on top."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which kinds of business is this for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Any operator whose revenue is a booked commitment to deliver a great experience: restaurants and food service, hotels and hospitality, private healthcare and clinics, transport and travel, attractions and experiences, spas and personal care, and leisure clubs. If a customer books a dated, named service in advance, reservation experience management applies."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can we go live?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A dedicated Kaptea instance can be live in days. The first journey, such as a pre-arrival reminder sequence or an agentic voice line that replaces a broken IVR, is typically built in the first week of implementation. More complex integrations with your reservation system are scoped as part of the implementation plan."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .hero {
+      background:
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.18) 0%, transparent 65%),
+        var(--kaptea-charcoal);
+      color: var(--kaptea-white);
+      padding: 80px 40px 72px;
+    }
+    .hero-inner { max-width: 860px; margin: 0 auto; }
+    .hero-breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 24px;
+    }
+    .hero-breadcrumb a { color: var(--kaptea-red); text-decoration: none; }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .hero h1 {
+      font-size: 44px; font-family: 'Manrope', sans-serif;
+      font-weight: 700; line-height: 1.15; margin-bottom: 20px; color: var(--kaptea-white);
+    }
+    .hero h1 span { color: var(--kaptea-red); }
+    .hero-stat {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(63,208,192,0.1); border: 1px solid rgba(63,208,192,0.3);
+      border-radius: 8px; padding: 10px 16px; margin-bottom: 20px;
+      font-size: 14px; color: rgba(255,255,255,0.88); line-height: 1.5;
+    }
+    .hero-stat strong { color: #3fd0c0; font-weight: 700; }
+    .hero .hero-sub {
+      font-size: 18px; color: rgba(255,255,255,0.68);
+      line-height: 1.65; margin-bottom: 32px; max-width: 720px;
+    }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 99px; padding: 5px 12px;
+      font-size: 12px; color: rgba(255,255,255,0.8); font-weight: 500;
+    }
+    .hero-pill svg { color: var(--kaptea-red); flex-shrink: 0; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* WEDGE */
+    .wedge-band { background: var(--kaptea-charcoal); padding: 64px 40px; text-align: center; }
+    .wedge-inner { max-width: 800px; margin: 0 auto; }
+    .wedge-eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); margin-bottom: 16px;
+    }
+    .wedge-line {
+      font-size: 30px; font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: var(--kaptea-white); line-height: 1.25; margin-bottom: 16px;
+    }
+    .wedge-line em { color: var(--kaptea-red); font-style: normal; }
+    .wedge-sub { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.65; margin-bottom: 40px; }
+    .wedge-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
+    .wedge-col { border-radius: 12px; padding: 24px 28px; }
+    .wedge-col.deflect { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); }
+    .wedge-col.resolve { background: rgba(63,208,192,0.08); border: 1px solid rgba(63,208,192,0.3); }
+    .wedge-col h4 {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .wedge-col.deflect h4 { color: rgba(255,255,255,0.4); }
+    .wedge-col.resolve h4 { color: #3fd0c0; }
+    .wedge-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .wedge-col li { font-size: 13.5px; line-height: 1.5; display: flex; align-items: flex-start; gap: 9px; }
+    .wedge-col.deflect li { color: rgba(255,255,255,0.5); }
+    .wedge-col.resolve li { color: rgba(255,255,255,0.82); }
+    .wedge-col.deflect li::before { content: "✕"; color: rgba(255,255,255,0.22); font-size: 11px; flex-shrink: 0; margin-top: 2px; }
+    .wedge-col.resolve li::before { content: "✓"; color: #3fd0c0; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+    /* PROBLEM */
+    .problem { padding: 72px 40px; background: var(--kaptea-surface-muted); }
+    .problem-inner { max-width: 1060px; margin: 0 auto; }
+    .problem h2 {
+      font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: var(--kaptea-charcoal); margin-bottom: 40px; line-height: 1.3; max-width: 680px;
+    }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .problem-card { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 12px; padding: 24px 28px; }
+    .problem-card h3 { font-size: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 8px; }
+    .problem-card p { font-size: 13.5px; color: var(--kaptea-tagline-grey); line-height: 1.6; margin: 0 0 10px; }
+    .problem-card .vs { font-size: 12px; font-weight: 600; color: var(--kaptea-red); padding-top: 10px; border-top: 1px solid var(--kaptea-border); }
+
+    /* SOLUTIONS */
+    .solutions { padding: 80px 40px; background: var(--kaptea-white); }
+    .solutions-inner { max-width: 1060px; margin: 0 auto; }
+    .solutions .section-header { margin-bottom: 56px; }
+    .solutions h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); line-height: 1.3; }
+    .solution-block { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-bottom: 64px; align-items: start; }
+    .solution-block.reverse { direction: rtl; }
+    .solution-block.reverse > * { direction: ltr; }
+    .solution-pain { background: var(--kaptea-surface-muted); border-radius: 12px; padding: 28px 32px; }
+    .solution-pain-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--kaptea-neutral-grey); margin-bottom: 12px; }
+    .solution-pain p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.7; margin: 0; font-style: italic; }
+    .solution-answer h3 { font-size: 20px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 12px; }
+    .solution-answer p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.7; margin-bottom: 16px; }
+    .solution-answer ul { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .solution-answer li { font-size: 13.5px; color: var(--kaptea-charcoal); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+    .solution-answer li::before { content: ""; flex-shrink: 0; width: 5px; height: 5px; background: var(--kaptea-red); border-radius: 50%; margin-top: 7px; }
+    .feature-link { font-size: 13px; color: var(--kaptea-red); font-weight: 600; text-decoration: none; }
+    .feature-link:hover { text-decoration: underline; }
+
+    /* NUMBERS */
+    .numbers-strip { background: var(--kaptea-charcoal); padding: 56px 40px; }
+    .numbers-inner { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    .number-item { text-align: center; }
+    .number-item h3 { font-size: 36px; font-family: 'Manrope', sans-serif; font-weight: 800; color: var(--kaptea-white); margin-bottom: 8px; line-height: 1.1; }
+    .number-item h3 span { color: var(--kaptea-red); }
+    .number-item p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; margin: 0; }
+
+    /* JOURNEY STRIP */
+    .journey { padding: 72px 40px; background: var(--kaptea-surface-muted); border-top: 1px solid var(--kaptea-border); }
+    .journey-inner { max-width: 1060px; margin: 0 auto; }
+    .journey-inner h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 8px; line-height: 1.3; }
+    .journey-inner .section-sub { font-size: 15px; color: var(--kaptea-tagline-grey); margin-bottom: 40px; line-height: 1.6; max-width: 640px; }
+    .journey-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    .journey-step { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 12px; padding: 20px; position: relative; }
+    .journey-step .step-num { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--kaptea-red); margin-bottom: 8px; }
+    .journey-step h3 { font-size: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 6px; }
+    .journey-step p { font-size: 12.5px; color: var(--kaptea-tagline-grey); line-height: 1.5; margin: 0; }
+
+    /* VOC */
+    .featured-customer { background: var(--kaptea-white); padding: 72px 40px; border-top: 1px solid var(--kaptea-border); }
+    .featured-inner { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .featured-quote { font-size: 18px; font-family: 'Manrope', sans-serif; font-weight: 600; color: var(--kaptea-charcoal); line-height: 1.6; border-left: 3px solid var(--kaptea-red); padding-left: 20px; margin: 0 0 20px; }
+    .featured-attribution { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.6; }
+    .featured-attribution strong { color: var(--kaptea-charcoal); }
+    .featured-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .featured-metric { background: var(--kaptea-surface-muted); border: 1px solid var(--kaptea-border); border-radius: 10px; padding: 20px 22px; }
+    .featured-metric h4 { font-size: 30px; font-family: 'Manrope', sans-serif; font-weight: 800; color: var(--kaptea-red); margin-bottom: 4px; line-height: 1; }
+    .featured-metric p { font-size: 12px; color: var(--kaptea-tagline-grey); line-height: 1.4; margin: 0; }
+
+    /* TRUST */
+    .trust-section { padding: 64px 40px; background: var(--kaptea-surface-muted); border-top: 1px solid var(--kaptea-border); }
+    .trust-inner { max-width: 1060px; margin: 0 auto; }
+    .trust-inner h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 8px; }
+    .trust-inner .section-sub { font-size: 15px; color: var(--kaptea-tagline-grey); margin-bottom: 36px; line-height: 1.6; }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .trust-card { background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 10px; padding: 20px; }
+    .trust-icon { color: var(--kaptea-red); margin-bottom: 10px; }
+    .trust-card h3 { font-size: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 6px; }
+    .trust-card p { font-size: 12.5px; color: var(--kaptea-tagline-grey); line-height: 1.5; margin: 0; }
+
+    /* FAQ */
+    .faq-section { padding: 80px 40px; background: var(--kaptea-white); border-top: 1px solid var(--kaptea-border); }
+    .faq-inner { max-width: 720px; margin: 0 auto; }
+    .faq-inner .section-header { margin-bottom: 36px; }
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid var(--kaptea-border); }
+    .faq-item:first-child { border-top: 1px solid var(--kaptea-border); }
+    .faq-q { width: 100%; background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 20px 0; font-size: 16px; font-weight: 600; color: var(--kaptea-charcoal); text-align: left; gap: 16px; font-family: inherit; line-height: 1.4; }
+    .faq-q:hover { color: var(--kaptea-red); }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; color: var(--kaptea-red); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-a { padding-bottom: 20px; font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.7; }
+    .faq-a[hidden] { display: none; }
+
+    /* RELATED */
+    .related-section { padding: 72px 40px; border-top: 1px solid var(--kaptea-border); background: var(--kaptea-surface-muted); }
+    .related-inner { max-width: 1060px; margin: 0 auto; }
+    .related-inner > h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 32px; margin-top: 8px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .related-card { padding: 28px; border: 1px solid var(--kaptea-border); border-radius: 8px; background: var(--kaptea-white); text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
+    .related-card:hover { border-color: var(--kaptea-red); box-shadow: 0 4px 16px rgba(220,39,39,0.08); transform: translateY(-2px); }
+    .related-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 8px; }
+    .related-card p { font-size: 13px; color: var(--kaptea-tagline-grey); line-height: 1.6; }
+    .related-arrow { font-size: 13px; color: var(--kaptea-red); font-weight: 600; margin-top: 12px; display: block; }
+
+    /* CTA CLOSE */
+    .cta-close { background: var(--kaptea-charcoal); padding: 80px 40px; text-align: center; }
+    .cta-close h2 { font-size: 32px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-white); margin-bottom: 12px; }
+    .cta-close p { font-size: 16px; color: rgba(255,255,255,0.6); margin-bottom: 32px; line-height: 1.6; max-width: 580px; margin-left: auto; margin-right: auto; }
+    .cta-close-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .reassurance { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.4); }
+
+    @media (max-width: 900px) {
+      .hero { padding: 56px 24px 48px; }
+      .hero h1 { font-size: 30px; }
+      .hero .hero-sub { font-size: 16px; }
+      .wedge-band { padding: 48px 24px; }
+      .wedge-cols { grid-template-columns: 1fr; }
+      .wedge-line { font-size: 24px; }
+      .problem { padding: 56px 24px; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .solutions { padding: 56px 24px; }
+      .solution-block, .solution-block.reverse { grid-template-columns: 1fr; direction: ltr; gap: 28px; }
+      .numbers-strip { padding: 48px 24px; }
+      .numbers-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .journey { padding: 56px 24px; }
+      .journey-steps { grid-template-columns: 1fr 1fr; }
+      .featured-customer { padding: 56px 24px; }
+      .featured-inner { grid-template-columns: 1fr; gap: 40px; }
+      .trust-section { padding: 48px 24px; }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .faq-section { padding: 56px 24px; }
+      .related-section { padding: 48px 24px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .cta-close { padding: 64px 24px; }
+      .cta-close h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:var(--kaptea-red);color:var(--kaptea-white);font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+<script src="nav.js"></script>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-breadcrumb">
+      <a href="/pronto">Solutions</a>
+      <span style="opacity:0.4;">&#8250;</span>
+      <span>Reservation Experience Management</span>
+    </div>
+    <h1>The booking is a promise.<br><span>Keeping it is the whole experience.</span></h1>
+    <div class="hero-stat">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      <span>No-shows hit <strong>76% of venues</strong>, at roughly £3,621 per venue each year (ResDiary, 2024)</span>
+    </div>
+    <p class="hero-sub">From the moment of booking to the customer-confirmed end of the experience, Kaptea orchestrates every reminder, change, disruption and follow-up across SMS, WhatsApp, voice and email. One platform for the journey that happens after the click.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+        Pre-arrival journeys
+      </span>
+      <span class="hero-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        No-show reduction
+      </span>
+      <span class="hero-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Agentic voice
+      </span>
+      <span class="hero-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Disruption &amp; rebooking
+      </span>
+      <span class="hero-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Confirmed closure
+      </span>
+    </div>
+    <div class="hero-ctas">
+      <a href="/contact" class="btn-primary">Get in Touch</a>
+      <a href="/industries/hospitality-events" class="btn-ghost-light">See Hospitality &amp; Events</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- WEDGE -->
+<section class="wedge-band">
+  <div class="wedge-inner">
+    <div class="wedge-eyebrow">The whitespace</div>
+    <div class="wedge-line">The booking engine market is saturated.<br><em>What happens after the booking is not.</em></div>
+    <p class="wedge-sub">A business that sells a reservation, a berth, a room, a table, an appointment, a journey, makes a promise at the moment of booking. Keeping that promise takes orchestrated, two-way communication through pre-arrival, change, disruption, the day itself and follow-up. In almost every reservation business, that layer is fragmented, manual and improvised.</p>
+    <div class="wedge-cols">
+      <div class="wedge-col deflect">
+        <h4>Where most operators stop</h4>
+        <ul>
+          <li>The confirmation email is the last proactive contact</li>
+          <li>Changes and disruption handled by hand across disconnected tools</li>
+          <li>No-shows absorbed as a cost of doing business</li>
+          <li>Inbound calls hit a phone nobody can answer during service</li>
+          <li>No record of whether the promise was actually kept</li>
+        </ul>
+      </div>
+      <div class="wedge-col resolve">
+        <h4>Reservation experience management</h4>
+        <ul>
+          <li>Proactive journeys from booking to follow-up</li>
+          <li>Two-way SMS, WhatsApp and agentic voice on one platform</li>
+          <li>Reminders and one-tap rebooking that cut no-shows</li>
+          <li>Disruption handled at scale with AI triage and human escalation</li>
+          <li>Every promise tracked to customer-confirmed closure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- THE PROBLEM -->
+<section class="problem">
+  <div class="problem-inner">
+    <div class="section-label">The problem</div>
+    <h2>You have invested everything in winning the booking, and almost nothing in keeping the promise.</h2>
+    <div class="problem-grid">
+
+      <div class="problem-card">
+        <h3>The confirmation email is where the relationship goes quiet</h3>
+        <p>Customers book, receive a confirmation, then hear nothing until they arrive. The window where you could prevent a no-show, upsell, prepare them or pre-empt a problem passes in silence. The most valuable part of the journey is the part nobody is running.</p>
+        <div class="vs">Kaptea: proactive pre-arrival journeys triggered automatically by the booking</div>
+      </div>
+
+      <div class="problem-card">
+        <h3>The phone rings during service and nobody can answer</h3>
+        <p>Hotels miss 100 to 140 calls a week. Restaurant phones go unanswered during the dinner rush. In mid-market reservation businesses, IVR abandonment runs 70 to 90 percent and most callers press zero looking for a human who is too busy to pick up.</p>
+        <div class="vs">Kaptea: agentic voice that answers, resolves and books in natural language</div>
+      </div>
+
+      <div class="problem-card">
+        <h3>No-shows are treated as unavoidable</h3>
+        <p>No-shows hit 76 percent of venues, at roughly £3,621 per venue per year. A single reminder sequence with easy confirm-or-rebook would recover most of it, but it is not built, not automated, and not tied to the reservation system.</p>
+        <div class="vs">Kaptea: timed reminders with one-tap confirm, change or rebook</div>
+      </div>
+
+      <div class="problem-card">
+        <h3>Disruption becomes an inbound surge you cannot absorb</h3>
+        <p>A cancelled service, a closure, a weather event: hundreds of guests need to be told, rebooked and reassured at once. Two or three staff craft messages by hand across four disconnected systems while the contact centre floods with inbound calls.</p>
+        <div class="vs">Kaptea: mass outbound, AI-handled inbound and human escalation in one flow</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SOLUTIONS -->
+<section class="solutions">
+  <div class="solutions-inner">
+    <div class="section-header">
+      <div class="section-label">How Kaptea solves it</div>
+      <h2>Orchestrate the whole reserved experience, on top of the reservation system you already run.</h2>
+    </div>
+
+    <div class="solution-block">
+      <div class="solution-pain">
+        <div class="solution-pain-label">Head of guest experience</div>
+        <p>"We have a great booking flow and a great venue. The bit in between, everything from confirmation to arrival, is held together with spreadsheets, a shared inbox and whoever is on shift. It is the part our guests actually feel, and it is the part we have least control over."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Whole-journey orchestration: before, during and after</h3>
+        <p>One booking event triggers the entire journey. Pre-arrival information and upsells, on-the-day logistics, in-stay or in-service messaging, and a follow-up that asks the right question at the right moment. Built once as a workflow, run automatically for every guest.</p>
+        <ul>
+          <li>Booking, PMS or appointment-system events trigger the right journey automatically</li>
+          <li>Pre-arrival, on-the-day, in-experience and follow-up sequences</li>
+          <li>Visual workflow builder with branching, timing and channel logic</li>
+          <li>Centralised, governed templates across every venue or site</li>
+          <li>Two-way: guests can reply, change or ask, and the journey responds</li>
+        </ul>
+        <a href="/customer-journey-orchestration" class="feature-link">Explore Customer Journey Orchestration &#8250;</a>
+      </div>
+    </div>
+
+    <div class="solution-block reverse">
+      <div class="solution-pain">
+        <div class="solution-pain-label">Operations director</div>
+        <p>"Seventy percent of callers press zero to reach a person. Our team is on the floor, not on the phones. Every missed call is a booking we did not take, a change we did not make, or a guest we left frustrated before they even arrived."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Voice first: replace the broken IVR with agentic voice</h3>
+        <p>Kaptea answers in natural language, resolves the query, takes or changes the booking, and confirms back on the guest's own channel. No menu trees, no press-one loops. When a call needs a person, it escalates to your team with the full context already in hand.</p>
+        <ul>
+          <li>Natural-language agentic voice that answers, resolves and books</li>
+          <li>No menu trees: the guest states their need once, in their own words</li>
+          <li>Branded calling lifts outbound pickup rates by 30 to 50 percent</li>
+          <li>Live escalation to staff with conversation context on screen</li>
+          <li>Confirms the outcome on SMS, WhatsApp or email afterwards</li>
+        </ul>
+        <a href="/contact-centre-voice" class="feature-link">Explore Contact Centre Workflows &#8250;</a>
+      </div>
+    </div>
+
+    <div class="solution-block">
+      <div class="solution-pain">
+        <div class="solution-pain-label">Revenue manager</div>
+        <p>"No-shows are just a number we accept now. We know a reminder would help, but nobody has time to build it, and the reminders our booking tool sends are ignored because there is no easy way to act on them."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>No-show reduction and one-tap rebooking</h3>
+        <p>Timed, branded reminders that let the guest confirm, change or rebook in a single tap, across the channel they actually read. When a slot frees up, the workflow can offer it to a waitlist automatically, turning a lost cover into a recovered one.</p>
+        <ul>
+          <li>Multi-step reminder sequences across SMS, WhatsApp and email</li>
+          <li>One-tap confirm, change or cancel that writes back to your system</li>
+          <li>Automatic waitlist offers when a cancellation frees a slot</li>
+          <li>Deposit and pre-payment prompts where you take them</li>
+          <li>Channel failover so the reminder lands even if one channel fails</li>
+        </ul>
+        <a href="/omni-channel-communications" class="feature-link">Explore Omni-Channel Communications &#8250;</a>
+      </div>
+    </div>
+
+    <div class="solution-block reverse">
+      <div class="solution-pain">
+        <div class="solution-pain-label">Guest service centre lead</div>
+        <p>"When something goes wrong overnight, there is no automation at all. We have two or three people manually messaging hundreds of guests across four systems while the phones light up. By the time we have told everyone, the situation has already changed again."</p>
+      </div>
+      <div class="solution-answer">
+        <h3>Disruption, recovery and customer-confirmed closure</h3>
+        <p>When a service is disrupted, Kaptea sends the right message to the right guests at scale, absorbs the inbound surge with AI triage, escalates the cases that need a person, and keeps the promise visible: every affected guest tracked through to a confirmed, recorded resolution.</p>
+        <ul>
+          <li>Mass outbound across SMS, WhatsApp, RCS and branded voice</li>
+          <li>AI-handled inbound for rebooking, refunds and reassurance</li>
+          <li>Human escalation for the cases that genuinely need it</li>
+          <li>Every promise tracked to explicit or evidenced closure</li>
+          <li>Regulator and audit-ready record of who was told what, and when</li>
+        </ul>
+        <a href="/emergency-surge-communications" class="feature-link">Explore Urgent Messaging &amp; Recall &#8250;</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- NUMBERS STRIP -->
+<section class="numbers-strip" aria-label="Key metrics">
+  <div class="numbers-inner">
+    <div class="number-item">
+      <h3><span>76%</span></h3>
+      <p>Of venues lose revenue to no-shows, at roughly £3,621 each per year (ResDiary, 2024)</p>
+    </div>
+    <div class="number-item">
+      <h3>30-50%</h3>
+      <p>Pickup rate uplift from branded calling with verified caller display</p>
+    </div>
+    <div class="number-item">
+      <h3><span>60%</span> to <span>&lt;7%</span></h3>
+      <p>Call abandonment, after replacing a previous cloud contact-centre provider with Kaptea</p>
+    </div>
+    <div class="number-item">
+      <h3>Days</h3>
+      <p>From contract to first live reservation journey in production</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- JOURNEY -->
+<section class="journey">
+  <div class="journey-inner">
+    <div class="section-label">The reserved experience</div>
+    <h2>Five stages. One platform. One governed journey.</h2>
+    <p class="section-sub">Most operators run each stage in a different tool, or not at all. Kaptea runs the whole thing as a single orchestrated journey, triggered by the booking and closed by the guest.</p>
+    <div class="journey-steps">
+      <div class="journey-step">
+        <div class="step-num">01 Book</div>
+        <h3>Confirm and reassure</h3>
+        <p>Instant branded confirmation, deposit prompts, and the answers to the questions guests ask next.</p>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">02 Before</div>
+        <h3>Pre-arrival journey</h3>
+        <p>Reminders, logistics, upsells and one-tap confirm, change or rebook to cut no-shows.</p>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">03 During</div>
+        <h3>On the day</h3>
+        <p>Arrival, in-service and in-stay messaging, with agentic voice answering when the phone rings.</p>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">04 If</div>
+        <h3>Disruption &amp; change</h3>
+        <p>Mass outbound, AI-handled inbound and human escalation when something goes wrong.</p>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">05 After</div>
+        <h3>Follow-up &amp; closure</h3>
+        <p>The right follow-up question, satisfaction capture, and a confirmed, recorded close.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FEATURED VOC -->
+<section class="featured-customer">
+  <div class="featured-inner">
+    <div>
+      <div class="section-label">Voice of customer</div>
+      <blockquote class="featured-quote">I wouldn't even hesitate, and I proactively recommend them. The biggest value is the responsiveness: they understand what we are actually trying to achieve, then build the solution to address that need.</blockquote>
+      <p class="featured-attribution">
+        <strong>Commercial Lead</strong><br>
+        Quandoo, restaurant reservation platform<br>
+        <a href="/case-studies/quandoo" style="color:var(--kaptea-red);text-decoration:none;font-size:13px;font-weight:600;">Read the case study &#8250;</a>
+      </p>
+    </div>
+    <div class="featured-metrics">
+      <div class="featured-metric">
+        <h4>10/10</h4>
+        <p>Net Promoter Score from a live reservation-platform customer</p>
+      </div>
+      <div class="featured-metric">
+        <h4>70%</h4>
+        <p>Of callers pressed zero for a human before the IVR was replaced</p>
+      </div>
+      <div class="featured-metric">
+        <h4>Twilio</h4>
+        <p>Built on the customer's own Twilio infrastructure</p>
+      </div>
+      <div class="featured-metric">
+        <h4>Days</h4>
+        <p>From contract to first live journey in production</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TRUST -->
+<section class="trust-section">
+  <div class="trust-inner">
+    <div class="section-label">Security and compliance</div>
+    <h2>Enterprise-grade, even at mid-market speed</h2>
+    <p class="section-sub">Guest data, payment prompts and direct customer contact deserve the same security posture as a regulated enterprise. Kaptea brings it, on a dedicated instance, live in days.</p>
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>ISO 27001:2022</h3>
+        <p>Certified information security management across all operations and infrastructure</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>CREST Certified</h3>
+        <p>Independent penetration testing to the highest UK standard</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Dedicated Instance</h3>
+        <p>Each customer runs on isolated infrastructure. No shared tenancy, no data commingling</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>EU, UK and US Residency</h3>
+        <p>Data residency options in all three jurisdictions. GDPR Data Processor Agreement included</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-header">
+      <div class="section-label">Common questions</div>
+      <h2 style="font-size:24px;font-family:'Manrope',sans-serif;font-weight:700;color:var(--kaptea-charcoal);line-height:1.3;margin-top:8px;">Reservation experience management: what you need to know</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="refaq1">
+          What is reservation experience management?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="refaq1" hidden>
+          Reservation experience management is everything that happens between the booking and the customer-confirmed end of the experience. When a customer reserves a table, a room, a berth, an appointment or a journey, you make a promise. Keeping that promise requires orchestrated, two-way communication through pre-arrival, change, disruption, the day itself and follow-up. Kaptea runs that whole layer on one platform.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="refaq2">
+          We already have a booking system. How is this different?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="refaq2" hidden>
+          Booking systems are built to capture the reservation. They stop at the confirmation. Reservation experience management is everything after that click: the pre-arrival journey, the reminder that prevents a no-show, the agentic voice line that answers when the phone rings during service, the disruption message sent at scale, and the follow-up that confirms the promise was kept. Kaptea layers on top of your existing booking or reservation system, it does not replace it.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="refaq3">
+          Do we have to replace our reservation, PMS or appointment system?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="refaq3" hidden>
+          No. Kaptea integrates with your existing reservation, property management or appointment system through its API and event triggers. Booking events flow into Kaptea and trigger the right journey automatically. You keep the system your team already knows, and add the orchestration, voice and follow-up layer on top.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="refaq4">
+          Which kinds of business is this for?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="refaq4" hidden>
+          Any operator whose revenue is a booked commitment to deliver a great experience: restaurants and food service, hotels and hospitality, private healthcare and clinics, transport and travel, attractions and experiences, spas and personal care, and leisure clubs. If a customer books a dated, named service in advance, reservation experience management applies.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="refaq5">
+          How quickly can we go live?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a" id="refaq5" hidden>
+          A dedicated Kaptea instance can be live in days. The first journey, such as a pre-arrival reminder sequence or an agentic voice line that replaces a broken IVR, is typically built in the first week of implementation. More complex integrations with your reservation system are scoped as part of the implementation plan.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- RELATED -->
+<section class="related-section">
+  <div class="related-inner">
+    <div class="section-label">Related solutions</div>
+    <h2>Where reservation experience management goes to work</h2>
+    <div class="related-grid">
+
+      <a href="/industries/hospitality-events" class="related-card">
+        <h3>Hospitality &amp; Events</h3>
+        <p>Hotels, restaurants, venues and attractions: the industry where the reserved experience is the product.</p>
+        <span class="related-arrow">Learn more &#8250;</span>
+      </a>
+
+      <a href="/contact-centre-voice" class="related-card">
+        <h3>Contact Centre Workflows</h3>
+        <p>Agentic voice that resolves, not an IVR that deflects, with live agent escalation and confirmed closure.</p>
+        <span class="related-arrow">Learn more &#8250;</span>
+      </a>
+
+      <a href="/customer-journey-orchestration" class="related-card">
+        <h3>Customer Journey Orchestration</h3>
+        <p>The end-to-end workflow engine behind every reserved-experience journey, on a single governed platform.</p>
+        <span class="related-arrow">Learn more &#8250;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-close">
+  <h2>Keep the promise you made at the booking.</h2>
+  <p>Tell us what you sell and where the journey breaks today: the missed calls, the no-shows, the disruption scramble. We will show you the reserved experience running end to end on Kaptea.</p>
+  <div class="cta-close-btns">
+    <a href="/contact" class="btn-primary">Get in Touch</a>
+    <a href="/industries/hospitality-events" class="btn-ghost-light">See Hospitality &amp; Events</a>
+  </div>
+  <div class="reassurance">
+    <span>Works on top of your reservation system</span>
+    <span>Dedicated instance live in days</span>
+    <span>ISO 27001 certified</span>
+  </div>
+</section>
+
+</main>
+
+<script src="footer.js"></script>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      var panel = document.getElementById(this.getAttribute('aria-controls'));
+      if (panel) panel.hidden = expanded;
+    });
+  });
+</script>
+
+</body>
+</html>
