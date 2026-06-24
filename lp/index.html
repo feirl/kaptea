@@ -1572,6 +1572,11 @@
     transition: background 0.15s;
   }
   .lp-nav-cta:hover { background: #b81f1f; }
+  .lp-nav-actions { display: flex; align-items: center; gap: 10px; }
+  .lp-nav-cta--ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.32); }
+  .lp-nav-cta--ghost:hover { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.55); }
+  .lp-nav.lp-nav--scrolled .lp-nav-cta--ghost { color: var(--kaptea-charcoal, #131521); border-color: rgba(19,21,33,0.22); }
+  .lp-nav.lp-nav--scrolled .lp-nav-cta--ghost:hover { background: rgba(19,21,33,0.05); border-color: rgba(19,21,33,0.4); }
   @media (max-width: 640px) {
     .lp-nav { padding: 0 20px; }
     .lp-nav-logo img { height: 30px; }
@@ -1584,7 +1589,10 @@
     <img class="logo-light" src="/img/brand/kaptea-logo-dark-bg.svg" alt="Kaptea" />
     <img class="logo-dark"  src="/img/brand/kaptea-logo.svg"         alt="Kaptea" aria-hidden="true" />
   </a>
-  <a href="/get-started" class="lp-nav-cta">Get Started</a>
+  <div class="lp-nav-actions">
+    <a href="/get-a-quote" class="lp-nav-cta lp-nav-cta--ghost">Get a Quote</a>
+    <a href="/get-started" class="lp-nav-cta">Get Started</a>
+  </div>
 </nav>
 
 <script>
