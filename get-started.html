@@ -1152,9 +1152,9 @@
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
             <span class="gs-card-body"><span class="gs-card-label">Transactional communication</span></span>
           </div>
-          <div class="gs-card" data-group="usecases" data-value="Marketing messaging" tabindex="0" role="checkbox" aria-checked="false">
+          <div class="gs-card" data-group="usecases" data-value="Reservation Experience Management" tabindex="0" role="checkbox" aria-checked="false">
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
-            <span class="gs-card-body"><span class="gs-card-label">Marketing messaging</span></span>
+            <span class="gs-card-body"><span class="gs-card-label">Reservation Experience Management</span></span>
           </div>
           <div class="gs-card" data-group="usecases" data-value="Contact centre workflows" tabindex="0" role="checkbox" aria-checked="false">
             <span class="gs-card-tick"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></span>
@@ -1642,6 +1642,8 @@
 
   /* ── AI Agent multi-select ── */
   var AI_AGENTS = [
+    /* Reservation experience agent first */
+    { value: 'Reservation Management',           desc: 'Books, reschedules, and cancels reservations while confirming dates and times with the caller'      },
     /* Critical communications and regulated comms agents first */
     { value: 'Urgent Communications Responder',  desc: 'Handles inbound queries triggered by critical or emergency communications'                          },
     { value: 'Fraud & Security Alert Handler',   desc: 'Real-time identity verification and suspicious activity response'                                   },
@@ -1652,7 +1654,6 @@
     { value: 'Customer Survey Assistant',        desc: 'Outbound agent that runs structured surveys by phone or messaging at the moment that matters'        },
     /* General CX and inbound agents */
     { value: 'Customer Service & Support',       desc: 'Front-line support that triages, troubleshoots, and escalates to a live agent when needed'          },
-    { value: 'Appointment Scheduling',           desc: 'Books, reschedules, and cancels appointments while confirming dates and times with the caller'       },
     { value: 'Information Collector',            desc: 'Walks the caller through collecting required fields and confirms each answer before progressing'     },
     { value: 'Lead Qualifier',                   desc: 'Qualifies inbound leads with a consultative, BANT-style B2B conversation'                           },
     { value: 'Surveys & Feedback',               desc: 'Runs structured feedback surveys with ratings, NPS scoring, and open comments'                      },
