@@ -134,9 +134,14 @@
     .ba-card h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
     .ba-card.before h4 { color: #dc2626; }
     .ba-card.after h4 { color: var(--kaptea-red); }
-    .ba-card ul { list-style: none; font-size: 13px; line-height: 1.8; }
+    .ba-card ul { list-style: none; font-size: 13px; line-height: 1.5; }
+    .ba-card ul li { position: relative; padding-left: 24px; margin-bottom: 9px; }
+    .ba-card ul li:last-child { margin-bottom: 0; }
+    .ba-card ul li::before { position: absolute; left: 0; top: 0; font-weight: 700; }
     .ba-card.before ul li { color: #991b1b; }
+    .ba-card.before ul li::before { content: "\2715"; color: #dc2626; opacity: 0.6; }
     .ba-card.after ul li { color: var(--kaptea-charcoal); }
+    .ba-card.after ul li::before { content: "\2713"; color: var(--kaptea-red); }
 
     /* ── TCO SECTION ── */
     .tco { padding: 72px 40px; background: var(--kaptea-surface-muted); border-top: 1px solid var(--kaptea-border); }
@@ -696,15 +701,21 @@
       </div>
 
       <div class="tco-card">
-        <h3>Contact Centre &amp; Agentic Voice</h3>
-        <p>Replace the broken IVR with natural-language voice that resolves and escalates with full context. One wellness customer went from 60% of calls abandoned to under 7%.</p>
-        <div class="tco-replace"><a href="/contact-centre-voice" style="color:var(--kaptea-red);text-decoration:none;">Explore &#8250;</a></div>
+        <h3>Urgent Messaging &amp; Recall</h3>
+        <p>Mass outbound for recalls and critical events: branded-call escalation, AI-handled inbound at surge, and a regulator-ready per-message audit trail.</p>
+        <div class="tco-replace"><a href="/emergency-surge-communications" style="color:var(--kaptea-red);text-decoration:none;">Explore &#8250;</a></div>
       </div>
 
       <div class="tco-card">
-        <h3>Urgent &amp; Transactional Messaging</h3>
-        <p>Mass outbound for recalls and critical events, plus governed transactional messaging across channels, with AI-handled inbound, human escalation and a regulator-ready audit trail.</p>
-        <div class="tco-replace"><a href="/emergency-surge-communications" style="color:var(--kaptea-red);text-decoration:none;">Explore &#8250;</a></div>
+        <h3>Transactional Communications</h3>
+        <p>Governed transactional messaging layered over the existing stack: centralised compliance, distributed execution, and a single audit trail across every channel.</p>
+        <div class="tco-replace"><a href="/enterprise-transactional-messaging" style="color:var(--kaptea-red);text-decoration:none;">Explore &#8250;</a></div>
+      </div>
+
+      <div class="tco-card">
+        <h3>Contact Centre Workflows</h3>
+        <p>Replace the broken IVR with agentic voice that resolves and escalates with full context. One wellness customer went from 60% of calls abandoned to under 7%.</p>
+        <div class="tco-replace"><a href="/contact-centre-voice" style="color:var(--kaptea-red);text-decoration:none;">Explore &#8250;</a></div>
       </div>
 
     </div>
@@ -952,8 +963,9 @@
         <option value="" disabled selected>Select a use case</option>
         <option>Customer Journey Orchestration</option>
         <option>Reservation Experience Management</option>
-        <option>Contact Centre &amp; Agentic Voice</option>
-        <option>Urgent &amp; Transactional Messaging</option>
+        <option>Urgent Messaging &amp; Recall</option>
+        <option>Transactional Communications</option>
+        <option>Contact Centre Workflows</option>
       </select>
       <button type="submit">Send me the one-pager</button>
     </form>
