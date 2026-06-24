@@ -931,6 +931,7 @@
       align-items: start;
     }
     .quote-message { color: #fff; padding-top: 6px; }
+    .quote-message .gs-sidebar-headline .hl-red { color: var(--kaptea-red, #dc2727); }
     .quote-form-card {
       background: #fff;
       border-radius: 22px;
@@ -940,7 +941,7 @@
         0 1px 1px rgba(0,0,0,0.10),
         0 8px 24px -8px rgba(0,0,0,0.30),
         0 44px 90px -32px rgba(0,0,0,0.62);
-      margin-top: 98px; /* align card top with the first paragraph on the left */
+      margin-top: 34px; /* align card top with the leading headline on the left */
     }
     /* Neutralise app-shell spacing inside the website card */
     .quote-form-card .gs-progress { padding: 0; margin-bottom: 28px; }
@@ -1059,7 +1060,7 @@
   <aside class="quote-message">
 
     <div class="gs-sidebar-eyebrow">Get a Quote</div>
-    <p class="gs-sidebar-headline">The entire customer journey, orchestrated to a promise kept<span class="dot">.</span></p>
+    <p class="gs-sidebar-headline">The entire customer journey,<br><span class="hl-red">orchestrated to a promise kept.</span></p>
     <p class="gs-sidebar-sub">Omni-channel messaging, conversational AI and human escalation on one governed platform, live within hours. Tell us what you need and we'll tailor your environment, pricing and quote to it. No obligation.</p>
 
     <ul class="gs-sidebar-features tier-1">
