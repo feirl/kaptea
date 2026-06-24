@@ -71,13 +71,31 @@
     .onepager-success.show { display:block; }
     @media (max-width:640px){ .onepager-form input, .onepager-form select, .onepager-form button { width:100%; } }
 
+    /* ── Product carousel (from homepage), seated at the hero base ── */
+    .platform-preview { background: linear-gradient(180deg, var(--kaptea-charcoal) 0%, #15182a 55%, #0d0f1a 100%); padding: 0 40px 64px; position: relative; z-index: 2; text-align: center; overflow: visible; }
+    .platform-preview-inner { max-width: 1060px; margin: 0 auto; }
+    @media (min-width:1440px){ .platform-preview-inner { max-width: 1180px; } }
+    .hero-showcase { text-align: center; max-width: 1000px; margin: 0 auto; }
+    .hero-showcase-tabs { display: flex; flex-wrap: nowrap; justify-content: center; gap: 8px; margin: 0 auto 20px; max-width: 100%; padding: 0 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+    .hero-showcase-tab { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(19,21,33,0.12); background: rgba(255,255,255,0.92); color: var(--kaptea-charcoal); font-size: 12px; font-weight: 600; font-family: 'Inter', sans-serif; cursor: pointer; transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.04); white-space: nowrap; }
+    .hero-showcase-tab:hover { border-color: rgba(220,39,39,0.35); }
+    .hero-showcase-tab[aria-selected="true"] { border-color: var(--kaptea-red); background: var(--kaptea-white); box-shadow: 0 0 0 1px rgba(220,39,39,0.2), 0 4px 14px rgba(220,39,39,0.12); }
+    .hero-showcase-tab svg { flex-shrink: 0; color: var(--kaptea-neutral-grey); transition: color 0.2s ease; }
+    .hero-showcase-tab[aria-selected="true"] svg { color: var(--kaptea-red); }
+    .hero-showcase-viewport { overflow: hidden; width: 100%; border-radius: 14px; box-shadow: 0 0 0 1px rgba(255,255,255,0.14), 0 12px 28px rgba(0,0,0,0.12), 0 28px 64px rgba(0,0,0,0.2), 0 48px 100px rgba(0,0,0,0.28), 0 0 72px rgba(220,39,39,0.07); line-height: 0; }
+    .hero-showcase-track { display: flex; width: calc(var(--hs-count) * 100%); transform: translateX(calc(-100% * var(--hs-slide) / var(--hs-count))); transition: transform 0.55s cubic-bezier(0.33, 1, 0.68, 1); }
+    @media (prefers-reduced-motion: reduce){ .hero-showcase-track { transition-duration: 0.01ms; } }
+    .hero-showcase-slide { flex: 0 0 calc(100% / var(--hs-count)); width: calc(100% / var(--hs-count)); box-sizing: border-box; }
+    .hero-showcase-slide img { display: block; width: 100%; height: auto; max-height: min(58vh, 560px); object-fit: cover; object-position: top center; border-radius: 14px; }
+    @media (max-width:768px){ .platform-preview { padding: 0 20px 48px; } .hero-showcase-tabs { justify-content: flex-start; } .hero-showcase-slide img { max-height: 52vh; } }
+
     /* ── NOTES ── */
 
 .content-note { background: rgba(220,39,39,0.04); border-left: 4px solid rgba(220,39,39,0.3); padding: 10px 16px; font-size: 12px; color: var(--kaptea-tagline-grey); font-style: italic; max-width: 1080px; margin: 12px auto; }
     .content-note strong { color: var(--kaptea-red); font-style: normal; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
 
     /* ── HERO ── */
-    .hero { background: radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220, 39, 39, 0.18) 0%, transparent 65%), var(--kaptea-charcoal); color: var(--kaptea-white); padding: 88px 40px 80px; text-align: center; }
+    .hero { background: radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220, 39, 39, 0.18) 0%, transparent 65%), var(--kaptea-charcoal); color: var(--kaptea-white); padding: 88px 40px 40px; text-align: center; }
     .hero-inner { max-width: 720px; margin: 0 auto; }
     .hero h1 { font-size: 44px; font-family: 'Manrope', sans-serif; font-weight: 700; line-height: 1.15; margin-bottom: 20px; }
     .hero h1 em { color: var(--kaptea-red); font-style: normal; }
@@ -491,6 +509,62 @@
     </div>
   </div>
 </section>
+
+<!-- PRODUCT CAROUSEL (from homepage) -->
+<div class="platform-preview" role="complementary" aria-label="Pronto product preview">
+  <div class="platform-preview-inner">
+    <div class="hero-showcase" data-hero-showcase style="--hs-count: 6;">
+      <div class="hero-showcase-tabs" role="tablist" aria-label="Pronto product stories">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="true" id="hs-tab-0" aria-controls="hs-panel-0" aria-label="Omni-Channel: SMS, WhatsApp, Voice, Email in one thread" data-slide="0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7"/><path d="M17 12H7"/></svg>
+          Omni-Channel
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-1" aria-controls="hs-panel-1" aria-label="Conversational AI with human escalation" data-slide="1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 6V2"/><path d="M12 22v-4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M22 12h-4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+          Conversational AI
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-2" aria-controls="hs-panel-2" aria-label="Visual workflow builder for end-to-end journey orchestration" data-slide="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Visual Workflows
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-3" aria-controls="hs-panel-3" aria-label="Governance: per-message audit trail and role-based access" data-slide="3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Governance
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-4" aria-controls="hs-panel-4" aria-label="Resilience: cross-channel failover and surge-proof routing" data-slide="4">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+          Resilience
+        </button>
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-5" aria-controls="hs-panel-5" aria-label="Data Residency: EU, UK or US cloud-managed deployment" data-slide="5">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Data Residency
+        </button>
+      </div>
+      <div class="hero-showcase-viewport" aria-live="polite">
+        <div class="hero-showcase-track" style="--hs-slide: 0;">
+          <figure class="hero-showcase-slide" id="hs-panel-0" role="tabpanel" aria-labelledby="hs-tab-0" aria-hidden="false">
+            <img src="/img/illustrations/Inbox-CloseUp.webp" width="1920" height="1440" alt="Omni-channel conversations across SMS, WhatsApp, Voice and Email in one Pronto thread" fetchpriority="high" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-1" role="tabpanel" aria-labelledby="hs-tab-1" aria-hidden="true">
+            <img src="/img/illustrations/AI-CloseUp.webp" width="1920" height="1440" alt="Conversational AI with master prompts, guardrails and live agent escalation in Pronto" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-2" role="tabpanel" aria-labelledby="hs-tab-2" aria-hidden="true">
+            <img src="/img/illustrations/Worflows.webp" width="3456" height="2168" alt="Visual workflow builder: end-to-end customer journey orchestration in Pronto" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-3" role="tabpanel" aria-labelledby="hs-tab-3" aria-hidden="true">
+            <img src="/img/illustrations/Logs-CloseUp.webp" width="1920" height="1440" alt="Per-message audit trail and governance logs in Pronto" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-4" role="tabpanel" aria-labelledby="hs-tab-4" aria-hidden="true">
+            <img src="/img/illustrations/Failover.webp" width="1920" height="1440" alt="Cross-channel failover and surge-proof routing for resilient delivery in Pronto" loading="lazy" decoding="async">
+          </figure>
+          <figure class="hero-showcase-slide" id="hs-panel-5" role="tabpanel" aria-labelledby="hs-tab-5" aria-hidden="true">
+            <img src="/img/illustrations/Deployment-CloseUp.webp" width="1920" height="1440" alt="EU, UK or US data residency: cloud-managed Pronto deployment" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- THE PROBLEM TODAY -->
@@ -922,6 +996,71 @@
     });
   }
   document.addEventListener('DOMContentLoaded', initFAQ);
+
+  // Product carousel (hero showcase)
+  function initHeroShowcase() {
+    var root = document.querySelector('[data-hero-showcase]');
+    if (!root) return;
+    var track = root.querySelector('.hero-showcase-track');
+    var tabs = root.querySelectorAll('.hero-showcase-tab');
+    if (!track || !tabs.length) return;
+    var count = tabs.length;
+    var slide = 0;
+    var timer = null;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var panels = root.querySelectorAll('.hero-showcase-slide');
+
+    function setSlide(i) {
+      slide = ((i % count) + count) % count;
+      track.style.setProperty('--hs-slide', String(slide));
+      tabs.forEach(function (t, idx) {
+        var on = idx === slide;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+      });
+      panels.forEach(function (p, idx) { p.setAttribute('aria-hidden', idx === slide ? 'false' : 'true'); });
+      var activeTab = tabs[slide];
+      if (activeTab) {
+        var rootRect = root.getBoundingClientRect();
+        if (rootRect.top < window.innerHeight && rootRect.bottom > 0) {
+          activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
+    }
+    function next() { setSlide(slide + 1); }
+    function startAuto() { if (reduceMotion) return; stopAuto(); timer = window.setInterval(next, 6000); }
+    function stopAuto() { if (timer) { window.clearInterval(timer); timer = null; } }
+
+    tabs.forEach(function (tab, idx) {
+      tab.addEventListener('click', function () { setSlide(idx); stopAuto(); startAuto(); });
+    });
+    var tablist = root.querySelector('.hero-showcase-tabs');
+    if (tablist) {
+      tablist.addEventListener('keydown', function (e) {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        if (e.key === 'ArrowRight') setSlide(slide + 1); else setSlide(slide - 1);
+        stopAuto(); startAuto();
+      });
+    }
+    var viewport = root.querySelector('.hero-showcase-viewport');
+    if (viewport) {
+      var tsX = 0, tsY = 0;
+      viewport.addEventListener('touchstart', function (e) { tsX = e.touches[0].clientX; tsY = e.touches[0].clientY; }, { passive: true });
+      viewport.addEventListener('touchend', function (e) {
+        var dx = e.changedTouches[0].clientX - tsX;
+        var dy = e.changedTouches[0].clientY - tsY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { setSlide(dx < 0 ? slide + 1 : slide - 1); stopAuto(); startAuto(); }
+      }, { passive: true });
+    }
+    root.addEventListener('mouseenter', stopAuto);
+    root.addEventListener('mouseleave', startAuto);
+    root.addEventListener('focusin', stopAuto);
+    root.addEventListener('focusout', function (e) { if (!root.contains(e.relatedTarget)) startAuto(); });
+    document.addEventListener('visibilitychange', function () { if (document.hidden) stopAuto(); else startAuto(); });
+    setSlide(0); startAuto();
+  }
+  document.addEventListener('DOMContentLoaded', initHeroShowcase);
 
   // Minimal nav: frost on scroll
   (function () {
