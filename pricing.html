@@ -4,26 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
-  <title>Pricing | Enterprise Communications Platform | Kaptea</title>
+  <title>Pricing | Kaptea</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Transparent, outcome-based pricing from €1,500 per month. Platform fees separate from carrier costs. No hidden bundling, no shared infrastructure markup." />
-  <meta name="keywords" content="Kaptea pricing, enterprise communications pricing, CPaaS pricing, Twilio platform pricing" />
+  <meta name="description" content="Kaptea charges per closed loop: a customer journey orchestrated to a confirmed outcome. No per-message charge, no platform tax. From €1,500 per month." />
   <link rel="canonical" href="https://kaptea.io/pricing" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pricing - Kaptea Enterprise Communications Platform" />
-  <meta property="og:description" content="Transparent, outcome-based pricing from €1,500 per month. Platform fees separate from carrier costs. No hidden bundling, no shared infrastructure markup." />
+  <meta property="og:title" content="Pricing - Outcome-Based | Kaptea" />
+  <meta property="og:description" content="Kaptea charges per closed loop: a customer journey orchestrated to a confirmed outcome. No per-message charge, no platform tax. From €1,500 per month." />
   <meta property="og:url" content="https://kaptea.io/pricing" />
   <meta property="og:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@kaptea" />
-  <meta name="twitter:title" content="Pricing - Kaptea Enterprise Communications Platform" />
-  <meta name="twitter:description" content="Transparent, outcome-based pricing from €1,500 per month. Platform fees separate from carrier costs. No hidden bundling, no shared infrastructure markup." />
+  <meta name="twitter:title" content="Pricing - Outcome-Based | Kaptea" />
+  <meta name="twitter:description" content="Kaptea charges per closed loop: a customer journey orchestrated to a confirmed outcome. No per-message charge, no platform tax. From €1,500 per month." />
   <meta name="twitter:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
   <meta property="og:site_name" content="Kaptea" />
 
@@ -33,18 +32,40 @@
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <!-- AI / LLM Crawler Optimisation -->
-  <meta name="ai-content-declaration" content="This page shows Kaptea pricing. Key facts: platform fee from €1,500 per month for up to 1 million messages, carrier usage billed separately at cost, dedicated single-tenant instance, no per-seat licensing, enterprise tier with custom pricing, 14-day proof of concept available." />
+  <meta name="ai-content-declaration" content="Kaptea charges per closed loop: a customer journey carried through four stages (listen, negotiate, act, satisfy) to a confirmed outcome. Tier 1 starts at €1,500 per month including 300 loops. No per-message charge. Carrier costs are passed through at cost." />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKZ4JHK73L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKZ4JHK73L', { anonymize_ip: true });
+  </script>
+
   <link rel="stylesheet" href="styles.css">
 
   <style>
-/* ── HERO ── */
+    /* ── HERO ── */
     .hero {
       background:
         radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220, 39, 39, 0.18) 0%, transparent 65%),
         var(--kaptea-charcoal);
       color: var(--kaptea-white);
-      text-align: center;
-      padding: 72px 24px 56px;
+      padding: 112px 24px 120px;
+    }
+    .hero-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 56px;
+    }
+    .hero-left {
+      flex: 0 0 45%;
+    }
+    .hero-right {
+      flex: 1;
     }
     .hero-label {
       display: inline-block;
@@ -60,95 +81,183 @@
       margin-bottom: 20px;
     }
     .hero h1 {
-      font-size: 42px;
-      font-family: 'Manrope', sans-serif; font-weight: 700;
-      line-height: 1.15;
-      max-width: 680px;
-      margin: 0 auto 16px;
+      font-size: 52px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      line-height: 1.12;
+      margin: 0 0 16px;
       color: var(--kaptea-white);
     }
     .hero h1 span { color: var(--kaptea-red); }
     .hero p {
       font-size: 17px;
       color: rgba(255, 255, 255, 0.62);
-      max-width: 520px;
-      margin: 0 auto 32px;
+      margin: 0;
       line-height: 1.6;
     }
-    .delivery-badge {
+    @media (max-width: 860px) {
+      .hero-inner { flex-direction: column; gap: 48px; }
+      .hero-left { flex: none; width: 100%; text-align: center; }
+      .hero-right { width: 100%; }
+      .hero h1 { font-size: 40px; }
+    }
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .hero-chip {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(220,39,39,0.1);
-      border: 1px solid rgba(220,39,39,0.25);
-      border-radius: 8px;
-      padding: 10px 20px;
-      font-size: 14px;
-      color: #c03030;
-    }
-    .delivery-badge strong { color: var(--kaptea-red); font-size: 18px; }
-
-    /* ── CONTROLS ── */
-    .controls {
-      background: var(--kaptea-white);
-      border-bottom: 1px solid #e5e7eb;
-      padding: 28px 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-    }
-
-    /* Toggle */
-    .billing-toggle {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--kaptea-charcoal);
-    }
-    .toggle-switch {
-      position: relative;
-      width: 48px;
-      height: 26px;
-      cursor: pointer;
-    }
-    .toggle-switch input { opacity: 0; width: 0; height: 0; }
-    .toggle-slider {
-      position: absolute;
-      inset: 0;
-      background: var(--kaptea-border);
+      gap: 7px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
       border-radius: 99px;
-      transition: background 0.2s;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.88);
+      font-weight: 500;
     }
-    .toggle-slider:before {
-      content: '';
-      position: absolute;
-      width: 20px; height: 20px;
-      left: 3px; top: 3px;
-      background: white;
-      border-radius: 50%;
-      transition: transform 0.2s;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    }
-    input:checked + .toggle-slider { background: var(--kaptea-red); }
-    input:checked + .toggle-slider:before { transform: translateX(22px); }
-    .saving-badge {
-      display: inline-block;
-      background: rgba(220,39,39,0.08);
-      color: var(--kaptea-red);
+    .hero-chip svg { color: #3fd0c0; flex-shrink: 0; }
+    /* ── LOOP FRAMEWORK (2x2 grid in hero right) ── */
+    .loop-bridge {
       font-size: 11px;
       font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 99px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      margin-bottom: 14px;
+      text-align: center;
     }
-
+    .loop-grid {
+      display: grid;
+      grid-template-columns: 1fr 32px 1fr;
+      grid-template-rows: auto 32px auto;
+    }
+    .loop-card-sm {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 12px;
+      padding: 16px 14px;
+    }
+    .loop-card-sm.satisfy {
+      border-color: rgba(63,208,192,0.45);
+      background: rgba(63,208,192,0.09);
+    }
+    .loop-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 7px;
+    }
+    .loop-name {
+      font-size: 18px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      color: rgba(255,255,255,0.18);
+      line-height: 1;
+    }
+    .loop-card-sm.satisfy .loop-name { color: rgba(63,208,192,0.5); }
+    .loop-icon {
+      display: flex;
+      flex-shrink: 0;
+      color: rgba(255,255,255,0.38);
+    }
+    .loop-card-sm.satisfy .loop-icon {
+      color: rgba(63,208,192,0.65);
+    }
+    .loop-desc {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+    }
+    .loop-arrow-h {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.22);
+    }
+    .loop-arrow-v {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.22);
+    }
+    .loop-center { }
+    .billed-chip {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(63,208,192,0.75);
+      margin-top: 8px;
+    }
+    .loop-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 640px) { .loop-split { grid-template-columns: 1fr; } }
+    .loop-split-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 22px 24px;
+    }
+    .loop-split-card.free { background: var(--kaptea-surface-muted); }
+    .loop-split-card.billed-card {
+      border-color: var(--kaptea-red);
+      border-width: 2px;
+      background: var(--kaptea-white);
+    }
+    .split-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--kaptea-tagline-grey);
+      margin-bottom: 8px;
+    }
+    .loop-split-card.billed-card .split-tag { color: var(--kaptea-red); }
+    .loop-split-card h4 {
+      font-size: 15px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: var(--kaptea-charcoal);
+      margin-bottom: 6px;
+    }
+    .loop-split-card p {
+      font-size: 13px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.5;
+      margin: 0 0 12px;
+    }
+    .loop-split-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .loop-split-card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--kaptea-charcoal);
+    }
+    .loop-split-card li svg { flex-shrink: 0; margin-top: 2px; }
 
     /* ── PLANS ── */
+    .plans-section {
+      background: var(--kaptea-surface-muted);
+      padding: 56px 0 64px;
+    }
     .plans-wrapper {
       max-width: 1160px;
-      margin: 48px auto;
+      margin: 0 auto;
       padding: 0 24px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -186,60 +295,72 @@
       border-radius: 99px;
       white-space: nowrap;
     }
-
-    .plan-name {
-      font-size: 13px;
+    .plan-tier {
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       color: var(--kaptea-tagline-grey);
+      margin-bottom: 2px;
+    }
+    .plan-name {
+      font-size: 30px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      color: var(--kaptea-charcoal);
       margin-bottom: 6px;
+      line-height: 1.1;
     }
     .plan-tagline {
-      font-size: 14px;
-      color: var(--kaptea-charcoal);
+      font-size: 13.5px;
+      color: var(--kaptea-tagline-grey);
       margin-bottom: 24px;
       line-height: 1.5;
       min-height: 42px;
     }
 
     .plan-price {
-      margin-bottom: 4px;
+      display: flex;
+      align-items: baseline;
+      gap: 7px;
+      margin-bottom: 6px;
     }
     .price-amount {
-      font-size: 42px;
-      font-weight: 800;
+      font-size: 28px;
+      font-weight: 700;
       color: var(--kaptea-charcoal);
       line-height: 1;
     }
     .price-amount.enterprise-price {
-      font-size: 28px;
-      padding-top: 7px;
+      font-size: 22px;
+      padding-top: 4px;
     }
     .price-currency {
-      font-size: 22px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--kaptea-charcoal);
       vertical-align: top;
-      margin-top: 8px;
+      margin-top: 5px;
       display: inline-block;
     }
     .price-period {
-      font-size: 14px;
-      color: var(--kaptea-neutral-grey);
-      margin-bottom: 6px;
-    }
-    .price-volume {
       font-size: 13px;
-      color: var(--kaptea-tagline-grey);
-      margin-bottom: 4px;
-    }
-    .price-overage {
-      font-size: 12px;
       color: var(--kaptea-neutral-grey);
-      margin-bottom: 24px;
     }
-    .price-overage span { color: var(--kaptea-red); font-weight: 600; }
+    .price-loops {
+      font-size: 13px;
+      color: var(--kaptea-charcoal);
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .price-overage-footer {
+      border-top: 1px solid #f3f4f6;
+      margin-top: 24px;
+      padding-top: 14px;
+      font-size: 12px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.5;
+    }
 
     .plan-cta {
       display: block;
@@ -265,7 +386,7 @@
       color: var(--kaptea-red);
       border: 1.5px solid var(--kaptea-red);
     }
-    .cta-secondary:hover { background: color-mix(in srgb, var(--kaptea-red) 10%, var(--kaptea-white)); }
+    .cta-secondary:hover { background: color-mix(in srgb, var(--kaptea-red) 8%, var(--kaptea-white)); }
     .cta-enterprise {
       background: var(--kaptea-charcoal);
       color: white;
@@ -310,31 +431,77 @@
       margin: 20px 0;
     }
 
-    /* Universal badge */
-    .universal-banner {
+    .indicative-note {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #a07a0c;
+      background: #fef9e7;
+      border: 1px solid #f0e3b0;
+      border-radius: 5px;
+      padding: 2px 6px;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+
+    /* ── INFRA NOTE ── */
+    .infra-band {
       max-width: 1160px;
       margin: 0 auto 48px;
       padding: 0 24px;
     }
-    .universal-inner {
-      background: color-mix(in srgb, var(--kaptea-red) 10%, var(--kaptea-white));
-      border: 1px solid #fdb5b4;
-      border-radius: 12px;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .infra-band-inner {
+      background: var(--kaptea-charcoal);
+      border-radius: 14px;
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: end;
+    }
+    @media (max-width: 720px) {
+      .infra-band-inner { grid-template-columns: 1fr; padding: 24px; }
+    }
+    .infra-band-inner .eyebrow {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ff9e9d;
+      margin-bottom: 8px;
+    }
+    .infra-band-inner h3 {
+      font-size: 18px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: var(--kaptea-white);
+      margin-bottom: 8px;
+    }
+    .infra-band-inner p {
       font-size: 13.5px;
-      color: #b01e1d;
-      flex-wrap: wrap;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.6;
+      margin: 0;
     }
-    .universal-inner strong { color: var(--kaptea-red-hover); }
-    .universal-dot {
-      width: 6px; height: 6px;
-      background: #f99695;
-      border-radius: 50%;
-      flex-shrink: 0;
+    .infra-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
     }
+    .infra-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.86);
+      line-height: 1.6;
+      padding: 0 0 0 0;
+    }
+    .infra-item + .infra-item { margin-top: 2px; }
+    .infra-item svg { flex-shrink: 0; color: #3fd0c0; margin-top: 4px; }
 
     /* ── COMPARISON TABLE ── */
     .compare-section {
@@ -344,7 +511,8 @@
     }
     .compare-section h2 {
       font-size: 22px;
-      font-family: 'Manrope', sans-serif; font-weight: 700;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
       color: var(--kaptea-charcoal);
       margin-bottom: 24px;
     }
@@ -383,8 +551,9 @@
     .check { color: var(--kaptea-red); font-size: 16px; }
     .dash { color: var(--kaptea-border); font-size: 16px; }
     .partial { color: #f59e0b; font-size: 13px; font-weight: 600; }
+    .tier-note { font-size: 13px; color: var(--kaptea-charcoal); font-weight: 400; }
 
-    /* ── FOOTER NOTE ── */
+    /* ── FOOTER NOTES ── */
     .footer-note {
       max-width: 1160px;
       margin: 0 auto 64px;
@@ -404,7 +573,8 @@
     }
     .footer-note-inner h3 {
       font-size: 14px;
-      font-family: 'Manrope', sans-serif; font-weight: 700;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
       color: var(--kaptea-charcoal);
       margin-bottom: 8px;
     }
@@ -416,108 +586,19 @@
     .footer-note-inner ul { padding-left: 16px; }
     .footer-note-inner ul li { margin-bottom: 4px; }
 
-    
-   
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--kaptea-bg-dark);
-      padding: 64px 40px 32px;
-      color: rgba(255,255,255,0.6);
-      font-size: 13px;
-      line-height: 1.6;
-    }
-    .footer-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 48px;
-    }
-    .footer-brand p { margin: 12px 0 0; font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 260px; }
-    .footer-col h4 {
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: rgba(255,255,255,0.9);
-      margin: 0 0 16px;
-    }
-    .footer-col ul { list-style: none; padding: 0; margin: 0; }
-    .footer-col li { margin-bottom: 8px; }
-    .footer-col a {
-      color: rgba(255,255,255,0.55);
-      text-decoration: none;
-      font-size: 13px;
-      transition: color 0.15s;
-    }
-    .footer-col a:hover { color: rgba(255,255,255,0.9); }
-    .footer-certs {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 16px;
-    }
-    .footer-cert {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      color: rgba(255,255,255,0.4);
-      font-weight: 500;
-    }
-    .footer-cert svg { color: rgba(255,255,255,0.3); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.35);
-    }
-    .footer-bottom a {
-      color: rgba(255,255,255,0.35);
-      text-decoration: none;
-    }
-    .footer-bottom a:hover { color: rgba(255,255,255,0.7); }
-    .footer-legal { display: flex; gap: 20px; }
-     /* Footer */
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .footer-brand { grid-column: 1 / -1; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-    }
-  
-    /* ── HOVER STATES (polish pass) ── */
+    /* ── POLISH ── */
     a { transition: color 0.15s ease; }
     .btn-primary { transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
     .btn-primary:hover { box-shadow: 0 4px 12px rgba(220,39,39,0.3); transform: translateY(-1px); }
-    .btn-ghost { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
-    .btn-ghost:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
-    .btn-secondary { transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
-    .btn-secondary:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
   </style>
 
-  <!-- GA4 loaded globally by footer.js with Consent Mode v2 -->
-  <script type="text/plain" data-consent="marketing">
-    _linkedin_partner_id = "4792586";
-    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-  </script>
-  <script type="text/plain" data-consent="marketing" async
-    src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Pricing | Kaptea",
     "url": "https://kaptea.io/pricing",
-    "description": "Kaptea Pronto platform pricing. From $1,500/month for a dedicated instance with up to 1 million messages. Carrier usage billed separately.",
+    "description": "Kaptea charges per closed loop: a customer journey carried to a confirmed outcome. From €1,500 per month.",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -527,88 +608,99 @@
     }
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Pronto Enterprise Communications Platform",
-    "provider": {"@id": "https://kaptea.io/#organization"},
-    "url": "https://kaptea.io/pricing",
-    "description": "Dedicated enterprise communications platform. Omnichannel messaging, conversational AI, workflow automation and governance.",
-    "offers": {
-      "@type": "Offer",
-      "price": "1500",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2026-12-31",
-      "description": "Platform fee from $1,500/month for dedicated instance. Carrier usage billed at cost.",
-      "eligibleRegion": [
-        {"@type": "Country", "name": "United Kingdom"},
-        {"@type": "Country", "name": "Ireland"},
-        {"@type": "Country", "name": "United States"},
-        {"@type": "Country", "name": "European Union"}
-      ]
-    }
-  }
-  </script>
 </head>
 <body>
 
-<!-- Skip navigation for accessibility -->
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:var(--kaptea-red);color: var(--kaptea-white);font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px 16px;background:var(--kaptea-red);color:var(--kaptea-white);font-size:14px;font-weight:600;text-decoration:none;border-radius:0 0 6px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
 
-
-<!-- NAV -->
 <script src="nav.js"></script>
 
-<!-- HERO -->
 <main id="main-content">
+
+<!-- ── HERO ── -->
 <section class="hero">
-  <div class="hero-label">Transparent outcome-based pricing</div>
-  <h1>Communications <span>confidence</span>,<br>priced transparently.</h1>
-  <p>Every plan is an insurance policy for your enterprise communications - built on carrier-grade infrastructure with governance, failover, and compliance included. You scale on messages delivered. Carrier costs always separate.</p>
-  <div class="delivery-badge">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-    <strong>99.5%</strong> average message delivery rate across all customers
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-label">Orchestrated Customer Journeys</div>
+      <h1>You pay when<br><span>a promise is kept.</span></h1>
+      <p>Kaptea orchestrates your customers through every critical moment, 24/7, across every channel. We charge on the outcome: a closed loop, a kept promise, a commitment honoured.</p>
+    </div>
+    <div class="hero-right">
+      <div class="loop-bridge">Every successful customer journey is a closed loop</div>
+      <div class="loop-grid">
+
+        <!-- Row 1: 01 → 02 -->
+        <div class="loop-card-sm">
+          <div class="loop-header">
+            <div class="loop-name">Listen</div>
+            <div class="loop-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z"/></svg></div>
+          </div>
+          <div class="loop-desc">The conversation opens, inbound or outbound, when a critical event occurs.</div>
+        </div>
+        <div class="loop-arrow-h">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M9 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="loop-card-sm">
+          <div class="loop-header">
+            <div class="loop-name">Personalise</div>
+            <div class="loop-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/></svg></div>
+          </div>
+          <div class="loop-desc">Agents tailor the response to the specific person's circumstances, in real time.</div>
+        </div>
+
+        <!-- Row 2: ↑ (space) ↓ -->
+        <div class="loop-arrow-v">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 13V1M3 5l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="loop-center"></div>
+        <div class="loop-arrow-v">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M3 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <!-- Row 3: 04 ← 03 -->
+        <div class="loop-card-sm satisfy">
+          <div class="loop-header">
+            <div class="loop-name">Satisfy</div>
+            <div class="loop-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          </div>
+          <div class="loop-desc">The customer confirms we listened and delivered on their specific need.</div>
+        </div>
+        <div class="loop-arrow-h">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M5 3L1 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="loop-card-sm">
+          <div class="loop-header">
+            <div class="loop-name">Act</div>
+            <div class="loop-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></div>
+          </div>
+          <div class="loop-desc">Personalised action, delivered across whatever channel mix the journey requires.</div>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CONTROLS -->
-<div class="controls">
-
-  <!-- Billing toggle -->
-  <div class="billing-toggle">
-    <span id="monthly-label" style="color:var(--kaptea-charcoal); font-weight:700;">Monthly</span>
-    <label class="toggle-switch">
-      <input type="checkbox" id="billing-toggle" onchange="updatePricing()" />
-      <span class="toggle-slider"></span>
-    </label>
-    <span id="annual-label" style="color:var(--kaptea-tagline-grey);">Annual <span class="saving-badge">Save 5%</span></span>
-  </div>
-
-</div>
-
-<!-- PLAN CARDS -->
+<!-- ── PLAN CARDS ── -->
+<section class="plans-section">
 <div class="plans-wrapper">
 
-  <!-- LITE -->
+  <!-- TIER 1 -->
   <div class="plan-card">
-    <div class="plan-name">Lite</div>
-    <div class="plan-tagline">One channel. Simple governance. Ideal for a single use case or proof of concept.</div>
+    <div class="plan-name">Single-channel</div>
+    <div class="plan-tagline">For simple journeys across a single communications channel.</div>
 
-    <div class="plan-price">
-      <span class="price-currency">€</span><span class="price-amount" id="lite-price">1,500</span>
-    </div>
-    <div class="price-period" id="lite-period">per month, billed monthly</div>
-    <div class="price-volume" id="lite-volume">Up to 500,000 messages / month</div>
-    <div class="price-overage" style="margin-bottom:24px;">&nbsp;</div>
-
-    <a href="/demo" class="plan-cta cta-secondary">Start with Lite</a>
+    <a href="/get-a-quote" class="plan-cta cta-secondary">Get a Quote</a>
 
     <div class="features-heading">What's included</div>
     <ul class="feature-list">
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        1 channel (SMS, WhatsApp, or Email - choose one)
+        1 channel (SMS, WhatsApp, Email, or Social)
+      </li>
+      <li>
+        <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Conversational AI Agent
       </li>
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -628,24 +720,22 @@
       </li>
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        Delivery analytics dashboard
+        Loop analytics dashboard
       </li>
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
         Audit logs
       </li>
-      <hr class="feature-divider" />
       <li>
-        <svg class="icon icon-dash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        SSO / Azure AD integration
+        <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        500,000 broadcast messages per month      </li>
+      <li>
+        <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Human escalation included in every loop
       </li>
       <li>
-        <svg class="icon icon-dash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        Multi-channel failover
-      </li>
-      <li>
-        <svg class="icon icon-dash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        CRM integrations
+        <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        REST API / Webhook
       </li>
     </ul>
 
@@ -658,31 +748,28 @@
       </li>
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        Kaptea manages Twilio tickets
+        Kaptea manages carrier escalations
       </li>
     </ul>
   </div>
 
-  <!-- PREMIUM -->
+  <!-- TIER 2 -->
   <div class="plan-card featured">
-    <div class="featured-label">Most popular</div>
-    <div class="plan-name">Premium</div>
-    <div class="plan-tagline">All channels. Enterprise governance. Per instance - one brand, one team, full control.</div>
+    <div class="featured-label">Most multichannel teams</div>
+    <div class="plan-name">Multichannel</div>
+    <div class="plan-tagline">For complex journeys that span multiple channels across multiple systems.</div>
 
-    <div class="plan-price">
-      <span class="price-currency">€</span><span class="price-amount" id="premium-price">2,500</span>
-    </div>
-    <div class="price-period" id="premium-period">per instance / month, billed monthly</div>
-    <div class="price-volume" id="premium-volume">Up to 1,000,000 messages / month</div>
-    <div class="price-overage" style="margin-bottom:24px;">&nbsp;</div>
+    <a href="/get-a-quote" class="plan-cta cta-primary">Get a Quote</a>
 
-    <a href="/demo" class="plan-cta cta-primary">Start with Premium</a>
-
-    <div class="features-heading">Everything in Lite, plus</div>
+    <div class="features-heading">Everything in Single-channel, plus</div>
     <ul class="feature-list">
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        All channels: SMS, WhatsApp, Email, RCS, Voice
+        All channels: SMS, WhatsApp, Email, RCS, Voice, Video, Social
+      </li>
+      <li>
+        <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Multi-threaded AI Agents
       </li>
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -698,20 +785,11 @@
       </li>
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        Event streaming (push to Slack, Kafka, etc.)
-      </li>
-      <li>
-        <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
         Advanced analytics + compliance reporting
       </li>
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        CSAT surveys
-      </li>
-      <li>
-        <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        Data Processor Agreement
-      </li>
+        1,000,000 broadcast messages per month      </li>
     </ul>
 
     <hr class="feature-divider" />
@@ -719,11 +797,7 @@
     <ul class="feature-list">
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        1-hour response, Monday–Friday
-      </li>
-      <li>
-        <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        Kaptea manages &amp; escalates Twilio tickets
+        1-hour response, Monday to Friday
       </li>
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -732,21 +806,14 @@
     </ul>
   </div>
 
-  <!-- ENTERPRISE -->
+  <!-- TIER 3 -->
   <div class="plan-card">
     <div class="plan-name">Enterprise</div>
-    <div class="plan-tagline">Custom volumes. Surge architecture. For regulated and high-scale organisations.</div>
+    <div class="plan-tagline">Custom-built integrations, bespoke deployment and dedicated support.</div>
 
-    <div class="plan-price">
-      <span class="price-amount enterprise-price">Custom pricing</span>
-    </div>
-    <div class="price-period">tailored to your architecture</div>
-    <div class="price-volume">&nbsp;</div>
-    <div class="price-overage" style="margin-bottom:24px;">&nbsp;</div>
+    <a href="/contact" class="plan-cta cta-enterprise">Talk to us</a>
 
-    <a href="/demo" class="plan-cta cta-enterprise">Talk to Us</a>
-
-    <div class="features-heading">Everything in Premium, plus</div>
+    <div class="features-heading">Everything in Multichannel, plus</div>
     <ul class="feature-list">
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -786,7 +853,11 @@
       </li>
       <li>
         <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        Custom Integrations
+        Custom integrations
+      </li>
+      <li>
+        <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Event streaming (push to Slack, Kafka, etc.)
       </li>
     </ul>
 
@@ -805,135 +876,125 @@
   </div>
 
 </div><!-- /plans-wrapper -->
+</section><!-- /plans-section -->
 
-<!-- COMPARISON TABLE -->
+<!-- ── INFRA AGNOSTIC BAND ── -->
+<div class="infra-band">
+  <div class="infra-band-inner">
+    <div>
+      <div class="eyebrow">Bring your own stack</div>
+      <h3>We charge for the outcome, not the pipes or the model.</h3>
+      <p>With Kaptea, you can use your own Twilio, Telnyx or other carrier and bring your own AI; giving you full control of costs direct with your preferred suppliers. Talk to us if you want one fixed price across all systems.</p>
+    </div>
+    <div class="infra-items">
+      <div class="infra-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        Use your own telco carrier with no surcharge
+      </div>
+      <div class="infra-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        Bring your own AI infrastructure
+      </div>
+      <div class="infra-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        Transparent per-message and AI token costs if you need ours
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── COMPARISON TABLE ── -->
 <div class="compare-section">
-  <h2>Full feature comparison</h2>
+  <h2>Full capability comparison</h2>
   <table class="compare-table">
     <thead>
       <tr>
-        <th style="width:40%">Feature</th>
-        <th>Lite</th>
-        <th>Premium</th>
+        <th style="width:40%">Capability</th>
+        <th>Single-channel</th>
+        <th>Multichannel</th>
         <th>Enterprise</th>
       </tr>
     </thead>
     <tbody>
+      <tr class="section-row"><td colspan="4">Loop model</td></tr>
+      <tr><td>AI Agent orchestration</td><td><span class="tier-note">Conversational</span></td><td><span class="tier-note">Multi-threaded</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Closed-loop pricing</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>7-day reopens treated as same loop</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Human escalation included in the loop</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Broadcast messages included per month</td><td>500,000</td><td>1,000,000</td><td>Custom</td></tr>
+      <tr><td>Completed customer journeys included</td><td>300</td><td>600</td><td>Custom</td></tr>
+
+
+      <tr class="section-row"><td colspan="4">Channels per loop</td></tr>
+      <tr><td>SMS</td><td><span class="partial">Single channel</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>WhatsApp for Business</td><td><span class="partial">Single channel</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Email</td><td><span class="partial">Single channel</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Social messaging</td><td><span class="partial">Single channel</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Voice and IVR</td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Video</td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>RCS</td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Multi-channel failover within a loop</td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+
       <tr class="section-row"><td colspan="4">Infrastructure</td></tr>
-      <tr><td>Dedicated server instance</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>EU, UK or US data residency</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>ISO 27001 certified</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Cyber Essentials certified</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>CREST certified</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Multi-region deployment</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Surge / load management architecture</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
+      <tr><td>Bring your own telco carrier</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Bring your own AI model</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Dedicated single-tenant instance</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>EU, UK or US data residency</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Multi-region deployment</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Surge / load management architecture</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td></tr>
 
-      <tr class="section-row"><td colspan="4">Channels</td></tr>
-      <tr><td>SMS</td><td><span class="partial">Choose one</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>WhatsApp for Business</td><td><span class="partial">Choose one</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Email (SendGrid)</td><td><span class="partial">Choose one</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>RCS</td><td><span class="dash">-</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Voice &amp; IVR</td><td><span class="dash">-</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Video</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Multi-channel failover &amp; retry</td><td><span class="dash">-</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+      <tr class="section-row"><td colspan="4">Governance and compliance</td></tr>
+      <tr><td>Template library &amp; management</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Audit trail on every loop closure</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Role-based access control</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>GDPR Data Processor Agreement</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>SSO / Azure AD</td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Compliance reporting</td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Division-level governance</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Custom SLAs and uptime guarantees</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td></tr>
 
-      <tr class="section-row"><td colspan="4">Governance &amp; Compliance</td></tr>
-      <tr><td>Role-based access control</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Audit logs</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Template library &amp; management</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>GDPR Data Processor Agreement</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>SSO / Azure AD</td><td><span class="dash">-</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Division-level segmentation &amp; governance</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>White-label</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Custom SLAs</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
-
-      <tr class="section-row"><td colspan="4">Analytics &amp; Reporting</td></tr>
-      <tr><td>Delivery analytics dashboard</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Compliance reporting</td><td><span class="dash">-</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>CSAT surveys</td><td><span class="dash">-</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Real-time monitoring</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>AI summarisation &amp; insights</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
+      <tr class="section-row"><td colspan="4">Analytics and insight</td></tr>
+      <tr><td>Loop analytics dashboard</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>AI summarisation and journey insights</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td></tr>
 
       <tr class="section-row"><td colspan="4">Integrations</td></tr>
-      <tr><td>REST API access</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Webhook support</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>CRM integrations (SAP, Salesforce, HubSpot)</td><td><span class="dash">-</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Kafka / event-driven integration</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Custom enterprise integrations</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
+      <tr><td>REST API access</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Webhook support</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>CRM integration (SAP, Salesforce, HubSpot)</td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Multiple CRM connectors and custom integrations</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Event streaming (Slack, Kafka, etc.)</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td></tr>
 
       <tr class="section-row"><td colspan="4">Support</td></tr>
-      <tr><td>Kaptea manages Twilio tickets</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+      <tr><td>Kaptea manages carrier escalations</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
       <tr><td>Response time</td><td>24 hrs (biz hrs)</td><td>1 hr (Mon–Fri)</td><td>1 hr (24/7)</td></tr>
-      <tr><td>Dedicated Slack channel</td><td><span class="dash">-</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Custom Integrations</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Named dedicated engineer</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">✓</span></td></tr>
-          </tbody>
+      <tr><td>Dedicated Slack channel</td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      <tr><td>Named dedicated engineer</td><td><span class="dash">-</span></td><td><span class="dash">-</span></td><td><span class="check">&#10003;</span></td></tr>
+    </tbody>
   </table>
 </div>
 
-<!-- FOOTER NOTES -->
+<!-- ── FOOTER NOTES ── -->
 <div class="footer-note">
   <div class="footer-note-inner">
     <div>
-      <h3>Twilio usage costs</h3>
-      <p>Kaptea platform fees cover orchestration, governance, analytics, and managed service. Twilio message delivery costs - SMS, WhatsApp, Voice, and Email - are billed separately at your Twilio account rate. Kaptea can manage consolidated billing on request.</p>
+      <h3>What counts as a closed loop</h3>
+      <p>Two closure types are billed: explicit (the customer actively confirms) and inferred (satisfaction is clear from evidence in the thread). A loop that simply goes quiet is never billed: no evidence, no charge. We call this "implied" closure and we track it as a product signal for you, but never charge for it.</p>
     </div>
     <div>
-      <h3>Message delivery capacity</h3>
-      <p>Each plan includes a base message delivery capacity. Need higher volumes? We have transparent pricing tiers that scale with your business - talk to us about the right fit. Annual plans pool your total capacity across the year.</p>
-    </div>
-    <div>
-      <h3>Implementation fees</h3>
-      <p>Platform subscription fees do not include implementation or custom integrations. Complex deployments - IVR builds, CRM/ERP integrations, surge architecture - are scoped separately as fixed-price projects. Ask about our deployment packages starting from €10,000.</p>
+      <h3>Carrier and messaging costs</h3>
+      <p>The loop fee covers orchestration, governance, analytics, and managed service. If you bring your own Twilio, there is no secondary message charge from Kaptea at all. If we back in Twilio on your behalf, that carrier cost is passed through as a transparent line item.</p>
     </div>
     <div>
       <h3>Commercial terms</h3>
       <ul>
-        <li>Monthly plans: 60-day termination notice</li>
-        <li>Annual plans: 5% discount on monthly rate</li>
-        <li>Annual volume pools across the full contract year</li>
-        <li>60-day pilot available on Premium - ask your account manager</li>
+        <li>Enterprise volume commitments carry a blended lower per-loop rate</li>
+        <li>Implementation and custom integrations are scoped separately</li>
         <li>All prices exclusive of applicable taxes</li>
       </ul>
     </div>
   </div>
 </div>
 
-<script>
-  function fmt(n) {
-    return n.toLocaleString('en-US');
-  }
-
-  function updatePricing() {
-    const annual = document.getElementById('billing-toggle').checked;
-    const disc = annual ? 0.95 : 1;
-
-    const lite    = Math.round(1500 * disc);
-    const premium = Math.round(2500 * disc);
-
-    document.getElementById('lite-price').textContent    = fmt(lite);
-    document.getElementById('premium-price').textContent = fmt(premium);
-
-    const liteSuffix    = annual ? 'per month, billed annually' : 'per month, billed monthly';
-    const premiumSuffix = annual ? 'per instance / month, billed annually' : 'per instance / month, billed monthly';
-    document.getElementById('lite-period').textContent    = liteSuffix;
-    document.getElementById('premium-period').textContent = premiumSuffix;
-
-    // Switch volume labels between monthly and annual pooled
-    document.getElementById('lite-volume').textContent    = annual ? 'Up to 6,000,000 messages / year' : 'Up to 500,000 messages / month';
-    document.getElementById('premium-volume').textContent = annual ? 'Up to 12,000,000 messages / year' : 'Up to 1,000,000 messages / month';
-
-    // Toggle label styling
-    const mLabel = document.getElementById('monthly-label');
-    const aLabel = document.getElementById('annual-label');
-    mLabel.style.color      = annual ? 'var(--kaptea-tagline-grey)' : 'var(--kaptea-charcoal)';
-    mLabel.style.fontWeight = annual ? '500' : '700';
-    aLabel.style.color      = annual ? 'var(--kaptea-charcoal)' : 'var(--kaptea-tagline-grey)';
-    aLabel.style.fontWeight = annual ? '700' : '500';
-  }
-</script>
-
-<!-- ── FOOTER ── -->
 </main>
 
 <script src="footer.js"></script>
