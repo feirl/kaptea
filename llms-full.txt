@@ -90,17 +90,30 @@ End-to-end workflow engine for customer journeys spanning multiple channels, tea
 
 **Target buyer:** Head of Customer Experience, VP Operations, CTO at regulated enterprise (financial services, utilities, healthcare, public sector)
 
+### Reservation Experience Management
+Everything that happens after the booking, for reservation-led and appointment-led operators. Agentic voice answers inbound calls and completes the booking; automated confirmations, reminders and one-tap rebooking reduce no-shows; disruption is handled at scale with AI triage and human escalation; every promise is tracked through to customer-confirmed closure with a per-message audit trail. Layers on top of the existing reservation, property management, or appointment system rather than replacing it.
+
+**Target buyer:** Head of Guest Experience, Operations Director, Owner or Managing Director at reservation-led operators in hospitality, restaurants, hotels, travel and transport, private clinics, attractions, and experiences.
+
 ### Urgent Messaging and Recall
 CSV-upload mass dispatch with automated multi-channel escalation (email to SMS to branded call). Branded calling lifts pickup rates 30 to 50 percent over unbranded numbers. Per-message regulator-ready audit trail. Built-in workflows for warranty recall, drug recall, and time-critical regulatory communications.
 
 **Regulatory coverage:** FCA, MHRA, EMA, FDA-aware compliance workflows
 
-### Transactional Communication
+### Transactional Communications
 Orchestration layer placed above existing transactional infrastructure (Twilio, SendGrid, equivalent). Adds: drag-and-drop template management, ad-hoc multi-channel campaigns, sub-account billing granularity, centralised compliance with distributed local execution, and single audit trail across all channels.
+
+### Contact Centre Workflows
+Agentic voice that resolves what the customer needs rather than an IVR that deflects it. Natural-language voice resolution with live customer-data lookup, branded calling (30 to 50 percent pickup uplift), live agent escalation with the full conversation context already on screen, and customer-confirmed closure recorded as regulator-ready audit evidence. Works on top of Genesys, Avaya, Cisco, Twilio, or an existing carrier; no rip and replace. One wellness customer cut call abandonment from 60 percent to under 7 percent.
+
+**Target buyer:** Head of CX, Contact Centre Director, Operations Director.
 
 ---
 
 ## Industries
+
+### Hospitality and Events
+Reservation experience management for hotels, restaurants, venues, and attractions. Agentic voice for the phone that rings during service, no-show reduction with timed reminders and one-tap rebooking, whole guest-journey orchestration before, during, and after the booking, multi-site governance, and customer-confirmed closure. Built on Twilio.
 
 ### Financial Services
 FCA and MiFID II compliant communications. Use cases: fraud event journeys, urgent regulatory notifications, transactional alerts, contact centre orchestration. Clients include banks, insurance companies, asset managers, and fintech platforms.
