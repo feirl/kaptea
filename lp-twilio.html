@@ -52,9 +52,12 @@
     .hero-eyebrow svg { width:14px; height:14px; color:var(--kaptea-red); flex-shrink:0; }
 
     /* ── Leadership contact emails (Twilio LP) ── */
-    .leader-email { display:inline-flex; align-items:center; gap:7px; margin-top:12px; font-size:14px; font-weight:600; color:var(--kaptea-red); text-decoration:none; }
-    .leader-email:hover { text-decoration:underline; }
+    .leader-email { display:inline-flex; align-items:center; gap:8px; margin-top:14px; font-size:14px; font-weight:600; color:var(--kaptea-red); background:rgba(220,39,39,0.06); border:1px solid rgba(220,39,39,0.28); border-radius:8px; padding:9px 16px; cursor:pointer; font-family:inherit; transition:background .15s ease, border-color .15s ease; }
+    .leader-email:hover { background:rgba(220,39,39,0.12); border-color:rgba(220,39,39,0.5); }
     .leader-email svg { width:15px; height:15px; flex-shrink:0; }
+    /* clipboard toast */
+    #copy-toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%) translateY(12px); background:var(--kaptea-charcoal,#131521); color:#fff; font-size:13.5px; font-weight:500; padding:11px 18px; border-radius:8px; box-shadow:0 8px 28px rgba(0,0,0,0.28); opacity:0; pointer-events:none; transition:opacity .2s ease, transform .2s ease; z-index:1000; }
+    #copy-toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
 
     /* ── One-pager form (secondary CTA) ── */
     .onepager { padding:72px 40px; background:var(--kaptea-surface-muted,#f6f8fa); border-top:1px solid var(--kaptea-border); }
@@ -880,7 +883,7 @@
           <h3>Alan McNab</h3>
           <div class="leader-role">CEO &amp; Co-Founder</div>
           <p>Former HP, Cisco, NCR, Arista Networks. Expertise in cloud architecture, high-availability systems, and customer service transformation. BSEE from Santa Clara University, MBA from Trinity College Dublin.</p>
-          <a class="leader-email" href="mailto:alan.mcnab@kaptea.io"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>alan.mcnab@kaptea.io</a>
+          <button type="button" class="leader-email" data-email="alan.mcnab@kaptea.io" aria-label="Copy Alan McNab's email address to clipboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>Email Alan</button>
         </div>
 
         <div class="leader-card">
@@ -890,7 +893,7 @@
           <h3>Robert Norton</h3>
           <div class="leader-role">CTO &amp; Co-Founder</div>
           <p>18+ years driving digital transformation at Ryanair, Bank of Ireland, HSE, and 123.ie. Led the design and delivery of secure, scalable platforms serving millions of users.</p>
-          <a class="leader-email" href="mailto:robert.norton@kaptea.io"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>robert.norton@kaptea.io</a>
+          <button type="button" class="leader-email" data-email="robert.norton@kaptea.io" aria-label="Copy Robert Norton's email address to clipboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>Email Robert</button>
         </div>
 
       </div>
@@ -1137,12 +1140,29 @@
       fetch('/api/zoho-lead.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
+        keepalive: true
       }).catch(function (err) { console.warn('One-pager request failed:', err); });
-      form.style.display = 'none';
-      document.getElementById('onepagerSuccess').classList.add('show');
+      window.location.href = '/lp-twilio-thank-you';
     });
   })();
+</script>
+
+<div id="copy-toast" role="status" aria-live="polite"></div>
+
+<script>
+  // Copy founder email to clipboard (delegated + isolated so it always binds)
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.leader-email[data-email]') : null;
+    if (!btn) return;
+    var email = btn.getAttribute('data-email');
+    var toast = document.getElementById('copy-toast');
+    function show() { if (!toast) return; toast.textContent = email + ' has been copied to clipboard'; toast.classList.add('show'); clearTimeout(toast._t); toast._t = setTimeout(function () { toast.classList.remove('show'); }, 2600); }
+    function fallback() { var ta = document.createElement('textarea'); ta.value = email; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (_) {} document.body.removeChild(ta); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(show, function () { fallback(); show(); });
+    } else { fallback(); show(); }
+  });
 </script>
 </body>
 </html>
