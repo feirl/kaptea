@@ -1678,6 +1678,8 @@
     <a href="/get-a-quote" class="btn-ghost">Get a Quote</a>
   </div>
 
+  <p style="margin-top:18px; font-size:14px; color:var(--kaptea-neutral-grey);">Fewer dropped contacts, faster resolution, every promise tracked to a confirmed close.</p>
+
 </section>
 
 <!-- Platform Preview (icon tabs → sliding screenshots, inspired by https://www.superchat.de/ product strip) -->
@@ -1782,6 +1784,27 @@
   .modes-note { text-align:center; margin-top:28px; font-size:15px; font-weight:600; color:var(--kaptea-charcoal); }
   @media(max-width:900px){ .modes-grid{grid-template-columns:1fr;} }
 
+  /* 3-up problem grid */
+  .scenario-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  @media(max-width:900px){ .scenario-grid.cols-3 { grid-template-columns: 1fr; } }
+
+  /* operational proof band */
+  .opsproof { background: var(--kaptea-surface-muted); padding: 44px 24px; border-top: 1px solid var(--kaptea-border); border-bottom: 1px solid var(--kaptea-border); }
+  .opsproof-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; text-align: center; }
+  .opsproof-item h3 { font-family:'Manrope',sans-serif; font-weight:800; font-size:32px; color:var(--kaptea-charcoal); line-height:1.05; margin-bottom:8px; }
+  .opsproof-item h3 .hl { color:var(--kaptea-red); }
+  .opsproof-item p { font-size:13.5px; color:var(--kaptea-tagline-grey); line-height:1.55; margin:0 auto; max-width:300px; }
+  @media(max-width:768px){ .opsproof-inner{grid-template-columns:1fr; gap:24px;} }
+
+  /* concrete contact flow */
+  .flow-card { max-width:980px; margin:0 auto; background:var(--kaptea-white); border:1px solid var(--kaptea-border); border-radius:16px; display:grid; grid-template-columns:repeat(4,1fr); overflow:hidden; box-shadow:0 4px 24px rgba(15,23,42,0.05); }
+  .flow-step { padding:26px 22px; position:relative; }
+  .flow-step:not(:last-child)::after { content:""; position:absolute; right:0; top:20px; bottom:20px; width:1px; background:var(--kaptea-border); }
+  .flow-step .flow-num { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--kaptea-red); margin-bottom:10px; }
+  .flow-step h3 { font-family:'Manrope',sans-serif; font-weight:700; font-size:15px; color:var(--kaptea-charcoal); margin-bottom:6px; line-height:1.3; }
+  .flow-step p { font-size:13px; color:var(--kaptea-tagline-grey); line-height:1.55; margin:0; }
+  @media(max-width:768px){ .flow-card{grid-template-columns:1fr;} .flow-step:not(:last-child)::after{display:none;} .flow-step:not(:last-child){border-bottom:1px solid var(--kaptea-border);} }
+
 </style>
 
 <section class="section">
@@ -1790,7 +1813,7 @@
     <div class="section-title">You are not short on effort. <em style="color:var(--kaptea-red); font-style:normal;">You are short on certainty.</em></div>
     <div class="section-sub" style="margin-bottom:48px;">You have built service levels, reporting and teams who genuinely care. The failure is rarely a missed message. It is a missed commitment: a promise, an agreed action or a deliverable that quietly slips, and the trust that leaks out with it.</div>
 
-    <div class="scenario-grid">
+    <div class="scenario-grid cols-3">
 
       <article class="scenario-card problem-card">
         <div class="scenario-tag">01</div>
@@ -1816,17 +1839,27 @@
         </div>
       </article>
 
-      <article class="scenario-card problem-card">
-        <div class="scenario-tag">04</div>
-        <div class="scenario-stat">Being forced to under-promise.</div>
-        <div class="scenario-block">
-          <p>Your team wants to be more proactive and make stronger commitments. But without confidence that every promise can be tracked and delivered, you play safe: holding back, building in contingency, under-promising rather than delighting. Not because your people lack capability, but because over-promising and failing is more damaging than saying less.</p>
-        </div>
-      </article>
-
     </div>
   </div>
 </section>
+
+<!-- ── OPERATIONAL PROOF ── -->
+<div class="opsproof">
+  <div class="opsproof-inner">
+    <div class="opsproof-item">
+      <h3>60% <span class="hl">&rarr; &lt;7%</span></h3>
+      <p>Call abandonment, after one operator replaced its cloud contact-centre provider with Kaptea.</p>
+    </div>
+    <div class="opsproof-item">
+      <h3>5 channels, <span class="hl">1 queue</span></h3>
+      <p>Voice, SMS, WhatsApp, email and video, with your agents and AI working the same conversations.</p>
+    </div>
+    <div class="opsproof-item">
+      <h3>Hours, <span class="hl">not weeks</span></h3>
+      <p>Live without a build or rip-and-replace. We do the heavy lifting, so your team is freed from firefighting.</p>
+    </div>
+  </div>
+</div>
 
 <section class="section section-alt platform-overview-dark">
   <div class="inner">
@@ -1862,6 +1895,37 @@
     </div>
 
     <p class="flywheel-score">The metric that falls out of the flywheel is a <strong>live trust score</strong>, built from closed loops versus broken loops. For the first time, trust becomes a number leaders can see and improve.</p>
+  </div>
+</section>
+
+<!-- ── HOW IT PLAYS OUT (concrete contact) ── -->
+<section class="section">
+  <div class="inner">
+    <div class="section-label">How it plays out</div>
+    <div class="section-title">From a customer's first message <em style="color:var(--kaptea-red); font-style:normal;">to a confirmed close.</em></div>
+    <div class="section-sub" style="margin-bottom:40px;">The flywheel is not a theory. It runs on every single contact. Here is one, end to end.</div>
+    <div class="flow-card">
+      <div class="flow-step">
+        <div class="flow-num">1 &middot; A contact comes in</div>
+        <h3>On any channel</h3>
+        <p>A customer messages about a delayed order, by voice, WhatsApp, SMS or email, whichever they prefer.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">2 &middot; AI resolves, or hands off</div>
+        <h3>With full context</h3>
+        <p>A Pronto agent answers in seconds, checks the order in your CRM and resolves it, or passes it to one of your people with the whole thread already on screen.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">3 &middot; The promise is tracked</div>
+        <h3>Watched to the deadline</h3>
+        <p>The commitment to fix it is logged and watched. If it is about to slip, the Steward agent flags it before the customer ever feels let down.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">4 &middot; Confirmed close</div>
+        <h3>Closed only when they are happy</h3>
+        <p>It is not done until the customer confirms they are satisfied, and it counts toward your live trust score.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2305,6 +2369,16 @@
       </button>
       <div class="faq-a" id="faq-a-6" hidden>
         Those measure activity. Kaptea measures commitments: promises made and promises kept. That is the part of the relationship currently invisible to you, and the part where trust is actually won or lost. Bring your own carrier and your own governed model; your data stays private and resident.
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-7">
+        Does it work with our contact centre platform?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="faq-a-7" hidden>
+        Yes. Kaptea sits on top of the stack you already run. It connects to contact-centre platforms such as Genesys and Five9, and to your CRM, through native connectors or our open API and signed webhooks, so calls, conversations and outcomes flow both ways. You keep your existing telephony, agent tooling and carrier; Kaptea adds the agents, the orchestration and the trust layer on top.
       </div>
     </div>
 
