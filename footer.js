@@ -568,6 +568,16 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     window.gtag = window.gtag || gtag;
+    // Consent Mode v2 default. nav.js sets this on standard pages; this fallback
+    // covers pages that use a minimal landing nav (lp-*) instead of nav.js, so GA
+    // never defaults to granted before the cookie banner is answered. Re-setting
+    // 'denied' where nav.js already ran is idempotent; cookie-consent.js upgrades
+    // it to 'granted' on accept.
+    gtag('consent', 'default', {
+      analytics_storage: 'denied', ad_storage: 'denied',
+      ad_user_data: 'denied', ad_personalization: 'denied',
+      wait_for_update: 500
+    });
     gtag('js', new Date());
     gtag('config', 'G-JKZ4JHK73L', { anonymize_ip: true });
   }
