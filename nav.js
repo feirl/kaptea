@@ -106,7 +106,7 @@
             </div>
 
             <div class="mega-pronto-cta">
-              <a href="/get-started">See Pronto in Action →</a>
+              <a href="/get-started" onclick="gtag('event', 'get_started_get_quote_click');">See Pronto in Action →</a>
             </div>
 
           </div>
@@ -318,7 +318,7 @@
   </div>
 
   <div class="nav-cta-wrap">
-    <a href="/get-started" class="nav-cta">Get Started</a>
+    <a href="/get-started" onclick="gtag('event', 'get_started_get_quote_click');" class="nav-cta">Get Started</a>
   </div>
 </nav>`;
 
