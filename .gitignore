@@ -1,5 +1,8 @@
 BRIEFING.md
 
+# Per-machine Claude Code permissions (not shared across the team)
+.claude/settings.local.json
+
 # Zoho credentials — create this file on the server via cPanel File Manager
 # Never commit the real zoho-config.php
 api/zoho-config.php
