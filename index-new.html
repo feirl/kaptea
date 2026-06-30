@@ -335,6 +335,28 @@
       overflow: visible;
     }
     .hero h1 { color: var(--kaptea-white); }
+
+    /* ── Hero background video (auto-activates only when /video/ files exist) ── */
+    .hero-video {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: 72% 50%;
+      z-index: 0; opacity: 0; transition: opacity .8s ease;
+      pointer-events: none;
+    }
+    .hero-scrim {
+      position: absolute; inset: 0; z-index: 1; opacity: 0;
+      transition: opacity .8s ease; pointer-events: none;
+      background:
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.20) 0%, transparent 60%),
+        linear-gradient(90deg, rgba(19,21,33,0.86) 0%, rgba(19,21,33,0.55) 48%, rgba(19,21,33,0.30) 100%),
+        linear-gradient(180deg, rgba(19,21,33,0.30) 0%, rgba(19,21,33,0.78) 100%);
+    }
+    .hero.has-hero-video .hero-video,
+    .hero.has-hero-video .hero-scrim { opacity: 1; }
+    /* keep all hero text/CTAs above the video + scrim */
+    .hero > *:not(.hero-video):not(.hero-scrim) { position: relative; z-index: 2; }
+    @media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
+
     /* Certification strip below logo bar */
     .cert-strip {
       background: var(--kaptea-white);
@@ -1664,6 +1686,18 @@
 
 <main id="main-content">
 <section class="hero" role="banner">
+
+  <!-- Hero background video. Auto-activates only when the encoded files exist in
+       /video/ (onloadeddata adds .has-hero-video). Until then the section keeps its
+       charcoal + red gradient, so there is no broken intermediate state.
+       Required files: /video/hero.webm, /video/hero.mp4, /video/hero-poster.webp -->
+  <video class="hero-video" autoplay muted playsinline preload="metadata"
+         poster="/video/hero-poster.webp"
+         onloadeddata="this.closest('.hero').classList.add('has-hero-video')">
+    <source src="/video/hero.webm" type="video/webm">
+    <source src="/video/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-scrim" aria-hidden="true"></div>
 
   <div class="hero-partner-pills" aria-label="Platform category">
     <span class="hero-partner-pill">

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 200" width="1040" height="200" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <!-- Kaptea hero-video SMS/notification confirmation. Transparent background.
+       Composite onto the phone screen on the "promise kept" beat.
+       Export to PNG with alpha at ~1200px wide for crisp compositing. -->
+  <defs>
+    <filter id="cardShadow" x="-12%" y="-25%" width="124%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#0b0d16" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <!-- notification card -->
+  <rect x="14" y="14" width="1012" height="172" rx="40" fill="#ffffff" filter="url(#cardShadow)"/>
+
+  <!-- app icon -->
+  <rect x="46" y="50" width="100" height="100" rx="26" fill="#dc2727"/>
+  <text x="96" y="120" text-anchor="middle" font-size="62" font-weight="800" fill="#ffffff">K</text>
+
+  <!-- title row -->
+  <text x="180" y="84" font-size="30" fill="#131521"><tspan font-weight="700">Kaptea</tspan><tspan font-weight="500" fill="#9aa0ad" font-size="24"> &#183; now</tspan></text>
+
+  <!-- body -->
+  <text x="180" y="138" font-size="31" font-weight="500" fill="#131521" fill-opacity="0.82">All sorted, confirmed for Tuesday 9am</text>
+
+  <!-- teal confirmed check -->
+  <circle cx="948" cy="100" r="44" fill="#3fd0c0"/>
+  <path d="M926 100 l14 16 l30 -36" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
