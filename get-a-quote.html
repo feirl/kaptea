@@ -1690,6 +1690,7 @@
       phone:     formData.phone,
       company:   formData.company,
       partial:   true,
+      source:    'get-a-quote',
     };
     fetch('/api/zoho-lead.php', {
       method: 'POST',
@@ -1712,7 +1713,7 @@
     fetch('/api/zoho-lead.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(Object.assign({ source: 'get-a-quote' }, formData)),
     }).catch(function(e) { console.warn('Lead submission failed:', e); });
 
     document.getElementById('gsProgress').style.display = 'none';
