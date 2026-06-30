@@ -1,0 +1,6 @@
+# Vercel has no PHP runtime. api/zoho-lead.php is the lead-submission backend for
+# the Apache/FTP live host (kaptea.io); it is deployed there via FTP, not Vercel.
+# Excluding it here stops Vercel treating it as a serverless function, which would
+# otherwise conflict with api/zoho-lead.js (both resolve to /api/zoho-lead) and
+# fail the build with "conflicting paths or names".
+api/zoho-lead.php
