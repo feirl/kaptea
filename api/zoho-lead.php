@@ -120,6 +120,9 @@ $regions     = arr_field($d, 'regions');
 $cpaas       = str_field($d, 'cpaas');
 $vol_typical = str_field($d, 'volume_typical_label');
 $vol_surge   = str_field($d, 'volume_surge_label');
+$message     = str_field($d, 'message', 4000);  // contact form: the customer's own message
+$source      = str_field($d, 'source');          // optional: get-started | get-a-quote | contact
+$is_partial  = !empty($d['partial']);            // true on the step-0 early capture
 
 // ── Validate required fields ──────────────────────────────────────────────────
 if (!$lastname || !$company) {
@@ -149,40 +152,69 @@ if (!$access_token) {
     exit(json_encode(['ok' => false, 'error' => 'Token refresh failed']));
 }
 
-// ── Build Description block ───────────────────────────────────────────────────
-$description = implode("\n", [
-    'Submitted via the Get Started flow on kaptea.io.',
-    '',
-    'Channels: '                   . fmt_arr($channels),
-    'Use cases: '                  . fmt_arr($usecases),
-    'AI agents: '                  . fmt_arr($aiagents),
-    'Server regions: '             . fmt_arr($regions),
-    'Current CPaaS provider: '     . ($cpaas       ?: 'Not specified'),
-    'Typical monthly volume: '     . ($vol_typical  ?: 'Not specified'),
-    'Surge capacity requirement: ' . ($vol_surge     ?: 'Not specified'),
-]);
+// ── Build Description + Lead Source by submission type ───────────────────────
+$source_map = [
+    'contact'     => 'Website - Contact',
+    'get-a-quote' => 'Website - Get a Quote',
+    'quote'       => 'Website - Get a Quote',
+    'get-started' => 'Website - Get Started',
+];
 
-// ── Create Zoho Lead ──────────────────────────────────────────────────────────
-$payload = json_encode([
-    'data' => [[
-        'First_Name'  => $firstname,
-        'Last_Name'   => $lastname,
-        'Email'       => $email,
-        'Phone'       => $phone,
-        'Company'     => $company,
-        'Lead_Source' => 'Website - Get Started',
-        'Description' => mb_substr($description, 0, 4000),
-    ]],
-    'trigger' => ['workflow'],
-]);
+if ($message !== '') {
+    // Contact form: use the customer's own message verbatim.
+    $description = $message;
+    $lead_source = 'Website - Contact';
+} else {
+    // Get Started / Get a Quote flow: summarise the chosen configuration.
+    $description = implode("\n", [
+        'Submitted via the Get Started flow on kaptea.io.',
+        '',
+        'Channels: '                   . fmt_arr($channels),
+        'Use cases: '                  . fmt_arr($usecases),
+        'AI agents: '                  . fmt_arr($aiagents),
+        'Server regions: '             . fmt_arr($regions),
+        'Current CPaaS provider: '     . ($cpaas       ?: 'Not specified'),
+        'Typical monthly volume: '     . ($vol_typical  ?: 'Not specified'),
+        'Surge capacity requirement: ' . ($vol_surge     ?: 'Not specified'),
+    ]);
+    $lead_source = 'Website - Get Started';
+}
 
-$lead_res = zoho_curl('https://www.zohoapis.com/crm/v8/Leads', [
+// An explicit `source` from the form wins, if provided.
+if ($source !== '' && isset($source_map[$source])) {
+    $lead_source = $source_map[$source];
+}
+
+// ── Create or update the Zoho Lead (upsert on Email) ─────────────────────────
+// Upserting on Email means the step-0 early capture and the final submission
+// land on ONE lead (an update, not a second record). Falls back to a plain
+// create only when no email is supplied (upsert needs a key to match on).
+$record = [
+    'First_Name'  => $firstname,
+    'Last_Name'   => $lastname,
+    'Email'       => $email,
+    'Phone'       => $phone,
+    'Company'     => $company,
+    'Lead_Source' => $lead_source,
+    'Description' => mb_substr($description, 0, 4000),
+];
+
+$use_upsert = $email !== '';
+$body = ['data' => [$record], 'trigger' => ['workflow']];
+if ($use_upsert) {
+    $body['duplicate_check_fields'] = ['Email'];
+}
+$endpoint = $use_upsert
+    ? 'https://www.zohoapis.com/crm/v8/Leads/upsert'
+    : 'https://www.zohoapis.com/crm/v8/Leads';
+
+$lead_res = zoho_curl($endpoint, [
     CURLOPT_POST       => true,
     CURLOPT_HTTPHEADER => [
         'Authorization: Zoho-oauthtoken ' . $access_token,
         'Content-Type: application/json',
     ],
-    CURLOPT_POSTFIELDS => $payload,
+    CURLOPT_POSTFIELDS => json_encode($body),
 ]);
 
 $result = $lead_res['data'][0] ?? [];
@@ -190,13 +222,14 @@ $code   = $result['code'] ?? '';
 
 if ($code === 'SUCCESS') {
     $lead_id = $result['details']['id'] ?? 'unknown';
-    error_log('[zoho-lead] Lead created id=' . $lead_id);
-    exit(json_encode(['ok' => true, 'id' => $lead_id]));
+    $action  = $result['action'] ?? 'created';   // upsert returns 'insert' or 'update'
+    error_log('[zoho-lead] Lead ' . $action . ' id=' . $lead_id . ' source=' . $lead_source);
+    exit(json_encode(['ok' => true, 'id' => $lead_id, 'action' => $action]));
 }
 
 if ($code === 'DUPLICATE_DATA') {
+    // Should not occur on upsert; kept for the plain-create fallback path.
     error_log('[zoho-lead] Duplicate lead: ' . $email);
-    // Not an error from the user's perspective
     exit(json_encode(['ok' => true, 'note' => 'duplicate']));
 }
 
