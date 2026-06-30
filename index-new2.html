@@ -329,11 +329,18 @@
         var(--kaptea-charcoal);
       color: var(--kaptea-white);
       text-align: left;
-      padding: 80px 24px 195px;
+      min-height: calc(100svh - 64px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 64px 24px;
       position: relative;
       z-index: 1;
-      overflow: visible;
+      overflow: hidden;
     }
+    .hero > .inner { width: 100%; }
+    /* SMS card only shows wide enough that it clears the headline column */
+    @media (min-width: 769px) and (max-width: 1160px) { .hero .hero-sms { display: none; } }
     .hero h1 { color: var(--kaptea-white); }
 
     /* ── Hero background video (auto-activates only when /video/ files exist) ── */
