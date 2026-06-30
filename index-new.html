@@ -328,7 +328,7 @@
         radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.18) 0%, transparent 65%),
         var(--kaptea-charcoal);
       color: var(--kaptea-white);
-      text-align: center;
+      text-align: left;
       padding: 80px 24px 195px;
       position: relative;
       z-index: 1;
@@ -347,15 +347,51 @@
       position: absolute; inset: 0; z-index: 1; opacity: 0;
       transition: opacity .8s ease; pointer-events: none;
       background:
-        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.20) 0%, transparent 60%),
-        linear-gradient(90deg, rgba(19,21,33,0.86) 0%, rgba(19,21,33,0.55) 48%, rgba(19,21,33,0.30) 100%),
-        linear-gradient(180deg, rgba(19,21,33,0.30) 0%, rgba(19,21,33,0.78) 100%);
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.14) 0%, transparent 60%),
+        linear-gradient(90deg, rgba(19,21,33,0.70) 0%, rgba(19,21,33,0.38) 48%, rgba(19,21,33,0.08) 100%),
+        linear-gradient(180deg, rgba(19,21,33,0.12) 0%, rgba(19,21,33,0.55) 100%);
     }
     .hero.has-hero-video .hero-video,
     .hero.has-hero-video .hero-scrim { opacity: 1; }
     /* keep all hero text/CTAs above the video + scrim */
-    .hero > *:not(.hero-video):not(.hero-scrim) { position: relative; z-index: 2; }
+    .hero > *:not(.hero-video):not(.hero-scrim):not(.hero-sms) { position: relative; z-index: 2; }
     @media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
+
+    /* Hero SMS conversation, front layer (frosted glass), fades in late in the clip */
+    .hero-sms {
+      position: absolute; z-index: 3;
+      right: 5%; bottom: 28%;
+      width: min(360px, 42vw);
+      display: flex; flex-direction: column;
+      background: rgba(18,20,32,0.24);
+      -webkit-backdrop-filter: blur(16px) saturate(125%);
+      backdrop-filter: blur(16px) saturate(125%);
+      border: 1px solid rgba(255,255,255,0.20);
+      border-radius: 22px;
+      padding: 16px 18px 18px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+      opacity: 0; transform: translateY(16px) scale(.985);
+      transition: opacity .5s ease, transform .5s ease;
+      pointer-events: none;
+    }
+    .hero.sms-show .hero-sms { opacity: 1; transform: none; }
+    /* box appears first, then each message populates in turn, like a live chat */
+    .hero-sms-head, .hero-sms-bubble { opacity: 0; transform: translateY(9px); transition: opacity .45s ease, transform .45s ease; }
+    .hero.sms-show .hero-sms-head { opacity: 1; transform: none; transition-delay: .2s; }
+    .hero.sms-show .hero-sms-bubble.in { opacity: 1; transform: none; transition-delay: .8s; }
+    .hero.sms-show .hero-sms-bubble.out { opacity: 1; transform: none; transition-delay: 1.55s; }
+    .hero-sms-head { display: flex; align-items: center; gap: 9px; margin-bottom: 12px; }
+    .hero-sms-icon { width: 34px; height: 34px; border-radius: 9px; overflow: hidden; flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+    .hero-sms-icon img { width: 100%; height: 100%; display: block; }
+    .hero-sms-app { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14.5px; color: #fff; }
+    .hero-sms-time { font-size: 12px; color: rgba(255,255,255,0.55); }
+    .hero-sms-bubble { font-size: 13.5px; line-height: 1.4; padding: 9px 13px; border-radius: 15px; max-width: 92%; }
+    .hero-sms-bubble.in { align-self: flex-start; background: #f4f5f8; color: #131521; border-bottom-left-radius: 5px; display: inline-flex; align-items: center; gap: 8px; }
+    .hero-sms-bubble.out { align-self: flex-end; margin-top: 8px; background: #3fd0c0; color: #0c201c; border-bottom-right-radius: 5px; }
+    .hero-sms-check { flex-shrink: 0; width: 20px; height: 20px; border-radius: 6px; background: #3fd0c0; color: #fff; font-size: 12px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
+    @media (max-width: 768px) {
+      .hero-sms { top: 13%; bottom: auto; right: 4%; left: auto; width: min(300px, 84vw); }
+    }
 
     /* Certification strip below logo bar */
     .cert-strip {
@@ -391,11 +427,11 @@
     .cert-divider { width: 1px; height: 16px; background: var(--kaptea-border); }
     .hero-partner-pills {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
-      margin: 0 auto 36px;
+      margin: 0 0 36px;
     }
     .hero-partner-pill {
       display: inline-flex;
@@ -403,17 +439,18 @@
       gap: 8px;
       padding: 7px 14px;
       border-radius: 6px;
-      background: var(--kaptea-white);
-      border: 1px solid var(--kaptea-border);
+      background: rgba(255,255,255,0.10);
+      -webkit-backdrop-filter: blur(12px) saturate(120%);
+      backdrop-filter: blur(12px) saturate(120%);
+      border: 1px solid rgba(255,255,255,0.22);
       font-family: 'Inter', sans-serif;
       font-size: 11.5px;
       font-weight: 500;
-      color: var(--kaptea-charcoal);
+      color: rgba(255,255,255,0.95);
       letter-spacing: 0.08em;
       text-transform: uppercase;
       text-align: center;
       max-width: calc(100vw - 48px);
-      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
     }
     .hero-partner-pill-logo {
       width: 15px;
@@ -425,8 +462,8 @@
       font-size: 52px;
       font-family: 'Manrope', sans-serif; font-weight: 700;
       line-height: 1.12;
-      max-width: min(100%, 1040px);
-      margin: 0 auto 28px;
+      max-width: 680px;
+      margin: 0 0 28px;
       letter-spacing: -0.02em;
     }
     .hero h1 .hero-h1-line1 {
@@ -437,11 +474,11 @@
     .hero p {
       font-size: 19px;
       color: rgba(255, 255, 255, 0.62);
-      max-width: 880px;
-      margin: 0 auto 44px;
+      max-width: 600px;
+      margin: 0 0 44px;
       line-height: 1.6;
     }
-    .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .hero-ctas { display: flex; gap: 16px; justify-content: flex-start; flex-wrap: wrap; }
 .btn-primary:hover { background: var(--kaptea-red-hover); box-shadow: 0 4px 12px rgba(220,39,39,0.3); transform: translateY(-1px); }
     .btn-ghost {
       background: transparent;
@@ -471,16 +508,18 @@
       background: var(--kaptea-white);
       border-top: 1px solid var(--kaptea-border);
       border-bottom: 1px solid var(--kaptea-border);
-      padding: 36px 40px;
+      padding: 64px 40px;
       text-align: center;
     }
-    .logo-bar-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--kaptea-neutral-grey); margin-bottom: 28px; }
+    .logo-bar-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--kaptea-neutral-grey); margin-bottom: 44px; }
     .logo-row {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 32px;
+      gap: 36px 56px;
       flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
     }
     .client-logo {
       display: flex;
@@ -1264,9 +1303,10 @@
         transition: all 0.3s;
       }
 
-      .hero { padding: 48px 20px 40px; overflow: hidden; }
-      .hero h1 { font-size: 34px; }
-      .hero p { font-size: 15px; margin-bottom: 40px; }
+      .hero { min-height: calc(100svh - 64px); box-sizing: border-box; display: flex; flex-direction: column; padding: 22px 20px 30px; overflow: hidden; }
+      .hero > .inner { display: flex; flex-direction: column; flex: 1; width: 100%; }
+      .hero h1 { font-size: 34px; margin-top: auto; }
+      .hero p { font-size: 15px; margin-bottom: 26px; }
       .cert-strip-inner { gap: 16px; }
       .cert-item { font-size: 11px; }
       .cert-divider { display: none; }
@@ -1306,7 +1346,7 @@
       .steps-cta a { text-align: center; justify-content: center; margin-left: 0 !important; }
 
       /* Platform Preview, mobile */
-      .platform-preview { padding: 0 20px 0; margin-top: 0 !important; }
+      .platform-preview { padding: 44px 20px 0; margin-top: 0 !important; }
       .browser-content img { max-height: 320px; }
       .hero-showcase-tabs {
         flex-wrap: nowrap;
@@ -1329,8 +1369,8 @@
     /* ── Platform Preview ───────────────────────────────────────────── */
     .platform-preview {
       background: linear-gradient(180deg, var(--kaptea-charcoal) 0%, #1a1d2e 50%, #0d0f1a 100%);
-      padding: 0 40px 0;
-      margin-top: -120px;
+      padding: 76px 40px 0;
+      margin-top: -56px;
       position: relative;
       z-index: 2;
       text-align: center;
@@ -1341,6 +1381,14 @@
       margin: 0 auto;
       padding-top: 0;
     }
+    .platform-intro { max-width: 840px; margin: 0 auto 52px; }
+    .platform-intro-label { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--kaptea-red); margin-bottom: 16px; }
+    .platform-intro-title { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 46px); letter-spacing: -0.02em; line-height: 1.08; color: var(--kaptea-white); margin: 0 0 20px; }
+    .platform-intro-title em { color: var(--kaptea-red); font-style: normal; }
+    .platform-intro-sub { font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.62); max-width: 760px; margin: 0 auto; }
+    /* six product cards now live in the dark product block, left-aligned */
+    .platform-preview .capabilities-grid { margin-top: 64px; text-align: left; }
+    .platform-preview .capability-card { text-align: left; }
     @media (min-width: 1440px) {
       .platform-preview-inner {
         max-width: 1230px;
@@ -1693,35 +1741,52 @@
        Required files: /video/hero.webm, /video/hero.mp4, /video/hero-poster.webp -->
   <video class="hero-video" autoplay muted playsinline preload="metadata"
          poster="/video/hero-poster.webp"
-         onloadeddata="this.closest('.hero').classList.add('has-hero-video')">
+         onloadeddata="this.closest('.hero').classList.add('has-hero-video')"
+         ontimeupdate="if(this.currentTime>=6.4)this.closest('.hero').classList.add('sms-show')">
     <source src="/video/hero.webm" type="video/webm">
     <source src="/video/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-scrim" aria-hidden="true"></div>
 
+  <!-- 'Promise kept' conversation, front layer (frosted glass), fades in late in the clip -->
+  <div class="hero-sms" aria-hidden="true">
+    <div class="hero-sms-head">
+      <span class="hero-sms-icon"><img src="/video/kaptea-app-icon.svg" alt="" width="34" height="34"></span>
+      <span class="hero-sms-app">Kaptea</span>
+      <span class="hero-sms-time">&#183; now</span>
+    </div>
+    <div class="hero-sms-bubble in">All sorted, confirmed for Tuesday 9am <span class="hero-sms-check">&#10003;</span></div>
+    <div class="hero-sms-bubble out">Perfect, see you Tuesday at 9am</div>
+  </div>
+
+  <div class="inner">
   <div class="hero-partner-pills" aria-label="Platform category">
     <span class="hero-partner-pill">
-      <svg class="hero-partner-pill-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px;color:#dc2727;flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Customer experiences built on trust
+      Customer experience built on trust
     </span>
   </div>
 
   <h1><span class="hero-h1-line1">Keep every promise.</span><em>Build trust you can measure.</em></h1>
 
-  <p>Deliver better customer experiences when your people and your AI operate as one team across every channel, while a trust layer orchestrates every commitment from the first request to confirmed satisfaction.</p>
+  <p>Deliver better customer experiences when your people and your AI operate as one team across every channel, while a trust layer orchestrates every commitment from first request to confirmed satisfaction.</p>
 
   <div class="hero-ctas">
     <a href="/get-started" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-primary">Get Started</a>
     <a href="/get-a-quote" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-ghost">Get a Quote</a>
   </div>
 
-  <p style="margin-top:18px; font-size:14px; color:var(--kaptea-neutral-grey);">Lower abandonment. Faster first-time resolution. Customers who come back.</p>
+  </div>
 
 </section>
 
 <!-- Platform Preview (icon tabs → sliding screenshots, inspired by https://www.superchat.de/ product strip) -->
 <div class="platform-preview" role="complementary" aria-label="Pronto product preview">
   <div class="platform-preview-inner">
+    <div class="platform-intro">
+      <div class="platform-intro-label">The platform</div>
+      <h2 class="platform-intro-title">Transform your <em>customer experience.</em></h2>
+      <p class="platform-intro-sub">Pronto is a complete customer engagement platform, with a trust flywheel built in. Rapidly deploy your own AI agents, connect them into workflows, hand off seamlessly to a human, and orchestrate trust into every customer journey.</p>
+    </div>
     <div class="hero-showcase" data-hero-showcase style="--hs-count: 6;">
       <div class="hero-showcase-tabs" role="tablist" aria-label="Pronto product stories">
         <button type="button" class="hero-showcase-tab" role="tab" aria-selected="true" id="hs-tab-0" aria-controls="hs-panel-0" aria-label="Trust Flywheel: every commitment tracked from request to confirmed satisfaction" data-slide="0">
@@ -1772,231 +1837,7 @@
         </div>
       </div>
     </div>
-    <div class="platform-certs" role="list" aria-label="Security certifications and partnerships">
-      <div class="platform-cert-item" role="listitem">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        ISO 27001
-      </div>
-      <div class="platform-cert-item" role="listitem">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-        Cyber Essentials Plus
-      </div>
-      <div class="platform-cert-item" role="listitem">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        CREST Accredited
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="logo-bar">
-  <div class="logo-bar-label">Trusted by regulated organisations across utilities, healthcare, financial services, and hospitality</div>
-  <div class="logo-row">
-    <div class="client-logo"><picture><source srcset="img/logos/hse.webp" type="image/webp"><img src="img/logos/hse.jpg" alt="HSE – Health Service Executive"></picture></div>
-    <a href="/case-studies/an-post-whatsapp" class="client-logo"><img src="img/logos/anpost.svg" alt="An Post"></a>
-    <a href="/case-studies/an-post" class="client-logo"><img src="img/logos/tvlicence.png" alt="TVLicence.ie by An Post"></a>
-    <a href="/case-studies/caledonian-sleeper" class="client-logo"><img src="img/logos/caledonian-sleeper.svg" alt="Caledonian Sleeper"></a>
-    <a href="/case-studies/tickmill" class="client-logo client-logo--dark"><img src="img/logos/tickmill.svg" alt="Tickmill"></a>
-    <a href="/case-studies/eflow" class="client-logo"><img src="img/logos/eflow.svg" alt="eFlow"></a>
-    <a href="/case-studies/quandoo" class="client-logo"><img src="img/logos/quandoo.svg" alt="Quandoo"></a>
-    <div class="client-logo"><img src="img/logos/dialectica.png" alt="Dialectica"></div>
-    <a href="/case-studies/hotbox" class="client-logo client-logo--dark"><img src="img/logos/hotbox.svg" alt="The Hot Box Sauna"></a>
-  </div>
-</div>
-
-
-<style>
-  /* index-new positioning components */
-  /* Trust Flywheel — four quadrants on a circle */
-  .flywheel-circle { position:relative; max-width:780px; margin:28px auto 0; }
-  .flywheel-quadrants { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-  .fw-quad { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); padding:22px; text-align:left; border-radius:16px; }
-  .fw-quad.fw-tl { border-top-left-radius:140px; }
-  .fw-quad.fw-tr { border-top-right-radius:140px; }
-  .fw-quad.fw-bl { border-bottom-left-radius:140px; }
-  .fw-quad.fw-br { border-bottom-right-radius:140px; }
-  .fw-quad .fw-img { aspect-ratio:16/9; border-radius:10px; background:rgba(255,255,255,0.05); border:1px dashed rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.32); font-size:10.5px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:16px; text-align:center; padding:8px; }
-  .fw-quad .fw-num { font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--kaptea-red); margin-bottom:10px; }
-  .fw-quad h3 { font-family:'Manrope',sans-serif; font-weight:700; font-size:18px; color:#fff; margin-bottom:8px; }
-  .fw-quad p { font-size:14px; color:rgba(255,255,255,0.6); line-height:1.6; margin-bottom:14px; }
-  .fw-quad .fw-builds { font-size:12px; font-weight:600; color:#3fd0c0; padding-top:12px; border-top:1px solid rgba(255,255,255,0.08); }
-  .flywheel-score { margin:36px auto 0; max-width:680px; text-align:center; font-size:16px; color:rgba(255,255,255,0.72); line-height:1.65; }
-  .flywheel-score strong { color:#fff; font-weight:600; }
-  @media(max-width:640px){ .flywheel-quadrants{grid-template-columns:1fr;} .fw-quad,.fw-quad.fw-tl,.fw-quad.fw-tr,.fw-quad.fw-bl,.fw-quad.fw-br{border-radius:14px;} }
-
-  /* problem quotes */
-  .problem-card .pq-wrap { display:flex; flex-direction:column; }
-  .problem-card .pq { font-family:'Manrope',sans-serif; font-weight:700; font-size:19px; color:#fff; line-height:1.4; margin:0 0 12px; }
-  .problem-card .pq-attr { font-size:12.5px; font-weight:600; letter-spacing:0.02em; color:#3fd0c0; margin:0 0 14px; }
-  .problem-card .pq-ctx { font-size:13.5px; color:rgba(255,255,255,0.62); line-height:1.6; margin:0; }
-
-  /* section image placeholders */
-  .section-img-ph { aspect-ratio:16/7; border-radius:16px; background:var(--kaptea-surface-muted); border:1px dashed var(--kaptea-border); display:flex; align-items:center; justify-content:center; color:var(--kaptea-tagline-grey); font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; }
-
-  /* 3-up problem grid */
-  .scenario-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-  @media(max-width:900px){ .scenario-grid.cols-3 { grid-template-columns: 1fr; } }
-
-  /* operational proof band */
-  .opsproof { background: var(--kaptea-surface-muted); padding: 44px 24px; border-top: 1px solid var(--kaptea-border); border-bottom: 1px solid var(--kaptea-border); }
-  .opsproof-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; text-align: center; }
-  .opsproof-item h3 { font-family:'Manrope',sans-serif; font-weight:800; font-size:32px; color:var(--kaptea-charcoal); line-height:1.05; margin-bottom:8px; }
-  .opsproof-item h3 .hl { color:var(--kaptea-red); }
-  .opsproof-item p { font-size:13.5px; color:var(--kaptea-tagline-grey); line-height:1.55; margin:0 auto; max-width:300px; }
-  @media(max-width:768px){ .opsproof-inner{grid-template-columns:1fr; gap:24px;} }
-
-  /* concrete contact flow */
-  .flow-card { max-width:980px; margin:0 auto; background:var(--kaptea-white); border:1px solid var(--kaptea-border); border-radius:16px; display:grid; grid-template-columns:repeat(4,1fr); overflow:hidden; box-shadow:0 4px 24px rgba(15,23,42,0.05); }
-  .flow-step { padding:26px 22px; position:relative; }
-  .flow-step:not(:last-child)::after { content:""; position:absolute; right:0; top:20px; bottom:20px; width:1px; background:var(--kaptea-border); }
-  .flow-step .flow-num { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--kaptea-red); margin-bottom:10px; }
-  .flow-step h3 { font-family:'Manrope',sans-serif; font-weight:700; font-size:15px; color:var(--kaptea-charcoal); margin-bottom:6px; line-height:1.3; }
-  .flow-step p { font-size:13px; color:var(--kaptea-tagline-grey); line-height:1.55; margin:0; }
-  @media(max-width:768px){ .flow-card{grid-template-columns:1fr;} .flow-step:not(:last-child)::after{display:none;} .flow-step:not(:last-child){border-bottom:1px solid var(--kaptea-border);} }
-
-</style>
-
-<section class="section">
-  <div class="inner">
-    <div class="section-label">The problem</div>
-    <div class="section-title">You are not short on effort. <em style="color:var(--kaptea-red); font-style:normal;">You are short on certainty.</em></div>
-    <div class="section-sub" style="margin-bottom:48px;">You have built service levels, reporting and teams who genuinely care. What slips is rarely a message. It is a commitment, quietly missed, and the trust that leaks out with it. Here is how that feels from the inside.</div>
-
-    <div class="scenario-grid cols-3">
-
-      <article class="scenario-card problem-card">
-        <div class="scenario-tag">01 · Firefighting</div>
-        <div class="pq-wrap">
-          <div class="pq">&ldquo;Every Monday I walk in braced for the escalation I didn't see coming.&rdquo;</div>
-          <div class="pq-attr">Head of Customer Service</div>
-          <p class="pq-ctx">The metrics look fine on paper. The reality is reacting to misses instead of preventing them.</p>
-        </div>
-      </article>
-
-      <article class="scenario-card problem-card">
-        <div class="scenario-tag">02 · The fear of AI</div>
-        <div class="pq-wrap">
-          <div class="pq">&ldquo;We switched the AI on, it made things worse, so we switched it off.&rdquo;</div>
-          <div class="pq-attr">CX Director</div>
-          <p class="pq-ctx">Get it wrong and you have not automated service. You have automated the chaos.</p>
-        </div>
-      </article>
-
-      <article class="scenario-card problem-card">
-        <div class="scenario-tag">03 · Trust erosion</div>
-        <div class="pq-wrap">
-          <div class="pq">&ldquo;The ones who leave never complain. They just go quiet.&rdquo;</div>
-          <div class="pq-attr">Chief Operating Officer</div>
-          <p class="pq-ctx">One broken promise to a key account, or a steady drip of small misses. Either way, confidence drains before anyone says a word.</p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── OPERATIONAL PROOF ── -->
-<div class="opsproof">
-  <div class="opsproof-inner">
-    <div class="opsproof-item">
-      <h3>60% <span class="hl">&rarr; &lt;7%</span></h3>
-      <p>Call abandonment, after one operator replaced its cloud contact-centre provider with Kaptea.</p>
-    </div>
-    <div class="opsproof-item">
-      <h3>Any channel, <span class="hl">1 experience</span></h3>
-      <p>Voice, SMS, WhatsApp, email and video, with your people and AI working the same conversation, so the customer never repeats themselves.</p>
-    </div>
-    <div class="opsproof-item">
-      <h3>Hours, <span class="hl">not weeks</span></h3>
-      <p>Live without a build or rip-and-replace. We do the heavy lifting, so your team is freed from firefighting.</p>
-    </div>
-  </div>
-</div>
-
-<section class="section section-alt platform-overview-dark">
-  <div class="inner">
-    <div class="section-label section-label-light">The Trust Flywheel</div>
-    <div class="section-title section-title-light">A promise made, <em style="color:var(--kaptea-red); font-style:normal;">and a promise kept.</em></div>
-    <div class="section-sub section-sub-light">Trust is not built through good intentions, marketing or technology. It is built through evidence: when someone says they will do something, they do it. Every customer conversation is one continuous loop through four stages. Carry a commitment cleanly through all four and the loop closes, trust compounds, and the wheel spins faster. Drop a stage and the loop breaks, and trust leaks.</div>
-
-    <div class="flywheel-circle">
-      <div class="flywheel-quadrants">
-        <div class="fw-quad fw-tl">
-          <div class="fw-img">Image: Listen</div>
-          <div class="fw-num">Stage 1 · Listen</div>
-          <h3>Hear what is really being asked</h3>
-          <p>Understand what the customer is actually asking for, and who they are.</p>
-          <div class="fw-builds">Builds: being heard</div>
-        </div>
-        <div class="fw-quad fw-tr">
-          <div class="fw-img">Image: Agree</div>
-          <div class="fw-num">Stage 2 · Agree</div>
-          <h3>Make the commitment explicit</h3>
-          <p>Co-design a clear, time-bound, accountable commitment. Make the implicit explicit.</p>
-          <div class="fw-builds">Builds: a shared definition of success</div>
-        </div>
-        <div class="fw-quad fw-bl">
-          <div class="fw-img">Image: Verify</div>
-          <div class="fw-num">Stage 4 · Verify</div>
-          <h3>Confirm they are satisfied</h3>
-          <p>Confirm the customer is genuinely satisfied, and carry the learning into the next turn.</p>
-          <div class="fw-builds">Builds: compounding trust</div>
-        </div>
-        <div class="fw-quad fw-br">
-          <div class="fw-img">Image: Deliver</div>
-          <div class="fw-num">Stage 3 · Deliver</div>
-          <h3>Get it done, keep them informed</h3>
-          <p>Carry out the commitment, and keep the customer informed the whole way through.</p>
-          <div class="fw-builds">Builds: reliability</div>
-        </div>
-      </div>
-    </div>
-
-    <p class="flywheel-score">The metric that falls out of the flywheel is a <strong>live trust score</strong>, built from closed loops versus broken loops. For the first time, trust becomes a number leaders can see and improve.</p>
-  </div>
-</section>
-
-<!-- ── HOW IT PLAYS OUT (concrete contact) ── -->
-<section class="section">
-  <div class="inner">
-    <div class="section-label">How it plays out</div>
-    <div class="section-title">From a customer's first message <em style="color:var(--kaptea-red); font-style:normal;">to a confirmed close.</em></div>
-    <div class="section-sub" style="margin-bottom:40px;">The flywheel is not a theory. It runs on every single contact. Here is one, end to end.</div>
-    <div class="section-img-ph" style="margin-bottom:32px;">Image: a single contact moving through the four steps</div>
-    <div class="flow-card">
-      <div class="flow-step">
-        <div class="flow-num">1 &middot; A contact comes in</div>
-        <h3>On any channel</h3>
-        <p>A customer messages about a delayed order, by voice, WhatsApp, SMS or email, whichever they prefer.</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">2 &middot; AI resolves, or hands off</div>
-        <h3>With full context</h3>
-        <p>A Pronto agent answers in seconds, checks the order in your CRM and resolves it, or passes it to one of your people with the whole thread already on screen.</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">3 &middot; The promise is tracked</div>
-        <h3>Watched to the deadline</h3>
-        <p>The commitment to fix it is logged and watched. If it is about to slip, the Steward agent flags it before the customer ever feels let down.</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">4 &middot; Confirmed close</div>
-        <h3>Closed only when they are happy</h3>
-        <p>It is not done until the customer confirms they are satisfied, and it counts toward your live trust score.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="inner">
-    <div class="section-label">The platform</div>
-    <div class="section-title">One platform where people and AI <em style="color:var(--kaptea-red); font-style:normal;">work as one team.</em></div>
-    <div class="section-sub">Pronto is a complete customer engagement platform, in production today, with the Trust Flywheel built in. Build your own AI agents, connect them into workflows, hand off seamlessly to a human, and engage customers on any channel.</div>
-
-    <div class="section-img-ph" style="margin:28px 0 40px;">Image: the Pronto product</div>
-
-    <div class="capabilities-grid">
+    <div class="capabilities-grid platform-capabilities">
 
       <div class="capability-card">
         <div class="cap-number">Trust Flywheel</div>
@@ -2041,52 +1882,147 @@
       </div>
 
     </div>
-  </div>
-</section>
 
-<section class="section section-dark">
-  <div class="inner">
-    <div class="section-label section-label-light">The difference</div>
-    <div class="section-title section-title-light" style="margin-bottom:8px;">Trust, built into <br>the platform itself.</div>
-    <div class="section-sub section-sub-light" style="margin-bottom:48px;">Everyone else automates conversations for efficiency. Inside Pronto, a team of always-on agents works in the background, watching every commitment from the first request to confirmed satisfaction. This is what makes Kaptea different: nobody else builds in the trust layer.</div>
-
-    <div class="diff-grid">
-
-      <div class="diff-card">
-        <div class="diff-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        </div>
-        <h3>Trust Flywheel agents over every conversation</h3>
-        <p>A Listening, Negotiating, Doing and Satisfaction agent map to the four stages of the flywheel. They work across every conversation, every agent and every channel, so each commitment is tracked from request to confirmed satisfaction. Broken promises surface in real time, not after churn.</p>
+    <div class="platform-certs" role="list" aria-label="Security certifications and partnerships">
+      <div class="platform-cert-item" role="listitem">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        ISO 27001
       </div>
-
-      <div class="diff-card">
-        <div class="diff-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-        </div>
-        <h3>A Steward agent that catches breaches early</h3>
-        <p>A fifth agent watches every commitment as it approaches its deadline and escalates before it breaches. Proactive nudges before a promise is missed mean prevention replaces apology, and issues are caught before the customer is ever let down.</p>
+      <div class="platform-cert-item" role="listitem">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Cyber Essentials Plus
       </div>
-
-      <div class="diff-card">
-        <div class="diff-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-        </div>
-        <h3>A live trust score you can manage</h3>
-        <p>One number for relationship health, built from closed loops versus broken loops, alongside a Coordination Intelligence dashboard of live conversations, AI decisions, response time and satisfaction. For the first time, leaders manage trust as a metric, on evidence, not anecdote.</p>
+      <div class="platform-cert-item" role="listitem">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        CREST Accredited
       </div>
-
-      <div class="diff-card">
-        <div class="diff-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Your data, your model, your terms</h3>
-        <p>Bring your own carrier and your own governed private model, or use ours. Your data stays private and resident. ISO 27001, Cyber Essentials Plus and CREST accredited, and built for the EU AI Act's human-oversight and logging obligations from the ground up.</p>
-      </div>
-
     </div>
   </div>
+</div>
+
+<div class="logo-bar">
+  <div class="logo-bar-label">Trusted by regulated organisations across utilities, healthcare, financial services, and hospitality</div>
+  <div class="logo-row">
+    <div class="client-logo"><picture><source srcset="img/logos/hse.webp" type="image/webp"><img src="img/logos/hse.jpg" alt="HSE – Health Service Executive"></picture></div>
+    <a href="/case-studies/an-post-whatsapp" class="client-logo"><img src="img/logos/anpost.svg" alt="An Post"></a>
+    <a href="/case-studies/an-post" class="client-logo"><img src="img/logos/tvlicence.png" alt="TVLicence.ie by An Post"></a>
+    <a href="/case-studies/caledonian-sleeper" class="client-logo"><img src="img/logos/caledonian-sleeper.svg" alt="Caledonian Sleeper"></a>
+    <a href="/case-studies/tickmill" class="client-logo client-logo--dark"><img src="img/logos/tickmill.svg" alt="Tickmill"></a>
+    <a href="/case-studies/eflow" class="client-logo"><img src="img/logos/eflow.svg" alt="eFlow"></a>
+    <a href="/case-studies/quandoo" class="client-logo"><img src="img/logos/quandoo.svg" alt="Quandoo"></a>
+    <div class="client-logo"><img src="img/logos/dialectica.png" alt="Dialectica"></div>
+    <a href="/case-studies/hotbox" class="client-logo client-logo--dark"><img src="img/logos/hotbox.svg" alt="The Hot Box Sauna"></a>
+  </div>
+  <div class="opsproof-inner trust-stats">
+    <div class="opsproof-item">
+      <h3>60% <span class="hl">&rarr; &lt;7%</span></h3>
+      <p>Call abandonment, after one operator replaced its cloud contact-centre provider with Kaptea.</p>
+    </div>
+    <div class="opsproof-item">
+      <h3>Any channel, <span class="hl">1 experience</span></h3>
+      <p>Voice, SMS, WhatsApp, email and video, with your people and AI working the same conversation, so the customer never repeats themselves.</p>
+    </div>
+    <div class="opsproof-item">
+      <h3>Hours, <span class="hl">not weeks</span></h3>
+      <p>Live without a build or rip-and-replace. We do the heavy lifting, so your team is freed from firefighting.</p>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  /* index-new positioning components */
+  /* Trust Flywheel — four quadrants on a circle */
+  .flywheel-circle { position:relative; max-width:780px; margin:28px auto 0; }
+  .flywheel-quadrants { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .fw-quad { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); padding:22px; text-align:left; border-radius:16px; }
+  .fw-quad.fw-tl { border-top-left-radius:140px; }
+  .fw-quad.fw-tr { border-top-right-radius:140px; }
+  .fw-quad.fw-bl { border-bottom-left-radius:140px; }
+  .fw-quad.fw-br { border-bottom-right-radius:140px; }
+  .fw-quad .fw-img { aspect-ratio:16/9; border-radius:10px; background:rgba(255,255,255,0.05); border:1px dashed rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.32); font-size:10.5px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:16px; text-align:center; padding:8px; }
+  .fw-quad .fw-num { font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--kaptea-red); margin-bottom:10px; }
+  .fw-quad h3 { font-family:'Manrope',sans-serif; font-weight:700; font-size:18px; color:#fff; margin-bottom:8px; }
+  .fw-quad p { font-size:14px; color:rgba(255,255,255,0.6); line-height:1.6; margin-bottom:14px; }
+  .fw-quad .fw-builds { font-size:12px; font-weight:600; color:#3fd0c0; padding-top:12px; border-top:1px solid rgba(255,255,255,0.08); }
+  .flywheel-score { margin:36px auto 0; max-width:680px; text-align:center; font-size:16px; color:rgba(255,255,255,0.72); line-height:1.65; }
+  .flywheel-score strong { color:#fff; font-weight:600; }
+  @media(max-width:640px){ .flywheel-quadrants{grid-template-columns:1fr;} .fw-quad,.fw-quad.fw-tl,.fw-quad.fw-tr,.fw-quad.fw-bl,.fw-quad.fw-br{border-radius:14px;} }
+
+  /* problem quotes */
+  .problem-card .pq-wrap { display:flex; flex-direction:column; }
+  .problem-card .pq { font-family:'Manrope',sans-serif; font-weight:700; font-size:19px; color:#fff; line-height:1.4; margin:0 0 12px; }
+  .problem-card .pq-attr { font-size:12.5px; font-weight:600; letter-spacing:0.02em; color:#3fd0c0; margin:0 0 14px; }
+  .problem-card .pq-ctx { font-size:13.5px; color:rgba(255,255,255,0.62); line-height:1.6; margin:0; }
+
+  /* section image placeholders */
+  .section-img-ph { aspect-ratio:16/7; border-radius:16px; background:var(--kaptea-surface-muted); border:1px dashed var(--kaptea-border); display:flex; align-items:center; justify-content:center; color:var(--kaptea-tagline-grey); font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; }
+
+  /* 3-up problem grid */
+  .scenario-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  @media(max-width:900px){ .scenario-grid.cols-3 { grid-template-columns: 1fr; } }
+
+  /* operational proof band */
+  .opsproof { background: var(--kaptea-surface-muted); padding: 44px 24px; border-top: 1px solid var(--kaptea-border); border-bottom: 1px solid var(--kaptea-border); }
+  .opsproof-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; text-align: center; }
+  .opsproof-item h3 { font-family:'Manrope',sans-serif; font-weight:800; font-size:32px; color:var(--kaptea-charcoal); line-height:1.05; margin-bottom:8px; }
+  .opsproof-item h3 .hl { color:var(--kaptea-red); }
+  .opsproof-item p { font-size:13.5px; color:var(--kaptea-tagline-grey); line-height:1.55; margin:0 auto; max-width:300px; }
+  /* data points combined into the trust/logo band */
+  .trust-stats { margin-top: 64px; padding-top: 56px; border-top: 1px solid var(--kaptea-border); }
+  @media(max-width:768px){ .opsproof-inner{grid-template-columns:1fr; gap:24px;} .trust-stats{ margin-top:32px; padding-top:28px; } }
+
+  /* concrete contact flow */
+  .flow-card { max-width:980px; margin:0 auto; background:var(--kaptea-white); border:1px solid var(--kaptea-border); border-radius:16px; display:grid; grid-template-columns:repeat(4,1fr); overflow:hidden; box-shadow:0 4px 24px rgba(15,23,42,0.05); }
+  .flow-step { padding:26px 22px; position:relative; }
+  .flow-step:not(:last-child)::after { content:""; position:absolute; right:0; top:20px; bottom:20px; width:1px; background:var(--kaptea-border); }
+  .flow-step .flow-num { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--kaptea-red); margin-bottom:10px; }
+  .flow-step h3 { font-family:'Manrope',sans-serif; font-weight:700; font-size:15px; color:var(--kaptea-charcoal); margin-bottom:6px; line-height:1.3; }
+  .flow-step p { font-size:13px; color:var(--kaptea-tagline-grey); line-height:1.55; margin:0; }
+  @media(max-width:768px){ .flow-card{grid-template-columns:1fr;} .flow-step:not(:last-child)::after{display:none;} .flow-step:not(:last-child){border-bottom:1px solid var(--kaptea-border);} }
+
+</style>
+
+<section class="section section-alt platform-overview-dark">
+  <div class="inner">
+    <div class="section-label section-label-light">The Trust Flywheel</div>
+    <div class="section-title section-title-light">A promise made, <em style="color:var(--kaptea-red); font-style:normal;">and a promise kept.</em></div>
+    <div class="section-sub section-sub-light">Trust is not built through good intentions, marketing or technology. It is built through evidence: when someone says they will do something, they do it. Every customer conversation is one continuous loop through four stages. Carry a commitment cleanly through all four and the loop closes, trust compounds, and the wheel spins faster. Drop a stage and the loop breaks, and trust leaks.</div>
+
+    <div class="flywheel-circle">
+      <div class="flywheel-quadrants">
+        <div class="fw-quad fw-tl">
+          <div class="fw-img">Image: Listen</div>
+          <div class="fw-num">Stage 1 · Listen</div>
+          <h3>Hear what is really being asked</h3>
+          <p>Understand what the customer is actually asking for, and who they are.</p>
+        </div>
+        <div class="fw-quad fw-tr">
+          <div class="fw-img">Image: Agree</div>
+          <div class="fw-num">Stage 2 · Agree</div>
+          <h3>Make the commitment explicit</h3>
+          <p>Co-design a clear, time-bound, accountable commitment. Make the implicit explicit.</p>
+        </div>
+        <div class="fw-quad fw-bl">
+          <div class="fw-img">Image: Verify</div>
+          <div class="fw-num">Stage 4 · Verify</div>
+          <h3>Confirm they are satisfied</h3>
+          <p>Confirm the customer is genuinely satisfied, and carry the learning into the next turn.</p>
+        </div>
+        <div class="fw-quad fw-br">
+          <div class="fw-img">Image: Deliver</div>
+          <div class="fw-num">Stage 3 · Deliver</div>
+          <h3>Get it done, keep them informed</h3>
+          <p>Carry out the commitment, and keep the customer informed the whole way through.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="flywheel-score">The metric that falls out of the flywheel is a <strong>live trust score</strong>, built from closed loops versus broken loops. For the first time, trust becomes a number leaders can see and improve.</p>
+  </div>
 </section>
+
+
 
 <!-- ════════════════════════════════════════════════════
      VOICE OF THE CUSTOMER: TESTIMONIALS WALL
@@ -2094,8 +2030,8 @@
 <section class="voc-band" aria-labelledby="voc-heading">
   <div class="voc-inner">
     <div class="voc-header">
-      <div class="voc-eyebrow">In their own words <strong>· NPS 9.7 / 10</strong></div>
-      <h2 id="voc-heading">We asked our customers what they thought.<br><em>This is what they said.</em></h2>
+      <div class="voc-eyebrow">What our clients say</div>
+      <h2 id="voc-heading">Delivering <em>better experiences</em> for our clients.</h2>
     </div>
 
     <div class="voc-grid">
@@ -2206,6 +2142,50 @@
         <strong>The majority of customers scored Kaptea a perfect 10.</strong> Independently-conducted Voice of Customer interviews across utilities, postal, rail, hospitality and tolling. Verbatim quotes above.
       </div>
       <a href="/why-kaptea" class="voc-nps-cta">See why enterprises choose Kaptea →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="inner">
+    <div class="section-label section-label-light">The difference</div>
+    <div class="section-title section-title-light" style="margin-bottom:8px;">Trust, built into <br>the platform itself.</div>
+    <div class="section-sub section-sub-light" style="margin-bottom:48px;">Inside Pronto, a team of always-on agents works in the background, watching every commitment from the first request to confirmed satisfaction. This is what makes Kaptea different: nobody else builds in the trust layer.</div>
+
+    <div class="diff-grid">
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h3>Trust Flywheel agents over every conversation</h3>
+        <p>A Listening, Negotiating, Doing and Satisfaction agent map to the four stages of the flywheel. They work across every conversation, every agent and every channel, so each commitment is tracked from request to confirmed satisfaction. Broken promises surface in real time, not after churn.</p>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>A Steward agent that catches breaches early</h3>
+        <p>A fifth agent watches every commitment as it approaches its deadline and escalates before it breaches. Proactive nudges before a promise is missed mean prevention replaces apology, and issues are caught before the customer is ever let down.</p>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>A live trust score you can manage</h3>
+        <p>One number for relationship health, built from closed loops versus broken loops, alongside a Coordination Intelligence dashboard of live conversations, AI decisions, response time and satisfaction. For the first time, leaders manage trust as a metric, on evidence, not anecdote.</p>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Your data, your model, your terms</h3>
+        <p>Bring your own carrier and your own governed private model, or use ours. Your data stays private and resident. ISO 27001, Cyber Essentials Plus and CREST accredited, and built for the EU AI Act's human-oversight and logging obligations from the ground up.</p>
+      </div>
+
     </div>
   </div>
 </section>
