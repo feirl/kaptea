@@ -354,9 +354,9 @@
       position: absolute; inset: 0; z-index: 1; opacity: 0;
       transition: opacity .8s ease; pointer-events: none;
       background:
-        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.14) 0%, transparent 60%),
-        linear-gradient(90deg, rgba(19,21,33,0.70) 0%, rgba(19,21,33,0.38) 48%, rgba(19,21,33,0.08) 100%),
-        linear-gradient(180deg, rgba(19,21,33,0.12) 0%, rgba(19,21,33,0.55) 100%);
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.10) 0%, transparent 60%),
+        linear-gradient(90deg, rgba(19,21,33,0.34) 0%, rgba(19,21,33,0.14) 48%, rgba(19,21,33,0.02) 100%),
+        linear-gradient(180deg, rgba(19,21,33,0.03) 0%, rgba(19,21,33,0.24) 100%);
     }
     .hero.has-hero-video .hero-video,
     .hero.has-hero-video .hero-scrim { opacity: 1; }
@@ -467,11 +467,11 @@
     }
     .hero h1 {
       font-size: clamp(56px, 5.2vw, 72px);
-      font-family: 'Manrope', sans-serif; font-weight: 700;
+      font-family: 'Manrope', sans-serif; font-weight: 800;
       line-height: 1.05;
       max-width: 680px;
       margin: 0 0 28px;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.035em;
     }
     .hero h1 .hero-h1-line1 {
       display: block;
@@ -1368,7 +1368,7 @@
       .hero-showcase-slide img { height: min(52vh, 420px); }
       .hs-cap { padding: 44px 18px 16px; }
       .hs-cap strong { font-size: 16px; }
-      .hs-cap span { font-size: 13px; }
+      .hs-cap span { font-size: 13px; white-space: normal; }
       .browser-actions { display: none; }
       .platform-certs { gap: 8px 0; padding: 28px 12px 48px; }
       .platform-cert-item { padding: 6px 14px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; justify-content: center; }
@@ -1517,8 +1517,7 @@
       font-size: 14.5px;
       line-height: 1.5;
       color: rgba(255,255,255,0.82);
-      max-width: 620px;
-      text-wrap: balance;
+      white-space: nowrap;
     }
     .platform-eyebrow { display: none; }
     .browser-frame {
@@ -1779,11 +1778,49 @@
        Required files: /video/hero.webm, /video/hero.mp4, /video/hero-poster.webp -->
   <video class="hero-video" autoplay muted playsinline preload="metadata"
          poster="/video/hero-poster.webp"
-         onloadeddata="this.closest('.hero').classList.add('has-hero-video')"
-         ontimeupdate="if(this.currentTime>=6.4)this.closest('.hero').classList.add('sms-show')">
+         onloadeddata="this.closest('.hero').classList.add('has-hero-video')">
     <source src="/video/hero.webm" type="video/webm">
     <source src="/video/hero.mp4" type="video/mp4">
   </video>
+  <script>
+    /* Hero video loop with a clean fade-to-black seam.
+       - Brightness is ramped per animation frame (not via timeupdate, which is
+         too coarse) so it reaches true black exactly at the loop boundary.
+       - The loop is restarted manually on 'ended' (native `loop` is off) so the
+         seek back to 0 happens while the frame is fully black, hiding the cut.
+       - The SMS card is shown only mid-loop: it fades in at SMS_IN and fades
+         out with the black dip, then re-triggers on the next loop. */
+    (function () {
+      var v = document.currentScript.previousElementSibling;
+      if (!v || v.tagName !== 'VIDEO') { return; }
+      var hero = v.closest('.hero');
+      var FADE = 0.9;    // seconds of fade at each edge of the loop
+      var SMS_IN = 6.4;  // point in the video where the confirmation lands
+
+      v.addEventListener('ended', function () {
+        try { v.currentTime = 0; } catch (e) {}
+        var p = v.play();
+        if (p && p.catch) { p.catch(function () {}); }
+      });
+
+      function tick() {
+        var d = v.duration;
+        if (d && !isNaN(d)) {
+          var t = v.currentTime;
+          var remaining = d - t;
+          var b = Math.min(1, t / FADE, remaining / FADE);
+          v.style.filter = 'brightness(' + Math.max(0, b).toFixed(3) + ')';
+          if (t >= SMS_IN && remaining > FADE) {
+            hero.classList.add('sms-show');
+          } else {
+            hero.classList.remove('sms-show');
+          }
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
   <div class="hero-scrim" aria-hidden="true"></div>
 
   <!-- 'Promise kept' conversation, front layer (frosted glass), fades in late in the clip -->
@@ -1971,6 +2008,26 @@
   .flow-step p { font-size:13px; color:var(--kaptea-tagline-grey); line-height:1.55; margin:0; }
   @media(max-width:768px){ .flow-card{grid-template-columns:1fr;} .flow-step:not(:last-child)::after{display:none;} .flow-step:not(:last-child){border-bottom:1px solid var(--kaptea-border);} }
 
+  /* ── Trust Flywheel ring ───────────────────────────────────────────── */
+  .fwb-wrap { position:relative; width:100%; max-width:680px; margin:28px auto 0; aspect-ratio:1/1; }
+  .fwb-svg { position:absolute; inset:0; width:100%; height:100%; overflow:visible; }
+  .fwb-hub { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:31%; height:31%; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:12px; background:rgba(19,21,33,0.5); border:2px solid rgba(220,39,39,0.65); box-shadow:0 0 34px rgba(220,39,39,0.28), inset 0 0 26px rgba(220,39,39,0.08); }
+  .fwb-hub .v { font-family:'Manrope',sans-serif; font-weight:800; font-size:23px; color:#fff; line-height:1.12; }
+  .fwb-node { position:absolute; width:214px; padding:14px 16px; border-radius:14px; background:rgba(19,21,33,0.72); border:1px solid rgba(255,255,255,0.1); backdrop-filter:blur(6px); }
+  .fwb-node .fwb-nnum { font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--kaptea-red); margin-bottom:5px; display:flex; align-items:center; gap:7px; }
+  .fwb-node.teal .fwb-nnum { color:#3fd0c0; }
+  .fwb-node .fwb-nnum svg { width:15px; height:15px; flex-shrink:0; }
+  .fwb-node .fwb-nt { font-family:'Manrope',sans-serif; font-weight:700; font-size:14px; color:#fff; line-height:1.35; }
+  .fwb-ne { top:12%; right:0; text-align:left; }
+  .fwb-se { bottom:12%; right:0; text-align:left; }
+  .fwb-sw { bottom:12%; left:0; text-align:left; }
+  .fwb-nw { top:12%; left:0; text-align:left; }
+  @media(max-width:640px){
+    .fwb-wrap { aspect-ratio:auto; max-width:420px; }
+    .fwb-svg, .fwb-hub { display:none; }
+    .fwb-node { position:static; transform:none; width:100%; margin-bottom:12px; }
+  }
+
 </style>
 
 <section class="section section-alt platform-overview-dark">
@@ -1979,32 +2036,40 @@
     <div class="section-title section-title-light">A promise made, <em style="color:var(--kaptea-red); font-style:normal;">and a promise kept.</em></div>
     <div class="section-sub section-sub-light">Trust is not built through good intentions, marketing or technology. It is built through action: when someone says they will do something, they do it. Every customer conversation is one continuous loop through four stages. Carry a commitment cleanly through all four and the loop closes, trust compounds, and the wheel spins faster. Drop a stage and the loop breaks, and trust leaks.</div>
 
-    <div class="flywheel-circle">
-      <div class="flywheel-quadrants">
-        <div class="fw-quad fw-tl">
-          <div class="fw-img">Image: Listen</div>
-          <div class="fw-num">Stage 1 · Listen</div>
-          <h3>Hear what is really being asked</h3>
-          <p>Understand what the customer is actually asking for, and who they are.</p>
-        </div>
-        <div class="fw-quad fw-tr">
-          <div class="fw-img">Image: Negotiate</div>
-          <div class="fw-num">Stage 2 · Negotiate</div>
-          <h3>Make the commitment explicit</h3>
-          <p>Co-design a clear, time-bound, accountable commitment. Make the implicit explicit.</p>
-        </div>
-        <div class="fw-quad fw-bl">
-          <div class="fw-img">Image: Confirm</div>
-          <div class="fw-num">Stage 4 · Confirm</div>
-          <h3>Confirm they are satisfied</h3>
-          <p>Confirm the customer is genuinely satisfied, and carry the learning into the next turn.</p>
-        </div>
-        <div class="fw-quad fw-br">
-          <div class="fw-img">Image: Execute</div>
-          <div class="fw-num">Stage 3 · Execute</div>
-          <h3>Get it done, keep them informed</h3>
-          <p>Carry out the commitment, and keep the customer informed the whole way through.</p>
-        </div>
+    <div class="fwb-wrap">
+      <svg class="fwb-svg" viewBox="0 0 400 400" aria-hidden="true">
+        <defs>
+          <linearGradient id="fwbG1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#dc2727"/><stop offset="100%" stop-color="#3fd0c0"/></linearGradient>
+          <marker id="fwbHead" markerWidth="7.5" markerHeight="7.5" refX="3.6" refY="3.75" orient="auto"><path d="M0.8 0.8 L6.8 3.75 L0.8 6.7 Z" fill="#3fd0c0"/></marker>
+        </defs>
+        <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="1.5"/>
+        <!-- clockwise arc + arrowhead into each next stage -->
+        <path d="M319.8 109.7 A150 150 0 0 1 319.8 290.3" fill="none" stroke="url(#fwbG1)" stroke-width="3" stroke-linecap="round" marker-end="url(#fwbHead)"/>
+        <path d="M290.3 319.8 A150 150 0 0 1 109.7 319.8" fill="none" stroke="url(#fwbG1)" stroke-width="3" stroke-linecap="round" marker-end="url(#fwbHead)"/>
+        <path d="M80.2 290.3 A150 150 0 0 1 80.2 109.7" fill="none" stroke="url(#fwbG1)" stroke-width="3" stroke-linecap="round" marker-end="url(#fwbHead)"/>
+        <path d="M109.7 80.2 A150 150 0 0 1 290.3 80.2" fill="none" stroke="url(#fwbG1)" stroke-width="3" stroke-linecap="round" marker-end="url(#fwbHead)"/>
+        <!-- stage anchor dots -->
+        <circle cx="306.07" cy="93.93" r="6" fill="#dc2727"/>
+        <circle cx="306.07" cy="306.07" r="6" fill="#dc2727"/>
+        <circle cx="93.93" cy="306.07" r="6" fill="#dc2727"/>
+        <circle cx="93.93" cy="93.93" r="6" fill="#3fd0c0"/>
+      </svg>
+      <div class="fwb-hub"><span class="v">Trust<br>Score</span></div>
+      <div class="fwb-node fwb-ne">
+        <div class="fwb-nnum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="10" x2="4" y2="14"/><line x1="9" y1="5" x2="9" y2="19"/><line x1="14" y1="8" x2="14" y2="16"/><line x1="19" y1="3" x2="19" y2="21"/></svg>Stage 1 · Listen</div>
+        <div class="fwb-nt">Hear what is really being asked</div>
+      </div>
+      <div class="fwb-node fwb-se">
+        <div class="fwb-nnum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 12"/></svg>Stage 2 · Negotiate</div>
+        <div class="fwb-nt">Make the commitment explicit</div>
+      </div>
+      <div class="fwb-node fwb-sw">
+        <div class="fwb-nnum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Stage 3 · Execute</div>
+        <div class="fwb-nt">Get it done, keep them informed</div>
+      </div>
+      <div class="fwb-node fwb-nw teal">
+        <div class="fwb-nnum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Stage 4 · Confirm</div>
+        <div class="fwb-nt">Confirm they are satisfied</div>
       </div>
     </div>
 
