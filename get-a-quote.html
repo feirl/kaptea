@@ -1458,6 +1458,7 @@
   var currentStep = 0;
   var isAnimating = false;
   var formData    = {};
+  var contactSubmitted = false;  // early lead capture fires once, even on back-and-forward
 
   bindCardClicks();
   bindKeyboardNav();
@@ -1683,6 +1684,8 @@
 
   /* ── Early lead capture: fire on step 0 exit ── */
   function submitContact() {
+    if (contactSubmitted) return;
+    contactSubmitted = true;
     var payload = {
       firstname: formData.firstname,
       lastname:  formData.lastname,
