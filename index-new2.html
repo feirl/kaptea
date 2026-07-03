@@ -1365,7 +1365,10 @@
         scrollbar-width: thin;
       }
       .hero-showcase-tab { flex-shrink: 0; }
-      .hero-showcase-slide img { max-height: 48vh; }
+      .hero-showcase-slide img { height: min(52vh, 420px); }
+      .hs-cap { padding: 44px 18px 16px; }
+      .hs-cap strong { font-size: 16px; }
+      .hs-cap span { font-size: 13px; }
       .browser-actions { display: none; }
       .platform-certs { gap: 8px 0; padding: 28px 12px 48px; }
       .platform-cert-item { padding: 6px 14px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; justify-content: center; }
@@ -1479,15 +1482,43 @@
       flex: 0 0 calc(100% / var(--hs-count));
       width: calc(100% / var(--hs-count));
       box-sizing: border-box;
+      position: relative;
     }
     .hero-showcase-slide img {
       display: block;
       width: 100%;
-      height: auto;
-      max-height: min(62vh, 620px);
+      height: min(58vh, 560px);
       object-fit: cover;
       object-position: top center;
       border-radius: 14px;
+    }
+    .hs-cap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 52px 30px 22px;
+      text-align: left;
+      line-height: normal;
+      border-radius: 0 0 14px 14px;
+      background: linear-gradient(180deg, rgba(13,15,26,0) 0%, rgba(13,15,26,0.55) 38%, rgba(13,15,26,0.9) 72%, rgba(13,15,26,0.97) 100%);
+    }
+    .hs-cap strong {
+      display: block;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: -0.01em;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .hs-cap span {
+      display: block;
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.82);
+      max-width: 620px;
+      text-wrap: balance;
     }
     .platform-eyebrow { display: none; }
     .browser-frame {
@@ -1762,12 +1793,12 @@
       <span class="hero-sms-app">Kaptea</span>
       <span class="hero-sms-time">&#183; now</span>
     </div>
-    <div class="hero-sms-bubble in">All sorted, confirmed for Tuesday 9am <span class="hero-sms-check">&#10003;</span></div>
-    <div class="hero-sms-bubble out">Perfect, see you Tuesday at 9am</div>
+    <div class="hero-sms-bubble in">Confirming that we have now completed the requested change to your reservation. <span class="hero-sms-check">&#10003;</span></div>
+    <div class="hero-sms-bubble out">Amazing. Thank you so much!</div>
   </div>
 
   <div class="inner">
-  <h1><span class="hero-h1-line1">Better customer experiences.</span><em>Built on trust.</em></h1>
+  <h1><span class="hero-h1-line1">Critical customer conversations.</span><em>Built on trust.</em></h1>
 
   <div class="hero-ctas">
     <a href="/get-started" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-primary">Get Started</a>
@@ -1784,7 +1815,7 @@
     <div class="platform-intro">
       <div class="platform-intro-label">Increase the lifetime value of your customers</div>
       <h2 class="platform-intro-title">Transform your <em>customers' experience.</em></h2>
-      <p class="platform-intro-sub">Deliver better customer experiences when your people and your AI operate as one team across every channel, while a trust layer orchestrates every commitment from first request to confirmed satisfaction.</p>
+      <p class="platform-intro-sub">Orchestrate customer conversations between human, agentic and automated workflows, across every channel and your tech stack.</p>
     </div>
     <div class="hero-showcase" data-hero-showcase style="--hs-count: 6;">
       <div class="hero-showcase-tabs" role="tablist" aria-label="Pronto product stories">
@@ -1796,13 +1827,13 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7"/><path d="M17 12H7"/></svg>
           Omni-Channel
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-2" aria-controls="hs-panel-2" aria-label="Agent Teams: specialist AI agents that work together and hand off to your people" data-slide="2">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-2" aria-controls="hs-panel-2" aria-label="Agent Connect: specialist AI agents that work together and hand off to your people" data-slide="2">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Agent Teams
+          Agent Connect
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-3" aria-controls="hs-panel-3" aria-label="AI Studio: visual drag-and-drop builder for multi-agent workflows" data-slide="3">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-3" aria-controls="hs-panel-3" aria-label="Orchestrator: visual drag-and-drop builder for multi-agent workflows" data-slide="3">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          AI Studio
+          Orchestrator
         </button>
         <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-4" aria-controls="hs-panel-4" aria-label="Memory: shared context and knowledge that keeps learning across conversations" data-slide="4">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
@@ -1817,71 +1848,31 @@
         <div class="hero-showcase-track" style="--hs-slide: 0;">
           <figure class="hero-showcase-slide" id="hs-panel-0" role="tabpanel" aria-labelledby="hs-tab-0" aria-hidden="false">
             <img src="img/illustrations/Logs-CloseUp.webp" width="1920" height="1440" alt="Trust Flywheel: every commitment tracked from request to confirmed satisfaction in Pronto" fetchpriority="high" decoding="async">
+            <figcaption class="hs-cap"><strong>Trust Flywheel</strong><span>Orchestrate and measure trust through every conversation across every agent and channel.</span></figcaption>
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-1" role="tabpanel" aria-labelledby="hs-tab-1" aria-hidden="true">
             <img src="img/illustrations/Inbox-CloseUp.webp" width="1920" height="1440" alt="Omni-channel conversations across SMS, WhatsApp, Voice, Email and video in one Pronto thread" loading="lazy" decoding="async">
+            <figcaption class="hs-cap"><strong>Omni-Channel</strong><span>Unify customer conversations across Voice, SMS, WhatsApp, email and video.</span></figcaption>
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-2" role="tabpanel" aria-labelledby="hs-tab-2" aria-hidden="true">
-            <img src="img/illustrations/AI-CloseUp.webp" width="1920" height="1440" alt="A team of specialist AI agents working together, with live agent escalation, in Pronto" loading="lazy" decoding="async">
+            <img src="img/illustrations/TeamV2.webp" width="3456" height="2168" alt="A team of specialist AI agents working together, with live agent status and task handoff, in Pronto" loading="lazy" decoding="async">
+            <figcaption class="hs-cap"><strong>Agent Connect</strong><span>Rapidly deploy AI agents that co-ordinate seamlessly with your human team across workflows.</span></figcaption>
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-3" role="tabpanel" aria-labelledby="hs-tab-3" aria-hidden="true">
-            <img src="img/illustrations/Worflows.webp" width="3456" height="2168" alt="AI Studio: visual drag-and-drop builder for multi-agent workflows in Pronto" loading="lazy" decoding="async">
+            <img src="img/illustrations/Worflows.webp" width="3456" height="2168" alt="Orchestrator: visual drag-and-drop builder for multi-agent workflows in Pronto" loading="lazy" decoding="async">
+            <figcaption class="hs-cap"><strong>Orchestrator</strong><span>Easily build multi-agent and omni-channel workflows to manage any type of conversation.</span></figcaption>
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-4" role="tabpanel" aria-labelledby="hs-tab-4" aria-hidden="true">
             <img src="img/illustrations/Deployment-CloseUp.webp" width="1920" height="1440" alt="Memory: shared customer context and knowledge bases in Pronto (placeholder image)" loading="lazy" decoding="async">
+            <figcaption class="hs-cap"><strong>Memory</strong><span>Instantly identify and access every customer's previous conversations and requests.</span></figcaption>
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-5" role="tabpanel" aria-labelledby="hs-tab-5" aria-hidden="true">
-            <img src="img/illustrations/Failover.webp" width="1920" height="1440" alt="Integrate: two-way CRM sync and carrier routing in Pronto (placeholder image)" loading="lazy" decoding="async">
+            <img src="img/illustrations/Integration-CloseUp.webp" width="1920" height="1440" alt="Integrate: API, two-way CRM sync and connected apps like Slack, Salesforce and Zendesk in Pronto" loading="lazy" decoding="async">
+            <figcaption class="hs-cap"><strong>Integrate</strong><span>Leverage 100s of out-of-the-box integrations across your entire technology stack.</span></figcaption>
           </figure>
         </div>
       </div>
     </div>
-    <div class="capabilities-grid platform-capabilities">
-
-      <div class="capability-card">
-        <div class="cap-number">Trust Flywheel</div>
-        <h3>Trust agents over every conversation</h3>
-        <div class="stat">Every commitment tracked, end to end.</div>
-        <p>A Listening, Agree, Deliver and Verify agent map to the four stages of the flywheel, with a Steward agent watching every commitment as its deadline approaches. Each promise is tracked from the first request to confirmed satisfaction, and breaches surface in real time, not after churn.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="cap-number">Omni-Channel</div>
-        <h3>One console for every channel</h3>
-        <div class="stat">Voice, SMS, WhatsApp, email and video.</div>
-        <p>Every customer conversation in one console. Your people log in to handle escalations and two-way conversations, working side by side with the AI agents you build. The human is always in the loop by design.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="cap-number">Agent Teams</div>
-        <h3>Build a team of AI agents</h3>
-        <div class="stat">Specialists that work as one team.</div>
-        <p>Create as many agents as you need, one for sales, one for service, one for support. They share the same knowledge about the customer and hand off to each other in both directions, so context carries across them and to any human who steps in.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="cap-number">AI Studio</div>
-        <h3>Visual multi-agent workflow builder</h3>
-        <div class="stat">Build agentic workflows by drag-and-drop.</div>
-        <p>Drag agents onto a canvas, connect them, drop in knowledge bases, add events and conditions, and define exactly when each agent acts and when it escalates to a person. Build one workflow or fifty and publish them live. No bespoke engineering, no specialist skills.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="cap-number">Memory</div>
-        <h3>Memory, knowledge and a co-pilot</h3>
-        <div class="stat">Built-in context that keeps learning.</div>
-        <p>Pronto remembers customers across conversations, holds shared context, and attaches knowledge bases to any agent. An AI co-pilot rewrites messages, suggests replies and manages templates, while a feedback loop turns unanswered questions into new knowledge.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="cap-number">Integrate</div>
-        <h3>An orchestrator, not a replacement</h3>
-        <div class="stat">Two-way CRM sync. Your carrier, your model.</div>
-        <p>Pronto plugs into your CRM and triggers from any event in your systems, writing results back so your stack stays the source of truth. Native connectors for Salesforce, Dynamics, HubSpot and more, plus an open API and webhooks. Bring your own carrier and your own governed model, or use ours. Nothing gets ripped out.</p>
-      </div>
-
-    </div>
-
     <div class="platform-certs" role="list" aria-label="Security certifications and partnerships">
       <div class="platform-cert-item" role="listitem">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1986,7 +1977,7 @@
   <div class="inner">
     <div class="section-label section-label-light">The Trust Flywheel</div>
     <div class="section-title section-title-light">A promise made, <em style="color:var(--kaptea-red); font-style:normal;">and a promise kept.</em></div>
-    <div class="section-sub section-sub-light">Trust is not built through good intentions, marketing or technology. It is built through evidence: when someone says they will do something, they do it. Every customer conversation is one continuous loop through four stages. Carry a commitment cleanly through all four and the loop closes, trust compounds, and the wheel spins faster. Drop a stage and the loop breaks, and trust leaks.</div>
+    <div class="section-sub section-sub-light">Trust is not built through good intentions, marketing or technology. It is built through action: when someone says they will do something, they do it. Every customer conversation is one continuous loop through four stages. Carry a commitment cleanly through all four and the loop closes, trust compounds, and the wheel spins faster. Drop a stage and the loop breaks, and trust leaks.</div>
 
     <div class="flywheel-circle">
       <div class="flywheel-quadrants">
@@ -1997,20 +1988,20 @@
           <p>Understand what the customer is actually asking for, and who they are.</p>
         </div>
         <div class="fw-quad fw-tr">
-          <div class="fw-img">Image: Agree</div>
-          <div class="fw-num">Stage 2 · Agree</div>
+          <div class="fw-img">Image: Negotiate</div>
+          <div class="fw-num">Stage 2 · Negotiate</div>
           <h3>Make the commitment explicit</h3>
           <p>Co-design a clear, time-bound, accountable commitment. Make the implicit explicit.</p>
         </div>
         <div class="fw-quad fw-bl">
-          <div class="fw-img">Image: Verify</div>
-          <div class="fw-num">Stage 4 · Verify</div>
+          <div class="fw-img">Image: Confirm</div>
+          <div class="fw-num">Stage 4 · Confirm</div>
           <h3>Confirm they are satisfied</h3>
           <p>Confirm the customer is genuinely satisfied, and carry the learning into the next turn.</p>
         </div>
         <div class="fw-quad fw-br">
-          <div class="fw-img">Image: Deliver</div>
-          <div class="fw-num">Stage 3 · Deliver</div>
+          <div class="fw-img">Image: Execute</div>
+          <div class="fw-num">Stage 3 · Execute</div>
           <h3>Get it done, keep them informed</h3>
           <p>Carry out the commitment, and keep the customer informed the whole way through.</p>
         </div>
