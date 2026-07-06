@@ -384,9 +384,9 @@
     .hero.sms-show .hero-sms { opacity: 1; transform: none; }
     /* box appears first, then each message populates in turn, like a live chat */
     .hero-sms-head, .hero-sms-bubble { opacity: 0; transform: translateY(9px); transition: opacity .45s ease, transform .45s ease; }
-    .hero.sms-show .hero-sms-head { opacity: 1; transform: none; transition-delay: .15s; }
-    .hero.sms-show .hero-sms-bubble.in { opacity: 1; transform: none; transition-delay: .55s; }
-    .hero.sms-show .hero-sms-bubble.out { opacity: 1; transform: none; transition-delay: 1.15s; }
+    .hero.sms-show .hero-sms-head { opacity: 1; transform: none; transition-delay: .1s; }
+    .hero.sms-show .hero-sms-bubble.in { opacity: 1; transform: none; transition-delay: .3s; }
+    .hero.sms-show .hero-sms-bubble.out { opacity: 1; transform: none; transition-delay: 1.6s; }
     .hero-sms-head { display: flex; align-items: center; gap: 9px; margin-bottom: 12px; }
     .hero-sms-icon { width: 34px; height: 34px; border-radius: 9px; overflow: hidden; flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
     .hero-sms-icon img { width: 100%; height: 100%; display: block; }
@@ -1794,8 +1794,10 @@
       var v = document.currentScript.previousElementSibling;
       if (!v || v.tagName !== 'VIDEO') { return; }
       var hero = v.closest('.hero');
-      var FADE = 0.9;    // seconds of fade at each edge of the loop
-      var SMS_IN = 9.0;  // point in the video where she looks at her phone (12s clip)
+      var FADE = 0.9;     // seconds of fade at each edge of the loop
+      var SMS_IN = 8.7;   // when the SMS conversation starts (she reaches her phone)
+      var SMS_OUT = 0.5;  // keep the SMS up until this close to the loop end, so the
+                          // second message has time to land before it fades away
 
       v.addEventListener('ended', function () {
         try { v.currentTime = 0; } catch (e) {}
@@ -1810,7 +1812,7 @@
           var remaining = d - t;
           var b = Math.min(1, t / FADE, remaining / FADE);
           v.style.filter = 'brightness(' + Math.max(0, b).toFixed(3) + ')';
-          if (t >= SMS_IN && remaining > FADE) {
+          if (t >= SMS_IN && remaining > SMS_OUT) {
             hero.classList.add('sms-show');
           } else {
             hero.classList.remove('sms-show');
