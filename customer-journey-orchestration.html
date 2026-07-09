@@ -149,70 +149,163 @@
 
   <style>
 
-    /* ── HERO (dark, problem-led) ── */
+    /* ── HERO (full-bleed background video) ── */
     .hero {
+      position: relative;
+      overflow: hidden;
       background:
         radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220, 39, 39, 0.18) 0%, transparent 65%),
         var(--kaptea-charcoal);
       color: var(--kaptea-white);
-      padding: 80px 40px 72px;
+      padding: 72px 40px;
+      min-height: calc(100svh - 64px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
+    .hero-video {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: 66% center;
+      z-index: 0; opacity: 0; transition: opacity .8s ease; pointer-events: none;
+    }
+    .hero-scrim {
+      position: absolute; inset: 0; z-index: 1; opacity: 0;
+      transition: opacity .8s ease; pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(19,21,33,0.82) 0%, rgba(19,21,33,0.52) 38%, rgba(19,21,33,0.08) 68%, transparent 100%),
+        linear-gradient(180deg, rgba(19,21,33,0.12) 0%, rgba(19,21,33,0.3) 100%);
+    }
+    .hero.has-hero-video .hero-video,
+    .hero.has-hero-video .hero-scrim { opacity: 1; }
+    .hero > .hero-inner, .hero > .hero-pills { position: relative; z-index: 2; }
+    @media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
+    /* SMS card (front layer) */
+    .hero-sms {
+      position: absolute; z-index: 3; right: 4%; top: 16%;
+      width: min(310px, 40vw);
+      background: rgba(19,21,33,0.42);
+      backdrop-filter: blur(14px) saturate(1.1); -webkit-backdrop-filter: blur(14px) saturate(1.1);
+      border: 1px solid rgba(255,255,255,0.16); border-radius: 18px;
+      padding: 14px 15px 16px; display: flex; flex-direction: column;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.4);
+      opacity: 0; transition: opacity .5s ease;
+    }
+    .hero.sms-show .hero-sms { opacity: 1; }
+    .hero-sms-head { display: flex; align-items: center; gap: 9px; margin-bottom: 12px; }
+    .hero-sms-icon { width: 34px; height: 34px; border-radius: 9px; overflow: hidden; flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+    .hero-sms-icon img { width: 100%; height: 100%; display: block; }
+    .hero-sms-app { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14.5px; color: #fff; }
+    .hero-sms-time { font-size: 12px; color: rgba(255,255,255,0.55); }
+    .hero-sms-bubble { font-size: 13.5px; line-height: 1.4; padding: 9px 13px; border-radius: 15px; max-width: 92%; opacity: 0; transform: translateY(9px); transition: opacity .4s ease, transform .4s ease; }
+    .hero-sms-bubble + .hero-sms-bubble { margin-top: 8px; }
+    .hero-sms-bubble.ping { opacity: 1; transform: none; }
+    .hero-sms-bubble.in { align-self: flex-start; background: #f4f5f8; color: #131521; border-bottom-left-radius: 5px; display: inline-flex; align-items: center; gap: 8px; }
+    .hero-sms-bubble.out { align-self: flex-end; background: #3fd0c0; color: #0c201c; border-bottom-right-radius: 5px; }
+    .hero-sms-check { flex-shrink: 0; width: 20px; height: 20px; border-radius: 6px; background: #3fd0c0; color: #fff; font-size: 12px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
+    @media (max-width: 900px) { .hero-sms { display: none; } }
     .hero-inner {
-      max-width: 760px;
+      width: 100%;
+      max-width: 1160px;
       margin: 0 auto;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 56px;
+      text-align: left;
     }
+    .hero-copy { flex: 0 0 52%; }
+    .hero-media { flex: 1; min-width: 0; }
     .hero-breadcrumb {
       font-size: 12px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--kaptea-tagline-grey);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
     }
     .hero-breadcrumb a { color: var(--kaptea-red); text-decoration: none; }
     .hero-breadcrumb a:hover { text-decoration: underline; }
-    .hero-breadcrumb .bc-sep { color: var(--kaptea-charcoal); }
+    .hero-breadcrumb .bc-sep { color: rgba(255,255,255,0.4); }
     .hero h1 {
-      font-size: 42px;
+      font-size: clamp(38px, 3.9vw, 52px);
       font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      line-height: 1.18;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
       margin-bottom: 20px;
       color: var(--kaptea-white);
     }
-    .hero h1 span { color: var(--kaptea-red); }
+    .hero h1 .h1-line1 { display: block; }
+    .hero h1 .h1-em { display: block; color: var(--kaptea-red); }
     .hero .hero-sub {
-      font-size: 17px;
-      color: var(--kaptea-neutral-grey);
-      line-height: 1.65;
-      margin-bottom: 32px;
+      font-size: 18px;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.6;
+      margin-bottom: 30px;
+      max-width: 560px;
     }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    /* video slot (per-use-case clip drops in here) */
+    .hero-media-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 16px;
+      background:
+        radial-gradient(ellipse at 50% 32%, rgba(220,39,39,0.12), transparent 70%),
+        linear-gradient(160deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      overflow: hidden;
+    }
+    .hero-media-frame .play {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: rgba(220,39,39,0.92);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(220,39,39,0.4);
+    }
+    .hero-media-frame .media-cap { font-size: 12.5px; color: rgba(255,255,255,0.5); letter-spacing: 0.03em; }
+    /* capability strip below the hero */
     .hero-pills {
+      width: 100%;
+      max-width: 1160px;
+      margin: 46px auto 0;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 32px;
-      justify-content: center;
+      align-items: center;
     }
+    .hero-pills-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-right: 8px; }
     .hero-pill {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 99px;
-      padding: 4px 12px;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(19, 21, 33, 0.12);
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--kaptea-charcoal);
       font-size: 12px;
       font-weight: 600;
-      color: rgba(255,255,255,0.7);
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      white-space: nowrap;
     }
-    .hero-pill svg { color: var(--kaptea-red); flex-shrink: 0; }
-    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .hero-pill svg { color: var(--kaptea-neutral-grey); flex-shrink: 0; }
+    @media (max-width: 900px) {
+      .hero-inner { flex-direction: column; gap: 40px; }
+      .hero-copy { flex: none; width: 100%; }
+      .hero-media { width: 100%; }
+    }
     /* ── CHALLENGE ── */
     .challenge {
       padding: 72px 40px;
@@ -289,11 +382,7 @@
     .solution-block.reverse { direction: rtl; }
     .solution-block.reverse > * { direction: ltr; }
     .solution-pain {
-      background: var(--kaptea-white);
-      border: 1px solid var(--kaptea-border);
-      border-left: 3px solid rgba(220,39,39,0.4);
-      border-radius: 8px;
-      padding: 24px;
+      padding: 0;
     }
     .solution-pain-label {
       font-size: 10px;
@@ -304,11 +393,23 @@
       margin-bottom: 10px;
     }
     .solution-pain p {
-      font-size: 14px;
-      color: var(--kaptea-tagline-grey);
-      line-height: 1.6;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--kaptea-charcoal);
+      line-height: 1.55;
       font-style: italic;
+      padding-left: 20px;
+      border-left: 3px solid var(--kaptea-red);
+      margin: 0;
     }
+    .solution-pain-attr {
+      font-size: 13px;
+      color: var(--kaptea-tagline-grey);
+      line-height: 1.5;
+      margin-top: 14px;
+      padding-left: 20px;
+    }
+    .solution-pain-attr strong { color: var(--kaptea-charcoal); font-weight: 700; }
     .solution-answer h3 {
       font-size: 20px;
       font-family: 'Manrope', sans-serif;
@@ -581,44 +682,115 @@
 
 <!-- HERO -->
 <section class="hero">
+  <video class="hero-video" autoplay muted playsinline preload="metadata"
+         poster="/video/cjo-hero-poster.webp"
+         onloadeddata="this.closest('.hero').classList.add('has-hero-video')">
+    <source src="/video/cjo-hero.webm" type="video/webm">
+    <source src="/video/cjo-hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-sms" aria-hidden="true">
+    <div class="hero-sms-head">
+      <span class="hero-sms-icon"><img src="/video/kaptea-app-icon.svg" alt="" width="34" height="34"></span>
+      <span class="hero-sms-app">Kaptea</span>
+      <span class="hero-sms-time">&#183; now</span>
+    </div>
+    <div class="hero-sms-bubble in" data-at="3.2">Your 18:12 to Milan is delayed.</div>
+    <div class="hero-sms-bubble in" data-at="6.4">Already finding you a better route.</div>
+    <div class="hero-sms-bubble in" data-at="9.2">Rebooked: 18:42, seat 24A, platform 5. <span class="hero-sms-check">&#10003;</span></div>
+    <div class="hero-sms-bubble out" data-at="10.7">Perfect, thank you!</div>
+  </div>
   <div class="hero-inner">
-    <div>
+    <div class="hero-copy">
       <div class="hero-breadcrumb">
         <a href="/pronto">Solutions</a>
         <span class="bc-sep">→</span>
         <span>Customer Journey Orchestration</span>
       </div>
-      <h1>End-to-end customer journeys, run from <span>one place.</span></h1>
-      <p class="hero-sub" style="margin-bottom:12px;">Reduce call abandonment and average handle time by resolving customer needs in their chosen channel, then confirming every case closed.</p>
-      <p class="hero-sub">Workflows, templates, multi-channel dispatch, branded calling, and live conversation intelligence: from the first commerce event to the moment an agent picks up the phone, the journey runs on a single governed platform.</p>
-      <div class="hero-pills">
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          Workflows
-        </span>
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Templates
-        </span>
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          Multi-Channel
-        </span>
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          Conversation Intelligence
-        </span>
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Branded Calling
-        </span>
-      </div>
+      <h1><span class="h1-line1">The complete<br>customer journey.</span><span class="h1-em">Built on trust.</span></h1>
+      <p class="hero-sub">Orchestrate every customer journey across every channel, carrying each commitment cleanly from the first event to a confirmed outcome, all on one governed platform.</p>
       <div class="hero-ctas">
         <a href="/get-started" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-primary">Get Started</a>
         <a href="/get-a-quote" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-ghost-light">Get a Quote</a>
       </div>
     </div>
   </div>
+  <div class="hero-pills">
+    <span class="hero-pills-label">Inside this solution</span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7"/><path d="M17 12H7"/></svg>
+      Omni-Channel
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M12 3v3M8 12h.01M16 12h.01M9 16h6"/></svg>
+      AI Assistants
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      Workflow Automation
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      Customer Intelligence
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      Integrations
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+      Trust &amp; Governance
+    </span>
+  </div>
+  <script>
+    /* Full-bleed hero video: clean fade-to-black loop + staggered SMS pings. */
+    (function () {
+      var v = document.currentScript.parentElement.querySelector('.hero-video');
+      if (!v) { return; }
+      var hero = v.closest('.hero');
+      var bubbles = [].slice.call(hero.querySelectorAll('.hero-sms-bubble'));
+      var sms = hero.querySelector('.hero-sms');
+      var FADE = 0.9;     // fade at each edge of the loop
+      var SMS_IN = 2.6;   // card appears just before the first ping
+      var SMS_OUT = 0.5;  // keep messages up until this close to the loop end
+
+      /* Align the SMS card's bottom edge with the bottom of the CTA buttons. */
+      function alignSms() {
+        if (!sms || getComputedStyle(sms).display === 'none') { return; }
+        var ctas = hero.querySelector('.hero-ctas');
+        if (!ctas) { return; }
+        var top = ctas.getBoundingClientRect().bottom - hero.getBoundingClientRect().top - sms.offsetHeight;
+        sms.style.top = Math.max(12, top) + 'px';
+        sms.style.bottom = 'auto';
+      }
+      window.addEventListener('load', alignSms);
+      window.addEventListener('resize', alignSms);
+      requestAnimationFrame(function () { requestAnimationFrame(alignSms); });
+
+      v.addEventListener('ended', function () {
+        try { v.currentTime = 0; } catch (e) {}
+        var p = v.play(); if (p && p.catch) { p.catch(function () {}); }
+      });
+
+      function tick() {
+        var d = v.duration;
+        if (d && !isNaN(d)) {
+          var t = v.currentTime;
+          var remaining = d - t;
+          var b = Math.min(1, t / FADE, remaining / FADE);
+          v.style.filter = 'brightness(' + Math.max(0, b).toFixed(3) + ')';
+          var live = t >= SMS_IN && remaining > SMS_OUT;
+          hero.classList.toggle('sms-show', live);
+          for (var i = 0; i < bubbles.length; i++) {
+            var at = parseFloat(bubbles[i].getAttribute('data-at')) || 0;
+            bubbles[i].classList.toggle('ping', live && t >= at);
+          }
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
 </section>
 
 
@@ -675,8 +847,8 @@
     <!-- Solution 1 -->
     <div class="solution-block">
       <div class="solution-pain">
-        <div class="solution-pain-label">Voice of customer</div>
         <p>"We needed a campaign engine that could take an order from our website, apply a voucher code, pull customer and order data from two separate APIs, populate the right template, and dispatch on the channel the customer chose. From a minimal payload all the way to full enrichment. Most platforms stop at the API call."</p>
+        <div class="solution-pain-attr"><strong>Head of CRM</strong><br>Online retailer</div>
       </div>
       <div class="solution-answer">
         <h3>Workflow-led journeys with branching logic</h3>
@@ -695,8 +867,8 @@
     <!-- Solution 2 -->
     <div class="solution-block reverse">
       <div class="solution-pain">
-        <div class="solution-pain-label">Voice of customer</div>
         <p>"We have central brand and compliance, and dozens of depots running their own promotional and transactional sends. Centrally we want consistency, locally they need autonomy. Everyone else gives us either compliance or self-service. Not both."</p>
+        <div class="solution-pain-attr"><strong>Group Marketing Director</strong><br>Multi-site retailer</div>
       </div>
       <div class="solution-answer">
         <h3>Template management as a first-class feature</h3>
@@ -715,8 +887,8 @@
     <!-- Solution 3 -->
     <div class="solution-block">
       <div class="solution-pain">
-        <div class="solution-pain-label">Voice of customer</div>
         <p>"By the time we see sentiment in our weekly report, the customer has already churned. We need to detect frustration in the moment, not in the next board pack."</p>
+        <div class="solution-pain-attr"><strong>Head of Customer Experience</strong><br>Financial services</div>
       </div>
       <div class="solution-answer">
         <h3>Conversation intelligence with live agent escalation</h3>
@@ -735,8 +907,8 @@
     <!-- Solution 4 -->
     <div class="solution-block reverse">
       <div class="solution-pain">
-        <div class="solution-pain-label">Voice of customer</div>
         <p>"Pickup rates on unidentified outbound calls were under 30%. Customers don't trust unknown numbers. We needed branded calling and branded sender, without bringing in a separate vendor for each one."</p>
+        <div class="solution-pain-attr"><strong>Head of Contact Centre</strong><br>Utilities provider</div>
       </div>
       <div class="solution-answer">
         <h3>Channel breadth and branded identity in one stack</h3>
@@ -783,7 +955,6 @@
 <section class="featured-customer">
   <div class="featured-inner">
     <div>
-      <div class="section-label">Voice of customer</div>
       <blockquote class="featured-quote">We came in looking for a multi-channel campaign tool. We left with a journey engine that connects our commerce events to live agent escalation in one workflow. The team didn't have to stitch four vendors together to get there.</blockquote>
       <div class="featured-attribution">
         <strong>Head of Customer Operations</strong><br>

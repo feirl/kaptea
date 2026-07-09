@@ -1,0 +1,175 @@
+# ============================================================================
+#  kaptea.io  .htaccess  -- legacy URL 301 redirects + host hygiene
+#  Ported from vercel.json (which only ever applied to staging, never live)
+#  plus gaps found in Google Search Console. Every destination verified 200.
+#  MERGE into the existing server .htaccess; do not blindly overwrite.
+# ============================================================================
+
+# --- 1. Canonical host + HTTPS (OPTIONAL) --------------------------------
+#  Cloudflare already 301s www -> apex on kaptea.io. Enable ONLY if you
+#  confirm it is not, to avoid redirect chains.
+#
+#  RewriteEngine On
+#  RewriteCond %{HTTP_HOST} ^www\.kaptea\.io [NC]
+#  RewriteRule ^(.*)$ https://kaptea.io/$1 [R=301,L]
+
+# --- 2. Legacy 301 redirects (mod_alias, exact-anchored) -----------------
+RedirectMatch 301 ^/blog/omnichannel-compliance-what-contact-centres-need-to-know-about-using-social-channels-like-whatsapp/?$ /blog/whatsapp-compliance
+RedirectMatch 301 ^/twilio-integrations/optimising-your-communication-through-twilios-sms-with-ms-dynamics-integration/?$ /sms-rcs
+RedirectMatch 301 ^/twilio-integrations/how-twilio-flex-integration-can-transform-contact-centre-performance/?$ /twilio-partner
+RedirectMatch 301 ^/customer-engagement/why-empathy-lies-at-the-foundation-of-superior-customer-service/?$ /blog
+RedirectMatch 301 ^/blog/the-difference-between-multichannel-and-omnichannel-customer-engagement-97796/?$ /blog/the-difference-between-multichannel-and-omnichannel-customer-engagement
+RedirectMatch 301 ^/contact-centres/radically-boost-contact-centre-productivity-with-twilio-flex/?$ /blog
+RedirectMatch 301 ^/customer-experience/how-to-use-sms-messaging-to-improve-customer-experience/?$ /blog
+RedirectMatch 301 ^/kaptea-news/how-to-improve-first-call-resolution-fcr-for-contact-centres/?$ /blog
+RedirectMatch 301 ^/contact-centres/the-benefits-of-conversational-ai-for-contact-centres/?$ /blog
+RedirectMatch 301 ^/blog/5-contact-centre-metrics-to-improve-contact-centre-productivity/?$ /blog/key-metrics-to-improve-contact-centre-productivity
+RedirectMatch 301 ^/blog/why-empathy-lies-at-the-foundation-of-superior-customer-service/?$ /blog
+RedirectMatch 301 ^/twilio-integrations/the-benefits-of-integrating-twilio-with-whatsapp/?$ /whatsapp
+RedirectMatch 301 ^/contact-centres/tips-for-hiring-and-retaining-contact-centre-agents/?$ /blog
+RedirectMatch 301 ^/customer-engagement/how-real-time-customer-engagement-can-boost-roi/?$ /blog
+RedirectMatch 301 ^/case-studies/attrix-telematics-ivr-integration-with-zendesk-copy-2/?$ /case-studies/attrix-ivr-with-zendesk
+RedirectMatch 301 ^/case-studies/attrix-telematics-ivr-integration-with-zendesk-copy-4/?$ /case-studies/attrix-ivr-with-zendesk
+RedirectMatch 301 ^/contact-centres/key-metrics-to-improve-contact-centre-productivity/?$ /blog
+RedirectMatch 301 ^/customer-engagement/essential-customer-onboarding-metrics-to-track/?$ /blog
+RedirectMatch 301 ^/kaptea-news/kaptea-certified-gold-status-twilio-consulting-partner/?$ /blog/kaptea-certified-gold-status-twilio-consulting-partner
+RedirectMatch 301 ^/blog/radically-boost-contact-centre-productivity-with-twilio-flex/?$ /blog
+RedirectMatch 301 ^/twilio-integrations/the-benefits-of-twilio-salesforce-integration/?$ /integration-api-framework
+RedirectMatch 301 ^/twilio-sms/unlocking-the-power-of-sms-messaging-through-twilio/?$ /sms-rcs
+RedirectMatch 301 ^/blog/5-contact-centre-metrics-to-improve-customer-experience/?$ /blog
+RedirectMatch 301 ^/customer-experience/personalized-customer-support-strategies/?$ /blog
+RedirectMatch 301 ^/2021/02/23/kaptea-certified-gold-twilio-consulting-partner/?$ /blog/kaptea-certified-gold-status-twilio-consulting-partner
+RedirectMatch 301 ^/blog/the-benefits-of-conversational-ai-for-contact-centres/?$ /conversational-ai
+RedirectMatch 301 ^/blog/the-benefits-of-integrating-twilio-with-whatsapp/?$ /whatsapp
+RedirectMatch 301 ^/twilio-integrations/multi-channel-customer-engagement/?$ /omni-channel-communications
+RedirectMatch 301 ^/blog/how-real-time-customer-engagement-can-boost-roi/?$ /blog
+RedirectMatch 301 ^/customer-experience/customer-experience-optimization/?$ /blog
+RedirectMatch 301 ^/blog/essential-customer-onboarding-metrics-to-track/?$ /blog
+RedirectMatch 301 ^/blog/the-benefits-of-twilio-salesforce-integration/?$ /integration-api-framework
+RedirectMatch 301 ^/customer-engagement/real-time-customer-engagement/?$ /blog
+RedirectMatch 301 ^/blog/personalized-customer-support-strategies/?$ /blog/9-personalized-customer-support-strategies-to-improve-cx
+RedirectMatch 301 ^/programmable-video/twilio-programmable-video/?$ /secure-video
+RedirectMatch 301 ^/twilio-integrations/crm-integration-services/?$ /integration-api-framework
+RedirectMatch 301 ^/twilio-integrations/integrated-crm-solutions/?$ /integration-api-framework
+RedirectMatch 301 ^/twilio-integrations/whatsapp-crm-integration/?$ /whatsapp
+RedirectMatch 301 ^/customer-trust/top-10-ways-to-destroy-trust/?$ /blog
+RedirectMatch 301 ^/2021/02/25/how-to-destroy-trust-our-top-10/?$ /blog/trust-not-a-kpi
+RedirectMatch 301 ^/contact-centres/call-center-sms-solutions/?$ /blog
+RedirectMatch 301 ^/blog/2025-guide-whatsapp-crm-integration/?$ /whatsapp
+RedirectMatch 301 ^/blog/b2b-omnichannel-messaging-strategy/?$ /blog
+RedirectMatch 301 ^/blog/multi-channel-customer-engagement/?$ /omni-channel-communications
+RedirectMatch 301 ^/blog/customer-experience-optimization/?$ /blog
+RedirectMatch 301 ^/blog/omnichannel-customer-experience/?$ /blog/the-difference-between-multichannel-and-omnichannel-customer-engagement
+RedirectMatch 301 ^/blog/whatsapp-crm-integration-legacy/?$ /blog/whatsapp-crm-integration
+RedirectMatch 301 ^/blog/omnichannel-marketing-strategy/?$ /blog/omnichannel-marketing-plan-template
+RedirectMatch 301 ^/building-a-covid-19-vaccine-process/?$ /case-studies/hse-covid-contact-tracing
+RedirectMatch 301 ^/landing/twilio-whatsapp-integration/?$ /whatsapp
+RedirectMatch 301 ^/twilio-integrations/omnichannel-crm/?$ /integration-api-framework
+RedirectMatch 301 ^/whatsapp-crm-integration-guide-2025/?$ /whatsapp
+RedirectMatch 301 ^/blog/real-time-customer-engagement/?$ /blog
+RedirectMatch 301 ^/landing/twilio-hubspot-integration/?$ /integration-api-framework
+RedirectMatch 301 ^/blog/top-10-ways-to-destroy-trust/?$ /blog/trust-not-a-kpi
+RedirectMatch 301 ^/crm-software/best-omnichannel-crm/?$ /integration-api-framework
+RedirectMatch 301 ^/blog-multichannel-vs-omnichannel/?$ /blog/the-difference-between-multichannel-and-omnichannel-customer-engagement
+RedirectMatch 301 ^/blog/omnichannel-personalization/?$ /blog/9-personalized-customer-support-strategies-to-improve-cx
+RedirectMatch 301 ^/distributed-messaging-governance/?$ /control-governance
+RedirectMatch 301 ^/twilio-sms/twilio-best-use-cases/?$ /sms-rcs
+RedirectMatch 301 ^/blog/best-omnichannel-crm-b79ed/?$ /blog/best-omnichannel-crm
+RedirectMatch 301 ^/blog/omnichannel-best-practices/?$ /blog/the-difference-between-multichannel-and-omnichannel-customer-engagement
+RedirectMatch 301 ^/category/omnichannel-engagement/?$ /blog
+RedirectMatch 301 ^/blog/twilio-programmable-video/?$ /secure-video
+RedirectMatch 301 ^/crm-software/best-whatsapp-crm/?$ /whatsapp
+RedirectMatch 301 ^/foodcloud-flex-with-salesforce/?$ /case-studies/kaptea-foodcloud-flex
+RedirectMatch 301 ^/landing/twilio-flex-deployment/?$ /twilio-partner
+RedirectMatch 301 ^/resources/iso27001-certificate/?$ /certification
+RedirectMatch 301 ^/blog/crm-integration-services/?$ /blog/integrated-crm-solutions
+RedirectMatch 301 ^/case-study-caledonian-sleeper/?$ /case-studies/caledonian-sleeper
+RedirectMatch 301 ^/hse-prog-sms-with-ms-dynamics/?$ /case-studies/hse-covid-contact-tracing
+RedirectMatch 301 ^/blog/fcr-for-contact-centres/?$ /blog/how-to-improve-first-call-resolution-fcr-for-contact-centres
+RedirectMatch 301 ^/category/twilio-integrations/?$ /integration-api-framework
+RedirectMatch 301 ^/case-study-an-post-whatsapp/?$ /case-studies/an-post-whatsapp
+RedirectMatch 301 ^/case-study-teaching-council/?$ /case-studies/teaching-council
+RedirectMatch 301 ^/category/featured-blog-post/?$ /blog
+RedirectMatch 301 ^/landing/twilio-integration/?$ /twilio-partner
+RedirectMatch 301 ^/blog-gold-partner-twilio/?$ /blog/kaptea-certified-gold-status-twilio-consulting-partner
+RedirectMatch 301 ^/blog-whatsapp-compliance/?$ /blog/whatsapp-compliance
+RedirectMatch 301 ^/category/contact-centres/?$ /blog
+RedirectMatch 301 ^/conversations-for-action/?$ /pronto
+RedirectMatch 301 ^/covid-19-contact-tracing/?$ /case-studies/hse-covid-contact-tracing
+RedirectMatch 301 ^/attrix-ivr-with-zendesk/?$ /case-studies/attrix-ivr-with-zendesk
+RedirectMatch 301 ^/blog-dedicated-instance/?$ /blog/dedicated-instance
+RedirectMatch 301 ^/ivr-voice-orchestration/?$ /voice-ivr
+RedirectMatch 301 ^/landing/twilio-partners/?$ /twilio-partner
+RedirectMatch 301 ^/landing/twilio-support/?$ /twilio-partner
+RedirectMatch 301 ^/omnichannel-engagement/?$ /blog
+RedirectMatch 301 ^/tomo-flex-with-hubspot/?$ /case-studies/tomo-flex-with-hubspot
+RedirectMatch 301 ^/blog/knowledge-centre/?$ /blog
+RedirectMatch 301 ^/blog-trust-not-a-kpi/?$ /blog/trust-not-a-kpi
+RedirectMatch 301 ^/blog/b2b-omnichannel/?$ /blog
+RedirectMatch 301 ^/blog/omnichannel-crm/?$ /blog/best-omnichannel-crm
+RedirectMatch 301 ^/proposal/success\.php/?$ /
+RedirectMatch 301 ^/case-study-tickmill/?$ /case-studies/tickmill
+RedirectMatch 301 ^/financial-solutions/?$ /industries/finance
+RedirectMatch 301 ^/technology-partners/?$ /twilio-partner
+RedirectMatch 301 ^/case-study-an-post/?$ /case-studies/an-post
+RedirectMatch 301 ^/case-study-quandoo/?$ /case-studies/quandoo
+RedirectMatch 301 ^/financial-services/?$ /industries/finance
+RedirectMatch 301 ^/landing/twilio-sms/?$ /sms-rcs
+RedirectMatch 301 ^/proposal/cover\.php/?$ /
+RedirectMatch 301 ^/proposal/index\.php/?$ /
+RedirectMatch 301 ^/resources/ces-plus/?$ /certification
+RedirectMatch 301 ^/case-study-hotbox/?$ /case-studies/hotbox
+RedirectMatch 301 ^/sitemap_index\.xml/?$ /sitemap.xml
+RedirectMatch 301 ^/case-study-eflow/?$ /case-studies/eflow
+RedirectMatch 301 ^/pricing-outcomes/?$ /pricing
+RedirectMatch 301 ^/retail-ecommerce/?$ /industries/retail-ecommerce
+RedirectMatch 301 ^/travel-transport/?$ /industries/travel-transport
+RedirectMatch 301 ^/utilities-energy/?$ /industries/utilities
+RedirectMatch 301 ^/category/blog/?$ /blog
+RedirectMatch 301 ^/cookie-policy/?$ /cookies
+RedirectMatch 301 ^/pronto-kaptea/?$ /pronto
+RedirectMatch 301 ^/public-sector/?$ /industries/public-sector
+RedirectMatch 301 ^/about-kaptea/?$ /about
+RedirectMatch 301 ^/calendly-btn/?$ /demo
+RedirectMatch 301 ^/author/alan/?$ /about
+RedirectMatch 301 ^/book-a-call/?$ /demo
+RedirectMatch 301 ^/contact-us/?$ /contact
+RedirectMatch 301 ^/free-audit/?$ /demo
+RedirectMatch 301 ^/healthcare/?$ /industries/healthcare
+RedirectMatch 301 ^/customers/?$ /case-studies
+RedirectMatch 301 ^/kaptea\.io/?$ /
+RedirectMatch 301 ^/trust-hub/?$ /security-compliance
+RedirectMatch 301 ^/about-us/?$ /about
+RedirectMatch 301 ^/home-pbm/?$ /
+RedirectMatch 301 ^/services/?$ /pronto
+RedirectMatch 301 ^/wp-admin/?$ /
+RedirectMatch 301 ^/landing/?$ /twilio-partner
+RedirectMatch 301 ^/sitemap/?$ /sitemap.xml
+RedirectMatch 301 ^/admin/?$ /
+RedirectMatch 301 ^/index/?$ /
+RedirectMatch 301 ^/login/?$ /
+RedirectMatch 301 ^/feed/?$ /blog
+RedirectMatch 301 ^/home/?$ /
+RedirectMatch 301 ^/zoe/?$ /voice-ivr
+RedirectMatch 301 ^/p/?$ /
+
+# --- pattern / WordPress catch-alls (after exacts) ---
+RedirectMatch 301 ^/conversations-for-action/page/[0-9]+/?$ /pronto
+RedirectMatch 301 ^/omnichannel-engagement/[^/]+/?$ /blog
+RedirectMatch 301 ^/blog/page/[0-9]+/?$ /blog
+RedirectMatch 301 ^/category/[^/]+/?$ /blog
+RedirectMatch 301 ^/author/[^/]+/?$ /blog
+RedirectMatch 301 ^/project_category/[^/]+(/page/[0-9]+)?/?$ /blog
+RedirectMatch 301 ^/resource/[^/]+/?$ /blog
+RedirectMatch 301 ^/page/[0-9]+/?$ /
+RedirectMatch 301 ^/wp-admin(/.*)?$ /
+RedirectMatch 301 ^/wp-json(/.*)?$ /
+RedirectMatch 301 ^/wp-content(/.*)?$ /
+RedirectMatch 301 ^/proposal(/.*)?$ /
+
+# --- 3. Truncated / never-real URLs from GSC: 410 Gone (anchored!) --------
+#  Anchored ^...$ so they can NOT match real pages like /twilio-partner
+#  or /customer-journey-orchestration.
+RedirectMatch 410 ^/customer-$
+RedirectMatch 410 ^/twilio-$
+RedirectMatch 410 ^/cdn-cgi/l/email-protection$

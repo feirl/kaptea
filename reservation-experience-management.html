@@ -105,13 +105,63 @@
 
   <style>
     .hero {
+      position: relative; overflow: hidden;
       background:
         radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.18) 0%, transparent 65%),
         var(--kaptea-charcoal);
       color: var(--kaptea-white);
-      padding: 80px 40px 72px;
+      padding: 72px 40px;
+      min-height: calc(100svh - 64px);
+      display: flex; flex-direction: column; justify-content: center;
     }
-    .hero-inner { max-width: 860px; margin: 0 auto; }
+    .hero-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position: 66% center; z-index:0; opacity:0; transition:opacity .8s ease; pointer-events:none; }
+    .hero-scrim { position:absolute; inset:0; z-index:1; opacity:0; transition:opacity .8s ease; pointer-events:none;
+      background:
+        linear-gradient(90deg, rgba(19,21,33,0.82) 0%, rgba(19,21,33,0.52) 38%, rgba(19,21,33,0.08) 68%, transparent 100%),
+        linear-gradient(180deg, rgba(19,21,33,0.12) 0%, rgba(19,21,33,0.3) 100%);
+    }
+    .hero.has-hero-video .hero-video, .hero.has-hero-video .hero-scrim { opacity:1; }
+    .hero > .hero-inner, .hero > .hero-pills { position:relative; z-index:2; }
+    @media (prefers-reduced-motion: reduce) { .hero-video { display:none; } }
+    .hero-sms { position:absolute; z-index:3; right:4%; top:16%; width:min(310px,40vw); background:rgba(19,21,33,0.42); backdrop-filter:blur(14px) saturate(1.1); -webkit-backdrop-filter:blur(14px) saturate(1.1); border:1px solid rgba(255,255,255,0.16); border-radius:18px; padding:14px 15px 16px; display:flex; flex-direction:column; box-shadow:0 18px 50px rgba(0,0,0,0.4); opacity:0; transition:opacity .5s ease; }
+    .hero.sms-show .hero-sms { opacity:1; }
+    .hero-sms-head { display:flex; align-items:center; gap:9px; margin-bottom:12px; }
+    .hero-sms-icon { width:34px; height:34px; border-radius:9px; overflow:hidden; flex-shrink:0; box-shadow:0 1px 3px rgba(0,0,0,0.3); }
+    .hero-sms-icon img { width:100%; height:100%; display:block; }
+    .hero-sms-app { font-family:'Manrope',sans-serif; font-weight:700; font-size:14.5px; color:#fff; }
+    .hero-sms-time { font-size:12px; color:rgba(255,255,255,0.55); }
+    .hero-sms-bubble { font-size:13.5px; line-height:1.4; padding:9px 13px; border-radius:15px; max-width:92%; opacity:0; transform:translateY(9px); transition:opacity .4s ease, transform .4s ease; }
+    .hero-sms-bubble + .hero-sms-bubble { margin-top:8px; }
+    .hero-sms-bubble.ping { opacity:1; transform:none; }
+    .hero-sms-bubble.in { align-self:flex-start; background:#f4f5f8; color:#131521; border-bottom-left-radius:5px; display:inline-flex; align-items:center; gap:8px; }
+    .hero-sms-bubble.out { align-self:flex-end; background:#3fd0c0; color:#0c201c; border-bottom-right-radius:5px; }
+    .hero-sms-check { flex-shrink:0; width:20px; height:20px; border-radius:6px; background:#3fd0c0; color:#fff; font-size:12px; line-height:1; display:inline-flex; align-items:center; justify-content:center; }
+    @media (max-width:900px) { .hero-sms { display:none; } }
+    .hero-inner {
+      width: 100%; max-width: 1160px; margin: 0 auto;
+      display: flex; align-items: center; gap: 56px; text-align: left;
+    }
+    .hero-copy { flex: 0 0 52%; }
+    .hero-media { flex: 1; min-width: 0; }
+    .hero-media-frame {
+      position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: 16px;
+      background:
+        radial-gradient(ellipse at 50% 32%, rgba(220,39,39,0.12), transparent 70%),
+        linear-gradient(160deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; overflow: hidden;
+    }
+    .hero-media-frame .play {
+      width: 60px; height: 60px; border-radius: 50%; background: rgba(220,39,39,0.92);
+      display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(220,39,39,0.4);
+    }
+    .hero-media-frame .media-cap { font-size: 12.5px; color: rgba(255,255,255,0.5); letter-spacing: 0.03em; }
+    @media (max-width: 900px) {
+      .hero-inner { flex-direction: column; gap: 40px; }
+      .hero-copy { flex: none; width: 100%; }
+      .hero-media { width: 100%; }
+    }
     .hero-breadcrumb {
       display: flex; align-items: center; gap: 8px;
       font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 24px;
@@ -119,8 +169,9 @@
     .hero-breadcrumb a { color: var(--kaptea-red); text-decoration: none; }
     .hero-breadcrumb a:hover { text-decoration: underline; }
     .hero h1 {
-      font-size: 44px; font-family: 'Manrope', sans-serif;
-      font-weight: 700; line-height: 1.15; margin-bottom: 20px; color: var(--kaptea-white);
+      font-size: clamp(34px, 3.4vw, 46px); font-family: 'Manrope', sans-serif;
+      font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
+      margin-bottom: 20px; color: var(--kaptea-white);
     }
     .hero h1 span { color: var(--kaptea-red); }
     .hero-stat {
@@ -132,17 +183,23 @@
     .hero-stat strong { color: #3fd0c0; font-weight: 700; }
     .hero .hero-sub {
       font-size: 18px; color: rgba(255,255,255,0.68);
-      line-height: 1.65; margin-bottom: 32px; max-width: 720px;
+      line-height: 1.6; margin-bottom: 30px; max-width: 560px;
     }
-    .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-pills {
+      width: 100%; max-width: 1160px; margin: 46px auto 0; padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    }
+    .hero-pills-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-right: 8px; }
     .hero-pill {
       display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 99px; padding: 5px 12px;
-      font-size: 12px; color: rgba(255,255,255,0.8); font-weight: 500;
+      padding: 8px 12px; border-radius: 999px;
+      border: 1px solid rgba(19, 21, 33, 0.12); background: rgba(255, 255, 255, 0.92);
+      color: var(--kaptea-charcoal); font-size: 12px; font-weight: 600; font-family: 'Inter', sans-serif;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04); white-space: nowrap;
     }
-    .hero-pill svg { color: var(--kaptea-red); flex-shrink: 0; }
-    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-pill svg { color: var(--kaptea-neutral-grey); flex-shrink: 0; }
 
     /* WEDGE */
     .wedge-band { background: var(--kaptea-charcoal); padding: 64px 40px; text-align: center; }
@@ -195,9 +252,14 @@
     .solution-block { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-bottom: 64px; align-items: start; }
     .solution-block.reverse { direction: rtl; }
     .solution-block.reverse > * { direction: ltr; }
-    .solution-pain { background: var(--kaptea-surface-muted); border-radius: 12px; padding: 28px 32px; }
-    .solution-pain-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--kaptea-neutral-grey); margin-bottom: 12px; }
-    .solution-pain p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.7; margin: 0; font-style: italic; }
+    .solution-pain { padding: 0; }
+    .solution-pain p {
+      font-size: 16px; font-weight: 500; color: var(--kaptea-charcoal);
+      line-height: 1.55; font-style: italic; padding-left: 20px;
+      border-left: 3px solid var(--kaptea-red); margin: 0;
+    }
+    .solution-pain-attr { font-size: 13px; color: var(--kaptea-tagline-grey); line-height: 1.5; margin-top: 14px; padding-left: 20px; }
+    .solution-pain-attr strong { color: var(--kaptea-charcoal); font-weight: 700; }
     .solution-answer h3 { font-size: 20px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 12px; }
     .solution-answer p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.7; margin-bottom: 16px; }
     .solution-answer ul { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
@@ -316,41 +378,112 @@
 
 <!-- HERO -->
 <section class="hero">
+  <video class="hero-video" autoplay muted playsinline preload="metadata"
+         poster="/video/res-hero-poster.webp"
+         onloadeddata="this.closest('.hero').classList.add('has-hero-video')">
+    <source src="/video/res-hero.webm" type="video/webm">
+    <source src="/video/res-hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-sms" aria-hidden="true">
+    <div class="hero-sms-head">
+      <span class="hero-sms-icon"><img src="/video/kaptea-app-icon.svg" alt="" width="34" height="34"></span>
+      <span class="hero-sms-app">Kaptea</span>
+      <span class="hero-sms-time">&#183; now</span>
+    </div>
+    <div class="hero-sms-bubble in" data-at="6.5">I've managed to find a time that works for you with the consultant.</div>
+    <div class="hero-sms-bubble in" data-at="8.6">Confirmed for 4.15pm, Suite 3. <span class="hero-sms-check">&#10003;</span></div>
+    <div class="hero-sms-bubble out" data-at="10.3">Perfect, thank you.</div>
+  </div>
   <div class="hero-inner">
-    <div class="hero-breadcrumb">
-      <a href="/pronto">Solutions</a>
-      <span style="opacity:0.4;">&#8250;</span>
-      <span>Reservation Experience Management</span>
-    </div>
-    <h1>The booking is a promise.<br><span>Keeping it is the whole experience.</span></h1>
-    <p class="hero-sub">From the moment of booking to the customer-confirmed end of the experience, Kaptea orchestrates every reminder, change, disruption and follow-up across SMS, WhatsApp, voice and email. One platform for the journey that happens after the click.</p>
-    <div class="hero-pills">
-      <span class="hero-pill">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
-        Pre-arrival journeys
-      </span>
-      <span class="hero-pill">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        No-show reduction
-      </span>
-      <span class="hero-pill">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Agentic voice
-      </span>
-      <span class="hero-pill">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        Disruption &amp; rebooking
-      </span>
-      <span class="hero-pill">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        Confirmed closure
-      </span>
-    </div>
-    <div class="hero-ctas">
-      <a href="/get-started" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-primary">Get Started</a>
-      <a href="/get-a-quote" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-ghost-light">Get a Quote</a>
+    <div class="hero-copy">
+      <div class="hero-breadcrumb">
+        <a href="/pronto">Solutions</a>
+        <span style="opacity:0.4;">&#8250;</span>
+        <span>Reservation Experience Management</span>
+      </div>
+      <h1>The booking is a promise.<br><span>Keeping it is the whole experience.</span></h1>
+      <p class="hero-sub">From booking to confirmed outcome, orchestrate every reminder, change, disruption and follow-up across SMS, WhatsApp, voice and email, so every promise you make is one you keep.</p>
+      <div class="hero-ctas">
+        <a href="/get-started" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-primary">Get Started</a>
+        <a href="/get-a-quote" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-ghost-light">Get a Quote</a>
+      </div>
     </div>
   </div>
+  <div class="hero-pills">
+    <span class="hero-pills-label">Inside this solution</span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7"/><path d="M17 12H7"/></svg>
+      Omni-Channel
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M12 3v3M8 12h.01M16 12h.01M9 16h6"/></svg>
+      AI Assistants
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      Workflow Automation
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      Customer Intelligence
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      Integrations
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+      Trust &amp; Governance
+    </span>
+  </div>
+  <script>
+    /* Full-bleed hero video: clean fade-to-black loop + staggered SMS pings. */
+    (function () {
+      var v = document.currentScript.parentElement.querySelector('.hero-video');
+      if (!v) { return; }
+      var hero = v.closest('.hero');
+      var bubbles = [].slice.call(hero.querySelectorAll('.hero-sms-bubble'));
+      var sms = hero.querySelector('.hero-sms');
+      var FADE = 0.9;
+      var SMS_IN = 6.0;
+      var SMS_OUT = 0.5;
+
+      /* Align the SMS card's bottom edge with the bottom of the CTA buttons. */
+      function alignSms() {
+        if (!sms || getComputedStyle(sms).display === 'none') { return; }
+        var ctas = hero.querySelector('.hero-ctas');
+        if (!ctas) { return; }
+        var top = ctas.getBoundingClientRect().bottom - hero.getBoundingClientRect().top - sms.offsetHeight;
+        sms.style.top = Math.max(12, top) + 'px';
+        sms.style.bottom = 'auto';
+      }
+      window.addEventListener('load', alignSms);
+      window.addEventListener('resize', alignSms);
+      requestAnimationFrame(function () { requestAnimationFrame(alignSms); });
+      v.addEventListener('ended', function () {
+        try { v.currentTime = 0; } catch (e) {}
+        var p = v.play(); if (p && p.catch) { p.catch(function () {}); }
+      });
+      function tick() {
+        var d = v.duration;
+        if (d && !isNaN(d)) {
+          var t = v.currentTime;
+          var remaining = d - t;
+          var b = Math.min(1, t / FADE, remaining / FADE);
+          v.style.filter = 'brightness(' + Math.max(0, b).toFixed(3) + ')';
+          var live = t >= SMS_IN && remaining > SMS_OUT;
+          hero.classList.toggle('sms-show', live);
+          for (var i = 0; i < bubbles.length; i++) {
+            var at = parseFloat(bubbles[i].getAttribute('data-at')) || 0;
+            bubbles[i].classList.toggle('ping', live && t >= at);
+          }
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
 </section>
 
 
@@ -432,8 +565,8 @@
 
     <div class="solution-block">
       <div class="solution-pain">
-        <div class="solution-pain-label">Head of guest experience</div>
         <p>"We have a great booking flow and a great venue. The bit in between, everything from confirmation to arrival, is held together with spreadsheets, a shared inbox and whoever is on shift. It is the part our guests actually feel, and it is the part we have least control over."</p>
+        <div class="solution-pain-attr"><strong>Head of guest experience</strong><br>Hotel group</div>
       </div>
       <div class="solution-answer">
         <h3>Whole-journey orchestration: before, during and after</h3>
@@ -451,8 +584,8 @@
 
     <div class="solution-block reverse">
       <div class="solution-pain">
-        <div class="solution-pain-label">Operations director</div>
         <p>"Seventy percent of callers press zero to reach a person. Our team is on the floor, not on the phones. Every missed call is a booking we did not take, a change we did not make, or a guest we left frustrated before they even arrived."</p>
+        <div class="solution-pain-attr"><strong>Operations director</strong><br>Events &amp; venues</div>
       </div>
       <div class="solution-answer">
         <h3>Voice first: replace the broken IVR with agentic voice</h3>
@@ -470,8 +603,8 @@
 
     <div class="solution-block">
       <div class="solution-pain">
-        <div class="solution-pain-label">Revenue manager</div>
         <p>"No-shows are just a number we accept now. We know a reminder would help, but nobody has time to build it, and the reminders our booking tool sends are ignored because there is no easy way to act on them."</p>
+        <div class="solution-pain-attr"><strong>Revenue manager</strong><br>Restaurant group</div>
       </div>
       <div class="solution-answer">
         <h3>No-show reduction and one-tap rebooking</h3>
@@ -489,8 +622,8 @@
 
     <div class="solution-block reverse">
       <div class="solution-pain">
-        <div class="solution-pain-label">Guest service centre lead</div>
         <p>"When something goes wrong overnight, there is no automation at all. We have two or three people manually messaging hundreds of guests across four systems while the phones light up. By the time we have told everyone, the situation has already changed again."</p>
+        <div class="solution-pain-attr"><strong>Guest service centre lead</strong><br>Travel operator</div>
       </div>
       <div class="solution-answer">
         <h3>Disruption, recovery and customer-confirmed closure</h3>
@@ -574,7 +707,6 @@
 <section class="featured-customer">
   <div class="featured-inner">
     <div>
-      <div class="section-label">Voice of customer</div>
       <blockquote class="featured-quote">I wouldn't even hesitate, and I proactively recommend them. The biggest value is the responsiveness: they understand what we are actually trying to achieve, then build the solution to address that need.</blockquote>
       <p class="featured-attribution">
         <strong>Commercial Lead</strong><br>
