@@ -1319,11 +1319,10 @@
         transition: all 0.3s;
       }
 
-      .hero { min-height: calc(100svh - 64px); box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px 20px 30px; overflow: hidden; }
+      .hero { min-height: calc(100svh - 64px); box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; padding: 22px 20px 40px; }
       .hero > .inner { display: flex; flex-direction: column; flex: none; width: 100%; }
       .hero h1 { font-size: 34px; margin: 0; }
-      .hero .hero-sub { display: none; }
-      .hero-ctas { display: none; }
+      .hero .hero-sub { display: block; font-size: 15px; line-height: 1.6; margin: 16px 0 22px; }
       .cert-strip-inner { gap: 16px; }
       .cert-item { font-size: 11px; }
       .cert-divider { display: none; }
@@ -1808,6 +1807,25 @@
       var SMS_IN = 8.7;   // when the SMS conversation starts (she reaches her phone)
       var SMS_OUT = 0.5;  // keep the SMS up until this close to the loop end, so the
                           // second message has time to land before it fades away
+
+      /* Mobile: push the hero content down so the H1 sits at the bottom of the
+         first screen, with the sub-headline and CTAs just below the fold. */
+      function positionMobileHero() {
+        hero.style.paddingTop = '';
+        if (window.innerWidth > 768) { return; }
+        var h1 = hero.querySelector('h1');
+        if (!h1) { return; }
+        var current = h1.getBoundingClientRect().bottom;
+        var target = window.innerHeight - 12;
+        var delta = target - current;
+        if (delta > 8) {
+          var base = parseFloat(getComputedStyle(hero).paddingTop) || 0;
+          hero.style.paddingTop = (base + delta) + 'px';
+        }
+      }
+      window.addEventListener('load', positionMobileHero);
+      window.addEventListener('resize', positionMobileHero);
+      requestAnimationFrame(function () { requestAnimationFrame(positionMobileHero); });
 
       v.addEventListener('ended', function () {
         try { v.currentTime = 0; } catch (e) {}
