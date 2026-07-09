@@ -200,6 +200,14 @@
       box-shadow: 0 1px 2px rgba(0,0,0,0.04); white-space: nowrap;
     }
     .hero-pill svg { color: var(--kaptea-neutral-grey); flex-shrink: 0; }
+    @media (max-width: 768px) {
+      /* mobile: let the video rise to the top, show only the H1 pushed to the bottom */
+      .hero { justify-content: flex-end; padding: 64px 20px 32px; }
+      .hero .hero-sub { display: none; }
+      .hero-pills { display: none; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas a { text-align: center; justify-content: center; }
+    }
 
     /* WEDGE */
     .wedge-band { background: var(--kaptea-charcoal); padding: 64px 40px; text-align: center; }
@@ -397,11 +405,6 @@
   </div>
   <div class="hero-inner">
     <div class="hero-copy">
-      <div class="hero-breadcrumb">
-        <a href="/pronto">Solutions</a>
-        <span style="opacity:0.4;">&#8250;</span>
-        <span>Reservation Experience Management</span>
-      </div>
       <h1>The booking is a promise.<br><span>Keeping it is the whole experience.</span></h1>
       <p class="hero-sub">From booking to confirmed outcome, orchestrate every reminder, change, disruption and follow-up across SMS, WhatsApp, voice and email, so every promise you make is one you keep.</p>
       <div class="hero-ctas">

@@ -306,6 +306,14 @@
       .hero-copy { flex: none; width: 100%; }
       .hero-media { width: 100%; }
     }
+    @media (max-width: 768px) {
+      /* mobile: let the video rise to the top, show only the H1 pushed to the bottom */
+      .hero { justify-content: flex-end; padding: 64px 20px 32px; }
+      .hero .hero-sub { display: none; }
+      .hero-pills { display: none; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas a { text-align: center; justify-content: center; }
+    }
     /* ── CHALLENGE ── */
     .challenge {
       padding: 72px 40px;
@@ -702,11 +710,6 @@
   </div>
   <div class="hero-inner">
     <div class="hero-copy">
-      <div class="hero-breadcrumb">
-        <a href="/pronto">Solutions</a>
-        <span class="bc-sep">→</span>
-        <span>Customer Journey Orchestration</span>
-      </div>
       <h1><span class="h1-line1">The complete<br>customer journey.</span><span class="h1-em">Built on trust.</span></h1>
       <p class="hero-sub">Orchestrate every customer journey across every channel, carrying each commitment cleanly from the first event to a confirmed outcome, all on one governed platform.</p>
       <div class="hero-ctas">
