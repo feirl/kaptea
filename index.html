@@ -397,7 +397,7 @@
     .hero-sms-bubble.out { align-self: flex-end; margin-top: 8px; background: #3fd0c0; color: #0c201c; border-bottom-right-radius: 5px; }
     .hero-sms-check { flex-shrink: 0; width: 20px; height: 20px; border-radius: 6px; background: #3fd0c0; color: #fff; font-size: 12px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
     @media (max-width: 768px) {
-      .hero-sms { top: 13%; bottom: auto; right: 4%; left: auto; width: min(300px, 84vw); }
+      .hero-sms { position: static; inset: auto; width: 100%; max-width: 330px; margin: 0 0 16px; align-self: flex-start; }
     }
 
     /* Certification strip below logo bar */
@@ -1319,10 +1319,11 @@
         transition: all 0.3s;
       }
 
-      .hero { min-height: calc(100svh - 64px); box-sizing: border-box; display: flex; flex-direction: column; padding: 22px 20px 30px; overflow: hidden; }
-      .hero > .inner { display: flex; flex-direction: column; flex: 1; width: 100%; }
-      .hero h1 { font-size: 34px; margin-top: auto; }
+      .hero { min-height: calc(100svh - 64px); box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px 20px 30px; overflow: hidden; }
+      .hero > .inner { display: flex; flex-direction: column; flex: none; width: 100%; }
+      .hero h1 { font-size: 34px; margin: 0; }
       .hero .hero-sub { display: none; }
+      .hero-ctas { display: none; }
       .cert-strip-inner { gap: 16px; }
       .cert-item { font-size: 11px; }
       .cert-divider { display: none; }
