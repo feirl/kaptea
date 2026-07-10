@@ -347,6 +347,7 @@
     .hero-video {
       position: absolute; inset: 0; width: 100%; height: 100%;
       object-fit: cover; object-position: 72% 50%;
+      transform: translateY(-9%) scale(1.2);
       z-index: 0; opacity: 0; transition: opacity .8s ease;
       pointer-events: none;
     }
@@ -477,9 +478,10 @@
     .hero .hero-sub {
       font-size: 19px;
       color: rgba(255,255,255,0.72);
-      max-width: 620px;
+      max-width: 460px;
       margin: 0 0 34px;
       line-height: 1.55;
+      text-wrap: balance;
       text-shadow: 0 1px 12px rgba(0,0,0,0.4);
     }
     .hero h1 .hero-h1-line1 {
@@ -1319,7 +1321,7 @@
         transition: all 0.3s;
       }
 
-      .hero { min-height: calc(100svh - 64px); box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; padding: 22px 20px 40px; }
+      .hero { min-height: calc(100svh - 64px); box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; padding: 22px 20px 40px; overflow: hidden; }
       .hero > .inner { display: flex; flex-direction: column; flex: none; width: 100%; }
       .hero h1 { font-size: clamp(36px, 11vw, 48px); margin: 0; }
       .hero .hero-sub { display: block; font-size: 15px; line-height: 1.6; margin: 16px 0 22px; }
@@ -1865,9 +1867,9 @@
   </div>
 
   <div class="inner">
-  <h1><span class="hero-h1-line1">Critical customer conversations.</span><em>Built on trust.</em></h1>
+  <h1><span class="hero-h1-line1">Critical customer conversations.</span><em>Built on Twilio.</em></h1>
 
-  <p class="hero-sub">Orchestrate customer conversations between human, agentic and automated workflows, across every channel and your tech stack.</p>
+  <p class="hero-sub">Easily orchestrate customer conversations across human, agentic and automated workflows.</p>
 
   <div class="hero-ctas">
     <a href="/get-started" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-primary">Get Started</a>
@@ -2105,6 +2107,80 @@
     </div>
 
     <p class="flywheel-score">The metric that falls out of the flywheel is a <strong>live trust score</strong>, built from closed loops versus broken loops, and visible for every customer and every conversation.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     BUILT ON TWILIO
+════════════════════════════════════════════════════ -->
+<style>
+  .tw-band { background: #f7f8fa; padding: 88px 40px; border-top: 1px solid #eceef2; }
+  .tw-inner { max-width: 1080px; margin: 0 auto; }
+  .tw-head { text-align: center; max-width: 780px; margin: 0 auto 40px; }
+  .tw-badges { display: flex; gap: 10px; justify-content: center; align-items: center; margin-bottom: 22px; flex-wrap: wrap; }
+  .tw-badge { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #e2e5ea; border-radius: 99px; padding: 8px 15px; font-size: 13px; font-weight: 600; color: var(--kaptea-charcoal); box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .tw-badge img { height: 15px; width: auto; display: block; }
+  .tw-badge svg { width: 15px; height: 15px; color: var(--kaptea-red); flex-shrink: 0; }
+  .tw-emblems { display: flex; gap: 20px; justify-content: center; align-items: center; margin-bottom: 26px; flex-wrap: wrap; }
+  .tw-emblems a { display: block; line-height: 0; transition: transform 0.18s ease; border-radius: 8px; }
+  .tw-emblems a:hover { transform: translateY(-3px); }
+  .tw-emblems a:focus-visible { outline: 2px solid var(--kaptea-red); outline-offset: 4px; }
+  .tw-emblems img { width: 78px; height: auto; display: block; filter: drop-shadow(0 7px 16px rgba(0,0,0,0.14)); }
+  @media (max-width: 520px) { .tw-emblems img { width: 66px; } }
+  .tw-title { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 42px); letter-spacing: -0.02em; line-height: 1.12; color: var(--kaptea-charcoal); margin: 0 0 20px; }
+  .tw-title em { color: var(--kaptea-red); font-style: normal; }
+  .tw-lead { font-size: 17.5px; line-height: 1.65; color: var(--kaptea-tagline-grey); margin: 0; }
+  .tw-callout { max-width: 860px; margin: 0 auto 44px; background: var(--kaptea-charcoal); border-radius: 18px; padding: 30px 34px; text-align: center; box-shadow: 0 22px 50px rgba(19,21,33,0.14); }
+  .tw-callout .tc-title { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 23px; color: #fff; margin: 0 0 9px; letter-spacing: -0.01em; }
+  .tw-callout .tc-title em { color: #3fd0c0; font-style: normal; }
+  .tw-callout p { font-size: 15px; color: rgba(255,255,255,0.72); line-height: 1.6; margin: 0 auto; max-width: 660px; }
+  .tw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .tw-card { background: #fff; border: 1px solid #eceef2; border-radius: 16px; padding: 28px; }
+  .tw-card .tw-ic { width: 44px; height: 44px; border-radius: 12px; background: rgba(220,39,39,0.10); color: var(--kaptea-red); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .tw-card .tw-ic svg { width: 22px; height: 22px; }
+  .tw-card h3 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 18px; color: var(--kaptea-charcoal); margin: 0 0 9px; }
+  .tw-card p { font-size: 14.5px; line-height: 1.6; color: var(--kaptea-tagline-grey); margin: 0; }
+  .tw-cta { text-align: center; margin-top: 40px; }
+  @media (max-width: 820px) { .tw-grid { grid-template-columns: 1fr; } .tw-band { padding: 64px 20px; } }
+</style>
+<section class="tw-band" aria-label="Built on Twilio">
+  <div class="tw-inner">
+    <div class="tw-head">
+      <div class="tw-emblems">
+        <a href="/twilio-partner" aria-label="Twilio Gold Partner: see our Twilio credentials"><img src="/img/badges/twilio-gold-consulting.svg" alt="Twilio Gold Partner" width="78" height="76"></a>
+        <a href="/twilio-partner" aria-label="Twilio AI Certified: see our Twilio credentials"><img src="/img/badges/twilio-ai-certified.svg" alt="Twilio AI Certified" width="78" height="76"></a>
+        <a href="/twilio-partner" aria-label="Top 10 Global Twilio Partner: see our Twilio credentials"><img src="/img/badges/twilio-top10-global.svg" alt="Top 10 Global Twilio Partner" width="78" height="76"></a>
+      </div>
+      <h2 class="tw-title">You run on Twilio. <em>We make it deliver agentic workflows.</em></h2>
+      <p class="tw-lead">You have invested in Twilio for your contact centre. Now you want agentic workflows, deeply integrated with your CRM, your systems and your teams. Building that in-house is a long engineering project. Kaptea designs and builds Twilio-based workflows for a living, and our platform lets you configure them, so you reach the outcomes you need quickly, easily and at lower cost.</p>
+    </div>
+
+    <div class="tw-callout">
+      <div class="tc-title">Configuration, <em>not customisation.</em></div>
+      <p>You configure the outcomes you need from a pre-built suite of integrations and workflow building blocks. Ready to run, and simple to change as your needs evolve.</p>
+    </div>
+
+    <div class="tw-grid">
+      <div class="tw-card">
+        <div class="tw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Gold Partner, AI Certified</h3>
+        <p>Twilio Gold Consulting Partner and AI Partner. The deepest Twilio expertise, applied directly to your stack.</p>
+      </div>
+      <div class="tw-card">
+        <div class="tw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></div>
+        <h3>Configure to your outcomes</h3>
+        <p>Start from a pre-built suite of integrations and workflow blocks. Configure the outcomes you need, ready to run.</p>
+      </div>
+      <div class="tw-card">
+        <div class="tw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>To market faster, for less</h3>
+        <p>What an internal team measures in months of engineering, you stand up in a fraction of the time and cost.</p>
+      </div>
+    </div>
+
+    <div class="tw-cta">
+      <a href="/twilio-partner" class="btn-primary">See how we build on Twilio</a>
+    </div>
   </div>
 </section>
 
