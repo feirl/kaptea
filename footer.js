@@ -62,6 +62,10 @@
       font-weight: 500;
     }
     .footer-cert svg { flex-shrink: 0; color: rgba(255,255,255,0.25); }
+    .footer-badges { display: flex; gap: 10px; margin-top: 16px; }
+    .footer-badges a { display: block; line-height: 0; transition: transform .15s ease; }
+    .footer-badges a:hover { transform: translateY(-2px); }
+    .footer-badges img { width: 46px; height: auto; display: block; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)); }
     .footer-social {
       display: flex;
       gap: 12px;
@@ -377,7 +381,11 @@
           <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> ISO 27001 Certified</div>
           <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Cyber Essentials Plus</div>
           <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> CREST Accredited</div>
-          <div class="footer-cert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Twilio Gold &amp; AI Partner</div>
+        </div>
+        <div class="footer-badges">
+          <a href="/twilio-partner" aria-label="Twilio Gold Partner"><img src="/img/badges/twilio-gold-consulting.svg" alt="Twilio Gold Partner" width="46" height="45"></a>
+          <a href="/twilio-partner" aria-label="Twilio AI Certified"><img src="/img/badges/twilio-ai-certified.svg" alt="Twilio AI Certified" width="46" height="45"></a>
+          <a href="/twilio-partner" aria-label="Top 10 Global Twilio Partner"><img src="/img/badges/twilio-top10-global.svg" alt="Top 10 Global Twilio Partner" width="46" height="45"></a>
         </div>
         <div class="footer-social">
           <a href="https://www.linkedin.com/company/kaptea" target="_blank" rel="noopener" aria-label="Kaptea on LinkedIn">
