@@ -669,6 +669,27 @@
       .reassurance { gap: 16px; flex-direction: column; align-items: center; }
     }
     a { transition: color 0.15s ease; }
+  /* Built on Twilio band */
+  .tw-band { background: #f7f8fa; padding: 88px 40px; border-top: 1px solid #eceef2; }
+  .tw-inner { max-width: 1080px; margin: 0 auto; }
+  .tw-head { text-align: center; max-width: 780px; margin: 0 auto 40px; }
+  .tw-emblems { display: flex; gap: 20px; justify-content: center; align-items: center; margin-bottom: 26px; flex-wrap: wrap; }
+  .tw-emblems a { display: block; line-height: 0; transition: transform 0.18s ease; border-radius: 8px; }
+  .tw-emblems a:hover { transform: translateY(-3px); }
+  .tw-emblems a:focus-visible { outline: 2px solid var(--kaptea-red); outline-offset: 4px; }
+  .tw-emblems img { width: 78px; height: auto; display: block; filter: drop-shadow(0 7px 16px rgba(0,0,0,0.14)); }
+  @media (max-width: 520px) { .tw-emblems img { width: 66px; } }
+  .tw-title { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.02em; line-height: 1.12; color: var(--kaptea-charcoal); margin: 0 0 20px; }
+  .tw-title em { color: var(--kaptea-red); font-style: normal; }
+  .tw-lead { font-size: 17.5px; line-height: 1.65; color: var(--kaptea-tagline-grey); margin: 0; }
+  .tw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .tw-card { background: #fff; border: 1px solid #eceef2; border-radius: 16px; padding: 28px; text-align: left; }
+  .tw-card .tw-ic { width: 44px; height: 44px; border-radius: 12px; background: rgba(220,39,39,0.10); color: var(--kaptea-red); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .tw-card .tw-ic svg { width: 22px; height: 22px; }
+  .tw-card h3 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 18px; color: var(--kaptea-charcoal); margin: 0 0 9px; }
+  .tw-card p { font-size: 14.5px; line-height: 1.6; color: var(--kaptea-tagline-grey); margin: 0; }
+  .tw-cta { text-align: center; margin-top: 40px; }
+  @media (max-width: 820px) { .tw-grid { grid-template-columns: 1fr; } .tw-band { padding: 64px 20px; } }
   </style>
 
   <!-- GA4 loaded globally by footer.js with Consent Mode v2 -->
@@ -711,7 +732,7 @@
   <div class="hero-inner">
     <div class="hero-copy">
       <h1><span class="h1-line1">The complete<br>customer journey.</span><span class="h1-em">Built on trust.</span></h1>
-      <p class="hero-sub">Orchestrate every customer journey across every channel, carrying each commitment cleanly from the first event to a confirmed outcome, all on one governed platform.</p>
+      <p class="hero-sub">Orchestrate every customer journey across human, agentic and automated workflows, carrying each commitment from the first event to a confirmed outcome, on the Twilio you already trust.</p>
       <div class="hero-ctas">
         <a href="/get-started" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-primary">Get Started</a>
         <a href="/get-a-quote" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-ghost-light">Get a Quote</a>
@@ -801,7 +822,7 @@
 <section class="challenge">
   <div class="challenge-inner">
     <div class="section-label">The challenge</div>
-    <h2>Multichannel isn't journey orchestration. Most stacks stitch four tools together and call it a journey.</h2>
+    <h2>Multichannel is table stakes. Journey orchestration is the difference.</h2>
     <div class="challenge-grid">
 
       <div class="challenge-card">
@@ -986,12 +1007,50 @@
 </section>
 
 
+<!-- BUILT ON TWILIO -->
+<section class="tw-band" aria-label="Built on Twilio">
+  <div class="tw-inner">
+    <div class="tw-head">
+      <div class="tw-emblems">
+        <a href="/twilio-partner" aria-label="Twilio Gold Partner: see our Twilio credentials"><img src="/img/badges/twilio-gold-consulting.svg" alt="Twilio Gold Partner" width="78" height="76"></a>
+        <a href="/twilio-partner" aria-label="Twilio AI Certified: see our Twilio credentials"><img src="/img/badges/twilio-ai-certified.svg" alt="Twilio AI Certified" width="78" height="76"></a>
+        <a href="/twilio-partner" aria-label="Top 10 Global Twilio Partner: see our Twilio credentials"><img src="/img/badges/twilio-top10-global.svg" alt="Top 10 Global Twilio Partner" width="78" height="76"></a>
+      </div>
+      <h2 class="tw-title">You run on Twilio. <em>We make it easy to deploy agentic workflows.</em></h2>
+      <p class="tw-lead">Kaptea's Pronto platform runs on the Twilio you already trust. Bring your own Twilio account and orchestrate conversations across human, agentic and automated workflows, configured to the outcomes you need, quickly and easily.</p>
+    </div>
+
+    <div class="tw-grid">
+      <div class="tw-card">
+        <div class="tw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Gold, AI Certified, top 10 globally</h3>
+        <p>A Twilio Gold Consulting Partner and AI Certified. Fewer than ten partners worldwide hold both, placing Kaptea among Twilio's top 10 globally for agentic customer conversations.</p>
+      </div>
+      <div class="tw-card">
+        <div class="tw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></div>
+        <h3>Configured to your outcomes</h3>
+        <p>Start from a pre-built suite of integrations and workflow blocks, then configure the outcomes you need. Ready to run, and simple to evolve as you grow.</p>
+      </div>
+      <div class="tw-card">
+        <div class="tw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Easier to launch, easier to run</h3>
+        <p>Configured on the Twilio you already trust, your agentic workflows go live in a fraction of the time and stay simple for your team to adapt as you grow.</p>
+      </div>
+    </div>
+
+    <div class="tw-cta">
+      <a href="/twilio-partner" class="btn-primary">See how we build on Twilio</a>
+    </div>
+  </div>
+</section>
+
+
 <!-- TRUST -->
 <section class="trust-section">
   <div class="trust-inner">
     <div class="section-label">Security &amp; compliance</div>
     <h2>Built for regulated environments</h2>
-    <p>Kaptea's security posture is designed for industries where trust isn't optional, and where regulators expect evidence, not assurance.</p>
+    <p>Kaptea's security posture is designed for industries where trust is everything, and regulators expect evidence they can audit.</p>
     <div class="trust-grid">
 
       <div class="trust-card">
