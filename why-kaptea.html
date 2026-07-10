@@ -95,7 +95,7 @@
     .tco-inner { max-width: 1080px; margin: 0 auto; }
     .tco h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 12px; }
     .tco > .tco-inner > p { font-size: 15px; color: var(--kaptea-tagline-grey); margin-bottom: 36px; max-width: 600px; line-height: 1.6; }
-    .tco-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .tco-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .tco-card { padding: 28px; background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 8px; text-align: center; }
     .tco-card h3 { font-size: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; color: #dc2626; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
     .tco-card p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.6; }
@@ -142,17 +142,15 @@
     .certs-inner { max-width: 1080px; margin: 0 auto; }
     .certs h2 { font-size: 24px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 36px; }
     .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .certs-twilio { margin-top: 44px; text-align: center; }
-    .certs-twilio-badges { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
-    .certs-twilio-badges a { display: block; line-height: 0; transition: transform .15s ease; }
-    .certs-twilio-badges a:hover { transform: translateY(-3px); }
-    .certs-twilio-badges img { width: 92px; height: auto; display: block; filter: drop-shadow(0 8px 18px rgba(0,0,0,0.12)); }
-    .certs-twilio-cap { font-size: 13px; color: var(--kaptea-neutral-grey); }
-    .certs-twilio-cap a { color: var(--kaptea-red); font-weight: 600; text-decoration: none; }
+    .cert-badge { height: 78px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .cert-badge img { height: 78px; width: auto; display: block; filter: drop-shadow(0 6px 14px rgba(0,0,0,0.12)); }
+    .certs-note { margin-top: 30px; text-align: center; font-size: 13px; color: var(--kaptea-neutral-grey); }
+    .certs-note a { color: var(--kaptea-red); font-weight: 600; text-decoration: none; }
     .cert-card { padding: 24px; background: var(--kaptea-surface-muted); border: 1px solid var(--kaptea-border); border-radius: 8px; text-align: center; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
     .cert-card:hover { border-color: var(--kaptea-red); box-shadow: 0 4px 16px rgba(220,39,39,0.07); transform: translateY(-2px); }
-    .cert-card-logo { height: 56px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
-    .cert-card-logo img { max-height: 56px; max-width: 120px; width: auto; object-fit: contain; }
+    a.cert-card { display: block; text-decoration: none; color: inherit; }
+    .cert-card-logo { height: 78px; width: 78px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; background: #fff; border: 1px solid var(--kaptea-border); border-radius: 14px; padding: 13px; }
+    .cert-card-logo img { max-height: 100%; max-width: 100%; width: auto; object-fit: contain; }
     .cert-card h3 { font-size: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 4px; }
     .cert-card p { font-size: 12px; color: var(--kaptea-tagline-grey); line-height: 1.5; }
 
@@ -427,7 +425,39 @@
         "name": "How is Kaptea's instance model different from shared-tenancy platforms?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "On shared-tenancy platforms, your messages move through pooled infrastructure alongside other organisations' traffic. On Kaptea, you receive a dedicated instance: your own environment, your own carrier configuration, your own data residency. That isolation is what makes compliance reporting clean and what eliminates the noisy-neighbour delivery risks that plague shared systems."
+          "text": "On shared-tenancy platforms, your messages move through pooled infrastructure alongside other organisations' traffic. On Kaptea, you receive a dedicated instance: your own environment, your own Twilio configuration, your own data residency. That isolation keeps compliance reporting clean and delivery predictable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can we go live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because Kaptea's Pronto platform is pre-built on Twilio, a dedicated instance configured to your channels, workflows and compliance requirements goes live in hours. Your team configures the outcomes you need; Kaptea handles the build, number porting and CRM integration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Twilio products does Kaptea support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kaptea orchestrates the full Twilio stack, including Programmable Messaging, Programmable Voice, Twilio Video, SendGrid Email, Verify and Flex. Add a new Twilio product and it slots into the same instance, ready to run, with one governance framework across every channel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Kaptea run agentic and automated workflows alongside our team?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Kaptea orchestrates customer conversations across human, agentic and automated workflows in one platform, with certified expertise in Twilio's AI products. Your agents, your automations and Twilio's AI work within the same governance and audit controls."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What compliance and data residency options does Kaptea offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kaptea is ISO 27001:2022 certified, CREST accredited for penetration testing, and Cyber Essentials Plus certified, with GDPR Data Processing Agreements and your choice of EU, UK or US data residency from day one. Every deployment carries a full per-message audit trail and exportable compliance evidence."
         }
       }
     ]
@@ -763,7 +793,7 @@
 <!-- CERTIFICATIONS -->
 <section class="certs">
   <div class="certs-inner">
-    <h2>Enterprise-ready compliance posture</h2>
+    <h2>Certified, compliant, and built on Twilio</h2>
 
     <div class="cert-grid">
       <div class="cert-card">
@@ -781,16 +811,24 @@
         <h3>Cyber Essentials</h3>
         <p>UK government cyber security standard</p>
       </div>
+      <a href="/twilio-partner" class="cert-card">
+        <div class="cert-badge"><img src="/img/badges/twilio-gold-consulting.svg" alt="Twilio Gold Partner" width="78" height="76"></div>
+        <h3>Twilio Gold Partner</h3>
+        <p>Twilio's highest consulting partner tier</p>
+      </a>
+      <a href="/twilio-partner" class="cert-card">
+        <div class="cert-badge"><img src="/img/badges/twilio-ai-certified.svg" alt="Twilio AI Certified" width="78" height="76"></div>
+        <h3>Twilio AI Certified</h3>
+        <p>Certified in Twilio's AI products</p>
+      </a>
+      <a href="/twilio-partner" class="cert-card">
+        <div class="cert-badge"><img src="/img/badges/twilio-top10-global.svg" alt="Top 10 Global Twilio Partner" width="78" height="76"></div>
+        <h3>Top 10 Global</h3>
+        <p>Among Twilio's top 10 partners worldwide</p>
+      </a>
     </div>
 
-    <div class="certs-twilio">
-      <div class="certs-twilio-badges">
-        <a href="/twilio-partner" aria-label="Twilio Gold Partner"><img src="/img/badges/twilio-gold-consulting.svg" alt="Twilio Gold Partner" width="92" height="90"></a>
-        <a href="/twilio-partner" aria-label="Twilio AI Certified"><img src="/img/badges/twilio-ai-certified.svg" alt="Twilio AI Certified" width="92" height="90"></a>
-        <a href="/twilio-partner" aria-label="Top 10 Global Twilio Partner"><img src="/img/badges/twilio-top10-global.svg" alt="Top 10 Global Twilio Partner" width="92" height="90"></a>
-      </div>
-      <div class="certs-twilio-cap">Twilio Gold Partner, AI Certified, and among Twilio's top 10 partners worldwide. <a href="/twilio-partner">See our Twilio credentials &rarr;</a></div>
-    </div>
+    <div class="certs-note">Gold Partner, AI Certified, and among Twilio's top 10 partners worldwide. <a href="/twilio-partner">See our Twilio credentials &rarr;</a></div>
   </div>
 </section>
 
@@ -836,6 +874,42 @@
       </button>
       <div class="faq-a" id="wk-faq-a-4" hidden>
         On shared-tenancy platforms, your messages move through pooled infrastructure alongside other organisations' traffic. On Kaptea, you receive a dedicated instance: your own environment, your own Twilio configuration, your own data residency. That isolation keeps compliance reporting clean and delivery predictable.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="wk-faq-a-5">
+        How quickly can we go live?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="wk-faq-a-5" hidden>
+        Because Kaptea's Pronto platform is pre-built on Twilio, a dedicated instance configured to your channels, workflows and compliance requirements goes live in hours. Your team configures the outcomes you need; Kaptea handles the build, number porting and CRM integration.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="wk-faq-a-6">
+        Which Twilio products does Kaptea support?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="wk-faq-a-6" hidden>
+        Kaptea orchestrates the full Twilio stack, including Programmable Messaging, Programmable Voice, Twilio Video, SendGrid Email, Verify and Flex. Add a new Twilio product and it slots into the same instance, ready to run, with one governance framework across every channel.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="wk-faq-a-7">
+        Can Kaptea run agentic and automated workflows alongside our team?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="wk-faq-a-7" hidden>
+        Yes. Kaptea orchestrates customer conversations across human, agentic and automated workflows in one platform, with certified expertise in Twilio's AI products. Your agents, your automations and Twilio's AI work within the same governance and audit controls.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="wk-faq-a-8">
+        What compliance and data residency options does Kaptea offer?
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" id="wk-faq-a-8" hidden>
+        Kaptea is ISO 27001:2022 certified, CREST accredited for penetration testing, and Cyber Essentials Plus certified, with GDPR Data Processing Agreements and your choice of EU, UK or US data residency from day one. Every deployment carries a full per-message audit trail and exportable compliance evidence.
       </div>
     </div>
   </div>
