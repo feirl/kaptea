@@ -132,19 +132,49 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    .hero { background: radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220, 39, 39, 0.18) 0%, transparent 65%), var(--kaptea-charcoal); color: var(--kaptea-white); padding: 80px 40px 72px; }
-    .hero-inner { max-width: 760px; margin: 0 auto; text-align: center; }
-    .hero-breadcrumb { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--kaptea-tagline-grey); margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 8px; }
-    .hero-breadcrumb a { color: var(--kaptea-red); text-decoration: none; }
-    .hero-breadcrumb a:hover { text-decoration: underline; }
-    .hero-breadcrumb .bc-sep { color: var(--kaptea-charcoal); }
-    .hero h1 { font-size: 42px; font-family: 'Manrope', sans-serif; font-weight: 700; line-height: 1.18; margin-bottom: 20px; color: var(--kaptea-white); }
+    .hero {
+      position: relative; overflow: hidden;
+      background:
+        radial-gradient(ellipse 1100px 600px at 50% 0%, rgba(220,39,39,0.18) 0%, transparent 65%),
+        var(--kaptea-charcoal);
+      color: var(--kaptea-white);
+      padding: 72px 40px;
+      min-height: calc(100svh - 64px);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .hero-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position: 66% center; z-index:0; opacity:0; transition:opacity .8s ease; pointer-events:none; }
+    .hero-scrim { position:absolute; inset:0; z-index:1; opacity:0; transition:opacity .8s ease; pointer-events:none;
+      background:
+        linear-gradient(90deg, rgba(19,21,33,0.82) 0%, rgba(19,21,33,0.52) 38%, rgba(19,21,33,0.08) 68%, transparent 100%),
+        linear-gradient(180deg, rgba(19,21,33,0.12) 0%, rgba(19,21,33,0.3) 100%);
+    }
+    .hero.has-hero-video .hero-video, .hero.has-hero-video .hero-scrim { opacity:1; }
+    .hero > .hero-inner, .hero > .hero-pills { position:relative; z-index:2; }
+    @media (prefers-reduced-motion: reduce) { .hero-video { display:none; } }
+    .hero-sms { position:absolute; z-index:3; right:4%; top:16%; width:min(310px,40vw); background:rgba(19,21,33,0.42); backdrop-filter:blur(14px) saturate(1.1); -webkit-backdrop-filter:blur(14px) saturate(1.1); border:1px solid rgba(255,255,255,0.16); border-radius:18px; padding:14px 15px 16px; display:flex; flex-direction:column; box-shadow:0 18px 50px rgba(0,0,0,0.4); opacity:0; transition:opacity .5s ease; }
+    .hero.sms-show .hero-sms { opacity:1; }
+    .hero-sms-head { display:flex; align-items:center; gap:9px; margin-bottom:12px; }
+    .hero-sms-icon { width:34px; height:34px; border-radius:9px; overflow:hidden; flex-shrink:0; box-shadow:0 1px 3px rgba(0,0,0,0.3); }
+    .hero-sms-icon img { width:100%; height:100%; display:block; }
+    .hero-sms-app { font-family:'Manrope',sans-serif; font-weight:700; font-size:14.5px; color:#fff; }
+    .hero-sms-time { font-size:12px; color:rgba(255,255,255,0.55); }
+    .hero-sms-bubble { font-size:13.5px; line-height:1.4; padding:9px 13px; border-radius:15px; max-width:92%; opacity:0; transform:translateY(9px); transition:opacity .4s ease, transform .4s ease; }
+    .hero-sms-bubble + .hero-sms-bubble { margin-top:8px; }
+    .hero-sms-bubble.ping { opacity:1; transform:none; }
+    .hero-sms-bubble.in { align-self:flex-start; background:#f4f5f8; color:#131521; border-bottom-left-radius:5px; display:inline-flex; align-items:center; gap:8px; }
+    .hero-sms-bubble.out { align-self:flex-end; background:#3fd0c0; color:#0c201c; border-bottom-right-radius:5px; }
+    .hero-sms-check { flex-shrink:0; width:20px; height:20px; border-radius:6px; background:#3fd0c0; color:#fff; font-size:12px; line-height:1; display:inline-flex; align-items:center; justify-content:center; }
+    @media (max-width:900px) { .hero-sms { display:none; } }
+    .hero-inner { width: 100%; max-width: 1160px; margin: 0 auto; display: flex; align-items: center; gap: 56px; text-align: left; }
+    .hero-copy { flex: 0 0 56%; }
+    .hero h1 { font-size: clamp(34px, 3.4vw, 46px); font-family: 'Manrope', sans-serif; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 20px; color: var(--kaptea-white); }
     .hero h1 span { color: var(--kaptea-red); }
-    .hero .hero-sub { font-size: 17px; color: var(--kaptea-neutral-grey); line-height: 1.65; margin-bottom: 32px; }
-    .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; justify-content: center; }
-    .hero-pill { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 99px; padding: 4px 12px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); }
-    .hero-pill svg { color: var(--kaptea-red); flex-shrink: 0; }
-    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .hero .hero-sub { font-size: 18px; color: rgba(255,255,255,0.68); line-height: 1.6; margin-bottom: 30px; max-width: 560px; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-pills { width: 100%; max-width: 1160px; margin: 46px auto 0; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .hero-pills-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-right: 8px; }
+    .hero-pill { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(19, 21, 33, 0.12); background: rgba(255, 255, 255, 0.92); color: var(--kaptea-charcoal); font-size: 12px; font-weight: 600; font-family: 'Inter', sans-serif; box-shadow: 0 1px 2px rgba(0,0,0,0.04); white-space: nowrap; }
+    .hero-pill svg { color: var(--kaptea-neutral-grey); flex-shrink: 0; }
 
     .challenge { padding: 72px 40px; background: var(--kaptea-white); border-bottom: 1px solid var(--kaptea-border); }
     .challenge-inner { max-width: 1080px; margin: 0 auto; }
@@ -232,7 +262,8 @@
     .reassurance span::before { content: '✓'; color: var(--kaptea-red); font-weight: 700; }
 
     @media (max-width: 1024px) {
-      .hero { padding: 56px 24px 48px; }
+      .hero { padding: 64px 24px; }
+      .hero-copy { flex: 0 0 62%; }
       .challenge { padding: 56px 24px; }
       .challenge-grid { grid-template-columns: 1fr 1fr; }
       .solutions { padding: 56px 24px; }
@@ -246,9 +277,13 @@
       .faq-section { padding: 56px 24px; }
     }
     @media (max-width: 768px) {
-      .hero { padding: 40px 20px 36px; }
-      .hero h1 { font-size: 28px; }
-      .hero .hero-sub { font-size: 15px; }
+      /* mobile: let the video rise to the top, push the H1 to the bottom */
+      .hero { justify-content: flex-end; padding: 64px 20px 32px; }
+      .hero-inner { flex-direction: column; }
+      .hero-copy { flex: none; width: 100%; }
+      .hero h1 { font-size: 30px; }
+      .hero .hero-sub { display: none; }
+      .hero-pills { display: none; }
       .hero-ctas { flex-direction: column; align-items: stretch; }
       .hero-ctas a { text-align: center; justify-content: center; }
       .challenge { padding: 40px 20px; }
@@ -315,42 +350,107 @@
 
 <!-- HERO -->
 <section class="hero">
+  <video class="hero-video" autoplay muted playsinline preload="metadata"
+         poster="/video/surge-hero-poster.webp"
+         onloadeddata="this.closest('.hero').classList.add('has-hero-video')">
+    <source src="/video/surge-hero.webm" type="video/webm">
+    <source src="/video/surge-hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-sms" aria-hidden="true">
+    <div class="hero-sms-head">
+      <span class="hero-sms-icon"><img src="/video/kaptea-app-icon.svg" alt="" width="34" height="34"></span>
+      <span class="hero-sms-app">Kaptea</span>
+      <span class="hero-sms-time">&#183; now</span>
+    </div>
+    <div class="hero-sms-bubble in" data-at="3.9">We're aware of the outage in your area. Crews are on site.</div>
+    <div class="hero-sms-bubble in" data-at="5.9">Power's back on in your area. <span class="hero-sms-check">&#10003;</span></div>
+    <div class="hero-sms-bubble out" data-at="7.2">All back on here. Thank you.</div>
+  </div>
   <div class="hero-inner">
-    <div>
+    <div class="hero-copy">
       <h1>Every customer reached. Every reply resolved. <span>Built on Twilio.</span></h1>
       <p class="hero-sub">Built on Twilio, reach everyone and resolve every reply across human, agentic and automated workflows, from the first alert to a confirmed, audit-ready outcome. Purpose-built for utility outages, product and drug recalls, and time-critical regulatory communications.</p>
-      <div class="hero-pills">
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 6V2"/><path d="M12 22v-4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M22 12h-4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
-          Utility Outage Comms
-        </span>
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Product &amp; Drug Recall
-        </span>
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Multi-Channel Cascade
-        </span>
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-          AI on Inbound Replies
-        </span>
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Regulator-Ready Audit
-        </span>
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Live in Hours
-        </span>
-      </div>
       <div class="hero-ctas">
         <a href="/get-started" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-primary">Get Started</a>
         <a href="/get-a-quote" onclick="gtag('event', 'get_started_get_quote_click');" class="btn-ghost-light">Get a Quote</a>
       </div>
     </div>
   </div>
+  <div class="hero-pills">
+    <span class="hero-pills-label">Inside this solution</span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 6V2"/><path d="M12 22v-4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M22 12h-4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+      Utility Outage Comms
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Product &amp; Drug Recall
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Multi-Channel Cascade
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      AI on Inbound Replies
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Regulator-Ready Audit
+    </span>
+    <span class="hero-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Live in Hours
+    </span>
+  </div>
+  <script>
+    /* Full-bleed hero video: clean fade-to-black loop + staggered SMS pings. */
+    (function () {
+      var v = document.currentScript.parentElement.querySelector('.hero-video');
+      if (!v) { return; }
+      var hero = v.closest('.hero');
+      var bubbles = [].slice.call(hero.querySelectorAll('.hero-sms-bubble'));
+      var sms = hero.querySelector('.hero-sms');
+      var FADE = 0.9;
+      var SMS_IN = 3.5;
+      var SMS_OUT = 0.5;
+
+      /* Align the SMS card's bottom edge with the bottom of the CTA buttons. */
+      function alignSms() {
+        if (!sms || getComputedStyle(sms).display === 'none') { return; }
+        var ctas = hero.querySelector('.hero-ctas');
+        if (!ctas) { return; }
+        var top = ctas.getBoundingClientRect().bottom - hero.getBoundingClientRect().top - sms.offsetHeight;
+        sms.style.top = Math.max(12, top) + 'px';
+        sms.style.bottom = 'auto';
+      }
+      window.addEventListener('load', alignSms);
+      window.addEventListener('resize', alignSms);
+      requestAnimationFrame(function () { requestAnimationFrame(alignSms); });
+      v.addEventListener('ended', function () {
+        try { v.currentTime = 0; } catch (e) {}
+        var p = v.play(); if (p && p.catch) { p.catch(function () {}); }
+      });
+      function tick() {
+        var d = v.duration;
+        if (d && !isNaN(d)) {
+          var t = v.currentTime;
+          var remaining = d - t;
+          var b = Math.min(1, t / FADE, remaining / FADE);
+          v.style.filter = 'brightness(' + Math.max(0, b).toFixed(3) + ')';
+          var live = t >= SMS_IN && remaining > SMS_OUT;
+          hero.classList.toggle('sms-show', live);
+          for (var i = 0; i < bubbles.length; i++) {
+            var at = parseFloat(bubbles[i].getAttribute('data-at')) || 0;
+            bubbles[i].classList.toggle('ping', live && t >= at);
+          }
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
 </section>
 
 
