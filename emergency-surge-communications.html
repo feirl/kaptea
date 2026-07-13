@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml" />
-  <title>Mass Notification Platform for Product Recalls &amp; Emergency Comms | Kaptea</title>
+  <title>Utility Outage &amp; Emergency Mass Notification Platform | Kaptea</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Mass notification for product recalls, drug recalls and utility outage comms. Multi-channel cascade, AI on inbound, regulator-ready audit. Live in hours." />
+  <meta name="description" content="Built on Twilio: reach every customer and resolve every reply for utility outages, product and drug recalls and time-critical regulatory comms. Multi-channel cascade, AI on inbound, regulator-ready audit, live in hours." />
   <meta name="keywords" content="urgent notification platform, urgent messaging, warranty recall platform, drug recall communications, mass notification, mass alert system, CSV upload SMS, branded calling, escalation cascade, regulatory communications, emergency surge platform, regulator-ready audit" />
   <link rel="canonical" href="https://kaptea.io/emergency-surge-communications" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Mass Notification for Product Recalls &amp; Emergency Comms | Kaptea" />
+  <meta property="og:title" content="Utility Outage &amp; Emergency Mass Notification Platform | Kaptea" />
   <meta property="og:description" content="Mass outbound, conversational AI on inbound, smart human escalation, customer-confirmed closure. Live in hours. Built for warranty recalls, drug recalls and time-critical regulatory comms." />
   <meta property="og:url" content="https://kaptea.io/emergency-surge-communications" />
   <meta property="og:image" content="https://kaptea.io/img/illustrations/HomeScreen.png" />
@@ -23,7 +23,7 @@
   <meta property="og:image:alt" content="Kaptea enterprise communications platform" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@kaptea" />
-  <meta name="twitter:title" content="Mass Notification for Product Recalls &amp; Emergency Comms | Kaptea" />
+  <meta name="twitter:title" content="Utility Outage &amp; Emergency Mass Notification Platform | Kaptea" />
   <meta name="twitter:description" content="Mass outbound, conversational AI on inbound, smart human escalation, customer-confirmed closure. Live in hours. Built for warranty recalls, drug recalls and time-critical regulatory comms." />
   <meta name="twitter:image" content="https://kaptea.io/img/illustrations/HomeScreen.png" />
   <meta property="og:site_name" content="Kaptea" />
@@ -273,6 +273,27 @@
       .reassurance { gap: 16px; flex-direction: column; align-items: center; }
     }
     a { transition: color 0.15s ease; }
+  /* Built on Twilio band */
+  .tw-band { background: #f7f8fa; padding: 88px 40px; border-top: 1px solid #eceef2; }
+  .tw-inner { max-width: 1080px; margin: 0 auto; }
+  .tw-head { text-align: center; max-width: 780px; margin: 0 auto 40px; }
+  .tw-emblems { display: flex; gap: 20px; justify-content: center; align-items: center; margin-bottom: 26px; flex-wrap: wrap; }
+  .tw-emblems a { display: block; line-height: 0; transition: transform 0.18s ease; border-radius: 8px; }
+  .tw-emblems a:hover { transform: translateY(-3px); }
+  .tw-emblems a:focus-visible { outline: 2px solid var(--kaptea-red); outline-offset: 4px; }
+  .tw-emblems img { width: 78px; height: auto; display: block; filter: drop-shadow(0 7px 16px rgba(0,0,0,0.14)); }
+  @media (max-width: 520px) { .tw-emblems img { width: 66px; } }
+  .tw-title { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.02em; line-height: 1.12; color: var(--kaptea-charcoal); margin: 0 0 20px; }
+  .tw-title em { color: var(--kaptea-red); font-style: normal; }
+  .tw-lead { font-size: 17.5px; line-height: 1.65; color: var(--kaptea-tagline-grey); margin: 0; }
+  .tw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .tw-card { background: #fff; border: 1px solid #eceef2; border-radius: 16px; padding: 28px; text-align: left; }
+  .tw-card .tw-ic { width: 44px; height: 44px; border-radius: 12px; background: rgba(220,39,39,0.10); color: var(--kaptea-red); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .tw-card .tw-ic svg { width: 22px; height: 22px; }
+  .tw-card h3 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 18px; color: var(--kaptea-charcoal); margin: 0 0 9px; }
+  .tw-card p { font-size: 14.5px; line-height: 1.6; color: var(--kaptea-tagline-grey); margin: 0; }
+  .tw-cta { text-align: center; margin-top: 40px; }
+  @media (max-width: 820px) { .tw-grid { grid-template-columns: 1fr; } .tw-band { padding: 64px 20px; } }
   </style>
 
   <!-- GA4 loaded globally by footer.js with Consent Mode v2 -->
@@ -296,21 +317,16 @@
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-breadcrumb">
-        <a href="/pronto">Solutions</a>
-        <span class="bc-sep">→</span>
-        <span>Mass Notification &amp; Recall</span>
-      </div>
-      <h1>Product recall. Drug recall. Utility outage. <span>Reach everyone. Resolve every reply.</span></h1>
-      <p class="hero-sub">The enterprise mass notification platform for regulated industries. Upload a CSV, fire an API trigger, or connect your CRM: Pronto dispatches across email, SMS, WhatsApp and branded call, AI absorbs the inbound replies, smart escalation routes complex cases to a live agent, and every case is closed with a regulator-ready audit trail. Built for pharmaceutical recalls, vehicle warranty recalls, utility outage comms, and time-critical regulatory communications.</p>
+      <h1>Every customer reached. Every reply resolved. <span>Built on Twilio.</span></h1>
+      <p class="hero-sub">Built on Twilio, reach everyone and resolve every reply across human, agentic and automated workflows, from the first alert to a confirmed, audit-ready outcome. Purpose-built for utility outages, product and drug recalls, and time-critical regulatory communications.</p>
       <div class="hero-pills">
-        <span class="hero-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Product &amp; Drug Recall
-        </span>
         <span class="hero-pill">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 6V2"/><path d="M12 22v-4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M22 12h-4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
           Utility Outage Comms
+        </span>
+        <span class="hero-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Product &amp; Drug Recall
         </span>
         <span class="hero-pill">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -342,38 +358,38 @@
 <section class="challenge">
   <div class="challenge-inner">
     <div class="section-label">The challenge</div>
-    <h2>Most enterprise messaging stacks break at exactly the moment they are needed most.</h2>
+    <h2>When the surge hits, every contact has to land and every reply has to be resolved.</h2>
     <div class="challenge-grid">
 
       <div class="challenge-card">
         <div class="challenge-num">01</div>
         <div>
-          <h3>No CSV upload in mature comms stacks</h3>
-          <p>The largest, most mature messaging customers still have no way to load 50,000 contacts and dispatch in the next hour. APIs are designed for steady-state flows. They are the wrong tool for a pharmaceutical recall or vehicle recall instruction that arrives at 9am with a regulatory deadline at 5pm.</p>
+          <h3>Surge needs more than a steady-state API</h3>
+          <p>A recall instruction lands at 9am with a regulatory deadline at 5pm, and you need to load 50,000 contacts and dispatch within the hour. Kaptea gives you CSV upload, an API trigger or a live CRM connection, so the send goes out the moment the instruction does.</p>
         </div>
       </div>
 
       <div class="challenge-card">
         <div class="challenge-num">02</div>
         <div>
-          <h3>Regulatory recall windows are narrow</h3>
-          <p>A vehicle warranty notice or a drug recall under MHRA or CMA timelines has a regulatory clock. Manual export, paste, and send is too slow, and every step adds error risk that you will have to explain to the regulator afterwards. A missed window on a drug recall is not a process failure: it is a compliance failure.</p>
+          <h3>Regulatory windows run on a clock</h3>
+          <p>A vehicle warranty notice or a drug recall under MHRA or CMA timelines carries a regulatory deadline. Hitting that window cleanly, dispatched in minutes with a full audit trail behind it, is the difference between a clean response and a conversation with the regulator.</p>
         </div>
       </div>
 
       <div class="challenge-card">
         <div class="challenge-num">03</div>
         <div>
-          <h3>Mass outbound is half the problem. The inbound replies pile up.</h3>
-          <p>50,000 messages go out. Thousands of replies come back: outage queries, recall enquiries, return requests, eligibility questions. Without conversational AI on the inbound, the contact centre buckles, hold times balloon, and the recall or outage response stalls at exactly the moment it has to move.</p>
+          <h3>Mass outbound is half the job. The inbound is the other half.</h3>
+          <p>50,000 messages go out and thousands of replies come back: outage queries, recall enquiries, return requests, eligibility questions. Conversational AI resolves the inbound in natural language and routes the complex cases to a live agent, so the response keeps moving when it matters most.</p>
         </div>
       </div>
 
       <div class="challenge-card">
         <div class="challenge-num">04</div>
         <div>
-          <h3>Unknown caller IDs kill outreach at the critical moment</h3>
-          <p>Customers do not pick up unknown numbers. Pickup rates collapse below 30 percent, and the urgent message never lands. For recall comms, a missed call is a missed legal obligation.</p>
+          <h3>Branded calling is what gets answered</h3>
+          <p>Pickup rates for unknown numbers sit below 30 percent. Kaptea places branded, verified calls that customers recognise and answer, so the urgent message lands and the legal obligation is met.</p>
         </div>
       </div>
 
@@ -547,12 +563,50 @@
 </section>
 
 
+<!-- BUILT ON TWILIO -->
+<section class="tw-band" aria-label="Built on Twilio">
+  <div class="tw-inner">
+    <div class="tw-head">
+      <div class="tw-emblems">
+        <a href="/twilio-partner" aria-label="Twilio Gold Partner: see our Twilio credentials"><img src="/img/badges/twilio-gold-consulting.svg" alt="Twilio Gold Partner" width="78" height="76"></a>
+        <a href="/twilio-partner" aria-label="Twilio AI Certified: see our Twilio credentials"><img src="/img/badges/twilio-ai-certified.svg" alt="Twilio AI Certified" width="78" height="76"></a>
+        <a href="/twilio-partner" aria-label="Top 10 Global Twilio Partner: see our Twilio credentials"><img src="/img/badges/twilio-top10-global.svg" alt="Top 10 Global Twilio Partner" width="78" height="76"></a>
+      </div>
+      <h2 class="tw-title">You run on Twilio. <em>We make it easy to deploy agentic workflows.</em></h2>
+      <p class="tw-lead">Kaptea's Pronto platform runs on the Twilio you already trust. Bring your own Twilio account and orchestrate conversations across human, agentic and automated workflows, configured to the outcomes you need, quickly and easily.</p>
+    </div>
+
+    <div class="tw-grid">
+      <div class="tw-card">
+        <div class="tw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Gold, AI Certified, top 10 globally</h3>
+        <p>A Twilio Gold Consulting Partner and AI Certified. Fewer than ten partners worldwide hold both, placing Kaptea among Twilio's top 10 globally for agentic customer conversations.</p>
+      </div>
+      <div class="tw-card">
+        <div class="tw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></div>
+        <h3>Configured to your outcomes</h3>
+        <p>Start from a pre-built suite of integrations and workflow blocks, then configure the outcomes you need. Ready to run, and simple to evolve as you grow.</p>
+      </div>
+      <div class="tw-card">
+        <div class="tw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Easier to launch, easier to run</h3>
+        <p>Configured on the Twilio you already trust, your agentic workflows go live in a fraction of the time and stay simple for your team to adapt as you grow.</p>
+      </div>
+    </div>
+
+    <div class="tw-cta">
+      <a href="/twilio-partner" class="btn-primary">See how we build on Twilio</a>
+    </div>
+  </div>
+</section>
+
+
 <!-- TRUST -->
 <section class="trust-section">
   <div class="trust-inner">
     <div class="section-label">Security &amp; compliance</div>
-    <h2>Built for the audits that follow the recall.</h2>
-    <p>The communications platform is not the thing you want to explain to the regulator. Kaptea's compliance posture is built to make that conversation short.</p>
+    <h2>Built for the audit that follows.</h2>
+    <p>When the regulator asks what happened, Kaptea gives you the evidence: every message, every reply and every resolution captured in a full audit trail, so the answer is short and provable.</p>
     <div class="trust-grid">
 
       <div class="trust-card">
