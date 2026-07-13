@@ -14,14 +14,14 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Reservation Experience Management | Kaptea" />
-  <meta property="og:description" content="The booking engine market is saturated. What happens after the booking is not. Orchestrate the whole reserved experience to customer-confirmed closure." />
+  <meta property="og:description" content="Built on Twilio, orchestrate the whole reserved experience from booking to customer-confirmed closure: reminders, changes, disruption and follow-up across human, agentic and automated workflows." />
   <meta property="og:url" content="https://kaptea.io/reservation-experience-management" />
   <meta property="og:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Reservation Experience Management | Kaptea" />
-  <meta name="twitter:description" content="The booking engine market is saturated. What happens after the booking is not. Orchestrate the whole reserved experience to customer-confirmed closure." />
+  <meta name="twitter:description" content="Built on Twilio, orchestrate the whole reserved experience from booking to customer-confirmed closure: reminders, changes, disruption and follow-up across human, agentic and automated workflows." />
   <meta name="twitter:image" content="https://kaptea.io/img/illustrations/Pronto-Email-Campaign-Detail.jpg" />
   <meta property="og:site_name" content="Kaptea" />
 
@@ -251,6 +251,17 @@
     .problem-card h3 { font-size: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 8px; }
     .problem-card p { font-size: 13.5px; color: var(--kaptea-tagline-grey); line-height: 1.6; margin: 0 0 10px; }
     .problem-card .vs { font-size: 12px; font-weight: 600; color: var(--kaptea-red); padding-top: 10px; border-top: 1px solid var(--kaptea-border); }
+    /* Challenge section (shared template with the customer-journey-orchestration page) */
+    .challenge { padding: 72px 40px; background: var(--kaptea-white); border-bottom: 1px solid var(--kaptea-border); }
+    .challenge-inner { max-width: 1080px; margin: 0 auto; }
+    .challenge h2 { font-size: 28px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 40px; max-width: 640px; line-height: 1.3; }
+    .challenge-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .challenge-card { padding: 28px; border: 1px solid var(--kaptea-border); border-radius: 8px; display: flex; gap: 20px; transition: border-color 0.2s, box-shadow 0.2s; }
+    .challenge-card:hover { border-color: rgba(220,39,39,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
+    .challenge-num { font-size: 28px; font-weight: 700; color: rgba(220,39,39,0.15); line-height: 1; flex-shrink: 0; font-family: 'Manrope', sans-serif; }
+    .challenge-card h3 { font-size: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 6px; }
+    .challenge-card p { font-size: 14px; color: var(--kaptea-tagline-grey); line-height: 1.6; }
+    @media (max-width: 768px) { .challenge { padding: 48px 24px; } .challenge-grid { grid-template-columns: 1fr; } }
 
     /* SOLUTIONS */
     .solutions { padding: 80px 40px; background: var(--kaptea-white); }
@@ -511,67 +522,43 @@
 </section>
 
 
-<!-- WEDGE -->
-<section class="wedge-band">
-  <div class="wedge-inner">
-    <div class="wedge-eyebrow">The whitespace</div>
-    <div class="wedge-line">The booking engine market is saturated.<br><em>What happens after the booking is not.</em></div>
-    <p class="wedge-sub">A business that sells a reservation, a berth, a room, a table, an appointment, a journey, makes a promise at the moment of booking. Keeping that promise takes orchestrated, two-way communication through pre-arrival, change, disruption, the day itself and follow-up. In almost every reservation business, that layer is fragmented, manual and improvised.</p>
-    <div class="wedge-cols">
-      <div class="wedge-col deflect">
-        <h4>Where most operators stop</h4>
-        <ul>
-          <li>The confirmation email is the last proactive contact</li>
-          <li>Changes and disruption handled by hand across disconnected tools</li>
-          <li>No-shows absorbed as a cost of doing business</li>
-          <li>Inbound calls hit a phone nobody can answer during service</li>
-          <li>No record of whether the promise was actually kept</li>
-        </ul>
-      </div>
-      <div class="wedge-col resolve">
-        <h4>Reservation experience management</h4>
-        <ul>
-          <li>Proactive journeys from booking to follow-up</li>
-          <li>Two-way SMS, WhatsApp and agentic voice on one platform</li>
-          <li>Reminders and one-tap rebooking that cut no-shows</li>
-          <li>Disruption handled at scale with AI triage and human escalation</li>
-          <li>Every promise tracked to customer-confirmed closure</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- THE CHALLENGE -->
+<section class="challenge">
+  <div class="challenge-inner">
+    <div class="section-label">The challenge</div>
+    <h2>You win the booking. Keeping the promise is where the experience is made.</h2>
+    <div class="challenge-grid">
 
-
-<!-- THE PROBLEM -->
-<section class="problem">
-  <div class="problem-inner">
-    <div class="section-label">The problem</div>
-    <h2>You have won the booking. Kaptea helps you keep the promise.</h2>
-    <div class="problem-grid">
-
-      <div class="problem-card">
-        <h3>The confirmation email is where the relationship goes quiet</h3>
-        <p>Customers book, receive a confirmation, then hear nothing until they arrive. The window where you could prevent a no-show, upsell, prepare them or pre-empt a problem passes in silence. The most valuable part of the journey is the part nobody is running.</p>
-        <div class="vs">Kaptea: proactive pre-arrival journeys triggered automatically by the booking</div>
+      <div class="challenge-card">
+        <div class="challenge-num">01</div>
+        <div>
+          <h3>The confirmation email is where the relationship goes quiet</h3>
+          <p>Customers book, receive a confirmation, then hear nothing until they arrive. The window to prevent a no-show, upsell, prepare them or pre-empt an issue is the most valuable part of the journey, and today it passes in silence.</p>
+        </div>
       </div>
 
-      <div class="problem-card">
-        <h3>The phone rings during service and nobody can answer</h3>
-        <p>Hotels miss 100 to 140 calls a week. Restaurant phones go unanswered during the dinner rush. In mid-market reservation businesses, IVR abandonment runs 70 to 90 percent and most callers press zero looking for a human who is too busy to pick up.</p>
-        <div class="vs">Kaptea: agentic voice that answers, resolves and books in natural language</div>
+      <div class="challenge-card">
+        <div class="challenge-num">02</div>
+        <div>
+          <h3>The phone rings during service, when the team is busiest</h3>
+          <p>Hotels field 100 to 140 calls a week and restaurant lines run hot through the dinner rush. IVR abandonment reaches 70 to 90 percent, and most callers press zero looking for a human.</p>
+        </div>
       </div>
 
-      <div class="problem-card">
-        <h3>No-shows are treated as unavoidable</h3>
-        <p>No-shows hit 76 percent of venues, at roughly £3,621 per venue per year. A single reminder sequence with easy confirm-or-rebook would recover most of it, but it is not built, not automated, and not tied to the reservation system.</p>
-        <div class="vs">Kaptea: timed reminders with one-tap confirm, change or rebook</div>
+      <div class="challenge-card">
+        <div class="challenge-num">03</div>
+        <div>
+          <h3>No-shows are treated as a cost of doing business</h3>
+          <p>No-shows reach 76 percent of venues, at roughly £3,621 per venue per year. A single reminder sequence with one-tap confirm or rebook recovers most of it, once it is built, automated and tied to the reservation system.</p>
+        </div>
       </div>
 
-      <div class="problem-card">
-        <h3>Disruption becomes an inbound surge you cannot absorb</h3>
-        <p>A cancelled service, a closure, a weather event: hundreds of guests need to be told, rebooked and reassured at once. Two or three staff craft messages by hand across four disconnected systems while the contact centre floods with inbound calls.</p>
-        <div class="vs">Kaptea: mass outbound, AI-handled inbound and human escalation in one flow</div>
+      <div class="challenge-card">
+        <div class="challenge-num">04</div>
+        <div>
+          <h3>Disruption arrives as an inbound surge, all at once</h3>
+          <p>A cancelled service, a closure or a weather event means hundreds of guests need to be told, rebooked and reassured together, while a small team works across disconnected systems.</p>
+        </div>
       </div>
 
     </div>
