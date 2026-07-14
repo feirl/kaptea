@@ -605,7 +605,15 @@
         }
       }
       window.addEventListener('load', positionMobileHero);
-      window.addEventListener('resize', positionMobileHero);
+      // Only re-run on a width (orientation) change. Mobile browsers fire 'resize'
+      // when the URL bar shows/hides during scroll (height-only change); re-running
+      // then would rewrite the hero padding and reflow the cover video (visible zoom).
+      var lastHeroW = window.innerWidth;
+      window.addEventListener('resize', function () {
+        if (window.innerWidth === lastHeroW) { return; }
+        lastHeroW = window.innerWidth;
+        positionMobileHero();
+      });
       requestAnimationFrame(function () { requestAnimationFrame(positionMobileHero); });
       v.addEventListener('ended', function () {
         try { v.currentTime = 0; } catch (e) {}
