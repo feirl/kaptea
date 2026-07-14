@@ -419,9 +419,13 @@
       <div class="footer-col">
         <h4>Use Cases</h4>
         <ul>
+          <li><a href="/conversational-ai">Conversational AI</a></li>
+          <li><a href="/automations-workflow">Automations &amp; Workflow</a></li>
           <li><a href="/customer-journey-orchestration">Customer Journey Orchestration</a></li>
+          <li><a href="/reservation-experience-management">Reservation Experience Management</a></li>
           <li><a href="/emergency-surge-communications">Urgent Messaging &amp; Recall</a></li>
-          <li><a href="/enterprise-transactional-messaging">Transactional Communication</a></li>
+          <li><a href="/enterprise-transactional-messaging">Transactional Communications</a></li>
+          <li><a href="/contact-centre-voice">Contact Centre Workflows</a></li>
         </ul>
       </div>
 
