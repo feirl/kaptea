@@ -821,6 +821,142 @@
       .twilio-product-grid { grid-template-columns: 1fr; }
     }
     a { transition: color 0.15s ease; }
+
+    /* ── TESTIMONIALS WALL ── */
+    .voc-band {
+      background: var(--kaptea-white);
+      padding: 88px 40px;
+      border-top: 1px solid var(--kaptea-border);
+      border-bottom: 1px solid var(--kaptea-border);
+    }
+    .voc-inner { max-width: 1160px; margin: 0 auto; }
+    .voc-header { text-align: center; margin-bottom: 56px; }
+    .voc-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: color-mix(in srgb, var(--kaptea-red) 10%, var(--kaptea-white)); color: var(--kaptea-red);
+      padding: 6px 14px; border-radius: 99px;
+      font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+    .voc-eyebrow strong { color: var(--kaptea-charcoal); letter-spacing: 0; text-transform: none; font-size: 13px; font-weight: 700; }
+    .voc-header h2 {
+      font-size: 36px; font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: var(--kaptea-charcoal); line-height: 1.2; letter-spacing: -0.02em;
+      max-width: 720px; margin: 0 auto;
+      text-wrap: balance;
+    }
+    .voc-header h2 em { color: var(--kaptea-red); font-style: normal; }
+    .voc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .voc-card {
+      background: var(--kaptea-surface-muted);
+      border: 1px solid var(--kaptea-border);
+      border-radius: 14px;
+      padding: 32px;
+      display: flex; flex-direction: column;
+      transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    }
+    .voc-card:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+      border-color: var(--kaptea-card-border-hover);
+    }
+    .voc-card.voc-feature {
+      grid-column: span 2;
+      background: var(--kaptea-charcoal);
+      border-color: var(--kaptea-charcoal);
+    }
+    .voc-card.voc-feature .voc-quote,
+    .voc-card.voc-feature .voc-name,
+    .voc-card.voc-feature .voc-rolecompany { color: var(--kaptea-white); }
+    .voc-card.voc-feature .voc-quote { font-size: 24px; line-height: 1.35; }
+    .voc-card.voc-feature .voc-rolecompany { color: rgba(255,255,255,0.6); }
+    .voc-card.voc-feature .voc-metric-num { color: #ff6e6d; }
+    .voc-card.voc-feature .voc-metric-label { color: rgba(255,255,255,0.6); }
+    .voc-stars {
+      color: var(--kaptea-red); font-size: 13px; letter-spacing: 0.1em;
+      margin-bottom: 14px;
+    }
+    .voc-quote {
+      font-size: 16px; color: var(--kaptea-charcoal); line-height: 1.55;
+      font-weight: 500; margin-bottom: 24px; flex: 1;
+    }
+    .voc-quote em, .voc-quote strong { color: var(--kaptea-red); font-style: normal; font-weight: 700; }
+    .voc-attr {
+      display: flex; align-items: center; gap: 14px;
+      padding-top: 18px; border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    .voc-card.voc-feature .voc-attr { border-top-color: rgba(255,255,255,0.12); }
+    .voc-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--kaptea-red); color: var(--kaptea-white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .voc-card.voc-feature .voc-avatar { background: var(--kaptea-red); }
+    .voc-name { font-size: 14px; font-weight: 700; color: var(--kaptea-charcoal); line-height: 1.3; }
+    .voc-rolecompany { font-size: 12px; color: var(--kaptea-tagline-grey); line-height: 1.4; margin-top: 1px; }
+    .voc-metric {
+      margin-top: 20px; padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display: flex; align-items: baseline; gap: 10px;
+    }
+    .voc-metric-num { font-size: 32px; font-weight: 700; line-height: 1; color: var(--kaptea-red); }
+    .voc-metric-label { font-size: 12px; color: var(--kaptea-tagline-grey); line-height: 1.3; }
+    .voc-nps-band {
+      margin-top: 40px;
+      padding: 28px 32px;
+      background: var(--kaptea-charcoal);
+      border-radius: 14px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 32px;
+    }
+    .voc-nps-badge {
+      display: flex; flex-direction: column; align-items: center;
+      padding: 0 20px;
+      border-right: 1px solid rgba(255,255,255,0.12);
+    }
+    .voc-nps-num {
+      font-size: 52px; font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: var(--kaptea-white); line-height: 1; letter-spacing: -0.02em;
+    }
+    .voc-nps-num span { color: var(--kaptea-red); font-size: 24px; vertical-align: super; margin-left: 2px; }
+    .voc-nps-label { font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-top: 6px; }
+    .voc-nps-text { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.5; }
+    .voc-nps-text strong { color: var(--kaptea-white); font-weight: 700; }
+    .voc-nps-cta {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      color: var(--kaptea-white);
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .voc-nps-cta:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
+    @media (max-width: 1024px) {
+      .voc-grid { grid-template-columns: 1fr 1fr; }
+      .voc-card.voc-feature { grid-column: span 2; }
+      .voc-nps-band { grid-template-columns: 1fr; gap: 16px; text-align: center; }
+      .voc-nps-badge { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); padding: 0 0 16px; }
+    }
+    @media (max-width: 768px) {
+      .voc-band { padding: 56px 20px; }
+      .voc-grid { grid-template-columns: 1fr; }
+      .voc-card.voc-feature { grid-column: span 1; }
+      .voc-card.voc-feature .voc-quote { font-size: 19px; }
+    }
+
   </style>
 
   <!-- GA4 loaded globally by footer.js with Consent Mode v2 -->
@@ -1461,6 +1597,98 @@
         <h4>ISO 27001</h4>
         <p>Certified: Kaptea and Twilio security controls stack end to end</p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     WHAT OUR CLIENTS SAY
+═══════════════════════════════ -->
+<section class="voc-band" aria-labelledby="tw-voc-heading">
+  <div class="voc-inner">
+    <div class="voc-header">
+      <div class="voc-eyebrow">What our clients say</div>
+      <h2 id="tw-voc-heading">Proven on Twilio, in our clients' <em>own words</em>.</h2>
+    </div>
+
+    <div class="voc-grid">
+
+      <div class="voc-card voc-feature">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">We went from 60% of calls abandoned to under 7%. In comparison to six months ago, it's massive. The customer experience has been improved so much. It's actually an enjoyable experience now.</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">CO</div>
+          <div>
+            <div class="voc-name">Customer Operations Lead</div>
+            <div class="voc-rolecompany">Consumer wellness retailer · Voice of Customer</div>
+          </div>
+        </div>
+        <div class="voc-metric">
+          <div class="voc-metric-num">60% → &lt;7%</div>
+          <div class="voc-metric-label">Call abandonment, after replacing a previous cloud contact-centre provider with Kaptea on Twilio Flex</div>
+        </div>
+      </div>
+
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">There was very much a <strong>can-do attitude</strong>, not 'oh, that's going to be a bit tricky, or that's going to be expensive.' It was, <em>yeah, we'll find a way</em>. And it's robust. It doesn't fail.</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">CL</div>
+          <div>
+            <div class="voc-name">Commercial Lead</div>
+            <div class="voc-rolecompany">International restaurant reservation platform</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote"><em>At the push of a button</em>, we contact all of them very quickly and manage the impact on customers and on the crew. The responsiveness and the time to fix an issue is always really, really quick.</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">CM</div>
+          <div>
+            <div class="voc-name">Contact Centre Manager</div>
+            <div class="voc-rolecompany">UK overnight rail operator</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">They give you a standardised, customised box and they <em>elevate it 10 times</em>. We can change our messaging literally straight away. It's not a case of waiting days for changes.</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">CT</div>
+          <div>
+            <div class="voc-name">Contact Centre Training Lead</div>
+            <div class="voc-rolecompany">National postal operator</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voc-card">
+        <div class="voc-stars">★★★★★</div>
+        <div class="voc-quote">If you need something that's <em>really solid, compliant, secure</em>, but you also want something that is easy to use and works and functions as an email marketing tool, it's probably the best.</div>
+        <div class="voc-attr">
+          <div class="voc-avatar">MM</div>
+          <div>
+            <div class="voc-name">Marketing Manager</div>
+            <div class="voc-rolecompany">National tolling operator</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="voc-nps-band">
+      <div class="voc-nps-badge">
+        <div class="voc-nps-num">9.7<span>/10</span></div>
+        <div class="voc-nps-label">Average customer NPS</div>
+      </div>
+      <div class="voc-nps-text">
+        <strong>The majority of customers scored Kaptea a perfect 10.</strong> Independently-conducted Voice of Customer interviews across utilities, postal, rail, hospitality and tolling. Verbatim quotes above.
+      </div>
+      <a href="/case-studies" class="voc-nps-cta">Read the customer stories →</a>
     </div>
   </div>
 </section>
