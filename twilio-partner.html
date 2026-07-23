@@ -494,6 +494,14 @@
     .related-card h3 { font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 700; color: var(--kaptea-charcoal); margin-bottom: 8px; }
     .related-card p { font-size: 13px; color: var(--kaptea-tagline-grey); line-height: 1.6; }
     .related-arrow { font-size: 13px; color: var(--kaptea-red); font-weight: 600; margin-top: 12px; display: block; }
+    .offer-card { display: block; text-decoration: none; background: var(--kaptea-white); border: 1px solid var(--kaptea-border); border-radius: 16px; overflow: hidden; transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease; }
+    .offer-card:hover { border-color: var(--kaptea-red); box-shadow: 0 6px 22px rgba(220,39,39,0.10); transform: translateY(-3px); }
+    .offer-card img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .offer-body { padding: 30px; }
+    .offer-eyebrow { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--kaptea-red); margin-bottom: 12px; }
+    .offer-card h3 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 21px; color: var(--kaptea-charcoal); margin: 0 0 10px; }
+    .offer-card p { font-size: 15px; line-height: 1.65; color: var(--kaptea-tagline-grey); margin: 0 0 18px; }
+    .offer-arrow { font-size: 14px; font-weight: 600; color: var(--kaptea-red); }
 
     /* ── CTA CLOSE ── */
     .cta-close { background: var(--kaptea-charcoal); color: white; text-align: center; padding: 80px 40px; }
@@ -945,7 +953,6 @@
 
     <div class="tw-creds-cta">
       <a href="/demo" class="btn-primary">Book a demo</a>
-      <a href="/get-a-quote" class="btn-ghost">Get a tailored quote</a>
     </div>
     <div class="tw-creds-verify">
       <a href="https://www.twilio.com/en-us/partners/integrators#/2450884" target="_blank" rel="noopener">Verify us in Twilio's partner directory &rarr;</a>
@@ -962,17 +969,26 @@
     <div style="font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--kaptea-red); text-align:center; margin-bottom:14px;">Two ways to get live on Twilio</div>
     <h2 style="text-align:center; font-family:'Manrope',sans-serif; font-weight:700; font-size:32px; line-height:1.2; color:var(--kaptea-charcoal); max-width:740px; margin:0 auto 44px;">A configurable platform, live in hours. Plus the team to deliver it.</h2>
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:24px;">
-      <a href="/pronto" class="related-card">
-        <div style="font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--kaptea-red); margin-bottom:12px;">The platform</div>
-        <h3>Pronto: a configurable platform, live in hours</h3>
-        <p>The pre-built enterprise layer on top of Twilio. Orchestration, conversational AI, governance and a full audit trail, ready to configure to the outcomes you need. Bring your own Twilio and go live in hours, not months.</p>
-        <span class="related-arrow">Explore the platform &rarr;</span>
+      <a href="/pronto" class="offer-card">
+        <img src="img/team/pronto-workflow-builder.webp" alt="Pronto visual workflow builder, configured on Twilio" loading="lazy" width="1000" height="563">
+        <div class="offer-body">
+          <div class="offer-eyebrow">The platform</div>
+          <h3>Pronto: a configurable platform, live in hours</h3>
+          <p>The pre-built enterprise layer on top of Twilio. Orchestration, conversational AI, governance and a full audit trail, ready to configure to the outcomes you need. Bring your own Twilio and go live in hours, not months.</p>
+          <span class="offer-arrow">Explore the platform &rarr;</span>
+        </div>
       </a>
-      <a href="/professional-services" class="related-card">
-        <div style="font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--kaptea-red); margin-bottom:12px;">The team</div>
-        <h3>Professional services: Gold consulting and AI experts</h3>
-        <p>Prefer it built for you? Our Twilio Gold Consulting Partner and AI Certified team handles architecture, migration, CRM integration, custom builds and hypercare. The Twilio implementation services enterprises search for.</p>
-        <span class="related-arrow">See our services &rarr;</span>
+      <a href="/professional-services" class="offer-card">
+        <picture>
+          <source srcset="img/team/alan-mcnab-twilio.webp" type="image/webp">
+          <img src="img/team/alan-mcnab-twilio.jpg" alt="Kaptea's team presenting to a Twilio delegation in San Francisco" loading="lazy" width="1000" height="562">
+        </picture>
+        <div class="offer-body">
+          <div class="offer-eyebrow">The team</div>
+          <h3>Professional services: Gold consulting and AI experts</h3>
+          <p>Prefer it built for you? Our Twilio Gold Consulting Partner and AI Certified team handles architecture, migration, CRM integration, custom builds and hypercare. The Twilio implementation services enterprises search for.</p>
+          <span class="offer-arrow">See our services &rarr;</span>
+        </div>
       </a>
     </div>
   </div>
