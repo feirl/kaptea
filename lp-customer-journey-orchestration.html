@@ -1298,6 +1298,22 @@
       .platform-certs { gap: 8px 0; padding: 28px 12px 48px; }
       .platform-cert-item { padding: 6px 14px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; justify-content: center; }
     }
+
+    /* product-showcase captions (ported from homepage) */
+    .hero-showcase-slide { position: relative; }
+    .hs-cap {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 52px 30px 22px; text-align: left; line-height: normal;
+      border-radius: 0 0 14px 14px;
+      background: linear-gradient(180deg, rgba(13,15,26,0) 0%, rgba(13,15,26,0.55) 38%, rgba(13,15,26,0.9) 72%, rgba(13,15,26,0.97) 100%);
+    }
+    .hs-cap strong { display: block; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: -0.01em; color: #fff; margin-bottom: 5px; }
+    .hs-cap span { display: block; font-size: 14.5px; line-height: 1.5; color: rgba(255,255,255,0.82); white-space: nowrap; }
+    @media (max-width: 768px) {
+      .hs-cap { padding: 44px 18px 16px; }
+      .hs-cap strong { font-size: 16px; }
+      .hs-cap span { font-size: 13px; white-space: normal; }
+    }
   </style>
 
   <style>
@@ -1758,50 +1774,56 @@
   <div class="platform-preview-inner">
     <div class="hero-showcase" data-hero-showcase style="--hs-count: 6;">
       <div class="hero-showcase-tabs" role="tablist" aria-label="Pronto product stories">
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="true" id="hs-tab-0" aria-controls="hs-panel-0" aria-label="Omni-Channel: SMS, WhatsApp, Voice, Email in one thread" data-slide="0">
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="true" id="hs-tab-0" aria-controls="hs-panel-0" aria-label="Omni-Channel: engage customers across SMS, WhatsApp, Voice, Email, Live Chat, Social and Video from one platform" data-slide="0">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7"/><path d="M17 12H7"/></svg>
           Omni-Channel
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-1" aria-controls="hs-panel-1" aria-label="Conversational AI with human escalation" data-slide="1">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 6V2"/><path d="M12 22v-4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M22 12h-4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
-          Conversational AI
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-1" aria-controls="hs-panel-1" aria-label="AI Assistants: specialised AI assistants for bookings, sales, support, HR and customer service" data-slide="1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M12 3v3M8 12h.01M16 12h.01M9 16h6"/></svg>
+          AI Assistants
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-2" aria-controls="hs-panel-2" aria-label="Visual workflow builder for end-to-end journey orchestration" data-slide="2">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          Visual Workflows
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-2" aria-controls="hs-panel-2" aria-label="Workflow Automation: workflows that coordinate AI, people and business systems across customer journeys" data-slide="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Workflow Automation
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-3" aria-controls="hs-panel-3" aria-label="Governance: per-message audit trail and role-based access" data-slide="3">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Governance
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-3" aria-controls="hs-panel-3" aria-label="Customer Intelligence: remember conversations, track commitments and improve every interaction" data-slide="3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          Customer Intelligence
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-4" aria-controls="hs-panel-4" aria-label="Resilience: cross-channel failover and surge-proof routing" data-slide="4">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
-          Resilience
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-4" aria-controls="hs-panel-4" aria-label="Integrations: connect your CRM, ERP, databases and business apps via APIs and pre-built integrations" data-slide="4">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Integrations
         </button>
-        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-5" aria-controls="hs-panel-5" aria-label="Data Residency: EU, UK or US cloud-managed deployment" data-slide="5">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          Data Residency
+        <button type="button" class="hero-showcase-tab" role="tab" aria-selected="false" tabindex="-1" id="hs-tab-5" aria-controls="hs-panel-5" aria-label="Trust and Governance: enterprise security, compliance, AI guardrails, permissions and audit trails" data-slide="5">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          Trust &amp; Governance
         </button>
       </div>
       <div class="hero-showcase-viewport" aria-live="polite">
         <div class="hero-showcase-track" style="--hs-slide: 0;">
           <figure class="hero-showcase-slide" id="hs-panel-0" role="tabpanel" aria-labelledby="hs-tab-0" aria-hidden="false">
-            <img src="/img/illustrations/Inbox-CloseUp.webp" width="1920" height="1440" alt="Omni-channel conversations across SMS, WhatsApp, Voice and Email in one Pronto thread" fetchpriority="high" decoding="async">
+            <img src="/img/illustrations/Pronto-Screens-Omni-Channel.webp" width="1920" height="1440" alt="Omni-channel customer conversations across SMS, WhatsApp, Voice, Email, Live Chat, Social and Video in Pronto" fetchpriority="high" decoding="async">
+            <figcaption class="hs-cap"><strong>Omni-Channel</strong><span>Engage customers across SMS, WhatsApp, Voice, Email, Live Chat, Social Media and Video from one intelligent communications platform.</span></figcaption>
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-1" role="tabpanel" aria-labelledby="hs-tab-1" aria-hidden="true">
-            <img src="/img/illustrations/AI-CloseUp.webp" width="1920" height="1440" alt="Conversational AI with master prompts, guardrails and live agent escalation in Pronto" loading="lazy" decoding="async">
+            <img src="/img/illustrations/Pronto-Screens-AI-Assistants.webp" width="1920" height="1440" alt="Specialised AI assistants for bookings, sales, support, HR and customer service in Pronto" loading="lazy" decoding="async">
+            <figcaption class="hs-cap"><strong>AI Assistants</strong><span>Build specialised AI assistants for bookings, sales, support, HR and customer service that understand your business and work 24/7.</span></figcaption>
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-2" role="tabpanel" aria-labelledby="hs-tab-2" aria-hidden="true">
-            <img src="/img/illustrations/Worflows.webp" width="3456" height="2168" alt="Visual workflow builder: end-to-end customer journey orchestration in Pronto" loading="lazy" decoding="async">
+            <img src="/img/illustrations/Pronto-Screens-Workflow-Automation.webp" width="1920" height="1440" alt="Intelligent workflows coordinating AI, people and business systems across customer journeys in Pronto" loading="lazy" decoding="async">
+            <figcaption class="hs-cap"><strong>Workflow Automation</strong><span>Design intelligent workflows that coordinate AI, people and business systems to automate complex customer journeys.</span></figcaption>
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-3" role="tabpanel" aria-labelledby="hs-tab-3" aria-hidden="true">
-            <img src="/img/illustrations/Logs-CloseUp.webp" width="1920" height="1440" alt="Per-message audit trail and governance logs in Pronto" loading="lazy" decoding="async">
+            <img src="/img/illustrations/Pronto-Screens-Customer-Intelligence.webp" width="1920" height="1440" alt="Customer intelligence: remembered conversations, tracked commitments and improving interactions in Pronto" loading="lazy" decoding="async">
+            <figcaption class="hs-cap"><strong>Customer Intelligence</strong><span>Create a complete understanding of every customer by remembering conversations, tracking commitments and continuously improving every interaction.</span></figcaption>
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-4" role="tabpanel" aria-labelledby="hs-tab-4" aria-hidden="true">
-            <img src="/img/illustrations/Failover.webp" width="1920" height="1440" alt="Cross-channel failover and surge-proof routing for resilient delivery in Pronto" loading="lazy" decoding="async">
+            <img src="/img/illustrations/Pronto-Screens-Integrations.webp" width="1920" height="1440" alt="Integrations with CRM, ERP, databases and business applications via APIs in Pronto" loading="lazy" decoding="async">
+            <figcaption class="hs-cap"><strong>Integrations</strong><span>Connect with your CRM, ERP, databases and existing business applications using APIs and pre-built integrations.</span></figcaption>
           </figure>
           <figure class="hero-showcase-slide" id="hs-panel-5" role="tabpanel" aria-labelledby="hs-tab-5" aria-hidden="true">
-            <img src="/img/illustrations/Deployment-CloseUp.webp" width="1920" height="1440" alt="EU, UK or US data residency: cloud-managed Pronto deployment" loading="lazy" decoding="async">
+            <img src="/img/illustrations/Pronto-Screens-Trust-Governance.webp" width="1920" height="1440" alt="Enterprise trust and governance: security, compliance, AI guardrails, permissions and audit trails in Pronto" loading="lazy" decoding="async">
+            <figcaption class="hs-cap"><strong>Trust &amp; Governance</strong><span>Enterprise-grade security, compliance, AI guardrails, conversation stewardship, permissions and audit trails built into every conversation.</span></figcaption>
           </figure>
         </div>
       </div>
