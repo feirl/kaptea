@@ -34,6 +34,19 @@
     return consent;
   }
 
+  // lemlist website visitor signal (B2B reverse-IP company identification).
+  // Marketing-category tracker: loaded sitewide, but only after marketing consent.
+  var lemlistLoaded = false;
+  function loadLemlistSignal(consent) {
+    if (lemlistLoaded || !consent || !consent.marketing) return;
+    lemlistLoaded = true;
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = 'https://app.lemlist.com/api/visitors/tracking?k=RNuDsqL3uQLLUAtWqQ6EwSshY%2Fxzc1MZI7vGhL1N3C4%3D&t=tea_hW6eSSEGdjYQwefub';
+    (document.head || document.documentElement).appendChild(s);
+  }
+
   function activateScripts(consent) {
     var scripts = document.querySelectorAll('script[type="text/plain"][data-consent]');
     for (var i = 0; i < scripts.length; i++) {
@@ -54,6 +67,7 @@
       }
       script.parentNode.replaceChild(clone, script);
     }
+    loadLemlistSignal(consent);
   }
 
   function showBanner() {

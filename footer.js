@@ -535,7 +535,7 @@
       <div class="kcm-row">
         <div class="kcm-row-text">
           <h3>Marketing</h3>
-          <p>Used to measure marketing campaign performance and to show relevant content on third-party platforms. Off by default.</p>
+          <p>Used to measure marketing campaign performance, identify the organisations visiting our site, and show relevant content on third-party platforms. Off by default.</p>
         </div>
         <label class="kcm-toggle">
           <input type="checkbox" id="kaptea-toggle-marketing" aria-label="Enable marketing cookies">
