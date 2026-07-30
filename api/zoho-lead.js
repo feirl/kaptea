@@ -49,6 +49,17 @@ function buildDescription(d) {
   ].join('\n');
 }
 
+// Twilio co-sell one-pager request: a partner contact, not a sales lead.
+function buildOnePagerDescription(d) {
+  return [
+    'Submitted via the Twilio co-sell page (kaptea.io/lp-twilio).',
+    '',
+    'Requested one-pager: ' + asList(d.usecases),
+    '',
+    'Partner contact (Twilio staff). Send the requested one-pager and notify Alan and Robert. Do not add to sales sequences.',
+  ].join('\n');
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ ok: false, error: 'Method not allowed' });
@@ -74,14 +85,15 @@ module.exports = async function handler(req, res) {
   try {
     var token = await getAccessToken();
 
+    var isOnePager = d.source === 'lp-twilio';
     var lead = {
       Last_Name: lastName,
       First_Name: (d.firstname || '').trim(),
       Email: (d.email || '').trim(),
       Phone: (d.phone || '').trim(),
       Company: company,
-      Lead_Source: 'Website - Get Started',
-      Description: buildDescription(d),
+      Lead_Source: isOnePager ? 'Twilio Co-Sell LP' : 'Website - Get Started',
+      Description: isOnePager ? buildOnePagerDescription(d) : buildDescription(d),
     };
 
     var resp = await fetch(ZOHO_API + '/crm/v8/Leads', {

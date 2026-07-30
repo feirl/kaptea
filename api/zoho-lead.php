@@ -158,12 +158,23 @@ $source_map = [
     'get-a-quote' => 'Website - Get a Quote',
     'quote'       => 'Website - Get a Quote',
     'get-started' => 'Website - Get Started',
+    'lp-twilio'   => 'Twilio Co-Sell LP',
 ];
 
 if ($message !== '') {
     // Contact form: use the customer's own message verbatim.
     $description = $message;
     $lead_source = 'Website - Contact';
+} elseif ($source === 'lp-twilio') {
+    // Twilio co-sell one-pager request: a partner contact, not a sales lead.
+    $description = implode("\n", [
+        'Submitted via the Twilio co-sell page (kaptea.io/lp-twilio).',
+        '',
+        'Requested one-pager: ' . fmt_arr($usecases),
+        '',
+        'Partner contact (Twilio staff). Send the requested one-pager and notify Alan and Robert. Do not add to sales sequences.',
+    ]);
+    $lead_source = 'Twilio Co-Sell LP';
 } else {
     // Get Started / Get a Quote flow: summarise the chosen configuration.
     $description = implode("\n", [
