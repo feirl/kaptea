@@ -41,40 +41,40 @@
     <circle cx="200" cy="50" r="6.5" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
 
     <!-- vertical ring labels -->
-    <text x="67" y="200" transform="rotate(-90 67 200)" text-anchor="middle" dominant-baseline="central" font-size="7" font-weight="700" letter-spacing="1.1" fill="rgba(150,174,214,0.92)">AUTOMATION</text>
-    <text x="94" y="200" transform="rotate(-90 94 200)" text-anchor="middle" dominant-baseline="central" font-size="7" font-weight="700" letter-spacing="1.1" fill="rgba(63,208,192,0.95)">AGENTIC</text>
-    <text x="120" y="200" transform="rotate(-90 120 200)" text-anchor="middle" dominant-baseline="central" font-size="7" font-weight="700" letter-spacing="1.1" fill="rgba(240,96,96,0.95)">HUMAN</text>
+    <text x="67" y="200" transform="rotate(-90 67 200)" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="700" letter-spacing="1.1" fill="rgba(150,174,214,0.92)">AUTOMATION</text>
+    <text x="94" y="200" transform="rotate(-90 94 200)" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="700" letter-spacing="1.1" fill="rgba(63,208,192,0.95)">AGENTIC</text>
+    <text x="120" y="200" transform="rotate(-90 120 200)" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="700" letter-spacing="1.1" fill="rgba(240,96,96,0.95)">HUMAN</text>
 
     <!-- product-style Trust Score core -->
     <circle cx="200" cy="200" r="62" fill="url(#tfHub)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
-    <text x="200" y="180" text-anchor="middle" font-size="9" font-weight="700" letter-spacing="0.6" fill="rgba(255,255,255,0.62)">TRUST SCORE</text>
-    <text x="200" y="212" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-weight="800" font-size="40" fill="#22c55e">92<tspan font-size="16" fill="rgba(255,255,255,0.5)">/100</tspan></text>
-    <text x="200" y="230" text-anchor="middle" font-size="9" font-weight="700" fill="#22c55e">Excellent &#8599;</text>
+    <text x="200" y="180" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.6" fill="rgba(255,255,255,0.62)">TRUST SCORE</text>
+    <text x="200" y="212" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-weight="800" font-size="30" fill="#22c55e">92<tspan font-size="16" fill="rgba(255,255,255,0.5)">/100</tspan></text>
+    <text x="200" y="230" text-anchor="middle" font-size="11" font-weight="700" fill="#22c55e">Excellent &#8599;</text>
   </g>
 
   <!-- ══ STAGE CARDS (inner corners overlap the outer ring at the 45° points) ══ -->
   <!-- 4 Confirm (top-left, teal) -->
   <g>
     <rect x="98" y="168" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="118" y="198" font-size="10" font-weight="700" letter-spacing="0.7" fill="#3fd0c0">4 &#183; CONFIRM</text>
-    <text x="118" y="219" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.92)">Confirm they are satisfied</text>
+    <text x="118" y="198" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#3fd0c0">4 &#183; CONFIRM</text>
+    <text x="118" y="219" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Confirm they are satisfied</text>
   </g>
   <!-- 1 Listen (top-right, red) -->
   <g>
     <rect x="578" y="168" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="598" y="198" font-size="10" font-weight="700" letter-spacing="0.7" fill="#dc2727">1 &#183; LISTEN</text>
-    <text x="598" y="219" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.92)">Hear what is being asked</text>
+    <text x="598" y="198" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">1 &#183; LISTEN</text>
+    <text x="598" y="219" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Hear what is being asked</text>
   </g>
   <!-- 3 Execute (bottom-left, red) -->
   <g>
     <rect x="98" y="428" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="118" y="458" font-size="10" font-weight="700" letter-spacing="0.7" fill="#dc2727">3 &#183; EXECUTE</text>
-    <text x="118" y="479" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.92)">Get it done, keep them informed</text>
+    <text x="118" y="458" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">3 &#183; EXECUTE</text>
+    <text x="118" y="479" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Get it done, keep them informed</text>
   </g>
   <!-- 2 Negotiate (bottom-right, red) -->
   <g>
     <rect x="578" y="428" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="598" y="458" font-size="10" font-weight="700" letter-spacing="0.7" fill="#dc2727">2 &#183; NEGOTIATE</text>
-    <text x="598" y="479" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.92)">Make the commitment explicit</text>
+    <text x="598" y="458" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">2 &#183; NEGOTIATE</text>
+    <text x="598" y="479" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Make the commitment explicit</text>
   </g>
 </svg>
