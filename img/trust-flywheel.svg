@@ -55,26 +55,26 @@
   <!-- ══ STAGE CARDS (inner corners overlap the outer ring at the 45° points) ══ -->
   <!-- 4 Confirm (top-left, teal) -->
   <g>
-    <rect x="98" y="168" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="118" y="198" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#3fd0c0">4 &#183; CONFIRM</text>
-    <text x="118" y="219" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Confirm they are satisfied</text>
+    <rect x="98" y="200" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
+    <text x="118" y="230" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#3fd0c0">4 &#183; CONFIRM</text>
+    <text x="118" y="251" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Confirm they are satisfied</text>
   </g>
   <!-- 1 Listen (top-right, red) -->
   <g>
-    <rect x="578" y="168" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="598" y="198" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">1 &#183; LISTEN</text>
-    <text x="598" y="219" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Hear what is being asked</text>
+    <rect x="578" y="200" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
+    <text x="598" y="230" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">1 &#183; LISTEN</text>
+    <text x="598" y="251" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Hear what is being asked</text>
   </g>
   <!-- 3 Execute (bottom-left, red) -->
   <g>
-    <rect x="98" y="428" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="118" y="458" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">3 &#183; EXECUTE</text>
-    <text x="118" y="479" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Get it done, keep them informed</text>
+    <rect x="98" y="396" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
+    <text x="118" y="426" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">3 &#183; EXECUTE</text>
+    <text x="118" y="447" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Get it done, keep them informed</text>
   </g>
   <!-- 2 Negotiate (bottom-right, red) -->
   <g>
-    <rect x="578" y="428" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="598" y="458" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">2 &#183; NEGOTIATE</text>
-    <text x="598" y="479" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Make the commitment explicit</text>
+    <rect x="578" y="396" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
+    <text x="598" y="426" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">2 &#183; NEGOTIATE</text>
+    <text x="598" y="447" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Make the commitment explicit</text>
   </g>
 </svg>
