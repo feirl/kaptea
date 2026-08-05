@@ -1381,7 +1381,15 @@
         body: JSON.stringify(payload),
         keepalive: true
       }).catch(function (err) { console.warn('One-pager request failed:', err); });
-      window.location.href = '/lp-twilio-thank-you';
+      var slugMap = {
+        'Customer Journey Orchestration': 'customer-journey-orchestration',
+        'Reservation Experience Management': 'reservation-experience-management',
+        'Urgent Messaging & Recall': 'urgent-messaging-recall',
+        'Transactional Communications': 'transactional-communications',
+        'Contact Centre Workflows': 'contact-centre-workflows'
+      };
+      var slug = slugMap[usecase] || '';
+      window.location.href = '/lp-twilio-thank-you' + (slug ? '?uc=' + slug : '');
     });
   })();
 </script>

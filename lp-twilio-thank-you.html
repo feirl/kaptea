@@ -86,15 +86,38 @@
       <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
     </div>
     <div class="ty-eyebrow">Request received</div>
-    <h1>Your one-pager is on its way.</h1>
-    <p>Thanks for letting us know which use case you're working. We'll send the co-sell one-pager to your inbox shortly: the talk track, the proof points, and exactly how Pronto fits on Twilio.</p>
+    <h1 id="ty-h1">Your one-pager is on its way.</h1>
+    <p id="ty-lead">Thanks for letting us know which use case you're working. We'll send the co-sell one-pager to your inbox shortly: the talk track, the proof points, and exactly how Pronto fits on Twilio.</p>
     <p><strong>Alan and Robert have been notified</strong> that you're working a deal, and they'll follow up to help you close it faster.</p>
     <div class="ty-ctas">
-      <a href="/lp-twilio#contact" class="btn-primary">Talk to Alan &amp; Robert</a>
-      <a href="/lp-twilio" class="btn-ghost-light">Back to the overview</a>
+      <a id="ty-download" href="#" class="btn-primary" download hidden>Download the one-pager (PDF)</a>
+      <a href="/lp-twilio#contact" class="btn-ghost-light">Talk to Alan &amp; Robert</a>
     </div>
   </div>
 </main>
+
+<script>
+  (function () {
+    // Whitelist: slug -> display name. The selected use case arrives as ?uc=<slug>.
+    var ONE_PAGERS = {
+      'customer-journey-orchestration': 'Customer Journey Orchestration',
+      'reservation-experience-management': 'Reservation Experience Management',
+      'urgent-messaging-recall': 'Urgent Messaging & Recall',
+      'transactional-communications': 'Transactional Communications',
+      'contact-centre-workflows': 'Contact Centre Workflows'
+    };
+    var uc = '';
+    try { uc = (new URLSearchParams(window.location.search).get('uc') || '').toLowerCase().replace(/[^a-z-]/g, ''); } catch (e) {}
+    var name = ONE_PAGERS[uc];
+    if (!name) return; // no valid use case: keep the default "on its way" copy, no download
+    var a = document.getElementById('ty-download');
+    a.href = '/one-pagers/' + uc + '.pdf';
+    a.setAttribute('download', 'Kaptea-' + name.replace(/[^A-Za-z0-9]+/g, '-') + '.pdf');
+    a.hidden = false;
+    document.getElementById('ty-h1').textContent = 'Your ' + name + ' one-pager is ready.';
+    document.getElementById('ty-lead').textContent = 'Download your co-sell one-pager below: the talk track, the proof points, and exactly how Pronto fits on Twilio.';
+  })();
+</script>
 
 <script src="footer.js"></script>
 
