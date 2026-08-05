@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" font-family="Inter, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 648 648" width="648" height="648" font-family="Inter, Arial, sans-serif">
   <title>Kaptea Trust Flywheel</title>
   <defs>
     <linearGradient id="tfLoop" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#dc2727"/><stop offset="100%" stop-color="#3fd0c0"/>
     </linearGradient>
-    <radialGradient id="tfBg" cx="50%" cy="0%" r="75%">
+    <radialGradient id="tfBg" cx="50%" cy="0%" r="80%">
       <stop offset="0%" stop-color="#1a1330"/><stop offset="55%" stop-color="#101223"/><stop offset="100%" stop-color="#0d0f1a"/>
     </radialGradient>
     <radialGradient id="tfHub" cx="50%" cy="38%" r="60%">
@@ -13,68 +13,66 @@
   </defs>
 
   <!-- background (remove this rect to place on your own dark surface) -->
-  <rect x="0" y="0" width="960" height="640" rx="22" fill="url(#tfBg)"/>
+  <rect x="0" y="0" width="648" height="648" rx="24" fill="url(#tfBg)"/>
 
-  <!-- ══ WHEEL (centre 200,200 in this group => 480,330 on canvas) ══ -->
-  <g transform="translate(280,130)">
-    <!-- workflow depth bands: automation (outer) / agentic / human (inner) -->
-    <circle cx="200" cy="200" r="133" fill="none" stroke="rgba(126,152,196,0.13)" stroke-width="27"/>
-    <circle cx="200" cy="200" r="106" fill="none" stroke="rgba(63,208,192,0.12)" stroke-width="27"/>
-    <circle cx="200" cy="200" r="79" fill="none" stroke="rgba(220,39,39,0.14)" stroke-width="27"/>
-    <circle cx="200" cy="200" r="146.5" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
-    <circle cx="200" cy="200" r="119.5" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-    <circle cx="200" cy="200" r="92.5" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-    <circle cx="200" cy="200" r="65.5" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <g transform="translate(24,24)">
+    <!-- ══ WHEEL: 400-unit geometry scaled 1.5 => fills the 600x600 square, centre 300,300 ══ -->
+    <g transform="scale(1.5)">
+      <!-- workflow depth bands: automation (outer) / agentic / human (inner) -->
+      <circle cx="200" cy="200" r="133" fill="none" stroke="rgba(126,152,196,0.13)" stroke-width="27"/>
+      <circle cx="200" cy="200" r="106" fill="none" stroke="rgba(63,208,192,0.12)" stroke-width="27"/>
+      <circle cx="200" cy="200" r="79" fill="none" stroke="rgba(220,39,39,0.14)" stroke-width="27"/>
+      <circle cx="200" cy="200" r="146.5" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+      <circle cx="200" cy="200" r="119.5" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <circle cx="200" cy="200" r="92.5" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <!-- clockwise loop; arrows at 3, 6, 9 o'clock; dot at 12 -->
+      <path d="M220.9 51.5 A150 150 0 0 1 350 200" fill="none" stroke="url(#tfLoop)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M348.5 220.9 A150 150 0 0 1 200 350" fill="none" stroke="url(#tfLoop)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M179.1 348.5 A150 150 0 0 1 50 200" fill="none" stroke="url(#tfLoop)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M51.5 179.1 A150 150 0 0 1 179.1 51.5" fill="none" stroke="url(#tfLoop)" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="344,197 356,197 350,210" fill="#3fd0c0"/>
+      <polygon points="203,344 203,356 190,350" fill="#3fd0c0"/>
+      <polygon points="44,203 56,203 50,190" fill="#3fd0c0"/>
+      <circle cx="200" cy="50" r="12" fill="#3fd0c0" opacity="0.22"/>
+      <circle cx="200" cy="50" r="6.5" fill="#3fd0c0"/>
+      <circle cx="200" cy="50" r="6.5" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+    </g>
 
-    <!-- clockwise loop; arrows at 3, 6, 9 o'clock; dot at 12 -->
-    <path d="M220.9 51.5 A150 150 0 0 1 350 200" fill="none" stroke="url(#tfLoop)" stroke-width="3" stroke-linecap="round"/>
-    <path d="M348.5 220.9 A150 150 0 0 1 200 350" fill="none" stroke="url(#tfLoop)" stroke-width="3" stroke-linecap="round"/>
-    <path d="M179.1 348.5 A150 150 0 0 1 50 200" fill="none" stroke="url(#tfLoop)" stroke-width="3" stroke-linecap="round"/>
-    <path d="M51.5 179.1 A150 150 0 0 1 179.1 51.5" fill="none" stroke="url(#tfLoop)" stroke-width="3" stroke-linecap="round"/>
-    <!-- explicit arrowheads (PDF-safe) -->
-    <polygon points="344,197 356,197 350,210" fill="#3fd0c0"/>
-    <polygon points="203,344 203,356 190,350" fill="#3fd0c0"/>
-    <polygon points="44,203 56,203 50,190" fill="#3fd0c0"/>
-    <!-- live position dot at 12 o'clock -->
-    <circle cx="200" cy="50" r="12" fill="#3fd0c0" opacity="0.22"/>
-    <circle cx="200" cy="50" r="6.5" fill="#3fd0c0"/>
-    <circle cx="200" cy="50" r="6.5" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+    <!-- vertical ring labels (600-space) -->
+    <text x="100.5" y="300" transform="rotate(-90 100.5 300)" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="700" letter-spacing="1.3" fill="rgba(150,174,214,0.92)">AUTOMATION</text>
+    <text x="141" y="300" transform="rotate(-90 141 300)" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="700" letter-spacing="1.3" fill="rgba(63,208,192,0.95)">AGENTIC</text>
+    <text x="180" y="300" transform="rotate(-90 180 300)" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="700" letter-spacing="1.3" fill="rgba(240,96,96,0.95)">HUMAN</text>
 
-    <!-- vertical ring labels -->
-    <text x="67" y="200" transform="rotate(-90 67 200)" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="700" letter-spacing="1.1" fill="rgba(150,174,214,0.92)">AUTOMATION</text>
-    <text x="94" y="200" transform="rotate(-90 94 200)" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="700" letter-spacing="1.1" fill="rgba(63,208,192,0.95)">AGENTIC</text>
-    <text x="120" y="200" transform="rotate(-90 120 200)" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="700" letter-spacing="1.1" fill="rgba(240,96,96,0.95)">HUMAN</text>
+    <!-- product-style Trust Score core (centre 300,300, r=99) -->
+    <circle cx="300" cy="300" r="99" fill="url(#tfHub)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
+    <text x="300" y="278" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="0.7" fill="rgba(255,255,255,0.62)">TRUST SCORE</text>
+    <text x="300" y="322" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-weight="800" font-size="52" fill="#22c55e">92<tspan font-size="21" fill="rgba(255,255,255,0.5)">/100</tspan></text>
+    <text x="300" y="346" text-anchor="middle" font-size="12" font-weight="700" fill="#22c55e">Excellent &#8599;</text>
 
-    <!-- product-style Trust Score core -->
-    <circle cx="200" cy="200" r="62" fill="url(#tfHub)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
-    <text x="200" y="180" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.6" fill="rgba(255,255,255,0.62)">TRUST SCORE</text>
-    <text x="200" y="212" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-weight="800" font-size="30" fill="#22c55e">92<tspan font-size="16" fill="rgba(255,255,255,0.5)">/100</tspan></text>
-    <text x="200" y="230" text-anchor="middle" font-size="11" font-weight="700" fill="#22c55e">Excellent &#8599;</text>
-  </g>
-
-  <!-- ══ STAGE CARDS (inner corners overlap the outer ring at the 45° points) ══ -->
-  <!-- 4 Confirm (top-left, teal) -->
-  <g>
-    <rect x="98" y="200" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="118" y="230" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#3fd0c0">4 &#183; CONFIRM</text>
-    <text x="118" y="251" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Confirm they are satisfied</text>
-  </g>
-  <!-- 1 Listen (top-right, red) -->
-  <g>
-    <rect x="578" y="200" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="598" y="230" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">1 &#183; LISTEN</text>
-    <text x="598" y="251" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Hear what is being asked</text>
-  </g>
-  <!-- 3 Execute (bottom-left, red) -->
-  <g>
-    <rect x="98" y="396" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="118" y="426" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">3 &#183; EXECUTE</text>
-    <text x="118" y="447" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Get it done, keep them informed</text>
-  </g>
-  <!-- 2 Negotiate (bottom-right, red) -->
-  <g>
-    <rect x="578" y="396" width="284" height="64" rx="13" fill="#161927" stroke="rgba(255,255,255,0.10)"/>
-    <text x="598" y="426" font-size="11.5" font-weight="700" letter-spacing="0.7" fill="#dc2727">2 &#183; NEGOTIATE</text>
-    <text x="598" y="447" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.92)">Make the commitment explicit</text>
+    <!-- ══ STAGE CARDS (positions match the homepage 25% layout) ══ -->
+    <!-- 4 Confirm (top-left, teal) -->
+    <g>
+      <rect x="0" y="150" width="194" height="65" rx="14" fill="#191c2b" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="177" font-size="11" font-weight="700" letter-spacing="0.7" fill="#3fd0c0">4 &#183; CONFIRM</text>
+      <text x="18" y="198" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.92)">Confirm they are satisfied</text>
+    </g>
+    <!-- 1 Listen (top-right, red) -->
+    <g>
+      <rect x="413.5" y="150" width="186.5" height="65" rx="14" fill="#191c2b" stroke="rgba(255,255,255,0.10)"/>
+      <text x="431.5" y="177" font-size="11" font-weight="700" letter-spacing="0.7" fill="#dc2727">1 &#183; LISTEN</text>
+      <text x="431.5" y="198" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.92)">Hear what is being asked</text>
+    </g>
+    <!-- 3 Execute (bottom-left, red) -->
+    <g>
+      <rect x="0" y="385" width="231" height="65" rx="14" fill="#191c2b" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="412" font-size="11" font-weight="700" letter-spacing="0.7" fill="#dc2727">3 &#183; EXECUTE</text>
+      <text x="18" y="433" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.92)">Get it done, keep them informed</text>
+    </g>
+    <!-- 2 Negotiate (bottom-right, red) -->
+    <g>
+      <rect x="380.6" y="385" width="219.4" height="65" rx="14" fill="#191c2b" stroke="rgba(255,255,255,0.10)"/>
+      <text x="398.6" y="412" font-size="11" font-weight="700" letter-spacing="0.7" fill="#dc2727">2 &#183; NEGOTIATE</text>
+      <text x="398.6" y="433" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.92)">Make the commitment explicit</text>
+    </g>
   </g>
 </svg>
