@@ -393,6 +393,25 @@
     .post-body tbody tr:hover { background:#f7f8fc; }
     .post-body td:first-child { font-weight:700; color:var(--kaptea-charcoal); white-space:nowrap; }
     @media(max-width:640px){ .post-body table{ font-size:12.5px; display:block; overflow-x:auto; } .post-body th,.post-body td{ padding:8px 10px; } }
+    /* Partner cards */
+    .tp-card { border:1px solid #e8eaf0; border-radius:16px; padding:26px 28px; margin:22px 0; background:#fff; transition:box-shadow .2s ease, border-color .2s ease; }
+    .tp-card:hover { box-shadow:0 10px 30px rgba(0,0,0,0.05); border-color:#d7dae4; }
+    .tp-card--kaptea { border-color:rgba(220,39,39,0.35); background:linear-gradient(180deg,#fff7f7 0%,#fff 62%); box-shadow:0 8px 30px rgba(220,39,39,0.06); }
+    .tp-card-top { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .tp-logo { display:flex; align-items:center; min-height:36px; }
+    .tp-logo img { max-height:36px; max-width:180px; width:auto; object-fit:contain; display:block; }
+    .tp-logo-fallback { font-family:'Manrope',sans-serif; font-weight:800; font-size:20px; letter-spacing:-0.01em; color:var(--kaptea-charcoal); }
+    .tp-badges { display:flex; gap:8px; flex-wrap:wrap; }
+    .tp-badge { display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:700; padding:4px 11px; border-radius:99px; background:#f1f3f9; color:#4a4558; white-space:nowrap; }
+    .tp-badge svg { width:12px; height:12px; color:#16a34a; }
+    .tp-rank { display:inline-block; font-size:11.5px; font-weight:700; color:var(--kaptea-red); letter-spacing:0.06em; text-transform:uppercase; margin:14px 0 2px; }
+    .tp-card h3 { margin:6px 0 3px; font-size:21px; }
+    .tp-card--kaptea h3 { margin-top:2px; }
+    .tp-meta { font-size:13px; color:var(--kaptea-tagline-grey); font-weight:600; margin-bottom:13px; }
+    .tp-card p { margin-bottom:12px; }
+    .tp-fit { font-size:14.5px; margin-top:4px; padding-top:13px; border-top:1px solid #eef0f5; color:#4a4558; }
+    .tp-fit strong { color:var(--kaptea-charcoal); }
+    @media(max-width:640px){ .tp-card{ padding:20px; } .tp-card-top{ gap:12px; } }
   </style>
 
   <!-- GA4 loaded globally by footer.js with Consent Mode v2 -->
@@ -437,91 +456,113 @@
   <article class="post-body">
 
     <div class="post-answer-box" role="note">
-      <div class="post-answer-box-label">The short answer</div>
-      <p>Only seven partners worldwide hold both Twilio's AI Certification and Gold consulting status. As of August 2026, Twilio's directory lists 14 AI Certified partners, and 7 of those are also Gold. Presented alphabetically, they are: <strong>Blacc Spot Media, Ciptex, CloudWave, Kaptea, SEAQ, Zennify and Zing</strong>.</p>
+      <div class="post-answer-box-label">The shortlist</div>
+      <p>Seven partners worldwide hold both of Twilio's marks of a serious AI implementation team: the Twilio AI Certification and Gold consulting status. They are Kaptea and, alphabetically, Blacc Spot Media, Ciptex, CloudWave, SEAQ, Zennify and Zing.</p>
     </div>
 
     <div class="post-toc">
       <div class="post-toc-label">In this article</div>
       <ol>
-        <li><a href="#short-answer">The short answer</a></li>
-        <li><a href="#why-both">Why both certifications matter</a></li>
-        <li><a href="#at-a-glance">The seven, at a glance</a></li>
-        <li><a href="#alphabetically">The seven, alphabetically</a></li>
-        <li><a href="#how-to-choose">How to choose between them</a></li>
-        <li><a href="#what-it-means">What "agentic workflows on Twilio" actually means</a></li>
+        <li><a href="#why-seven">Why the list is only seven</a></li>
+        <li><a href="#partners">The seven partners</a></li>
+        <li><a href="#how-to-choose">How to choose the right partner</a></li>
+        <li><a href="#what-it-means">What agentic workflows on Twilio really involve</a></li>
         <li><a href="#faq">Frequently asked questions</a></li>
       </ol>
     </div>
 
-    <p><em>If you are choosing an implementation partner for AI and agentic workflows on Twilio, this is the shortlist, how it was compiled, and how to choose between them.</em></p>
+    <p>Twilio is the infrastructure a great many customer conversations now run on. What Twilio does not do is tell you who can turn its AI building blocks into something that survives contact with real customers, real compliance teams and a real Friday-night outage. That question, who can actually implement this, is the one every CX leader and technical buyer eventually has to answer.</p>
 
-    <h2 id="short-answer">The short answer</h2>
-    <p>As of August 2026, Twilio's partner directory lists 14 partners holding the Twilio AI Certification. Of those, only 7 also hold Gold status, Twilio's top consulting tier. Four are Silver, and the rest are Bronze. If your project involves agentic voice, AI agents in customer conversations, or workflow orchestration on Twilio's AI suite, these seven partners are the ones Twilio itself has certified at the highest level on both dimensions: AI capability and consulting delivery.</p>
-    <p>We should say up front: Kaptea is one of the seven, and we wrote this guide. The methodology is Twilio's own certifications, not our opinion, and the list is presented alphabetically. Every claim here can be checked against <a href="https://www.twilio.com/en-us/partners/integrators" target="_blank" rel="noopener">Twilio's partner directory</a>.</p>
+    <p>There is a shortcut, and it belongs to Twilio rather than to us. Twilio certifies its partners on the two things that matter: whether they can build on its AI stack, and whether they have a track record of delivering. Very few partners clear both bars. This guide is the list of the ones who do, what each is known for, and how to tell them apart with a buying decision in front of you.</p>
 
-    <h2 id="why-both">Why both certifications matter</h2>
-    <p>The Twilio AI Certification (launched March 2025) is earned, not bought. Partners go through deep technical enablement with Twilio's product teams, build real proof-of-concepts on Twilio's AI stack, including ConversationRelay and Conversational Intelligence, and pass a joint evaluation by Twilio's product and partner teams before being approved. In Twilio's words, the programme ensures partners can "lead AI Agent initiatives from day one, bringing validated expertise and deployable solutions."</p>
-    <p>Gold consulting status is Twilio's highest partner tier, reflecting a sustained track record of certified people, successful deployments and customer evidence. Plenty of partners can talk about AI. The Gold tier is about whether they have repeatedly delivered.</p>
-    <p>Either certification alone tells you something. Both together answer the question that actually matters when you are buying an implementation: can this partner design an AI agent solution properly, and have they delivered enough real projects to be trusted with yours? Fourteen partners pass the first test. Seven pass both.</p>
+    <h2 id="why-seven">Why the list is only seven</h2>
+    <p>Twilio's partner directory is long. The filter that shortens it to seven names is the combination of two credentials, each earned in a different way.</p>
+    <p>The Twilio AI Certification, launched in March 2025, is earned rather than bought. Partners go through technical enablement with Twilio's product teams, build working proof-of-concepts on the AI stack, including ConversationRelay and Conversational Intelligence, and pass a joint evaluation before they are approved. In Twilio's own words, the programme confirms a partner can "lead AI Agent initiatives from day one, bringing validated expertise and deployable solutions." As of August 2026, fourteen partners hold it.</p>
+    <p>Gold consulting status is the older, harder-won signal. It is Twilio's top partner tier, reflecting certified people, delivered projects and customer evidence accumulated over years. Plenty of firms can talk fluently about AI. Gold is about whether they have repeatedly shipped it.</p>
+    <p>Either credential on its own tells you something. Together they answer the only question that matters when you are signing an implementation contract: can this partner design an agentic solution properly, and have they delivered enough of them to be trusted with yours? Fourteen partners pass the first test. Seven pass both. Those seven are below, and every claim can be checked against <a href="https://www.twilio.com/en-us/partners/integrators" target="_blank" rel="noopener">Twilio's partner directory</a>.</p>
 
-    <h2 id="at-a-glance">The seven, at a glance</h2>
-    <table>
-      <thead><tr><th>Partner</th><th>Headquarters</th><th>Markets served</th><th>Known for</th></tr></thead>
-      <tbody>
-        <tr><td>Blacc Spot Media</td><td>Atlanta, US</td><td>North America</td><td>Flex contact centres, pre-built accelerators</td></tr>
-        <tr><td>Ciptex</td><td>Manchester, UK</td><td>Europe, North America</td><td>Full-ecosystem builds, legacy migrations</td></tr>
-        <tr><td>CloudWave</td><td>Sydney, Australia</td><td>Asia-Pacific, North America</td><td>Government and enterprise CX, Twilio + AWS</td></tr>
-        <tr><td>Kaptea</td><td>Dublin, Ireland</td><td>Europe, North America</td><td>Pronto: journey orchestration platform on your own Twilio</td></tr>
-        <tr><td>SEAQ</td><td>Bogot&aacute;, Colombia</td><td>Latin America, Europe</td><td>Open-source expertise, nearshore delivery</td></tr>
-        <tr><td>Zennify</td><td>Meridian, US</td><td>North America, Europe</td><td>Largest certified engineer bench, Salesforce + Flex</td></tr>
-        <tr><td>Zing</td><td>London, UK</td><td>Europe, Africa, North America</td><td>200+ bespoke integrations, speed to value</td></tr>
-      </tbody>
-    </table>
+    <h2 id="partners">The seven partners</h2>
+    <p>A note on order before the list. Kaptea wrote this guide, which is why we appear first and everyone else in alphabetical order. The certifications, though, are Twilio's, not our opinion, and we have tried to describe each partner the way its own best-fit buyer would, rather than the way a competitor might.</p>
 
-    <h2 id="alphabetically">The seven, alphabetically</h2>
+    <div class="tp-card tp-card--kaptea">
+      <div class="tp-card-top"><div class="tp-logo"><img src="/img/brand/kaptea-logo.svg" alt="Kaptea" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';"><span class="tp-logo-fallback" style="display:none;">Kaptea</span></div><div class="tp-badges"><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Twilio Gold</span><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI Certified</span></div></div>
+      <span class="tp-rank">Guide author</span>
+      <h3>Kaptea</h3>
+      <div class="tp-meta">Dublin, Ireland &#183; Europe and North America</div>
+      <p>Kaptea is the maker of Pronto, a customer journey orchestration platform that runs on the customer's own Twilio account rather than the partner's. That single design choice separates it from most of this list. Where others deliver a bespoke build, Kaptea ships a configured platform, live in hours rather than a development quarter, with your data, your carrier relationships and your negotiated rates staying yours.</p>
+      <p>The focus is deliberately narrow: agentic workflows for critical customer conversations in regulated industries. Agentic voice answers every call in seconds; workflows carry each commitment across channels to a customer-confirmed outcome; and a live trust score, built from promises made and kept, gives operations a single number for whether the loop actually closed. Kaptea is ISO 27001, Cyber Essentials Plus and CREST accredited, ships a dedicated single-tenant instance per customer, and offers EU, UK or US data residency.</p>
+      <p class="tp-fit"><strong>Best fit:</strong> operators in regulated sectors who want an agentic outcome live quickly, on their own Twilio, with governance and auditability built in, and without owning a codebase. <a href="/twilio-partner">See how Kaptea builds on Twilio</a>.</p>
+    </div>
 
-    <h3>Blacc Spot Media</h3>
-    <p>An Atlanta-based partner with over a decade on Twilio and more than 100 integrations delivered. Blacc Spot Media specialises in Twilio Flex contact centre work and backs it with pre-built products of its own, including Gravity CX for Flex and TextLogics for SMS marketing. Serves North America, from startups to enterprise.</p>
+    <div class="tp-card">
+      <div class="tp-card-top"><div class="tp-logo"><img src="/img/logos/partners/blacc-spot-media.png" alt="Blacc Spot Media" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';"><span class="tp-logo-fallback" style="display:none;">Blacc Spot Media</span></div><div class="tp-badges"><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Twilio Gold</span><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI Certified</span></div></div>
+      <h3>Blacc Spot Media</h3>
+      <div class="tp-meta">Atlanta, US &#183; North America</div>
+      <p>An Atlanta partner with more than a decade on Twilio and over 100 integrations behind it. Blacc Spot Media's centre of gravity is Twilio Flex, the contact-centre product, and it has turned that experience into accelerators of its own, including Gravity CX for Flex and TextLogics for SMS marketing. The result is a partner that can stand up a Flex environment quickly and bring pre-built pieces rather than starting every engagement from a blank canvas.</p>
+      <p class="tp-fit"><strong>Best fit:</strong> North American teams building or modernising a Flex contact centre who value pre-built accelerators and a long Twilio track record.</p>
+    </div>
 
-    <h3>Ciptex</h3>
-    <p>A Manchester-based Gold partner working across the entire Twilio ecosystem, from Voice, messaging and WhatsApp through Segment, SendGrid and Flex. Ciptex's specialism is moving organisations off legacy and rigid platforms such as Avaya, Cisco and Genesys onto a programmable engagement model, with a strong record in regulated sectors. Serves Europe and North America.</p>
+    <div class="tp-card">
+      <div class="tp-card-top"><div class="tp-logo"><img src="/img/logos/partners/ciptex.png" alt="Ciptex" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';"><span class="tp-logo-fallback" style="display:none;">Ciptex</span></div><div class="tp-badges"><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Twilio Gold</span><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI Certified</span></div></div>
+      <h3>Ciptex</h3>
+      <div class="tp-meta">Manchester, UK &#183; Europe and North America</div>
+      <p>A Manchester Gold partner that works across the whole Twilio surface area, from Voice, messaging and WhatsApp to Segment, SendGrid and Flex. Its distinctive skill is migration: moving organisations off rigid legacy platforms such as Avaya, Cisco and Genesys onto a programmable engagement model, with a strong record in regulated sectors where that transition has to be handled carefully.</p>
+      <p class="tp-fit"><strong>Best fit:</strong> European and North American organisations replacing an ageing, inflexible contact-centre stack who want a partner that has run the legacy migration many times before.</p>
+    </div>
 
-    <h3>CloudWave</h3>
-    <p>A Sydney-headquartered partner with locations in Australia, New Zealand and the US, trusted by Australian state and local government and global enterprises. CloudWave pairs Twilio with AWS for AI-driven customer experience work, runs Flex contact centres from 50 to 500 agents, and is ISO 27001 certified. Serves Asia-Pacific and North America.</p>
+    <div class="tp-card">
+      <div class="tp-card-top"><div class="tp-logo"><img src="/img/logos/partners/cloudwave.png" alt="CloudWave" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';"><span class="tp-logo-fallback" style="display:none;">CloudWave</span></div><div class="tp-badges"><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Twilio Gold</span><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI Certified</span></div></div>
+      <h3>CloudWave</h3>
+      <div class="tp-meta">Sydney, Australia &#183; Asia-Pacific and North America</div>
+      <p>A Sydney-headquartered partner with offices in Australia, New Zealand and the United States, trusted by Australian state and local government as well as global enterprises. CloudWave pairs Twilio with AWS for AI-led customer experience work, runs Flex contact centres ranging from 50 to 500 agents, and holds ISO 27001 certification, which matters to the public-sector buyers it serves.</p>
+      <p class="tp-fit"><strong>Best fit:</strong> Asia-Pacific government and enterprise teams, particularly those already invested in AWS, who need scale and a security posture to match.</p>
+    </div>
 
-    <h3>Kaptea</h3>
-    <p>An Irish partner headquartered in Dublin, and the maker of Pronto, a customer journey orchestration platform that runs on the customer's own Twilio account. Kaptea's focus is agentic workflows for critical customer conversations in regulated industries: agentic voice that answers every call in seconds, workflows that carry each commitment to a customer-confirmed outcome, and a live trust score built from promises made and kept. ISO 27001, Cyber Essentials Plus and CREST accredited, with EU, UK or US data residency and a dedicated instance per customer. Distinctive trait among the seven: a configured platform rather than a bespoke build, live in hours rather than a development quarter. Serves Europe and North America.</p>
+    <div class="tp-card">
+      <div class="tp-card-top"><div class="tp-logo"><img src="/img/logos/partners/seaq.png" alt="SEAQ" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';"><span class="tp-logo-fallback" style="display:none;">SEAQ</span></div><div class="tp-badges"><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Twilio Gold</span><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI Certified</span></div></div>
+      <h3>SEAQ</h3>
+      <div class="tp-meta">Bogot&aacute;, Colombia &#183; Latin America and Europe</div>
+      <p>A Bogot&aacute; partner with more than two decades of delivery and a leadership position in open-source solutions across Latin America. SEAQ offers end-to-end services with a nearshore advantage for North American and European buyers, and brings its own engagement product, Massive Communicator, to the table.</p>
+      <p class="tp-fit"><strong>Best fit:</strong> Latin American and European organisations wanting deep open-source expertise and a nearshore delivery model with a long track record behind it.</p>
+    </div>
 
-    <h3>SEAQ</h3>
-    <p>A Bogot&aacute;-based partner with more than two decades of delivery and a leadership position in open-source solutions across Latin America. SEAQ offers end-to-end services with a nearshore delivery advantage and its own engagement product, Massive Communicator. Serves Latin America and Europe.</p>
+    <div class="tp-card">
+      <div class="tp-card-top"><div class="tp-logo"><img src="/img/logos/partners/zennify.png" alt="Zennify" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';"><span class="tp-logo-fallback" style="display:none;">Zennify</span></div><div class="tp-badges"><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Twilio Gold</span><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI Certified</span></div></div>
+      <h3>Zennify</h3>
+      <div class="tp-meta">Meridian, US &#183; North America and Europe</div>
+      <p>A US partner whose Twilio practice was built through its merger with Terazo, formerly Twilio's top consulting partner across North America and Europe. Zennify claims more certified Twilio engineers and more Flex deployments than any partner in North America, with 200-plus integrations delivered and a focus on regulated industries and Salesforce-connected engagement.</p>
+      <p class="tp-fit"><strong>Best fit:</strong> larger North American enterprises, especially those running Salesforce, that want the deepest available bench of certified Twilio engineers.</p>
+    </div>
 
-    <h3>Zennify</h3>
-    <p>A US partner whose Twilio practice was built through the merger with Terazo, formerly Twilio's top consulting partner in North America and Europe. Zennify claims more certified Twilio engineers and more Flex deployments than any partner in North America, with 200+ integrations delivered and a focus on regulated industries and Salesforce-connected engagement. Serves North America and Europe.</p>
+    <div class="tp-card">
+      <div class="tp-card-top"><div class="tp-logo"><img src="/img/logos/partners/zing.png" alt="Zing" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';"><span class="tp-logo-fallback" style="display:none;">Zing</span></div><div class="tp-badges"><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Twilio Gold</span><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI Certified</span></div></div>
+      <h3>Zing</h3>
+      <div class="tp-meta">London, UK &#183; Europe, Africa and North America</div>
+      <p>A London partner that has delivered more than 200 bespoke integrations since 2020, with a sharp emphasis on speed to value and architecture that scales. Zing spans Flex contact-centre integrations, custom application development, training and managed services, and works across Europe, Africa and North America.</p>
+      <p class="tp-fit"><strong>Best fit:</strong> teams that know they want a bespoke build and value integration speed and a partner comfortable across several regions.</p>
+    </div>
 
-    <h3>Zing</h3>
-    <p>A London-based partner delivering more than 200 bespoke integrations since 2020, with a sharp focus on speed to value and scalable architecture. Zing works across Flex contact centre integrations, custom applications, training and managed services. Serves Europe, Africa and North America.</p>
-
-    <h2 id="how-to-choose">How to choose between them</h2>
-    <p>Seven certified partners is still a shortlist, not a decision. The questions that separate them in practice:</p>
+    <h2 id="how-to-choose">How to choose the right partner</h2>
+    <p>Seven certified partners is a shortlist, not a decision. In practice, five questions separate them, and the answers matter more than any badge.</p>
     <ol>
-      <li><strong>Platform or project?</strong> Some partners deliver bespoke builds; some bring a product. A bespoke build fits an enterprise with an engineering team and a services budget. A pre-built platform fits an operator who wants the outcome live in days without owning code. Ask each partner which they are, and what happens when you want to change something in a year.</li>
-      <li><strong>Whose Twilio account does it run on?</strong> If the answer is the partner's, your data, your carrier relationships and your negotiated rates are in someone else's hands. Insist on your own account.</li>
-      <li><strong>What happens after the AI answers?</strong> Answering a call is the easy half. Ask how a promise made in that conversation travels across channels to a confirmed resolution, and how you will measure whether it did.</li>
-      <li><strong>Show me one in production.</strong> Not a demo. A reference deployment in your kind of environment, with numbers. Call abandonment, pickup rates, resolution confirmation, whatever the partner claims to improve, ask for the before and after.</li>
+      <li><strong>Platform or project?</strong> Some partners deliver a bespoke build; some bring a product. A bespoke build suits an enterprise with an engineering team and a services budget. A pre-built platform suits an operator who wants the outcome live in days without owning code. Ask each partner which they are, and what happens the day you want to change something a year from now.</li>
+      <li><strong>Whose Twilio account does it run on?</strong> If the answer is the partner's, your data, your carrier relationships and your negotiated rates sit in someone else's hands. Insist on your own account.</li>
+      <li><strong>What happens after the AI answers?</strong> Answering the call is the easy half. Ask how a promise made in that conversation travels across channels to a confirmed resolution, and how you will measure whether it did.</li>
+      <li><strong>Show me one in production.</strong> Not a demo. A reference deployment in your kind of environment, with numbers: call abandonment, pickup rates, resolution confirmation, whatever the partner claims to move. Ask for the before and the after.</li>
       <li><strong>Who answers when it breaks at 9pm?</strong> Agentic workflows carry live customer conversations. Ask who picks up, and how fast, when something goes wrong on a Friday evening.</li>
     </ol>
 
-    <h2 id="what-it-means">What "agentic workflows on Twilio" actually means</h2>
-    <p>Twilio's <a href="https://www.twilio.com/en-us/products/conversational-ai" target="_blank" rel="noopener">AI suite</a> provides the building blocks: ConversationRelay for real-time voice AI, Conversational Intelligence for understanding and analysing conversations, and the surrounding products for memory, orchestration and agent handoff. What Twilio deliberately does not prescribe is the implementation: how those blocks become a working journey where AI answers, humans step in at the right moment, context follows the customer across channels, and outcomes get confirmed rather than assumed. That gap between building blocks and a working solution is precisely what this category of partner exists to close, and it is why the AI Certification tests deployable solutions rather than product knowledge.</p>
+    <h2 id="what-it-means">What agentic workflows on Twilio really involve</h2>
+    <p>Twilio's <a href="https://www.twilio.com/en-us/products/conversational-ai" target="_blank" rel="noopener">AI suite</a> supplies the building blocks: ConversationRelay for real-time voice AI, Conversational Intelligence for understanding and analysing conversations, and the surrounding products for memory, orchestration and agent handoff. What Twilio deliberately leaves open is the implementation, the part where those blocks become a working journey in which AI answers, a human steps in at the right moment, context follows the customer across channels, and outcomes get confirmed rather than assumed.</p>
+    <p>That gap, between a set of capable building blocks and a solution that holds up in production, is exactly what this category of partner exists to close. It is also why the AI Certification tests deployable solutions rather than product knowledge. Anyone can read the docs. Far fewer can put an agent live, safely, in a business that has customers, regulators and a reputation to protect.</p>
 
     <h2 id="faq">Frequently asked questions</h2>
-    <p><strong>How many Twilio AI Certified partners are there?</strong><br>Fourteen worldwide, as of August 2026. The programme launched in March 2025 and admits partners through technical enablement, proof-of-concept builds and joint evaluation with Twilio's product teams.</p>
+    <p><strong>How many Twilio AI Certified partners are there?</strong><br>Fourteen worldwide, as of August 2026. The programme launched in March 2025 and admits partners through technical enablement, proof-of-concept builds and a joint evaluation with Twilio's product teams.</p>
     <p><strong>What does Twilio Gold partner status mean?</strong><br>Gold is the top tier of Twilio's consulting partner programme, reflecting certified expertise and a sustained record of successful customer deployments. Seven of the fourteen AI Certified partners hold it.</p>
-    <p><strong>Do I need a partner to use Twilio's AI products?</strong><br>For simple use cases, not necessarily. For production agentic workflows, where AI holds real customer conversations with escalation, compliance and auditability requirements, an implementation partner typically takes you from months of internal engineering to weeks or, with pre-built platforms, hours.</p>
-    <p><strong>How do I verify a partner's certifications?</strong><br>Twilio's <a href="https://www.twilio.com/en-us/partners/integrators" target="_blank" rel="noopener">partner directory</a> lists every partner with their tier and competencies. Filter by the Twilio AI competency and check the consulting tier on each profile.</p>
+    <p><strong>Do I need a partner to use Twilio's AI products?</strong><br>For simple use cases, not necessarily. For production agentic workflows, where an AI holds real customer conversations with escalation, compliance and auditability requirements, an implementation partner typically takes you from months of internal engineering to weeks, or, with a pre-built platform, hours.</p>
+    <p><strong>How do I verify a partner's certifications?</strong><br>Twilio's <a href="https://www.twilio.com/en-us/partners/integrators" target="_blank" rel="noopener">partner directory</a> lists every partner with its tier and competencies. Filter by the Twilio AI competency and check the consulting tier on each profile.</p>
 
-    <p>Kaptea is one of the seven, and the one that runs as a configured platform on your own Twilio account, live in hours. If you are scoping an agentic workflow on Twilio, <a href="/twilio-partner">see how we build on Twilio</a> or <a href="/demo">book a demo</a>.</p>
+    <p>Kaptea is one of the seven, and the one that runs as a configured platform on your own Twilio account, live in hours. If you are scoping an agentic workflow on Twilio, <a href="/twilio-partner">see how we build on Twilio</a> or <a href="/demo">book a demo</a> with the founders.</p>
 
     <div class="post-author-bio">
       <div class="post-author-avatar">
