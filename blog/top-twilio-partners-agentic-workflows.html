@@ -393,6 +393,10 @@
     .post-body td { text-align:left; padding:11px 14px; border-bottom:1px solid #e8eaf0; vertical-align:top; line-height:1.5; }
     .post-body tbody tr:hover { background:#f7f8fc; }
     .post-body td:first-child { font-weight:700; color:var(--kaptea-charcoal); white-space:nowrap; }
+    .post-body tr.tp-row-kaptea td { background:#fdf2f2; }
+    .post-body tr.tp-row-kaptea:hover td { background:#fbe9e9; }
+    .post-body tr.tp-row-kaptea td:first-child { color:var(--kaptea-red); box-shadow:inset 3px 0 0 var(--kaptea-red); }
+    .post-body .tp-glance-cap { font-size:12.5px; color:var(--kaptea-tagline-grey); margin:6px 2px 0; }
     @media(max-width:640px){ .post-body table{ font-size:12.5px; display:block; overflow-x:auto; } .post-body th,.post-body td{ padding:8px 10px; } }
     /* Partner cards */
     .tp-card { border:1px solid #e8eaf0; border-radius:16px; padding:26px 28px; margin:22px 0; background:#fff; transition:box-shadow .2s ease, border-color .2s ease; }
@@ -467,7 +471,7 @@
 
     <div class="post-answer-box" role="note">
       <div class="post-answer-box-label">The shortlist</div>
-      <p>Seven partners worldwide hold both of Twilio's marks of a serious AI implementation team: the Twilio AI Certification and Gold consulting status. They are Kaptea, Blacc Spot Media, Ciptex, CloudWave, SEAQ, Zennify and Zing. We are Kaptea, one of the seven, and we wrote this guide: here is the full field and an honest read on how each partner differs, so you can shortlist with confidence.</p>
+      <p>Seven partners worldwide hold both of Twilio's marks of a serious AI implementation team: the Twilio AI Certification and Gold consulting status. They are Kaptea, Blacc Spot Media, Ciptex, CloudWave, SEAQ, Zennify and Zing. We are Kaptea, and we are proud to be one of the seven. We wrote this guide to lay out the whole field and how each partner differs.</p>
     </div>
 
     <div class="post-toc">
@@ -492,13 +496,65 @@
     <p>Either credential on its own tells you something. Together they answer the only question that matters when you are signing an implementation contract: can this partner design an agentic solution properly, and have they delivered enough of them to be trusted with yours? Fourteen partners pass the first test. Seven pass both. Those seven are below, and every claim can be checked against <a href="https://www.twilio.com/en-us/partners/integrators" target="_blank" rel="noopener">Twilio's partner directory</a>.</p>
 
     <h2 id="partners">The seven partners</h2>
-    <p>A note on order: we appear first because we wrote the guide, and everyone else follows alphabetically. The certifications, though, are Twilio's rather than our opinion, and we have described each partner the way its own best-fit buyer would, rather than the way a competitor might.</p>
+    <p>A note on order: we appear first because we wrote the guide, and everyone else follows alphabetically. The certifications are Twilio's, not our opinion, and we have described each partner as its own best-fit buyer would.</p>
+
+    <h3 id="at-a-glance">The seven at a glance</h3>
+    <table>
+      <thead>
+        <tr><th scope="col">Partner</th><th scope="col">Known for</th><th scope="col">Based</th><th scope="col">Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr class="tp-row-kaptea">
+          <td>Kaptea</td>
+          <td>Agentic workflow orchestration, delivered as a configured platform on your own Twilio</td>
+          <td>Dublin, IE</td>
+          <td>Regulated operators wanting an agentic outcome live in hours, on their own Twilio, with governance built in</td>
+        </tr>
+        <tr>
+          <td>Blacc Spot Media</td>
+          <td>Twilio Flex builds with pre-built accelerators</td>
+          <td>Atlanta, US</td>
+          <td>North American Flex contact centres that value ready-made pieces and a long track record</td>
+        </tr>
+        <tr>
+          <td>Ciptex</td>
+          <td>Legacy contact-centre migration onto Twilio</td>
+          <td>Manchester, UK</td>
+          <td>EU and NA teams replacing Avaya, Cisco or Genesys stacks</td>
+        </tr>
+        <tr>
+          <td>CloudWave</td>
+          <td>Twilio and AWS customer experience at scale</td>
+          <td>Sydney, AU</td>
+          <td>APAC government and enterprise, especially on AWS</td>
+        </tr>
+        <tr>
+          <td>SEAQ</td>
+          <td>Open-source delivery with nearshore reach</td>
+          <td>Bogot&aacute;, CO</td>
+          <td>LatAm and European buyers wanting open-source depth and nearshore delivery</td>
+        </tr>
+        <tr>
+          <td>Zennify</td>
+          <td>Deepest bench of certified Twilio engineers, Salesforce and Flex</td>
+          <td>Meridian, US</td>
+          <td>Large NA enterprises, especially those running Salesforce</td>
+        </tr>
+        <tr>
+          <td>Zing</td>
+          <td>Fast bespoke Flex integrations across regions</td>
+          <td>London, UK</td>
+          <td>Teams that want a bespoke build and value speed to value</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="tp-glance-cap">All seven hold both the Twilio AI Certification and Gold consulting status. Full profiles below.</p>
 
     <div class="tp-card tp-card--kaptea">
       <div class="tp-card-top"><div class="tp-logo tp-logo--lead"><img src="/img/brand/kaptea-logo.svg" alt="Kaptea logo, a Twilio Gold Consulting and AI Certified partner" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';"><span class="tp-logo-fallback" style="display:none;">Kaptea</span></div><div class="tp-badges"><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Twilio Gold</span><span class="tp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI Certified</span></div></div>
       <h3>Kaptea</h3>
       <div class="tp-meta">Dublin, Ireland &#183; Europe and North America</div>
-      <p>Kaptea is the maker of Pronto, a customer journey orchestration platform that runs on the customer's own Twilio account rather than the partner's. That single design choice separates it from most of this list. Where others deliver a bespoke build, Kaptea ships a configured platform, live in hours rather than a development quarter, with your data, your carrier relationships and your negotiated rates staying yours.</p>
+      <p>Kaptea is the maker of Pronto, an agentic workflow orchestration platform that runs on the customer's own Twilio account rather than the partner's. Where most of this list is known for building on Twilio, Kaptea is built to orchestrate agentic workflows end to end, and that single design choice separates it from the field. Where others deliver a bespoke build, Kaptea ships a configured platform, live in hours rather than a development quarter, with your data, your carrier relationships and your negotiated rates staying yours.</p>
       <p>Kaptea is purpose-built for agentic workflows in critical customer conversations for regulated industries. Agentic voice answers every call in seconds; workflows carry each commitment across channels to a customer-confirmed outcome; and a live trust score, built from promises made and kept, gives operations a single number for whether the loop actually closed. It is one of fewer than ten partners worldwide to hold both Twilio Gold Consulting status and the AI Certification, and is built by a team with decades in regulated enterprise communications, with offices in Dublin, New York and San Francisco.</p>
       <div class="tp-metrics">
         <div class="tp-metric"><span class="tp-metric-num">60% &rarr; &lt;7%</span><span class="tp-metric-lbl">Call abandonment, after one operator replaced its cloud contact-centre provider with Kaptea on Twilio Flex</span></div>
@@ -583,7 +639,7 @@
     <p><strong>Do I need a partner to use Twilio's AI products?</strong><br>For simple use cases, not necessarily. For production agentic workflows, where an AI holds real customer conversations with escalation, compliance and auditability requirements, an implementation partner typically takes you from months of internal engineering to weeks, or, with a pre-built platform, hours.</p>
     <p><strong>How do I verify a partner's certifications?</strong><br>Twilio's <a href="https://www.twilio.com/en-us/partners/integrators" target="_blank" rel="noopener">partner directory</a> lists every partner with its tier and competencies. Filter by the Twilio AI competency and check the consulting tier on each profile.</p>
 
-    <p>Kaptea is one of the seven, and the one that runs as a configured platform on your own Twilio account, live in hours. If you are scoping an agentic workflow on Twilio, <a href="/twilio-partner">see how we build on Twilio</a> or <a href="/demo">book a demo</a> with the founders.</p>
+    <p>Kaptea is one of the seven, and the one built for agentic workflow orchestration, running as a configured platform on your own Twilio account, live in hours. If you are scoping an agentic workflow on Twilio, <a href="/twilio-partner">see how we build on Twilio</a> or <a href="/demo">book a demo</a> with the founders.</p>
 
     <div class="post-author-bio">
       <div class="post-author-avatar">
@@ -592,7 +648,7 @@
       <div>
         <div class="post-author-name">Alan McNab</div>
         <div class="post-author-role">CEO &amp; Co-Founder, Kaptea</div>
-        <div class="post-author-bio-text">Alan has spent over 20 years building and scaling enterprise communications businesses. Kaptea is a Twilio Gold Consulting and AI Certified partner, and the maker of Pronto, a customer journey orchestration platform that runs on your own Twilio account for regulated industries across Ireland, the UK, Europe and the US. <a href="/about">About Kaptea</a>.</div>
+        <div class="post-author-bio-text">Alan has spent over 20 years building and scaling enterprise communications businesses. Kaptea is a Twilio Gold Consulting and AI Certified partner, and the maker of Pronto, an agentic workflow orchestration platform that runs on your own Twilio account for regulated industries across Ireland, the UK, Europe and the US. <a href="/about">About Kaptea</a>.</div>
       </div>
     </div>
   </article>
