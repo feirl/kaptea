@@ -238,6 +238,12 @@
           "value": "<https://kaptea.io/llms.txt>; rel=\"describedby\"; type=\"text/plain\", <https://kaptea.io/llms-full.txt>; rel=\"describedby\"; type=\"text/plain\", <https://kaptea.io/.well-known/agent-card.json>; rel=\"agent-card\"; type=\"application/json\""
         }
       ]
+    },
+    {
+      "source": "/terms-of-business(\\.html)?",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noai, noimageai" }
+      ]
     }
   ]
 }
