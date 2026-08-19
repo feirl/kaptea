@@ -240,7 +240,7 @@
       ]
     },
     {
-      "source": "/terms-of-business(\\.html)?",
+      "source": "/terms-of-business",
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow, noai, noimageai" }
       ]
